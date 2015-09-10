@@ -1,0 +1,8 @@
+/*项目分类*/
+.stn-category{ width:93.59%; margin:0 auto; }
+.stn-category h1{ color:#343434; text-align:center; margin:1.27rem 0; }
+.stn-category li{ width:33.33%; float:left; text-align:center; margin-bottom:1rem; }
+.stn-category li a{ display:block; width:3.7rem; margin:0 auto; }
+.stn-category li a .s-img{ display:block; width:3.7rem; height:3.7rem; background:#f76d02; border-radius:10px; }
+.stn-category li a .s-img img{ max-width:100%; height:auto; }
+.stn-category li a p{ margin:.36rem 0; color:#343434; height:1.7rem;overflow: hidden;}

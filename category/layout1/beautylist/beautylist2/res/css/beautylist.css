@@ -1,0 +1,6 @@
+/*美容列表页*/
+.stn-beautylist li{ background:#fff; margin-top:.72rem; }
+.stn-beautylist li a{ display:block; border:solid #d9d9d9; border-width:1px 0; background:url(../img/left.png) no-repeat 95% center; background-size:.58rem 1.09rem; padding:.21rem 0 .21rem 5%; }
+.stn-beautylist li a .s-img{ display:block; width:3.81rem; height:3.81rem; float:left; margin-right:.72rem; }
+.stn-beautylist li a .s-img img{ width:100%; height:100%; }
+.stn-beautylist li a .p-name{ color:#000; line-height:3.81rem; }
