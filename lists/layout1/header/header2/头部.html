@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>头部</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/header.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _type= $('#StnType');
+		var _list = _type.find('.lists');
+		
+		_type.find('.a-down').click(function(){
+			if($(this).hasClass('open')){
+				_list.hide();
+				$(this).css('background-image','url(res/img/bigdown.png)');
+				$(this).removeClass('open');
+			}else{
+				_list.show();
+				$(this).css('background-image','url(res/img/bigup.png)');
+				$(this).addClass('open');
+			}
+		})
+		_list.find('a').click(function(){
+			_list.hide();
+			_type.find('.a-down').css('background-image','url(res/img/bigdown.png)');
+			_type.find('.a-down').removeClass('open');
+		})
+	})
+</script>
+</head>
+
+<body>
+	<!--头部高度：5.37rem-->
+	<header class="list-head">
+    	<section class="stn-type" id="StnType">
+        	<div class="breadcrumb"><span class="fz30">美妆护肤</span>&gt;<span class="fz30">…</span>&gt;<span class="fz30">男士护理</span></div>
+            <a class="a-down" href="#">下拉</a>
+            <div class="clr"></div>
+            
+            <div class="lists">
+            	<ul>
+                	<li><a class="fz26" href="#">护肤套装</a></li>
+                    <li><a class="fz26" href="#">男士护理</a></li>
+                    <li><a class="fz26" href="#">身体护理</a></li>
+                    <li><a class="fz26" href="#">精油芳疗</a></li>
+                    <li><a class="fz26" href="#">时尚彩妆</a></li>
+                    <li><a class="fz26" href="#">隔离霜</a></li>
+                </ul>
+                <div class="clr"></div>
+                <span class="s-icon"></span>
+            </div>
+        </section>
+        <section class="stn-sorting">
+            <ul>  <!--从高到底： s-down  --><!--从底到高： s-up  -->
+                <li><a class="fz24" href="#"><span class="s-name s-down">综合</span></a></li>
+                <li><a class="fz24" href="#"><span class="s-name">销量</span></a></li>
+                <li><a class="a-money fz24" href="#"><span class="s-name">价格</span></a></li>
+                <li><a href="#"><span class="s-icon"><img src="res/img/iconbig.png" /></span></a></li>  <!--大图图标：iconbig.png--><!--中图图标：iconthe.png--><!--小图图标：iconsmall.png-->
+            </ul>
+        </section>
+	</header>
+	<!--头部-end-->
+</body>
+</html>

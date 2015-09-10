@@ -1,0 +1,12 @@
+.list-head{ width:100%; height:2.47rem; border-bottom:1px solid #d9d9d9; background:#ececec; position:fixed; top:3.26rem; left:0; z-index:9; }
+.list-head li{ width:25%; float:left; text-align:center; }
+.list-head li a{ display:block; height:1.3rem; line-height:1.25rem; border-right:1px solid #d9d9d9; margin:.62rem 0; }
+.list-head li:last-child a{ background:none; border-right:none; }
+.list-head li a .s-name{ display:inline-block; background:url(../img/down.png) no-repeat right center; background-size:.5rem .29rem; color:#979797; padding-right:.9rem; }
+.list-head li .a-money .s-name{ background-image:url(../img/up.png); }
+.list-head li a .s-down{ background-image:url(../img/downred.png); color:#e62c02; }
+.list-head li .a-money .s-down{ background-image:url(../img/downred.png); }
+.list-head li a .s-up{ background-image:url(../img/upred.png); color:#e62c02; }
+.list-head li .a-money .s-up{ background-image:url(../img/upred.png); }
+.list-head li a .s-icon{ display:block; width:1.3rem; height:1.3rem; margin:0 auto; }
+.list-head li a .s-icon img{ display:block; width:100%; height:100%; }

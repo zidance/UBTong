@@ -1,0 +1,23 @@
+.list-head{ width:100%; position:fixed; top:0; left:0; z-index:9; }
+.list-head .stn-type{ height:2.9rem; line-height:2.9rem; border-bottom:1px solid #d9d9d9; background:#ececec; }
+.list-head .stn-type .breadcrumb{ width:75%; float:left; border-right:1px solid #dcdcdc; padding-left:5%; box-sizing:border-box; }
+.list-head .stn-type .breadcrumb span{ margin:0 2%; color:#555555; }
+.list-head .stn-type .a-down{ display:block; background:url(../img/bigdown.png) no-repeat center center; background-size:.76rem.43rem; width:25%; height:2.9rem; float:left; text-indent:-9999px; }
+.list-head .stn-type .lists{ width:96%; border-bottom:2px solid #d9d9d9; background:#fff; position:absolute; top:2.9rem; left:0; padding:.22rem 2% 0; display:none; }
+.list-head .stn-type .lists li{ width:27.33%; float:left; text-align:center; margin:.54rem 3% 0; }
+.list-head .stn-type .lists li a{ display:block; width:100%; height:2.28rem; line-height:2.28rem; border:1px solid #d9d9d9; border-radius:4px; color:#878787; }
+.list-head .stn-type .lists li a:hover{ background:#ff6500; color:#fff; border-color:#ff6500; }
+.list-head .stn-type .lists .s-icon{ display:block; background:url(../img/icon.jpg) no-repeat; background-size:1.96rem .54rem; width:1.96rem; height:.54rem; margin:.65rem auto .39rem; }
+
+.list-head .stn-sorting{ height:2.47rem; border-bottom:1px solid #d9d9d9; background:#ececec; }
+.list-head .stn-sorting li{ width:25%; float:left; text-align:center; }
+.list-head .stn-sorting li a{ display:block; height:1.3rem; line-height:1.25rem; border-right:1px solid #d9d9d9; margin:.62rem 0; }
+.list-head .stn-sorting li:last-child a{ background:none; border-right:none; }
+.list-head .stn-sorting li a .s-name{ display:inline-block; background:url(../img/down.png) no-repeat right center; background-size:.5rem .29rem; color:#979797; padding-right:.9rem; }
+.list-head .stn-sorting li .a-money .s-name{ background-image:url(../img/up.png); }
+.list-head .stn-sorting li a .s-down{ background-image:url(../img/downred.png); color:#e62c02; }
+.list-head .stn-sorting li .a-money .s-down{ background-image:url(../img/downred.png); }
+.list-head .stn-sorting li a .s-up{ background-image:url(../img/upred.png); color:#e62c02; }
+.list-head .stn-sorting li .a-money .s-up{ background-image:url(../img/upred.png); }
+.list-head .stn-sorting li a .s-icon{ display:block; width:1.3rem; height:1.3rem; margin:0 auto; }
+.list-head .stn-sorting li a .s-icon img{ display:block; width:100%; height:100%; }

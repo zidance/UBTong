@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>中图</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/lists.css" rel="stylesheet" type="text/css" />
+<!--<script src="../../../../common/js/zepto-1.16.min.js"></script>-->
+    
+<!--    zepto-->
+<script src="res/js/zepto.js"></script>
+<script src="res/js/fx.min.js"></script>
+<script src="res/js/fx_methods.min.js"></script>
+<script src="res/js/lazyload.zepto.js"></script>
+<script>
+    $(function() {
+        $("img.lazy").lazyload({
+            effect: "fadeIn", //动画方式 默认:"show"
+            threshold:-200, // default:0 距离视窗多远时开始加载
+//            effect_params:[400],  //动画速度 ,根本无效
+            placeholder_data_img:"",
+            placeholder_real_img:""
+        });
+    });
+    
+</script>
+    
+<!--jquery
+<script src="res/js/jquery.min.js"></script>
+<script src="res/js/lazyload.jquery.min.js"></script>
+<script>
+   $(function() {
+       $("img.lazy").lazyload({
+           effect: "fadeIn", //动画方式 默认:"show"
+           effect_speed: 400, //动画速度
+           threshold: 100, //jquery例子: 200  距离视窗多远时开始加载
+           placeholder: null
+       });
+   });
+    </script>
+-->
+    
+    
+    
+<script>
+	function imgZoomControl(){
+		var _li = $('#thelist li');
+		$.each(_li,function(i,e){
+			var _this= $(this);
+			var _img = $(this).find('.s-img img');
+			$(this).find('.s-img').width(_this.width()-2);
+			$(this).find('.s-img').height(_this.width()-2);
+            
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
+			{
+				_img.css('width',_this.width()-2);
+			}else if(_img.height() > $(this).height()){
+				_img.css('height',_this.width()-2);
+			}
+			_img.css({'max-width':_this.width()-2,'max-height':_this.width()-2})
+		})
+	}
+
+
+	$(function(){
+		imgZoomControl();
+	})
+</script>
+</head>
+
+<body>
+	<section class="stn-lists stn-thelists" id="thelist" style="margin-top:.72rem;">
+		<ul>
+			<li>
+				<a href="#">
+					<table><tr><td class="s-img">
+                        <img class="lazy" data-original="res/img/icon.png" />
+                        </td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li class="li-right">
+				<a href="#">
+					<table><tr><td class="s-img"><img class="lazy" data-original="res/img/big1.png" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li>
+				<a href="#">
+					<table><tr><td class="s-img"><img class="lazy" data-original="res/img/img1.jpg" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li class="li-right">
+				<a href="#">
+					<table><tr><td class="s-img"><img class="lazy" data-original="res/img/big2.png" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li>
+				<a href="#">
+					<table><tr><td class="s-img"><img class="lazy" data-original="res/img/img1.jpg" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li class="li-right">
+				<a href="#">
+					<table><tr><td class="s-img"><img class="lazy" data-original="res/img/img2.jpg" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li>
+				<a href="#">
+					<table><tr><td class="s-img"><img class="lazy" data-original="res/img/img1.jpg" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li class="li-right">
+				<a href="#">
+					<table><tr><td class="s-img"><img class="lazy" data-original="res/img/img2.jpg" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li>
+				<a href="#">
+					<table><tr><td class="s-img"><img class="lazy" data-original="res/img/img1.jpg" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li class="li-right">
+				<a href="#">
+					<table><tr><td class="s-img"><img class="lazy" data-original="res/img/img2.jpg" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+		</ul>
+		
+		<button class="fz28">加载更多</button>
+	</section>
+</body>
+</html>

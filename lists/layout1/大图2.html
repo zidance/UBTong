@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>大图</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="search/search1/res/css/search.css" rel="stylesheet" type="text/css" />
+<link href="header/header1/res/css/header.css" rel="stylesheet" type="text/css" />
+<link href="lists/lists1/res/css/lists.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/footer/footer1/res/css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/blank/blank1/res/css/blank.css" rel="stylesheet" type="text/css">
+<script src="../../common/js/zepto-1.16.min.js"></script>
+<script src="lists/lists1/res/js/iscroll.js"></script>
+<script>
+	function imgZoomControl(){
+		var _li = $('#thelist li');
+		$.each(_li,function(i,e){
+			var _this= $(this);
+			var _img = $(this).find('.s-img img');
+			$(this).find('.s-img').width(_this.width()-2);
+			$(this).find('.s-img').height(_this.width()-2);
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
+			{
+				_img.css('width',_this.width()-2);
+			}else if(_img.height() > $(this).height()){
+				_img.css('height',_this.width()-2);
+			}
+			_img.css({'max-width':_this.width()-2,'max-height':_this.width()-2})
+		})
+	}
+
+
+	$(function(){
+		imgZoomControl();
+	})
+
+	var myScroll,
+		pullDownEl, pullDownOffset,
+		pullUpEl, pullUpOffset,
+		generatedCount = 0;
+		
+		/**
+		 * 下拉刷新 （自定义实现此方法）
+		 * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+		 */
+		function pullDownAction () {
+			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+				var el, li, i;
+				el = document.getElementById('thelist');
+		
+				/*for (i=0; i<3; i++) {
+					li = document.createElement('li');
+					li.className = "li-commodity";
+					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>华为荣耀3c手机壳 荣耀3C手机套金属外壳" + (++generatedCount) + "</span><span class='s-money'>￥120.00<em>130.00</em></span><span class='s-num'>已售出：2000件</span></span><span class='clr'></span></a>";
+					el.insertBefore(li, el.childNodes[0]);
+				}*/
+				
+				myScroll.refresh();		//数据加载完成后，调用界面更新方法   Remember to refresh when contents are loaded (ie: on ajax completion)
+			}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+		}
+		function pull () {
+			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+				var el, li, i;
+				el = document.getElementById('thelist');
+		
+				/*for (i=0; i<3; i++) {
+					li = document.createElement('li');
+					li.innerText = 'Generated row ' + (++generatedCount);
+					el.insertBefore(li, el.childNodes[0]);
+				}*/
+				
+				myScroll.refresh();		//数据加载完成后，调用界面更新方法   Remember to refresh when contents are loaded (ie: on ajax completion)
+			}, 100);	// <-- Simulate network congestion, remove setTimeout from production!
+		}
+		/**
+		 * 滚动翻页 （自定义实现此方法）
+		 * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+		 */
+		function pullUpAction () {
+			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+				var el, li, i;
+				el = document.getElementById('thelist');
+		
+				/*for (i=0; i<3; i++) {
+					li = document.createElement('li');
+					li.className = "li-commodity";
+					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>华为荣耀3c手机壳 荣耀3C手机套金属外壳" + (++generatedCount) + "</span><span class='s-money'>￥120.00<em>130.00</em></span><span class='s-num'>已售出：2000件</span></span><span class='clr'></span></a>";
+					//li.innerText = '操作系统 ' + (++generatedCount);
+					el.appendChild(li, el.childNodes[0]);
+				}*/
+				
+				myScroll.refresh();		// 数据加载完成后，调用界面更新方法 Remember to refresh when contents are loaded (ie: on ajax completion)
+			}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+		}
+		
+		/**
+		 * 初始化iScroll控件
+		 */
+		function loaded() {
+			pullDownEl = document.getElementById('pullDown');
+			pullDownOffset = pullDownEl.offsetHeight;
+			pullUpEl = document.getElementById('pullUp');	
+			pullUpOffset = pullUpEl.offsetHeight;
+			
+			myScroll = new iScroll('wrapper', {
+				scrollbarClass: 'myScrollbar', /* 重要样式 */
+				useTransition: false, /* 此属性不知用意，本人从true改为false */
+				topOffset: pullDownOffset,
+				onRefresh: function () {
+					if (pullDownEl.className.match('loading')) {
+						pullDownEl.className = '';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+					} else if (pullUpEl.className.match('loading')) {//下拉松开
+						pullUpEl.className = '';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+					}
+				},
+				onScrollMove: function () {
+					if (this.y > 5 && !pullDownEl.className.match('flip')) {
+						pullDownEl.className = 'flip';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+						this.minScrollY = 0;
+					} else if (this.y < 5 && pullDownEl.className.match('flip')) {
+						pullDownEl.className = '';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+						this.minScrollY = -pullDownOffset;
+					} else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) { //下拉松开
+						pullUpEl.className = 'flip';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+						this.maxScrollY = this.maxScrollY;
+					} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+						pullUpEl.className = '';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+						this.maxScrollY = pullUpOffset;
+					}
+				},
+				onScrollEnd: function () {
+					if (pullDownEl.className.match('flip')) {
+						pullDownEl.className = 'loading';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';				
+						pullDownAction();	// Execute custom function (ajax call?)
+					} else if (pullUpEl.className.match('flip')) {//下拉松开
+						pullUpEl.className = 'loading';
+						//pullUpEl.querySelector('.pullUpIcon').style.display = "none";
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';				
+						pullUpAction();	// Execute custom function (ajax call?)
+					}
+				}
+			});
+			
+			setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+		}
+		
+		//初始化绑定iScroll控件 
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+		document.addEventListener('DOMContentLoaded', loaded, false); 
+</script>
+
+<style type="text/css" media="all">
+body,ul,li {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+body {
+	font-size:12px;
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+	font-family:helvetica;
+}
+
+#wrapper {
+	position:absolute; z-index:1;
+	top:5.73rem; bottom:3.27rem; left:-9999px;
+	width:100%;
+	overflow:auto;
+	background:#fff;
+}
+
+#pullDown, #pullUp {
+	background:#fff;
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	display:block; float:left;
+	width:45%;
+	height:40px;
+	background:url(lists/lists1/res/img/icon.png) no-repeat right 0;
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullUp .pullUpIcon  {
+	background-image:url(lists/lists1/res/img/icon.png);
+}
+
+#pullDown.flip .pullDownIcon {
+	background-image:url(lists/lists1/res/img/icon.png);
+}
+
+#pullUp.flip .pullUpIcon {
+	background-image:url(lists/lists1/res/img/icon.png);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:right 100%;
+}
+.pullUpLabel{ width:55%; float:left; display:block; }
+
+
+/*------------- S 以下css主要是仿IOS滚动条样式(可选样式)  -------------*/		
+.myScrollbarH {
+	position:absolute;
+	z-index:100;
+	height:7px;
+	bottom:1px;
+	left:2px;
+	right:7px
+}
+
+.myScrollbarH > div {
+	height:100%;
+}
+.myScrollbarV {
+	position:absolute;
+	z-index:100;
+	width:7px;bottom:7px;top:2px;right:1px;
+	z-index:999;
+}
+
+.myScrollbarV > div {
+	width:100%;
+}
+.myScrollbarH > div,
+.myScrollbarV > div {
+	position:absolute;
+	z-index:100;
+	background:#000;
+	border-radius:5px;
+
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+	
+	border-width:3px;
+}
+/*------------- E 以上css主要是仿IOS滚动条样式  -------------*/
+
+</style>
+</head>
+
+<body style="background:#f7f5f5;">
+	<!--搜索 高度：3.26rem-->
+    <section class="stn-search">
+    	<input class="fz28" type="text" placeholder="搜索相关产品" />
+    </section>
+    <!--搜索-end-->
+    
+	<!--头部高度：2.47rem-->
+	<header class="list-head">
+		<ul>  <!--从高到底： s-down  --><!--从底到高： s-up  -->
+			<li><a class="fz24" href="#"><span class="s-name s-down">综合</span></a></li>
+			<li><a class="fz24" href="#"><span class="s-name">销量</span></a></li>
+			<li><a class="a-money fz24" href="#"><span class="s-name">价格</span></a></li>
+			<li><a href="#"><span class="s-icon"><img src="header/header1/res/img/iconbig.png" /></span></a></li>  <!--大图图标：iconbig.png--><!--中图图标：iconthe.png--><!--小图图标：iconsmall.png-->
+		</ul>
+	</header>
+	<!--头部-end-->
+    
+    <!--列表-->
+    <div id="wrapper">
+        <div id="scroller">
+            <div id="pullDown">
+                <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            </div>
+            
+            <section class="stn-lists" id="thelist">
+                <ul>
+                   <li>
+                        <a href="#">
+                            <table><tr><td class="s-img"><img src="../../login/layout1/sellerlogin/login1/res/img/bg.jpg" /></td></tr></table>
+                            <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                            <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                        </a>
+                        <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <table><tr><td class="s-img"><img src="../../index/layout1/pic/pic1/res/img/img1.jpg" /></td></tr></table>
+                            <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                            <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                        </a>
+                        <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <table><tr><td class="s-img"><img src="lists/lists1/res/img/img1.jpg" /></td></tr></table>
+                            <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                            <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                        </a>
+                        <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></span>
+                            <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                            <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                        </a>
+                        <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
+                    </li>
+                </ul>
+            </section>
+            
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+        </div>
+    </div>
+    
+    <!--列表-end-->
+    
+    <!--快捷购物车栏-->
+	<script>
+		$(function(){
+			var _boxcart = $('#BoxCart');
+			var _btn = $('#BtnBoxCart');
+			var _content = _boxcart.find('.boxcart-nav');
+			
+			_btn.click(function(){
+				if(_btn.hasClass('act')){
+					_content.find('a').css('display','none');
+					_content.css({'width':'3.24rem','transition':'width 1s'});
+					_btn.removeClass('act');
+				}else{
+					_content.css({'width':'16.24rem','transition':'width 0.8s'});
+					setTimeout(function(){
+						_content.find('a').css('display','inline-block');
+					},400);
+					_btn.addClass('act');
+				}
+			})
+		})
+	</script>
+	
+	<div class="box-cart" id="BoxCart">
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--添加购物车未点击状态：btncart.png-->  <!--添加购物车后状态：btncarth.png-->
+		<div class="boxcart-nav">
+			<a class="btn" href="#">
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/home.png" /></span>
+				<p class="fz26">首页</p>
+			</a>
+			<a class="cart" href="#">
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
+				<p class="fz26">购物车</p>
+			</a>
+            <a class="cart" href="#">
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/member.png" /></span>
+				<p class="fz26">会员</p>
+			</a>
+			<a class="cart" href="#">
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/login.png" /></span>
+				<p class="fz26">登录</p>
+			</a>
+		</div>
+	</div>
+    <!--快捷购物车栏-end-->
+    
+    
+     <!--空白BOTTOM部件 -3.27rem-->
+	<div class="blank-bottom" style="height:3.27rem"></div>
+	<!--空白BOTTOM部件 -end-->
+
+    <!--底部高度：3.27rem-->
+    <script>
+		$(function(){
+			var _stntext = $('#StnTxet');  /*类别框*/
+			var _btntext = $('#BtnText');  /*切换输入框按钮*/
+			var _stninput = $('#StnInput');  /*输入框*/
+			var _btninput = $('#BtnInput');  /*切换类别按钮*/
+			var _li = _stntext.find('.li-type');
+			_btntext.click(function(){
+				_stntext.hide();
+				_stninput.show();
+			});
+			_btninput.click(function(){
+				_stninput.hide();
+				_stntext.show();
+			});
+			
+			_li.click(function(){
+				var _size = $(this).find("li").size();
+				if(_size==0){
+					FadeOut();
+				}
+				
+				if(_size > 0){
+					_li.find('ol').hide();
+					_li.find('ol div').hide();
+					$(this).find('ol').show();
+				}
+				return false;
+			})
+			_li.find('ol li').click(function(){
+				if($(this).find('div').hasClass('type-lv'))
+				{
+					_li.find('ol div').hide();
+					$(this).find('div').show();
+				}
+				else{
+					_li.find('ol').hide();
+				}
+				return false;
+			})
+			_li.find('ol li div').click(function(){
+				_li.find('ol').hide();
+				_li.find('ol li div').hide();
+				return false;
+			})
+			
+			$(document).click(function(){
+				_li.find('ol').hide();
+			})
+			
+		})
+		function FadeOut(){
+			setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className + ' fadein'");
+			setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className.replace(' fadein', '')",3500);
+		}
+	</script>
+	<footer>
+		<!--类别-->
+		<section class="stn-text" id="StnTxet">
+			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">切换输入框</span></a>
+			<ul>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">产品分类</span></a>
+					<ol>
+						<li>
+                        	<a class="fz28" href="#">分类1</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类11</a>
+                                <a class="fz28" href="#">分类12</a>
+                                <a class="fz28" href="#">分类13</a>
+                                <a class="fz28" href="#">分类14</a>
+                            </div>
+                        </li>
+						<li>
+                        	<a class="fz28" href="#">分类2</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类21</a>
+                                <a class="fz28" href="#">分类22</a>
+                                <a class="fz28" href="#">分类23</a>
+                                <a class="fz28" href="#">分类24</a>
+                            </div>
+                        </li>
+						<li><a class="fz28" href="#">分类3</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">会员中心</span></a>
+                    <ol>
+						<li><a class="fz28" href="#">分类7</a></li>
+						<li><a class="fz28" href="#">分类8</a></li>
+						<li><a class="fz28" href="#">分类9</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">关注分享</span></a>
+				</li>
+			</ul>
+			<div class="clr"></div>
+		</section>
+		<!--类别-end-->
+		
+		<!--输入框-->
+		<section class="stn-input" id="StnInput">
+			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">切换类别</span></a>
+			<div class="input"><input type="text" /></div>
+			<button>搜索</button>
+		</section>
+		<!--输入框-end-->
+		
+		<section class="stn-null fz36" id="StnNull">未设置分类</section>
+	</footer>
+	<!--底部-end-->
+</body>
+</html>
