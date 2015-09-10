@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>提示</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/prompt.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _btn = $('button');
+		var _bg = $('#Background');
+		var _box = $('#BoxPayment');
+		var _del = _box.find('.a-close');
+		
+		_btn.click(function(){
+			_box.show();
+			_bg.show();
+			_box.css({'top':($(window).height()-_box.height())/2});
+		})
+		_del.click(function(){
+			_box.hide();
+			_bg.hide();
+		})
+	})
+</script>
+</head>
+
+<body>
+	<!--提示-->
+	<section class="stn-boxpayment" id="BoxPayment">
+    	<p class="fz32">您的订单即将下单</p>
+        
+        <div class="btn">
+            <a class="a-close fz32" href="#">取消</a>
+            <a class="fz32" href="#">确认</a>
+            <div class="clr"></div>
+        </div>
+    </section>
+    <div id="Background"></div>
+    <button>点击触发</button>
+    <!--提示-end-->
+</body>
+</html>

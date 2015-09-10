@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>提示语言</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/reminder.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _btn = $('button');
+		var _cache = $('#BoxCache');
+		var _btnlast = $('#BtnLast');
+		
+		_btn.click(function(){
+			_cache.show();
+			setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className + ' fadein';;document.getElementById('BoxCache').style.display = 'block';");
+			setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className.replace(' fadein', '');document.getElementById('BoxCache').style.display = 'none'",2625);
+		})
+	})
+</script>
+</head>
+
+<body>
+	<!--提示语言-->
+    <div class="box-cache" id="BoxCache">
+    	<div class="cachebg"></div>
+        <div class="cache-content">
+        	<span class="fz32">已成功加入购物车</span>
+        </div>
+    </div>
+    
+    <button>点击触发</button>
+    <!--提示语言-end-->
+</body>
+</html>

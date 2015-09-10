@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>图片延迟加载</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    
+<link href="res/css/lazyload.css" rel="stylesheet" type="text/css" />
+<!--引用jquery-->
+<!--
+<script src="res/js/jquery.min.js"></script>
+<script src="res/js/lazyload.jquery.min.js"></script>
+-->
+<!--引用zepto-->
+<script src="res/js/zepto/zepto.js"></script>
+<script src="res/js/zepto/fx.min.js"></script>
+<script src="res/js/zepto/fx_methods.min.js"></script>
+<script src="res/js/lazyload.zepto.js"></script>
+
+<script>
+//jquery
+//    $(function() {
+//        location.href="#aa"
+//        $("img.lazy").lazyload({
+//            effect: "fadeIn", //动画方式 默认:"show"
+//            effect_speed: 400, //动画速度
+//            threshold: 200, // default: 0-zepto. jquery例子: 200  距离视窗多远时开始加载
+//            placeholder: null
+//        });
+//    });
+
+//zepto,在很多参数上是坑的
+    $(function() {
+        location.href="#aa"
+        $("img.lazy").lazyload({
+            effect: "fadeIn", //动画方式 默认:"show"
+            threshold:0, // default: 0-zepto jquery例子: 200  距离视窗多远时开始加载
+            effect_params:[400],  //动画速度 zepto版,根本无效
+            placeholder_data_img:"",//zeptot版
+            placeholder_real_img:""
+        });
+    });
+    
+</script>
+</head>
+<body>
+    <a name="aa"></a>
+    <section class="stn-lists stn-thelists" id="thelist">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img-box"><img class="lazy" data-original="res/img/img1.jpg" /></div>
+                    <p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+                    <p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+                </a>
+            </li>
+
+        </ul>
+        <div class="clr"></div>
+
+        <button class="fz28">加载更多</button>
+    </section>
+</body>
+</html>

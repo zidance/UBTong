@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>时间控件</title>
+<meta charset="bgk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link rel="stylesheet" type="text/css" href="../../../common/css/common.css" />
+<!--时间控件样式-->
+<link rel="stylesheet" type="text/css" href="res/css/styleV2.css" />
+
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+<!--时间API-->
+<script src="res/js/moment.min.js"></script>
+<!-- 选择区域js 需精简-->
+<script src="res/js/scroll_areaV3.js"></script>
+
+</head>
+<body style="background-color:#f5f5f5;">
+	<input class="fz28" type="text" name="test" id="selectShow" value="请选择预约时间" />
+    <!--页面中
+    <div class="order_bd">
+        <dl class="order_bd_dl">
+            <dt class="order_bd_dl_dt"><span class="order_ico o_ico1">时间.</span></dt>
+            <dd class="order_bd_dl_dd">
+                <a id="selectShow" href="javascript:void(0);">请选择预约时间</a>
+            </dd>
+        </dl>
+    </div>-->
+
+    <!--弹出框-->
+    <a id="timeMb" class="hide" href="javascript:void(0);"></a>
+    <div id="selectTime" class="hide" style="-webkit-transform: translate3d(0px, -190px, 0px);">
+        
+        <h3><a href="javascript:void(0);" class="fl">取消</a><a href="javascript:void(0);" class="fr not">确定</a></h3>
+        
+        <div class="timeFloat">
+            <div class="dateWrap" id="dateSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 0px, 0px);">
+                <ul style="height: 210px;">
+                   <!--active当前选中-->
+                </ul>
+            </div>
+            
+            <div class="timeWrap" id="timeSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 1.9990234375px, 0px);">
+                <ul style="height: 360px;">
+                    <!--active当前选中 timeout已预约-->
+                    <li class="active">09:00</li>
+                    <li class="timeout">10:00</li>
+                    <li class="timeout">11:00</li>
+                    <li class="timeout">12:00</li>
+                    <li class="">13:00</li>
+                    <li class="">14:00</li>
+                    <li class="">15:00</li>
+                    <li class="">16:00</li>
+                    <li class="">17:00</li>
+                    <li class="">18:00</li>
+                    <li class="">19:00</li>
+                    <li class="">20:00</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<script>
+//moment.min.js是一个提供时间API的脚本,不涉及样式.常用调用方法如下
+   	//moment() //获取当前时间(本机的)
+    //.add('days',7)    //几天后,还可以是'months'/'hours'等
+    //.format('YYYY-MM-DD HH:mm:ss') //跟在时间后面,规定了最终输出时间的方式,参数的方式通常有这几种:
+        //"DD"当前是几日,
+        //"d" 当前星期几,返回的是0-6的数字
+        //"YYYYMMDD" 具体时间,中间可以加横杠,但不可加"年/月/日"这样的中文
+    
+    var _obj = $("#dateSelect").find("ul");
+    var t1 = 7;  //几天后,也可以是几个月/小时的计数
+    var t2 = 0;
+    var _day,_weekday,_wd;
+    while(t2<t1){
+         _day = moment().add("days",t2);
+         _weekday= _day.format('d');
+         switch(_weekday){
+             case "0":
+                 _wd="日";
+                 break;
+             case "1":
+                 _wd="一";
+                 break;
+             case "2":
+                 _wd="二";
+                 break;
+             case "3":
+                 _wd="三";
+                 break;
+             case "4":
+                 _wd="四";
+                 break;
+             case "5":
+                 _wd="五";
+                 break;
+             case "6":
+                 _wd="六";
+                 break;
+             default:
+                 _wd="";
+         };
+         
+        _obj.append('<li data-value="'+_day.format('YYYYMMDD')+'">'+_day.format('MM')+'月'+_day.format('DD')+'日'+'&nbsp;<span>周'+_wd+'</span></li>');
+        t2++;
+        
+    }
+   
+    //头一天的"星期几"改为"今天"
+    _obj.find("li").first().find("span").html("今天");
+    
+    
+    //确定按钮,返回所选时间
+    $("#selectTime").find(".fr").click(function(){
+       //var _dateSelect = $("#dateSelect").find(".active").html();
+       var _dateSelect = _day.format('YYYY')+'.'+_day.format('MM')+'.'+_day.format('DD')+' '+$("#dateSelect").find(".active").find("span").text();
+       
+       var _timeSelect = $("#timeSelect").find(".active").html();
+       if($("#timeSelect").find(".active").hasClass("timeout")){
+          //当前已预约时不返回
+          }else{
+      $("#selectShow").val(_dateSelect+" "+_timeSelect)
+           };
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+/*版权*/
+.parts-copyright{height:7.23rem;background: url(../img/copyright-logo.png) no-repeat 50% 4rem ;background-size:9.3rem 2.36rem;}
+.parts-copyright a{float:left;width:33%;border-right:1px solid #c6c6c6;text-align: center;box-sizing: border-box;margin-top:1.34rem;color:#464646;}
+.parts-copyright a:last-child{border-right:none;}
+

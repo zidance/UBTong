@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>列表购物车弹出框</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/popup.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _btn = $('button');
+		var _bg = $('#Background');
+		var _box = $('#BoxPopup');
+		var _cache = $('#BoxCache');
+		var _del = _box.find('.a-close');
+		var _reduct = _box.find('.num .reduct');
+		var _add = _box.find('.num .add');
+		var _inp = _box.find('.num input');
+		var _btnlast = $('#BtnLast');
+		
+		_btn.click(function(){
+			_box.show();
+			_bg.show();
+		})
+		_del.click(function(){
+			_box.hide();
+			_bg.hide();
+		})
+		_add.click(function(){
+			_inp.val(function(){
+				return Number($(this).val())+1;
+			})
+		})
+		_reduct.click(function(){
+			if(_inp.val()!=1){
+				_inp.val(function(){
+					return Number($(this).val())-1;
+				});
+			}
+		});	
+		_btnlast.click(function(){
+			_box.hide();
+			_bg.hide();
+			_cache.show();
+			setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className + ' fadein';;document.getElementById('BoxCache').style.display = 'block';");
+			setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className.replace(' fadein', '');document.getElementById('BoxCache').style.display = 'none'",2625);
+		})
+	})
+</script>
+</head>
+
+<body>
+	<div class="box-cache" id="BoxCache">
+    	<div class="cachebg"></div>
+        
+        <div class="cache-content">
+        	<span class="fz32">已成功加入购物车</span>
+        </div>
+    </div>
+
+	<!--列表购物车弹出框-->
+	<div class="box-popup" id="BoxPopup">
+		<div class="cartnum-img">
+        	<span class="s-img"><img src="res/img/img1.jpg" /></span>
+            <div class="cartnum-name">
+            	<p class="p-name fz28">美国原装进口精选优质开心<p>
+                <p class="p-money fz32">￥49.00<p>
+				
+                <a class="a-close" href="#">关闭</a>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div class="type">
+        	<p class="fz28">系列</p>
+            <ul>
+            	<li><a class="fz28 act" href="#">奶油味</a></li>
+                <li><a class="fz28" href="#">原味</a></li>
+                <li><a class="fz28" href="#">奶油味</a></li>
+                <li><a class="fz28" href="#">原味</a></li>
+                <li><a class="fz28" href="#">奶油味</a></li>
+            </ul>
+            <div class="clr"></div>
+        </div>
+        <div class="type">
+        	<p class="fz28">规格</p>
+            <ul>
+            	<li><a class="fz28 act" href="#">200g</a></li>
+                <li><a class="fz28" href="#">300g</a></li>
+                <li><a class="fz28" href="#">400g</a></li>
+                <li><a class="fz28 noAct" href="#">500g</a></li>
+            </ul>
+            <div class="clr"></div>
+        </div>
+        <div class="num">
+        	<div class="number-name fz28">数　量：</div>                   
+            <div class="number-input">
+                <a href="#" class="fz28 reduct">-</a>
+                <input class="fz28" type="text" value="1" />
+                <a href="#" class="fz28 add">+</a>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div class="gbook fz28"><span>留言<input type="text" /></span></div>
+        <div class="btn fz28">
+        	<a href="#">立即购买</a>
+            <a class="a-last" id="BtnLast" href="#">加入购物车</a>
+        </div>
+	</div>
+	<div id="Background"></div>
+	
+	<button>点击触发</button>
+	<!--列表购物车弹出框-end-->
+</body>
+</html>

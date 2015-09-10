@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>时间控件</title>
+<meta charset="bgk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link rel="stylesheet" type="text/css" href="../../../common/css/common.css" />
+<!--时间控件样式-->
+<link rel="stylesheet" type="text/css" href="res/css/styleV2.css" />
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+<!--时间API-->
+<script src="res/js/moment.min.js"></script>
+<!-- 选择区域js 需精简-->
+<script src="res/js/scroll_areaV3.js"></script>
+
+</head>
+<body style="background-color:#f5f5f5;">
+	<input class="fz28" type="text" name="test" id="selectShow" value="请选择预约时间" />
+    <!--页面中
+    <div class="order_bd">
+        <dl class="order_bd_dl">
+            <dt class="order_bd_dl_dt"><span class="order_ico o_ico1">时间.</span></dt>
+            <dd class="order_bd_dl_dd">
+                <a id="selectShow" href="javascript:void(0);">请选择预约时间</a>
+            </dd>
+        </dl>
+    </div>-->
+
+    <!--弹出框-->
+    <a id="timeMb" class="hide" href="javascript:void(0);"></a>
+    <div id="selectTime" class="hide" style="-webkit-transform: translate3d(0px, -190px, 0px);">
+        
+        <h3><a href="javascript:void(0);" class="fl">取消</a><a href="javascript:void(0);" class="fr not">确定</a></h3>
+        
+        <div class="timeFloat">
+            <div class="dateWrap" id="dateSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 0px, 0px);">
+                <ul style="height: 210px;">
+                   <!--active当前选中-->
+                    <li data-value="0" class="active">08月07日 今天</li>
+                    <li data-value="1" class="">08月08日 周六</li>
+                    <li data-value="2" class="">08月09日 周日</li>
+                    <li data-value="3" class="">08月10日 周一</li>
+                    <li data-value="4" class="">08月11日 周二</li>
+                    <li data-value="5" class="">08月12日 周三</li>
+                    <li data-value="6" class="">08月13日 周四</li>
+                </ul>
+            </div>
+            
+            <div class="timeWrap" id="timeSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 1.9990234375px, 0px);">
+                <ul style="height: 360px;">
+                    <!--active当前选中 timeout已预约-->
+                    <li class="active">09:00</li>
+                    <li class="timeout">10:00</li>
+                    <li class="timeout">11:00</li>
+                    <li class="timeout">12:00</li>
+                    <li class="">13:00</li>
+                    <li class="">14:00</li>
+                    <li class="">15:00</li>
+                    <li class="">16:00</li>
+                    <li class="">17:00</li>
+                    <li class="">18:00</li>
+                    <li class="">19:00</li>
+                    <li class="">20:00</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        //确定按钮,返回所选时间
+        $("#selectTime").find(".fr").click(function(){
+       //var _dateSelect = $("#dateSelect").find(".active").html();
+       var _dateSelect = _day.format('YYYY')+'.'+_day.format('MM')+'.'+_day.format('DD')+' '+$("#dateSelect").find(".active").find("span").text();
+           
+           var _timeSelect = $("#timeSelect").find(".active").html();
+           if($("#timeSelect").find(".active").hasClass("timeout")){
+              //当前已预约时不返回
+              }else{
+      $("#selectShow").val(_dateSelect+" "+_timeSelect)
+               };
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>底部</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/footer.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _stntext = $('#StnTxet');  /*类别框*/
+		var _btntext = $('#BtnText');  /*切换输入框按钮*/
+		var _stninput = $('#StnInput');  /*输入框*/
+		var _btninput = $('#BtnInput');  /*切换类别按钮*/
+		var _li = _stntext.find('.li-type');
+		_btntext.click(function(){
+			_stntext.hide();
+			_stninput.show();
+		});
+		_btninput.click(function(){
+			_stninput.hide();
+			_stntext.show();
+		});
+		
+		_li.click(function(){
+			var _size = $(this).find("li").size();
+			if(_size==0){
+					setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className + ' fadein';document.getElementById('StnNull').style.display='block'");
+					setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className.replace(' fadein', '');document.getElementById('StnNull').style.display='none'",3500);
+			}
+			
+			if(_size > 0){
+				_li.find('ol').hide();
+				_li.find('ol div').hide();
+				$(this).find('ol').show();
+			}
+			return false;
+		})
+		_li.find('ol li').click(function(){
+			if($(this).find('div').hasClass('type-lv'))
+			{
+				_li.find('ol div').hide();
+				$(this).find('div').show();
+			}
+			else{
+				_li.find('ol').hide();
+			}
+			return false;
+		})
+		_li.find('ol li div').click(function(){
+			_li.find('ol').hide();
+			_li.find('ol li div').hide();
+			return false;
+		})
+		
+		$(document).click(function(){
+			_li.find('ol').hide();
+		})
+	})
+</script>
+</head>
+
+<body>
+	<!--底部高度：3.27rem-->
+	<footer>
+		<!--类别-->
+		<section class="stn-text" id="StnTxet">
+			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">切换输入框</span></a>
+			<ul>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">产品分类</span></a>
+					<ol>
+						<li>
+                        	<a class="fz28" href="#">分类1</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类11</a>
+                                <a class="fz28" href="#">分类12</a>
+                                <a class="fz28" href="#">分类13</a>
+                                <a class="fz28" href="#">分类14</a>
+                            </div>
+                        </li>
+						<li>
+                        	<a class="fz28" href="#">分类2</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类21</a>
+                                <a class="fz28" href="#">分类22</a>
+                                <a class="fz28" href="#">分类23</a>
+                                <a class="fz28" href="#">分类24</a>
+                            </div>
+                        </li>
+						<li><a class="fz28" href="#">分类3</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">会员中心</span></a>
+                    <ol>
+						<li><a class="fz28" href="#">分类7</a></li>
+						<li><a class="fz28" href="#">分类8</a></li>
+						<li><a class="fz28" href="#">分类9</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">关注分享</span></a>
+				</li>
+			</ul>
+			<div class="clr"></div>
+		</section>
+		<!--类别-end-->
+		
+		<!--输入框-->
+		<section class="stn-input" id="StnInput">
+			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">切换类别</span></a>
+			<div class="input"><input type="text" /></div>
+			<button>搜索</button>
+		</section>
+		<!--输入框-end-->
+		
+		<section class="stn-null fz36" id="StnNull">未设置分类</section>
+	</footer>
+	<!--底部-end-->
+</body>
+</html>

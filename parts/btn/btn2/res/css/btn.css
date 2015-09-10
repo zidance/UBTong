@@ -1,0 +1,22 @@
+/*按钮*/
+.parts-btn {
+	width: 90.625%;
+	padding: .83rem 0;
+	margin: 0 auto;
+}
+.parts-btn a {
+	display: block;
+	width: 100%;
+	height: 2.4rem;
+	line-height: 2.4rem;
+	background: #fd7d09;
+	border-radius: 6px;
+	color: #fff;
+	text-align: center;
+	margin-top: .45rem;
+}
+.parts-btn p {
+	color: #4c4c53;
+	margin-top: .5rem;
+	line-height: 1.1rem;
+}

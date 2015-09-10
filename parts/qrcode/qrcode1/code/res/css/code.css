@@ -1,0 +1,15 @@
+.c-code{ padding-top:0.72rem; background:#f7f5f5; width:100%;}
+.c-code .code-p{ background:#fff; text-align:center; width:100%;}
+.c-code .code-p p{ line-height:1.2rem;}
+.c-code .code-p .p-show{ padding-top:1.3rem;}
+.c-code .code-p a{ display:block; height:13.8rem; width:13.8rem; margin:0.9rem auto;}
+.c-code .code-p a img{ width:100%; height:100%;}
+.code-p .p-grey{ color:#b0b0b0; padding-top:none; width:100%; text-align:center; padding-bottom:2rem;}
+
+@media screen and (max-width:320px){
+	.c-code .code-p p{ line-height:1.7rem;}	
+}
+
+@media screen and (min-width:321px) and (max-width:639px){
+	.c-code .code-p a{ height:9.8rem; width:9.8rem;}
+}

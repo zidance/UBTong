@@ -1,0 +1,29 @@
+/*按钮*/
+.parts-btn {
+	width: 100%;
+	background: #f4f4f4;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: .83rem 0;
+}
+.parts-btn a {
+	display: block;
+	width: 90.625%;
+	height: 2.4rem;
+	line-height: 2.4rem;
+	background: #ff6766;
+	border-radius: 6px;
+	color: #fff;
+	text-align: center;
+	margin: 0 auto;
+}
+.parts-btn .red {
+	background: #ff6766;
+}
+.parts-btn .orange {
+	background: #f1590d;
+}
+.parts-btn .oranges {
+	background: #fd7d09;
+}

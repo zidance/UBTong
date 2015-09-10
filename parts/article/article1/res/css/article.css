@@ -1,0 +1,15 @@
+/*文章页*/
+.art-article {
+	width: 93.75%;
+	margin: .72rem auto;
+}
+.art-article img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #d9d9d9;
+}
+.art-article .p1 {
+	color: #4b4b4b;
+	text-indent: .72rem;
+	line-height: 1.3rem;
+}
