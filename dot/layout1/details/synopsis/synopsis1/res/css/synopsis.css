@@ -1,0 +1,10 @@
+/*服务网点简介*/
+.stn-synopsis{ padding:.72rem 0; background:#fff; border-bottom:1px solid #dddddd; position:relative; }
+.stn-synopsis .s-img{ display:block; float:left; width:5.37rem; height:5.37rem; border:1px solid #d9d9d9; margin:0 1.05rem; }
+.stn-synopsis .s-img img{ max-width:100%; height:auto; }
+.stn-synopsis .synopsis{ position:absolute; margin-left:7.47rem; }
+.stn-synopsis .synopsis .p-name{ color:#000; }
+.stn-synopsis .synopsis .p-evaluation{ margin-top:2.5rem; }
+.stn-synopsis .synopsis .p-evaluation .s-good, .stn-synopsis .synopsis .p-evaluation .s-bad{ display:inline-block; line-height:1.52rem; background:url(../img/good.png) no-repeat; background-size:1.23rem 1.52rem; padding-left:1.59rem; }
+.stn-synopsis .synopsis .p-evaluation .s-bad{ background-image:url(../img/bad.png); margin-left:1.63rem; }
+.stn-synopsis .a-gbook{ display:block; position:absolute; right:1.05rem; bottom:.72rem; width:4.45rem; height:1.88rem; line-height:1.88rem; text-align:center; background:#f15a0c; color:#fff; border-radius:6px; }

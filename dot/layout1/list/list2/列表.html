@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>列表</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/lists.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _btn = $('#BtnRegion');
+		var _box = $('#BoxRegion');
+		var _bg = $('#Background');
+		var _close = _box.find('.a-close');
+		
+		_btn.click(function(){
+			_box.show();
+			_bg.show();
+			height();
+		})
+		_close.click(function(){
+			_box.hide();
+			_bg.hide();
+			height();
+		})
+		
+		function height(){
+			if(_box.height()>$(window).height()*0.6)
+			{
+				_box.height($(window).height()*0.6);
+				var _h = $(window).height()*0.6-_box.find('h1').height()-_box.find('.btn').height();
+				_box.find('ul').height(_h);
+			}
+			_box.css('top',($(window).height()-_box.height())/2);
+		}
+		
+		imgZoomControl();
+	})
+	function tradeCheckboxClick(node){
+		$('.trade_checkbox').prop('checked','');
+		$(node).prop('checked','checked');
+	}
+	
+	function imgZoomControl(){
+		var _li = $('#thelist li');
+		$.each(_li,function(i,e){
+			var _this= $(this).find('.a-img');
+			var _img = $(this).find('.a-imgs img');
+			$(this).find('.a-imgs').width(_this.width()-2);
+			$(this).find('.a-imgs').height(_this.width()-2);
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
+			{
+				_img.css('width',_this.width()-2);
+			}else if(_img.height() > $(this).height()){
+				_img.css('height',_this.width()-2);
+			}
+			_img.css({'max-width':_this.width()-2,'max-height':_this.width()-2})
+		})
+	}
+</script>
+</head>
+
+<body>
+	<!--地区选择框-->
+	<div class="box-region" id="BoxRegion">
+    	<h1 class="fz32">请选择<a class="a-close" href="#">关闭</a></h1>
+        
+        <ul>
+        	<li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><span class="fz28">河北省</span><div class="clr"></div></li>
+            <li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><span class="fz28">河南省</span><div class="clr"></div></li>
+            <li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><span class="fz28">云南省</span><div class="clr"></div></li>
+            <li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><span class="fz28">辽宁省</span><div class="clr"></div></li>
+            <li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><span class="fz28">黑龙江省</span><div class="clr"></div></li>
+        </ul>
+        <div class="clr"></div>
+        
+        <div class="btn"><a class="a-btn" href="#">确  定</a></div>
+    </div>
+    <div id="Background"></div>
+    <!--地区选择框-end-->
+    
+	<!--列表-->
+	<section class="stn-lists" id="thelist"> <!--stn-listsred  红色-->
+    	<div class="lists-region">
+        	<a id="BtnRegion" href="#"><span class="fz28">福州市</span></a>
+            <a href="#"><span class="up fz28">评价</span></a>   <!--上：up  下：down-->
+            <a href="#"><span class="fz28">最近距离</span></a>
+        </div>
+    	<ul>
+        	<li>
+            	<div class="li-padding">
+                    <table class="a-img"><tr><td class="a-imgs"><img src="res/img/img1.jpg"  /><i class="i-top fz18">置顶</i></td></tr></table>
+                    <a class="a-name fz28" href="#">服务网名称</a>
+                    <p class="p-address fz24">北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼</p>
+                    <p class="p-money fz36">￥389.00</p>
+                    <em class="e2">星级好评</em>  <!-- 一星：e1  二星：e2  三星：e3  四星：e4  五星：e5 -->
+                    <!--<p class="p-science fz20">技术: <span>中级</span></p>-->
+                    <p class="p-num-red fz26">10km</p> <!-- p-num 默认灰色 -->
+                    <a class="a-btn fz26" href="#">路线导航</a>
+                    
+                    <div class="clr"></div>
+                </div>
+            </li>
+            <li>
+            	<div class="li-padding">
+                	<table class="a-img"><tr><td class="a-imgs"><img src="res/img/img1.jpg"  /></td></tr></table>
+                    <a class="a-name fz28" href="#">服务网名称</a>
+                    <p class="p-address fz24">北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼</p>
+                    <p class="p-money fz36">￥389.00</p>
+                    <em class="e2">星级好评</em>  <!-- 一星：e1  二星：e2  三星：e3  四星：e4  五星：e5 -->
+                    <!--<p class="p-science fz20">技术: <span>中级</span></p>-->
+                    <p class="p-num-red fz26">10km</p> <!-- p-num 默认灰色 -->
+                    <a class="a-btn fz26" href="#">路线导航</a>
+                    
+                    <div class="clr"></div>
+                </div>
+            </li>
+            <li>
+            	<div class="li-padding">
+                	<table class="a-img"><tr><td class="a-imgs"><img src="res/img/img1.jpg"  /></td></tr></table>
+                    <a class="a-name fz28" href="#">服务网名称</a>
+                    <p class="p-address fz24">北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼</p>
+                    <p class="p-money fz36">￥389.00</p>
+                    <em class="e2">星级好评</em>  <!-- 一星：e1  二星：e2  三星：e3  四星：e4  五星：e5 -->
+                    <!--<p class="p-science fz20">技术: <span>中级</span></p>-->
+                    <p class="p-num-red fz26">10km</p>  <!-- p-num 默认灰色 -->
+                    <a class="a-btn fz26" href="#">路线导航</a>
+                    
+                    <div class="clr"></div>
+                </div>
+            </li>
+            <li>
+            	<div class="li-padding">
+                	<table class="a-img"><tr><td class="a-imgs"><img src="res/img/img1.jpg"  /></td></tr></table>
+                    <a class="a-name fz28" href="#">服务网名称</a>
+                    <p class="p-address fz24">北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼</p>
+                    <p class="p-money fz36">￥389.00</p>
+                    <em class="e2">星级好评</em>  <!-- 一星：e1  二星：e2  三星：e3  四星：e4  五星：e5 -->
+                    <!--<p class="p-science fz20">技术: <span>中级</span></p>-->
+                    <p class="p-num-red fz26">10km</p> <!-- p-num 默认灰色 -->
+                    <a class="a-btn fz26" href="#">路线导航</a>
+                    
+                    <div class="clr"></div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!--列表-end-->
+</body>
+</html>

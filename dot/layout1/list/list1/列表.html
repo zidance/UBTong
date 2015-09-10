@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>列表</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/lists.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<script>
+
+	
+	function imgZoomControl(){
+		var _li = $('#thelist li');
+		$.each(_li,function(i,e){
+			var _this= $(this).find('.s-img');
+			var _img = $(this).find('.s-imgs img');
+			$(this).find('.s-imgs').width(_this.width()-2);
+			$(this).find('.s-imgs').height(_this.width()-2);
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
+			{
+				_img.css('width',_this.width()-2);
+			}else if(_img.height() > $(this).height()){
+				_img.css('height',_this.width()-2);
+			}
+			_img.css({'max-width':_this.width()-2,'max-height':_this.width()-2})
+		})
+	}
+	
+	$(function(){
+		imgZoomControl();
+	})
+</script>
+
+<body>
+	<!--列表-->
+	<section class="stn-lists"  id="thelist">
+    	<div class="lists-region">
+        	<a href="#"><span class="fz28">福州市</span></a>
+            <a href="#"><span class="fz28">评价</span></a>
+            <a href="#"><span class="fz28">最近距离</span></a>
+        </div>
+    	<ul>
+        	<li>
+            	<a href="#">
+                	<table class="s-img"><tr><td class="s-imgs"><img src="res/img/img1.jpg" /><em class="e-top fz18">置顶</em></td></tr></table>
+                    
+                    
+                    <div class="content">
+                    	<div class="name fz28">
+                        	服务网名称
+                            <span class="s-num-red">5.2km</span>
+                        </div>
+                        <p class="p-address fz24">北京市大兴区黄村东大街1号楼B座</p>
+                        
+                        <div class="fz28 line1">
+                        	[人工普洗]
+                            <span class="s2">星级好评</span>  <!-- 一星：s1  二星：s2  三星：s3  四星：s4  五星：s5 -->
+                        </div>
+                        <div class="line2">
+                        	<span class="s-fold fz20">5.7折</span>
+                            <span class="s-num fz20">技术: <em>中级</em></span>
+                        </div>
+                        <div class="line3">
+                        	<span class="s-money fz32">￥389.00</span>
+                            <span class="s-num fz24">￥1100.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="clr"></div>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<table class="s-img"><tr><td class="s-imgs"><img src="res/img/img1.jpg" /></td></tr></table>
+                    
+                    <div class="content">
+                    	<div class="name fz28">
+                        	服务网名称
+                            <span class="s-num-red">5.2km</span>
+                        </div>
+                        <p class="p-address fz24">北京市大兴区黄村东大街1号楼B座</p>
+                        
+                        <div class="fz28 line1">
+                        	[人工普洗]
+                            <span class="s3">星级好评</span>  <!-- 一星：s1  二星：s2  三星：s3  四星：s4  五星：s5 -->
+                        </div>
+                        <div class="line2">
+                        	<span class="s-fold fz20">5.7折</span>
+                            <span class="s-num fz20">技术: <em>中级</em></span>
+                        </div>
+                        <div class="line3">
+                        	<span class="s-money fz32">￥389.00</span>
+                            <span class="s-num fz24">￥1100.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="clr"></div>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<table class="s-img"><tr><td class="s-imgs"><img src="res/img/img1.jpg" /></td></tr></table>
+                    
+                    <div class="content">
+                    	<div class="name fz28">
+                        	服务网名称
+                            <span class="s-num-red">5.2km</span>
+                        </div>
+                        <p class="p-address fz24">北京市大兴区黄村东大街1号楼B座</p>
+                        
+                        <div class="fz28 line1">
+                        	[人工普洗]
+                            <span class="s4">星级好评</span>  <!-- 一星：s1  二星：s2  三星：s3  四星：s4  五星：s5 -->
+                        </div>
+                        <div class="line2">
+                        	<span class="s-fold fz20">5.7折</span>
+                            <span class="s-num fz20">技术: <em>中级</em></span>
+                        </div>
+                        <div class="line3">
+                        	<span class="s-money fz32">￥389.00</span>
+                            <span class="s-num fz24">￥1100.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="clr"></div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--列表-end-->
+</body>
+</html>
