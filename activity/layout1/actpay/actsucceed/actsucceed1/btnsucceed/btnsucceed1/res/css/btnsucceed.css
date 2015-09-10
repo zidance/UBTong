@@ -1,0 +1,23 @@
+/*按钮*/
+.stn-btnsucceed {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #f7f5f5;
+	padding-top: 1.45rem;
+}
+.stn-btnsucceed a {
+	display: block;
+	width: 93.59%;
+	height: 2.7rem;
+	line-height: 2.7rem;
+	text-align: center;
+	background: #f15a0c;
+	color: #fff;
+	border-radius: 6px;
+	margin: 0 auto .72rem;
+}
+.stn-btnsucceed a:last-child {
+	background: #18c7ca;
+}

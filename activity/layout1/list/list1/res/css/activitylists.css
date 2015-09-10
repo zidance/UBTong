@@ -1,0 +1,18 @@
+/*活动列表*/
+.stn-activitylists li {
+	width: 93.4375%;
+	margin: 0 auto;
+}
+.stn-activitylists li a {
+	display: block;
+	border-bottom: 1px solid #d9d9d9;
+	padding: .72rem 0;
+}
+.stn-activitylists li:last-child a {
+	border-bottom: none;
+}
+.stn-activitylists li a img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #d9d9d9;
+}

@@ -1,0 +1,7 @@
+/*联系人*/
+.stn-contact{ border:1px solid #eae8e8; border-radius:4px; background:#fff; box-sizing:border-box;  width:93.75%; margin:0 auto .72rem; }
+.stn-contact table{ width:100%; }
+.stn-contact td{ border-bottom:1px solid #eae8e8; width:4.58rem; padding-left:3.175%; }
+.stn-contact .td-input{ width:auto; padding-left:0; }
+.stn-contact .tr-bottom td{ border-bottom:none; }
+.stn-contact td input{ width:95%; height:2.62rem; border:none; }

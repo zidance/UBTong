@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>商品详细</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/details.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _obj = $('#ProductDetails');
+		var _reduct = _obj.find('.details-num .reduct');
+		var _add = _obj.find('.details-num .add');
+		var _inp = _obj.find('.details-num input');
+		
+		_add.click(function(){
+			_inp.val(function(){
+				return Number($(this).val())+1;
+			})
+		})
+		_reduct.click(function(){
+			if(_inp.val()!=1){
+				_inp.val(function(){
+					return Number($(this).val())-1;
+				});
+			}
+		});	
+	})
+</script>
+</head>
+
+<body>
+	<div class="product-details" id="ProductDetails">
+		<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2袋【快乐邻居】</p>
+		<!--<p class="p-money fz28">预售价：<span class="fz36">￥29.90</span><em class="fz28">3个/份</em></p>-->
+        <p class="p-money fz28">会员价：<span class="fz36">￥1199.00</span></p>
+		<p class="p-market fz28">市场价：￥40.00</p>
+		<div class="details-num">
+			<div class="number-name fz28">数　量：</div>                   
+			<div class="number-input">
+				<a href="#" class="fz28 reduct">-</a>
+				<input class="fz28" type="text" value="1" />
+				<a href="#" class="fz28 add">+</a>
+			</div>
+            <div class="clr"></div>
+		</div>
+	</div>
+</body>
+</html>
