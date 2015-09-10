@@ -1,0 +1,14 @@
+/*评价详情*/
+.stn-subdetailstrade{ padding-top:.72rem; background:#fff; border-bottom:1px solid #d9d9d9; margin-bottom:.72rem; }
+.stn-subdetailstrade li{ margin-bottom:.72rem; }
+.stn-subdetailstrade li .s-img{ display:block; float:left; width:6.64rem; height:6.64rem; border:1px solid #dadada; margin:0 3.125%; }
+.stn-subdetailstrade li .s-img img{ width:100%; height:100%; }
+.stn-subdetailstrade li .content{ width:95%; }
+.stn-subdetailstrade li .p-name{ color:#000; height:2.5rem; line-height:1.2rem; overflow:hidden; }
+.stn-subdetailstrade li .p-money{ color:#ff6766; margin:.8rem 0; }
+.stn-subdetailstrade li .p-address{ color:#a7a7a7; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+
+@media screen and (max-width:320px){
+	.stn-subdetailstrade li .p-name{ height:3rem; line-height:1.5rem; }
+	.stn-subdetailstrade li .p-money{ margin:.4rem 0; }
+}

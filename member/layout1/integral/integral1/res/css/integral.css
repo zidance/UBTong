@@ -1,0 +1,45 @@
+/* 积分概况 */
+.integral-query .stn-general{position:relative;width:100%;height:11.5rem;color:#fff;text-align: center;background-image: url(../img/general-bottom-bg.png),url(../img/general-bg.png);background-repeat: repeat-x,no-repeat;background-position: left bottom,right bottom;background-size:.88rem .22rem,38.4% 28.9%;background-color: #f15a0c;}
+.integral-query .stn-general .a-rule{position:absolute;border:1px solid #fff;border-radius:3px;color:#fff;top:26px;width:4.19rem;line-height:1.25rem;height:1.25rem;top:.95rem;right:.95rem;}
+.integral-query .stn-general .p-number{font-size:2.9rem;;padding-top:3.3rem;}
+.integral-query .stn-general .p-describe{font-size:1rem;}
+
+/* 收入支出切换 */
+.integral-query .stn-switch ul{width:90%;height:1.95rem;line-height: 1.9rem; margin:.75rem auto 0;border:1px solid #5b5d69;border-radius: 7px; overflow: hidden;}
+.integral-query .stn-switch ul li{float:left;width:50%;height:100%;background-color: #fff;}
+.integral-query .stn-switch ul li a{display:block;color:#5b5d69;height:100%;text-align: center;}
+.integral-query .stn-switch ul li a.act{background-color: #5b5d69;color:#fff;}
+
+/* 积分明细 */
+.integral-query .stn-detail{width:90%;margin:0 auto;}
+.integral-query .stn-detail div p{height:3.45rem;line-height: 3.45rem;padding:0 2.7% 0 3.2%;border-top:1px solid #d9d9d9;font-size:1.11rem;overflow: hidden;clear:both;}
+.integral-query .stn-detail div p span{float:right;font-size:1.01rem;}
+.integral-query .stn-detail div p:first-child{border-top:none;}
+
+@media screen and (min-width:321px) and (max-width:639px){    
+    .integral-query .stn-general{height:8.7rem;}
+    .integral-query .stn-general .a-rule{width:3.3rem;height:1rem;line-height:1rem;top:.73rem;right:.73rem;}
+    .integral-query .stn-general .p-number{font-size:2.24rem;padding-top:2.5rem;}
+    .integral-query .stn-general .p-describe{font-size:.78rem;}
+
+    .integral-query .stn-switch{height:1.5rem;line-height: 1.5rem;margin-top:.56rem;}
+
+    .integral-query .stn-detail p{height:2.6rem;line-height: 2.6rem;font-size:.85rem;}
+    .integral-query .stn-detail p span{font-size:.71rem;}
+}
+
+
+
+/* 积分规则 */
+
+.rules{ width:100%;}
+.rules ul{ width:100%;}
+.rules li{ padding:1rem 1.45rem; border-bottom:1px solid #e3e4eb; height:3.45rem;}
+.rules li .rule-head .r-if{ color:#5b5d69; line-height:1.6rem; display:block; float:left; padding-left:0.5rem;}
+.rules li .rule-head .r-orag{ display:block; width:0.36rem; background:#f15a0c; float:left; height:1rem; margin:0.32rem 0;}
+.rules li .rule-cont{ color:#000; line-height:2rem; padding-left:.93rem;}
+@media screen and (min-width:321px) and (max-width:639px){
+		.rules li .rule-cont{ line-height:1.3rem;}
+		.rules li{ height:3rem; padding:0.8rem 1.45rem;}
+		
+}

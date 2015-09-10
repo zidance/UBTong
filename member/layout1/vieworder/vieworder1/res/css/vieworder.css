@@ -1,0 +1,102 @@
+body{ background:#f7f5f5; }
+
+.view-order{ width:93%; padding:0 3.5%; }
+.view-order section{ border:1px solid #eae8e8; border-radius:4px; background:#fff; margin-top:.72rem; padding:0 3.175%; }
+/*订单信息、收货地址、物流信息*/
+.view-order .stn-informat:first-child{ margin-top:1.09rem; }
+.stn-informat p, .stn-product .p-title{ border-bottom:1px solid #eae8e8; color:#161616; padding:.45rem 0 .38rem; font-size:.85rem; }
+.stn-informat table{ margin:.54rem 0; }
+.stn-informat td{ color:#939292; width:3.58rem; padding:0.1rem 0; vertical-align:top; font-size:.71rem; line-height:1rem; }
+.stn-informat .td-red{ color:#ff4949; width:auto; }
+.stn-informat .td-black, .stn-message .td-black{ color:#161616; width:auto;  }
+.stn-informat a p{ background:url(../img/left.png) no-repeat right center; background-size:.47rem .76rem; }
+.stn-informat a td{ width:auto; }
+/*拨打电话*/
+.stn-tel{ height:2.5rem; line-height:2.5rem; }
+.stn-tel a{ display:block; color:#161616; background:url(../img/tel.png) no-repeat right center; background-size:1.16rem 1.16rem; }
+/*商品列表*/
+.stn-product li{ border-bottom:1px solid #eae8e8; position:relative; }
+.stn-product li:last-child{ border-bottom:none; }
+.stn-product .a-product{ display:block; padding:.7rem 0; }
+.stn-product .a-product .s-img{ display:block; float:left; width:5.01rem; height:5.01rem; border:1px solid #f3f3f3; }
+.stn-product .a-product .s-img img{ width:100%; height:100%; }
+.stn-product .a-product .details{ width:6.25rem; float:left; margin-left:0.72rem; }
+.stn-product .a-product .longwidth{ width:11.6rem; margin-left:0;}
+.stn-product .a-product .details .p-name{ height:2.54rem; line-height:1rem; font-size:.71rem; color:#000; /*text-overflow:ellipsis; overflow:hidden; white-space:nowrap; */}
+.stn-product .a-product .details .p-money{ color:#e52c02; font-size:.85rem; margin-top:1.30rem; }
+/*粉红色*/
+.stn-product .a-product .details .red{ color:#ff6766; }
+.stn-product .a-product .s-num{ display:block; float:right; color:#939292; font-size:0.74rem; }
+.stn-product .a-btn{ display:block; width:4.54rem; height:1.51rem; line-height:1.51rem; border:1px solid #e62c02; color:#e62c02; text-align:center; border-radius:4px; font-size:.71rem; position:absolute; right:0; bottom:.78rem; }
+/*其他费用*/
+.product-cost{ border-top:1px solid #eae8e8; padding:.45rem 0; }
+.product-cost p{ color:#161616; }
+.product-cost p span{ color:#939292; }
+/*留言*/
+.stn-message{ margin-bottom:.75rem; }
+.stn-message td{ width:2.29rem; padding:.48rem 0; color:#939292; }
+
+/*二维码*/
+.qr-code{ position:relative; margin-bottom:1.47rem; }
+.stn-code p{ color:#161616; text-align:center; line-height:2.4rem;  }
+.stn-code .s-code{ display:block; width:46%; margin:3.23rem auto; border:1px solid #d4d1cd; }
+.stn-code .s-code img{ width:100%; height:auto; }
+.qr-code .s-seal{ display:block; width:100%; height:auto; position:absolute; top:.87rem; left:0; }
+.qr-code .s-seal img{ width:100%; height:100%; }
+/*预约时间*/
+.stn-time{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.72rem; padding:0 3.205%; }
+.stn-time a{ display:block; padding:.72rem 0; color:#000; }
+.stn-time span{ display:block; padding:.72rem 0 .72rem .36rem; color:#000; }
+/*服务网点*/
+.stn-outlets{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.72rem; padding:0 3.205%; }
+.stn-outlets h1{ color:#000; border-bottom:1px solid #d9d9d9; padding:.54rem 0 .54rem .36rem; }
+.stn-outlets .a-title{ display:block; border-bottom:1px solid #d9d9d9; padding:.54rem 0 .54rem .36rem; background:url(../img/left.png) no-repeat 95% center; background-size:.5rem .9rem; color:#000; }
+.stn-outlets .a-title span{ display:block; float:right; margin:.1rem 10% 0 0; color:#a6a6a6; }
+.stn-outlets li{ padding:.72rem 0; position:relative; }
+.stn-outlets li .s-img{ display:block; float:left; width:5.37rem; height:5.37rem; margin:0 .72rem 0 .36rem; border:1px solid #d9d9d9; }
+.stn-outlets li .s-img img{ max-width:100%; height:auto; }
+.stn-outlets li .p-name{ width:10.9rem; color:#000; }
+.stn-outlets li .p-address{ color:#a6a6a6; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; margin-top:.5rem; }
+.stn-outlets li em{ display:block; width:5.23rem; height:.65rem; background:url(../img/high.png) no-repeat; background-size:5.23rem 6.17rem; overflow:hidden; text-indent:-9999px; margin-top:.8rem; }
+.stn-outlets li .e2{ background-position:0 -1.4rem; }
+.stn-outlets li .e3{ background-position:0 -2.8rem; }
+.stn-outlets li .e4{ background-position:0 -4.17rem; }
+.stn-outlets li .e5{ background-position:0 -5.53rem; }
+.stn-outlets li .p-science{ color:#676767; margin-top:.7rem; }
+.stn-outlets li .p-science span{ color:#f08f00; }
+.stn-outlets li .p-num{ display:block; float:right; background:url(../img/distance.png) no-repeat 0 center; background-size:.47rem .72rem; padding-left:.72rem; color:#a6a6a6; position:absolute; top:.72rem; right:.36rem; }
+.stn-outlets li a{ display:block; width:5.45rem; height:1.88rem; line-height:1.88rem; text-align:center; color:#fff; background:#3e9ef9; border-radius:6px; position:absolute; bottom:.72rem; right:.36rem; }
+
+
+.stn-product .a-product .details .no-marginTop{ margin-top:0;}
+
+@media screen and (min-width:640px){
+	.stn-informat td{ width:3.78rem; }
+	.stn-product .a-product .details{ width:8.25rem; }
+	.stn-product .a-product .longwidth{ width:14.7rem; margin-left:0;}
+}
+@media screen and (max-width:380px) and (min-width:320px){
+	.stn-outlets li a{ width:4.35rem; height:1.48rem; line-height:1.48rem; }
+}
+@media screen and (max-width:320px){
+	.stn-informat p, .stn-product .p-title{ font-size:1.11rem; }
+	.stn-informat td{ font-size:.96rem; width:4.83rem; line-height:1.35rem; }
+	
+	.stn-product .a-product{ padding:.87rem 0; }
+	.stn-product .a-product .details{ width:9.25rem; }
+	.stn-product .a-product .longwidth{ width:14.67rem; margin-left:0;}
+	.stn-product .a-product .details .p-name{ font-size:.96rem; line-height:1.2rem; /*text-overflow:ellipsis; overflow:hidden; white-space:nowrap; */}
+	.stn-product .a-product .details .p-money{ font-size:1.11rem; margin-top:1.00rem; }
+	.stn-product .a-product .s-num{ font-size:.96rem; }
+	.stn-product .a-btn{ bottom:.95rem; font-size:0.96rem; width:4.74rem; height:1.91rem; line-height:1.91rem; }
+	
+	.stn-message td{ width:3.14rem; padding:.68rem 0; }
+
+	.stn-outlets li .p-name{ width:17.5rem; }
+	.stn-outlets li .p-address{ margin-top:.2rem; }
+	.stn-outlets li em{ margin-top:.5rem; }
+	.stn-outlets li .p-science{ margin-top:.25rem; }
+	.stn-outlets li a{ height:2.14rem; line-height:2.14rem; }
+}
+
+

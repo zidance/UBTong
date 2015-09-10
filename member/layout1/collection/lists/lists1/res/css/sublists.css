@@ -1,0 +1,9 @@
+/*预约商品列表*/
+.stn-sublists{ background:#fff; padding-bottom:.61rem; }
+.stn-sublists li{ margin:.98rem 0 0 3.75%; float:left; width:43.75%; overflow:hidden; }
+.stn-sublists .li-right{ margin-left:5%; margin-right:3.75%; float:right; }
+.stn-sublists li .a-product .s-img{ border:1px solid #d9d9d9; overflow:hidden; vertical-align:middle; text-align:center; }
+.stn-sublists li .a-product .p-name{ color:#000; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; margin-top:.4rem; }
+.stn-sublists li .a-product .p-money{ color:#ff6766; margin-top:.2rem; }
+.stn-sublists li .a-product .p-money span{ display:block; float:right; color:#b9b9b9; margin-top:.15rem; }
+.stn-sublists li .a-btn{ display:block; width:85.71%; height:1.59rem; line-height:1.59rem; border:1px solid #ff6766; border-radius:30px; text-align:center; margin:.72rem auto 0; color:#ff6766; }

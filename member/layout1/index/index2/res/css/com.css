@@ -1,0 +1,158 @@
+body {
+	background: #f7f5f5;
+	position: relative;
+}
+.header-member {
+	position: relative;
+	padding-left: 6.875%;
+	height: 7.26rem;
+}
+.header-member .headbg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.header-member .headbg img {
+	width: 100%;
+	height: 7.26rem;
+}
+.header-member .head-pic {
+	position: absolute;
+	z-index: 10;
+	top: 1.09rem;
+	width: 65%;
+}
+.header-member .head-pic .a-pic {
+	display: block;
+	width: 4.79rem;
+	height: 4.79rem;
+	padding: 4px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 0 10px #f66663;
+	float: left;
+}
+.header-member .head-pic .a-pic img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.header-member .head-pic p {
+	color: #fff;
+	line-height: 4.79rem;
+	float: left;
+	margin-left: 3.59%;
+}
+.header-member .a-edit {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	right: 0;
+}
+.header-member .a-edit img {
+	width: 1.7rem;
+	height: 1.74rem;
+	margin: .61rem .84rem;
+}
+.shade {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	top: 0;
+	opacity: 0.5;
+}
+.stn-sign {
+	display: none;
+	position: absolute;
+	z-index: 101;
+	left: 6.2%;
+	top: 8rem;
+	width: 87.6%;
+	background-color: #fff;
+	border-radius: 12px;
+	text-align: center;
+}
+.stn-sign .i-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1.15rem;
+	height: 1.15rem;
+	padding: 1.02rem 1.32rem;
+}
+.stn-sign .i-sign {
+	width: 8.6rem;
+	height: 8.6rem;
+	margin: 1.6rem auto 1.1rem;
+}
+.stn-sign p {
+	line-height: 2rem;
+	color: #555555;
+}
+.stn-sign p span {
+	color: #fd7d09;
+}
+.stn-sign .a-confirm {
+	display: block;
+	width: 90%;
+	height: 2.8rem;
+	line-height: 2.8rem;
+	color: #fff;
+	border-radius: 6px;
+	margin: 1.8rem auto 1.09rem;
+	background-color: #fd7d09;
+}
+nav li {
+	height: 3.19rem;
+	border: solid #dcdcdc;
+	border-width: 1px 0 1px;
+	margin-top: .72rem;
+}
+nav li a {
+	display: block;
+	height: 3.19rem;
+	line-height: 3.19rem;
+	background: url(../img/left.png) no-repeat #fff 95% center;
+	background-size: .58rem 1.09rem;
+}
+nav li img {
+	display: block;
+	float: left;
+	width: 1.74rem;
+	height: 1.63rem;
+	margin: .9rem 0 0 4.375%;
+}
+nav li .s-name {
+	display: block;
+	float: left;
+	color: #242424;
+	margin-left: .94rem;
+}
+@media screen and (min-width:321px) and (max-width:639px) {
+	.stn-sign {
+		top: 6.2rem;
+	}
+	.stn-sign .i-sign {
+		width: 6.6rem;
+		height: 6.6rem;
+	}
+	.stn-sign p {
+		line-height: 1.57rem;
+	}
+	.stn-sign .a-confirm {
+		height: 2.16rem;
+		line-height: 2.16rem;
+		margin-top: 1rem;
+	}
+}
+@media screen and (max-width:320px) {
+	nav li a {
+		line-height: 2.73rem;
+	}
+}

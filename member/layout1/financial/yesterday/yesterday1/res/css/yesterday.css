@@ -1,0 +1,15 @@
+/*昨日收益*/
+.stn-yesterday{ margin-bottom:3.59rem; }
+.stn-yesterday .money{ background:#ebebeb; padding:.4rem 0; }
+.stn-yesterday .money table{ width:90%; margin-left:5%; }
+.stn-yesterday .money td{ padding:.7rem 0; }
+.stn-yesterday .money td p{ color:#b5b5be; }
+.stn-yesterday .money td .p-money{ color:#7a7b81; }
+
+.stn-yesterday .prompt{ padding:.3rem 5%; background:#f4f4f4; }
+.stn-yesterday .prompt p{ color:#4c4c53; line-height:1.2rem; }
+
+.stn-btnyesterday{ width:100%; border-top:1px solid #c6c6c6; background:#f8f8f8; position:fixed; left:0; bottom:0; }
+.stn-btnyesterday li{ width:33.33%; float:left; }
+.stn-btnyesterday li a{ display:block; line-height:3.59rem; text-align:center; color:#454545; }
+.stn-btnyesterday li a.act{ color:#ff6766; }

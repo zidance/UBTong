@@ -1,0 +1,22 @@
+/*星级评价*/
+.stn-assessment{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-bottom:.72rem; }
+.stn-assessment .appraise{ border-bottom:1px solid #eae8e8; padding:1.01rem 5%; }
+.stn-assessment .appraise:last-child{ border-bottom:none; }
+.stn-assessment .appraise p{ float:left; color:#676767; }
+.stn-assessment .appraise span{ display:block; float:right; height:1.01rem; background-repeat:no-repeat; background-size:6.54rem 1.01rem; }
+
+.stn-assessment .appraise .grey{ background-image:url(../img/star2.png); }
+.stn-assessment .appraise .red{ background-image:url(../img/star1.png); }
+.stn-assessment .appraise .s1{ width:1.38rem; }
+.stn-assessment .appraise .s2{ width:2.72rem; }
+.stn-assessment .appraise .s3{ width:4.06rem; }
+.stn-assessment .appraise .s4{ width:5.45rem; }
+.stn-assessment .appraise .s5{ width:6.54rem; }
+
+.box-assessstar{ width:90%; position:fixed; bottom:0; left:0; padding:.94rem 5% 1.45rem; background:#fff; display:none; z-index:10; }
+.box-assessstar h1{ color:#585858; margin-bottom:2.18rem; position:relative; }
+.box-assessstar h1 a{ display:block; background:url(../img/del.png) no-repeat; background-size:1.81rem 1.81rem; width:1.81rem; height:1.81rem; position:absolute; top:0; right:5%; text-indent:-9999px; }
+.box-assessstar .raty-cancel{ display:none; }
+.box-assessstar .a-btn{ display:block; margin-top:2.9rem; auto; height:2.4rem; line-height:2.4rem; background:#ff6766; color:#fff; text-align:center; border-radius:4px; }
+
+#Background{ width:100%; height:100%; z-index:8; background:#000; position:fixed; top:0px; left:0px; opacity:0.8; display:none; }

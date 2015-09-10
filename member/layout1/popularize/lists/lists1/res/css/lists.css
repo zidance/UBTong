@@ -1,0 +1,8 @@
+/*推广列表*/
+.stn-mbelists li{ width:93%; margin:0 auto; border:1px solid #e7e7e7; border-radius:4px; background:#fff; padding:.72rem 0; position:relative; margin-top:.72rem; }
+.stn-mbelists li .a-product{ display:block; width:100%; }
+.stn-mbelists li .a-product .s-img{ display:block; width:5.01rem; height:5.01rem; float:left; border:1px solid #f3f3f3; margin:0 3%; float:left; }
+.stn-mbelists li .a-product .s-img img{ width:100%; height:100%; }
+.stn-mbelists li .a-product .p-name{ color:#000; width:70%; height:2.54rem; }
+.stn-mbelists li .a-product .p-money{ color:#ff6766; margin-top:1.1rem; }
+.stn-mbelists li .a-links{ display:block; width:24%; height:1.81rem; line-height:1.81rem; background:#ff6766; color:#fff; text-align:center; border-radius:4px; position:absolute; bottom:.72rem; right:3%;}

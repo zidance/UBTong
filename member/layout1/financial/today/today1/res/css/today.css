@@ -1,0 +1,5 @@
+/*今日收益*/
+.stn-today .earnings{ width:100%; background:url(../img/bg.jpg) repeat-x 0 bottom #ff3333; background-size:.72rem .29rem; padding:.54rem 0 1.72rem; }
+.stn-today .earnings .p-name{ color:#fff; margin-left:5%; }
+.stn-today .earnings .p-money{ color:#fff; margin-left:5% }
+.stn-today .p-num{ text-align:center; color:#b5b5be; padding:.54rem 0; background:#f4f4f4; }

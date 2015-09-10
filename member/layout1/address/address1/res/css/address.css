@@ -1,0 +1,49 @@
+body{ background:#f7f5f5; }
+
+.address-lists{ margin-bottom:3.44rem; }
+.address-lists li{ border:solid #dcdcdc; border-width:1px 0; background:#fff; margin-top:.72rem; position:relative; width:94%; padding:0 3%; }
+.address-lists li input[type=checkbox]{ -webkit-appearance:none; appearance:none; width:20px; height:20px; margin:1.8rem 3% 0 0; cursor:pointer; vertical-align:bottom; background:none; border:1px solid #dbdada; -webkit-border-radius:50px; -moz-border-radius:50px; border-radius:50px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; position:relative; outline:none; float:left; }
+.address-lists li input[type=checkbox]:checked::after{ content:url(../img/selective.png); display:block; position:absolute; top:-1px; left:-1px; }
+.address-lists li .a-address{ display:block; float:left; width:81%; padding:.9rem 0; background:url(../img/left.png) no-repeat 98% center; background-size:.58rem 1.09rem; }
+.address-lists li .a-address p{ color:#242424; }
+.address-lists li .a-address p span{ margin-left:30%;}
+.address-lists li .a-address .p-address{ color:#6a6a6a; margin-top:.9rem; }
+
+.btn-address{ width:100%; position:fixed; bottom:0; left:0; background:#f7f5f5; height:3.44rem; }
+.btn-address a{ display:block; width:94%; height:2.4rem; line-height:2.4rem; text-align:center; color:#fff; background:#f15a0c; border-radius:4px; position:absolute; bottom:.72rem; left:3%; }
+.btn-address .a-orange{ background:#f15a0c; }
+.btn-address .a-red{ background:#ff6766; }
+.address-btn{ width:94%; position:fixed; bottom:0; left:3%; background:#f7f5f5; height:3.44rem; }
+.address-btn a{ display:block; float:left; width:48%; height:2.4rem; line-height:2.4rem; text-align:center; color:#fff; background:#ff6766; border-radius:4px; }
+.address-btn a:last-child{ background:#a6a6a6; float:right; }
+
+.address-edit{ bordertop:1px solid #dcdcdc; margin:.72rem 0 4rem; position:relative; width:100%; }
+.address-edit table{ width:100%; background:#fff; }
+.address-edit tr{ border-bottom:1px solid #dcdcdc; }
+.address-edit td{ text-align:center; }
+.address-edit td.td-grey{ padding:.8rem 2.5% .8rem 4%; width:30%; color:#242424; }
+.address-edit td.td-black{ padding:.8rem 4% .8rem 0; text-align:left; color:#242424; }
+.address-edit td.td-black input{ border:none; }
+.address-edit p{ margin:.5rem 0 0 8%; }
+.address-edit p input[type=checkbox]{ -webkit-appearance:none; appearance:none; width:20px; height:20px; margin:.7rem 3% 0 .36rem; cursor:pointer; vertical-align:bottom; background:none; border:1px solid #dbdada; -webkit-border-radius:50px; -moz-border-radius:50px; border-radius:50px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; position:relative; outline:none; float:left; }
+.address-edit p input[type=checkbox]:checked::after{ content:url(../img/selective.png); display:block; position:absolute; top:-1px; left:-1px; }
+.address-edit p span{ display:block; float:left; color:##bcbcbc; margin-top:.6rem; }
+
+.address-distribution{ text-align:center; }
+.address-distribution .s-img{ display:inline-block; width:11.48rem; height:6.14rem; margin:8.9rem 0 2.1rem; }
+.address-distribution .s-img img{ width:100%; height:100%; }
+.address-distribution p{ color:#aeaeae; }
+.address-distribution .a-edit{ display:inline-block; width:9.88rem; height:2.54rem; line-height:2.54rem; text-align:center; background:#f15a0c; color:#fff; border-radius:5px; margin:1.63rem 0; }
+
+.address-null{ text-align:center; }
+.address-null .s-img{ display:inline-block; width:8.35rem; height:8.24rem; margin:7.52rem 0 2.54rem; }
+.address-null .s-img img{ width:100%; height:100%; }
+.address-null p{ color:#adadad; }
+.address-null p span{ display:block; margin-bottom:.2rem; }
+.address-null .a-edit{ display:inline-block; width:9.88rem; height:2.54rem; line-height:2.54rem; text-align:center; background:#f15a0c; color:#fff; border-radius:5px; margin:1.63rem 0; }
+
+
+@media screen and (max-width:320px){
+	.address-lists li input[type=checkbox]{ margin:2rem .72rem 0 0; }
+	.address-edit p input[type=checkbox]{ margin:.5rem .72rem 0 0; }
+}

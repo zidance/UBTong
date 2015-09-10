@@ -1,0 +1,22 @@
+/*我的红包*/
+.stn-division{ margin-top:1.09rem; }
+.stn-division li{ margin:0 auto .72rem; background:url(../img/icon1.png) repeat-y #fff; background-size:.29rem .47rem; width:93.59%; height:6.43rem; border:solid #e7e7e7; border-width:1px 1px 1px 0; position:relative; border-radius:4px; }
+.stn-division li .content-l{ width:40%; float:left; line-height:5.53rem; text-align:center; }
+.stn-division li .content-l span{ color:#cccccc; }
+.stn-division li .content-l em{ color:#ff6766; line-height:6.53rem; }
+.stn-division li .content-r{ width:52%; float:left; margin:1.3rem 0 0 8%; }
+.stn-division li .content-r p{ color:#454545; }
+.stn-division li .content-r .p-time{ margin-top:.5rem; }
+.stn-division li .seal{ width:.87rem; height:6.6rem; position:absolute; left:40%; top:-1px; }
+.stn-division li .seal img{ width:100%; height:100%; }
+.stn-division li i{ display:inline-block; color:#fff; position:absolute; top:-1px; right:-1px; }
+.stn-division li .i-blue{ background:#00a0f8; }
+.stn-division li .i-green{ background:#9ce44c; }
+.stn-division li .i-gray{ background:#a1a1a1; }
+.stn-division .li-overdue{ background-image:url(../img/icon2.png); }
+.stn-division .li-overdue .content-l em{ color:#cccccc; }
+.stn-division .li-overdue .content-r p{ color:#cccccc; }
+
+@media screen and (max-width:320px){
+	.stn-division li .content-r{ margin-top:.8rem; }
+}

@@ -1,0 +1,5 @@
+.stn-evaluation{}
+.stn-evaluation textarea{ display:block; width:90%; height:10.79rem; background:#fff; border:1px solid #eae8e8; border-radius:4px; resize:none; padding:.5rem 2%; color:#161616; margin:0 auto; }
+.stn-evaluation textarea::-webkit-input-placeholder{ color:#ccc; }
+.stn-evaluation .btn-evaluation{ width:100%; height:3.77rem; width:100%; box-shadow:0 0 8px #c4c0c1; position:fixed; bottom:0; left:0; }
+.stn-evaluation .btn-evaluation a{ display:block; width:94%; height:2.9rem; line-height:2.9rem; text-align:center; background:#f15a0c; color:#fff; border-radius:4px; margin:.43rem auto 0; }

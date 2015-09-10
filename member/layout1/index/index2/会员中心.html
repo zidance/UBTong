@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>会员中心</title>
+<meta charset="gbk">
+<meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes"name="apple-mobile-web-app-capable"/>
+<meta content="black"name="apple-mobile-web-app-status-bar-style"/>
+<link href="../../../../common/css/common.css"rel="stylesheet"type="text/css"/>
+<link href="res/css/com.css"rel="stylesheet"type="text/css"/>
+<link href="../../../../parts/blank/blank1/res/css/blank.css"rel="stylesheet"type="text/css">
+<link href="../../../../parts/footer/footer4/res/css/footer.css"rel="stylesheet"type="text/css"/>
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+</head>
+    
+<body style="zoom:1;">
+    <header class="header-member">
+        <div class="headbg"><img src="res/img/img2.jpg"/></div>
+        <div class="head-pic">
+            <a class="a-pic"href="#"><img src="res/img/pic1.jpg"/></a>
+            <p class="fz36">希丹Zidane</p>
+            <div class="clr"></div>
+        </div>
+        <a class="a-edit"href="javascript:void(0)"onclick="popup()">
+            <img src="res/img/edit.png"/>
+        </a>
+    </header>
+    
+    <!--签到弹出框-->
+            <!--遮罩层--> 
+    <div class="shade"></div>
+    <section class="stn-sign">
+        <img class="i-close"src="res/img/close.png"/>
+        <img class="i-sign"src="res/img/sign.png"/>
+        <p class="fz32">已成功签到！
+            <br />您获得了&nbsp;<span>5</span>&nbsp;积分！
+        </p>
+        <a class="a-confirm fz32"href="#">确定</a>
+    </section>
+    <!--签到弹出框--end-->
+    <!--签到弹出框脚本-->
+    <script>
+        function popup(){$(".header-member").find(".a-edit").click(function(){$(".shade").show();$(".stn-sign").show()});$(".stn-sign").find(".i-close").click(function(){$(".shade").hide();$(".stn-sign").hide()});$(".stn-sign").find(".a-confirm").click(function(){$(".shade").hide();$(".stn-sign").hide()})};popup();</script>
+	
+	<nav style="margin-bottom:.72rem;">
+		<ul>
+			<li>
+				<a href="#">
+					<img src="res/img/nav1.png"/>
+					<span class="s-name">我的订单</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="res/img/nav2.png"/>
+					<span class="s-name">收藏管理</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="res/img/nav3.png"/>
+					<span class="s-name">地址管理</span>
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<img src="res/img/nav4.png"/>
+					<span class="s-name">我的评价</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="res/img/nav5.png"/>
+					<span class="s-name">我要推广</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="res/img/nav6.png"/>
+					<span class="s-name">推广明细</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="res/img/nav7.png"/>
+					<span class="s-name">财务管理</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="res/img/nav8.png"/>
+					<span class="s-name">修改密码</span>
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<img src="res/img/nav9.png"/>
+					<span class="s-name">分销管理</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+    
+    
+    <!--空白BOTTOM部件 -3.59rem-->
+	<div class="blank-bottom"style="height:3.59rem"></div>
+	<!--空白BOTTOM部件 -end-->
+    
+    <!--底部高度：3.59rem-->
+    <footer>
+    	<ul>
+    		<!--当前目录状态:p class="p-footact"-->
+        	<li><a href="#"><span class="s-icon"><img src="../../../../parts/footer/footer4/res/img/homeh.png" /></span><p class="fz22 p-footact">首页</p></a></li>  <!--当前目录状态：home.png-->   <!--未在当前目录状态：home.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../../../parts/footer/footer4/res/img/member.png" /></span><p class="fz22">福州市</p></a></li>  <!--当前目录状态：memberh.png-->   <!--未在当前目录状态：member.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../../../parts/footer/footer4/res/img/location.png" /></span><p class="fz22">会员中心</p></a></li>  <!--当前目录状态：locationh.png-->    <!--未在当前目录状态：location.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../../../parts/footer/footer4/res/img/tel.png" /></span><p class="fz22">电话咨询</p></a></li>  <!--当前目录状态：telh.png-->   <!--未在当前目录状态：tel.png-->
+        </ul>
+    </footer>
+    <!--底部-end-->
+</body>
+</html>

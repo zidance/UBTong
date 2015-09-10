@@ -1,0 +1,29 @@
+/*按钮*/
+.parts-btn{ width:90.625%; padding:.83rem 0; margin:0 auto; }
+.parts-btn a{ display:block; width:100%; height:2.4rem; line-height:2.4rem; background:#ff6766; border-radius:6px; color:#fff; text-align:center; margin-top:.45rem; }
+.parts-btn p{ color:#4c4c53; margin-top:.5rem; line-height:1.1rem; }
+
+/*提现弹出框*/
+.box-withdraw{ width:100%; position:fixed; left:0; bottom:0; background:#fff; display:none; z-index:9; }
+.box-withdraw h1{ position:relative; color:#585858; padding:1.01rem 0 1.63rem 5%; border-bottom:1px solid #e7e7e7; }
+.box-withdraw h1 .a-close{ display:block; background:url(../img/del.png) no-repeat; background-size:1.81rem 1.81rem; width:1.81rem; height:1.81rem; position:absolute; top:.9rem; right:1.05rem; text-indent:-9999px; }
+.box-withdraw table{ width:100%; display:none; }
+.box-withdraw td{ border-bottom:1px solid #e7e7e7; padding:.9rem 0; color:#000; }
+.box-withdraw .td-left{ padding:0 5%; width:34%; }
+.box-withdraw td input{ width:90%; border:none; }
+.box-withdraw td .inp-text{ display:block; width:50%; float:left; margin-top:.3rem; }
+.box-withdraw td input::-webkit-input-placeholder{ color:#a1a1a1; }
+.box-withdraw td a{ display:block; float:right; background:#00c320; width:35%; padding:.3rem 0; color:#fff; border-radius:4px; text-align:center; margin-right:5%; }
+.box-withdraw .a-btn{ display:block; width:92%; height:2.4rem; line-height:2.4rem; background:#ff6766; border-radius:6px; color:#fff; text-align:center; margin:1rem auto; }
+
+#Background{ width:100%; height:100%; z-index:8; background:#000; position:fixed; top:0px; left:0px; opacity:0.5; display:none; }
+
+
+
+
+
+
+
+@media screen and (max-width:320px){
+	.box-withdraw td .inp-text{ margin-top:.2rem; }
+}

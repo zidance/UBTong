@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>星级评价</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/assessment.css" rel="stylesheet" type="text/css" />
+<script src="res/js/jquery.js"></script>
+<script src="res/js/jquery.raty.js"></script>
+</head>
+
+<body>
+	<!--弹出评价星级框-->
+    <div class="box-assessstar" id="BoxAssessstar">
+    	<h1 class="fz32">请对服务做出评分<a class="a-close" href="#">关闭</a></h1>
+        <span id="Star1"></span>
+        <div class="clr"></div>
+        <a class="fz32 a-btn" href="#">提交评分</a>
+    </div>
+    <div id="Background"></div>
+    <!--弹出评价星级框-end-->
+
+	<!--星级评价-->
+    <section class="stn-assessment" id="StnAssessment">  <!-- 一星：s1 二星：s2 三星：s3 四星：s4 五星：s5   红色：red  灰色：grey -->
+    	<div class="appraise">
+        	<p class="fz28">态度：<em>5分</em></p>
+            <span class="red s5"></span>
+            <div class="clr"></div>
+        </div>
+        <div class="appraise">
+        	<p class="fz28">礼仪：<em>4分</em></p>
+            <span class="red s4"></span>
+            <div class="clr"></div>
+        </div>
+        <div class="appraise">
+        	<p class="fz28">技术：<em>4分</em></p>
+            <span class="red s4"></span>
+            <div class="clr"></div>
+        </div>
+        <div class="appraise">
+        	<p class="fz28">细节：</p>
+            <span class="grey s5"></span>
+            <div class="clr"></div>
+        </div>
+    </section>
+    <!--星级评价-end-->
+    <script>
+    $(function() {
+        var _path = 'res/img/';     //图片路径
+        var _btn = $('#StnAssessment').find('.appraise');
+        var _bg = $('#Background');
+        var _box = $('#BoxAssessstar');
+        var _del = _box.find('.a-close');
+        var _confirm = _box.find('.a-btn');
+        var _num = {};
+        _num.old = 0;
+
+        _btn.each(function(i) {
+            $(this).click(function() {
+                _num.old = Number(_btn.eq(i).find("span").attr("class").match(/[0-9]/));
+
+                //未评分
+                if ($(this).find("span").hasClass("grey")) {
+                    $('#Star1').find("img").attr("src", _path + "star-off.gif")
+                } else {
+                    //改评分
+                    $('#Star1').find("img").each(function(index) {
+                        if (index < (_num.old + 1)) {
+                            $(this).attr("src", _path + "star-on.gif")
+                        } else {
+                            $(this).attr("src", _path + "star-off.gif")
+                        }
+                    })
+                }
+                _box.show();
+                _bg.show();
+                _num.i = i;
+                
+                //获取得分,不打分=0分
+                _num.new = 0;
+                $('#Star1').find("img").click(function(){
+                    _num.new=$('#Star1').raty("score");
+                })
+                return _num
+            })
+        })
+        
+
+        //确定键
+        _confirm.click(function() {
+            var _span = _btn.eq(_num.i).find("span")
+            
+            
+            //0分维持原状
+            if(_num.new != 0){
+                _span.removeClass("s" + _num.old).addClass("s" + _num.new);
+                
+                if (_span.hasClass("grey")) {
+                    _span.removeClass("grey").addClass("red");
+                };
+                if (_btn.eq(_num.i).find("em").html() == undefined) {
+                    _btn.eq(_num.i).find("p").append("<em>" + _num.new + "分</em>")
+                } else {
+                    _btn.eq(_num.i).find("em").html(_num.new + "分");
+                }
+            }
+            
+            _box.hide();
+            _bg.hide();
+        })
+
+
+        //关闭键
+        _del.click(function() {
+            _box.hide();
+            _bg.hide();
+        })
+
+        //初始化
+        $('#Star1').raty({
+            half: false,
+            start: 0,
+            cancel: true,
+            cancelOff: 'star-off.gif',
+            cancelOn: 'star-on.gif',
+            path: _path,
+            size: 43,
+            starOff: 'star-off.gif',
+            starOn: 'star-on.gif',
+            number: 5
+        });
+
+        var _img = $('#Star1').find('img').width(43);
+    })
+    </script>
+
+</body>
+</html>

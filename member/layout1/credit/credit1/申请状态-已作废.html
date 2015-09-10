@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>申请状态-已作废</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/credit.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background:#f7f5f5;">
+	<!--申请失败-->
+	<script>
+        window.onload = function(){ 
+            document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
+        } 
+         window.onresize = function(){ 
+            document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
+        } 
+    </script>
+    
+    <section class="stn-subsucceed">
+    	<div class="subsucceed">
+        	<span class="s-img"><img src="res/img/invalid.png" /></span>
+            <p class="fz32">已作废</p>
+        </div>
+        <div class="subsucceed-seal" id="Seal"><img src="res/img/seal.png" /></div>
+        
+        
+        <div class="invalid" id="Code">
+        	<article>
+                <p class="p-name fz32">授信金额：￥3000.00</p>
+                <p class="p-name fz32">申请日期：2015-05-01</p>
+            </article>
+        </div>
+        
+    </section>
+    <!--申请失败-end-->
+    
+   
+    
+</body>
+</html>

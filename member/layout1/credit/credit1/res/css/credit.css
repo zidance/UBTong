@@ -1,0 +1,133 @@
+/*未申请授信中心*/
+
+/*授信金额*/
+.credit{ margin-top:0.72rem; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#fff;}
+.credit p{ padding:.5rem 0.58rem; margin:0 .72rem;}
+.credit span{ display:block; float:left; color:#252525;}
+.credit .s-left{line-height:2rem; }
+.credit input{ border:none; line-height:2rem; width:70%; float:left; padding-left:0.72rem}
+.credit input::-webkit-input-placeholder{ color:#a7a7a7; }
+.credit .p-money{ color:#999; line-height:2rem;}
+
+/*申请时间*/
+.timer{ margin-top:0.72rem; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#fff;}
+.timer p{ padding:.5rem 0.58rem; margin:0 .72rem;}
+.timer span{ display:block; float:left; color:#252525;}
+.timer .s-left{line-height:2rem; }
+.timer input{ border:none; line-height:2rem; width:70%; float:left; padding-left:0.72rem}
+.timer input::-webkit-input-placeholder{ color:#a7a7a7; }
+.timer .p-money{ color:#999; line-height:2rem;}
+
+/*保存按钮*/
+.apply-btn{ padding:1.81rem .72rem;}
+.apply-btn p{ height:2.9rem; width:100%; background:#f2484b; border-radius:8px;}
+.apply-btn a{ display:block; text-align:center; line-height:2.9rem; height:2.9rem; color:#fff;}
+
+/*授信说明*/
+.instructions{ padding:0 .72rem; position:relative;}
+.instructions p{ color:#6a6a6a; line-height:1.5rem; height:3rem;}
+.instructions a{ color:#f2484c; line-height:1.5rem; position:absolute; right:0.72rem; bottom:0; letter-spacing:3px;}
+
+
+
+/*未申请授信中心*/
+
+
+
+
+
+
+/*消费明细*/
+.statement{ width:100%; height:6.9rem; background:#f2484c;}
+.statement p{ color:#fff; width:49%;float:left;text-align:center; margin:1.5rem 0; line-height:2rem;}
+.statement .rightborder{ border-right:1px solid #fff;;}
+.stn-order{ width:100%; padding:0 3.36%; }
+.art-order{ width:94%; padding:0 3%; border-top:1px solid #eae8e8; background:#fff; margin-top:0.72rem;border-bottom:1px solid #eae8e8; }
+.art-order li{ border-bottom:1px solid #eae8e8; padding:.7rem 0; }
+.art-order li .s-img{ display:block; float:left; width:5.01rem; height:5.01rem; border:1px solid #f3f3f3; }
+.art-order li .s-img img{ width:100%; height:100%; }
+.art-order li .details{ width:9rem; float:left; margin-left:0.72rem; }
+.art-order li .details .p-name{ height:2.54rem; color:#000; font-size:.71rem; line-height:1rem; /*text-overflow:ellipsis; overflow:hidden; white-space:nowrap; */}
+.art-order li .details .p-money{ color:#e52c02; font-size:.85rem; margin-top:1.30rem; }
+.art-order li .s-num{ display:block; float:right; color:#939292; font-size:0.74rem; }
+.art-order .product-num{ border-bottom:1px solid #eae8e8; color:#161616; padding:0.58rem 0; text-align:center; font-size:.71rem; }
+.art-order .product-num span{ color:#ff4949; }
+
+
+
+
+
+
+
+/*申请状态-申请失败*/
+
+/*申请失败*/
+.stn-subsucceed{ width:90.78%; margin:.9rem auto 0; background:#fff; position:relative; border-radius:8px; }
+.stn-subsucceed .subsucceed{ border:solid #eae8e8; border-width:1px 1px 0 1px; border-radius:8px 8px 0 0; text-align:center; }
+.stn-subsucceed .subsucceed .s-img{ display:inline-block; width:3.63rem; height:3.63rem; padding-top:1.45rem; }
+.stn-subsucceed .subsucceed .s-img img{ max-width:100%; height:auto; }
+.stn-subsucceed .subsucceed p{ color:#f2484c; padding:.72rem 0 .36rem; margin:0; }
+.stn-subsucceed .subsucceed-seal{ width:100%; position:absolute; left:0; }
+.stn-subsucceed .subsucceed-seal img{ width:100%; height:100%; }
+
+/*授信金额日期*/
+.stn-subsucceed .qr-code{ width:100%; padding:0 3.185% 1.23rem 1.5rem; border:solid #eae8e8; border-width:0 1px; box-sizing:border-box; }
+.stn-subsucceed .qr-code .p-name{ margin-left:.36rem; line-height:1.35rem; color:#000; }
+.stn-subsucceed .qr-code .p-name span{ color:#f2484c; }
+
+/*已作废*/
+.stn-subsucceed .invalid{ width:100%; padding:0 3.185% 1.23rem 1.5rem; border:solid #eae8e8; border-width:0 1px; box-sizing:border-box; }
+.stn-subsucceed .invalid .p-name{ margin-left:.36rem; line-height:1.35rem; color:#999; }
+
+/*重新申请*/
+.download-btn{ width:90.78%; margin:1.81rem auto 0;}
+.download-btn a{ display:block; width:100%; height:2.9rem; text-align:center; line-height:2.9rem; color:#fff; background:#f2484c; border-radius:8px;}
+.download-btn p{ color:#979797; padding:0.6rem 1.81rem;}
+
+.subsucceed p.fzcolor{ color:#979797;}
+.subsucceed p.fzcolorblue{color:#409ef8;}
+
+
+
+.ascension{ margin-top:0.72rem;}
+.ascension p{ padding:0.5rem 1.32rem;border-bottom:1px solid #ddd;border-top:1px solid #ddd; background:#fff; margin-bottom:0.72rem;}
+.ascension span{ display:block; float:left; color:#000;}
+.ascension .s-left{line-height:2rem; }
+.ascension input{ border:none; line-height:2rem; width:70%; float:left; padding-left:0.72rem}
+.ascension input::-webkit-input-placeholder{ color:#a7a7a7; }
+/*申请提升额度按钮*/
+.btn{ padding:1.23rem .72rem 1.81rem .72rem; margin-bottom:3.7rem;}
+.btn p{ height:2.9rem; width:100%; background:#f2484b; border-radius:8px;}
+.btn a{ display:block; text-align:center; line-height:2.9rem; height:2.9rem; color:#fff;}
+
+
+
+
+/* 已申请授信中心*/
+.integral-query .stn-general{position:relative;width:100%;height:11.5rem;color:#fff;text-align: center;background-image: url(../img/general-bottom-bg.png),url(../img/general-bg.png);background-repeat: repeat-x,no-repeat;background-position: left bottom,right bottom;background-size:.88rem .22rem,38.4% 28.9%;background-color: #f2484c;}
+.integral-query .stn-general .a-rule{position:absolute;border:1px solid #fff;border-radius:3px;color:#fff;top:26px;width:4.19rem;line-height:1.25rem;height:1.25rem;top:.95rem;right:.95rem;}
+.integral-query .stn-general .p-number{font-size:2.9rem;;padding-top:3.3rem;}
+.integral-query .stn-general .p-describe{font-size:1rem;}
+.integral-query .stn-general .p-credit{ position:absolute; bottom:1rem; left:1rem; padding-left:1.3rem;
+ background:url(../img/dot3.png) no-repeat left center; height:1.09rem; line-height:1.09rem;}
+
+.reimbursement{ margin-top:0.72rem; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#fff;}
+.reimbursement p{ padding:.5rem 0.58rem; margin:0 .72rem;border-bottom:1px solid #ddd; position:relative;}
+.reimbursement p:last-child{ border-bottom:none; }
+.reimbursement span{ display:block; float:left; color:#242424;line-height:2rem; }
+.reimbursement .rightpadding{ padding-left:1.45rem; color:#f2484c;}
+.reimbursement .rightpadd{ padding-left:2.3rem;}
+.reimbursement .freeze{ display:block; border:1px solid #f2484c; border-radius:3px; height:1.25rem; width:4.17rem; position:absolute; bottom:0.8rem; right:0; line-height:1.25rem; text-align:center; color:#f2484c;}
+.why{ margin:0.72rem;}
+.why p{ color:#818181; padding-left:0.72rem;}
+.why a{ display:block; margin:0.72rem 0; width:46%; height:7.6rem; border:1px solid #dcdcdc; float:left; text-align:center;}
+.why .floatright{ float:right;}
+.why span{ text-align:center; padding:2.83rem 0; display:block; background:url(../img/1.png) no-repeat  top center; margin-top:1.7rem; color:#242424;}
+.why .floatright span{ background:url(../img/2.png) no-repeat top center;}
+@media screen and (min-width:321px) and (max-width:639px){    
+    .integral-query .stn-general{height:8.7rem;}
+    .integral-query .stn-general .a-rule{width:3.3rem;height:1rem;line-height:1rem;top:.73rem;right:.73rem;}
+    .integral-query .stn-general .p-number{font-size:2.24rem;padding-top:2.5rem;}
+    .integral-query .stn-general .p-describe{font-size:.78rem;}
+}
+

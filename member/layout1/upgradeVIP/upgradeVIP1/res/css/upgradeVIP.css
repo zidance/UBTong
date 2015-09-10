@@ -1,0 +1,40 @@
+
+/*升级VIP首页*/
+.upgrade .stn-banner img{width:100%;}
+.upgrade .stn-method{margin-top:.73rem;background-color: #fff;border:solid #dcdcdc;border-width:1px 0;}
+.upgrade .stn-method li{position: relative;float:left;width:50%;text-align: center;box-sizing: border-box; }
+.upgrade .stn-method li:first-child{border-right:1px solid #dcdcdc;}
+.upgrade .stn-method .a-method{display: block;padding:1.98rem 0;}
+.upgrade .stn-method .s-img{display:block;margin:0 auto .99rem;width:24.6%;}
+.upgrade .stn-method .s-img img{width:100%;}
+.upgrade .stn-method p{color:#242424;}
+.upgrade .stn-method .a-btn{position:absolute;width:10.3%;right:4%;top:.4rem;}
+.upgrade .stn-method .a-btn img{width:100%;}
+
+/*用户信息绑定*/
+.infobind{margin-bottom:5rem;}
+.infobind .p-notice{color:#676767;padding-left:8.125%;padding-top:.9rem;}
+.infobind .p-import{color:#f2484c;padding-top:.7rem;}
+.infobind .ul-userinfo li{padding-left:8.125%;background-color: #fff;border-top:1px solid #dddddd;border-bottom:1px solid #dddddd;height:2.94rem;line-height: 2.94rem;margin-top:.73rem;color:#000;}
+.infobind .ul-userinfo li input{border:none;font-size:1.01rem;vertical-align: middle;margin-top:-.2rem;}
+.infobind .ul-userinfo li p:first-child{float:left;font-size:1.11rem;min-width: 29%;}
+
+
+
+/*绑定按钮*/
+.a-bind{ display:block; width:90%;margin:2rem auto 0; height:2.8rem; line-height:2.8rem; color:#fff; border-radius:6px; text-align:center; background-color: #f2484c;}
+
+@media screen and (min-width:321px) and (max-width:639px){
+    .upgrade .stn-method{margin-top:.56rem;}
+    .upgrade .stn-method li{padding-bottom:.77rem; }
+    .upgrade .stn-method .s-img{margin:0 auto .77rem;}
+    
+    .a-bind{height:2.16rem; line-height:2.16rem;margin-top:1.45rem;}
+
+    .infobind .ul-userinfo li{height:2.24rem;line-height: 2.24rem;margin-top:.56rem;}
+    .infobind .ul-userinfo li p:first-child{font-size:.85rem;}
+    .infobind .ul-userinfo li input{font-size:.75rem;}
+}
+
+
+

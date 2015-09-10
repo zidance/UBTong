@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>申请状态-申请成功</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/credit.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background:#f7f5f5;">
+	<!--申请中-->
+	<script>
+        window.onload = function(){ 
+            document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
+        } 
+         window.onresize = function(){ 
+            document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
+        } 
+    </script>
+    
+    <section class="stn-subsucceed">
+    	<div class="subsucceed">
+        	<span class="s-img"><img src="res/img/succeed.png" /></span>
+            <p class="fz32 fzcolorblue">恭喜您，申请成功！</p>
+        </div>
+        <div class="subsucceed-seal" id="Seal"><img src="res/img/seal.png" /></div>
+        
+        
+        <div class="qr-code" id="Code">
+        	<article>
+                <p class="p-name fz32">授信金额：<span>￥3000.00</span></p>
+                <p class="p-name fz32">申请日期：2015-05-01</p>
+            </article>
+        </div>
+        
+    </section>
+    <!--申请失败-end-->
+    <section class="download-btn">
+    	<a href="#" class="fz32">合同下载</a>
+    </section>
+   
+    
+</body>
+</html>

@@ -1,0 +1,7 @@
+/*收入总计*/
+.stn-total{ width:100%; background:url(../img/bg.jpg) repeat-x 0 bottom #ff6766; background-size:.72rem .29rem; margin-bottom:.72rem; }
+.stn-total .p-money{ color:#fff; text-align:center; padding-top:2.9rem; }
+.stn-total .s-hint{ display:block; width:31.25%; color:#fff; background:#ff4847; margin:0 auto 2.54rem; text-align:center; padding:.2rem 0; }
+.stn-total .p-amount{ padding:0 4% .9rem; color:#fff; }
+.stn-total .p-amount span{ display:block; float:left; width:50%; }
+.stn-total .p-amount .s-right{ float:right; text-align:right; }

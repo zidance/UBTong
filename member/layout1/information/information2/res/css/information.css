@@ -1,0 +1,28 @@
+/*01-7-1会员信息修改*/
+/*用户信息、汽车基本信息、汽车当前信息 */
+.meminfo-change .stn-info{ margin-top:0.72rem; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#fff;}
+.meminfo-change .stn-info p{ padding:.5rem 0.58rem; margin:0 .72rem;border-bottom:1px solid #ddd;}
+.meminfo-change .stn-info p:last-child{ border-bottom:none; }
+.meminfo-change .stn-info .s-left{ float:left; color:#252525;line-height:2rem; }
+.meminfo-change .stn-info .s-right{ line-height:2rem; float:left; padding-left:1.65rem;color:#a7a7a7;}
+.meminfo-change .stn-info input{ width:68%;border:none; line-height:2rem; float:left; padding-left:1.65rem;}
+.meminfo-change .stn-info p input::-webkit-input-placeholder{ color:#bcbcbc; }
+
+/*消除QQ浏览器和火狐中number的默认样式*/
+input[type="number"]::-webkit-inner-spin-button{-webkit-appearance: none;}
+input[type="number"]{-moz-appearance:textfield;}
+
+.meminfo-change .stn-user input::-webkit-input-placeholder{ color:#242424; }
+.meminfo-change .stn-user .s-left,.meminfo-change .stn-car .s-left{text-align: right;width:4.2rem;}
+
+
+/*保存按钮*/
+.meminfo-change .a-save{ display:block; width:90%;margin:2rem auto 0; height:2.8rem; line-height:2.8rem; color:#fff; border-radius:6px; text-align:center; background-color: #f2484c;margin-bottom:3.7rem;}
+/*01-7-1会员信息修改end*/
+
+@media screen and (min-width:321px) and (max-width:639px){
+    .meminfo-change .stn-info p{padding:.1rem .3rem;}
+    .meminfo-change .stn-user .s-left,.meminfo-change .stn-car .s-left{text-align: right;width:3rem;}
+    
+    .meminfo-change .a-save{height:2.16rem; line-height:2.16rem;margin-top:1.45rem;}
+}

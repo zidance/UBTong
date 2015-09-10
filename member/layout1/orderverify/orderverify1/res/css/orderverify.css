@@ -1,0 +1,41 @@
+body{ background:#f7f5f5; }
+
+/*订单详情*/
+.stn-order{ width:93.28%; padding:0 3.36%; }
+.stn-order article{ width:94%; padding:0 3%; border:1px solid #eae8e8; background:#fff; border-radius:4px; margin-top:1.09rem; }
+.art-order .state{ border-bottom:1px solid #eae8e8; font-size:.73rem; padding:.54rem 0; color:#161616; }
+.art-order li{ border-bottom:1px solid #eae8e8; padding:.7rem 0; }
+.art-order li:last-child{ border-bottom:none; }
+.art-order li .s-img{ display:block; float:left; width:5.01rem; height:5.01rem; border:1px solid #f3f3f3; }
+.art-order li .s-img img{ width:100%; height:100%; }
+.art-order li .details{ width:6.25rem; float:left; margin-left:0.72rem; }
+.art-order li .details .p-name{ height:2.54rem; color:#000; font-size:.71rem; line-height:1rem; /*text-overflow:ellipsis; overflow:hidden; white-space:nowrap; */}
+.art-order li .details .p-money{ color:#e52c02; font-size:.85rem; margin-top:1.30rem; }
+.art-order li .s-num{ display:block; float:right; color:#939292; font-size:0.74rem; margin-top:2.11rem; }
+
+/*订单验证*/
+.stn-order .art-verify{ width:100%; padding:0; }
+.art-verify .verify-btn{ border-bottom:1px solid #eae8e8; }
+.art-verify .verify-btn a{ display:block; width:50%; float:left; box-sizing:border-box; text-align:center; color:#939292; padding:.65rem 0; }
+.art-verify .verify-btn .a-green{ background:#44ac6e; color:#fff; border-radius:4px 0 0 0; }
+.art-verify .verify-text{ width:94%; padding:.95rem 3%; color:#585858; }
+.art-verify .verify-text input{ border:1px solid #cccccc; width:69%; height:2.325rem; margin-left:2%; border-radius:4px; padding-left:3%; }
+
+button{ background:#f15a0c; color:#fff; width:100%; height:2.3rem; line-height:2.3rem; border:none; border-radius:4px; margin-top:1.45rem; }
+
+@media screen and (min-width:640px){
+	.art-order li .details{ width:10.25rem; }
+}
+@media screen and (max-width:320px){
+	.art-order .state{ font-size:0.96rem; }
+	.art-order li{ padding:.87rem 0; }
+	.art-order li .details{ width:9.25rem; }
+	.art-order li .details .p-name{ font-size:.96rem; line-height:1.2rem; /*text-overflow:ellipsis; overflow:hidden; white-space:nowrap; */}
+	.art-order li .details .p-money{ font-size:1.11rem; margin-top:1.00rem; }
+	.art-order li .s-num{ font-size:0.96rem; margin-top:1.81rem; }
+	
+	.art-verify .verify-text{ padding:1.45rem 3%; }
+	.art-verify .verify-text input{ width:68%; height:3.125rem; }
+	
+	button{ height:2.935rem; line-height:2.935rem; }
+}

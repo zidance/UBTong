@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>提现管理</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="lists/lists1/res/css/withdrawallists.css" rel="stylesheet" type="text/css" />
+<link href="btn/btn1/res/css/btn.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _btn = $('#PartsBtn');
+		var _bg = $('#Background');
+		var _box = $('#BoxWithdraw');
+		var _del = _box.find('.a-close');
+		var _lists = $('#Lists');
+		var _inp = _lists.find('input');
+		
+		var _btnpop = $('#btn');
+		var _boxpop = $('#box');
+		var _delpop = _boxpop.find('.a-closepop');
+		
+		_btnpop.click(function(){
+			_box.hide();
+			_bg.hide();
+			_boxpop.show();
+			_bg.show();
+		})
+		_delpop.click(function(){
+			_boxpop.hide();
+			_bg.show();
+			_box.show();
+
+		})
+
+		
+		
+		_btn.click(function(){
+			 Checkbox();
+			
+			_box.show();
+			_bg.show();
+		})
+		_del.click(function(){
+			_box.hide();
+			_bg.hide();
+		})
+		
+		function Checkbox(){
+			$.each(_inp,function(i,e){
+				if(_inp.eq(i).attr("checked"))
+				{
+					$("#BoxWithdraw").find(".table-popup").hide();
+                    $("#Table"+i).show();
+				}
+			})
+		}
+	})
+</script>
+</head>
+
+<body style="background:#f4f4f4;">
+
+	 
+        
+	<!--提现弹出框-->
+	<div class="box-withdraw" id="BoxWithdraw">
+    	<h1 class="fz32">请输入提现信息<a class="a-close" href="#">关闭</a></h1>
+        
+        <!--支付宝-->
+        <table id="Table0" class="table-popup">
+        	<tr>
+            	<td class="td-left fz28">支付宝账户</td>
+                <td><input class="fz28" type="text" placeholder="请输入支付宝账户" /></td>
+            </tr>
+            <tr>
+            	<td class="td-left fz28">支付宝实名</td>
+                <td><input class="fz28" type="text" placeholder="请输入姓名" /></td>
+            </tr>
+            <tr>
+            	<td class="td-left fz28">提现金额</td>
+                <td><input class="fz28" type="text" placeholder="提现金额需大于100元" /></td>
+            </tr>
+            <tr>
+            	<td class="td-left fz28">输入验证码</td>
+                <td><input class="inp-text fz28" type="text" /><a class="fz24" href="#">获取验证码</a></td>
+            </tr>
+        </table>
+        <!--支付宝-end-->
+        <!--财付通-->
+        <table id="Table1" class="table-popup">
+            <tr>
+                <td class="td-left fz28">财付通账户</td>
+                <td><input class="fz28" type="text" placeholder="请输入财付通账户" /></td>
+            </tr>
+            <tr>
+                <td class="td-left fz28">支付宝实名</td>
+                <td><input class="fz28" type="text" placeholder="请输入姓名" /></td>
+            </tr>
+            <tr>
+                <td class="td-left fz28">提现金额</td>
+                <td><input class="fz28" type="text" placeholder="提现金额需大于100元" /></td>
+            </tr>
+            <tr>
+                <td class="td-left fz28">输入验证码</td>
+                <td><input class="inp-text fz28" type="text" /><a class="fz24" href="#">获取验证码</a></td>
+            </tr>
+        </table>
+        <!--财付通-end-->
+        <!--银行卡-->
+        <table id="Table2" class="table-popup">
+        	<tr>
+            	<td class="td-left fz28">银行名称</td>
+                <td><input class="fz28" type="text" placeholder="请输入所属银行" /></td>
+            </tr>
+            <tr>
+            	<td class="td-left fz28">用户实名</td>
+                <td><input class="fz28" type="text" placeholder="请输入姓名" /></td>
+            </tr>
+            <tr>
+            	<td class="td-left fz28">银行卡号</td>
+                <td><input class="fz28" type="text" placeholder="请输入卡号" /></td>
+            </tr>
+            <tr>
+            	<td class="td-left fz28">银行卡号</td>
+                <td><input class="fz28" type="text" placeholder="提现金额需大于100元" /></td>
+            </tr>
+            <tr>
+            	<td class="td-left fz28">输入验证码</td>
+                <td><input class="inp-text fz28" type="text" /><a class="fz24" href="#">获取验证码</a></td>
+            </tr>
+        </table>
+        <!--银行卡-end-->
+        
+        <a class="a-btn fz32" href="#" id="btn">确认提现</a>
+    </div>
+    <div id="Background"></div>
+    <!--银行卡提现-end-->
+    
+    
+
+	<!--支付接口-->
+    <script>
+        function tradeCheckboxClick(node){
+            $('.trade_checkbox').prop('checked','');
+            $(node).prop('checked','checked');
+        }
+    </script>
+    <section class="stn-withdrawallists" id="Lists">
+    	<ul>
+        	<li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><p class="fz32">支付宝</p></li>
+            <li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><p class="fz32">财付通</p></li>
+            <li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><p class="fz32">储蓄卡</p></li>
+        </ul>
+    </section>
+    <!--支付接口-end-->
+    
+    <!--按钮-->
+    <div class="parts-btn">
+    	<a id="PartsBtn" class="fz32" href="#">提现</a>
+        <p class="fz22">你的提现申请当通过审核后会自动提现至你的银行卡，一般1-2个工作日到帐</p>
+    </div>
+    <!--按钮-end-->
+    
+   		 <!--弹出等待框-->
+        <div class="showbox" id="box">
+            <span><img src="btn/btn1/res/img/popboximg.png"></span>
+            <p class="fz32">提现处理中...</p>
+            <a class="a-closepop"><img src="btn/btn1/res/img/dot.png"></a>
+   		</div>
+    	<!--弹出等待框--end-->
+    
+    
+   
+    
+    
+</body>
+</html>

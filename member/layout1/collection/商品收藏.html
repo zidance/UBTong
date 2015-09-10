@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>商品收藏</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="switch/switch1/res/css/switch.css" rel="stylesheet" type="text/css" />
+<link href="lists/lists1/res/css/sublists.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/footer/footer4/res/css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/blank/blank1/res/css/blank.css" rel="stylesheet" type="text/css">
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body>
+	<!--列表切换-->
+    <section class="stn-switch">
+    	<ul>
+        	<li><a class="act fz30" href="#">商品收藏</a></li>
+            <li><a class="fz30" href="#">商家收藏</a></li>
+        </ul>
+        <div class="clr"></div>
+    </section>
+    <!--列表切换-end-->
+    
+    <!--收藏列表-->
+    <script>
+		function imgZoomControl(){
+			var _li = $('#Sublists li');
+			$.each(_li,function(i,e){
+				var _this= $(this);
+				var _img = $(this).find('.s-img img');
+				$(this).find('.s-img').width(_this.width()-2);
+				$(this).find('.s-img').height(_this.width()-2);
+				if(_img.width() > $(this).width() && _img.width() > _img.height())
+				{
+					_img.css('width',_this.width()-2);
+				}else if(_img.height() > $(this).height()){
+					_img.css('height',_this.width()-2);
+				}
+				_img.css({'max-width':_this.width()-2,'max-height':_this.width()-2})
+			})
+		}
+	
+		$(function(){
+			imgZoomControl();
+		})
+	</script>
+    <section class="stn-sublists" id="Sublists" style="margin-bottom:0;">
+    	<ul>
+        	<li>
+            	<a class="a-product" href="#">
+                	<table><tr><td class="s-img"><img src="../../../index/layout1/pic/pic1/res/img/img1.jpg" /></td></tr></table>
+					<p class="p-name fz28">补水深度清洁护理套补水深度清洁护理套</p>
+					<p class="p-money fz32">￥49.00<span class="fz22">销量:27件</span></p>
+                </a>
+                <a class="a-btn fz28" href="#">预约服务</a>
+            </li>
+            <li class="li-right">
+            	<a class="a-product" href="#">
+                	<table><tr><td class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></td></tr></table>
+					<p class="p-name fz28">补水深度清洁护理套补水深度清洁护理套</p>
+					<p class="p-money fz32">￥49.00<span class="fz22">销量:27件</span></p>
+                </a>
+                <a class="a-btn fz28" href="#">预约服务</a>
+            </li>
+            <li>
+            	<a class="a-product" href="#">
+                	<table><tr><td class="s-img"><img src="lists/lists1/res/img/img1.jpg" /></td></tr></table>
+					<p class="p-name fz28">补水深度清洁护理套补水深度清洁护理套</p>
+					<p class="p-money fz32">￥49.00<span class="fz22">销量:27件</span></p>
+                </a>
+                <a class="a-btn fz28" href="#">预约服务</a>
+            </li>
+            <li class="li-right">
+            	<a class="a-product" href="#">
+                	<table><tr><td class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></td></tr></table>
+					<p class="p-name fz28">补水深度清洁护理套补水深度清洁护理套</p>
+					<p class="p-money fz32">￥49.00<span class="fz22">销量:27件</span></p>
+                </a>
+                <a class="a-btn fz28" href="#">预约服务</a>
+            </li>
+        </ul>
+        <div class="clr"></div>
+    </section>
+    <!--收藏列表-end-->
+    
+     <!--空白BOTTOM部件 -3.59rem-->
+	<div class="blank-bottom" style="height:3.59rem"></div>
+	<!--空白BOTTOM部件 -end-->
+    
+    <!--底部高度：3.59rem-->
+    <footer>
+    	<ul>
+    		<!--当前目录状态:p class="p-footact"-->
+        	<li><a href="#"><span class="s-icon"><img src="../../../parts/footer/footer4/res/img/homeh.png" /></span><p class="fz22 p-footact">首页</p></a></li>  <!--当前目录状态：home.png-->   <!--未在当前目录状态：home.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../../parts/footer/footer4/res/img/member.png" /></span><p class="fz22">福州市</p></a></li>  <!--当前目录状态：memberh.png-->   <!--未在当前目录状态：member.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../../parts/footer/footer4/res/img/location.png" /></span><p class="fz22">会员中心</p></a></li>  <!--当前目录状态：locationh.png-->    <!--未在当前目录状态：location.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../../parts/footer/footer4/res/img/tel.png" /></span><p class="fz22">电话咨询</p></a></li>  <!--当前目录状态：telh.png-->   <!--未在当前目录状态：tel.png-->
+        </ul>
+    </footer>
+    <!--底部-end-->
+</body>
+</html>
