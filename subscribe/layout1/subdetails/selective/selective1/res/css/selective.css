@@ -1,0 +1,21 @@
+
+.stn-title{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.72rem; padding:0 3.205%; }
+.stn-title h1{ color:#000; padding:.94rem 0 .94rem .36rem; }
+
+/*选择类型*/
+.stn-selective{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.72rem; padding:0 3.205%; }
+.stn-selective h1{ color:#000; border-bottom:1px solid #d9d9d9; padding:.54rem 0 .54rem .36rem; }
+.stn-selective li{ height:4.21rem; border-bottom:1px solid #dddddd; }
+.stn-selective li:last-child{ border-bottom:none; }
+.stn-selective li input[type=checkbox]{ -webkit-appearance:none; appearance:none; width:20px; height:20px; margin:1.7rem .72rem 0 .36rem; cursor:pointer; vertical-align:bottom; background:none; border:1px solid #dbdada; -webkit-border-radius:50px; -moz-border-radius:50px; border-radius:50px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; position:relative; outline:none; float:left; }
+.stn-selective li input[type=checkbox]:checked::after{ content:url(../img/selective.png); display:block; position:absolute; top:-1px; left:-1px; }
+.stn-selective li .p-name{ float:left; width:11.62rem; line-height:1.3rem; margin-top:.7rem; }
+.stn-selective li .p-money{ line-height:4.21rem; float:right; color:#ff4949; margin-right:.72rem; }
+
+@media screen and (max-width:390px) and (min-width:320px){
+	.stn-selective li .p-name{ width:8.62rem; }
+}
+
+@media screen and (max-width:320px){
+	.stn-selective li input[type=checkbox]{ margin-top:1.4rem; }
+}

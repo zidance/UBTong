@@ -1,0 +1,6 @@
+/*预约须知*/
+.stn-instructions{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.72rem; padding:0 3.205% .35rem; }
+.stn-instructions h1{ color:#000; border-bottom:1px solid #d9d9d9; padding:.54rem 0 .54rem .36rem; }
+.stn-instructions .content{ margin:.72rem 0 .55rem; }
+.stn-instructions .content p{ color:#737373; }
+.stn-instructions .content p:first-child{ color:#3e9ef9; }

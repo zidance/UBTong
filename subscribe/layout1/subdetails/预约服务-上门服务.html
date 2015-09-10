@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>预约服务-到店服务</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="trade/trade1/res/css/subdetailstrade.css" rel="stylesheet" type="text/css" />
+<link href="write/write1/res/css/subdetailswrite.css" rel="stylesheet" type="text/css" />
+<link href="way/way1/res/css/selective.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/btn/btn1/res/css/btn.css" rel="stylesheet" type="text/css" />
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body style="background:#f4f4f4;">
+	<!--商品名称-->
+    <section class="stn-subdetailstrade">
+    	<ul>
+        	<li>
+            	<a href="#">
+                	<span class="s-img"><img src="trade/trade1/res/img/img1.jpg" /></span>
+                    <div class="content">
+                    	<p class="p-name fz32">补水深度清洁护理酵素祛斑机理套组</p>
+                        <p class="p-money fz36">￥389.00</p>
+                        <p class="p-address fz24">北京市大兴区黄村东大街1号楼B座北京市大兴区黄村东大街1号楼B座</p>
+                    </div>
+            		<div class="clr"></div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--商品名称-end-->
+    
+    <!--预约信息填写-->
+    <section class="stn-subdetailswrite">
+    	<p class="p-time fz28"><span>预约时间：</span>2015.5.26 14：00<em>（预约已满）</em></p>
+        <p class="p-address fz28"><span>上门地址：</span><input class="fz28" type="text" value="鼓楼区恒裕大厦C座8F" /></p>
+        <p class="p-contact fz28"><span>联 系 人 ：</span><input class="fz28" type="text" value="林小姐" /></p>
+        <p class="p-tel fz28"><span>联系电话：</span><input class="fz28" type="text" value="18060777666" /></p>
+    </section>
+    <!--预约信息填写-end-->
+    
+    <!--服务方式-->
+	<script>
+        function tradeCheckboxClick(node){
+            $('.trade_checkbox').prop('checked','');
+            $(node).prop('checked','checked');
+        }
+    </script>
+	<section class="stn-selective" style="margin-bottom:4.06rem;">
+    	<h1 class="fz32">服务方式</h1>
+        
+        <ul>
+        	<li>
+            	<input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" />
+                <p class="p-name fz28">到店服务</p>
+                <p class="p-money fz28">晋安区东大路130#美丽人生</p>
+                <div class="clr"></div>
+            </li>
+            <li>
+            	<input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" />
+                <p class="p-name fz28">上门服务</p>
+                <p class="p-money fz28">上门服务费 ￥5元</p>
+                <div class="clr"></div>
+            </li>
+        </ul>
+    </section>
+    <!--服务方式-end-->
+    
+    <!--快捷购物车栏-->
+	<script>
+		$(function(){
+			var _boxcart = $('#BoxCart');
+			var _btn = $('#BtnBoxCart');
+			var _content = _boxcart.find('.boxcart-nav');
+			
+			_btn.click(function(){
+				if(_btn.hasClass('act')){
+					_content.find('a').css('display','none');
+					_content.css({'width':'3.24rem','transition':'width 1s'});
+					_btn.removeClass('act');
+				}else{
+					_content.css({'width':'16.24rem','transition':'width 0.8s'});
+					setTimeout(function(){
+						_content.find('a').css('display','inline-block');
+					},400);
+					_btn.addClass('act');
+				}
+			})
+		})
+	</script>
+	
+	<div class="box-cart" id="BoxCart">
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--添加购物车未点击状态：btncart.png-->  <!--添加购物车后状态：btncarth.png-->
+		<div class="boxcart-nav">
+			<a class="btn" href="#">
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/home.png" /></span>
+				<p class="fz26">首页</p>
+			</a>
+			<a class="cart" href="#">
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
+				<p class="fz26">购物车</p>
+			</a>
+            <a class="cart" href="#">
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/member.png" /></span>
+				<p class="fz26">会员</p>
+			</a>
+			<a class="cart" href="#">
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/login.png" /></span>
+				<p class="fz26">登录</p>
+			</a>
+		</div>
+	</div>
+    <!--快捷购物车栏-end-->
+    
+    <!--按钮 高度：4.06rem-->
+    <div class="parts-btn">
+    	<a class="fz32" href="#">确认预约</a>
+    </div>
+    <!--按钮-end-->
+</body>
+</html>

@@ -1,0 +1,3 @@
+.stn-time{ margin-top:.72rem;  height:2.57rem; border:solid #d9d9d9; border-width:1px 0; background-color: #fff; padding:.07rem 0; }
+.stn-time .s-name{display:block; float: left; line-height:2.57rem; text-align:left; padding-left:3.175%;}
+.stn-time input{ display:block; float: left; width:75%; border: none; background:url(../img/left.png) no-repeat 95% center; background-size:.58rem 1.09rem; padding:.72rem .8rem .72rem .6rem; color:#000; }

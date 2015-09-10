@@ -1,0 +1,4 @@
+/*留言*/
+.settlement-gbook{ width:93.75%; height:2.57rem; margin:.72rem auto; border:1px solid #eae8e8; border-radius:4px; background:#fff; }
+.settlement-gbook .s-name{ display:block; width:13%; line-height:2.57rem; text-align:right; float:left; color:#585858; }
+.settlement-gbook input[type='text']{ display:block; width:80%; float:left; height:2.57rem; border:none; color:#585858; padding-left:3%; }

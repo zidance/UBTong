@@ -1,0 +1,14 @@
+/*预约信息填写*/
+.stn-subdetailswrite{ background:#fff; border:solid #d9d9d9; border-width:1px 0; }
+.stn-subdetailswrite p{ border-bottom:1px solid #d9d9d9; color:#000; background-size:.83rem .98rem; background-position:4% center; background-repeat:no-repeat; padding:.9rem 0 .9rem 9%; }
+.stn-subdetailswrite p:last-child{ border-bottom:none; }
+.stn-subdetailswrite p span{ color:#676767; }
+.stn-subdetailswrite .p-time{ background-image:url(../img/time.png); }
+.stn-subdetailswrite .p-time input{ border:none; width:43.5%; }
+.stn-subdetailswrite .p-time em{ color:#ff6766; }
+.stn-subdetailswrite .p-address{ background-image:url(../img/address.png); }
+.stn-subdetailswrite .p-address input{ border:none; width:70%; }
+.stn-subdetailswrite .p-contact{ background-image:url(../img/contact.png); }
+.stn-subdetailswrite .p-contact input{ border:none; width:70%; }
+.stn-subdetailswrite .p-tel{ background-image:url(../img/tel.png); }
+.stn-subdetailswrite .p-tel input{ border:none; width:70%; }

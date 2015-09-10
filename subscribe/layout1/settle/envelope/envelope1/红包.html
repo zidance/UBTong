@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>红包</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/envelope.css" rel="stylesheet" type="text/css" />
+<link href="res/css/styleV2.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../common/js/zepto-1.16.min.js"></script>
+<script src="res/js/scroll_areaV3.js"></script>
+</head>
+
+<body style="background:#f7f5f5;">
+	<!--红包-->
+	<div class="subscribe-envelope" id="selectShow">
+		<input type="checkbox" />
+		<a class="integral" href="#">
+			<p class="fz28">红包抵扣<span>&nbsp;10元红包</span></p>
+		</a>
+		<div class="clr"></div>
+	</div>
+    <!--红包-end-->
+    
+    <!--弹出框-->
+    <a id="timeMb" class="hide" href="javascript:void(0);"></a>
+    <div id="selectTime" class="hide" style="-webkit-transform: translate3d(0px, -190px, 0px);">
+        
+        <h3>
+        <a href="javascript:void(0);" class="fl" style="display:none;">取消</a>
+       <p class="p-title fz32">我的红包</p>
+        <a href="javascript:void(0);" class="fr not">确定</a></h3>
+        
+<!--        <a class="btn">关闭</a>-->
+        
+        <div class="timeFloat">
+            <div class="dateWrap" id="dateSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 0px, 0px);margin-top:-45px;">
+                <ul style="height: 120px;">
+                   <!--active当前选中-->
+                    <li>美容券<span>&nbsp;5元</span></li>
+                    <li>美容券<span>&nbsp;10元</span></li>
+                    <li class="active">美体券<span>&nbsp;20元</span></li>
+                    <li>整形券<span>&nbsp;30元</span></li>
+                    <li>美容券<span>&nbsp;50元</span></li>
+                    <li>美容券<span>&nbsp;50元</span></li>
+                    <li>美容券<span>&nbsp;50元</span></li>
+                </ul>
+            </div>
+            
+            <div class="timeWrap" id="timeSelect" style="">
+                <ul style="height: 360px;">
+                    <!--active当前选中 timeout已预约-->
+                    <li class="active"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    $("#selectTime").find(".fr").click(function(){
+        var a = $("#dateSelect").find(".active").html();
+ $("#selectShow").find(".integral").find("span").html(a);
+        
+    });
+    </script>
+</body>
+</html>

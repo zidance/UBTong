@@ -1,0 +1,5 @@
+/*交易方式*/
+.stn-distribution{ margin:0 auto .72rem; border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.72rem; padding:0 3.175%; box-sizing:border-box;}
+.stn-distribution .p-way{ line-height:2.9rem; }
+.stn-distribution .p-way a{ display:block; color:#000; background:url(../img/left.png) no-repeat right center; background-size:.43rem .76rem; }
+.stn-distribution .p-way a span{ display:block; float:right; margin-right:5%; }

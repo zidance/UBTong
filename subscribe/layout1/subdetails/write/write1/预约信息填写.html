@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>预约信息填写</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/subdetailswrite.css" rel="stylesheet" type="text/css" />
+<link href="res/css/time/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+<link href="res/css/time/mobiscroll.widget.css" rel="stylesheet" type="text/css" />
+<link href="res/css/time/mobiscroll.widget.ios.css" rel="stylesheet" type="text/css" />
+<link href="res/css/time/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+<link href="res/css/time/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+<script src="res/js/jquery-1.11.1.min.js"></script>
+<script src="res/js/mobiscroll.core.js"></script>
+<script src="res/js/mobiscroll.widget.js"></script>
+<script src="res/js/mobiscroll.scroller.js"></script>
+<script src="res/js/mobiscroll.util.datetime.js"></script>
+<script src="res/js/mobiscroll.datetimebase.js"></script>
+<script src="res/js/mobiscroll.widget.ios.js"></script>
+<script src="res/js/mobiscroll.i18n.zh.js"></script>
+<script type="text/javascript">
+$(function () {
+	var nowData=new Date();
+	var opt= { 
+		theme:'ios', //设置显示主题 
+		mode:'scroller', //设置日期选择方式，这里用滚动
+		display:'bottom', //设置控件出现方式及样式
+		preset : 'datetime', //日期:年 月 日 时 分
+		minDate: new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate(),nowData.getHours(),00),    //nowData
+		maxDate:new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate()+7,22,00),
+//              dateFormat: 'yy-mm-dd', // 日期格式
+//              dateOrder: 'yymmdd', //面板中日期排列格式
+		stepMinute: 1, //设置分钟步长
+		yearText:'年', 
+		monthText:'月',
+		dayText:'日',
+		hourText:'时',
+		minuteText:'分',
+		lang:'zh' //设置控件语言};
+	};
+	$('#dateinput').mobiscroll(opt);
+});
+</script>
+</head>
+
+<body>
+	<!--预约信息填写-->
+    <section class="stn-subdetailswrite">
+    	<p class="p-time fz28"><span>预约时间：</span><input class="fz28" type="text" name="test" id="dateinput" value="2015.5.26 14：00" /><em>（预约已满）</em></p>
+        <p class="p-address fz28"><span>上门地址：</span>鼓楼区恒裕大厦C座8F</p>
+        <p class="p-contact fz28"><span>联 系 人 ：</span><input class="fz28" type="text" value="林小姐" /></p>
+        <p class="p-tel fz28"><span>联系电话：</span><input class="fz28" type="text" value="18060777666" /></p>
+    </section>
+    <!--预约信息填写-end-->
+</body>
+</html>

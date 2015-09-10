@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>服务类别页-预约到店</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="switch/switch1/res/css/switch.css" rel="stylesheet" type="text/css" />
+<link href="lists/lists1/res/css/sublists.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body>
+	<!--列表切换-->
+    <section class="stn-switch">
+    	<ul>
+        	<li><a class="act fz30" href="#">预约到店</a></li>
+            <li><a class="fz30" href="#">预约上门</a></li>
+        </ul>
+        <div class="clr"></div>
+    </section>
+    <!--列表切换-end-->
+    
+    <!--预约商品列表-->
+    <script>
+		function imgZoomControl(){
+			var _li = $('#Sublists li');
+			$.each(_li,function(i,e){
+				var _this= $(this);
+				var _img = $(this).find('.s-img img');
+				$(this).find('.s-img').width(_this.width()-2);
+				$(this).find('.s-img').height(_this.width()-2);
+				if(_img.width() > $(this).width() && _img.width() > _img.height())
+				{
+					_img.css('width',_this.width()-2);
+				}else if(_img.height() > $(this).height()){
+					_img.css('height',_this.width()-2);
+				}
+				_img.css({'max-width':_this.width()-2,'max-height':_this.width()-2})
+			})
+		}
+	
+		$(function(){
+			imgZoomControl();
+		})
+	</script>
+    <section class="stn-sublists" id="Sublists">
+    	<ul>
+        	<li>
+            	<a class="a-product" href="#">
+                	<table><tr><td class="s-img"><img src="../../../index/layout1/pic/pic1/res/img/img1.jpg" /></td></tr></table>
+					<p class="p-name fz28">补水深度清洁护理套补水深度清洁护理套</p>
+					<p class="p-money fz32">￥49.00<span class="fz22">销量:27件</span></p>
+                </a>
+                <a class="a-btn fz28" href="#">预约服务</a>
+            </li>
+            <li class="li-right">
+            	<a class="a-product" href="#">
+                	<table><tr><td class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></td></tr></table>
+					<p class="p-name fz28">补水深度清洁护理套补水深度清洁护理套</p>
+					<p class="p-money fz32">￥49.00<span class="fz22">销量:27件</span></p>
+                </a>
+                <a class="a-btn fz28" href="#">预约服务</a>
+            </li>
+            <li>
+            	<a class="a-product" href="#">
+                	<table><tr><td class="s-img"><img src="lists/lists1/res/img/img1.jpg" /></td></tr></table>
+					<p class="p-name fz28">补水深度清洁护理套补水深度清洁护理套</p>
+					<p class="p-money fz32">￥49.00<span class="fz22">销量:27件</span></p>
+                </a>
+                <a class="a-btn fz28" href="#">预约服务</a>
+            </li>
+            <li class="li-right">
+            	<a class="a-product" href="#">
+                	<table><tr><td class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></td></tr></table>
+					<p class="p-name fz28">补水深度清洁护理套补水深度清洁护理套</p>
+					<p class="p-money fz32">￥49.00<span class="fz22">销量:27件</span></p>
+                </a>
+                <a class="a-btn fz28" href="#">预约服务</a>
+            </li>
+        </ul>
+        <div class="clr"></div>
+    </section>
+    <!--预约商品列表-end-->
+    
+    <!--快捷购物车栏-->
+	<script>
+		$(function(){
+			var _boxcart = $('#BoxCart');
+			var _btn = $('#BtnBoxCart');
+			var _content = _boxcart.find('.boxcart-nav');
+			
+			_btn.click(function(){
+				if(_btn.hasClass('act')){
+					_content.find('a').css('display','none');
+					_content.css({'width':'3.24rem','transition':'width 1s'});
+					_btn.removeClass('act');
+				}else{
+					_content.css({'width':'16.24rem','transition':'width 0.8s'});
+					setTimeout(function(){
+						_content.find('a').css('display','inline-block');
+					},400);
+					_btn.addClass('act');
+				}
+			})
+		})
+	</script>
+	
+	<div class="box-cart" id="BoxCart">
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--添加购物车未点击状态：btncart.png-->  <!--添加购物车后状态：btncarth.png-->
+		<div class="boxcart-nav">
+			<a class="btn" href="#">
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/home.png" /></span>
+				<p class="fz26">首页</p>
+			</a>
+			<a class="cart" href="#">
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
+				<p class="fz26">购物车</p>
+			</a>
+            <a class="cart" href="#">
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/member.png" /></span>
+				<p class="fz26">会员</p>
+			</a>
+			<a class="cart" href="#">
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/login.png" /></span>
+				<p class="fz26">登录</p>
+			</a>
+		</div>
+	</div>
+    <!--快捷购物车栏-end-->
+
+</body>
+</html>

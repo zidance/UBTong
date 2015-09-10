@@ -1,0 +1,85 @@
+.stn-subsucceed article{ border-bottom:1px dashed #d4d1cd; }
+
+/*预约成功*/
+.stn-subsucceed{ width:90.78%; margin:.9rem auto 0; background:#fff; position:relative; border-radius:8px; }
+.stn-subsucceed .subsucceed{ border:solid #eae8e8; border-width:1px 1px 0 1px; border-radius:8px 8px 0 0; text-align:center; }
+.stn-subsucceed .subsucceed .s-img{ display:inline-block; width:3.63rem; height:3.63rem; padding-top:1.45rem; }
+.stn-subsucceed .subsucceed .s-img img{ max-width:100%; height:auto; }
+.stn-subsucceed .subsucceed p{ color:#3e9ef9; padding:.72rem 0 .36rem; margin:0; }
+.stn-subsucceed .subsucceed-seal{ width:100%; position:absolute; left:0; }
+.stn-subsucceed .subsucceed-seal img{ width:100%; height:100%; }
+
+/*二维码*/
+.stn-subsucceed .qr-code{ width:100%; padding:0 3.185%; border:solid #eae8e8; border-width:0 1px; box-sizing:border-box; }
+.stn-subsucceed .qr-code .p-name{ margin-left:.36rem; line-height:1.35rem; color:#000; }
+.stn-subsucceed .qr-code .p-name span{ color:#f2484c; }
+.stn-subsucceed .qr-code .p-prompt{ margin-left:.36rem; color:#979797; margin-top:.5rem; }
+.stn-subsucceed .qr-code .s-img{ display:block; width:10.1rem; height:10.1rem; border:1px solid #d4d1cd; margin:1.27rem auto 1.45rem; }
+.stn-subsucceed .qr-code .s-img img{ max-width:100%; height:auto; }
+
+/*品牌*/
+.stn-subsucceed .brand{ width:100%; padding:0 3.185%; border:solid #eae8e8; border-width:0 1px; box-sizing:border-box; }
+.stn-subsucceed .brand .s-img{ display:block; float:left; width:4.21rem; height:4.21rem; margin:0 .29rem; }
+.stn-subsucceed .brand .s-img img{ max-width:100%; height:auto; }
+.stn-subsucceed .brand .p-car{ color:#000; padding:.88rem 0 .2rem; }
+.stn-subsucceed .brand .p-num{ color:#888888; }
+
+/*服务详情*/
+.stn-subsucceed .service{ width:100%; padding:0 3.185%; border:solid #eae8e8; border-width:0 1px; box-sizing:border-box; }
+.stn-subsucceed .service h1{ color:#000; padding:1.27rem 0 0 .36rem; }
+.stn-subsucceed .service li{ padding-top:.54rem; position:relative; }
+.stn-subsucceed .service li .s-img{ display:block; float:left; width:5.37rem; height:5.37rem; margin:0 .72rem 0 .36rem; border:1px solid #d9d9d9; }
+.stn-subsucceed .service li .s-img img{ max-width:100%; height:auto; }
+.stn-subsucceed .service li .content{ width:8.13rem; float:left; }
+.stn-subsucceed .service li .p-name{ height:2.72rem; line-height:1.3rem; overflow:hidden; }
+.stn-subsucceed .service li .p-num{ position:absolute; bottom:.1rem; left:6.45rem; color:#999999; }
+.stn-subsucceed .service li .p-money{ position:absolute; bottom:0; right:.36rem; color:#f2484c; }
+
+.stn-subsucceed .service .maintain h2{ color:#3e9ef9; border-bottom:1px solid #d9d9d9; padding:.72rem 0 .36rem .36rem; }
+.stn-subsucceed .service .maintain .p-name{ color:#000; width:50%; margin-left:.36rem; height:2.9rem; line-height:1.5rem; overflow:hidden; float:left; padding:.72rem 0; }
+.stn-subsucceed .service .maintain .p-money{ color:#f2484c; float:right; margin-right:.36rem; line-height:2.9rem; padding:.72rem 0; }
+
+/*服务施工网点*/
+.stn-subsucceed .outlets{ width:100%; padding:0 3.185%; border:solid #eae8e8; border-width:0 1px 1px; box-sizing:border-box; padding-bottom:.36rem; border-radius:0 0 8px 8px; }
+.stn-subsucceed .outlets h1{ color:#000; padding:1.27rem 0 0 .36rem; }
+.stn-subsucceed .outlets li{ padding:.54rem 0 .72rem; position:relative; }
+.stn-subsucceed .outlets li .s-img{ display:block; float:left; width:5.37rem; height:5.37rem; margin:0 .72rem 0 .36rem; border:1px solid #d9d9d9; }
+.stn-subsucceed .outlets li .s-img img{ max-width:100%; height:auto; }
+.stn-subsucceed .outlets li .p-name{ width:10.9rem; color:#000; }
+.stn-subsucceed .outlets li .p-address{ color:#a6a6a6; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; margin-top:.5rem; }
+
+.stn-subsucceed .outlets li em{ display:block; width:5.23rem; height:.65rem; background:url(../img/high.png) no-repeat; background-size:5.23rem 6.17rem; overflow:hidden; text-indent:-9999px; margin-top:.8rem; }
+.stn-subsucceed .outlets li .e2{ background-position:0 -1.4rem; }
+.stn-subsucceed .outlets li .e3{ background-position:0 -2.8rem; }
+.stn-subsucceed .outlets li .e4{ background-position:0 -4.17rem; }
+.stn-subsucceed .outlets li .e5{ background-position:0 -5.53rem; }
+
+.stn-subsucceed .outlets li .p-science{ color:#676767; margin-top:.7rem; }
+.stn-subsucceed .outlets li .p-science span{ color:#f08f00; }
+.stn-subsucceed .outlets li .p-num{ display:block; float:right; background:url(../img/distance.png) no-repeat 0 center; background-size:.47rem .72rem; padding-left:.72rem; color:#a6a6a6; position:absolute; top:.72rem; right:.36rem; }
+.stn-subsucceed .outlets li a{ display:block; width:5.45rem; height:1.88rem; line-height:1.88rem; text-align:center; color:#fff; background:#3e9ef9; border-radius:6px; position:absolute; bottom:.72rem; right:.36rem; }
+
+@media screen and (max-width:380px) and (min-width:320px){
+	/*服务施工网点*/
+	.stn-subsucceed .outlets li a{ width:4.35rem; height:1.48rem; line-height:1.48rem; }
+}
+
+@media screen and (max-width:390px) and (min-width:320px){
+	/*服务详情*/
+	.stn-subsucceed .service li .content{ width:5.53rem; }
+}
+
+@media screen and (max-width:320px){
+	/*二维码*/
+	.stn-subsucceed .qr-code .p-name{ line-height:1.75rem; }
+	/*品牌*/
+	.stn-subsucceed .brand .p-car{ padding-top:.6rem; }
+	/*服务详情*/
+	.stn-subsucceed .service li .p-name{ line-height:1.4rem; }
+	/*服务施工网点*/
+	.stn-subsucceed .outlets li .p-name{ width:17.5rem; }
+	.stn-subsucceed .outlets li .p-address{ margin-top:.2rem; }
+	.stn-subsucceed .outlets li em{ margin-top:.5rem; }
+	.stn-subsucceed .outlets li .p-science{ margin-top:.25rem; }
+	.stn-subsucceed .outlets li a{ height:2.14rem; line-height:2.14rem; }
+}
