@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>卖家中心</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/seller.css" rel="stylesheet" type="text/css" />
+<script>
+	/*敬请期待*/
+	function BtnClick(){
+		setTimeout("document.getElementById('BoxForward').className = document.getElementById('BoxForward').className + ' fadein';document.getElementById('BoxForward').style.display = 'block'");
+		setTimeout("document.getElementById('BoxForward').className = document.getElementById('BoxForward').className.replace(' fadein', '');document.getElementById('BoxForward').style.display = 'none'",3500);
+	}
+</script>
+</head>
+
+<body>
+	<aside class="asi-forward" id="BoxForward">
+    	<div style="position:relative;">
+            <p class="fz32">正在开发中...敬请期待</p>
+            <div class="bg"></div>
+        </div>
+    </aside>
+
+	<section class="stn-seller">
+		<ul>
+			<li>
+				<a href="#">
+					<span><img src="res/img/nav1.png" /></span>
+					<p class="fz28">我的订单</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span><img src="res/img/nav2.png" /></span>
+					<p class="fz28">网点订单</p>
+				</a>
+			</li><li>
+				<a href="#">
+					<span><img src="res/img/nav3.png" /></span>
+					<p class="fz28">我的退换货单</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span><img src="res/img/nav4.png" /></span>
+					<p class="fz28">网点退换货单</p>
+				</a>
+			</li>
+			<li>
+				<a id="BtnForward" onClick="BtnClick()" href="#">
+					<span><img src="res/img/nav5.png" /></span>
+					<p class="fz28">敬请期待</p>
+				</a>
+			</li> 
+		</ul>
+        <div class="clr"></div>
+	</section>
+    
+    <a class="a-quit fz32" href="#">退出账户</a>
+</body>
+</html>

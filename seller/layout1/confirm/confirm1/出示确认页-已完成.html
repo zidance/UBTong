@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>出示确认页-已完成</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/confirm.css" rel="stylesheet" type="text/css" />
+<script>
+	window.onload = function(){ 
+		document.getElementById('Seal').style.top = document.getElementById('Lists').offsetHeight - (document.getElementById('Seal').offsetHeight)/2 + 'px';
+    } 
+	 window.onresize = function(){ 
+		document.getElementById('Seal').style.top = document.getElementById('Lists').offsetHeight - (document.getElementById('Seal').offsetHeight)/2 + 'px';
+    } 
+	
+</script>
+</head>
+
+<body>
+	<div class="show-confirm">
+		<section class="stn-lists" id="Lists">
+			<ul>
+				<li>
+					<span class="s-img"><img src="res/img/img1.jpg" /></span>
+					<div class="details">
+						<p class="p-name">美国原装进口精选优质开心果(奶油味)</p>
+						<p class="p-money">￥19.90</p>
+					</div>
+					<span class="s-num">数量：1</span>
+					<div class="clr"></div>
+				</li>
+				<li>
+					<span class="s-img"><img src="res/img/img2.jpg" /></span>
+					<div class="details">
+						<p class="p-name">美国原装进口精选优质开心果(奶油味)</p>
+						<p class="p-money">￥19.90</p>
+					</div>
+					<span class="s-num">数量：1</span>
+					<div class="clr"></div>
+				</li>
+			</ul>
+		</section>
+		<div class="confirm-seal" id="Seal"><img src="res/img/sealred.png" /></div>
+		
+		<section class="stn-num stn-numgrey">
+			<p class="fz32">订单号：6879 2565</p>
+			<p class="fz32">手机号：150 0000 0000</p>
+            
+            <a class="a-draw fz32" href="#">点击抽奖</a>
+		</section>
+	</div>
+</body>
+</html>

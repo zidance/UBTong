@@ -1,0 +1,40 @@
+/*CPA概况*/
+.stn-survey p {
+	border-bottom: 1px solid #eae8e8;
+	background: #fff;
+}
+.stn-survey span {
+	display: block;
+	line-height: 2.8rem;
+	float: left;
+	color: #000;
+	margin-left: 3.125%;
+}
+.stn-survey i {
+	float: right;
+	line-height: 2.8rem;
+	color: #a7a7a7;
+	margin-right: 3.125%;
+}
+.stn-survey p a {
+	display: block;
+	width: 26%;
+	height: 1.7rem;
+	line-height: 1.7rem;
+	text-align: center;
+	float: right;
+	background: #f1590d;
+	color: #fff;
+	border-radius: 4px;
+	margin: .5rem 3.125% 0 0;
+}
+.stn-survey .a-btn {
+	display: block;
+	width: 93.75%;
+	height: 2.39rem;
+	line-height: 2.39rem;
+	text-align: center;
+	margin: .72rem auto 0;
+	background: #f1590d;
+	color: #fff;
+}

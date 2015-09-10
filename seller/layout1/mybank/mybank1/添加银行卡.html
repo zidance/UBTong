@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>添加银行卡</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/mybank.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body style="background-color:#f7f5f5;">
+    
+    <div class="addcard">
+        <!--提示信息-->
+        <p class="p-notice fz24">请绑定持卡人本人的银行卡</p>
+        <!--添加卡信息-->
+        <ul class="ul-cardinfo">
+            <li class="li-user">
+                <p>持卡人</p>
+                <span>黄章强</span>
+            </li>
+            <li class="li-num">
+                <p>卡号</p>
+                <input type="text" value="" placeholder="输入银行卡号" />
+            </li>
+            <!--js脚本将获取li-bankname-->
+            <li class="li-bankname">
+                <p>储蓄卡类型</p>
+                <!--预留img位置-->
+                <img />
+                <input class="fz28" type="text" value="" placeholder="请选择储蓄卡类型" />
+            </li>
+            <li class="li-phone">
+                <p>手机号码</p>
+                <input class="fz28" type="text" value="" placeholder="输入手机号码" />
+            </li>
+        </ul>
+        <!--添加卡信息--end-->
+        
+        <!--银行选择弹出框-->
+               <!--遮罩层--> 
+        <div class="shade"></div>
+        <form id="bankList">
+            <p class="p-top fz32">请选择</p>
+            <a class="a-close"><img src="res/img/delete.png" /></a>
+            <ul class="ul-bank">
+                <li>
+                    <label for="cbc">
+                        <input type="radio" name="bank" id="cbc" value="" checked="checked" />
+                        <img class="img-bank" src="res/img/bank-CBC.png" />
+                        <span class="fz32">中国建设银行</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="cmb">
+                        <input type="radio" name="bank" id="cmb" value="" />
+                        <img class="img-bank" src="res/img/bank-CMB.png" />
+                        <span class="fz32">中国招商银行</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="abc">
+                        <input type="radio" name="bank" id="abc" value="" />
+                        <img class="img-bank" src="res/img/bank-ABC.png" />
+                        <span class="fz32">中国农业银行</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="cbc2">
+                        <input type="radio" name="bank" id="cbc2" value="" />
+                        <img class="img-bank" src="res/img/bank-CBC.png" />
+                        <span class="fz32">中国建设银行</span>
+                    </label>
+                </li>
+            </ul>
+                
+            <a class="a-confirm fz32" href="#">确定</a>            
+        </form>
+        
+        <script type="text/javascript">
+            getBank("bankList");
+            function getBank(_id){
+                var _obj = $("#"+_id);
+                var _close = _obj.find(".a-close");
+                var _open = $(".ul-cardinfo").find(".li-bankname");
+                var _input = _open.find("input");
+                var _confirm = _obj.find(".a-confirm");
+                
+                _open.click(function(){
+                    $(_obj).show();
+                    $(".shade").show();
+                });
+                _close.click(function(){
+                    $(_obj).hide();
+                    $(".shade").hide();
+                });
+                _confirm.click(function(){
+                    var _act = _obj.find("input:checked");
+                    var _name = _act.siblings("span").text();
+                    //获取所选银行
+                    _open.find("img").show().attr("src",_act.siblings("img").attr("src"));
+                    _input.attr({
+                        placeholder:"",
+                        value:_name
+                    });
+                    $(_obj).hide();
+                    $(".shade").hide();
+                });
+            };
+        </script>
+                
+        <!--银行选择弹出框--end-->
+        
+
+        <!--底部按钮--添加银行卡-->
+        <!--stn-footback区,为底部绝对定位或固定定位的按钮预留空间-->
+        <section class="stn-footback"></section>
+        <a class="a-act fz32" href="#">下一步</a>
+        <!--底部按钮--添加银行卡--end-->
+
+    </div>
+</body>
+    
+</html>

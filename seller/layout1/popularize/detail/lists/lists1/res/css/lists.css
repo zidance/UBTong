@@ -1,0 +1,12 @@
+/*推广明细列表*/
+.stn-lists{ padding:0 3.125%; }
+.stn-lists li{ border:1px solid #e7e7e7; border-radius:4px; background:#fff; margin-bottom:.72rem; padding:0 2.8%; }
+.stn-lists li:first-child{ margin-top:.72rem; }
+.stn-lists li .lists-top{ border-bottom:1px solid #e7e7e7; padding:0 2%; }
+.stn-lists li .lists-top .s-money{ display:block; float:left; line-height:3.77rem; color:#f1590d; }
+.stn-lists li .lists-top .right{ float:right; text-align:right; margin-top:.9rem; }
+.stn-lists li .lists-top .right .p-time{ color:#c3c3c3; }
+.stn-lists li .lists-top .right .p-ip{ color:#f1590d; margin-top:.2rem; }
+.stn-lists li .p-bottom{ line-height:2.61rem; color:#b8b8b8; padding:0 2%; }
+.stn-lists li .p-bottom span{ display:block; float:left; width:60%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+.stn-lists li .p-bottom em{ display:block; float:right; }

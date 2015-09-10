@@ -1,0 +1,189 @@
+body {
+    position: relative;
+}
+
+/*查询日期*/
+.bill-query .stn-date {
+    position: fixed;
+    top: 0;
+    background-color: #f7f5f5;
+    width: 100%;
+    max-width: 640px;
+    height: 7.8rem;
+    border-bottom: 1px solid #d9d9d9;
+}
+.bill-query .stn-date .dateinner {
+    position: absolute;
+    top: .6rem;
+    left: 4.5%;
+    width: 91%;
+    padding: 0 3.1%;
+    border: 1px solid #eae8e8;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #fff;
+}
+.bill-query .stn-date .dateinner a {
+    display: block;
+    border-top: 1px solid #d9d9d9;
+    color: #555;
+    height: 3.2rem;
+    line-height: 3.2rem;
+}
+.bill-query .stn-date .dateinner a:first-child {
+    border-top: none;
+}
+.bill-query .stn-date .dateinner a .s-date {
+    float: right;
+    color: #3e9ef9;
+}
+.bill-query .stn-date .dateinner a .s-date img {
+    height: 1rem;
+    width: .59rem;
+    margin-top: -.1rem;
+    margin-left: .2rem;
+}
+
+/*账单明细*/
+.bill-query .stn-bill {
+    background-color: #fff;
+    padding: 0 4.5%;
+    margin-top: 7.8rem;
+}
+.bill-query .stn-bill ul li {
+    clear: both;
+    height: 4rem;
+    color: #555;
+    line-height: 4rem;
+    background-repeat: no-repeat;
+    background-size: 1.8rem 1.8rem;
+    background-position: .5rem center;
+    padding: 0 3% 0 13%;
+    border-top: 1px solid #d9d9d9;
+}
+.bill-query .stn-bill ul li:first-child {
+    border-top: none;
+}
+.bill-query .stn-bill ul li.income {
+    background-image: url(../img/income.png);
+}
+.bill-query .stn-bill ul li.cash {
+    background-image: url(../img/cash.png);
+}
+.bill-query .stn-bill ul li .s-type {
+    float: left;
+}
+.bill-query .stn-bill ul li .s-money {
+    float: left;
+    overflow: hidden;
+    height: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.bill-query .stn-bill ul li .s-date {
+    float: right;
+}
+.bill-query-result .stn-bill-result {
+    margin-bottom: 0;
+    position: static;
+}
+
+/*查询按钮*/
+.bill-query .stn-query {
+    position: fixed;
+    bottom: 0;
+    background-color: #f7f5f5;
+    width: 100%;
+    height: 4.41rem;
+    border-top: 1px solid #d9d9d9;
+    max-width: 640px;
+}
+.bill-query .a-query {
+    display: block;
+    width: 96%;
+    text-align: center;
+    margin: .7rem auto 0;
+    background-color: #3e9ef9;
+    border: none;
+    border-radius: 6px;
+    line-height: 100%;
+    color: #fff;
+    padding: .9rem 0;
+}
+
+/*查询条件--查询结果页*/
+.bill-query-result .stn-require {
+    background-color: #3e9ef9;
+    padding: .9rem 0 .9rem 4%;
+}
+.bill-query-result .stn-require ul li {
+    float: left;
+    border-left: 1px solid #fff;
+    padding-top: .36rem;
+}
+.bill-query-result .stn-require ul li:first-child {
+    border-left: none;
+}
+.bill-query-result .stn-require ul li:last-child {
+    padding-left: .7rem;
+}
+.bill-query-result .stn-require li p {
+    color: #fff;
+}
+.bill-query-result .stn-require li p.fz28 {
+    padding: .88rem 0 .36rem;
+}
+.bill-query-result .stn-require ul li:first-child {
+    padding-right: .7rem;
+}
+.bill-query-result .stn-bill-result {
+    margin-top: 0;
+}
+@media screen and (min-width:321px) and (max-width:639px) {
+    .bill-query .stn-date {
+        height: 6.1rem;
+    }
+    .bill-query .stn-date .dateinner {
+        top: .5rem;
+    }
+    .bill-query .stn-date .dateinner a {
+        height: 2.47rem;
+        line-height: 2.47rem;
+    }
+    .bill-query .stn-date .dateinner a .s-date img {
+        height: .84rem;
+        width: .45rem;
+    }
+    .bill-query .stn-bill {
+        margin-top: 6.1rem;
+        margin-bottom: 3.37rem;
+    }
+    .bill-query .stn-bill ul li {
+        height: 3rem;
+        line-height: 3rem;
+        background-size: 1.4rem 1.4rem;
+        background-position: .2rem 46%;
+        padding: 0 1.5% 0 12%;
+    }
+    .bill-query .stn-bill ul li .s-money {
+        max-width: 4rem;
+    }
+    .bill-query .stn-query {
+        height: 3.37rem;
+    }
+    .bill-query .a-query {
+        padding: .8rem 0;
+        margin-top: .5rem;
+    }
+    .bill-query-result .stn-bill-result {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:320px) {
+    .bill-query .stn-bill ul li .s-money {
+        max-width: 6rem;
+    }
+    .bill-query-result .stn-bill-result {
+        margin-top: 0;
+    }
+}

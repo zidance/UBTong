@@ -1,0 +1,48 @@
+html{height:100%;}
+body{position:relative; min-height: 100%;}
+
+/*余额提现*/
+	/* 积分概况 */
+.withdraw .stn-general{position:relative; width:100%;height:13.5rem;color:#fff;text-align: center; background-image: url(../img/general-bottom-bg.png),url(../img/general-bg.png);background-repeat: repeat-x,no-repeat;background-position: left bottom,right bottom;background-size:.88rem .23rem,22.3% 22.3%;background-color: #f1590d;}
+.withdraw .stn-general .p-number{font-size:2.9rem;padding-top:3.1rem;}
+.withdraw .stn-general .p-number span{font-size:1.9rem;vertical-align:1rem;}
+.withdraw .stn-general .p-history,.withdraw .stn-general .p-describe{font-size:1rem;}
+.withdraw .stn-general .p-history{position:absolute;bottom:.9rem;text-align: left;text-indent:2.8rem;background: url(../img/history-bg.png) no-repeat 1.3rem top;background-size:.9rem .9rem; }
+.withdraw .stn-general .p-history span{font-size:.6rem;vertical-align:.2rem;margin-left:.1rem;}
+
+    /*额度信息*/
+.ul-limitinfo{margin-top:1rem;padding:0 3%;background-color: #fff;border-top:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;}
+.ul-limitinfo li{border-top:1px solid #dcdcdc;height: 2.95rem;line-height: 2.95rem;}
+.ul-limitinfo li:first-child{border-top:none;}
+.ul-limitinfo li p:first-child{float:left;color:#f2484c;}
+.ul-limitinfo li p span{float:left;width:9.25rem;text-indent: .6rem;color: #242424;}
+.ul-limitinfo li .p-notice{float:right;padding:0rem .36rem;border:1px solid #f2484c;border-radius:4px;line-height: 1.24rem;color:#f2484c;margin-top:.62rem;}
+
+	/* 底部按钮 */
+        /*.stn-footback 高度约等于底部按钮的height+2rem*/
+.stn-footback{height:4.8rem;}
+.withdraw .a-withdraw{ display:block; width:90%; height:2.8rem; line-height:2.8rem; background:#f1590d; color:#fff; border-radius:6px; text-align:center; position:absolute; bottom:1.09rem; left:5%;}
+/*余额提现页面--end*/
+
+
+@media screen and (min-width:321px) and (max-width:639px){
+    .withdraw .stn-general{height:8.7rem;}
+    .withdraw .stn-general .p-number{font-size:2.24rem;padding-top:2.2rem;}
+    .withdraw .stn-general .p-number span{font-size:1.47rem;vertical-align:.7rem;}
+    .withdraw .stn-general .p-history,.withdraw .stn-general .p-describe{font-size:.78rem;}
+    .withdraw .stn-general .p-history{bottom:.7rem;}
+    
+    .stn-footback{height:4rem;}
+    
+    .ul-limitinfo{margin-top:.78rem;}
+    .ul-limitinfo li{height: 2.2rem;line-height: 2.2rem;}
+    .ul-limitinfo li p span{width:7.2rem;text-indent: .5rem;}
+    .ul-limitinfo li .p-notice{line-height: .92rem;margin-top:.5rem;}
+    
+    .withdraw .a-withdraw,.withdraw-bank .a-withdraw{height:2.16rem; line-height:2.16rem;}
+    
+    
+}
+
+
+

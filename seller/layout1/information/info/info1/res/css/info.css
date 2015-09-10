@@ -1,0 +1,122 @@
+/* 基本资料 */
+/* 简介 */
+.stn-info {
+	margin-top: .72rem;
+}
+.stn-info .synopsis {
+	margin-bottom: .72rem;
+	border: solid #d9d9d9;
+	border-width: 1px 0;
+	background: #fff;
+	padding: .3rem 0;
+}
+.stn-info .synopsis span {
+	display: block;
+	padding: 0 4%;
+	color: #000;
+	float: left;
+}
+.stn-info .synopsis textarea {
+	border: none;
+	resize: none;
+	float: left;
+	width: 70%;
+	height: 4.9rem;
+	margin-top: .15rem;
+	color: #000;
+}
+.stn-info .synopsis textarea::-webkit-input-placeholder {
+	color: #a7a7a7;
+}
+
+/* 基本信息 */
+.stn-info .info {
+	margin-bottom: .72rem;
+	border: solid #d9d9d9;
+	border-width: 1px 0;
+	background: #fff;
+}
+.stn-info .info p {
+	padding: .52rem 0;
+	border-bottom: 1px solid #eae8e8;
+}
+.stn-info .info p:last-child {
+	border-bottom: none;
+}
+.stn-info .info span {
+	display: block;
+	float: left;
+}
+.stn-info .info .s-left {
+	padding: 0 4%;
+	line-height: 2rem;
+}
+.stn-info .info input {
+	border: none;
+	line-height: 2rem;
+	width: 70%;
+	float: left;
+}
+.stn-info .info input::-webkit-input-placeholder {
+	color: #a7a7a7;
+}
+.stn-info .info p a {
+	display: block;
+	width: 32%;
+	height: 2rem;
+	line-height: 2rem;
+	background: #3f9efa;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	float: left;
+}
+
+/* 图片 */
+.stn-info .pic {
+	margin-bottom: .72rem;
+	border: solid #d9d9d9;
+	border-width: 1px 0;
+	background: #fff;
+	padding: .3rem 0;
+}
+.stn-info .pic span {
+	display: block;
+	padding: 0 4%;
+	color: #000;
+	float: left;
+}
+.stn-info .pic ul {
+	width: 74%;
+	float: left;
+	margin: .3rem 0;
+}
+.stn-info .pic li {
+	width: 32%;
+	float: left;
+	margin-right: 2%;
+}
+.stn-info .pic li:last-child {
+	margin-right: 0;
+}
+.stn-info .pic li a {
+	display: block;
+	border: 1px solid #eae8e8;
+	background: url(../img/bg.jpg) no-repeat center center;
+	background-size: 4.46rem 4.46rem;
+	margin: 0 auto;
+}
+.stn-info .pic li a img {
+	width: 100%;
+	height: 100%;
+}
+@media screen and (min-width:640px) {
+	.stn-info .synopsis textarea {
+		margin-top: .1rem;
+	}
+}
+@media screen and (max-width:320px) {
+	.stn-info .synopsis textarea {
+		margin-top: .3rem;
+	}
+}

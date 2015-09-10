@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>余额提现-提现页面</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/withdraw.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background-color:#f7f5f5;">
+    
+    <div class="withdraw-bank">
+        <!--银行选择-->
+        <ul class="ul-bank">
+            <li>
+                <img class="img-bank" src="res/img/bank-CBC.png" />
+                <div class="bankinfo">
+                    <p class="p-bankname fz32">中国建设银行</p>
+                    <p class="p-card fz28">尾号7011 储蓄卡</p>
+                </div>
+                <img class="img-choose" src="res/img/bank-choose.png" />
+                <div class="clr"></div>
+            </li>
+        </ul>
+        <!--银行选择--end-->
+
+        <!--提现金额-->
+        <section class="stn-money">
+            <p class="p-userlimit fz28">可提现金额:<span>1980.00</span>元</p>
+            <p class="p-money">
+                <span class="fz32">提现金额</span>
+                <input class="fz28" type="text" value="" placeholder="请输入提现金额" />
+            </p>
+            <p class="p-publiclimit fz24">每笔限额5000.00元，本日还可提现3次</p>
+        </section>
+        <!--提现金额--end-->
+
+        <!--底部按钮-->
+        <!--stn-footback区,为底部绝对定位或固定定位的按钮预留空间-->
+        <section class="stn-footback"></section>
+        <a class="a-withdraw fz32 bgblue" href="#">确认提现</a>
+        <!--底部按钮--end-->
+
+    </div>
+</body>
+    
+</html>

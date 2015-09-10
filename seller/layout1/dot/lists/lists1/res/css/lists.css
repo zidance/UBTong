@@ -1,0 +1,7 @@
+/*列表*/
+.stn-lists{ padding:0 4.68%; }
+.stn-lists li{ border-bottom:1px solid #d9d9d9; padding:1.09rem 3%; }
+.stn-lists li .info{ color:#000; }
+.stn-lists li .info .p-name{ float:left; }
+.stn-lists li .info .p-tel{ float:right; }
+.stn-lists li .p-address{ color:#6a6a6a; margin-top:.6rem; }
