@@ -1,0 +1,7 @@
+.cart-btn{ padding:.79rem 0; width:93.75%; height:2.2rem; position:fixed; left:3.125%; bottom:0; background:#f7f5f5; }
+.cart-btn a{ display:block; width:49%; height:2.2rem; line-height:2.2rem; float:left; background:#f15a0c; color:#fff; text-align:center; border-radius:4px; }
+.cart-btn a:last-child{ float:right; background:#a6a6a6; }
+
+@media screen and (max-width:320px){
+	.cart-btn a{ height:2.5rem; line-height:2.5rem; }
+}

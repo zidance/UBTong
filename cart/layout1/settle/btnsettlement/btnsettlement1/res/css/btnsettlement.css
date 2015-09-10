@@ -1,0 +1,8 @@
+.btn-settlement{ width:93.75%; position:fixed; left:3.125%; bottom:0; background:#f7f5f5; padding-top:.72rem; }
+.btn-settlement a{ display:block; width:100%; height:2.44rem; line-height:2.44rem; text-align:center; background:#f15a0c; color:#fff; border-radius:4px; margin-bottom:.72rem; border:1px solid #f15a0c; box-sizing:border-box; }
+.btn-settlement a:last-child{ background:#fff; color:#585858; border-color:#c9c9c9; }
+
+.btn-setpayment{ width:100%; background:#fff; z-index:10; left:0; display:none; }
+.btn-setpayment a{ width:93.75%; background:#fff; border-color:#c9c9c9; color:#585858; margin:0 auto .72rem; }
+.btn-setpayment a:hover{ background:#f15a0c; border-color:#f15a0c; color:#fff; }
+#SetBackground{ width:100%; height:100%; background:#000; opacity:0.5; position:absolute; top:0; left:0; display:none; }

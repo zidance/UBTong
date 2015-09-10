@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>选择配送方式</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/distribut.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _li = $('#Distribut li');
+		$.each(_li,function(i,e){
+			$(this).click(function(){
+				_li.find('a').removeClass('act');
+				$(this).find('a').addClass('act');
+			})
+		})
+	})
+</script>
+</head>
+
+<body style="background:#f7f5f5;">
+	<section class="stn-distribut" id="Distribut">
+    	<ul>
+        	<li><a class="act fz32" href="#">送货上门</a></li>
+            <li><a class="fz32" href="#">上店交易</a></li>
+        </ul>
+    </section>
+</body>
+</html>

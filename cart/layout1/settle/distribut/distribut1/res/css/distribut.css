@@ -1,0 +1,4 @@
+.stn-distribut{ background:#fff; }
+.stn-distribut li{ border-bottom:1px solid #eae8e8; height:3.27rem; line-height:3.27rem; padding-left:5%; }
+.stn-distribut li a{ display:block; color:#161616; }
+.stn-distribut li a.act{ background:url(../img/choose.png) no-repeat 95% center; background-size:.94rem .79rem; }
