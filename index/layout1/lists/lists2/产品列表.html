@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>产品列表</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/lists.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _obj = $('#IndexLists');
+		var _li = _obj.find('li');
+		$.each(_li,function(i,e){
+			var _pro = $(this).find('.product');
+			_pro.css('width',_li.width()-$(this).find('.s-img').width()-_li.width()*0.04-2);
+		})
+	})
+</script>
+</head>
+
+<body>
+	<!--产品列表 间距：.72rem-->
+	<section class="index-lists" id="IndexLists">
+		<ul>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="res/img/img1.jpg" /></span>
+                    <div class="product">
+                        <p class="p-name fz30"><span class="s-name">库尔乐香柠檬库尔乐香柠檬库<em class="e-discount fz22">4.9折</em></span><span class="clr"></span></p>
+                        <p class="p-money fz24">￥<em class="e-money fz36">9.00</em>3个/份</p>
+                        <p class="p-price fz20">原价:12.50</p>
+                    </div>
+					<div class="clr"></div>
+				</a>
+                <a class="a-addcart fz24" href="#">加入购物车</a>
+			</li>
+            <li>
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="res/img/img2.jpg" /></span>
+                    <div class="product">
+                        <p class="p-name fz30"><span class="s-name">库尔乐香柠檬<em class="e-discount fz22">4.9折</em></span><span class="clr"></span></p>
+                        <p class="p-money fz24">￥<em class="e-money fz36">9.00</em>3个/份</p>
+                        <p class="p-price fz20">原价:12.50</p>
+                    </div>
+					<div class="clr"></div>
+				</a>
+                <a class="a-reservat fz24" href="#">马上预定</a>
+			</li>
+			<li class="li-null">
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="res/img/img3.jpg" /></span>
+                    <div class="product">
+                        <p class="p-name fz30"><span class="s-name">库尔乐香柠檬<em class="e-discount fz22">4.9折</em></span><span class="clr"></span></p>
+                        <p class="p-money fz24">￥<em class="e-money fz36">9.00</em>3个/份</p>
+                        <p class="p-price fz20">原价:12.50</p>
+                    </div>
+					<div class="clr"></div>
+				</a>
+                <a class="a-addcart fz24" href="#">加入购物车</a>
+			</li>
+           <li class="li-null">
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="res/img/img2.jpg" /></span>
+                    <div class="product">
+                        <p class="p-name fz30"><span class="s-name">库尔乐香柠檬<em class="e-discount fz22">4.9折</em></span><span class="clr"></span></p>
+                        <p class="p-money fz24">￥<em class="e-money fz36">9.00</em>3个/份</p>
+                        <p class="p-price fz20">原价:12.50</p>
+                    </div>
+					<div class="clr"></div>
+				</a>
+                <a class="a-reservat fz24" href="#">马上预定</a>
+			</li>
+		</ul>
+	</section>
+    <!--产品列表-end-->
+</body>
+</html>

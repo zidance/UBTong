@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>热卖专区</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/hot.css" rel="stylesheet" type="text/css" />
+<script src="res/js/iscroll.js"></script>
+<script>
+	var myScroll;
+	function loaded(){
+		var _li = document.getElementById('HotScroller').getElementsByTagName('li');
+		var _width = 7.38 * (_li.length) + 0.54;
+		document.getElementById('HotScroller').style.width = _width + "rem";
+		myScroll = new IScroll('.hot-wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	}
+</script>
+</head>
+
+<body onload="loaded()">
+	<!--热卖专区-->
+	<section class="stn-hot">
+		<a class="title" href="#">
+			<h1 class="fz28">热卖专区&nbsp;&nbsp;<span class="fz20">HOT</span></h1>
+		</a>
+		
+		<div class="hot-wrapper">
+			<div class="hot-scroller" id="HotScroller">
+				<ul>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+				</ul>
+				<div class="clr"></div>
+			</div>
+		</div>
+	</section>
+	<!--热卖专区-end-->
+</body>
+</html>

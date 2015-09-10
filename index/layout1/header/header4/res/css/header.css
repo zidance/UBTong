@@ -1,0 +1,26 @@
+/*轮播图片*/
+.banner{ position:relative;width:100%;}
+.banner .slider { z-index:1; display:block; margin:0 auto; overflow:hidden; position:relative; }
+.banner .slider .sliderlist{ position:absolute; left:0; top:0px; }
+.banner .slider .sliderlist li{ float:left; width:100%; display:block; text-align:center; }
+.banner .slider .sliderlist li span{ margin:0 auto; display:inline-block; }
+.banner .slider .sliderlist li img{ width:100%; }
+.banner .slider #pagenavi{ position:absolute; left:0; bottom:.4rem; text-align:center; width:100%;}
+.banner .slider #pagenavi a{display:inline-block; width:7.1%; height:0.2rem; margin:0 .13rem;  background:#fff;}
+.banner .slider #pagenavi a.active{ background:#f77a02; }
+
+
+/*头部header*/
+.head-index{height:3.48rem;position:relative;line-height: 3.48rem;background-color: #fff;}
+.head-index .a-img{position:absolute;padding:4px; border-radius:0.21rem; background-color: #fff;left:.65rem;top:-2.42rem;z-index: 22;}
+.head-index .a-img img{width:4.79rem;height:4.79rem;}
+.head-index .contact{line-height: 2.26rem;height:2.26rem;padding:0.62rem 0; position:absolute; right:0;}
+.head-index .contact .things{display:inline-block;color:#999999; line-height:1rem; margin-right:1.81rem; font-weight:400;}
+.head-index .contact .things em{ color:#f77a02;}
+
+
+@media screen and (max-width:320px){
+    .banner .slider #pagenavi{bottom:.6rem;}
+}
+
+

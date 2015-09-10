@@ -1,0 +1,14 @@
+/*广告专区*/
+.stn-advertising{ width:100%; background:#fff; margin-top:.54rem; }
+.stn-advertising table{width:100%;}
+.stn-advertising td{text-align:center;position: relative;}
+.stn-advertising td  img{width:100%; max-width:100%; height:auto; max-height:100%;position:absolute;top:0;left:0;}
+.stn-advertising .td-left{width:34.375%;padding-top:61.71%;/*395/640*/}
+.stn-advertising .td-right{width:65.624%;padding-top:28.9%;/*185/210*/}
+.stn-advertising .tr-bottom td{width:32.81%;padding-top:32.81%;/*210/640*/}
+
+
+@media screen and (max-width:440px) and (min-width:320px){
+	/*.stn-advertising td span{ width:5.24rem; }
+	.stn-advertising td .s-img2{ width:10.51rem; }*/
+}

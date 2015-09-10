@@ -1,0 +1,14 @@
+/*Í·²¿*/
+.aid-prompt{ width:100%; height:2.16rem; line-height:2.16rem; background:url(../img/prompt.png) no-repeat #fff4c5 .69rem center; background-size:.98rem .87rem; padding-left:2.03rem; color:#FF7E12; font-size:.87rem; position:fixed; left:0; z-index:9; }
+.head-index{ width:100%; height:3.19rem; background:#f54e1f; position:fixed; top:2.16rem; left:0; z-index:9; }
+.head-index .a-logo{ display:block; width:5.77rem; height:2.47rem; float:left; margin:.36rem 0 0 1.01rem; }
+.head-index .a-logo img{ width:100%; height:100%; }
+.head-index input{ border:1px solid #eb4314; float:left; width:8.36rem; height:2.1rem; margin:.47rem 0 0 .25rem; border-radius:1.05rem; background:url(../img/search.png) no-repeat #fff .65rem .54rem; background-size:1.01rem; padding-left:2.21rem; color:#F54E1F; font-size:.87rem; box-shadow:0 2px 3px #f1ddd7 inset; }
+.head-index input::-webkit-input-placeholder{ color:#F54E1F; }
+
+@media screen and (min-width:640px){
+	.head-index input{ width:12.86rem; }
+}
+@media screen and (max-width:320px){
+	.head-index input{ width:10.86rem; }
+}

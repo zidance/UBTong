@@ -1,0 +1,111 @@
+/*热卖专区*/
+.stn-hot {
+	background: #fff;
+	margin-top: .87rem;
+}
+.stn-hot .title {
+	display: block;
+	height: 1.96rem;
+	background: #ececec;
+}
+.stn-hot .title h1 {
+	width: 40%;
+	height: 1.96rem;
+	line-height: 1.96rem;
+	background: #27c173;
+	text-align: center;
+	color: #fff;
+}
+.stn-hot .title h1 span {
+	display: inline-block;
+	background: #ffec00;
+	width: 2.68rem;
+	height: 1.01rem;
+	line-height: 1.01rem;
+	color: #27c173;
+	border-radius: 4px;
+}
+.stn-hot .hot-wrapper {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 11.55rem;
+	overflow: hidden;
+	-ms-touch-action: none;
+}
+.stn-hot .hot-scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	height: 11.55rem;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.stn-hot .hot-scroller ul {
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.stn-hot .hot-scroller li {
+	width: 6.9rem;
+	height: 9.59rem;
+	float: left;
+	overflow: hidden;
+	margin: .9rem 0 1.09rem .54rem;
+	box-shadow: 0 0 5px #efefef;
+	border-radius: 8px;
+	position: relative;
+}
+.stn-hot .hot-scroller li .a-details {
+	display: block;
+}
+.stn-hot .hot-scroller li .a-details img {
+	width: 6.9rem;
+	height: 6.9rem;
+	border-radius: 8px 8px 0 0;
+	display: block;
+}
+.stn-hot .hot-scroller li .a-details p {
+	color: #585858;
+	padding: .43rem .43rem 0 .43rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.stn-hot .hot-scroller li .a-details .p-money {
+	color: #F54E1F;
+	padding-top: .21rem;
+}
+.stn-hot .hot-scroller li .a-cart {
+	display: block;
+	background: url(../img/cart.png) no-repeat;
+	background-size: 1.16rem 1.01rem;
+	width: 1.16rem;
+	height: 1.01rem;
+	text-indent: -9999px;
+	position: absolute;
+	bottom: .3rem;
+	right: .58rem;
+}
+@media screen and (max-width:320px) {
+	.stn-hot .hot-scroller li .a-details p {
+		padding-top: .23rem;
+	}
+	.stn-hot .hot-scroller li .a-details .p-money {
+		padding-top: 0;
+	}
+}

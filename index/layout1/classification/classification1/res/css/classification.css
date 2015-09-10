@@ -1,0 +1,12 @@
+/*分类*/
+.stn-classification{ width:100%; box-shadow:0 0 5px #e8e8e8; margin-top:.72rem; padding:1.09rem 0; }
+.stn-classification .typezone-left{ float:left; margin:0 3%; }
+.stn-classification .typezone-left .a-title{ display:block; padding-left:.94rem;  background:url(../img/white.png) no-repeat 95% center #27c173; background-size:.58rem .98rem; color:#fff; }
+.stn-classification .typezone-left li{ width:31.33%; box-sizing:border-box; float:left; text-align:center; margin:8% 3% 0 0; }
+.stn-classification .typezone-left .li-right{ margin-right:0; }
+.stn-classification .typezone-left li a{ display:block; height:100%; border:1px solid #e9e9e9; color:#464646; }
+.stn-classification .typezone-right{ width:35%; float:right; margin-right:3%; }
+.stn-classification .a-typeimg img{ width:100%; height:100%; }
+
+.stn-classificattwo .typezone-right{ width:35%; float:left; margin-left:3%; }
+.stn-classificattwo .typezone-left{ float:right; margin-right:3%; margin-left:0; }

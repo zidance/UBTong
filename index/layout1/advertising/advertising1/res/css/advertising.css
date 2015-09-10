@@ -1,0 +1,4 @@
+.stn-advertis{ box-shadow:0 0 5px #e8e8e8; padding:3% 3% 1%; margin-top:.87rem; }
+.stn-advertis li{ float:left; width:49%; margin:0 2% 2% 0; }
+.stn-advertis li.li-right{ margin-right:0; }
+.stn-advertis li img{ display:block; max-width:100%; height:auto; }

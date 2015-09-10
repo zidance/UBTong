@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta charset="bgk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="pic/pic1/res/css/pic.css" rel="stylesheet" type="text/css" />
+<link href="lists/lists2/res/css/lists.css" rel="stylesheet" type="text/css" />
+<link href="notice/notice1/res/css/notice.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/footer/footer3/res/css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/blank/blank1/res/css/blank.css" rel="stylesheet" type="text/css">
+<script src="notice/notice1/res/js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body style="background:#fbfbfb;">
+	<!--轮播图片-->
+	<script type="text/javascript" src="pic/pic1/res/js/touchslider.js"></script>
+	<div class="banner">
+		<div id="slider" class="slider">
+			<ul id="sliderlist" class="sliderlist">
+				<li><a href="#"><img src="pic/pic1/res/img/img1.jpg"></a></li>
+				<li><a href="#"><img src="pic/pic1/res/img/img1.jpg"></a></li>
+			</ul>
+			<div id="pagenavi">
+				<a class="active" href="#"></a>
+		        <a href="#"></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="pic/pic1/res/js/banner.js"></script>
+    <!--轮播图片-end-->
+    
+	<!-- 轮播公告 -->
+    <script>
+    	$(function(){
+			var _obj = $('#UlNotice');
+			var _ul = _obj;
+			var index = 0;
+			var _dwell = 600;
+			
+			/*初始化*/
+			var _total = Math.ceil(_ul.find('li').size());
+			var _h = _ul.find('li').height();
+			_ul.height( _h * _total );
+			
+			setInterval(function(){
+				index++;
+				if(index == _total){
+					_ul.animate({'marginTop':'0'},_dwell);
+					index = 0;
+				}else{
+					_ul.animate({'marginTop': -(_h * index)},_dwell);	
+				};
+			},3000);
+		})
+    </script>
+	<section class="notice">
+		<em class="em-notice fz22"><span>公告</span></em>
+        <ul id="UlNotice">
+            <li><a class="a-name fz22" href="#">农山水果夏日优惠大促销1!</a></li>
+            <li><a class="a-name fz22" href="#">农山水果夏日优惠大促销2!</a></li>
+            <li><a class="a-name fz22" href="#">农山水果夏日优惠大促销3!</a></li>
+        </ul>
+	</section>
+    <div class="clr"></div>
+	<!-- 轮播公告 -end -->
+
+    <!--产品列表 间距：.72rem-->
+    <script>
+		$(function(){
+			var _obj = $('#IndexLists');
+			var _li = _obj.find('li');
+			$.each(_li,function(i,e){
+				var _pro = $(this).find('.product');
+				_pro.css('width',_li.width()-$(this).find('.s-img').width()-_li.width()*0.04-2);
+			})
+		})
+	</script>
+    <section class="index-lists" id="IndexLists" style="margin-bottom:.54rem;">
+		<ul>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="lists/lists2/res/img/img1.jpg" /></span>
+                    <div class="product">
+                        <p class="p-name fz30"><span class="s-name">泰国椰青，15元/2个。事件9个110元<em class="e-discount fz22">4.9折</em></span><span class="clr"></span></p>
+                        <p class="p-money fz24">￥<em class="e-money fz36">122.50</em>3个/份</p>
+                        <p class="p-price fz20">原价:12.50</p>
+                    </div>
+					<div class="clr"></div>
+				</a>
+                <a class="a-addcart fz24" href="#">加入购物车</a>
+			</li>
+            <li>
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="lists/lists2/res/img/img2.jpg" /></span>
+                    <div class="product">
+                        <p class="p-name fz30"><span class="s-name">库尔乐香柠檬库尔乐香柠檬库尔乐香柠<em class="e-discount fz22">4.9折</em></span><span class="clr"></span></p>
+                        <p class="p-money fz24">￥<em class="e-money fz36">9.00</em>3个/份</p>
+                        <p class="p-price fz20">原价:12.50</p>
+                    </div>
+					<div class="clr"></div>
+				</a>
+                <a class="a-reservat fz24" href="#">马上预定</a>
+			</li>
+			<li class="li-null">
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="lists/lists2/res/img/img3.jpg" /></span>
+                    <div class="product">
+                        <p class="p-name fz30"><span class="s-name">库尔乐香柠檬<em class="e-discount fz22">4.9折</em></span><span class="clr"></span></p>
+                        <p class="p-money fz24">￥<em class="e-money fz36">9.00</em>3个/份</p>
+                        <p class="p-price fz20">原价:12.50</p>
+                    </div>
+					<div class="clr"></div>
+				</a>
+                <a class="a-addcart fz24" href="#">加入购物车</a>
+			</li>
+           <li class="li-null">
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="lists/lists2/res/img/img3.jpg" /></span>
+                    <div class="product">
+                        <p class="p-name fz30"><span class="s-name">库尔乐香柠檬<em class="e-discount fz22">4.9折</em></span><span class="clr"></span></p>
+                        <p class="p-money fz24">￥<em class="e-money fz36">9.00</em>3个/份</p>
+                        <p class="p-price fz20">原价:12.50</p>
+                    </div>
+					<div class="clr"></div>
+				</a>
+                <a class="a-reservat fz24" href="#">马上预定</a>
+			</li>
+		</ul>
+	</section>
+    <!--产品列表-end-->
+    
+    
+    
+    <!--空白BOTTOM部件 -3.59rem-->
+	<div class="blank-bottom" style="height:3.59rem;"></div>
+	<!--空白BOTTOM部件 -end-->
+    
+    <!--底部高度：3.59rem-->
+	<footer>
+    	<ul>
+        	<li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer3/res/img/home.png" /></span></a></li>  <!--当前目录状态：home.png-->   <!--未在当前目录状态：home.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer3/res/img/cart.png" /></span></a></li>  <!--当前目录状态：carth.png-->     <!--当前目录购物车添加商品为点击状态：carthd-->  <!--未在当前目录状态：cart.png-->  <!--未在当前目录购物车添加商品为点击状态：cartd.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer3/res/img/member.png" /></span></a></li>  <!--当前目录状态：memberh.png-->   <!--未在当前目录状态：member.png-->
+        </ul>
+    </footer>    
+    <!--底部-end-->
+</body>
+</html>

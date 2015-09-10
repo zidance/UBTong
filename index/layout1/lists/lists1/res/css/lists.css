@@ -1,0 +1,8 @@
+/*产品列表*/
+.index-lists{ width:93.75%; padding:0 3.125%; }
+.index-lists li{ box-shadow:0 0 5px #e7e7e7; border-radius:4px; background:#fff; margin-bottom:.72rem; }
+.index-lists li span{ display:block; }
+.index-lists li .s-img{ height:6.83rem; }
+.index-lists li .s-img img{ width:100%; height:100%; border-radius:4px 4px 0 0; }
+.index-lists li .s-name{ float:left; width:14.68rem; margin:.65rem 0 .65rem .72rem; color:#282828; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+.index-lists li .s-money{ color:#f2395b; float:right; margin:.65rem .9rem .65rem 0; }

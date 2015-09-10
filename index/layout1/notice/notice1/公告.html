@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>公告</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/notice.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="res/js/jquery-1.7.2.min.js"></script>
+<script>
+	$(function(){
+		var _obj = $('#UlNotice');
+		var _ul = _obj;
+		var index = 0;
+		var _dwell = 600;
+		
+		/*初始化*/
+		var _total = Math.ceil(_ul.find('li').size());
+		var _h = _ul.find('li').height();
+		_ul.height( _h * _total );
+		
+		setInterval(function(){
+			index++;
+			if(index == _total){
+				_ul.animate({'marginTop':'0'},_dwell);
+				index = 0;
+			}else{
+				_ul.animate({'marginTop': -(_h * index)},_dwell);	
+			};
+		},3000);
+	})
+</script>  
+</head>
+
+<body>
+	<!-- 轮播公告 -->
+	<section class="notice">
+		<em class="em-notice fz22"><span>公告</span></em>
+        <ul id="UlNotice">
+            <li><a class="a-name fz22" href="#">农山水果夏日优惠大促销1!</a></li>
+            <li><a class="a-name fz22" href="#">农山水果夏日优惠大促销2!</a></li>
+            <li><a class="a-name fz22" href="#">农山水果夏日优惠大促销3!</a></li>
+        </ul>
+	</section>
+    <div class="clr"></div>
+	<!-- 轮播公告 -end -->
+</body>
+
+</html>

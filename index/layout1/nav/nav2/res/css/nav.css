@@ -1,0 +1,134 @@
+/*µ¼º½*/
+nav li {
+	float: left;
+	width: 25%;
+	height: 4.6875rem;
+	text-align: center;
+}
+nav li a {
+	display: block;
+	height: 3.9675rem;
+	border: solid #f1f1f1;
+	border-width: 0 1px 1px 0;
+	padding-top: .72rem;
+}
+nav .li-last a {
+	border-right: none;
+}
+nav li a span {
+	display: block;
+	width: 2.32rem;
+	height: 2.32rem;
+	margin: 0 auto .08rem;
+	border-radius: 100%;
+	text-align: center;
+}
+nav li a .s1 {
+	background: #bd10e0;
+}
+nav li a .s1 img {
+	width: 1.27rem;
+	height: 1.27rem;
+	margin-top: .54rem;
+}
+nav li a .s2 {
+	background: #f5a623;
+}
+nav li a .s2 img {
+	width: 1.27rem;
+	height: 1.41rem;
+	margin-top: .43rem;
+}
+nav li a .s3 {
+	background: #f54e1f;
+}
+nav li a .s3 img {
+	width: 1.3rem;
+	height: 1.45rem;
+	margin-top: .4rem;
+}
+nav li a .s4 {
+	background: #f8e71c;
+}
+nav li a .s4 img {
+	width: 1.3rem;
+	height: 1.3rem;
+	margin-top: .5rem;
+}
+nav li a .s5 {
+	background: #ea69ad;
+}
+nav li a .s5 img {
+	width: 1.3rem;
+	height: 1.3rem;
+	margin-top: .58rem;
+}
+nav li a .s6 {
+	background: #7ed321;
+}
+nav li a .s6 img {
+	width: 1.12rem;
+	height: 1.16rem;
+	margin-top: .58rem;
+}
+nav li a .s7 {
+	background: #4a90e2;
+}
+nav li a .s7 img {
+	width: 1.45rem;
+	height: 1.45rem;
+	margin-top: .43rem;
+}
+nav li a .s8 {
+	background: #50e3c2;
+}
+nav li a .s8 img {
+	width: 1.34rem;
+	height: 1.34rem;
+	margin-top: .5rem;
+}
+nav li a p {
+	font-size: .8rem;
+	color: #464646;
+}
+.nav-banner {
+	position: relative;
+	padding-bottom: 1.45rem;
+}
+.nav-banner .nav-slider {
+	z-index: 1;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0 5px #efefef;
+}
+.nav-banner .nav-slider .nav-sliderlist {
+	position: absolute;
+	width: 2000px;
+	left: 0;
+	top: 0px;
+}
+.nav-banner #navpager {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+}
+.nav-banner #navpager a {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	line-height: 99em;
+	background: #dddada;
+	margin: 0 2px 0 2px;
+	overflow: hidden;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+.nav-banner #navpager a.act {
+	background: #e60012;
+}

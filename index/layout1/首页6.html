@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="header/header3/res/css/header.css" rel="stylesheet" type="text/css" />
+<link href="notice/notice1/res/css/notice.css" rel="stylesheet" type="text/css" />
+<link href="lists/lists5/res/css/lists.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/footer/footer5/res/css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/blank/blank1/res/css/blank.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body style="background:#f7f5f5;">
+	<!--轮播图片-->
+	<script type="text/javascript" src="header/header3/res/js/touchslider.js"></script>
+	<div class="banner">
+		<div id="slider" class="slider">
+			<ul id="sliderlist" class="sliderlist">
+				<li><a href="#"><img src="header/header3/res/img/img1.png"></a></li>
+				<li><a href="#"><img src="header/header3/res/img/img2.png"></a></li>
+				<li><a href="#"><img src="header/header3/res/img/img3.png"></a></li>
+			</ul>
+			<div id="pagenavi">
+				<a class="active" href="#"></a>
+		        <a href="#"></a>
+		        <a href="#"></a>
+			</div>
+		</div>
+     </div>
+
+	<script type="text/javascript" src="header/header3/res/js/banner.js"></script>
+    <!--轮播图片-end-->
+    
+    <!--头部店铺信息-->
+    <header class="head-index">
+        <a class="a-img" href="#"><img src="header/header3/res/img/shoplogo.png" /></a>
+        <p class="p-name fz28">白白小铺</p>
+        <div class="contact">
+            <a class="a-tel fz20">电话</a>
+            <a class="a-address fz20">地址</a>
+        </div>
+        <div class="clr"></div>
+    </header>
+    <!--头部店铺信息--end-->
+    
+    	<!-- 轮播公告 -->
+    <script>
+    	$(function(){
+			var _obj = $('#UlNotice');
+			var _ul = _obj;
+			var index = 0;
+			var _dwell = 600;
+			
+			/*初始化*/
+			var _total = Math.ceil(_ul.find('li').size());
+			var _h = _ul.find('li').height();
+			_ul.height( _h * _total );
+			
+			setInterval(function(){
+				index++;
+				if(index == _total){
+					_ul.animate({'marginTop':'0'},_dwell);
+					index = 0;
+				}else{
+					_ul.animate({'marginTop': -(_h * index)},_dwell);	
+				};
+			},3000);
+		})
+    </script>
+	<section class="notice" style="border-top:1px solid #f7f5f5;">
+		<em class="em-notice fz22"><span>公告</span></em>
+        <ul id="UlNotice">
+            <li><a class="a-name fz22" href="#">农山水果夏日优惠大促销1!</a></li>
+            <li><a class="a-name fz22" href="#">农山水果夏日优惠大促销2!</a></li>
+            <li><a class="a-name fz22" href="#">农山水果夏日优惠大促销3!</a></li>
+        </ul>
+	</section>
+    <div class="clr"></div>
+	<!-- 轮播公告 -end -->
+
+    
+
+	<!--产品列表 间距：.65rem-->
+	<section class="index-lists" id="thelist" style="margin-bottom:1.41rem;">
+		<ul>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists5/res/img/img1.png" />
+                        <!--新品标志-->
+                        <!--<span class="s-mark fz20">新品</span>-->
+                    </span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>13.40<span class="s-price fz20">20.00</span></p>
+                        
+                    </div>
+				</a>
+			</li>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="lists/lists5/res/img/img2.png" /></span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>13.40<span class="s-price fz20">20.00</span></p>
+                        
+                    </div>
+				</a>
+			</li>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists5/res/img/img3.png" />
+                        <!--新品标志-->
+                        <span class="s-mark fz20">新品</span>
+                    </span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>13.40<span class="s-price fz20">20.00</span></p>
+                        
+                    </div>
+				</a>
+			</li>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="lists/lists5/res/img/img4.png" /></span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>13.40<span class="s-price fz20">20.00</span></p>
+                        
+                    </div>
+				</a>
+			</li>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists5/res/img/img1.png" />
+                    </span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>13.40<span class="s-price fz20">20.00</span></p>
+                        
+                    </div>
+				</a>
+			</li>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img"><img src="lists/lists5/res/img/img2.png" /></span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>13.40<span class="s-price fz20">20.00</span></p>
+                        
+                    </div>
+				</a>
+			</li>
+		</ul>
+        <div class="clr"></div>
+	</section>
+    <script>
+	function imgZoomControl(){
+		var _li = $('#thelist li');
+		$.each(_li,function(i,e){
+			var _this= $(this);
+			var _img = $(this).find('.s-img img');
+			$(this).find('.s-img').width(_this.width());
+			$(this).find('.s-img').height(_this.width());
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
+			{
+				_img.css('width',_this.width());
+			}else if(_img.height() > $(this).height()){
+				_img.css('height',_this.width());
+			}
+			_img.css({'max-width':_this.width(),'max-height':_this.width()})
+		})
+	}
+
+		imgZoomControl();
+    </script>
+    <!--产品列表-end-->
+    
+    <!--空白BOTTOM部件 -3.59rem-->
+	<div class="blank-bottom" style="height:3.59rem;"></div>
+	<!--空白BOTTOM部件 -end-->
+
+
+	<!--底部高度：3.59rem-->
+	<footer>
+    	<ul>
+        	<li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer5/res/img/homeh.png" /></span></a></li>  <!--当前目录状态：home.png-->   <!--未在当前目录状态：home.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer5/res/img/cart.png" /></span></a></li>  <!--当前目录状态：carth.png-->   <!--未在当前目录状态：cart.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer5/res/img/member.png" /></span></a></li>  <!--当前目录状态：memberh.png-->    <!--未在当前目录状态：member.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer5/res/img/tel.png" /></span></a></li>  <!--当前目录状态：telh.png-->   <!--未在当前目录状态：tel.png-->
+        </ul>
+    </footer>
+    <!--底部-end-->
+</body>
+</html>

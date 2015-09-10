@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="pic/pic1/res/css/pic.css" rel="stylesheet" type="text/css" />
+<link href="nav/nav1/res/css/nav.css" rel="stylesheet" type="text/css" />
+<link href="lists/lists4/res/css/lists.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/footer/footer1/res/css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/blank/blank1/res/css/blank.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body style="background:#f7f5f5;">
+	<!--轮播图片-->
+	<script type="text/javascript" src="pic/pic1/res/js/touchslider.js"></script>
+	<div class="banner">
+		<div id="slider" class="slider">
+			<ul id="sliderlist" class="sliderlist">
+				<li><a href="#"><img src="pic/pic1/res/img/img1.jpg"></a></li>
+				<li><a href="#"><img src="pic/pic1/res/img/img1.jpg"></a></li>
+			</ul>
+			<div id="pagenavi">
+				<a class="active" href="#"></a>
+		        <a href="#"></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="pic/pic1/res/js/banner.js"></script>
+    <!--轮播图片-end-->
+    
+    <!--导航-->
+	<nav class="nav-three">
+		<ul>
+			<li><a href="#"><span class="s1"><img src="nav/nav1/res/img/nav1.png"/></span><p>所有商品</p></a></li>
+			<li><a href="#"><span class="s3"><img src="nav/nav1/res/img/nav3.png"/></span><p>热卖</p></a></li>
+			<li><a href="#"><span class="s2"><img src="nav/nav1/res/img/nav4.png"/></span><p>特惠</p></a></li>
+			<li class="li-last"><a href="#"><span class="s7"><img src="nav/nav1/res/img/nav5.png"/></span><p>我的订单</p></a></li>
+		</ul>
+		<div class="clr"></div>
+	</nav>
+    <!--导航-end-->
+    
+    <!--产品列表-->
+    <section class="index-lists" style="margin-bottom:.72rem;">
+		<ul>
+			<li>
+                <a class="a-product" href="#">
+                	<span class="s-img"><img src="lists/lists4/res/img/img1.jpg" /></span>
+                    <p class="p-name fz32">新西兰精选牛排自助2人套餐A新西兰精选牛排自助2人套餐A</p>
+                    <div class="money">
+                    	<p class="p-money fz24">￥<em class="fz40">188.00</em><span class="fz20">238.00</span></p>
+                        <p class="p-icon fz20"><i class="red">新品</i></p>
+                        <div class="clr"></div>
+                    </div>
+                </a>
+                <a class="a-cart" href="#">购物车</a>
+			</li>
+            <li>
+                <a class="a-product" href="#">
+                	<span class="s-img"><img src="lists/lists4/res/img/img1.jpg" /></span>
+                    <p class="p-name fz32">新西兰精选牛排自助2人套餐A新西兰精选牛排自助2人套餐A</p>
+                    <div class="money">
+                    	<p class="p-money fz24">￥<em class="fz40">388.00</em><span class="fz20">238.00</span></p>
+                        <p class="p-icon fz20"><i class="orange">热卖</i><i class="yellow">特惠</i></p>
+                        <div class="clr"></div>
+                    </div>
+                </a>
+                <a class="a-cart" href="#">购物车</a>
+			</li>
+            <li>
+                <a class="a-product" href="#">
+                	<span class="s-img"><img src="lists/lists4/res/img/img1.jpg" /></span>
+                    <p class="p-name fz32">新西兰精选牛排自助2人套餐A新西兰精选牛排自助2人套餐A</p>
+                    <div class="money">
+                    	<p class="p-money fz24">￥<em class="fz40">388.00</em><span class="fz20">238.00</span></p>
+                        <p class="p-icon fz20"><i class="purple">限时</i><i class="orange">热卖</i><i class="yellow">特惠</i></p>
+                        <div class="clr"></div>
+                    </div>
+                </a>
+                <a class="a-cart" href="#">购物车</a>
+			</li>
+		</ul>
+	</section>
+    <!--产品列表-end-->
+    
+    <!--空白BOTTOM部件 -3.27rem-->
+	<div class="blank-bottom" style="height:3.27rem;"></div>
+	<!--空白BOTTOM部件 -end-->
+    
+    <!--底部高度：3.27rem-->
+    <script>
+		$(function(){
+			var _stntext = $('#StnTxet');  /*类别框*/
+			var _btntext = $('#BtnText');  /*切换输入框按钮*/
+			var _stninput = $('#StnInput');  /*输入框*/
+			var _btninput = $('#BtnInput');  /*切换类别按钮*/
+			var _li = _stntext.find('.li-type');
+			_btntext.click(function(){
+				_stntext.hide();
+				_stninput.show();
+			});
+			_btninput.click(function(){
+				_stninput.hide();
+				_stntext.show();
+			});
+			
+			_li.click(function(){
+				var _size = $(this).find("li").size();
+				if(_size==0){
+						setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className + ' fadein';document.getElementById('StnNull').style.display='block'");
+						setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className.replace(' fadein', '');document.getElementById('StnNull').style.display='none'",3500);
+				}
+				
+				if(_size > 0){
+					_li.find('ol').hide();
+					_li.find('ol div').hide();
+					$(this).find('ol').show();
+				}
+				return false;
+			})
+			_li.find('ol li').click(function(){
+				if($(this).find('div').hasClass('type-lv'))
+				{
+					_li.find('ol div').hide();
+					$(this).find('div').show();
+				}
+				else{
+					_li.find('ol').hide();
+				}
+				return false;
+			})
+			_li.find('ol li div').click(function(){
+				_li.find('ol').hide();
+				_li.find('ol li div').hide();
+				return false;
+			})
+			
+			$(document).click(function(){
+				_li.find('ol').hide();
+			})
+		})
+	</script>
+	<footer>
+		<!--类别-->
+		<section class="stn-text" id="StnTxet">
+			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">切换输入框</span></a>
+			<ul>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">产品分类</span></a>
+					<ol>
+						<li>
+                        	<a class="fz28" href="#">分类1</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类11</a>
+                                <a class="fz28" href="#">分类12</a>
+                                <a class="fz28" href="#">分类13</a>
+                                <a class="fz28" href="#">分类14</a>
+                            </div>
+                        </li>
+						<li>
+                        	<a class="fz28" href="#">分类2</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类21</a>
+                                <a class="fz28" href="#">分类22</a>
+                                <a class="fz28" href="#">分类23</a>
+                                <a class="fz28" href="#">分类24</a>
+                            </div>
+                        </li>
+						<li><a class="fz28" href="#">分类3</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">会员中心</span></a>
+                    <ol>
+						<li><a class="fz28" href="#">分类7</a></li>
+						<li><a class="fz28" href="#">分类8</a></li>
+						<li><a class="fz28" href="#">分类9</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">关注分享</span></a>
+				</li>
+			</ul>
+			<div class="clr"></div>
+		</section>
+		<!--类别-end-->
+		
+		<!--输入框-->
+		<section class="stn-input" id="StnInput">
+			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">切换类别</span></a>
+			<div class="input"><input type="text" /></div>
+			<button>搜索</button>
+		</section>
+		<!--输入框-end-->
+		
+		<section class="stn-null fz36" id="StnNull">未设置分类</section>
+	</footer>
+	<!--底部-end-->
+</body>
+</html>

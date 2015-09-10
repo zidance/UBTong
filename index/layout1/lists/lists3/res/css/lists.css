@@ -1,0 +1,20 @@
+/*产品列表*/
+.index-lists{ padding:0 2.1875%;  0 2.1875%; }
+.index-lists li{ margin-bottom:.54rem; position:relative; }
+.index-lists li:first-child{ margin-top:.9rem; }
+.index-lists li a{display:block;}
+.index-lists li .s-img{ display:block; float:left; width:55%; height:auto; border-radius:10px 0 0 1px; }
+.index-lists li .s-img img{ width:100%; height:auto; border-radius:10px 0 0 1px; }
+.index-lists li .pic{position:absolute;margin-left:55%;height:100%;width:45%;text-align:center; border-radius:0 10px 10px 0; background:#fff; }
+.index-lists li .pic .s-pic{ display:inline-block; width:20%; height:auto; margin:8% 0 3%; }
+.index-lists li .pic .s-pic img{ width:100%; height:auto; }
+.index-lists li .pic p{ color:#2c2c2c; }
+.index-lists li .p-subscribe{ display:block; background:url(../img/btn.png) no-repeat right 0; background-size:.39rem 1.8rem; height:1.8rem; position:absolute; bottom:.8rem; right:-.39rem; width:40%;}
+.index-lists li .p-subscribe span{ display:block; height:1.8rem; line-height:1.8rem; margin-top:.23rem; background:#ff6766; color:#fff; text-align:center; }
+
+
+
+@media screen and (max-width:320px){
+	.index-lists li .p-subscribe{ background-size:.39rem 2.28rem; height:2.26rem; }
+	.index-lists li .p-subscribe span{ height:2.03rem; line-height:2.03rem; }
+}

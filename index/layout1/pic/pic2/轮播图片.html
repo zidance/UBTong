@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>轮播图片</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/pic.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="res/js/koala.js"></script>
+</head>
+
+<body>
+	<div id="fsD1" class="focus">
+		<div id="D1pic1" class="fPic">
+			<div class="fcon"> 
+				<a href="#"><img src="res/img/img1.jpg"></a> 
+				<span class="shadow"><a href="#">01</a></span> 
+			</div>
+			<div class="fcon">
+				<a href="#"><img src="res/img/img1.jpg"></a> 
+				<span class="shadow"><a href="#">02</a> </span> 
+			</div>
+			<div class="fcon"> 
+				<a href="#"><img src="res/img/img1.jpg"></a> 
+				<span class="shadow"><a href="#">03</a> </span> 
+			</div>
+			<div class="fcon"> 
+				<a href="#"><img src="res/img/img1.jpg"></a> 
+				<span class="shadow"><a href="#">04</a> </span> 
+			</div>
+		</div>
+		<div class="d1fBt" id="D1fBt">
+			<a href="#" hidefocus="true" target="_self"></a> 
+			<a href="#" hidefocus="true" target="_self"></a> 
+			<a href="#" hidefocus="true" target="_self"></a> 
+			<a href="#" hidefocus="true" target="_self"></a> 
+		</div>
+	</div>
+	<script type="text/javascript">
+		Qfast.add('widgets', { path: "res/js/terminator.js", type: "js", requires: ['fx'] });  
+		Qfast(false, 'widgets', function () {
+			K.tabs({
+				id: 'fsD1',   //焦点图包裹id  
+				conId: "D1pic1",  //** 大图域包裹id  
+				tabId:"D1fBt",  
+				tabTn:"a",
+				conCn: '.fcon', //** 大图域配置class       
+				auto: 1,   //自动播放 1或0
+				effect: 'fade',   //效果配置
+				eType: 'click', //** 鼠标事件
+				pageBt:true,//是否有按钮切换页码
+				bns: ['.prev', '.next'],//** 前后按钮配置class                          
+				interval: 3000  //** 停顿时间  
+			}) 
+		})  
+	</script>
+</body>
+</html>

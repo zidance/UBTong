@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>分类</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/classification.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+		/*function Liwidth(){
+			var _type = $('.stn-classification');
+			var _left = _type.find('.typezone-left');
+			var _right = _type.find('.typezone-right');
+			var _li = _left.find('li');
+			
+			if($(window).width() > 640){
+				_left.width(640-_right.width()-640*0.12);
+			}else if($(window).width() < 320){
+				_left.width(320-_right.width()-320*0.12);
+			}else if(640 < $(window).width() < 320){
+				_left.width($(window).width()-_right.width()-$(window).width()*0.14);
+			}
+			else{
+				_left.width($(window).width()-_right.width()-$(window).width()*0.12);
+			}
+			_li.css({'height':_right.height()*0.235,'line-height':_right.height()*0.235+'px','margin-top':_right.height()*0.0925});
+			_left.find('.a-title').css({'height':_right.height()*0.33333,'line-height':_right.height()*0.33333+'px'});
+		}*/
+		$(function(){
+			var _type = $('.stn-classification');
+			var _left = _type.find('.typezone-left');
+			var _right = _type.find('.typezone-right');
+			var _li = _left.find('li');
+			
+			if($(window).width() > 640){
+				_left.width(640-_right.width()-640*0.12);
+			}else if($(window).width() < 320){
+				_left.width(320-_right.width()-320*0.12);
+			}else if(640 < $(window).width() < 320){
+				_left.width($(window).width()-_right.width()-$(window).width()*0.14);
+			}
+			else{
+				_left.width($(window).width()-_right.width()-$(window).width()*0.12);
+			}
+            
+            _type.each(function(i){
+                $(this).find('.typezone-right').find("img").get(0).onload = function(){
+                   $(this).find('.typezone-left').find('li').css({'height':_right.height()*0.235,'line-height':_right.height()*0.235+'px','margin-top':_right.height()*0.0925});
+			$(this).find('.typezone-left').find('.a-title').css({'height':_right.height()*0.33333,'line-height':_right.height()*0.33333+'px'}); 
+                }
+            })
+            
+            
+		})
+		/*$(window).resize(function(){
+			Liwidth();
+		})*/
+</script>
+</head>
+
+<body>
+	<!--分类-->
+	<section class="stn-classification">
+		<div class="typezone-left">
+			<a class="a-title fz28" href="#">零食专区</a>
+			
+			<ul>
+				<li><a class="fz22" href="#">干货</a></li>
+				<li><a class="fz22" href="#">鲜果</a></li>
+				<li class="li-right"><a class="fz22" href="#">坚果</a></li>
+				<li><a class="fz22" href="#">花生</a></li>
+				<li><a class="fz22" href="#">瓜子</a></li>
+				<li class="li-right"><a class="fz22" href="#">玉米</a></li>
+			</ul>
+		</div>
+		<div class="typezone-right"><a class="a-typeimg" href="#"><img src="res/img/img1.jpg" /></a></div>
+		<div class="clr"></div>
+	</section>
+    <section class="stn-classification stn-classificattwo">
+		<div class="typezone-right"><a class="a-typeimg" href="#"><img src="res/img/img1.jpg" /></a></div>
+		<div class="typezone-left">
+			<a class="a-title fz28" href="#">零食专区</a>
+			
+			<ul>
+				<li><a class="fz22" href="#">干货</a></li>
+				<li><a class="fz22" href="#">鲜果</a></li>
+				<li class="li-right"><a class="fz22" href="#">坚果</a></li>
+				<li><a class="fz22" href="#">花生</a></li>
+				<li><a class="fz22" href="#">瓜子</a></li>
+				<li class="li-right"><a class="fz22" href="#">玉米</a></li>
+			</ul>
+		</div>
+		<div class="clr"></div>
+	</section>
+	<!--分类-end-->
+</body>
+</html>

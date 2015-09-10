@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="header/header2/res/css/header.css" rel="stylesheet" type="text/css" />
+<link href="lists/lists1/res/css/lists.css" rel="stylesheet" type="text/css" />
+<link href="pic/pic1/res/css/pic.css" rel="stylesheet" type="text/css" />
+<link href="nav/nav2/res/css/nav.css" rel="stylesheet" type="text/css" />
+<link href="hot/hot1/res/css/hot.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
+<link href="classification/classification1/res/css/classification.css" rel="stylesheet" type="text/css" />
+<link href="advertising/advertising1/res/css/advertising.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/footer/footer1/res/css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/blank/blank1//res/css/blank.css" rel="stylesheet" type="text/css" />
+<script src="../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body onload="loaded()">
+	<!--头部 高度：5.35rem-->
+	<aside class="aid-prompt">尊敬的顾客，您的位置不在送货范围内！</aside>
+	<header class="head-index">
+		<a class="a-logo" href="#"><img src="header/header2/res/img/logo.png" /></a>
+		<input type="text" placeholder="请输入商品关键字" />
+	</header>
+	<!--头部 -end-->
+	
+	<!--空白TOP部件 -->
+	<div class="blank-top" style="height:5.35rem"></div>
+	<!--空白TOP部件 -end-->
+
+    <!--轮播图片-->
+	<script type="text/javascript" src="pic/pic1/res/js/touchslider.js"></script>
+	<div class="banner">
+		<div id="slider" class="slider">
+			<ul id="sliderlist" class="sliderlist">
+				<li><a href="#"><img src="pic/pic1/res/img/img1.jpg"></a></li>
+				<li><a href="#"><img src="pic/pic1/res/img/img1.jpg"></a></li>
+			</ul>
+			<div id="pagenavi">
+				<a class="active" href="#"></a>
+		        <a href="#"></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="pic/pic1/res/js/banner.js"></script>
+    <!--轮播图片-end-->
+	
+    <!--导航-->
+	<nav>
+		<script type="text/javascript" src="nav/nav2/res/js/touch.js"></script>
+    	<div class="nav-banner">
+            <div id="nav-slider" class="nav-slider">
+                <div id="navsliderlist" class="nav-sliderlist">
+                	<ul>
+                        <li><a href="#"><span class="s1"><img src="nav/nav2/res/img/nav1.png"/></span><p>所有商品</p></a></li>
+                        <li><a href="#"><span class="s2"><img src="nav/nav2/res/img/nav2.png"/></span><p>新品</p></a></li>
+                        <li><a href="#"><span class="s3"><img src="nav/nav2/res/img/nav3.png"/></span><p>热卖</p></a></li>
+                        <li class="li-last"><a href="#"><span class="s4"><img src="nav/nav2/res/img/nav4.png"/></span><p>特惠</p></a></li>
+                        <li><a href="#"><span class="s5"><img src="nav/nav2/res/img/nav5.png"/></span><p>我的订单</p></a></li>
+                        <li><a href="#"><span class="s6"><img src="nav/nav2/res/img/nav6.png"/></span><p>签到有礼</p></a></li>
+                        <li><a href="#"><span class="s7"><img src="nav/nav2/res/img/nav7.png"/></span><p>帮助</p></a></li>
+                        <li class="li-last"><a href="#"><span class="s8"><img src="nav/nav2/res/img/nav8.png"/></span><p>联系我们</p></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><span class="s1"><img src="nav/nav2/res/img/nav1.png"/></span><p>所有商品</p></a></li>
+                        <li><a href="#"><span class="s2"><img src="nav/nav2/res/img/nav2.png"/></span><p>新品</p></a></li>
+                        <li><a href="#"><span class="s3"><img src="nav/nav2/res/img/nav3.png"/></span><p>热卖</p></a></li>
+                        <li class="li-last"><a href="#"><span class="s4"><img src="nav/nav2/res/img/nav4.png"/></span><p>特惠</p></a></li>
+                        <li><a href="#"><span class="s5"><img src="nav/nav2/res/img/nav5.png"/></span><p>我的订单</p></a></li>
+                        <li><a href="#"><span class="s6"><img src="nav/nav2/res/img/nav6.png"/></span><p>签到有礼</p></a></li>
+                        <li><a href="#"><span class="s7"><img src="nav/nav2/res/img/nav7.png"/></span><p>帮助</p></a></li>
+                        <li class="li-last"><a href="#"><span class="s8"><img src="nav/nav2/res/img/nav8.png"/></span><p>联系我们</p></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="navpager">
+                <a class="act" href="#"></a>
+                <a href="#"></a>
+            </div>
+        </div>
+        <script type="text/javascript" src="nav/nav2/res/js/ban.js"></script>
+	</nav>
+    <!--导航-end-->
+    
+    <!--热卖专区-->
+	<script src="hot/hot1/res/js/iscroll.js"></script>
+    <script>
+		var myScroll;
+		function loaded(){
+			$('.stn-hot .hot-scroller').each(function(i,e){
+				var _scroller = $(e);
+				var _li = _scroller.find('li');
+				var _width = 7.38 * (_li.length) + 0.54;
+				var _scroller_id = _scroller.attr('id');
+				
+				document.getElementById(_scroller_id).style.width = _width + "rem";
+				var _wrapper_id = $(e).parent('div').attr('id');
+				myScroll = new IScroll('#'+_wrapper_id, { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+			
+			})
+		}
+	</script>
+	<section class="stn-hot">
+		<a class="title" href="#">
+			<h1 class="fz28">热卖专区&nbsp;&nbsp;<span class="fz20">HOT</span></h1>
+		</a>
+		
+		<div class="hot-wrapper" id="wrapperful1">
+			<div class="hot-scroller" id="HotScroller">
+				<ul>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+				</ul>
+				<div class="clr"></div>
+			</div>
+		</div>
+	</section>
+    
+    <section class="stn-hot">
+		<a class="title" href="#">
+			<h1 class="fz28">热卖专区&nbsp;&nbsp;<span class="fz20">HOT</span></h1>
+		</a>
+		
+		<div class="hot-wrapper" id="wrapperful2">
+			<div class="hot-scroller" id="HotScroller2">
+				<ul>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+					<li class="fz28">
+						<a class="a-details" href="#">
+							<img src="hot/hot1/res/img/img1.png" />
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
+						</a>
+						<a class="a-cart" href="#">加入购物车</a>
+					</li>
+				</ul>
+				<div class="clr"></div>
+			</div>
+		</div>
+	</section>
+	<!--热卖专区-end-->
+    
+    <!--分类-->
+    <script>
+		/*function Liwidth(){
+			var _type = $('.stn-classification');
+			var _left = _type.find('.typezone-left');
+			var _right = _type.find('.typezone-right');
+			var _li = _left.find('li');
+			
+			if($(window).width() > 640){
+				_left.width(640-_right.width()-640*0.12);
+			}else if($(window).width() < 320){
+				_left.width(320-_right.width()-320*0.12);
+			}else if(640 < $(window).width() < 320){
+				_left.width($(window).width()-_right.width()-$(window).width()*0.14);
+			}
+			else{
+				_left.width($(window).width()-_right.width()-$(window).width()*0.12);
+			}
+			_li.css({'height':_right.height()*0.235,'line-height':_right.height()*0.235+'px','margin-top':_right.height()*0.0925});
+			_left.find('.a-title').css({'height':_right.height()*0.33333,'line-height':_right.height()*0.33333+'px'});
+		}*/
+		$(function(){
+			var _type = $('.stn-classification');
+			var _left = _type.find('.typezone-left');
+			var _right = _type.find('.typezone-right');
+			var _li = _left.find('li');
+			
+			if($(window).width() > 640){
+				_left.width(640-_right.width()-640*0.12);
+			}else if($(window).width() < 320){
+				_left.width(320-_right.width()-320*0.12);
+			}else if(640 < $(window).width() < 320){
+				_left.width($(window).width()-_right.width()-$(window).width()*0.14);
+			}
+			else{
+				_left.width($(window).width()-_right.width()-$(window).width()*0.12);
+			}
+            
+            _type.each(function(i){
+                $(this).find('.typezone-right').find("img").get(0).onload = function(){
+                   $(this).find('.typezone-left').find('li').css({'height':_right.height()*0.235,'line-height':_right.height()*0.235+'px','margin-top':_right.height()*0.0925});
+			$(this).find('.typezone-left').find('.a-title').css({'height':_right.height()*0.33333,'line-height':_right.height()*0.33333+'px'}); 
+                }
+            })
+            
+            
+		})
+		/*$(window).resize(function(){
+			Liwidth();
+		})*/
+	</script>
+	<section class="stn-classification">
+		<div class="typezone-left">
+			<a class="a-title fz28" href="#">零食专区</a>
+			
+			<ul>
+				<li><a class="fz22" href="#">干货</a></li>
+				<li><a class="fz22" href="#">鲜果</a></li>
+				<li class="li-right"><a class="fz22" href="#">坚果</a></li>
+				<li><a class="fz22" href="#">花生</a></li>
+				<li><a class="fz22" href="#">瓜子</a></li>
+				<li class="li-right"><a class="fz22" href="#">玉米</a></li>
+			</ul>
+		</div>
+		<div class="typezone-right"><a class="a-typeimg" href="#"><img src="classification/classification1/res/img/img1.jpg" /></a></div>
+		<div class="clr"></div>
+	</section>
+    <section class="stn-classification stn-classificattwo">
+		<div class="typezone-right"><a class="a-typeimg" href="#"><img src="classification/classification1/res/img/img1.jpg" /></a></div>
+		<div class="typezone-left">
+			<a class="a-title fz28" href="#">零食专区</a>
+			
+			<ul>
+				<li><a class="fz22" href="#">干货</a></li>
+				<li><a class="fz22" href="#">鲜果</a></li>
+				<li class="li-right"><a class="fz22" href="#">坚果</a></li>
+				<li><a class="fz22" href="#">花生</a></li>
+				<li><a class="fz22" href="#">瓜子</a></li>
+				<li class="li-right"><a class="fz22" href="#">玉米</a></li>
+			</ul>
+		</div>
+		<div class="clr"></div>
+	</section>
+	<!--分类-end-->
+    
+    <!--查看所有商品-->
+    <style>
+    	.view-product{ border:1px solid #dfdfdf; height:2.83rem; line-height:2.83rem; background:#fff; margin:.87rem 0; text-align:center; }
+		.view-product a{ display:block; color:#131313; }
+    </style>
+    <div class="view-product"><a class="fz28" href="#">查看所有商品&gt;&gt;</a></div>
+    <!--查看所有商品-end-->
+    
+    <!--广告图片-->
+	<section class="stn-advertis">
+		<ul>
+			<li><a href="#"><img src="advertising/advertising1/res/img/img1.jpg" /></a></li>
+			<li class="li-right"><a href="#"><img src="advertising/advertising1/res/img/img2.jpg" /></a></li>
+			<li><a href="#"><img src="advertising/advertising1/res/img/img3.jpg" /></a></li>
+			<li class="li-right"><a href="#"><img src="advertising/advertising1/res/img/img4.jpg" /></a></li>
+		</ul>
+		<div class="clr"></div>
+	</section>
+	<!--广告图片-end-->
+    
+    <!--快捷购物车栏-->
+	<script>
+		$(function(){
+			var _boxcart = $('#BoxCart');
+			var _btn = $('#BtnBoxCart');
+			var _content = _boxcart.find('.boxcart-nav');
+			
+			_btn.click(function(){
+				if(_btn.hasClass('act')){
+					_content.find('a').css('display','none');
+					_content.css({'width':'3.24rem','transition':'width 1s'});
+					_btn.removeClass('act');
+				}else{
+					_content.css({'width':'16.24rem','transition':'width 0.8s'});
+					setTimeout(function(){
+						_content.find('a').css('display','inline-block');
+					},400);
+					_btn.addClass('act');
+				}
+			})
+		})
+	</script>
+	
+	<div class="box-cart" id="BoxCart">
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--添加购物车未点击状态：btncart.png-->  <!--添加购物车后状态：btncarth.png-->
+		<div class="boxcart-nav">
+			<a class="btn" href="#">
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/home.png" /></span>
+				<p class="fz26">首页</p>
+			</a>
+			<a class="cart" href="#">
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
+				<p class="fz26">购物车</p>
+			</a>
+            <a class="cart" href="#">
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/member.png" /></span>
+				<p class="fz26">会员</p>
+			</a>
+			<a class="cart" href="#">
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/login.png" /></span>
+				<p class="fz26">登录</p>
+			</a>
+		</div>
+	</div>
+    <!--快捷购物车栏-end-->
+	<!--空白BOTTOM部件 -3.27rem-->
+	<div class="blank-bottom" style="height:3.27rem"></div>
+	<!--空白BOTTOM部件 -end-->
+
+    <!--底部高度：3.27rem-->
+    <script>
+		$(function(){
+			var _stntext = $('#StnTxet');  /*类别框*/
+			var _btntext = $('#BtnText');  /*切换输入框按钮*/
+			var _stninput = $('#StnInput');  /*输入框*/
+			var _btninput = $('#BtnInput');  /*切换类别按钮*/
+			var _li = _stntext.find('.li-type');
+			_btntext.click(function(){
+				_stntext.hide();
+				_stninput.show();
+			});
+			_btninput.click(function(){
+				_stninput.hide();
+				_stntext.show();
+			});
+			
+			_li.click(function(){
+				var _size = $(this).find("li").size();
+				if(_size==0){
+					setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className + ' fadein';document.getElementById('StnNull').style.display='block'");
+					setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className.replace(' fadein', '');document.getElementById('StnNull').style.display='none'",3500);
+				}
+				
+				if(_size > 0){
+					_li.find('ol').hide();
+					_li.find('ol div').hide();
+					$(this).find('ol').show();
+				}
+				return false;
+			})
+			_li.find('ol li').click(function(){
+				if($(this).find('div').hasClass('type-lv'))
+				{
+					_li.find('ol div').hide();
+					$(this).find('div').show();
+				}
+				else{
+					_li.find('ol').hide();
+				}
+				return false;
+			})
+			_li.find('ol li div').click(function(){
+				_li.find('ol').hide();
+				_li.find('ol li div').hide();
+				return false;
+			})
+			
+			$(document).click(function(){
+				_li.find('ol').hide();
+			})
+		})
+	</script>
+	<footer>
+		<!--类别-->
+		<section class="stn-text" id="StnTxet">
+			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">切换输入框</span></a>
+			<ul>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">产品分类</span></a>
+					<ol>
+						<li>
+                        	<a class="fz28" href="#">分类1</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类11</a>
+                                <a class="fz28" href="#">分类12</a>
+                                <a class="fz28" href="#">分类13</a>
+                                <a class="fz28" href="#">分类14</a>
+                            </div>
+                        </li>
+						<li>
+                        	<a class="fz28" href="#">分类2</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类21</a>
+                                <a class="fz28" href="#">分类22</a>
+                                <a class="fz28" href="#">分类23</a>
+                                <a class="fz28" href="#">分类24</a>
+                            </div>
+                        </li>
+						<li><a class="fz28" href="#">分类3</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">会员中心</span></a>
+                    <ol>
+						<li><a class="fz28" href="#">分类7</a></li>
+						<li><a class="fz28" href="#">分类8</a></li>
+						<li><a class="fz28" href="#">分类9</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">关注分享</span></a>
+				</li>
+			</ul>
+			<div class="clr"></div>
+		</section>
+		<!--类别-end-->
+		
+		<!--输入框-->
+		<section class="stn-input" id="StnInput">
+			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">切换类别</span></a>
+			<div class="input"><input type="text" /></div>
+			<button>搜索</button>
+		</section>
+		<!--输入框-end-->
+		
+		<section class="stn-null fz36" id="StnNull">未设置分类</section>
+	</footer>
+	<!--底部-end-->
+</body>
+</html>

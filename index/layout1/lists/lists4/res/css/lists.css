@@ -1,0 +1,21 @@
+/*产品列表*/
+.index-lists{ padding:0 3.125%; }
+.index-lists li{ margin-bottom:.72rem; position:relative; background:#fff; border-radius:10px; padding-bottom:.3rem; }
+.index-lists li:first-child{ margin-top:1.09rem; }
+.index-lists li .a-product{ display:block; }
+.index-lists li .a-product .s-img{ display:block; width:100%; height:auto; }
+.index-lists li .a-product .s-img img{ width:100%; height:100%; border-radius:10px 10px 0 0; }
+.index-lists li .a-product .p-name{ color:#000; margin:.5rem 0 .5rem 3.125%; width:70%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+.index-lists li .a-product .p-money{ float:left; color:#ff6633; margin-left:3.125%; line-height:1.5rem; }
+.index-lists li .a-product .p-money span{ color:#616161; margin-left:4%; text-decoration:line-through; }
+.index-lists li .a-product .p-icon{ display:block; float:right; color:#fff; margin:.7rem 5% 0 0; }
+.index-lists li .a-product .p-icon i{ border-radius:4px; padding:0 .2rem; margin-left:5px; }
+.index-lists li .a-product .p-icon .red{ background:#ff6633; }
+.index-lists li .a-product .p-icon .orange{ background:#f54e1f; }
+.index-lists li .a-product .p-icon .yellow{ background:#ffc000; }
+.index-lists li .a-product .p-icon .purple{ background:#bd10e0; }
+.index-lists li .a-cart{ display:block; background:url(../img/cart.png) no-repeat; background-size:3.125rem 3.125rem; width:3.125rem; height:3.125rem; position:absolute; bottom:2.5rem; right:5%; text-indent:-9999px; }
+
+@media screen and (max-width:320px){
+	.index-lists li .a-product .p-icon{ margin-top:.4rem; }
+}
