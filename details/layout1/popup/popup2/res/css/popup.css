@@ -1,0 +1,32 @@
+.button-popup{ width:100%; height:3.27rem; line-height: 3.27rem; border:solid #d9d9d9; border-width:1px 0; background-color:#fff; background-size:.58rem 1.09rem; padding-left:5%; text-align:left; }
+
+.box-popup{ width:100%; background:#fff;display:block; margin-bottom:.72rem;}
+
+
+.box-popup .type{ padding:.79rem 0 .43rem .79rem; border-bottom:1px solid #e5e5e5; }
+.box-popup .type p{ color:#585858; margin-bottom:.3rem; }
+.box-popup .type li{ width:3.3rem; height:2rem; line-height:2rem; float:left; margin:0 3% .72rem 0; }
+.box-popup .type li a{ display:block; border:1px solid #999999; border-radius:4px; text-align:center; color:#999999;width:100%;height:100%;box-sizing:border-box;}
+.box-popup .type li a.act{ border-color:#ff6600; color:#ff6600; background:url(../img/select.png) no-repeat right bottom transparent; background-size:.79rem .79rem; }
+.box-popup .type li a.noAct{ border: 1px dotted; border-color:#cecece; color:#cecece; background-size:.79rem .79rem; }
+
+.box-popup .type-pic{padding-bottom:.55rem;}
+.box-popup .type-pic li{width:6.3rem;height:8.14rem;margin:.2rem 1.15rem .6rem 0;}
+.box-popup .type-pic li a{position:relative;z-index: 2;height:100%;width:100%;overflow:hidden;box-sizing: border-box;}
+.box-popup .type-pic li a img{position:absolute;left:0px;top:0px;width:100%;height:6.3rem;}
+.box-popup .type-pic li a p{position: absolute;bottom:0;left:0;width:100%;text-align: center;height:1.84rem;line-height:1.84rem;margin-bottom:0;}
+
+
+@media screen and (min-width:320px) and (max-width:640px){
+    .box-popup .type li{width:2.8rem; height:1.6rem;line-height:1.6rem;}
+    .box-popup .type-pic li{width:4.5rem;height:6rem;margin:.2rem 1.1rem .6rem 0;}
+    .box-popup .type-pic li a img{height:4.5rem;}
+    .box-popup .type-pic li a p{height:1.5rem;line-height:1.7rem;}
+}
+@media screen and (max-width:320px){
+    .box-popup .type li{width:3.7rem; height:2.2rem;line-height:2.2rem;}
+    .box-popup .type-pic li{width:6.3rem;height:8.14rem;margin:.2rem 1.2rem .6rem 0;}
+    .box-popup .type-pic li a img{height:6.3rem;}
+    .box-popup .type-pic li a p{height:1.84rem;line-height:1.84rem;}
+    
+}

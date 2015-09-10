@@ -1,0 +1,54 @@
+.button-popup{ width:100%; height:3.27rem; height:3.27rem; border:solid #d9d9d9; border-width:1px 0; background:url(../img/left.png) no-repeat 95% center #fff; background-size:.58rem 1.09rem; padding-left:5%; text-align:left; margin-bottom:.72rem; }
+
+.box-popup{ width:100%; position:fixed; left:0; bottom:0; background:#fff; z-index:100; display:none; }
+
+.box-popup .cartnum-img{ border-bottom:1px solid #e5e5e5; height:4.39rem; position:relative; }
+.box-popup .cartnum-img .s-img{ display:block; float:left; width:2.9rem; height:2.9rem; margin:.75rem .75rem 0 .61rem; }
+.box-popup .cartnum-img img{ width:100%; height:100%; }
+.box-popup .cartnum-img .cartnum-name{ width:68%; float:left; margin-top:.75rem; }
+.box-popup .cartnum-img .cartnum-name .p-name{ height:1.81rem; width:100%; color:#000; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#585858; }
+.box-popup .cartnum-img .cartnum-name .p-money{ color:#ff6600; }
+.box-popup .cartnum-img .cartnum-name .a-close{ display:block; background:url(../img/del.png) no-repeat; background-size:1.81rem 1.81rem; width:1.81rem; height:1.81rem; position:absolute; top:.9rem; right:1.05rem; text-indent:-9999px; }
+
+.box-popup .type{ padding:.79rem 0 .43rem .79rem; border-bottom:1px solid #e5e5e5; }
+.box-popup .type p{ color:#828282; margin-bottom:.3rem; }
+.box-popup .type li{ width:22%; height:1.53rem; line-height:1.53rem; float:left; margin:0 3% .72rem 0; }
+.box-popup .type li a{ display:block; border:1px solid #999999; border-radius:4px; text-align:center; color:#999999; }
+.box-popup .type li a.act{ border-color:#ff6600; color:#ff6600; background:url(../img/select.png) no-repeat right bottom; background-size:.79rem .79rem; }
+.box-popup .type li a.noAct{ border: 1px dotted; border-color:#cecece; color:#cecece; background-size:.79rem .79rem; }
+
+.box-popup .num{ padding:1.27rem 0 1.27rem .79rem; position:relative; border-bottom:1px solid #e5e5e5; }
+.box-popup .num .number-name{ float:left; color:#828282;}
+.box-popup .num .number-input{ width:7.8125rem; height:1.63rem; position:absolute; top:.97rem; right:1.27rem; }
+.box-popup .num .number-input a{ float:left; width:2.54rem; height:1.63rem; line-height:1.43rem; text-align:center; border:1px solid #dbdbdb; color:#686868; box-sizing:border-box; }
+.box-popup .num .number-input input{ float:left; border:none; background:#fff; border-radius:0px; border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; width:2.54rem; height:1.63rem; height:1.63rem; text-align:center; box-sizing:border-box; }
+
+.box-popup .gbook{ border-bottom:1px solid #e5e5e5; text-align:center; padding:.72rem 0; }
+.box-popup .gbook span{ display:inline-block; width:88%; height:2rem; line-height:2rem; border:1px solid #c9c9c9; border-radius:5px; color:#585858; }
+.box-popup .gbook input{ width:80%; height:2rem; line-height:2rem; text-align:center; padding-left:2%; color:#585858; text-align:left; margin-left:2%; border:none; }
+
+.box-popup .btn{ text-align:center; padding:.72rem 0; }
+.box-popup .btn a{ display:inline-block; width:88%; height:2rem; line-height:2rem; text-align:center; color:#fff; background:#f15a0c; border-radius:5px; }
+
+.box-popup .t-btn{ text-align:center; padding:.72rem 0; }
+.box-popup .t-btn a{ display:inline-block; width:40%; height:2rem; line-height:2rem; text-align:center; color:#fff; background:#f15a0c; border-radius:5px; }
+.box-popup .t-btn .a-last{ background:#f08f00; margin-left:2%; }
+
+#Background{ width:100%; height:100%; z-index:99; background:#000; position:fixed; top:0px; left:0px; opacity:0.8; display:none; }
+
+@media screen and (max-width:320px){
+	.box-popup .num .number-input{ top:1.17rem; }
+}
+
+.box-cache{ width:80%; height:2.9rem; line-height:2.9rem; position:absolute; z-index:9999; left:10%; top:45%; opacity:0; display:none; }
+.box-cache .cachebg{ width:100%; height:100%; background:#000; opacity:0.6; border-radius:1.23rem; position:absolute; top:0; left:0; }
+.box-cache .cache-content{ position:absolute; z-index:12; text-align:center; width:100%; text-align:center; }
+.box-cache .cache-content span{ display:inline-block; margin:0 auto; color:#fff; }
+
+.fadein{ animation:fadein 3s; }
+@keyframes fadein
+{
+	0%{ opacity:0; }
+	50%{ opacity:1; }
+	100% { opacity:0;  }
+}
