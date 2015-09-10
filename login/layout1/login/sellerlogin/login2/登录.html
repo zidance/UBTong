@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>登录</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/login.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../common/js/zepto-1.16.min.js" ></script>
+<script>
+	$(function(){
+		$('.login').find('.s-bg').height($(window).height());
+		
+		$('.login').find('.text a').click(function(){
+			$(this).prev('input').val('');
+		})
+	})
+</script>
+</head>
+
+<body>
+	<div class="login">
+		<span class="s-bg"><img src="res/img/bg.png" /></span>
+		
+		<section class="stn-logo">
+			<div class="logo"><img src="res/img/login.png" /></div>
+			
+			<div class="login-text">
+				<div class="text">
+					<p><input class="inp-tel fz28" type="text" placeholder="请输入账户昵称" value="admin" /><a href="#">删除</a></p>
+					<p><input class="inp-pass fz28" type="password" placeholder="请输入密码" value="123456" /><a href="#">删除</a></p>
+				</div>
+				
+				<a class="inp-login" href="#">登 录</a>
+			
+				<div class="btn">
+					<input type="checkbox" />
+					<span>自动登录</span>
+					<a class="a-forget" href="#">忘记密码？</a>
+				</div>
+				<div class="clr"></div>
+			</div>
+		</section>
+			
+<!--    <a class="a-register fz32">注 册</a>-->
+	</div>
+</body>
+</html>

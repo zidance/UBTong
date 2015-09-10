@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>登录</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/login.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _obj = $('#StnLogin');
+		var _a = _obj.find('.text .a-del')
+		_obj.height($(window).height()*0.92);
+		_obj.css('margin-top',$(window).height()*0.04);
+		
+		_a.click(function(){
+			$(this).prev().val('');
+		})
+	})
+</script>
+</head>
+
+<body style="background:#f4f4f4;">
+	<!--登录-->
+    <section class="stn-login" id="StnLogin">
+        <span class="s-angle"><img src="res/img/angle.jpg" /></span>
+    	<div class="login">
+            <p class="fz103">用户登录</p>
+            <span class="s-img"><img src="res/img/img.jpg" /></span>
+        </div>
+        
+        <div class="text">
+        	<p><input class="inp-text fz28" type="text" value="" placeholder="请输入手机号码" /><a class="a-del" href="#">删除</a><span class="clr"></span></p>
+        	<p class="p-last"><input class="inp-password fz28" type="password" value="3333" placeholder="请输入密码" /><a class="a-del" href="#">删除</a><span class="clr"></span></p>
+            
+            <a class="a-btn fz34" href="#">登 录</a>
+            <a class="a-forget fz24" href="#">忘记密码？</a>
+        </div>
+        
+        <a class="a-register fz32" href="#">注 册</a>
+    </section>
+    <!--登录-end-->
+</body>
+</html>
