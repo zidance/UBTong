@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*销量统计*/
+.up-date{ padding:0.54rem 3.75% 0.72rem 3.75%; background:#f7f5f5;}
+.date{ height:6.43rem; width:100%; box-sizing:border-box; border:1px solid #eae8e8; border-radius:6px; background:#fff;}
+.date p{ margin:0 .72rem; height:3.2rem; line-height:3.2rem; text-align:left; border-bottom:1px solid #d9d9d9; padding:0 .18rem; color:#000;}
+.date p:last-child{ border-bottom:none;}
+.date span{ color:#3e9ef9; padding-right:1.38rem; float:right; background:url(../img/dot-right.png) no-repeat right center; background-size:.69rem 1.19rem ;}
+
+.statistical{ width:100%; height:5.09rem; background:#fe7b04;}
+.statistical p{ width:33%; float:left; margin:.8rem 0; text-align:center; color:#fff; border-right:1px solid #ffbd82; line-height:1rem; padding:0.72rem 0;}
+.statistical p:last-child{ border-right:none;}
+
+.order{ width:100%; padding-top:.72rem; background:#fff; margin-bottom:3rem;}
+.order .o-name{ border:solid #e7e7e7; border-width:1px 0; height:3.12rem; background:#f8f8f8; line-height:3.12rem; padding:0 1.45rem; color:#000;}
+.order .o-name span{ float:right;}
+.order .o-details{ padding:0 1rem; border-bottom:1px solid #e7e7e7;}
+.order .o-details li{ border-bottom:1px solid #e7e7e7; padding:.65rem 0 .3rem; }
+.order .o-details p{ line-height:1.45rem;}
+
+.order .o-details .p-name{ line-height:1.05rem; position:relative; padding:.4rem .36rem .4rem;}
+.order .o-details .p-name .blue{ display:inline-block; height:1.05rem; width:2.9rem; background:#3e9ef9; color:#fff; border-radius:0.21rem; line-height:1.05rem; text-align:center; margin-left:.54rem; position:relative; bottom:0.1rem; }
+
+.order .o-details .o-left{ float:left; padding-left:0.36rem; color:#000;}
+.order .o-details .o-right{ padding-right:0.36rem; float:right; text-align:right; color:#f1590d;}
+.order .o-details li:last-child{ border-bottom:none;}
+
+.order .o-details .o-right span{ color:#c3c3c3;}
+
+@media screen and (max-width:320px){
+	.order .o-details li{ padding:.85rem 0; }
+}
+
+@media screen and (min-width:321px) and (max-width:639px){
+	.order .o-details .p-name .blue{ line-height:1.2rem; width:2.6rem;}
+}

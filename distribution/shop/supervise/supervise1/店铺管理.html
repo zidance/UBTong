@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>店铺管理</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/shop.css" rel="stylesheet" type="text/css" />
+<link href="../../../../parts/btn/btn1/res/css/btn.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _obj = $('#Pic');
+		var _left = _obj.find('span').width();
+		var _right = _obj.find('ul');
+		
+		if($(window).width() < 640)
+		{
+			_right.width($(window).width()-_obj.find('span').width()-$(window).width()*0.05);
+			_right.find('li').height(_right.find('li').width());
+			var _height = _right.find('li').width();
+			_right.find('li a').css({'width':_height-2,'height':_height-2})
+			
+			_obj.find('span').css('margin-top',(_height-2)/2-8);
+		}
+		else{
+			_right.width(640-_obj.find('span').width()-640*0.04);
+			_right.find('li').height(_right.find('li').width());
+			var _height = _right.find('li').width();
+			_right.find('li a').css({'width':_height-2,'height':_height-2});
+			
+			_obj.find('span').css('margin-top',(_height-2)/2-8);
+		}
+	})
+</script>
+</head>
+
+<body style="background:#f7f5f5;">
+	<!--基本资料-->
+    <section class="stn-info" style="margin-bottom:4.06rem;">
+        <div class="info">
+            <p>
+                <span class="s-left fz28">店铺名称</span>
+                <input class="fz28" type="text" placeholder="你的店铺名称" />
+                <em class="clr"></em>
+            </p>
+            <p>
+                <span class="s-left fz28">联系电话</span>
+                <input class="fz28" type="text" placeholder="你的手机号" />
+                <em class="clr"></em>
+            </p>
+            <p>
+                <span class="s-left fz28">联系人&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input class="fz28" type="text" placeholder="你的姓名" />
+                <em class="clr"></em>
+            </p>
+            <p>
+                <span class="s-left fz28">地址定位</span>
+                <a class="fz28" href="#">路线导航</a>
+                <em class="clr"></em>
+            </p>
+            <p>
+                <span class="s-left fz28">详细地址</span>
+                <input class="fz28" type="text" placeholder="小区/写字楼（门牌号等）" />
+                <em class="clr"></em>
+            </p>
+        </div>
+        
+        <div class="pic" id="Pic">
+        	<span class="fz28">店铺背景图</span>
+            <ul>
+            	<li><a href="#"><img src="res/img/img.jpg" /></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+            <div class="clr"></div>
+            
+            <div class="btn">
+            	<i class="fz28">模板选择</i>
+            	<a class="fz28" href="#">默认模板</a>
+            </div>
+        </div>
+    </section>
+    <!--基本资料-end-->
+    
+    <!--按钮 高度：4.06rem-->
+    <div class="parts-btn">
+    	<a class="oranges fz32" href="#">确认修改</a>   <!--红色：red  橘色：orange  淡橘色：oranges-->
+    </div>
+    <!--按钮-end-->
+</body>
+</html>

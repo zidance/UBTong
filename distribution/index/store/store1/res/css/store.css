@@ -1,0 +1,5 @@
+/*店铺信息*/
+.stn-store{ background:url(../img/bg.jpg) no-repeat; background-size:100% 7.26rem; width:100%; height:7.26rem; }
+.stn-store .a-img{ display:block; width:4.79rem; height:4.79rem; padding:4px; background:#fff; box-shadow:0 0 10px #ea752e; border-radius:50%; margin:1.09rem 3.59% 0 6.87%; float:left; }
+.stn-store .a-img img{ width:100%; height:100%; border-radius:50%; }
+.stn-store p{ color:#fff; line-height:7.26rem; }

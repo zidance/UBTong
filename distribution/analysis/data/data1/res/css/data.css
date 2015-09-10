@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/*数据分析-销售统计*/
+.top-list {
+	padding: 0.65rem 1.27rem;
+	background: #fff;
+	border-bottom: 1px solid #d4d4d4;
+}
+.top-list ul {
+	height: 2.54rem;
+	width: 100%;
+	box-sizing: border-box;
+	background: #fff;
+}
+.top-list li {
+	height: 2.54rem;
+	float: left;
+	width: 33%;
+	text-align: center;
+	line-height: 2.54rem;
+}
+.top-list li a {
+	width: 100%;
+	color: #fe7b04;
+	display: block;
+	border: 1px solid #fe7b04;
+	border-right: none;
+	box-sizing: border-box;
+}
+.top-list li:first-child a {
+	border-radius: .29rem 0 0 .29rem;
+}
+.top-list li:last-child a {
+	border-radius: 0 .29rem .29rem  0;
+	border-right: 1px solid #fe7b04;
+}
+.top-list li .act {
+	background: #fe7b04;
+	color: #fff;
+}
+
+/*销售统计*/
+.sale {
+	width: 100%;
+	margin-top: 0.72rem;
+	border: solid #d4d4d4;
+	border-width: 1px 0;
+	background: #fff;
+	padding-bottom: 1rem;
+	position: relative;
+}
+.sale span {
+	display: block;
+	text-align: center;
+	padding: 0 1.19rem;
+}
+.sale .mt33 {
+	margin-top: 1.19rem;
+}
+.sale img {
+	width: 100%;
+	height: 100%;
+}
+.sale .s-p {
+	padding: 1rem 0 1.8rem 1.45rem;
+	color: #000;
+}
+.sale .s-posi {
+	position: absolute;
+	top: 1rem;
+	left: 1.45rem;
+	color: #000;
+}
+
+/*本月销售商品Top20*/
+.top-goods .p-title {
+	padding: 1rem 1.45rem;
+	color: #000;
+	border-bottom: 1px solid #e7e7e7;
+}
+.art-order {
+	width: 94%;
+	padding: 0 3%;
+	background: #fff;
+	border-radius: 4px;
+}
+.art-order li {
+	border-bottom: 1px solid #eae8e8;
+	padding: .7rem 0;
+}
+.art-order li .s-img {
+	display: block;
+	float: left;
+	width: 5.12rem;
+	height: 5.19rem;
+	border: 1px solid #f3f3f3;
+}
+.art-order li .s-img img {
+	width: 100%;
+	height: 100%;
+}
+.art-order li .details {
+	width: 6.25rem;
+	float: left;
+	margin-left: 0.72rem;
+}
+.art-order li .details .p-name {
+	height: 2.54rem;
+	color: #000;
+	line-height: 1rem; /*text-overflow:ellipsis; overflow:hidden; white-space:nowrap; */
+}
+.art-order li .details .p-money {
+	color: #ff3430;
+	margin-top: 1.30rem;
+}
+.art-order li .p-type {
+	float: right;
+	text-align: right;
+}
+.art-order li .p-type .p-num {
+	color: #939292;
+}
+.art-order li .p-type .p-sale {
+	color: #fe7b04;
+	margin-top: 3.2rem;
+}
+
+/*子铺统计*/
+.search {
+	margin: 0.72rem 0.47rem;
+	background: #fff;
+	height: 2.3rem;
+	text-align: center;
+	border-radius: 4px;
+}
+.search input {
+	width: 80%;
+	height: 1.5rem;
+	border: none;
+	padding-left: 1.5rem;
+	background: url(../img/search.png) no-repeat left center;
+	margin: 0.4rem 0.6rem 0.4rem -1rem;
+	background-size: 1.19rem 1.19rem;
+}
+@media screen and (max-width:320px) {
+	.art-order li .details {
+		width: 9.8rem;
+	}
+	.art-order li .details .p-name {
+		line-height: 1.5rem;
+	}
+}

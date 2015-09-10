@@ -1,0 +1,8 @@
+/*下级分店*/
+.stn-branch .money{ width:100%; height:8.25rem; background:url(../img/bg.jpg) repeat-x 0 bottom #fd7d09; background-size:.72rem.36rem; padding-top:.72rem; }
+.stn-branch .money .p-name{ color:#fff; margin:0 4.37% 0 5.31%; }
+.stn-branch .money .p-money{ color:#fff; margin:.4rem 0 0 5.31%; }
+.stn-branch .lists{ border-top:1px solid #dcdcdc; background:#fff; margin-top:.72rem; }
+.stn-branch .lists li{ border-bottom:1px solid #dcdcdc; padding:0 5.31%; height:7.23rem; }
+.stn-branch .lists li .p-name{ color:#b5b5be; margin-top:.79rem; }
+.stn-branch .lists li .p-money{ color:#ff3333; margin-top:.8rem; }

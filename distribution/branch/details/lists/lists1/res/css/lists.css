@@ -1,0 +1,14 @@
+/*列表*/
+.stn-lists li{ width:87.48%; margin:0 auto .72rem; border:1px solid #eae8e8; border-radius:6px; background:#fff; padding:0 2.9% .4rem; }
+.stn-lists li .name{ border-bottom:1px solid #eae8e8; padding:.54rem 0; margin-bottom:.4rem; }
+.stn-lists li .name .s-img{ display:block; float:left; width:3.27rem; height:3.27rem; margin:0 5% 0 1%; }
+.stn-lists li .name .s-img img{ width:100%; height:auto; }
+.stn-lists li .name .s-name{ display:inline-block; color:#161616; width:70%; height:3.27rem; line-height:3.27rem; overflow:hidden; }
+.stn-lists li p{ color:#161616; line-height:1.3rem; margin-left:1%; }
+.stn-lists li p span{ color:#939292; }
+
+@media screen and (max-width:320px){
+	.stn-lists li{ padding-bottom:.6rem; }
+	.stn-lists li .name{ margin-bottom:.6rem; }
+	.stn-lists li p{ line-height:1.5rem; }
+}

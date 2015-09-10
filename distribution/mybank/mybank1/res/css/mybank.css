@@ -1,0 +1,98 @@
+/*以下设定,为了底部绝对定位*/
+html { height: 100%; }
+body { position: relative; min-height: 100%; }
+
+/*我的银行卡*/
+.mybank:before { content: "."; clear: both; display: block; font-size: 0; height: 0; line-height: 0; overflow: hidden; }
+.mybank .ul-bank li { position: relative; background-color: #fff; padding: 1.1rem 8.4% 1.1rem 5.7%; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; margin-top: .84rem; }
+.a-bankinfo { display: block; margin-right: 5rem; }
+.mybank .ul-bank li .img-bank { float: left; width: 2.57rem; height: 2.57rem; }
+.mybank .ul-bank li .banktext { float: left; margin-left: 4.6%; }
+.mybank .ul-bank li .banktext .p-bankname { color: #000; }
+.mybank .ul-bank li .banktext .p-card { color: #676767; }
+.mybank .ul-bank li .a-delete { position: absolute; top: 1.2rem; right: 5.5%; }
+.mybank .ul-bank li .a-delete .img-delete { width: 1.1rem; height: 1.1rem; margin: .75rem; }
+
+/*添加银行卡*/
+.addcard .p-notice, .addcard-ver .p-notice { color: #676767; padding-left: 8.125%; padding-top: .9rem; }
+.addcard .ul-cardinfo li { padding-left: 8.125%; background-color: #fff; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; height: 2.94rem; line-height: 2.94rem; margin-top: .73rem; color: #000; }
+.addcard .ul-cardinfo li input { line-height: 105%; }
+.addcard .ul-cardinfo li p:first-child { float: left; font-size: 1.11rem; min-width: 29%; }
+.addcard .ul-cardinfo li input { border: none; }
+.addcard .ul-cardinfo li span, .addcard .ul-cardinfo li input { font-size: 1.01rem; }
+.addcard .ul-cardinfo .li-bankname input { color: #3e9ef9; }
+.addcard .ul-cardinfo .li-bankname img { display: none; width: 1.5rem; height: 1.5rem; margin-right: .1rem; }
+
+/*银行选择弹出框*/
+.addcard .shade { display: none; position: absolute; z-index: 1; width: 100%; height: 100%; background-color: #000; top: 0; opacity: 0.5; }
+.addcard #bankList { display: none; position: absolute; z-index: 2; top: 5.07rem; left: 14%; width: 72%; background-color: #fff; border-radius: 8px; }
+.addcard #bankList .p-top { text-align: center; margin: .9rem auto; }
+.addcard #bankList .a-close { position: absolute; top: 0; right: 0; }
+.addcard #bankList .a-close img { width: 1.25rem; height: 1.25rem; margin: 1.02rem 1.32rem; }
+.addcard #bankList .ul-bank li { height: 3.3rem; line-height: 3.3rem; border-bottom: 1px solid #e6e6e6; padding-left: 8.26%; box-sizing: border-box; }
+.addcard #bankList .ul-bank li:first-child { border-top: 1px solid #e6e6e6; }
+.addcard #bankList .ul-bank li input { display: none; }
+.addcard #bankList .ul-bank li .img-bank { width: 2.02rem; height: 2.02rem; }
+.addcard #bankList .ul-bank li span { vertical-align: middle; }
+.addcard #bankList .ul-bank li .img-bank { padding-left: 18%; background-image: url(../img/radio.png); background-repeat: no-repeat; background-position: left center; background-size: 1.5rem 1.5rem; }
+.addcard #bankList .ul-bank li input:checked+.img-bank { background-image: url(../img/radio-act.png); }
+.addcard #bankList .a-confirm { display: block; width: 50.4%; color: #fff; border-radius: 3px; text-align: center; bottom: 1.09rem; left: 5%; background-color: #fd7d09; height: 2.2rem; line-height: 2.2rem; margin: 1.1rem auto; }
+
+/*添加银行卡-填写验证码*/
+.addcard-ver .stn-mes { padding-left: 8.125%; background-color: #fff; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; height: 2.94rem; line-height: 2.94rem; margin-top: .73rem; color: #000; }
+.addcard-ver .stn-mes input { float: left; height: 100%; border: none; }
+.addcard-ver .stn-mes .p-repeat { color: #3e9ef9; float: right; padding: 0 1.36rem 0 .62rem; border-left: 1px solid #dddddd; line-height: 2.2rem; height: 2.2rem; vertical-align: middle; margin-top: .37rem; }
+
+
+/*弹出等待框*/
+.showbox{ width:15.27rem; background:#fff; border-radius:0.4rem; text-align:center; height:14.5rem; z-index:9; position:relative; display:none; margin:0 auto;}
+.showbox span{ display:block; width:9.08rem; height:9.74rem; margin:0 auto; padding-top:1.09rem;}
+.showbox span img{ width:100%; height:100%;}
+.showbox p{ color:#555555; margin-bottom:0.72rem; padding:1.09rem 0;}
+.showbox a{ display:block; width:1.34rem; height:1.34rem; position:absolute; top:0.94rem; right:0.94rem; cursor:pointer;}
+.showbox a img{ width:100%; height:100%;}
+
+
+
+
+#Background {width: 100%;
+	height: 100%;
+	z-index: 8;
+	background: #000;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	opacity: 0.8;
+	display: none;}
+	
+
+/*底部按钮*/
+
+/*.stn-footback 高度约等于底部按钮的height+2rem*/
+.stn-footback { height: 4.8rem; }
+.a-act { position: absolute; display: block; width: 90%; height: 2.8rem; line-height: 2.8rem; color: #fff; border-radius: 6px; text-align: center; bottom: 1.09rem; left: 5%; }
+.a-bgblue { background-color: #3f9efa; }
+.a-bgorange { background-color: #fd7d09; }
+@media screen and (min-width:321px) and (max-width:639px) {
+.mybank .ul-bank li { padding-top: .84rem; padding-bottom: .84rem; }
+.mybank .ul-bank li .img-bank { width: 1.96rem; height: 1.96rem; }
+.mybank .ul-bank li .a-delete { top: .7rem; }
+.mybank .ul-bank li .a-delete .img-delete { width: .84rem; height: .84rem; }
+.stn-footback { height: 4rem; }
+.a-act { height: 2.16rem; line-height: 2.16rem; }
+.addcard .ul-cardinfo li, .addcard-ver .stn-mes { height: 2.24rem; line-height: 2.24rem; margin-top: .56rem; }
+.addcard .ul-cardinfo li p:first-child { font-size: .85rem; }
+.addcard .ul-cardinfo li span, .addcard .ul-cardinfo li input { font-size: .75rem; }
+.addcard .ul-cardinfo .li-bankname img { width: 1.1rem; height: 1.1rem; }
+.addcard #bankList .ul-bank li { height: 2.52rem; line-height: 2.52rem; }
+.addcard #bankList .ul-bank li .img-bank { width: 1.54rem; height: 1.54rem; }
+.addcard #bankList .ul-bank li .img-bank { background-size: 1.15rem 1.15rem; }
+.addcard #bankList .a-confirm { height: 1.68rem; line-height: 1.68rem; margin: .84rem auto; }
+.addcard #bankList .a-close img { width: .95rem; height: .95rem; }
+.addcard-ver .stn-mes .p-repeat { height: 1.68rem; line-height: 1.68rem; margin-top: .28rem; }
+}
+
+@media screen and (max-width:320px){
+	.showbox{ width:20rem; height:15rem; margin:-2rem auto;}
+	
+}

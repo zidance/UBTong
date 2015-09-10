@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>搜索</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/search.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _btn = $('#BtnSearch');
+		var _box = $('#BoxSearch');
+		var _bg = $('#Background');
+		var _close = _box.find('.a-close');
+		
+		_btn.click(function(){
+			_box.show();
+			_bg.show();
+			height();
+		})
+		_close.click(function(){
+			_box.hide();
+			_bg.hide();
+			height();
+		})
+		_box.find('li a').click(function(){
+			_box.hide();
+			_bg.hide();
+		})
+		
+		function height(){
+			if(_box.height()>$(window).height()*0.6)
+			{
+				_box.height($(window).height()*0.6);
+				var _h = $(window).height()*0.6-_box.find('h1').height()-_box.find('.btn').height();
+				_box.find('ul').height(_h);
+			}
+			_box.css('top',($(window).height()-_box.height())/2);
+		}
+	})
+</script>
+</head>
+
+<body>
+	<!--搜索-->
+    
+    <!--弹出框-->
+    <div class="box-search" id="BoxSearch">
+    	<h1 class="fz32">请选择<a class="a-close" href="#">关闭</a></h1>
+        
+        <ul>
+        	<li><a href="#"><span class="fz28">家居类</span><div class="clr"></div></a></li>
+            <li><a href="#"><span class="fz28">零食类</span><div class="clr"></div></a></li>
+            <li><a href="#"><span class="fz28">电器类</span><div class="clr"></div></a></li>
+            <li><a href="#"><span class="fz28">家居类</span><div class="clr"></div></a></li>
+            <li><a href="#"><span class="fz28">家居类</span><div class="clr"></div></a></li>
+        </ul>
+        <div class="clr"></div>
+    </div>
+    <div id="Background"></div>
+    <!--弹出框-end-->
+    
+    <section class="stn-search">
+    	<div class="search">
+        	<span id="BtnSearch" class="fz32">家居类</span>
+            <input class="fz28" type="text" placeholder="输入商品名称搜索" />
+        </div>
+    </section>
+    <!--搜索-end-->
+</body>
+</html>

@@ -1,0 +1,6 @@
+/*店铺状态*/
+.stn-state{ border:solid #e9e9e9; border-width:1px 0; padding:1.09rem 0; background:#f8f8f8; margin-bottom:.72rem; }
+.stn-state table{ width:100%; }
+.stn-state td{ text-align:center; color:#939292; }
+.stn-state td .p-red{ color:#fd7d0b; }
+.stn-state td em{ display:block; margin-top:.3rem; }
