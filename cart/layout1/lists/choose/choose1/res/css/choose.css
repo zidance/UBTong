@@ -16,7 +16,7 @@
 .cart-choose .choose-lists li .p-money{ color:#e52c02; position:absolute; bottom:0; left:5.73rem; }
 .cart-choose .choose-lists li .p-time{ color:#939292; margin-bottom:.5rem; }
 .cart-choose .choose-lists li .p-num{ color:#939292;}
-.cart-choose .choose-lists li .number-input{ position:absolute; bottom:.72rem;  }
+.cart-choose .choose-lists li .number-input{ position:absolute; bottom:.72rem;right:.72rem;  }
 .cart-choose .choose-lists li .number-input .reduct, .cart-choose .choose-lists li .number-input .add{ display:block; width:1.45rem; height:1.45rem; float:left; background:url(../img/del.png) no-repeat; background-size:1.45rem 1.45rem; text-indent:-9999px; margin:.38rem; }
 .cart-choose .choose-lists li .number-input .add{ background-image:url(../img/add.png); }
 .cart-choose .choose-lists li .number-input input{ display:block; width:2.18rem; height:2.18rem; line-height:2.18rem; float:left; background:url(../img/inp.png) no-repeat; background-size:2.18rem 2.18rem; border:none; text-align:center; color:#414141; }
@@ -42,6 +42,12 @@
 	.cart-choose .choose-lists input[type=checkbox]{ margin-left:0.5rem;}
 }
 
+
+@media screen and (max-width:360px){
+	.cart-choose .choose-lists .choose-all span{ margin-top:.15rem; }
+	.cart-choose .choose-lists li .number-input{right:0.2rem;}
+	.cart-choose .choose-lists input[type=checkbox]{ margin-left:0.5rem;}
+}
 
 @media screen and (max-width:320px){
 	.cart-choose .choose-lists input[type=checkbox]{ width:20px; height:20px; border-radius:7px; margin:1.58rem .6rem 0 .72rem; }
