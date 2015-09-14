@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>音乐控件</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/music.css" rel="stylesheet" type="text/css" />
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+<script src="res/js/music.js"></script>
+</head>
+
+<body style="background-color:#f7f5f5;">
+    
+    <!--音乐控件-->
+    <section class="stn-music" controls="controls" autoplay>
+        
+        <audio src="res/img/demo.mp3" autoplay="autoplay" loop="loop"></audio>
+
+        <img class="play" src="res/img/play.png" />
+        <img class="pause" src="res/img/pause.png" />
+    </section>
+    <script>
+        $(function() {
+            var _btn = $(".stn-music");
+            _btn.on("tap click", function _play() {
+                var _audio = _btn.find("audio").get(0)
+                _btn.off("tap click", _play)
+
+                if (!_audio.paused) {
+                    _audio.pause();
+                    _btn.find(".pause").hide();
+                    _btn.find(".play").show()
+                } else {
+                    _audio.play();
+                    _btn.find(".play").hide();
+                    _btn.find(".pause").show();
+                }
+                setTimeout(function() {
+                    _btn.on("tap click", _play)
+                }, 1000)
+            })
+        })
+        
+    </script>
+
+</body>
+
+</html>

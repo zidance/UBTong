@@ -1,0 +1,3 @@
+.stn-music{position: fixed;z-index: 100; left:0;bottom:5rem; padding:.3rem;}
+.stn-music img{width:2rem;}
+.stn-music .play{display: none;}
