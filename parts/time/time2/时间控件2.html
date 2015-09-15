@@ -1,50 +1,50 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-<title>Ê±¼ä¿Ø¼ş</title>
+<title>æ—¶é—´æ§ä»¶</title>
 <meta charset="bgk">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link rel="stylesheet" type="text/css" href="../../../common/css/common.css" />
-<!--Ê±¼ä¿Ø¼şÑùÊ½-->
+<!--æ—¶é—´æ§ä»¶æ ·å¼-->
 <link rel="stylesheet" type="text/css" href="res/css/styleV2.css" />
 
 <script src="../../../common/js/zepto-1.16.min.js"></script>
-<!--Ê±¼äAPI-->
+<!--æ—¶é—´API-->
 <script src="res/js/moment.min.js"></script>
-<!-- Ñ¡ÔñÇøÓòjs Ğè¾«¼ò-->
+<!-- é€‰æ‹©åŒºåŸŸjs éœ€ç²¾ç®€-->
 <script src="res/js/scroll_areaV3.js"></script>
 
 </head>
 <body style="background-color:#f5f5f5;">
-	<input class="fz28" type="text" name="test" id="selectShow" value="ÇëÑ¡ÔñÔ¤Ô¼Ê±¼ä" />
-    <!--Ò³ÃæÖĞ
+	<input class="fz28" type="text" name="test" id="selectShow" value="è¯·é€‰æ‹©é¢„çº¦æ—¶é—´" />
+    <!--é¡µé¢ä¸­
     <div class="order_bd">
         <dl class="order_bd_dl">
-            <dt class="order_bd_dl_dt"><span class="order_ico o_ico1">Ê±¼ä.</span></dt>
+            <dt class="order_bd_dl_dt"><span class="order_ico o_ico1">æ—¶é—´.</span></dt>
             <dd class="order_bd_dl_dd">
-                <a id="selectShow" href="javascript:void(0);">ÇëÑ¡ÔñÔ¤Ô¼Ê±¼ä</a>
+                <a id="selectShow" href="javascript:void(0);">è¯·é€‰æ‹©é¢„çº¦æ—¶é—´</a>
             </dd>
         </dl>
     </div>-->
 
-    <!--µ¯³ö¿ò-->
+    <!--å¼¹å‡ºæ¡†-->
     <a id="timeMb" class="hide" href="javascript:void(0);"></a>
     <div id="selectTime" class="hide" style="-webkit-transform: translate3d(0px, -190px, 0px);">
         
-        <h3><a href="javascript:void(0);" class="fl">È¡Ïû</a><a href="javascript:void(0);" class="fr not">È·¶¨</a></h3>
+        <h3><a href="javascript:void(0);" class="fl">å–æ¶ˆ</a><a href="javascript:void(0);" class="fr not">ç¡®å®š</a></h3>
         
         <div class="timeFloat">
             <div class="dateWrap" id="dateSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 0px, 0px);">
                 <ul style="height: 210px;">
-                   <!--activeµ±Ç°Ñ¡ÖĞ-->
+                   <!--activeå½“å‰é€‰ä¸­-->
                 </ul>
             </div>
             
             <div class="timeWrap" id="timeSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 1.9990234375px, 0px);">
                 <ul style="height: 360px;">
-                    <!--activeµ±Ç°Ñ¡ÖĞ timeoutÒÑÔ¤Ô¼-->
+                    <!--activeå½“å‰é€‰ä¸­ timeoutå·²é¢„çº¦-->
                     <li class="active">09:00</li>
                     <li class="timeout">10:00</li>
                     <li class="timeout">11:00</li>
@@ -63,16 +63,16 @@
     </div>
     
 <script>
-//moment.min.jsÊÇÒ»¸öÌá¹©Ê±¼äAPIµÄ½Å±¾,²»Éæ¼°ÑùÊ½.³£ÓÃµ÷ÓÃ·½·¨ÈçÏÂ
-   	//moment() //»ñÈ¡µ±Ç°Ê±¼ä(±¾»úµÄ)
-    //.add('days',7)    //¼¸Ììºó,»¹¿ÉÒÔÊÇ'months'/'hours'µÈ
-    //.format('YYYY-MM-DD HH:mm:ss') //¸úÔÚÊ±¼äºóÃæ,¹æ¶¨ÁË×îÖÕÊä³öÊ±¼äµÄ·½Ê½,²ÎÊıµÄ·½Ê½Í¨³£ÓĞÕâ¼¸ÖÖ:
-        //"DD"µ±Ç°ÊÇ¼¸ÈÕ,
-        //"d" µ±Ç°ĞÇÆÚ¼¸,·µ»ØµÄÊÇ0-6µÄÊı×Ö
-        //"YYYYMMDD" ¾ßÌåÊ±¼ä,ÖĞ¼ä¿ÉÒÔ¼Óºá¸Ü,µ«²»¿É¼Ó"Äê/ÔÂ/ÈÕ"ÕâÑùµÄÖĞÎÄ
+//moment.min.jsæ˜¯ä¸€ä¸ªæä¾›æ—¶é—´APIçš„è„šæœ¬,ä¸æ¶‰åŠæ ·å¼.å¸¸ç”¨è°ƒç”¨æ–¹æ³•å¦‚ä¸‹
+   	//moment() //è·å–å½“å‰æ—¶é—´(æœ¬æœºçš„)
+    //.add('days',7)    //å‡ å¤©å,è¿˜å¯ä»¥æ˜¯'months'/'hours'ç­‰
+    //.format('YYYY-MM-DD HH:mm:ss') //è·Ÿåœ¨æ—¶é—´åé¢,è§„å®šäº†æœ€ç»ˆè¾“å‡ºæ—¶é—´çš„æ–¹å¼,å‚æ•°çš„æ–¹å¼é€šå¸¸æœ‰è¿™å‡ ç§:
+        //"DD"å½“å‰æ˜¯å‡ æ—¥,
+        //"d" å½“å‰æ˜ŸæœŸå‡ ,è¿”å›çš„æ˜¯0-6çš„æ•°å­—
+        //"YYYYMMDD" å…·ä½“æ—¶é—´,ä¸­é—´å¯ä»¥åŠ æ¨ªæ ,ä½†ä¸å¯åŠ "å¹´/æœˆ/æ—¥"è¿™æ ·çš„ä¸­æ–‡
     
     var _obj = $("#dateSelect").find("ul");
-    var t1 = 7;  //¼¸Ììºó,Ò²¿ÉÒÔÊÇ¼¸¸öÔÂ/Ğ¡Ê±µÄ¼ÆÊı
+    var t1 = 7;  //å‡ å¤©å,ä¹Ÿå¯ä»¥æ˜¯å‡ ä¸ªæœˆ/å°æ—¶çš„è®¡æ•°
     var t2 = 0;
     var _day,_weekday,_wd;
     while(t2<t1){
@@ -80,47 +80,47 @@
          _weekday= _day.format('d');
          switch(_weekday){
              case "0":
-                 _wd="ÈÕ";
+                 _wd="æ—¥";
                  break;
              case "1":
-                 _wd="Ò»";
+                 _wd="ä¸€";
                  break;
              case "2":
-                 _wd="¶ş";
+                 _wd="äºŒ";
                  break;
              case "3":
-                 _wd="Èı";
+                 _wd="ä¸‰";
                  break;
              case "4":
-                 _wd="ËÄ";
+                 _wd="å››";
                  break;
              case "5":
-                 _wd="Îå";
+                 _wd="äº”";
                  break;
              case "6":
-                 _wd="Áù";
+                 _wd="å…­";
                  break;
              default:
                  _wd="";
          };
          
-        _obj.append('<li data-value="'+_day.format('YYYYMMDD')+'">'+_day.format('MM')+'ÔÂ'+_day.format('DD')+'ÈÕ'+'&nbsp;<span>ÖÜ'+_wd+'</span></li>');
+        _obj.append('<li data-value="'+_day.format('YYYYMMDD')+'">'+_day.format('MM')+'æœˆ'+_day.format('DD')+'æ—¥'+'&nbsp;<span>å‘¨'+_wd+'</span></li>');
         t2++;
         
     }
    
-    //Í·Ò»ÌìµÄ"ĞÇÆÚ¼¸"¸ÄÎª"½ñÌì"
-    _obj.find("li").first().find("span").html("½ñÌì");
+    //å¤´ä¸€å¤©çš„"æ˜ŸæœŸå‡ "æ”¹ä¸º"ä»Šå¤©"
+    _obj.find("li").first().find("span").html("ä»Šå¤©");
     
     
-    //È·¶¨°´Å¥,·µ»ØËùÑ¡Ê±¼ä
+    //ç¡®å®šæŒ‰é’®,è¿”å›æ‰€é€‰æ—¶é—´
     $("#selectTime").find(".fr").click(function(){
        //var _dateSelect = $("#dateSelect").find(".active").html();
        var _dateSelect = _day.format('YYYY')+'.'+_day.format('MM')+'.'+_day.format('DD')+' '+$("#dateSelect").find(".active").find("span").text();
        
        var _timeSelect = $("#timeSelect").find(".active").html();
        if($("#timeSelect").find(".active").hasClass("timeout")){
-          //µ±Ç°ÒÑÔ¤Ô¼Ê±²»·µ»Ø
+          //å½“å‰å·²é¢„çº¦æ—¶ä¸è¿”å›
           }else{
       $("#selectShow").val(_dateSelect+" "+_timeSelect)
            };

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-<title>ĞÇ¼¶ÆÀ¼Û</title>
-<meta charset="gbk">
+<title>æ˜Ÿçº§è¯„ä»·</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -13,43 +13,43 @@
 </head>
 
 <body>
-	<!--µ¯³öÆÀ¼ÛĞÇ¼¶¿ò-->
+	<!--å¼¹å‡ºè¯„ä»·æ˜Ÿçº§æ¡†-->
     <div class="box-assessstar" id="BoxAssessstar">
-    	<h1 class="fz32">Çë¶Ô·şÎñ×ö³öÆÀ·Ö<a class="a-close" href="#">¹Ø±Õ</a></h1>
+    	<h1 class="fz32">è¯·å¯¹æœåŠ¡åšå‡ºè¯„åˆ†<a class="a-close" href="#">å…³é—­</a></h1>
         <span id="Star1"></span>
         <div class="clr"></div>
-        <a class="fz32 a-btn" href="#">Ìá½»ÆÀ·Ö</a>
+        <a class="fz32 a-btn" href="#">æäº¤è¯„åˆ†</a>
     </div>
     <div id="Background"></div>
-    <!--µ¯³öÆÀ¼ÛĞÇ¼¶¿ò-end-->
+    <!--å¼¹å‡ºè¯„ä»·æ˜Ÿçº§æ¡†-end-->
 
-	<!--ĞÇ¼¶ÆÀ¼Û-->
-    <section class="stn-assessment" id="StnAssessment">  <!-- Ò»ĞÇ£ºs1 ¶şĞÇ£ºs2 ÈıĞÇ£ºs3 ËÄĞÇ£ºs4 ÎåĞÇ£ºs5   ºìÉ«£ºred  »ÒÉ«£ºgrey -->
+	<!--æ˜Ÿçº§è¯„ä»·-->
+    <section class="stn-assessment" id="StnAssessment">  <!-- ä¸€æ˜Ÿï¼šs1 äºŒæ˜Ÿï¼šs2 ä¸‰æ˜Ÿï¼šs3 å››æ˜Ÿï¼šs4 äº”æ˜Ÿï¼šs5   çº¢è‰²ï¼šred  ç°è‰²ï¼šgrey -->
     	<div class="appraise">
-        	<p class="fz28">Ì¬¶È£º<em>5·Ö</em></p>
+        	<p class="fz28">æ€åº¦ï¼š<em>5åˆ†</em></p>
             <span class="red s5"></span>
             <div class="clr"></div>
         </div>
         <div class="appraise">
-        	<p class="fz28">ÀñÒÇ£º<em>4·Ö</em></p>
+        	<p class="fz28">ç¤¼ä»ªï¼š<em>4åˆ†</em></p>
             <span class="red s4"></span>
             <div class="clr"></div>
         </div>
         <div class="appraise">
-        	<p class="fz28">¼¼Êõ£º<em>4·Ö</em></p>
+        	<p class="fz28">æŠ€æœ¯ï¼š<em>4åˆ†</em></p>
             <span class="red s4"></span>
             <div class="clr"></div>
         </div>
         <div class="appraise">
-        	<p class="fz28">Ï¸½Ú£º</p>
+        	<p class="fz28">ç»†èŠ‚ï¼š</p>
             <span class="grey s5"></span>
             <div class="clr"></div>
         </div>
     </section>
-    <!--ĞÇ¼¶ÆÀ¼Û-end-->
+    <!--æ˜Ÿçº§è¯„ä»·-end-->
     <script>
     $(function() {
-        var _path = 'res/img/';     //Í¼Æ¬Â·¾¶
+        var _path = 'res/img/';     //å›¾ç‰‡è·¯å¾„
         var _btn = $('#StnAssessment').find('.appraise');
         var _bg = $('#Background');
         var _box = $('#BoxAssessstar');
@@ -62,11 +62,11 @@
             $(this).click(function() {
                 _num.old = Number(_btn.eq(i).find("span").attr("class").match(/[0-9]/));
 
-                //Î´ÆÀ·Ö
+                //æœªè¯„åˆ†
                 if ($(this).find("span").hasClass("grey")) {
                     $('#Star1').find("img").attr("src", _path + "star-off.gif")
                 } else {
-                    //¸ÄÆÀ·Ö
+                    //æ”¹è¯„åˆ†
                     $('#Star1').find("img").each(function(index) {
                         if (index < (_num.old + 1)) {
                             $(this).attr("src", _path + "star-on.gif")
@@ -79,7 +79,7 @@
                 _bg.show();
                 _num.i = i;
                 
-                //»ñÈ¡µÃ·Ö,²»´ò·Ö=0·Ö
+                //è·å–å¾—åˆ†,ä¸æ‰“åˆ†=0åˆ†
                 _num.new = 0;
                 $('#Star1').find("img").click(function(){
                     _num.new=$('#Star1').raty("score");
@@ -89,12 +89,12 @@
         })
         
 
-        //È·¶¨¼ü
+        //ç¡®å®šé”®
         _confirm.click(function() {
             var _span = _btn.eq(_num.i).find("span")
             
             
-            //0·ÖÎ¬³ÖÔ­×´
+            //0åˆ†ç»´æŒåŸçŠ¶
             if(_num.new != 0){
                 _span.removeClass("s" + _num.old).addClass("s" + _num.new);
                 
@@ -102,9 +102,9 @@
                     _span.removeClass("grey").addClass("red");
                 };
                 if (_btn.eq(_num.i).find("em").html() == undefined) {
-                    _btn.eq(_num.i).find("p").append("<em>" + _num.new + "·Ö</em>")
+                    _btn.eq(_num.i).find("p").append("<em>" + _num.new + "åˆ†</em>")
                 } else {
-                    _btn.eq(_num.i).find("em").html(_num.new + "·Ö");
+                    _btn.eq(_num.i).find("em").html(_num.new + "åˆ†");
                 }
             }
             
@@ -113,13 +113,13 @@
         })
 
 
-        //¹Ø±Õ¼ü
+        //å…³é—­é”®
         _del.click(function() {
             _box.hide();
             _bg.hide();
         })
 
-        //³õÊ¼»¯
+        //åˆå§‹åŒ–
         $('#Star1').raty({
             half: false,
             start: 0,

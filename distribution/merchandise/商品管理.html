@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<title>��Ʒ����</title>
-<meta charset="gbk">
+<title>商品管理</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<!--����-->
+	<!--搜索-->
 	<script>
         $(function(){
             var _btn = $('#BtnSearch');
@@ -48,31 +48,31 @@
             }
         })
     </script>
-    <!--������-->
+    <!--弹出框-->
     <div class="box-search" id="BoxSearch">
-    	<h1 class="fz32">��ѡ��<a class="a-close" href="#">�ر�</a></h1>
+    	<h1 class="fz32">请选择<a class="a-close" href="#">关闭</a></h1>
         
         <ul>
-        	<li><a href="#"><span class="fz28">�Ҿ���</span><div class="clr"></div></a></li>
-            <li><a href="#"><span class="fz28">��ʳ��</span><div class="clr"></div></a></li>
-            <li><a href="#"><span class="fz28">������</span><div class="clr"></div></a></li>
-            <li><a href="#"><span class="fz28">�Ҿ���</span><div class="clr"></div></a></li>
-            <li><a href="#"><span class="fz28">�Ҿ���</span><div class="clr"></div></a></li>
+        	<li><a href="#"><span class="fz28">家居类</span><div class="clr"></div></a></li>
+            <li><a href="#"><span class="fz28">零食类</span><div class="clr"></div></a></li>
+            <li><a href="#"><span class="fz28">电器类</span><div class="clr"></div></a></li>
+            <li><a href="#"><span class="fz28">家居类</span><div class="clr"></div></a></li>
+            <li><a href="#"><span class="fz28">家居类</span><div class="clr"></div></a></li>
         </ul>
         <div class="clr"></div>
     </div>
     <div id="Background"></div>
-    <!--������-end-->
+    <!--弹出框-end-->
     
     <section class="stn-search">
     	<div class="search">
-        	<span id="BtnSearch" class="fz32">�Ҿ���</span>
-            <input class="fz28" type="text" placeholder="������Ʒ��������" />
+        	<span id="BtnSearch" class="fz32">家居类</span>
+            <input class="fz28" type="text" placeholder="输入商品名称搜索" />
         </div>
     </section>
-    <!--����-end-->
+    <!--搜索-end-->
     
-    <!--�б�-->
+    <!--列表-->
     <script>
 		$(function(){
 			var _checkbox = $('#StnLists').find('input');
@@ -96,100 +96,100 @@
                 <div class="content">
                 	<span class="s-img"><img src="lists/lists1/res/img/img1.jpg" /></span>
                     <div class="con">
-                    	<p class="p-name fz28">�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧</p>
-                        <p class="p-money fz32"><em class="fz24">��</em>13.40<span class="fz20">20.00</span></p>
+                    	<p class="p-name fz28">塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><em class="fz24">￥</em>13.40<span class="fz20">20.00</span></p>
                     </div>
                     <div class="clr"></div>
                 </div>
                 <div class="clr"></div>
-                <p class="p-type fz24">�Ҿ���<br>999</p>
-                <a class="a-btn a-null fz24" href="#">����</a>
+                <p class="p-type fz24">家居类<br>999</p>
+                <a class="a-btn a-null fz24" href="#">撤销</a>
             </li>
             <li>
             	<input type="checkbox" />
                 <div class="content">
                 	<span class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></span>
                     <div class="con">
-                    	<p class="p-name fz28">�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧</p>
-                        <p class="p-money fz32"><em class="fz24">��</em>13.40<span class="fz20">20.00</span></p>
+                    	<p class="p-name fz28">塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><em class="fz24">￥</em>13.40<span class="fz20">20.00</span></p>
                     </div>
                     <div class="clr"></div>
                 </div>
                 <div class="clr"></div>
-                <p class="p-type fz24">�Ҿ���<br>999</p>
-                <a class="a-btn fz24" href="#">����</a>
+                <p class="p-type fz24">家居类<br>999</p>
+                <a class="a-btn fz24" href="#">启用</a>
             </li>
             <li>
             	<input type="checkbox" />
                 <div class="content">
                 	<span class="s-img"><img src="lists/lists1/res/img/img1.jpg" /></span>
                     <div class="con">
-                    	<p class="p-name fz28">�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧</p>
-                        <p class="p-money fz32"><em class="fz24">��</em>13.40<span class="fz20">20.00</span></p>
+                    	<p class="p-name fz28">塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><em class="fz24">￥</em>13.40<span class="fz20">20.00</span></p>
                     </div>
                     <div class="clr"></div>
                 </div>
                 <div class="clr"></div>
-                <p class="p-type fz24">�Ҿ���<br>999</p>
-                <a class="a-btn a-null fz24" href="#">����</a>
+                <p class="p-type fz24">家居类<br>999</p>
+                <a class="a-btn a-null fz24" href="#">撤销</a>
             </li>
             <li>
             	<input type="checkbox" />
                 <div class="content">
                 	<span class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></span>
                     <div class="con">
-                    	<p class="p-name fz28">�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧</p>
-                        <p class="p-money fz32"><em class="fz24">��</em>13.40<span class="fz20">20.00</span></p>
+                    	<p class="p-name fz28">塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><em class="fz24">￥</em>13.40<span class="fz20">20.00</span></p>
                     </div>
                     <div class="clr"></div>
                 </div>
                 <div class="clr"></div>
-                <p class="p-type fz24">�Ҿ���<br>999</p>
-                <a class="a-btn fz24" href="#">����</a>
+                <p class="p-type fz24">家居类<br>999</p>
+                <a class="a-btn fz24" href="#">启用</a>
             </li>
             <li>
             	<input type="checkbox" />
                 <div class="content">
                 	<span class="s-img"><img src="lists/lists1/res/img/img1.jpg" /></span>
                     <div class="con">
-                    	<p class="p-name fz28">�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧</p>
-                        <p class="p-money fz32"><em class="fz24">��</em>13.40<span class="fz20">20.00</span></p>
+                    	<p class="p-name fz28">塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><em class="fz24">￥</em>13.40<span class="fz20">20.00</span></p>
                     </div>
                     <div class="clr"></div>
                 </div>
                 <div class="clr"></div>
-                <p class="p-type fz24">�Ҿ���<br>999</p>
-                <a class="a-btn a-null fz24" href="#">����</a>
+                <p class="p-type fz24">家居类<br>999</p>
+                <a class="a-btn a-null fz24" href="#">撤销</a>
             </li>
             <li>
             	<input type="checkbox" />
                 <div class="content">
                 	<span class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></span>
                     <div class="con">
-                    	<p class="p-name fz28">�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧�����¼ܼӺ��³ŷ����޺��¹�5֧</p>
-                        <p class="p-money fz32"><em class="fz24">��</em>13.40<span class="fz20">20.00</span></p>
+                    	<p class="p-name fz28">塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支塑料衣架加厚衣撑防滑无痕衣挂5支</p>
+                        <p class="p-money fz32"><em class="fz24">￥</em>13.40<span class="fz20">20.00</span></p>
                     </div>
                     <div class="clr"></div>
                 </div>
                 <div class="clr"></div>
-                <p class="p-type fz24">�Ҿ���<br>999</p>
-                <a class="a-btn fz24" href="#">����</a>
+                <p class="p-type fz24">家居类<br>999</p>
+                <a class="a-btn fz24" href="#">启用</a>
             </li>
         </ul>
     </section>
-    <!--�б�-end-->
+    <!--列表-end-->
     
-    <!--���ó��� �߶�:3.23rem-->
+    <!--启用撤销 高度:3.23rem-->
     <section class="stn-cancel">
     	<ul>
         	<li>
             	<input type="checkbox" />
-                <span class="fz32">ȫѡ</span>
+                <span class="fz32">全选</span>
             </li>
-            <li><a class="fz32" href="#">��������</a></li>
-            <li><a class="fz32" href="#">��������</a></li>
+            <li><a class="fz32" href="#">批量启用</a></li>
+            <li><a class="fz32" href="#">批量撤销</a></li>
         </ul>
     </section>
-    <!--���ó���-end-->
+    <!--启用撤销-end-->
 </body>
 </html>

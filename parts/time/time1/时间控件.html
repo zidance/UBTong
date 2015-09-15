@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-<title>Ê±¼ä¿Ø¼ş</title>
-<meta charset="gbk">
+<title>æ—¶é—´æ§ä»¶</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -25,21 +25,21 @@
 $(function () {
 	var nowData=new Date();
 	var opt= { 
-        preset : 'datetime', //ÉèÖÃÈÕÆÚºÍÊ±¼ä:Äê ÔÂ ÈÕ Ê± ·Ö;½öÏÔÊ¾ÈÕÆÚÎª'date',½öÏÔÊ¾Ê±¼ä'time'
-		theme:'ios', //ÉèÖÃÏÔÊ¾Ö÷Ìâ 
-		mode:'scroller', //ÉèÖÃÈÕÆÚÑ¡Ôñ·½Ê½£¬ÕâÀïÓÃ¹ö¶¯
-		display:'bottom', //ÉèÖÃ¿Ø¼ş³öÏÖ·½Ê½¼°ÑùÊ½
+        preset : 'datetime', //è®¾ç½®æ—¥æœŸå’Œæ—¶é—´:å¹´ æœˆ æ—¥ æ—¶ åˆ†;ä»…æ˜¾ç¤ºæ—¥æœŸä¸º'date',ä»…æ˜¾ç¤ºæ—¶é—´'time'
+		theme:'ios', //è®¾ç½®æ˜¾ç¤ºä¸»é¢˜ 
+		mode:'scroller', //è®¾ç½®æ—¥æœŸé€‰æ‹©æ–¹å¼ï¼Œè¿™é‡Œç”¨æ»šåŠ¨
+		display:'bottom', //è®¾ç½®æ§ä»¶å‡ºç°æ–¹å¼åŠæ ·å¼
 		//minDate: new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate(),nowData.getHours(),00),    //nowData
 		//maxDate:new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate()+7,22,00),
-             dateFormat: 'dd-yy-mm', // ÈÕÆÚ¸ñÊ½
-//              dateOrder: 'yymmdd', //Ãæ°åÖĞÈÕÆÚÅÅÁĞ¸ñÊ½
-		stepMinute: 1, //ÉèÖÃ·ÖÖÓ²½³¤
-		yearText:'Äê', 
-		monthText:'ÔÂ',
-		dayText:'ÈÕ',
-		hourText:'Ê±',
-		minuteText:'·Ö',
-		lang:'zh' //ÉèÖÃ¿Ø¼şÓïÑÔ};
+             dateFormat: 'dd-yy-mm', // æ—¥æœŸæ ¼å¼
+//              dateOrder: 'yymmdd', //é¢æ¿ä¸­æ—¥æœŸæ’åˆ—æ ¼å¼
+		stepMinute: 1, //è®¾ç½®åˆ†é’Ÿæ­¥é•¿
+		yearText:'å¹´', 
+		monthText:'æœˆ',
+		dayText:'æ—¥',
+		hourText:'æ—¶',
+		minuteText:'åˆ†',
+		lang:'zh' //è®¾ç½®æ§ä»¶è¯­è¨€};
 	};
 	$('#dateinput').mobiscroll(opt);
 	

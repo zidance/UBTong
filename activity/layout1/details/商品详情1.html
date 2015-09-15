@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<title>��Ʒ����</title>
-<meta charset="gbk">
+<title>商品详情</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -21,9 +21,9 @@
 </head>
 
 <body onload="loaded()" style="background:#f7f5f5;">
-	<!--��ƷͼƬ-->
+	<!--商品图片-->
     <script>
-		/*���ÿ��ȡ��߶�*/
+		/*设置宽度、高度*/
 		$(function(){
 			var _obj = $('#scroller');
 			var _indicator = $('#indicator');
@@ -32,7 +32,7 @@
 			_indicator.width(20*_slide-10);
 		})
 		
-		/*ʹ��iscroll���*/
+		/*使用iscroll插件*/
 		var myScroll;
 		function loaded () {
 			myScroll = new IScroll('#wrapper', {
@@ -80,9 +80,9 @@
 			<div id="dotty"></div>
 		</div>
 	</div>
-    <!--��ƷͼƬ-end-->
+    <!--商品图片-end-->
     
-    <!--��Ʒ��ϸ-->
+    <!--商品详细-->
     <script>
 		$(function(){
 			var _obj = $('#ProductDetails');
@@ -105,12 +105,12 @@
 		})
 	</script>
     <div class="product-details" id="ProductDetails">
-		<p class="p-name fz28">����ԭװ���ھ�ѡ���ʿ��Ĺ�(����ζ)218gx2���������ھӡ�</p>
-		<!--<p class="p-money fz28">Ԥ�ۼۣ�<span class="fz36">��29.90</span><em class="fz28">3��/��</em></p>-->
-        <p class="p-money fz28">��Ա�ۣ�<span class="fz36">��1199.00</span></p>
-		<p class="p-market fz28">�г��ۣ���40.00</p>
+		<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2袋【快乐邻居】</p>
+		<!--<p class="p-money fz28">预售价：<span class="fz36">￥29.90</span><em class="fz28">3个/份</em></p>-->
+        <p class="p-money fz28">会员价：<span class="fz36">￥1199.00</span></p>
+		<p class="p-market fz28">市场价：￥40.00</p>
 		<div class="details-num">
-			<div class="number-name fz28">��������</div>                   
+			<div class="number-name fz28">数　量：</div>                   
 			<div class="number-input">
 				<a href="#" class="fz28 reduct">-</a>
 				<input class="fz28" type="text" value="1" />
@@ -119,51 +119,51 @@
             <div class="clr"></div>
 		</div>
 	</div>
-    <!--��Ʒ��ϸ-end-->
+    <!--商品详细-end-->
     
-    <!--��������-->
+    <!--服务网点-->
     <section class="stn-outlets">
-    	<!--<h1 class="fz32">����ʩ������</h1>-->
-        <a  class="a-title fz32" href="#">����ʩ������ <span class="fz26">����</span></a>
+    	<!--<h1 class="fz32">服务施工网点</h1>-->
+        <a  class="a-title fz32" href="#">服务施工网点 <span class="fz26">更多</span></a>
         
         <ul>
         	<li>
             	<span class="s-img"><img src="outlets/outlets1/res/img/img1.jpg" /></span>
-                <p class="p-name fz28">����������</p>
-                <p class="p-address fz24">�����д������ƴ嶫���1��¥�����д������ƴ嶫���1��¥�����д������ƴ嶫���1��¥</p>
-                <em class="e3">�Ǽ�����</em>  <!-- һ�ǣ�e1  ���ǣ�e2  ���ǣ�e3  ���ǣ�e4  ���ǣ�e5 -->
-                <p class="p-science fz20">����: <span>�м�</span></p>
+                <p class="p-name fz28">服务网名称</p>
+                <p class="p-address fz24">北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼</p>
+                <em class="e3">星级好评</em>  <!-- 一星：e1  二星：e2  三星：e3  四星：e4  五星：e5 -->
+                <p class="p-science fz20">技术: <span>中级</span></p>
                 <p class="p-num fz24">10km</p>
-                <a class="fz28" href="#">·�ߵ���</a>
+                <a class="fz28" href="#">路线导航</a>
                 
                 <div class="clr"></div>
             </li>
         </ul>
     </section>
-    <!--��������-end-->
+    <!--服务网点-end-->
     
-    <!--�ʱ��-->
+    <!--活动时间-->
     <section class="stn-time">
-    	<a class="fz32" href="#">�ʱ�䣺2015-05-01</a>
+    	<a class="fz32" href="#">活动时间：2015-05-01</a>
     </section>
-    <!--�ʱ��-end-->
+    <!--活动时间-end-->
     
-    <!--���֪-->
+    <!--活动须知-->
     <section class="stn-instructions">
-    	<h1 class="fz32">���֪</h1>
+    	<h1 class="fz32">活动须知</h1>
         
         <div class="content">
-        	<p class="fz28">ԤԼ��Ϣ</p>
-            <p class="fz28">������ǰ1��ԤԼ</p>
+        	<p class="fz28">预约信息</p>
+            <p class="fz28">请您提前1天预约</p>
         </div>
         <div class="content">
-        	<p class="fz28">ʹ�ù���</p>
-            <p class="fz28">��Զ����ԤԼ������ԤԼ���Ż��ά�뵽����֤���ܷ���</p>
+        	<p class="fz28">使用规则</p>
+            <p class="fz28">向抚远汽配预约，并将预约短信或二维码到店验证接受服务</p>
         </div>
     </section>
-    <!--���֪-end-->
+    <!--活动须知-end-->
     
-    <!--��ݹ��ﳵ��-->
+    <!--快捷购物车栏-->
 	<script>
 		$(function(){
 			var _boxcart = $('#BoxCart');
@@ -187,35 +187,35 @@
 	</script>
 	
 	<div class="box-cart" id="BoxCart">
-		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--���ӹ��ﳵδ���״̬��btncart.png-->  <!--���ӹ��ﳵ��״̬��btncarth.png-->
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--添加购物车未点击状态：btncart.png-->  <!--添加购物车后状态：btncarth.png-->
 		<div class="boxcart-nav">
 			<a class="btn" href="#">
 				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/home.png" /></span>
-				<p class="fz26">��ҳ</p>
+				<p class="fz26">首页</p>
 			</a>
 			<a class="cart" href="#">
-				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--���ﳵδ���״̬��carth.png-->  <!--���ӹ��ﳵ��״̬��cart.png-->
-				<p class="fz26">���ﳵ</p>
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
+				<p class="fz26">购物车</p>
 			</a>
             <a class="cart" href="#">
 				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/member.png" /></span>
-				<p class="fz26">��Ա</p>
+				<p class="fz26">会员</p>
 			</a>
 			<a class="cart" href="#">
 				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/login.png" /></span>
-				<p class="fz26">��¼</p>
+				<p class="fz26">登录</p>
 			</a>
 		</div>
 	</div>
-    <!--��ݹ��ﳵ��-end-->
+    <!--快捷购物车栏-end-->
 
-    <!--��Ʒ����-->
+    <!--商品介绍-->
     <script>
 		$(function(){
 			var _obj = $('#DetailsIntroduce');
 			var _btn = _obj.find('nav a');
 			var _item = _obj.find('.introduce-con .introduce-item');
-			//��ʼ��
+			//初始化
 			_item.eq(0).show();
 			_btn.eq(0).addClass('act');
 			
@@ -230,7 +230,7 @@
 			});
 		});
 		
-		/*�������滬��Ч�����*/
+		/*导航跟随滑动效果插件*/
 		(function($){
 			$.fn.capacity = function(options) {
 				var opts = $.extend({},$.fn.capacity.deflunt,options);
@@ -276,20 +276,20 @@
 				});
 			};
 			$.fn.capacity.deflunt={
-				right : 0,//�����ҳ����ȵ��ұ߶�λ
+				right : 0,//相对于页面宽度的右边定位
 				top:0,
 				
 				
 			};
 		})(jQuery);
-		/*--------------ҳ�滬��Ч�� - end ----------------*/
+		/*--------------页面滑动效果 - end ----------------*/
 	</script>
     <div class="details-introduce" id="DetailsIntroduce" style="margin-bottom:0rem;">
 		<nav>
 			<ul>
-				<li><a class="fz28" href="#">��Ʒ����</a></li>
-				<li><a class="fz28" href="#">��Ʒ����</a></li>
-				<li><a class="fz28" href="#">����(2039)</a></li>
+				<li><a class="fz28" href="#">商品介绍</a></li>
+				<li><a class="fz28" href="#">商品参数</a></li>
+				<li><a class="fz28" href="#">评价(2039)</a></li>
 			</ul>
 		</nav>
 		
@@ -304,46 +304,46 @@
 				<ul class="introduce-gbook">
 					<li>
 						<p class="p-tel fz28">13*******89</p>
-						<p class="p-gbook fz28">�·�������׼�����ܱ��˴�</p>
-						<p class="p-time fz24">2014-07-14 09:06:19  ��ɫ����ɫ</p>
+						<p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+						<p class="p-time fz24">2014-07-14 09:06:19  颜色：红色</p>
 					</li>
 					<li>
 						<p class="p-tel fz28">13*******89</p>
-						<p class="p-gbook fz28">�·�������׼�����ܱ��˴�</p>
-						<p class="p-time fz24">2014-07-14 09:06:19  ��ɫ����ɫ</p>
+						<p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+						<p class="p-time fz24">2014-07-14 09:06:19  颜色：红色</p>
 					</li>
 					<li>
 						<p class="p-tel fz28">13*******89</p>
-						<p class="p-gbook fz28">�·�������׼�����ܱ��˴�</p>
-						<p class="p-time fz24">2014-07-14 09:06:19  ��ɫ����ɫ</p>
+						<p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+						<p class="p-time fz24">2014-07-14 09:06:19  颜色：红色</p>
 					</li>
 					<li>
 						<p class="p-tel fz28">13*******89</p>
-						<p class="p-gbook fz28">�·�������׼�����ܱ��˴�</p>
-						<p class="p-time fz24">2014-07-14 09:06:19  ��ɫ����ɫ</p>
+						<p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+						<p class="p-time fz24">2014-07-14 09:06:19  颜色：红色</p>
 					</li>
 				</ul>
-				<a class="a-intgbook fz24" href="#">���ظ���</a>
+				<a class="a-intgbook fz24" href="#">加载更多</a>
 			</div>
 		</div>
 	</div>
     <script>
     	$(function(){
 			var _obj = $('#DetailsIntroduce');
-			var _fly = _obj.find('nav')  //����������
+			var _fly = _obj.find('nav')  //滑动弹出框
 			
-			_fly.capacity();  /*���õ������滬��Ч�����*/
+			_fly.capacity();  /*调用导航跟随滑动效果插件*/
 		})
     </script>
-    <!--��Ʒ����-end-->
+    <!--商品介绍-end-->
     
     
 
     
-    <!--���鰴ť�߶ȣ�3.77rem-->
+    <!--详情按钮高度：3.77rem-->
 	<div class="details-btn">
-    	<a class="a-orange fz32" href="#">��������</a>
+    	<a class="a-orange fz32" href="#">立即购买</a>
     </div>
-    <!--���鰴ť-end-->
+    <!--详情按钮-end-->
 </body>
 </html>

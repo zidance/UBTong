@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<title>ԤԼ����-�������</title>
-<meta charset="gbk">
+<title>预约服务-到店服务</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -16,34 +16,34 @@
 </head>
 
 <body style="background:#f4f4f4;">
-	<!--��Ʒ����-->
+	<!--商品名称-->
     <section class="stn-subdetailstrade">
     	<ul>
         	<li>
             	<a href="#">
                 	<span class="s-img"><img src="trade/trade1/res/img/img1.jpg" /></span>
                     <div class="content">
-                    	<p class="p-name fz32">��ˮ�����໤��������߻�������</p>
-                        <p class="p-money fz36">��389.00</p>
-                        <p class="p-address fz24">�����д������ƴ嶫���1��¥B�������д������ƴ嶫���1��¥B��</p>
+                    	<p class="p-name fz32">补水深度清洁护理酵素祛斑机理套组</p>
+                        <p class="p-money fz36">￥389.00</p>
+                        <p class="p-address fz24">北京市大兴区黄村东大街1号楼B座北京市大兴区黄村东大街1号楼B座</p>
                     </div>
             		<div class="clr"></div>
                 </a>
             </li>
         </ul>
     </section>
-    <!--��Ʒ����-end-->
+    <!--商品名称-end-->
     
-    <!--ԤԼ��Ϣ��д-->
+    <!--预约信息填写-->
     <section class="stn-subdetailswrite">
-    	<p class="p-time fz28"><span>ԤԼʱ�䣺</span>2015.5.26 14��00<em>��ԤԼ������</em></p>
-        <p class="p-address fz28"><span>���ŵ�ַ��</span><input class="fz28" type="text" value="��¥����ԣ����C��8F" /></p>
-        <p class="p-contact fz28"><span>�� ϵ �� ��</span><input class="fz28" type="text" value="��С��" /></p>
-        <p class="p-tel fz28"><span>��ϵ�绰��</span><input class="fz28" type="text" value="18060777666" /></p>
+    	<p class="p-time fz28"><span>预约时间：</span>2015.5.26 14：00<em>（预约已满）</em></p>
+        <p class="p-address fz28"><span>上门地址：</span><input class="fz28" type="text" value="鼓楼区恒裕大厦C座8F" /></p>
+        <p class="p-contact fz28"><span>联 系 人 ：</span><input class="fz28" type="text" value="林小姐" /></p>
+        <p class="p-tel fz28"><span>联系电话：</span><input class="fz28" type="text" value="18060777666" /></p>
     </section>
-    <!--ԤԼ��Ϣ��д-end-->
+    <!--预约信息填写-end-->
     
-    <!--����ʽ-->
+    <!--服务方式-->
 	<script>
         function tradeCheckboxClick(node){
             $('.trade_checkbox').prop('checked','');
@@ -51,26 +51,26 @@
         }
     </script>
 	<section class="stn-selective" style="margin-bottom:4.06rem;">
-    	<h1 class="fz32">����ʽ</h1>
+    	<h1 class="fz32">服务方式</h1>
         
         <ul>
         	<li>
             	<input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" />
-                <p class="p-name fz28">�������</p>
-                <p class="p-money fz28">����������·130#��������</p>
+                <p class="p-name fz28">到店服务</p>
+                <p class="p-money fz28">晋安区东大路130#美丽人生</p>
                 <div class="clr"></div>
             </li>
             <li>
             	<input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" />
-                <p class="p-name fz28">���ŷ���</p>
-                <p class="p-money fz28">���ŷ���� ��5Ԫ</p>
+                <p class="p-name fz28">上门服务</p>
+                <p class="p-money fz28">上门服务费 ￥5元</p>
                 <div class="clr"></div>
             </li>
         </ul>
     </section>
-    <!--����ʽ-end-->
+    <!--服务方式-end-->
     
-    <!--��ݹ��ﳵ��-->
+    <!--快捷购物车栏-->
 	<script>
 		$(function(){
 			var _boxcart = $('#BoxCart');
@@ -94,32 +94,32 @@
 	</script>
 	
 	<div class="box-cart" id="BoxCart">
-		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--���ӹ��ﳵδ���״̬��btncart.png-->  <!--���ӹ��ﳵ��״̬��btncarth.png-->
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--添加购物车未点击状态：btncart.png-->  <!--添加购物车后状态：btncarth.png-->
 		<div class="boxcart-nav">
 			<a class="btn" href="#">
 				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/home.png" /></span>
-				<p class="fz26">��ҳ</p>
+				<p class="fz26">首页</p>
 			</a>
 			<a class="cart" href="#">
-				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--���ﳵδ���״̬��carth.png-->  <!--���ӹ��ﳵ��״̬��cart.png-->
-				<p class="fz26">���ﳵ</p>
+				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
+				<p class="fz26">购物车</p>
 			</a>
             <a class="cart" href="#">
 				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/member.png" /></span>
-				<p class="fz26">��Ա</p>
+				<p class="fz26">会员</p>
 			</a>
 			<a class="cart" href="#">
 				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/login.png" /></span>
-				<p class="fz26">��¼</p>
+				<p class="fz26">登录</p>
 			</a>
 		</div>
 	</div>
-    <!--��ݹ��ﳵ��-end-->
+    <!--快捷购物车栏-end-->
     
-    <!--��ť �߶ȣ�4.06rem-->
+    <!--按钮 高度：4.06rem-->
     <div class="parts-btn">
-    	<a class="fz32" href="#">ȷ��ԤԼ</a>
+    	<a class="fz32" href="#">确认预约</a>
     </div>
-    <!--��ť-end-->
+    <!--按钮-end-->
 </body>
 </html>
