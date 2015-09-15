@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<title>�̼Ҽ��</title>
-<meta charset="gbk">
+<title>商家简介</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -14,17 +14,17 @@
 </head>
 
 <body style="background:#f7f5f5;">
-	<!--�̼Ҽ��-->
+	<!--商家简介-->
     <section class="stn-information">
-    	<h1 class="fz32">�̼Ҽ��</h1>
+    	<h1 class="fz32">商家简介</h1>
         
 <!--
-        <p class="p-first fz28">��������װ����������</p>
-        <p class="fz28">��ַ����¥������·123��</p>
-        <p class="fz28">Ӫҵʱ�䣺07:00��22:00</p>
+        <p class="p-first fz28">神州汽车装饰美容中心</p>
+        <p class="fz28">地址：鼓楼区东大路123号</p>
+        <p class="fz28">营业时间：07:00—22:00</p>
 -->
         
-        <p class="p-infor fz28">���������������޹�˾�Ǽ�ҽ�����Ρ��������弰������ѵ��һ�����ҵ��������ʮ����Ĵ��·�չ����Ŀǰ����������ʷ�ƾá����������������޹�˾�Ǽ�ҽ�����Ρ��������弰������ѵ��һ�����ҵ��������ʮ����Ĵ��·�չ����Ŀǰ����������ʷ�ƾá�</p>
+        <p class="p-infor fz28">美丽上门美容有限公司是集医疗整形、美容美体及美容培训于一体的企业，历经二十多年的创新发展，是目前粤东地区历史悠久。美丽上门美容有限公司是集医疗整形、美容美体及美容培训于一体的企业，历经二十多年的创新发展，是目前粤东地区历史悠久。</p>
         <a class="a-console" href="#"><img src="res/img/bigdown.png" /></a>
         
         
@@ -33,9 +33,9 @@
             var _info = _obj.find(".p-infor");
             var _btn = _obj.find(".a-console");
             var _src = _btn.find("img").attr("src");
-            var num;  //�������
+            var num;  //点击计数
             
-            //����չ�������л�,ָʾ��ͷ·���л�
+            //文字展开收起切换,指示箭头路径切换
             var _infoToggle = function(e){
                 _btn.off("click",_infoToggle);
                 e.preventDefault();
@@ -48,13 +48,13 @@
                     _btn.find("img").attr("src",_src.replace(/up/,"down"))
                     num=0;
                 };
-                //������,�������
+                //点击间隔,避免错乱
                 setTimeout(function(){
                     _btn.on("click",_infoToggle);
                 },500);
             };
             
-            //�����Ű�
+            //两行排版
             function _textLine(){
                  var _text = _info.html();
                  var _length = parseInt(_info.width()/parseFloat(_info.css("font-size")));
@@ -75,15 +75,15 @@
         
         
         <div class="btn">
-        	<!--��Զ-->
-        	<!--<a class="fz32" href="#">�绰��ѯ</a>
-            <a class="fz32" href="#">·�ߵ���</a>-->
+        	<!--抚远-->
+        	<!--<a class="fz32" href="#">电话咨询</a>
+            <a class="fz32" href="#">路线导航</a>-->
             
-            <!--��������-->
-            <a class="fz32" href="#">��ϵ�̼�</a>
-            <a class="fz32" href="#">·�ߵ���</a>
+            <!--美丽上门-->
+            <a class="fz32" href="#">联系商家</a>
+            <a class="fz32" href="#">路线导航</a>
         </div>
     </section>
-    <!--�̼Ҽ��-end-->
+    <!--商家简介-end-->
 </body>
 </html>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-<title>Ô¤Ô¼·şÎñ-µ½µê·şÎñ</title>
-<meta charset="gbk">
+<title>é¢„çº¦æœåŠ¡-åˆ°åº—æœåŠ¡</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -12,7 +12,7 @@
 <link href="way/way1/res/css/selective.css" rel="stylesheet" type="text/css" />
 <link href="../../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
 <link href="../../../parts/btn/btn1/res/css/btn.css" rel="stylesheet" type="text/css" />
-<!--Ê±¼ä¿Ø¼ş-->
+<!--æ—¶é—´æ§ä»¶-->
 <link href="write/write1/res/css/time/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
 <link href="write/write1/res/css/time/mobiscroll.widget.css" rel="stylesheet" type="text/css" />
 <link href="write/write1/res/css/time/mobiscroll.widget.ios.css" rel="stylesheet" type="text/css" />
@@ -26,60 +26,60 @@
 <script src="write/write1/res/js/mobiscroll.datetimebase.js"></script>
 <script src="write/write1/res/js/mobiscroll.widget.ios.js"></script>
 <script src="write/write1/res/js/mobiscroll.i18n.zh.js"></script>
-<!--Ê±¼ä¿Ø¼ş-->
+<!--æ—¶é—´æ§ä»¶-->
 </head>
 
 <body style="background:#f4f4f4;">
-	<!--ÉÌÆ·Ãû³Æ-->
+	<!--å•†å“åç§°-->
     <section class="stn-subdetailstrade">
     	<ul>
         	<li>
             	<a href="#">
                 	<span class="s-img"><img src="trade/trade1/res/img/img1.jpg" /></span>
                     <div class="content">
-                    	<p class="p-name fz32">²¹Ë®Éî¶ÈÇå½à»¤Àí½ÍËØìî°ß»úÀíÌ××é</p>
-                        <p class="p-money fz36">£¤389.00</p>
-                        <p class="p-address fz24">±±¾©ÊĞ´óĞËÇø»Æ´å¶«´ó½Ö1ºÅÂ¥B×ù±±¾©ÊĞ´óĞËÇø»Æ´å¶«´ó½Ö1ºÅÂ¥B×ù</p>
+                    	<p class="p-name fz32">è¡¥æ°´æ·±åº¦æ¸…æ´æŠ¤ç†é…µç´ ç¥›æ–‘æœºç†å¥—ç»„</p>
+                        <p class="p-money fz36">ï¿¥389.00</p>
+                        <p class="p-address fz24">åŒ—äº¬å¸‚å¤§å…´åŒºé»„æ‘ä¸œå¤§è¡—1å·æ¥¼Båº§åŒ—äº¬å¸‚å¤§å…´åŒºé»„æ‘ä¸œå¤§è¡—1å·æ¥¼Båº§</p>
                     </div>
             		<div class="clr"></div>
                 </a>
             </li>
         </ul>
     </section>
-    <!--ÉÌÆ·Ãû³Æ-end-->
+    <!--å•†å“åç§°-end-->
     
-    <!--Ô¤Ô¼ĞÅÏ¢ÌîĞ´-->
+    <!--é¢„çº¦ä¿¡æ¯å¡«å†™-->
     <script type="text/javascript">
 		$(function () {
 			var nowData=new Date();
 			var opt= { 
-				theme:'ios', //ÉèÖÃÏÔÊ¾Ö÷Ìâ 
-				mode:'scroller', //ÉèÖÃÈÕÆÚÑ¡Ôñ·½Ê½£¬ÕâÀïÓÃ¹ö¶¯
-				display:'bottom', //ÉèÖÃ¿Ø¼ş³öÏÖ·½Ê½¼°ÑùÊ½
-				preset : 'datetime', //ÈÕÆÚ:Äê ÔÂ ÈÕ Ê± ·Ö
+				theme:'ios', //è®¾ç½®æ˜¾ç¤ºä¸»é¢˜ 
+				mode:'scroller', //è®¾ç½®æ—¥æœŸé€‰æ‹©æ–¹å¼ï¼Œè¿™é‡Œç”¨æ»šåŠ¨
+				display:'bottom', //è®¾ç½®æ§ä»¶å‡ºç°æ–¹å¼åŠæ ·å¼
+				preset : 'datetime', //æ—¥æœŸ:å¹´ æœˆ æ—¥ æ—¶ åˆ†
 				minDate: new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate(),nowData.getHours(),00), 
 				maxDate:new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate()+7,22,00),
-		//              dateFormat: 'yy-mm-dd', // ÈÕÆÚ¸ñÊ½
-		//              dateOrder: 'yymmdd', //Ãæ°åÖĞÈÕÆÚÅÅÁĞ¸ñÊ½
-				stepMinute: 60, //ÉèÖÃ·ÖÖÓ²½³¤
-				yearText:'Äê', 
-				monthText:'ÔÂ',
-				dayText:'ÈÕ',
-				hourText:'Ê±',
-				minuteText:'·Ö',
-				lang:'zh' //ÉèÖÃ¿Ø¼şÓïÑÔ};
+		//              dateFormat: 'yy-mm-dd', // æ—¥æœŸæ ¼å¼
+		//              dateOrder: 'yymmdd', //é¢æ¿ä¸­æ—¥æœŸæ’åˆ—æ ¼å¼
+				stepMinute: 60, //è®¾ç½®åˆ†é’Ÿæ­¥é•¿
+				yearText:'å¹´', 
+				monthText:'æœˆ',
+				dayText:'æ—¥',
+				hourText:'æ—¶',
+				minuteText:'åˆ†',
+				lang:'zh' //è®¾ç½®æ§ä»¶è¯­è¨€};
 			};
 			$('#dateinput').mobiscroll(opt);
 		});
 	</script>
     <section class="stn-subdetailswrite">
-    	<p class="p-time fz28"><span>Ô¤Ô¼Ê±¼ä£º</span><input class="fz28" type="text" name="test" id="dateinput" value="2015.5.26 14£º00" /><em>£¨Ô¤Ô¼ÒÑÂú£©</em></p>
-        <p class="p-contact fz28"><span>Áª Ïµ ÈË £º</span><input class="fz28" type="text" value="ÁÖĞ¡½ã" /></p>
-        <p class="p-tel fz28"><span>ÁªÏµµç»°£º</span><input class="fz28" type="text" value="18060777666" /></p>
+    	<p class="p-time fz28"><span>é¢„çº¦æ—¶é—´ï¼š</span><input class="fz28" type="text" name="test" id="dateinput" value="2015.5.26 14ï¼š00" /><em>ï¼ˆé¢„çº¦å·²æ»¡ï¼‰</em></p>
+        <p class="p-contact fz28"><span>è” ç³» äºº ï¼š</span><input class="fz28" type="text" value="æ—å°å§" /></p>
+        <p class="p-tel fz28"><span>è”ç³»ç”µè¯ï¼š</span><input class="fz28" type="text" value="18060777666" /></p>
     </section>
-    <!--Ô¤Ô¼ĞÅÏ¢ÌîĞ´-end-->
+    <!--é¢„çº¦ä¿¡æ¯å¡«å†™-end-->
     
-    <!--·şÎñ·½Ê½-->
+    <!--æœåŠ¡æ–¹å¼-->
 	<script>
         function tradeCheckboxClick(node){
             $('.trade_checkbox').prop('checked','');
@@ -87,26 +87,26 @@
         }
     </script>
 	<section class="stn-selective" style="margin-bottom:4.06rem;">
-    	<h1 class="fz32">·şÎñ·½Ê½</h1>
+    	<h1 class="fz32">æœåŠ¡æ–¹å¼</h1>
         
         <ul>
         	<li>
             	<input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" />
-                <p class="p-name fz28">µ½µê·şÎñ</p>
-                <p class="p-money fz28">½ú°²Çø¶«´óÂ·130#ÃÀÀöÈËÉú</p>
+                <p class="p-name fz28">åˆ°åº—æœåŠ¡</p>
+                <p class="p-money fz28">æ™‹å®‰åŒºä¸œå¤§è·¯130#ç¾ä¸½äººç”Ÿ</p>
                 <div class="clr"></div>
             </li>
             <li>
             	<input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" />
-                <p class="p-name fz28">ÉÏÃÅ·şÎñ</p>
-                <p class="p-money fz28">ÉÏÃÅ·şÎñ·Ñ £¤5Ôª</p>
+                <p class="p-name fz28">ä¸Šé—¨æœåŠ¡</p>
+                <p class="p-money fz28">ä¸Šé—¨æœåŠ¡è´¹ ï¿¥5å…ƒ</p>
                 <div class="clr"></div>
             </li>
         </ul>
     </section>
-    <!--·şÎñ·½Ê½-end-->
+    <!--æœåŠ¡æ–¹å¼-end-->
     
-    <!--¿ì½İ¹ºÎï³µÀ¸-->
+    <!--å¿«æ·è´­ç‰©è½¦æ -->
 	<script>
 		$(function(){
 			var _boxcart = $('#BoxCart');
@@ -130,32 +130,32 @@
 	</script>
 	
 	<div class="box-cart" id="BoxCart">
-		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src=""../../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--Ìí¼Ó¹ºÎï³µÎ´µã»÷×´Ì¬£ºbtncart.png-->  <!--Ìí¼Ó¹ºÎï³µºó×´Ì¬£ºbtncarth.png-->
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src=""../../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--æ·»åŠ è´­ç‰©è½¦æœªç‚¹å‡»çŠ¶æ€ï¼šbtncart.png-->  <!--æ·»åŠ è´­ç‰©è½¦åçŠ¶æ€ï¼šbtncarth.png-->
 		<div class="boxcart-nav">
 			<a class="btn" href="#">
 				<span class="s-img"><img src=""../../../parts/boxcart/boxcart1/res/img/home.png" /></span>
-				<p class="fz26">Ê×Ò³</p>
+				<p class="fz26">é¦–é¡µ</p>
 			</a>
 			<a class="cart" href="#">
-				<span class="s-img"><img src=""../../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--¹ºÎï³µÎ´µã»÷×´Ì¬£ºcarth.png-->  <!--Ìí¼Ó¹ºÎï³µºó×´Ì¬£ºcart.png-->
-				<p class="fz26">¹ºÎï³µ</p>
+				<span class="s-img"><img src=""../../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--è´­ç‰©è½¦æœªç‚¹å‡»çŠ¶æ€ï¼šcarth.png-->  <!--æ·»åŠ è´­ç‰©è½¦åçŠ¶æ€ï¼šcart.png-->
+				<p class="fz26">è´­ç‰©è½¦</p>
 			</a>
             <a class="cart" href="#">
 				<span class="s-img"><img src=""../../../parts/boxcart/boxcart1/res/img/member.png" /></span>
-				<p class="fz26">»áÔ±</p>
+				<p class="fz26">ä¼šå‘˜</p>
 			</a>
 			<a class="cart" href="#">
 				<span class="s-img"><img src=""../../../parts/boxcart/boxcart1/res/img/login.png" /></span>
-				<p class="fz26">µÇÂ¼</p>
+				<p class="fz26">ç™»å½•</p>
 			</a>
 		</div>
 	</div>
-    <!--¿ì½İ¹ºÎï³µÀ¸-end-->
+    <!--å¿«æ·è´­ç‰©è½¦æ -end-->
 
-    <!--°´Å¥ ¸ß¶È£º4.06rem-->
+    <!--æŒ‰é’® é«˜åº¦ï¼š4.06rem-->
     <div class="parts-btn">
-    	<a class="fz32" href="#">È·ÈÏÔ¤Ô¼</a>
+    	<a class="fz32" href="#">ç¡®è®¤é¢„çº¦</a>
     </div>
-    <!--°´Å¥-end-->
+    <!--æŒ‰é’®-end-->
 </body>
 </html>

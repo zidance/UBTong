@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-<title>´óÍ¼</title>
-<meta charset="gbk">
+<title>å¤§å›¾</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -44,8 +44,8 @@
 		generatedCount = 0;
 		
 		/**
-		 * ÏÂÀ­Ë¢ĞÂ £¨×Ô¶¨ÒåÊµÏÖ´Ë·½·¨£©
-		 * myScroll.refresh();		// Êı¾İ¼ÓÔØÍê³Éºó£¬µ÷ÓÃ½çÃæ¸üĞÂ·½·¨
+		 * ä¸‹æ‹‰åˆ·æ–° ï¼ˆè‡ªå®šä¹‰å®ç°æ­¤æ–¹æ³•ï¼‰
+		 * myScroll.refresh();		// æ•°æ®åŠ è½½å®Œæˆåï¼Œè°ƒç”¨ç•Œé¢æ›´æ–°æ–¹æ³•
 		 */
 		function pullDownAction () {
 			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
@@ -55,11 +55,11 @@
 				/*for (i=0; i<3; i++) {
 					li = document.createElement('li');
 					li.className = "li-commodity";
-					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>»ªÎªÈÙÒ«3cÊÖ»ú¿Ç ÈÙÒ«3CÊÖ»úÌ×½ğÊôÍâ¿Ç" + (++generatedCount) + "</span><span class='s-money'>£¤120.00<em>130.00</em></span><span class='s-num'>ÒÑÊÛ³ö£º2000¼ş</span></span><span class='clr'></span></a>";
+					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>åä¸ºè£è€€3cæ‰‹æœºå£³ è£è€€3Cæ‰‹æœºå¥—é‡‘å±å¤–å£³" + (++generatedCount) + "</span><span class='s-money'>ï¿¥120.00<em>130.00</em></span><span class='s-num'>å·²å”®å‡ºï¼š2000ä»¶</span></span><span class='clr'></span></a>";
 					el.insertBefore(li, el.childNodes[0]);
 				}*/
 				
-				myScroll.refresh();		//Êı¾İ¼ÓÔØÍê³Éºó£¬µ÷ÓÃ½çÃæ¸üĞÂ·½·¨   Remember to refresh when contents are loaded (ie: on ajax completion)
+				myScroll.refresh();		//æ•°æ®åŠ è½½å®Œæˆåï¼Œè°ƒç”¨ç•Œé¢æ›´æ–°æ–¹æ³•   Remember to refresh when contents are loaded (ie: on ajax completion)
 			}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
 		}
 		function pull () {
@@ -73,12 +73,12 @@
 					el.insertBefore(li, el.childNodes[0]);
 				}*/
 				
-				myScroll.refresh();		//Êı¾İ¼ÓÔØÍê³Éºó£¬µ÷ÓÃ½çÃæ¸üĞÂ·½·¨   Remember to refresh when contents are loaded (ie: on ajax completion)
+				myScroll.refresh();		//æ•°æ®åŠ è½½å®Œæˆåï¼Œè°ƒç”¨ç•Œé¢æ›´æ–°æ–¹æ³•   Remember to refresh when contents are loaded (ie: on ajax completion)
 			}, 100);	// <-- Simulate network congestion, remove setTimeout from production!
 		}
 		/**
-		 * ¹ö¶¯·­Ò³ £¨×Ô¶¨ÒåÊµÏÖ´Ë·½·¨£©
-		 * myScroll.refresh();		// Êı¾İ¼ÓÔØÍê³Éºó£¬µ÷ÓÃ½çÃæ¸üĞÂ·½·¨
+		 * æ»šåŠ¨ç¿»é¡µ ï¼ˆè‡ªå®šä¹‰å®ç°æ­¤æ–¹æ³•ï¼‰
+		 * myScroll.refresh();		// æ•°æ®åŠ è½½å®Œæˆåï¼Œè°ƒç”¨ç•Œé¢æ›´æ–°æ–¹æ³•
 		 */
 		function pullUpAction () {
 			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
@@ -88,17 +88,17 @@
 				/*for (i=0; i<3; i++) {
 					li = document.createElement('li');
 					li.className = "li-commodity";
-					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>»ªÎªÈÙÒ«3cÊÖ»ú¿Ç ÈÙÒ«3CÊÖ»úÌ×½ğÊôÍâ¿Ç" + (++generatedCount) + "</span><span class='s-money'>£¤120.00<em>130.00</em></span><span class='s-num'>ÒÑÊÛ³ö£º2000¼ş</span></span><span class='clr'></span></a>";
-					//li.innerText = '²Ù×÷ÏµÍ³ ' + (++generatedCount);
+					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>åä¸ºè£è€€3cæ‰‹æœºå£³ è£è€€3Cæ‰‹æœºå¥—é‡‘å±å¤–å£³" + (++generatedCount) + "</span><span class='s-money'>ï¿¥120.00<em>130.00</em></span><span class='s-num'>å·²å”®å‡ºï¼š2000ä»¶</span></span><span class='clr'></span></a>";
+					//li.innerText = 'æ“ä½œç³»ç»Ÿ ' + (++generatedCount);
 					el.appendChild(li, el.childNodes[0]);
 				}*/
 				
-				myScroll.refresh();		// Êı¾İ¼ÓÔØÍê³Éºó£¬µ÷ÓÃ½çÃæ¸üĞÂ·½·¨ Remember to refresh when contents are loaded (ie: on ajax completion)
+				myScroll.refresh();		// æ•°æ®åŠ è½½å®Œæˆåï¼Œè°ƒç”¨ç•Œé¢æ›´æ–°æ–¹æ³• Remember to refresh when contents are loaded (ie: on ajax completion)
 			}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
 		}
 		
 		/**
-		 * ³õÊ¼»¯iScroll¿Ø¼ş
+		 * åˆå§‹åŒ–iScrollæ§ä»¶
 		 */
 		function loaded() {
 			pullDownEl = document.getElementById('pullDown');
@@ -107,46 +107,46 @@
 			pullUpOffset = pullUpEl.offsetHeight;
 			
 			myScroll = new iScroll('wrapper', {
-				scrollbarClass: 'myScrollbar', /* ÖØÒªÑùÊ½ */
-				useTransition: false, /* ´ËÊôĞÔ²»ÖªÓÃÒâ£¬±¾ÈË´Ótrue¸ÄÎªfalse */
+				scrollbarClass: 'myScrollbar', /* é‡è¦æ ·å¼ */
+				useTransition: false, /* æ­¤å±æ€§ä¸çŸ¥ç”¨æ„ï¼Œæœ¬äººä»trueæ”¹ä¸ºfalse */
 				topOffset: pullDownOffset,
 				onRefresh: function () {
 					if (pullDownEl.className.match('loading')) {
 						pullDownEl.className = '';
-						pullDownEl.querySelector('.pullDownLabel').innerHTML = 'ÏÂÀ­Ë¢ĞÂ...';
-					} else if (pullUpEl.className.match('loading')) {//ÏÂÀ­ËÉ¿ª
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = 'ä¸‹æ‹‰åˆ·æ–°...';
+					} else if (pullUpEl.className.match('loading')) {//ä¸‹æ‹‰æ¾å¼€
 						pullUpEl.className = '';
-						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'ÉÏÀ­¼ÓÔØ¸ü¶à...';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'ä¸Šæ‹‰åŠ è½½æ›´å¤š...';
 					}
 				},
 				onScrollMove: function () {
 					if (this.y > 5 && !pullDownEl.className.match('flip')) {
 						pullDownEl.className = 'flip';
-						pullDownEl.querySelector('.pullDownLabel').innerHTML = 'ËÉÊÖ¿ªÊ¼¸üĞÂ...';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = 'æ¾æ‰‹å¼€å§‹æ›´æ–°...';
 						this.minScrollY = 0;
 					} else if (this.y < 5 && pullDownEl.className.match('flip')) {
 						pullDownEl.className = '';
-						pullDownEl.querySelector('.pullDownLabel').innerHTML = 'ÏÂÀ­Ë¢ĞÂ...';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = 'ä¸‹æ‹‰åˆ·æ–°...';
 						this.minScrollY = -pullDownOffset;
-					} else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) { //ÏÂÀ­ËÉ¿ª
+					} else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) { //ä¸‹æ‹‰æ¾å¼€
 						pullUpEl.className = 'flip';
-						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'ËÉÊÖ¿ªÊ¼¸üĞÂ...';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'æ¾æ‰‹å¼€å§‹æ›´æ–°...';
 						this.maxScrollY = this.maxScrollY;
 					} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
 						pullUpEl.className = '';
-						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'ÉÏÀ­¼ÓÔØ¸ü¶à...';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'ä¸Šæ‹‰åŠ è½½æ›´å¤š...';
 						this.maxScrollY = pullUpOffset;
 					}
 				},
 				onScrollEnd: function () {
 					if (pullDownEl.className.match('flip')) {
 						pullDownEl.className = 'loading';
-						pullDownEl.querySelector('.pullDownLabel').innerHTML = '¼ÓÔØÖĞ...';				
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = 'åŠ è½½ä¸­...';				
 						pullDownAction();	// Execute custom function (ajax call?)
-					} else if (pullUpEl.className.match('flip')) {//ÏÂÀ­ËÉ¿ª
+					} else if (pullUpEl.className.match('flip')) {//ä¸‹æ‹‰æ¾å¼€
 						pullUpEl.className = 'loading';
 						//pullUpEl.querySelector('.pullUpIcon').style.display = "none";
-						pullUpEl.querySelector('.pullUpLabel').innerHTML = '¼ÓÔØÖĞ...';				
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'åŠ è½½ä¸­...';				
 						pullUpAction();	// Execute custom function (ajax call?)
 					}
 				}
@@ -155,7 +155,7 @@
 			setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
 		}
 		
-		//³õÊ¼»¯°ó¶¨iScroll¿Ø¼ş 
+		//åˆå§‹åŒ–ç»‘å®šiScrollæ§ä»¶ 
 		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 		document.addEventListener('DOMContentLoaded', loaded, false); 
 </script>
@@ -218,7 +218,7 @@ body {
 .pullUpLabel{ width:55%; float:left; display:block; }
 
 
-/*------------- S ÒÔÏÂcssÖ÷ÒªÊÇ·ÂIOS¹ö¶¯ÌõÑùÊ½(¿ÉÑ¡ÑùÊ½)  -------------*/		
+/*------------- S ä»¥ä¸‹cssä¸»è¦æ˜¯ä»¿IOSæ»šåŠ¨æ¡æ ·å¼(å¯é€‰æ ·å¼)  -------------*/		
 .myScrollbarH {
 	position:absolute;
 	z-index:100;
@@ -255,34 +255,34 @@ body {
 	
 	border-width:3px;
 }
-/*------------- E ÒÔÉÏcssÖ÷ÒªÊÇ·ÂIOS¹ö¶¯ÌõÑùÊ½  -------------*/
+/*------------- E ä»¥ä¸Šcssä¸»è¦æ˜¯ä»¿IOSæ»šåŠ¨æ¡æ ·å¼  -------------*/
 
 </style>
 </head>
 
 <body style="background:#f7f5f5;">
-	<!--ËÑË÷ ¸ß¶È£º3.26rem-->
+	<!--æœç´¢ é«˜åº¦ï¼š3.26rem-->
     <section class="stn-search">
-    	<input class="fz28" type="text" placeholder="ËÑË÷Ïà¹Ø²úÆ·" />
+    	<input class="fz28" type="text" placeholder="æœç´¢ç›¸å…³äº§å“" />
     </section>
-    <!--ËÑË÷-end-->
+    <!--æœç´¢-end-->
     
-	<!--Í·²¿¸ß¶È£º2.47rem-->
+	<!--å¤´éƒ¨é«˜åº¦ï¼š2.47rem-->
 	<header class="list-head">
-		<ul>  <!--´Ó¸ßµ½µ×£º s-down  --><!--´Óµ×µ½¸ß£º s-up  -->
-			<li><a class="fz24" href="#"><span class="s-name s-down">×ÛºÏ</span></a></li>
-			<li><a class="fz24" href="#"><span class="s-name">ÏúÁ¿</span></a></li>
-			<li><a class="a-money fz24" href="#"><span class="s-name">¼Û¸ñ</span></a></li>
-			<li><a href="#"><span class="s-icon"><img src="header/header1/res/img/iconbig.png" /></span></a></li>  <!--´óÍ¼Í¼±ê£ºiconbig.png--><!--ÖĞÍ¼Í¼±ê£ºiconthe.png--><!--Ğ¡Í¼Í¼±ê£ºiconsmall.png-->
+		<ul>  <!--ä»é«˜åˆ°åº•ï¼š s-down  --><!--ä»åº•åˆ°é«˜ï¼š s-up  -->
+			<li><a class="fz24" href="#"><span class="s-name s-down">ç»¼åˆ</span></a></li>
+			<li><a class="fz24" href="#"><span class="s-name">é”€é‡</span></a></li>
+			<li><a class="a-money fz24" href="#"><span class="s-name">ä»·æ ¼</span></a></li>
+			<li><a href="#"><span class="s-icon"><img src="header/header1/res/img/iconbig.png" /></span></a></li>  <!--å¤§å›¾å›¾æ ‡ï¼šiconbig.png--><!--ä¸­å›¾å›¾æ ‡ï¼šiconthe.png--><!--å°å›¾å›¾æ ‡ï¼šiconsmall.png-->
 		</ul>
 	</header>
-	<!--Í·²¿-end-->
+	<!--å¤´éƒ¨-end-->
     
-    <!--ÁĞ±í-->
+    <!--åˆ—è¡¨-->
     <div id="wrapper">
         <div id="scroller">
             <div id="pullDown">
-                <span class="pullDownIcon"></span><span class="pullDownLabel">ÏÂÀ­Ë¢ĞÂ...</span>
+                <span class="pullDownIcon"></span><span class="pullDownLabel">ä¸‹æ‹‰åˆ·æ–°...</span>
             </div>
             
             <section class="stn-lists" id="thelist">
@@ -290,32 +290,32 @@ body {
                    <li>
                         <a href="#">
                             <table><tr><td class="s-img"><img src="../../login/layout1/sellerlogin/login1/res/img/bg.jpg" /></td></tr></table>
-                            <p class="p-name fz28">ÃÀ¹úÔ­×°½ø¿Ú¾«Ñ¡ÓÅÖÊ¿ªĞÄ¹û(ÄÌÓÍÎ¶)218gx2ÃÀ¹úÔ­×°½ø¿Ú¾«Ñ¡ÓÅÖÊ¿ªĞÄ¹û(ÄÌÓÍÎ¶)218gx2</p>
-                            <p class="p-money fz36">£¤49.00<span class="fz24">ÏúÁ¿:27¼ş</span></p>
+                            <p class="p-name fz28">ç¾å›½åŸè£…è¿›å£ç²¾é€‰ä¼˜è´¨å¼€å¿ƒæœ(å¥¶æ²¹å‘³)218gx2ç¾å›½åŸè£…è¿›å£ç²¾é€‰ä¼˜è´¨å¼€å¿ƒæœ(å¥¶æ²¹å‘³)218gx2</p>
+                            <p class="p-money fz36">ï¿¥49.00<span class="fz24">é”€é‡:27ä»¶</span></p>
                         </a>
                         <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
                     </li>
                     <li>
                         <a href="#">
                             <table><tr><td class="s-img"><img src="../../index/layout1/pic/pic1/res/img/img1.jpg" /></td></tr></table>
-                            <p class="p-name fz28">ÃÀ¹úÔ­×°½ø¿Ú¾«Ñ¡ÓÅÖÊ¿ªĞÄ¹û(ÄÌÓÍÎ¶)218gx2ÃÀ¹úÔ­×°½ø¿Ú¾«Ñ¡ÓÅÖÊ¿ªĞÄ¹û(ÄÌÓÍÎ¶)218gx2</p>
-                            <p class="p-money fz36">£¤49.00<span class="fz24">ÏúÁ¿:27¼ş</span></p>
+                            <p class="p-name fz28">ç¾å›½åŸè£…è¿›å£ç²¾é€‰ä¼˜è´¨å¼€å¿ƒæœ(å¥¶æ²¹å‘³)218gx2ç¾å›½åŸè£…è¿›å£ç²¾é€‰ä¼˜è´¨å¼€å¿ƒæœ(å¥¶æ²¹å‘³)218gx2</p>
+                            <p class="p-money fz36">ï¿¥49.00<span class="fz24">é”€é‡:27ä»¶</span></p>
                         </a>
                         <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
                     </li>
                     <li>
                         <a href="#">
                             <table><tr><td class="s-img"><img src="lists/lists1/res/img/img1.jpg" /></td></tr></table>
-                            <p class="p-name fz28">ÃÀ¹úÔ­×°½ø¿Ú¾«Ñ¡ÓÅÖÊ¿ªĞÄ¹û(ÄÌÓÍÎ¶)218gx2ÃÀ¹úÔ­×°½ø¿Ú¾«Ñ¡ÓÅÖÊ¿ªĞÄ¹û(ÄÌÓÍÎ¶)218gx2</p>
-                            <p class="p-money fz36">£¤49.00<span class="fz24">ÏúÁ¿:27¼ş</span></p>
+                            <p class="p-name fz28">ç¾å›½åŸè£…è¿›å£ç²¾é€‰ä¼˜è´¨å¼€å¿ƒæœ(å¥¶æ²¹å‘³)218gx2ç¾å›½åŸè£…è¿›å£ç²¾é€‰ä¼˜è´¨å¼€å¿ƒæœ(å¥¶æ²¹å‘³)218gx2</p>
+                            <p class="p-money fz36">ï¿¥49.00<span class="fz24">é”€é‡:27ä»¶</span></p>
                         </a>
                         <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
                     </li>
                     <li>
                         <a href="#">
                             <span class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></span>
-                            <p class="p-name fz28">ÃÀ¹úÔ­×°½ø¿Ú¾«Ñ¡ÓÅÖÊ¿ªĞÄ¹û(ÄÌÓÍÎ¶)218gx2ÃÀ¹úÔ­×°½ø¿Ú¾«Ñ¡ÓÅÖÊ¿ªĞÄ¹û(ÄÌÓÍÎ¶)218gx2</p>
-                            <p class="p-money fz36">£¤49.00<span class="fz24">ÏúÁ¿:27¼ş</span></p>
+                            <p class="p-name fz28">ç¾å›½åŸè£…è¿›å£ç²¾é€‰ä¼˜è´¨å¼€å¿ƒæœ(å¥¶æ²¹å‘³)218gx2ç¾å›½åŸè£…è¿›å£ç²¾é€‰ä¼˜è´¨å¼€å¿ƒæœ(å¥¶æ²¹å‘³)218gx2</p>
+                            <p class="p-money fz36">ï¿¥49.00<span class="fz24">é”€é‡:27ä»¶</span></p>
                         </a>
                         <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
                     </li>
@@ -323,14 +323,14 @@ body {
             </section>
             
             <div id="pullUp">
-                <span class="pullUpIcon"></span><span class="pullUpLabel">ÉÏÀ­¼ÓÔØ¸ü¶à...</span>
+                <span class="pullUpIcon"></span><span class="pullUpLabel">ä¸Šæ‹‰åŠ è½½æ›´å¤š...</span>
             </div>
         </div>
     </div>
     
-    <!--ÁĞ±í-end-->
+    <!--åˆ—è¡¨-end-->
     
-    <!--¿ì½İ¹ºÎï³µÀ¸-->
+    <!--å¿«æ·è´­ç‰©è½¦æ -->
 	<script>
 		$(function(){
 			var _boxcart = $('#BoxCart');
@@ -354,40 +354,40 @@ body {
 	</script>
 	
 	<div class="box-cart" id="BoxCart">
-		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--Ìí¼Ó¹ºÎï³µÎ´µã»÷×´Ì¬£ºbtncart.png-->  <!--Ìí¼Ó¹ºÎï³µºó×´Ì¬£ºbtncarth.png-->
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--æ·»åŠ è´­ç‰©è½¦æœªç‚¹å‡»çŠ¶æ€ï¼šbtncart.png-->  <!--æ·»åŠ è´­ç‰©è½¦åçŠ¶æ€ï¼šbtncarth.png-->
 		<div class="boxcart-nav">
 			<a class="btn" href="#">
 				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/home.png" /></span>
-				<p class="fz26">Ê×Ò³</p>
+				<p class="fz26">é¦–é¡µ</p>
 			</a>
 			<a class="cart" href="#">
-				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--¹ºÎï³µÎ´µã»÷×´Ì¬£ºcarth.png-->  <!--Ìí¼Ó¹ºÎï³µºó×´Ì¬£ºcart.png-->
-				<p class="fz26">¹ºÎï³µ</p>
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--è´­ç‰©è½¦æœªç‚¹å‡»çŠ¶æ€ï¼šcarth.png-->  <!--æ·»åŠ è´­ç‰©è½¦åçŠ¶æ€ï¼šcart.png-->
+				<p class="fz26">è´­ç‰©è½¦</p>
 			</a>
             <a class="cart" href="#">
 				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/member.png" /></span>
-				<p class="fz26">»áÔ±</p>
+				<p class="fz26">ä¼šå‘˜</p>
 			</a>
 			<a class="cart" href="#">
 				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/login.png" /></span>
-				<p class="fz26">µÇÂ¼</p>
+				<p class="fz26">ç™»å½•</p>
 			</a>
 		</div>
 	</div>
-    <!--¿ì½İ¹ºÎï³µÀ¸-end-->
+    <!--å¿«æ·è´­ç‰©è½¦æ -end-->
     
     
-     <!--¿Õ°×BOTTOM²¿¼ş -3.27rem-->
+     <!--ç©ºç™½BOTTOMéƒ¨ä»¶ -3.27rem-->
 	<div class="blank-bottom" style="height:3.27rem"></div>
-	<!--¿Õ°×BOTTOM²¿¼ş -end-->
+	<!--ç©ºç™½BOTTOMéƒ¨ä»¶ -end-->
 
-    <!--µ×²¿¸ß¶È£º3.27rem-->
+    <!--åº•éƒ¨é«˜åº¦ï¼š3.27rem-->
     <script>
 		$(function(){
-			var _stntext = $('#StnTxet');  /*Àà±ğ¿ò*/
-			var _btntext = $('#BtnText');  /*ÇĞ»»ÊäÈë¿ò°´Å¥*/
-			var _stninput = $('#StnInput');  /*ÊäÈë¿ò*/
-			var _btninput = $('#BtnInput');  /*ÇĞ»»Àà±ğ°´Å¥*/
+			var _stntext = $('#StnTxet');  /*ç±»åˆ«æ¡†*/
+			var _btntext = $('#BtnText');  /*åˆ‡æ¢è¾“å…¥æ¡†æŒ‰é’®*/
+			var _stninput = $('#StnInput');  /*è¾“å…¥æ¡†*/
+			var _btninput = $('#BtnInput');  /*åˆ‡æ¢ç±»åˆ«æŒ‰é’®*/
 			var _li = _stntext.find('.li-type');
 			_btntext.click(function(){
 				_stntext.hide();
@@ -439,60 +439,60 @@ body {
 		}
 	</script>
 	<footer>
-		<!--Àà±ğ-->
+		<!--ç±»åˆ«-->
 		<section class="stn-text" id="StnTxet">
-			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">ÇĞ»»ÊäÈë¿ò</span></a>
+			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">åˆ‡æ¢è¾“å…¥æ¡†</span></a>
 			<ul>
 				<li class="li-type">
-					<a class="fz28" href="#"><span class="s-icon">²úÆ··ÖÀà</span></a>
+					<a class="fz28" href="#"><span class="s-icon">äº§å“åˆ†ç±»</span></a>
 					<ol>
 						<li>
-                        	<a class="fz28" href="#">·ÖÀà1</a>
+                        	<a class="fz28" href="#">åˆ†ç±»1</a>
                             <div class="type-lv">
-                            	<a class="fz28" href="#">·ÖÀà11</a>
-                                <a class="fz28" href="#">·ÖÀà12</a>
-                                <a class="fz28" href="#">·ÖÀà13</a>
-                                <a class="fz28" href="#">·ÖÀà14</a>
+                            	<a class="fz28" href="#">åˆ†ç±»11</a>
+                                <a class="fz28" href="#">åˆ†ç±»12</a>
+                                <a class="fz28" href="#">åˆ†ç±»13</a>
+                                <a class="fz28" href="#">åˆ†ç±»14</a>
                             </div>
                         </li>
 						<li>
-                        	<a class="fz28" href="#">·ÖÀà2</a>
+                        	<a class="fz28" href="#">åˆ†ç±»2</a>
                             <div class="type-lv">
-                            	<a class="fz28" href="#">·ÖÀà21</a>
-                                <a class="fz28" href="#">·ÖÀà22</a>
-                                <a class="fz28" href="#">·ÖÀà23</a>
-                                <a class="fz28" href="#">·ÖÀà24</a>
+                            	<a class="fz28" href="#">åˆ†ç±»21</a>
+                                <a class="fz28" href="#">åˆ†ç±»22</a>
+                                <a class="fz28" href="#">åˆ†ç±»23</a>
+                                <a class="fz28" href="#">åˆ†ç±»24</a>
                             </div>
                         </li>
-						<li><a class="fz28" href="#">·ÖÀà3</a></li>
+						<li><a class="fz28" href="#">åˆ†ç±»3</a></li>
 					</ol>
 				</li>
 				<li class="li-type">
-					<a class="fz28" href="#"><span class="s-icon">»áÔ±ÖĞĞÄ</span></a>
+					<a class="fz28" href="#"><span class="s-icon">ä¼šå‘˜ä¸­å¿ƒ</span></a>
                     <ol>
-						<li><a class="fz28" href="#">·ÖÀà7</a></li>
-						<li><a class="fz28" href="#">·ÖÀà8</a></li>
-						<li><a class="fz28" href="#">·ÖÀà9</a></li>
+						<li><a class="fz28" href="#">åˆ†ç±»7</a></li>
+						<li><a class="fz28" href="#">åˆ†ç±»8</a></li>
+						<li><a class="fz28" href="#">åˆ†ç±»9</a></li>
 					</ol>
 				</li>
 				<li class="li-type">
-					<a class="fz28" href="#"><span class="s-icon">¹Ø×¢·ÖÏí</span></a>
+					<a class="fz28" href="#"><span class="s-icon">å…³æ³¨åˆ†äº«</span></a>
 				</li>
 			</ul>
 			<div class="clr"></div>
 		</section>
-		<!--Àà±ğ-end-->
+		<!--ç±»åˆ«-end-->
 		
-		<!--ÊäÈë¿ò-->
+		<!--è¾“å…¥æ¡†-->
 		<section class="stn-input" id="StnInput">
-			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">ÇĞ»»Àà±ğ</span></a>
+			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">åˆ‡æ¢ç±»åˆ«</span></a>
 			<div class="input"><input type="text" /></div>
-			<button>ËÑË÷</button>
+			<button>æœç´¢</button>
 		</section>
-		<!--ÊäÈë¿ò-end-->
+		<!--è¾“å…¥æ¡†-end-->
 		
-		<section class="stn-null fz36" id="StnNull">Î´ÉèÖÃ·ÖÀà</section>
+		<section class="stn-null fz36" id="StnNull">æœªè®¾ç½®åˆ†ç±»</section>
 	</footer>
-	<!--µ×²¿-end-->
+	<!--åº•éƒ¨-end-->
 </body>
 </html>

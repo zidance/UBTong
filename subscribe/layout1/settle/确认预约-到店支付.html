@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<title>ѡ��֧����ʽ-�������</title>
-<meta charset="gbk">
+<title>选择支付方式-到店服务</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -19,84 +19,84 @@
 </head>
 
 <body style="background:#f7f5f5;">
-	<!--������Ϣ-->
+	<!--订单信息-->
     <section class="stn-orderinfor">
-    	<p>������Ϣ</p>
+    	<p>订单信息</p>
         <table>
             <tr>
-                <td>������ţ�</td>
+                <td>订单编号：</td>
                 <td class="td-black">782341359561135413</td>
             </tr>
             <tr>
-                <td>������Ŀ��</td>
-                <td class="td-black">��������SPA</td>
+                <td>服务项目：</td>
+                <td class="td-black">美容美体SPA</td>
             </tr>
             <tr>
-                <td>�µ�ʱ�� :</td>
+                <td>下单时间 :</td>
                 <td class="td-black">2014.10.01  13:45:25</td>
             </tr>
             <tr>
-                <td>֧����</td>
-                <td class="td-black">999.00Ԫ</td>
+                <td>支付金额：</td>
+                <td class="td-black">999.00元</td>
             </tr>
             <tr>
-                <td>���׷�ʽ��</td>
-                <td class="td-black">�������</td>
+                <td>交易方式：</td>
+                <td class="td-black">到店服务</td>
             </tr>
             <tr>
-                <td>�����ַ��</td>
-                <td class="td-black">��¥����Ȫ��Ԣ1��303#</td>
+                <td>网点地址：</td>
+                <td class="td-black">鼓楼区金泉公寓1栋303#</td>
             </tr>
         </table>
     </section>
-    <!--������Ϣ-end-->
+    <!--订单信息-end-->
     
-    <!--����-->
+    <!--留言-->
     <div class="settlement-gbook">
-		<span class="s-name fz28">����</span>
+		<span class="s-name fz28">留言</span>
 		<input class="fz28" type="text" />
 	</div>
-    <!--����-end-->
+    <!--留言-end-->
     
     
     
-    <!--�ҵĺ��-->
+    <!--我的红包-->
 	<div class="subscribe-envelope" id="selectShow">
 		<input type="checkbox" />
 		<a class="integral" href="#">
-			<p class="fz28">����ֿ�<span>&nbsp;10Ԫ���</span></p>
+			<p class="fz28">红包抵扣<span>&nbsp;10元红包</span></p>
 		</a>
 		<div class="clr"></div>
 	</div>
     
-    <!--������-->
+    <!--弹出框-->
     <a id="timeMb" class="hide" href="javascript:void(0);"></a>
     <div id="selectTime" class="hide" style="-webkit-transform: translate3d(0px, -190px, 0px);">
         
         <h3>
-        <a href="javascript:void(0);" class="fl" style="display:none;">ȡ��</a>
-       <p class="p-title fz32">�ҵĺ��</p>
-        <a href="javascript:void(0);" class="fr not">ȷ��</a></h3>
+        <a href="javascript:void(0);" class="fl" style="display:none;">取消</a>
+       <p class="p-title fz32">我的红包</p>
+        <a href="javascript:void(0);" class="fr not">确定</a></h3>
         
-<!--        <a class="btn">�ر�</a>-->
+<!--        <a class="btn">关闭</a>-->
         
         <div class="timeFloat">
             <div class="dateWrap" id="dateSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 0px, 0px);margin-top:-45px;">
                 <ul style="height: 120px;">
-                   <!--active��ǰѡ��-->
-                    <li>����ȯ<span>&nbsp;5Ԫ</span></li>
-                    <li>����ȯ<span>&nbsp;10Ԫ</span></li>
-                    <li class="active">����ȯ<span>&nbsp;20Ԫ</span></li>
-                    <li>����ȯ<span>&nbsp;30Ԫ</span></li>
-                    <li>����ȯ<span>&nbsp;50Ԫ</span></li>
-                    <li>����ȯ<span>&nbsp;50Ԫ</span></li>
-                    <li>����ȯ<span>&nbsp;50Ԫ</span></li>
+                   <!--active当前选中-->
+                    <li>美容券<span>&nbsp;5元</span></li>
+                    <li>美容券<span>&nbsp;10元</span></li>
+                    <li class="active">美体券<span>&nbsp;20元</span></li>
+                    <li>整形券<span>&nbsp;30元</span></li>
+                    <li>美容券<span>&nbsp;50元</span></li>
+                    <li>美容券<span>&nbsp;50元</span></li>
+                    <li>美容券<span>&nbsp;50元</span></li>
                 </ul>
             </div>
             
             <div class="timeWrap" id="timeSelect" style="">
                 <ul style="height: 360px;">
-                    <!--active��ǰѡ�� timeout��ԤԼ-->
+                    <!--active当前选中 timeout已预约-->
                     <li class="active"></li>
                 </ul>
             </div>
@@ -112,10 +112,10 @@
     </script>
     
     
-    <!--��ť �߶ȣ�4.51rem-->
+    <!--按钮 高度：4.51rem-->
     <section class="stn-pricesbtn">
-    	<a class="fz32" href="#">ȷ��ԤԼ</a>
+    	<a class="fz32" href="#">确认预约</a>
     </section>
-    <!--��ť-end-->
+    <!--按钮-end-->
 </body>
 </html>
