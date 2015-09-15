@@ -1,0 +1,26 @@
+.followers{ width:100%; height:2.9rem; z-index:9999; position:fixed; top:0; left:0;}
+.followers .opacity-bg{ width:100%; height:2.9rem; background:#000;filter:alpha(opacity:30); opacity:0.3; position:relative;}
+.followers .foll-logo{ width:2.9rem; height:2.9rem; position:absolute; left:0; top:0;}
+.followers .foll-logo img{ width:100%; height:100%}
+.followers .foll-p{height:2.9rem; line-height:2.9rem; color:#fff; padding-left:0.72rem; width:11rem; text-align:left; position:absolute; left:2.9rem; top:0; z-index:32;}
+.followers .foll-add{ height:1.81rem; display:inline-block; background:#ff6633; color:#fff; line-height:1.81rem; padding:0 .65rem; margin:0.54rem 0; border-radius:6px; z-index:32; cursor:pointer; position:absolute; right:2.6rem; top:0;}
+.followers .foll-close{ display:inline-block; width:0.8rem; height:.8rem; background:url(../img/close.png) no-repeat; background-size:.8rem .8rem; text-indent:-9999px; position:absolute; right:.94rem; top:1.05rem; cursor:pointer;}
+.followers .foll-close img{ width:100%; height:100%;}
+
+
+.erweima{ width:20.34rem; height: 22.16rem; background:#fff; border-radius:.36rem; margin:2.03rem auto; position:fixed; top:2.9rem; left:15.7rem;display:none; z-index:9998; }
+.erweima .close{ position:absolute; right:1.09rem; top:.94rem; width:1.23rem; height:1.23rem;text-indent:-9999px; background:url(../img/close2.png) no-repeat; background-size:1.23rem 1.23rem;}
+.erweima .er-img{ width:13.8rem; height:13.8rem; margin:0 auto; padding:3.36rem 0 1.45rem;}
+.erweima img{ width:100%; height:100%;}
+.erweima .er-p{ color:#555555; text-align:center; width:100%; }
+
+@media screen and (min-width:321px) and (max-width:640px){
+.followers .foll-right{ width:84%;}
+.erweima{ width:84%; height:18rem; left:1.4rem;}
+.erweima .er-img{ width:10rem; height:10rem;}
+}
+
+@media screen and (max-width:320px){
+	.erweima{ left:1.75rem;}
+
+}

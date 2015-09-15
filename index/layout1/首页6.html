@@ -12,10 +12,56 @@
 <link href="lists/lists5/res/css/lists.css" rel="stylesheet" type="text/css" />
 <link href="../../parts/footer/footer5/res/css/footer.css" rel="stylesheet" type="text/css" />
 <link href="../../parts/blank/blank1/res/css/blank.css" rel="stylesheet" type="text/css" />
+<link href="followers/res/css/followers.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
 </head>
 
-<body style="background:#f7f5f5;">
+<script>
+	$(function(){
+		var _add=$('.foll-add');
+		var _follclose=$('.foll-close');
+		var _erclose=$('.close');
+		var _box=$('.erweima');
+		var _followers=$('.followers');
+		
+		_follclose.click(function(){
+			_followers.hide();	
+			_box.hide();
+		});
+		
+		_add.click(function(){
+			_box.show();	
+		});
+		
+		_erclose.click(function(){
+			_box.hide();	
+		});
+	})
+
+</script>
+
+<body style="background-color:#f7f5f5;">
+<section>
+	<section class="followers">
+    	<p class="opacity-bg">
+            <div class="foll-logo">
+                <img src="followers/res/img/nav-img.jpg">
+            </div>
+ 
+            <p class="foll-p fz32">白白小铺</p>
+            <a class="foll-add fz24">加关注</a>
+            <a class="foll-close">关闭</a>
+
+        </p>
+    </section>
+    
+    
+	<section class="erweima">
+    	<a class="close">关闭</a>
+   		<div class="er-img"><img src="followers/res/img/erweima.png"></div>
+    	<p class="er-p fz28">长按此图 识别图中二维码 轻松关注</p>
+    </section>
+</section>
 	<!--轮播图片-->
 	<script type="text/javascript" src="header/header3/res/js/touchslider.js"></script>
 	<div class="banner">
