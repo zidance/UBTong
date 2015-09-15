@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>��ҳ</title>
+<title>首页</title>
 <meta charset="gbk">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -18,22 +18,56 @@
 <link href="../../parts/footer/footer1/res/css/footer.css" rel="stylesheet" type="text/css" />
 <link href="../../parts/blank/blank1//res/css/blank.css" rel="stylesheet" type="text/css" />
 <script src="../../common/js/zepto-1.16.min.js"></script>
+    <link href="/parts/music/music1/res/css/music.css" rel="stylesheet" type="text/css" />
+    <script src="/parts/music/music1/res/js/music.js"></script>
+    
 </head>
 
 <body onload="loaded()">
-	<!--ͷ�� �߶ȣ�5.35rem-->
-	<aside class="aid-prompt">�𾴵Ĺ˿ͣ�����λ�ò����ͻ���Χ�ڣ�</aside>
+    <section class="stn-music" controls="controls" autoplay>
+        <!--音乐控件-->
+        <audio src="/parts/music/music1/res/img/demo.mp3"  autoplay="autoplay" loop="loop"></audio>
+        
+        <img class="play" src="/parts/music/music1/res/img/play.png" />
+        <img class="pause" src="/parts/music/music1/res/img/pause.png" />
+    </section>
+    <script>
+    $(function () {
+    var _btn = $(".stn-music");
+    _btn.on("tap click",function _play() {
+        var _audio = _btn.find("audio").get(0)
+        _btn.off("tap click",_play)
+
+            if (!_audio.paused) {
+                _audio.pause(); 
+                _btn.find(".pause").hide();
+                _btn.find(".play").show()
+            } else {
+                _audio.play();
+                _btn.find(".play").hide();
+                _btn.find(".pause").show();
+            }
+        setTimeout(function(){
+            _btn.on("tap click",_play)
+        },1000)
+    })
+})
+    </script>
+    
+    
+	<!--头部 高度：5.35rem-->
+	<aside class="aid-prompt">尊敬的顾客，您的位置不在送货范围内！</aside>
 	<header class="head-index">
 		<a class="a-logo" href="#"><img src="header/header2/res/img/logo.png" /></a>
-		<input type="text" placeholder="��������Ʒ�ؼ���" />
+		<input type="text" placeholder="请输入商品关键字" />
 	</header>
-	<!--ͷ�� -end-->
+	<!--头部 -end-->
 	
-	<!--�հ�TOP���� -->
+	<!--空白TOP部件 -->
 	<div class="blank-top" style="height:5.35rem"></div>
-	<!--�հ�TOP���� -end-->
+	<!--空白TOP部件 -end-->
 
-    <!--�ֲ�ͼƬ-->
+    <!--轮播图片-->
 	<script type="text/javascript" src="pic/pic1/res/js/touchslider.js"></script>
 	<div class="banner">
 		<div id="slider" class="slider">
@@ -48,33 +82,33 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="pic/pic1/res/js/banner.js"></script>
-    <!--�ֲ�ͼƬ-end-->
+    <!--轮播图片-end-->
 	
-    <!--����-->
+    <!--导航-->
 	<nav>
 		<script type="text/javascript" src="nav/nav2/res/js/touch.js"></script>
     	<div class="nav-banner">
             <div id="nav-slider" class="nav-slider">
                 <div id="navsliderlist" class="nav-sliderlist">
                 	<ul>
-                        <li><a href="#"><span class="s1"><img src="nav/nav2/res/img/nav1.png"/></span><p>������Ʒ</p></a></li>
-                        <li><a href="#"><span class="s2"><img src="nav/nav2/res/img/nav2.png"/></span><p>��Ʒ</p></a></li>
-                        <li><a href="#"><span class="s3"><img src="nav/nav2/res/img/nav3.png"/></span><p>����</p></a></li>
-                        <li class="li-last"><a href="#"><span class="s4"><img src="nav/nav2/res/img/nav4.png"/></span><p>�ػ�</p></a></li>
-                        <li><a href="#"><span class="s5"><img src="nav/nav2/res/img/nav5.png"/></span><p>�ҵĶ���</p></a></li>
-                        <li><a href="#"><span class="s6"><img src="nav/nav2/res/img/nav6.png"/></span><p>ǩ������</p></a></li>
-                        <li><a href="#"><span class="s7"><img src="nav/nav2/res/img/nav7.png"/></span><p>����</p></a></li>
-                        <li class="li-last"><a href="#"><span class="s8"><img src="nav/nav2/res/img/nav8.png"/></span><p>��ϵ����</p></a></li>
+                        <li><a href="#"><span class="s1"><img src="nav/nav2/res/img/nav1.png"/></span><p>所有商品</p></a></li>
+                        <li><a href="#"><span class="s2"><img src="nav/nav2/res/img/nav2.png"/></span><p>新品</p></a></li>
+                        <li><a href="#"><span class="s3"><img src="nav/nav2/res/img/nav3.png"/></span><p>热卖</p></a></li>
+                        <li class="li-last"><a href="#"><span class="s4"><img src="nav/nav2/res/img/nav4.png"/></span><p>特惠</p></a></li>
+                        <li><a href="#"><span class="s5"><img src="nav/nav2/res/img/nav5.png"/></span><p>我的订单</p></a></li>
+                        <li><a href="#"><span class="s6"><img src="nav/nav2/res/img/nav6.png"/></span><p>签到有礼</p></a></li>
+                        <li><a href="#"><span class="s7"><img src="nav/nav2/res/img/nav7.png"/></span><p>帮助</p></a></li>
+                        <li class="li-last"><a href="#"><span class="s8"><img src="nav/nav2/res/img/nav8.png"/></span><p>联系我们</p></a></li>
                     </ul>
                     <ul>
-                        <li><a href="#"><span class="s1"><img src="nav/nav2/res/img/nav1.png"/></span><p>������Ʒ</p></a></li>
-                        <li><a href="#"><span class="s2"><img src="nav/nav2/res/img/nav2.png"/></span><p>��Ʒ</p></a></li>
-                        <li><a href="#"><span class="s3"><img src="nav/nav2/res/img/nav3.png"/></span><p>����</p></a></li>
-                        <li class="li-last"><a href="#"><span class="s4"><img src="nav/nav2/res/img/nav4.png"/></span><p>�ػ�</p></a></li>
-                        <li><a href="#"><span class="s5"><img src="nav/nav2/res/img/nav5.png"/></span><p>�ҵĶ���</p></a></li>
-                        <li><a href="#"><span class="s6"><img src="nav/nav2/res/img/nav6.png"/></span><p>ǩ������</p></a></li>
-                        <li><a href="#"><span class="s7"><img src="nav/nav2/res/img/nav7.png"/></span><p>����</p></a></li>
-                        <li class="li-last"><a href="#"><span class="s8"><img src="nav/nav2/res/img/nav8.png"/></span><p>��ϵ����</p></a></li>
+                        <li><a href="#"><span class="s1"><img src="nav/nav2/res/img/nav1.png"/></span><p>所有商品</p></a></li>
+                        <li><a href="#"><span class="s2"><img src="nav/nav2/res/img/nav2.png"/></span><p>新品</p></a></li>
+                        <li><a href="#"><span class="s3"><img src="nav/nav2/res/img/nav3.png"/></span><p>热卖</p></a></li>
+                        <li class="li-last"><a href="#"><span class="s4"><img src="nav/nav2/res/img/nav4.png"/></span><p>特惠</p></a></li>
+                        <li><a href="#"><span class="s5"><img src="nav/nav2/res/img/nav5.png"/></span><p>我的订单</p></a></li>
+                        <li><a href="#"><span class="s6"><img src="nav/nav2/res/img/nav6.png"/></span><p>签到有礼</p></a></li>
+                        <li><a href="#"><span class="s7"><img src="nav/nav2/res/img/nav7.png"/></span><p>帮助</p></a></li>
+                        <li class="li-last"><a href="#"><span class="s8"><img src="nav/nav2/res/img/nav8.png"/></span><p>联系我们</p></a></li>
                     </ul>
                 </div>
             </div>
@@ -85,9 +119,9 @@
         </div>
         <script type="text/javascript" src="nav/nav2/res/js/ban.js"></script>
 	</nav>
-    <!--����-end-->
+    <!--导航-end-->
     
-    <!--����ר��-->
+    <!--热卖专区-->
 	<script src="hot/hot1/res/js/iscroll.js"></script>
     <script>
 		var myScroll;
@@ -107,7 +141,7 @@
 	</script>
 	<section class="stn-hot">
 		<a class="title" href="#">
-			<h1 class="fz28">����ר��&nbsp;&nbsp;<span class="fz20">HOT</span></h1>
+			<h1 class="fz28">热卖专区&nbsp;&nbsp;<span class="fz20">HOT</span></h1>
 		</a>
 		
 		<div class="hot-wrapper" id="wrapperful1">
@@ -116,74 +150,74 @@
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 				</ul>
 				<div class="clr"></div>
@@ -193,7 +227,7 @@
     
     <section class="stn-hot">
 		<a class="title" href="#">
-			<h1 class="fz28">����ר��&nbsp;&nbsp;<span class="fz20">HOT</span></h1>
+			<h1 class="fz28">热卖专区&nbsp;&nbsp;<span class="fz20">HOT</span></h1>
 		</a>
 		
 		<div class="hot-wrapper" id="wrapperful2">
@@ -202,83 +236,83 @@
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 					<li class="fz28">
 						<a class="a-details" href="#">
 							<img src="hot/hot1/res/img/img1.png" />
-							<p class="fz18">����ԭζ��300g9</p>
-							<p class="p-money fz26">��14.90</p>
+							<p class="fz18">开心原味果300g9</p>
+							<p class="p-money fz26">￥14.90</p>
 						</a>
-						<a class="a-cart" href="#">���빺�ﳵ</a>
+						<a class="a-cart" href="#">加入购物车</a>
 					</li>
 				</ul>
 				<div class="clr"></div>
 			</div>
 		</div>
 	</section>
-	<!--����ר��-end-->
+	<!--热卖专区-end-->
     
-    <!--����-->
+    <!--分类-->
     <script>
 		/*function Liwidth(){
 			var _type = $('.stn-classification');
@@ -331,15 +365,15 @@
 	</script>
 	<section class="stn-classification">
 		<div class="typezone-left">
-			<a class="a-title fz28" href="#">��ʳר��</a>
+			<a class="a-title fz28" href="#">零食专区</a>
 			
 			<ul>
-				<li><a class="fz22" href="#">�ɻ�</a></li>
-				<li><a class="fz22" href="#">�ʹ�</a></li>
-				<li class="li-right"><a class="fz22" href="#">���</a></li>
-				<li><a class="fz22" href="#">����</a></li>
-				<li><a class="fz22" href="#">����</a></li>
-				<li class="li-right"><a class="fz22" href="#">����</a></li>
+				<li><a class="fz22" href="#">干货</a></li>
+				<li><a class="fz22" href="#">鲜果</a></li>
+				<li class="li-right"><a class="fz22" href="#">坚果</a></li>
+				<li><a class="fz22" href="#">花生</a></li>
+				<li><a class="fz22" href="#">瓜子</a></li>
+				<li class="li-right"><a class="fz22" href="#">玉米</a></li>
 			</ul>
 		</div>
 		<div class="typezone-right"><a class="a-typeimg" href="#"><img src="classification/classification1/res/img/img1.jpg" /></a></div>
@@ -348,30 +382,30 @@
     <section class="stn-classification stn-classificattwo">
 		<div class="typezone-right"><a class="a-typeimg" href="#"><img src="classification/classification1/res/img/img1.jpg" /></a></div>
 		<div class="typezone-left">
-			<a class="a-title fz28" href="#">��ʳר��</a>
+			<a class="a-title fz28" href="#">零食专区</a>
 			
 			<ul>
-				<li><a class="fz22" href="#">�ɻ�</a></li>
-				<li><a class="fz22" href="#">�ʹ�</a></li>
-				<li class="li-right"><a class="fz22" href="#">���</a></li>
-				<li><a class="fz22" href="#">����</a></li>
-				<li><a class="fz22" href="#">����</a></li>
-				<li class="li-right"><a class="fz22" href="#">����</a></li>
+				<li><a class="fz22" href="#">干货</a></li>
+				<li><a class="fz22" href="#">鲜果</a></li>
+				<li class="li-right"><a class="fz22" href="#">坚果</a></li>
+				<li><a class="fz22" href="#">花生</a></li>
+				<li><a class="fz22" href="#">瓜子</a></li>
+				<li class="li-right"><a class="fz22" href="#">玉米</a></li>
 			</ul>
 		</div>
 		<div class="clr"></div>
 	</section>
-	<!--����-end-->
+	<!--分类-end-->
     
-    <!--�鿴������Ʒ-->
+    <!--查看所有商品-->
     <style>
     	.view-product{ border:1px solid #dfdfdf; height:2.83rem; line-height:2.83rem; background:#fff; margin:.87rem 0; text-align:center; }
 		.view-product a{ display:block; color:#131313; }
     </style>
-    <div class="view-product"><a class="fz28" href="#">�鿴������Ʒ&gt;&gt;</a></div>
-    <!--�鿴������Ʒ-end-->
+    <div class="view-product"><a class="fz28" href="#">查看所有商品&gt;&gt;</a></div>
+    <!--查看所有商品-end-->
     
-    <!--���ͼƬ-->
+    <!--广告图片-->
 	<section class="stn-advertis">
 		<ul>
 			<li><a href="#"><img src="advertising/advertising1/res/img/img1.jpg" /></a></li>
@@ -381,9 +415,9 @@
 		</ul>
 		<div class="clr"></div>
 	</section>
-	<!--���ͼƬ-end-->
+	<!--广告图片-end-->
     
-    <!--��ݹ��ﳵ��-->
+    <!--快捷购物车栏-->
 	<script>
 		$(function(){
 			var _boxcart = $('#BoxCart');
@@ -407,38 +441,38 @@
 	</script>
 	
 	<div class="box-cart" id="BoxCart">
-		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--���ӹ��ﳵδ���״̬��btncart.png-->  <!--���ӹ��ﳵ��״̬��btncarth.png-->
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="../../parts/boxcart/boxcart1/res/img/btncart.png" /></a>  <!--添加购物车未点击状态：btncart.png-->  <!--添加购物车后状态：btncarth.png-->
 		<div class="boxcart-nav">
 			<a class="btn" href="#">
 				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/home.png" /></span>
-				<p class="fz26">��ҳ</p>
+				<p class="fz26">首页</p>
 			</a>
 			<a class="cart" href="#">
-				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--���ﳵδ���״̬��carth.png-->  <!--���ӹ��ﳵ��״̬��cart.png-->
-				<p class="fz26">���ﳵ</p>
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
+				<p class="fz26">购物车</p>
 			</a>
             <a class="cart" href="#">
 				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/member.png" /></span>
-				<p class="fz26">��Ա</p>
+				<p class="fz26">会员</p>
 			</a>
 			<a class="cart" href="#">
 				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/login.png" /></span>
-				<p class="fz26">��¼</p>
+				<p class="fz26">登录</p>
 			</a>
 		</div>
 	</div>
-    <!--��ݹ��ﳵ��-end-->
-	<!--�հ�BOTTOM���� -3.27rem-->
+    <!--快捷购物车栏-end-->
+	<!--空白BOTTOM部件 -3.27rem-->
 	<div class="blank-bottom" style="height:3.27rem"></div>
-	<!--�հ�BOTTOM���� -end-->
+	<!--空白BOTTOM部件 -end-->
 
-    <!--�ײ��߶ȣ�3.27rem-->
+    <!--底部高度：3.27rem-->
     <script>
 		$(function(){
-			var _stntext = $('#StnTxet');  /*����*/
-			var _btntext = $('#BtnText');  /*�л������ť*/
-			var _stninput = $('#StnInput');  /*�����*/
-			var _btninput = $('#BtnInput');  /*�л����ť*/
+			var _stntext = $('#StnTxet');  /*类别框*/
+			var _btntext = $('#BtnText');  /*切换输入框按钮*/
+			var _stninput = $('#StnInput');  /*输入框*/
+			var _btninput = $('#BtnInput');  /*切换类别按钮*/
 			var _li = _stntext.find('.li-type');
 			_btntext.click(function(){
 				_stntext.hide();
@@ -486,60 +520,60 @@
 		})
 	</script>
 	<footer>
-		<!--���-->
+		<!--类别-->
 		<section class="stn-text" id="StnTxet">
-			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">�л������</span></a>
+			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">切换输入框</span></a>
 			<ul>
 				<li class="li-type">
-					<a class="fz28" href="#"><span class="s-icon">��Ʒ����</span></a>
+					<a class="fz28" href="#"><span class="s-icon">产品分类</span></a>
 					<ol>
 						<li>
-                        	<a class="fz28" href="#">����1</a>
+                        	<a class="fz28" href="#">分类1</a>
                             <div class="type-lv">
-                            	<a class="fz28" href="#">����11</a>
-                                <a class="fz28" href="#">����12</a>
-                                <a class="fz28" href="#">����13</a>
-                                <a class="fz28" href="#">����14</a>
+                            	<a class="fz28" href="#">分类11</a>
+                                <a class="fz28" href="#">分类12</a>
+                                <a class="fz28" href="#">分类13</a>
+                                <a class="fz28" href="#">分类14</a>
                             </div>
                         </li>
 						<li>
-                        	<a class="fz28" href="#">����2</a>
+                        	<a class="fz28" href="#">分类2</a>
                             <div class="type-lv">
-                            	<a class="fz28" href="#">����21</a>
-                                <a class="fz28" href="#">����22</a>
-                                <a class="fz28" href="#">����23</a>
-                                <a class="fz28" href="#">����24</a>
+                            	<a class="fz28" href="#">分类21</a>
+                                <a class="fz28" href="#">分类22</a>
+                                <a class="fz28" href="#">分类23</a>
+                                <a class="fz28" href="#">分类24</a>
                             </div>
                         </li>
-						<li><a class="fz28" href="#">����3</a></li>
+						<li><a class="fz28" href="#">分类3</a></li>
 					</ol>
 				</li>
 				<li class="li-type">
-					<a class="fz28" href="#"><span class="s-icon">��Ա����</span></a>
+					<a class="fz28" href="#"><span class="s-icon">会员中心</span></a>
                     <ol>
-						<li><a class="fz28" href="#">����7</a></li>
-						<li><a class="fz28" href="#">����8</a></li>
-						<li><a class="fz28" href="#">����9</a></li>
+						<li><a class="fz28" href="#">分类7</a></li>
+						<li><a class="fz28" href="#">分类8</a></li>
+						<li><a class="fz28" href="#">分类9</a></li>
 					</ol>
 				</li>
 				<li class="li-type">
-					<a class="fz28" href="#"><span class="s-icon">��ע����</span></a>
+					<a class="fz28" href="#"><span class="s-icon">关注分享</span></a>
 				</li>
 			</ul>
 			<div class="clr"></div>
 		</section>
-		<!--���-end-->
+		<!--类别-end-->
 		
-		<!--�����-->
+		<!--输入框-->
 		<section class="stn-input" id="StnInput">
-			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">�л����</span></a>
+			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">切换类别</span></a>
 			<div class="input"><input type="text" /></div>
-			<button>����</button>
+			<button>搜索</button>
 		</section>
-		<!--�����-end-->
+		<!--输入框-end-->
 		
-		<section class="stn-null fz36" id="StnNull">δ���÷���</section>
+		<section class="stn-null fz36" id="StnNull">未设置分类</section>
 	</footer>
-	<!--�ײ�-end-->
+	<!--底部-end-->
 </body>
 </html>
