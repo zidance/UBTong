@@ -10,9 +10,11 @@
 .index-lists li .p-money .e-money{ display:inline-block; margin-right:.32rem; }
 .index-lists li .p-price{ color:#b9b9b9; text-decoration:line-through; }
 .index-lists li .a-addcart{ display:inline-block; background:url(../img/addcart.png) no-repeat #f98700 .53rem center; background-size:.89rem .67rem; padding:.3rem .41rem .3rem 1.56rem; color:#fff; border-radius:3px; position:absolute; bottom:.54rem; right:.65rem; text-shadow:2px 2px 1px #f06d00; }
-.index-lists .li-null .a-addcart{ background-color:#b9b9b9; text-shadow:2px 2px 1px #959595; }
+.index-lists .li-null .a-addcart { background-color:#b9b9b9; text-shadow:2px 2px 1px #959595; }
 .index-lists li .a-reservat{ display:inline-block; background:url(../img/reservat.png) no-repeat #f98700 .69rem center; background-size:.81rem .63rem; padding:.36rem .73rem .32rem 1.9rem; color:#fff; border-radius:3px; position:absolute; bottom:.54rem; right:.65rem; text-shadow:2px 2px 1px #f06d00; }
 .index-lists .li-null .a-reservat{ background-color:#b9b9b9; text-shadow:2px 2px 1px #959595; }
+.index-lists li .a-subscribe{ display:inline-block; background:url(../img/subscribe.png) no-repeat #f98700 .69rem center; background-size:.81rem .63rem; padding:.36rem .73rem .32rem 1.9rem; color:#fff; border-radius:3px; position:absolute; bottom:.54rem; right:.65rem; text-shadow:2px 2px 1px #f06d00; }
+.index-lists .li-null .a-subscribe{ background-color:#b9b9b9; text-shadow:2px 2px 1px #959595; }
 .index-lists li .a-null{ display:inline-block; background:#b9b9b9; padding:.5rem 2.16rem .5rem 2.16rem; color:#fff; border-radius:3px; position:absolute; bottom:.54rem; right:.65rem; text-shadow:2px 2px 1px #959595; }
 .index-lists .li-null .p-name, .index-lists .li-null .p-name .e-discount, .index-lists .li-null .p-money{ color:#b9b9b9; }
 .index-lists .li-null .p-name .e-discount{ border-color:#b9b9b9; }
