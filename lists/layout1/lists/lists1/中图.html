@@ -48,13 +48,13 @@
     $(function() {
         imgZoomControl();
         //后面的内容用来测试对ajax的内容,延迟加载是否有效
-        $("button").one("tap click", function(e) {
-            e.preventDefault();
-            $("#thelist").find("ul").eq(1).load("ajax.html", function() {
-                $("img.lazy").lazyload();
-                imgZoomControl();
-            });
-        });
+        // $("button").one("tap click", function(e) {
+        //     e.preventDefault();
+        //     $("#thelist").find("ul").eq(1).load("ajax.html", function() {
+        //         $("img.lazy").lazyload();
+        //         imgZoomControl();
+        //     });
+        // });
 
     })
 </script>
