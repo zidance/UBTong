@@ -10,6 +10,6 @@
 .stn-register .a-btn{ display:block; width:92%; height:2.4rem; line-height:2.4rem; background:#ff6766; border-radius:6px; color:#fff; text-align:center; margin:1rem auto; }
 .stn-register td .yazheng{width:36%; float:right;text-align:center;  margin-right:5%; position:relative; height:3.4rem;}
 .stn-register td .a-img{ display:block; height:1.92rem; width:5.93rem; color:#fff; border:1px solid #3eb5fe; }
-.stn-register td .p-font{ color:#ff3333; padding:0.29rem 0;}
+.stn-register td .p-font{ color:#ff3333; padding:0.29rem 0; display:none;}
 .stn-register td.td-ex{ padding:0.9rem 0 0 0;}
 .stn-register td.td-ex .inp-text{ margin-top:0.7rem;}
