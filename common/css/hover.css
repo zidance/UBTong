@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+/*E:\UBTong\activity\layout1\actpay\actfailure\actfailure1*/
+.cart-pay .a-pay:active{ background:#ff5f5f;}
+.cart-pay .a-green:active{ background:#56d489;}
+
+/*E:\UBTong\activity\layout1\actpay\actsucceed\actsucceed1\btnsucceed\btnsucceed1*/
+.stn-btnsucceed a:active{ background:#f4712d;}
+.stn-btnsucceed a:last-child:active{ background:#}/*原本是这样#18c7ca*/
+
+/*E:\UBTong\activity\layout1\actpay\actsucceed\actsucceed1\succeed\succeed1*/
+.stn-subsucceed .outlets li a:active{ background:#5eaefa;}
+
+/*E:\UBTong\activity\layout1\details\detailsbtn\detailsbtn1*/
+.details-btn .a-orange:active{ background:#f4712d;}
+
+/*E:\UBTong\activity\layout1\details\outlets\outlets1*/
+.stn-outlets li a:active{ background:#5eaefa;}
+
+/*E:\UBTong\activity\layout1\settle\btn\btn1*/
+.stn-pricesbtn a:active{ background:#f4712d;}
+
+/*E:\UBTong\activity\layout1\settle\btn\btn2*/
+.btn-settlement a:active{ background:#f4712d;}
+.btn-settlement a:last-child:active{ background:#f5f5f5;}
+.btn-setpayment a:active{  background:#f15a0c; border-color:#f15a0c; color:#fff;}
+.btn-setpayment a:last-child:active{background:#f15a0c; border-color:#f15a0c; color:#fff;}
+
+button:active{background:#f4712d;}
+
+
