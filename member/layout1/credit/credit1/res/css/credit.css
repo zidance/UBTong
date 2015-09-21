@@ -20,8 +20,8 @@
 
 /*保存按钮*/
 .apply-btn{ padding:1.81rem .72rem;}
-.apply-btn p{ height:2.9rem; width:100%; background:#f2484b; border-radius:8px;}
-.apply-btn a{ display:block; text-align:center; line-height:2.9rem; height:2.9rem; color:#fff;}
+.apply-btn p{ height:2.9rem; width:100%; }
+.apply-btn a{ display:block; text-align:center; line-height:2.9rem; height:2.9rem; color:#fff;border-radius:8px; background:#f2484b;}
 
 /*授信说明*/
 .instructions{ padding:0 .72rem; position:relative;}
@@ -97,8 +97,8 @@
 .ascension input::-webkit-input-placeholder{ color:#a7a7a7; }
 /*申请提升额度按钮*/
 .btn{ padding:1.23rem .72rem 1.81rem .72rem; margin-bottom:3.7rem;}
-.btn p{ height:2.9rem; width:100%; background:#f2484b; border-radius:8px;}
-.btn a{ display:block; text-align:center; line-height:2.9rem; height:2.9rem; color:#fff;}
+.btn p{ height:2.9rem; width:100%; }
+.btn a{ display:block; text-align:center; line-height:2.9rem; height:2.9rem; color:#fff;background:#f2484b; border-radius:8px;}
 
 
 

@@ -123,3 +123,93 @@
 .box-region .a-btn:active{ background:#ec212b;}
 .stn-lists li .blue:active{ background:#5eaefa;}
 .stn-lists li .red:active{ background:#fe4c4b;}
+
+/*E:\UBTong\index\layout1\lists\lists2*/
+.index-lists li .a-addcart:active{ background-color:#fba239;}
+.index-lists li .a-reservat:active{ background-color:#fba239;}
+.index-lists li .a-subscribe:active{ background-color:#fba239;}
+.index-lists .li-null .a-addcart:active{ background-color:#a5a5a5;}
+.index-lists .li-null .a-subscribe:active{ background-color:#a5a5a5;}
+.index-lists .li-null .a-reservat:active{ background-color:#a5a5a5;}
+
+/*E:\UBTong\index\layout1\lists\lists3*/
+.index-lists li .p-subscribe:active{ background:url(../../index/layout1/lists/lists3/res/img/btn1.png) no-repeat right 0;position:absolute; bottom:.8rem; right:-.39rem; width:40%;}
+.index-lists li .p-subscribe:active span{ background-color:#fe4c4b;}
+
+/*E:\UBTong\index\layout1*/
+.index-lists li .a-cart:active{ background:url(../../index/layout1/lists/lists4/res/img/cart1.png) no-repeat;}
+
+
+/*E:\UBTong\lists\layout1\header\header2*/
+.list-head .stn-type .lists li a:active{ background:#ff6500; color:#fff; border-color:#ff6500;}
+
+
+.stn-login .text .a-btn:active{ background:#fe4c4b;}
+.stn-login .a-register:active{ color:#6d6d6d; border-color:#6d6d6d;}
+
+/*E:\UBTong\login\layout1\login\sellerlogin\login1*/
+.stn-logo .login-text .inp-login:active{ background:#}/*原本是#f9671e*/
+
+/*E:\UBTong\login\layout1\register*/
+.stn-register td a:active{ background:#00df25;}
+.stn-register .a-btn:active{ background:#fe4c4b;}
+
+/*E:\UBTong\login\layout1\register\success\success1*/
+.stn-success .a-btn:active{ background:#fe4c4b;}
+.stn-success .blue:active{ background:#34afff;}
+.stn-success .purple:active{ background:#4582ff;}
+
+/*E:\UBTong\member\layout1\address\address1*/
+.btn-address .a-red:active{ background:#fe4c4b;}
+.address-btn a:active{ background:#fe4c4b;}
+
+/*E:\UBTong\member\layout1\car\carlist\carlist1*/
+.btn-car .a-red:active{ background:#e14246;}
+
+/*E:\UBTong\member\layout1\car\editcar\editcar1*/
+.editcar-btn a:last-child:active{ background:#bfbebe;}
+.editcar-btn .a-red:active{ background:#fe4c4b;}
+
+/*E:\UBTong\member\layout1\collection\lists\lists1*/
+.stn-sublists li .a-btn:active{ color:#ff302f; border-color:#ff302f;}
+
+/*E:\UBTong\member\layout1\credit\credit1*/
+.download-btn a:active{ background:#e14246;}
+.apply-btn a:active{ background:#e14246;}
+.btn a:active{ background:#e14246;}
+
+/*E:\UBTong\member\layout1\evaluation\details\evaluation1*/
+.stn-evaluation .btn-evaluation a:active{ background:#f4712d;}
+
+/*E:\UBTong\member\layout1\evaluation\details\evaluation2*/
+.parts-btn .red:active{ background:#fe4c4b;}
+
+/*E:\UBTong\member\layout1\index\index2*/
+.stn-sign .a-confirm:active{ background:#;}/*原本是 #fd7d09*/
+
+/*E:\UBTong\member\layout1\information\information2*/
+.meminfo-change .a-save:active{ background:#e14246;}
+
+/*E:\UBTong\member\layout1\order*/
+.art-order .product-btn a.a-red:active{ background:#fe4c4b;}
+
+/*E:\UBTong\member\layout1\orderverify\orderverify1*/
+.check:active{ background:#f4712d;}
+
+/*E:\UBTong\member\layout1\popularize\lists\lists1*/
+.stn-mbelists li .a-links:active{ background:#fe4c4b}
+
+/*E:\UBTong\member\layout1\upgradeVIP\upgradeVIP1*/
+.a-bind:active{ background:#e14246;}
+
+/*E:\UBTong\member\layout1\vieworder\vieworder1*/
+.stn-product .a-btn:active{ color:#d02701; border-color:#d02701;}
+
+/*E:\UBTong\member\layout1\withdrawal\btn\btn1*/
+.box-withdraw .a-btn:active{ background:#fe4c4b;}
+
+/*E:\UBTong\member\layout1\withdrawal*/
+.box-withdraw td a:active{ background:#00df25;}
+
+
+.stn-share .a-money:active{ background:#f4712d;}
