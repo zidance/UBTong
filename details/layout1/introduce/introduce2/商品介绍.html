@@ -37,23 +37,25 @@
 
         //图片延迟加载
         var _iImgNum = 2; //定义一次最多加载多少图片,粗略值
+        if(_iImgNum==0){
+            _iImgNum=1;
+        }
         var _fImgHeight = window.innerHeight / (_iImgNum);
-        var _bgpath = 'res/img/load.jpg';
+        var _bgpath = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC';   //预加载图片路径
 
-        $("img.lazy").height(_fImgHeight)
-        $("img.lazy").lazyload({
+        $(".lazy").height(_fImgHeight)
+        $(".lazy").lazyload({
             effect: "fadeIn",
+            placeholder_data_img: _bgpath,
             load: nextImg
         });
 
         function nextImg() {
-            if ($(this).attr("src") != "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC") {
+            if ($(this).attr("src") != _bgpath) {
                 $(this).removeClass("lazy")
                 $(this).css("height", "auto")  //图片加载后高度重设
             }
         }
-
-
     });
 </script>
 </head>
@@ -75,19 +77,13 @@
 				<img class="lazy" data-original="res/img/200100.png" />
 				<img class="lazy" data-original="res/img/200100.png" />
 				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/10050.png" />
-				<img class="lazy" data-original="res/img/400200.png" />
 				<img class="lazy" data-original="res/img/img1.jpg" />
 				<img class="lazy" data-original="res/img/img2.jpg" />
                 <img class="lazy" data-original="res/img/200100.png" />
                 <img class="lazy" data-original="res/img/200100.png" />
                 <img class="lazy" data-original="res/img/200100.png" />
-                <img class="lazy" data-original="res/img/200100.png" />
-                <img class="lazy" data-original="res/img/200100.png" />
-                <img class="lazy" data-original="res/img/200100.png" />
-                <img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/img3.jpg" />
-				<img class="lazy" data-original="res/img/img4.jpg" />
+				<img class="lazy" data-original="res/img/img1.jpg" />
+				<img class="lazy" data-original="res/img/img2.jpg" />
 				
 			</div>
 			<div class="introduce-item">
