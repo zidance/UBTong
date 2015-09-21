@@ -26,6 +26,100 @@
 .btn-setpayment a:active{  background:#f15a0c; border-color:#f15a0c; color:#fff;}
 .btn-setpayment a:last-child:active{background:#f15a0c; border-color:#f15a0c; color:#fff;}
 
-button:active{background:#f4712d;}
+/*E:\UBTong\backstage\layout1\logistics\logistics2*/
+.btn-btn:active{background:#f4712d;}
+
+/*E:\UBTong\backstage\layout1\order\lists\lists1*/
+.art-order .product-btn a.a-null:active{ border-color:#787878; color:#787878;}
+.art-order .product-btn a.a-green:active{ border-color:#56d489; background:#56d489;}
+.art-order .product-btn a.a-orange:active{ border-color:#f4712d; background:#f4712d;}
+
+/*E:\UBTong\cart\layout1\address\address1*/
+.btn-address .a-orange:active{ background:#f4712d;}
+.address-distribution .a-edit:active{ background:#f4712d;}
+.address-btn .a-orange:active{ background:#f4712d;}
+.address-btn a:last-child:active{ background:#bfbebe;}
+.address-null .a-edit:active{ background:#f4712d;}
+
+/*E:\UBTong\cart\layout1\cartpay\cartpay1*/
+.cart-pay .a-orange:active{ background:#} /*原本是#f67a09*/
+.cart-pay .a-green:active{ background:#56d489;}
+
+/*E:\UBTong\cart\layout1\lists\btncart\btncart1*/
+.cart-btn a:active{ background:#f4712d;}
+.cart-btn a:last-child:active{ background:#bfbebe;}
+
+/*E:\UBTong\cart\layout1\lists\null\null1*/
+.stn-cartnull .a-visit:active{ background:#f4712d;}
+
+/*E:\UBTong\category\layout1\category*/
+.stn-mileage button:active{ background:#ff5f5f;}
+
+/*E:\UBTong\details\layout1\details\details1*/
+.product-details .a-collect:active{background:url(../../details/layout1/details/details1/res/img/collecta.png) no-repeat;}
+ 
+ /*E:\UBTong\details\layout1\detailsbtn\detailsbtn1*/
+.details-btn .a-orange:active{ background:#f4712d;}
+.details-btn .a-yellow:active{ background:#f99400;}
+
+/*E:\UBTong\details\layout1\meal\meal1*/
+.stn-maintenance .package-btn .btn a:active{ background:#ff5f5f;}
+.stn-maintenance .package-btn .btn a:last-child:active{ background:#1adbdd;}
+
+/*E:\UBTong\details\layout1\popup\popup1*/
+.box-popup .btn a:active{ background:#f4712d;}
+
+/*E:\UBTong\details\layout1*/
+.details-btn .a-red:active{ background:#e14246;}
+.details-btn .a-rosered:active{ background:#a6a6a6;}
+
+/*E:\UBTong\distribution\branch\branch\branch1*/
+.parts-btn .oranges:active{ background:#;}/* 原本是#fd7d09;*/
+
+/*E:\UBTong\distribution\commission\commission1*/
+.stn-commission-detail .a-query:active{ background:#;}/* 原本是#fd7d09;*/
+
+/*E:\UBTong\distribution\merchandise\lists\lists1*/
+.stn-lists li .a-btn:active{ background:#}/* 原本是#fd7d09;*/
+.stn-lists li .a-null:active{ background:#aab5c0;}
+
+/*E:\UBTong\distribution\mybank\mybank1*/
+.a-bgorange:active{ background-color:#;}/* 原本是#fd7d09;*/
+.addcard #bankList .a-confirm:active{ background:#;}/* 原本是#fd7d09;*/
+.a-bgblue:active{ background-color:#}/* 原本是#3f9efa;*/
 
 
+/*E:\UBTong\distribution\order*/
+.art-order .product-btn a.orange:active{ background:#; border-color:#;}/*原本是#fd7d09*/
+.art-order .product-btn a.null:active{ border-color:#787878; color:#787878;}
+
+/*E:\UBTong\distribution\shop\shop\select\select1*/
+.parts-btn a:active{ background:#}/*原本是#fd7d09*/
+
+
+.stn-info .info p a:active{ background:#60aef9;}
+
+/*E:\UBTong\dot\layout1\details\evaluate\evaluate2*/
+.stn-evaluate .btn-evaluate a:active{ background:#f4712d;}
+
+/*E:\UBTong\dot\layout1\details\information\information1*/
+.stn-information .btn a:active{ background:#60aef9;}
+.stn-information .btn a:first-child:active{ background:#e14246;}
+
+/*E:\UBTong\dot\layout1\details\project\project1*/
+.stn-project li a:active{ background:#60aef9;}
+
+/*E:\UBTong\dot\layout1\details\synopsis\synopsis2*/
+.stn-synopsis .synopsis .btn a:active{ background:#60aef9;}
+.stn-synopsis .synopsis .btn a:first-child:active{ background:#e14246;}
+
+/*E:\UBTong\dot\layout1\details\synopsis\synopsis1*/
+.stn-synopsis .a-gbook:active{ background:#f4712d;}
+
+/*E:\UBTong\dot\layout1\details*/
+.banner .message a:active{ background:#fe4c4b;}
+
+/*E:\UBTong\dot\layout1\list*/
+.box-region .a-btn:active{ background:#ec212b;}
+.stn-lists li .blue:active{ background:#5eaefa;}
+.stn-lists li .red:active{ background:#fe4c4b;}
