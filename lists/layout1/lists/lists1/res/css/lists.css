@@ -9,6 +9,8 @@
 .stn-lists li .a-cart img{ display:block; width:100%; height:100%; } 
 .stn-lists button{ width:100%; height:2.72rem; line-height:2.72rem; text-align:center; background:#efefef; border:none; color:#8c8c8c; margin-bottom:.9rem; }
 
+#thelist a{display: block;}
+
 /*中图*/
 .stn-thelists{ width:100%; }
 .stn-thelists li{ float:left; width:47%; margin-left:2%; }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>商品详情</title>
@@ -9,14 +9,67 @@
 <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="pic/pic1/res/css/detailspic.css" rel="stylesheet" type="text/css" />
 <link href="details/details1/res/css/details.css" rel="stylesheet" type="text/css" />
-<link href="introduce/introduce1/res/css/introduce.css" rel="stylesheet" type="text/css" />
+<link href="introduce/introduce2/res/css/introduce.css" rel="stylesheet" type="text/css" />
 <link href="integral/integral1/res/css/integral.css" rel="stylesheet" type="text/css" />
 <link href="meal/meal1/res/css/maintenance.css" rel="stylesheet" type="text/css" />
 <link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
 <link href="popup/popup1/res/css/popup.css" rel="stylesheet" type="text/css" />
 <script src="../../common/js/zepto-1.16.min.js"></script>
 <script src="pic/pic1/res/js/iscroll.js"></script>
-<script src="introduce/introduce1/res/js/jquery.js"></script>
+<script src="introduce/introduce2/res/js/fx.min.js"></script>
+<script src="introduce/introduce2/res/js/fx_methods.min.js"></script>
+<script src="introduce/introduce2/res/js/lazyload.min.js"></script>
+    
+<script>
+
+ $(function() {
+//     $(document).trigger("touchend");
+//     $(window).trigger("touchend");
+//     $("img.lazy").trigger("touchend");
+     
+            $("img.lazy").lazyload({
+                effect: "fadeIn", //动画方式 默认:"show"
+                failure_limit:0, // 一次判断几张图片,等于一屏可显示图数量
+                threshold: 0, // default: 0. 另一个例子: 200
+//                placeholder_data_img:'',
+//                placeholder_real_img:''
+                
+                
+            });
+     
+     
+     
+
+     
+//         $(document).on("touchend",function(){
+//             setTimeout(function(){
+//                    $("img.lazy").lazyload({
+//                    threshold: 0
+//                    })
+//             },500)
+//         })
+     
+})
+
+	$(function(){
+		var _obj = $('#DetailsIntroduce');
+		var _btn = _obj.find('nav a');
+		var _item = _obj.find('.introduce-con .introduce-item');
+		//初始化
+		_item.eq(0).show();
+		_btn.eq(0).addClass('act');
+		
+		$.each(_btn, function(i,e){
+			var _this = $(e);
+			_this.click(function(){
+				_btn.removeClass('act');
+				_this.addClass('act');
+				_item.hide();
+				_item.eq(i).show();
+			});
+		});
+	});
+</script>
 </head>
 
 <body onload="loaded()" style="background:#f7f5f5;">
@@ -363,7 +416,23 @@
 		
 		<div class="introduce-con">
 			<div class="introduce-item">
-				<img src="introduce/introduce1/res/img/img1.jpg" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
+				<img class="lazy" data-original="introduce/introduce2/res/img/200100.png" />
 			</div>
 			<div class="introduce-item">
 				<img src="introduce/introduce1/res/img/img1.jpg" />

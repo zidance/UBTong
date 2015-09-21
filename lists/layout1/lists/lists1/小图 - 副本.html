@@ -8,32 +8,47 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="res/css/lists.css" rel="stylesheet" type="text/css" />
-    
-    
-    
-    
-    
 <script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script src="res/js/fx.min.js"></script>
+<script src="res/js/fx_methods.min.js"></script>
+<script src="res/js/lazyload.min.js"></script>
+    
 <script>
-	function imgZoomControl(){
-		var _li = $('#thelist li');
-		$.each(_li,function(i,e){
-			var _this= $(this);
-			var _img = $(this).find('.s-img img');
-			if(_img.width() > '7.19rem' && _img.width() > _img.height())
-			{
-				_img.css('width','7.19rem');
-			}else if(_img.height() > $(this).height()){
-				_img.css('height','7.19rem');
-			}
-			_img.css({'max-width':'7.19rem','max-height':'7.19rem'})
-		})
-	}
+    function imgZoomControl() {
+        var _li = $('#thelist li');
+        var _bgpath = 'res/img/load.jpg'
+        
+        $.each(_li, function(i, e) {
+            var _this = $(this);
+            var _img = $(this).find('.s-img img')
+            $(this).find('.s-img').width(_this.width() - 2);
+            $(this).find('.s-img').height(_this.width() - 2);
+
+            //容器有宽高后,再来加载图片
+            $("img.lazy").lazyload({
+                effect: "fadeIn", //动画方式 默认:"show"
+                failure_limit:4, // 一次判断两张图片
+                threshold: 200, // default: 0. 另一个例子: 200
+                placeholder_data_img: _bgpath
+            });
+
+            //加载完图片资源后,再做自适应
+            if (_img.width() > $(this).width() && _img.width() > _img.height()) {
+                _img.css('width', _this.width() - 2);
+            } else if (_img.height() > $(this).height()) {
+                _img.css('height', _this.width() - 2);
+            }
+            _img.css({
+                'max-width': _this.width() - 2,
+                'max-height': _this.width() - 2
+            })
+        })
+    }
 
 
-	$(function(){
-		imgZoomControl();
-	})
+    $(function() {
+        imgZoomControl();
+    })
 </script>
 </head>
 

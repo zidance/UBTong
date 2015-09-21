@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>商品介绍</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/introduce.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script src="res/js/fx.min.js"></script>
+<script src="res/js/fx_methods.min.js"></script>
+<script src="res/js/lazyload.min.js"></script>
+    
+<script>
+
+ $(function() {
+//     $(document).trigger("touchend");
+//     $(window).trigger("touchend");
+//     $("img.lazy").trigger("touchend");
+     
+            $("img.lazy").lazyload({
+                effect: "fadeIn", //动画方式 默认:"show"
+//                failure_limit:3, // 一次判断几张图片,等于一屏可显示图数量
+//                threshold: 0, // default: 0. 另一个例子: 200
+//                placeholder_data_img:'res/img/load.png',
+//                placeholder_real_img:'',
+//                container:$(".introduce-con")
+//                minimum_interval            : 100,
+                load:nextImg,
+                
+            });
+             
+//     alert($(".lazy").eq(0).length)
+             
+             
+     function nextImg(){
+//         $(".lazy").each(function(i,e){
+             if($(this).attr("src")!="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"){
+             $(this).removeClass("lazy")
+             $(this).css("height","auto")
+             
+//             
+         }
+ 
+//         })
+         
+     }
+     
+     
+//     用来测是否加载了图是有效的
+//     var n=0;
+//     
+//     (setTimeout(function(){
+//         $(".lazy").each(function(i,e){
+// if($(this).attr("src")!="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"){
+//             n++
+//         }
+//     })
+//     alert(n)
+//         
+//     },3000))()
+     
+     
+
+     
+//         $(document).on("touchend",function(){
+//             setTimeout(function(){
+//                    $(document).trigger("touchmove")
+//             },500)
+//         })
+     
+})
+
+	$(function(){
+		var _obj = $('#DetailsIntroduce');
+		var _btn = _obj.find('nav a');
+		var _item = _obj.find('.introduce-con .introduce-item');
+		//初始化
+		_item.eq(0).show();
+		_btn.eq(0).addClass('act');
+		
+		$.each(_btn, function(i,e){
+			var _this = $(e);
+			_this.click(function(){
+				_btn.removeClass('act');
+				_this.addClass('act');
+				_item.hide();
+				_item.eq(i).show();
+			});
+		});
+	});
+</script>
+</head>
+
+<body style="height:1000px">
+	<!--商品介绍-->
+	<div class="details-introduce" id="DetailsIntroduce">
+		<nav>
+			<ul>
+				<li><a class="fz28" href="#">商品介绍</a></li>
+				<li><a class="fz28" href="#">商品参数</a></li>
+				<li><a class="fz28" href="#">评价(2039)</a></li>
+			</ul>
+		</nav>
+		
+		<div class="introduce-con">
+			<div class="introduce-item">
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/200100.png" />
+				
+			</div>
+			<div class="introduce-item">
+				
+			</div>
+			<div class="introduce-item">
+				<ul class="introduce-gbook">
+					<li>
+						<p class="p-tel fz28">13*******89</p>
+						<p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+						<p class="p-time fz24">2014-07-14 09:06:19  颜色：红色</p>
+					</li>
+					<li>
+						<p class="p-tel fz28">13*******89</p>
+						<p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+						<p class="p-time fz24">2014-07-14 09:06:19  颜色：红色</p>
+					</li>
+					<li>
+						<p class="p-tel fz28">13*******89</p>
+						<p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+						<p class="p-time fz24">2014-07-14 09:06:19  颜色：红色</p>
+					</li>
+					<li>
+						<p class="p-tel fz28">13*******89</p>
+						<p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+						<p class="p-time fz24">2014-07-14 09:06:19  颜色：红色</p>
+					</li>
+				</ul>
+				<a class="a-intgbook fz24" href="#">加载更多</a>
+			</div>
+		</div>
+	</div>
+    <!--商品介绍-end-->
+</body>
+</html>

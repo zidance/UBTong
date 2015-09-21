@@ -16,6 +16,7 @@
 <script>
     function imgZoomControl() {
         var _li = $('#thelist li');
+        var _bgpath = 'res/img/load.jpg'
         
         $.each(_li, function(i, e) {
             var _this = $(this);
@@ -27,8 +28,8 @@
             $("img.lazy").lazyload({
                 effect: "fadeIn", //动画方式 默认:"show"
                 failure_limit:4, // 一次判断两张图片
-                threshold: 200 // default: 0. 另一个例子: 200
-//    
+                threshold: 200, // default: 0. 另一个例子: 200
+                placeholder_data_img: _bgpath
             });
 
             //加载完图片资源后,再做自适应
