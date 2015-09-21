@@ -14,83 +14,47 @@
 <script src="res/js/lazyload.min.js"></script>
     
 <script>
+    $(function() {
 
- $(function() {
-//     $(document).trigger("touchend");
-//     $(window).trigger("touchend");
-//     $("img.lazy").trigger("touchend");
-     
-            $("img.lazy").lazyload({
-                effect: "fadeIn", //动画方式 默认:"show"
-//                failure_limit:3, // 一次判断几张图片,等于一屏可显示图数量
-//                threshold: 0, // default: 0. 另一个例子: 200
-//                placeholder_data_img:'res/img/load.png',
-//                placeholder_real_img:'',
-//                container:$(".introduce-con")
-//                minimum_interval            : 100,
-                load:nextImg,
-                
+        //商品选项切换
+        var _obj = $('#DetailsIntroduce');
+        var _btn = _obj.find('nav a');
+        var _item = _obj.find('.introduce-con .introduce-item');
+        //初始化
+        _item.eq(0).show();
+        _btn.eq(0).addClass('act');
+
+        $.each(_btn, function(i, e) {
+            var _this = $(e);
+            _this.click(function() {
+                _btn.removeClass('act');
+                _this.addClass('act');
+                _item.hide();
+                _item.eq(i).show();
             });
-             
-//     alert($(".lazy").eq(0).length)
-             
-             
-     function nextImg(){
-//         $(".lazy").each(function(i,e){
-             if($(this).attr("src")!="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"){
-             $(this).removeClass("lazy")
-             $(this).css("height","auto")
-             
-//             
-         }
- 
-//         })
-         
-     }
-     
-     
-//     用来测是否加载了图是有效的
-//     var n=0;
-//     
-//     (setTimeout(function(){
-//         $(".lazy").each(function(i,e){
-// if($(this).attr("src")!="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"){
-//             n++
-//         }
-//     })
-//     alert(n)
-//         
-//     },3000))()
-     
-     
+        });
 
-     
-//         $(document).on("touchend",function(){
-//             setTimeout(function(){
-//                    $(document).trigger("touchmove")
-//             },500)
-//         })
-     
-})
 
-	$(function(){
-		var _obj = $('#DetailsIntroduce');
-		var _btn = _obj.find('nav a');
-		var _item = _obj.find('.introduce-con .introduce-item');
-		//初始化
-		_item.eq(0).show();
-		_btn.eq(0).addClass('act');
-		
-		$.each(_btn, function(i,e){
-			var _this = $(e);
-			_this.click(function(){
-				_btn.removeClass('act');
-				_this.addClass('act');
-				_item.hide();
-				_item.eq(i).show();
-			});
-		});
-	});
+        //图片延迟加载
+        var _iImgNum = 2; //定义一次最多加载多少图片,粗略值
+        var _fImgHeight = window.innerHeight / (_iImgNum);
+        var _bgpath = 'res/img/load.jpg';
+
+        $("img.lazy").height(_fImgHeight)
+        $("img.lazy").lazyload({
+            effect: "fadeIn",
+            load: nextImg
+        });
+
+        function nextImg() {
+            if ($(this).attr("src") != "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC") {
+                $(this).removeClass("lazy")
+                $(this).css("height", "auto")  //图片加载后高度重设
+            }
+        }
+
+
+    });
 </script>
 </head>
 
@@ -111,23 +75,19 @@
 				<img class="lazy" data-original="res/img/200100.png" />
 				<img class="lazy" data-original="res/img/200100.png" />
 				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
-				<img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/10050.png" />
+				<img class="lazy" data-original="res/img/400200.png" />
+				<img class="lazy" data-original="res/img/img1.jpg" />
+				<img class="lazy" data-original="res/img/img2.jpg" />
+                <img class="lazy" data-original="res/img/200100.png" />
+                <img class="lazy" data-original="res/img/200100.png" />
+                <img class="lazy" data-original="res/img/200100.png" />
+                <img class="lazy" data-original="res/img/200100.png" />
+                <img class="lazy" data-original="res/img/200100.png" />
+                <img class="lazy" data-original="res/img/200100.png" />
+                <img class="lazy" data-original="res/img/200100.png" />
+				<img class="lazy" data-original="res/img/img3.jpg" />
+				<img class="lazy" data-original="res/img/img4.jpg" />
 				
 			</div>
 			<div class="introduce-item">
