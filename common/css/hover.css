@@ -216,29 +216,29 @@
 .show-confirm .stn-num .a-draw:active{ background:#ff8548;}
 
 /*E:\UBTong\seller\layout1\index\index1*/
-.a-quit:active{ background:#;}/*原本是#f1590d*/
+.a-quit:active{ background:#ff6f27;}
 
 /*E:\UBTong\seller\layout1\information\info\info1*/
-.parts-btn .orange:active{ background:#}/*原本是#f1590d*/
+.parts-btn .orange:active{ background:#ff6f27}
 
 /*E:\UBTong\seller\layout1\logistics\logistics1*/
 .box-logistics .btn a:active{border:1px solid #cccccc; color:#161616; background:#f0f0f0;}
 
 /*E:\UBTong\seller\layout1\mybank\mybank1*/
 .successd-m a:active{ background:#f4712d;}
-.addcard .a-act:active{ background:#;}/*原本是#f1590d*/
-.addcard #bankList .a-confirm:active{ background:#000;}/*原本是#f1590d*/
+.addcard .a-act:active{ background:#ff6f27;}
+.addcard #bankList .a-confirm:active{ background:#ff6f27;}
 .a-act:active{ background:#5eaefa;}
 
 /*E:\UBTong\seller\layout1\mybank\mybank2*/
 .mybank-del .a-act:active{ background:#ec212b;}
 
 /*E:\UBTong\seller\layout1\popularize\manage\survey\survey1*/
-.stn-survey .a-btn:active{ background:#}/*原本是#f1590d*/
-.stn-survey p a:active{ background:#;}/*原本是#f1590d*/
+.stn-survey .a-btn:active{ background:#ff6f27}
+.stn-survey p a:active{ background:#ff6f27;}
 
 /*E:\UBTong\seller\layout1\withdraw\withdraw1*/
-.bgorange:active{ background:#;}/*原本是#f1590d*/
+.bgorange:active{ background:#ff6f27;}
 .bgblue:active{ background:#5eaefa}
 
 
