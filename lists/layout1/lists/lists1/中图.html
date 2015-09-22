@@ -27,8 +27,6 @@
             //容器有宽高后,再来加载图片
             $("img.lazy").lazyload({
                 effect: "fadeIn", //动画方式 默认:"show"
-                failure_limit:4, // 一次判断两张图片
-                threshold: 200, // default: 0. 另一个例子: 200
                 placeholder_data_img: _bgpath
             });
 

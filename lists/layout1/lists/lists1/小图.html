@@ -8,18 +8,27 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="res/css/lists.css" rel="stylesheet" type="text/css" />
-    
-    
-    
-    
-    
 <script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script src="res/js/fx.min.js"></script>
+<script src="res/js/fx_methods.min.js"></script>
+<script src="res/js/lazyload.min.js"></script>
+    
 <script>
-	function imgZoomControl(){
-		var _li = $('#thelist li');
-		$.each(_li,function(i,e){
-			var _this= $(this);
+    function imgZoomControl() {
+        var _li = $('#thelist li');
+        var _bgpath = 'res/img/load.jpg'
+        
+        $.each(_li, function(i, e) {
+            var _this= $(this);
 			var _img = $(this).find('.s-img img');
+            
+            //容器有宽高后,再来加载图片
+            $("img.lazy").lazyload({
+                effect: "fadeIn", //动画方式 默认:"show"
+                placeholder_data_img: _bgpath
+            });
+            
+            //加载完图片资源后,再做自适应
 			if(_img.width() > '7.19rem' && _img.width() > _img.height())
 			{
 				_img.css('width','7.19rem');
@@ -27,55 +36,32 @@
 				_img.css('height','7.19rem');
 			}
 			_img.css({'max-width':'7.19rem','max-height':'7.19rem'})
-		})
-	}
+
+            
+
+            
+//            if (_img.width() > $(this).width() && _img.width() > _img.height()) {
+//                _img.css('width', _this.width() - 2);
+//            } else if (_img.height() > $(this).height()) {
+//                _img.css('height', _this.width() - 2);
+//            }
+//            _img.css({
+//                'max-width': _this.width() - 2,
+//                'max-height': _this.width() - 2
+//            })
+        })
+    }
 
 
-	$(function(){
-		imgZoomControl();
-	})
+    $(function() {
+        imgZoomControl();
+    })
 </script>
 </head>
 
 <body>
 	<section class="stn-lists stn-smalllists" id="thelist">
 		<ul>
-			<li>
-				<a href="#">
-					<table><tr><td class="s-img"><img src="../../../../index/layout1/pic/pic1/res/img/img1.jpg" /></td></tr></table>
-					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2</p>
-					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
-					<div class="clr"></div>
-				</a>
-				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
-			</li>
-			<li>
-				<a href="#">
-					<table><tr><td class="s-img"><img src="res/img/img2.jpg" /></td></tr></table>
-					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2</p>
-					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
-					<div class="clr"></div>
-				</a>
-				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
-			</li>
-			<li>
-				<a href="#">
-					<table><tr><td class="s-img"><img src="../../../../login/layout1/sellerlogin/login1/res/img/bg.jpg" /></td></tr></table>
-					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2</p>
-					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
-					<div class="clr"></div>
-				</a>
-				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
-			</li>
-			<li>
-				<a href="#">
-					<table><tr><td class="s-img"><img src="res/img/img2.jpg" /></td></tr></table>
-					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2</p>
-					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
-					<div class="clr"></div>
-				</a>
-				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
-			</li>
 			<li>
 				<a href="#">
 					<table><tr><td class="s-img"><img src="res/img/img1.jpg" /></td></tr></table>
@@ -88,6 +74,42 @@
 			<li>
 				<a href="#">
 					<table><tr><td class="s-img"><img src="res/img/img2.jpg" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+					<div class="clr"></div>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li>
+				<a href="#">
+					<table><tr><td class="s-img"><img src="res/img/200100.png" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+					<div class="clr"></div>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li>
+				<a href="#">
+					<table><tr><td class="s-img"><img src="res/img/100200.png" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+					<div class="clr"></div>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li>
+				<a href="#">
+					<table><tr><td class="s-img"><img src="res/img/10050.png" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+					<div class="clr"></div>
+				</a>
+				<a class="a-cart" href="#"><img src="res/img/cart.png" /></a>
+			</li>
+			<li>
+				<a href="#">
+					<table><tr><td class="s-img"><img src="res/img/50100.png" /></td></tr></table>
 					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2</p>
 					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
 					<div class="clr"></div>
