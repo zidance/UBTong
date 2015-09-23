@@ -2,7 +2,7 @@ body{ background:#f7f5f5; }
 
 .view-order{ width:93%; padding:0 3.5%; }
 .view-order section{ border:1px solid #eae8e8; border-radius:4px; background:#fff; margin-top:.72rem; padding:0 3.175%; }
-/*¶©µ¥ĞÅÏ¢¡¢ÊÕ»õµØÖ·¡¢ÎïÁ÷ĞÅÏ¢*/
+/*è®¢å•ä¿¡æ¯ã€æ”¶è´§åœ°å€ã€ç‰©æµä¿¡æ¯*/
 .view-order .stn-informat:first-child{ margin-top:1.09rem; }
 .stn-informat p, .stn-product .p-title{ border-bottom:1px solid #eae8e8; color:#161616; padding:.45rem 0 .38rem; font-size:.85rem; }
 .stn-informat table{ margin:.54rem 0; }
@@ -11,10 +11,10 @@ body{ background:#f7f5f5; }
 .stn-informat .td-black, .stn-message .td-black{ color:#161616; width:auto;  }
 .stn-informat a p{ background:url(../img/left.png) no-repeat right center; background-size:.47rem .76rem; }
 .stn-informat a td{ width:auto; }
-/*²¦´òµç»°*/
+/*æ‹¨æ‰“ç”µè¯*/
 .stn-tel{ height:2.5rem; line-height:2.5rem; }
 .stn-tel a{ display:block; color:#161616; background:url(../img/tel.png) no-repeat right center; background-size:1.16rem 1.16rem; }
-/*ÉÌÆ·ÁĞ±í*/
+/*å•†å“åˆ—è¡¨*/
 .stn-product li{ border-bottom:1px solid #eae8e8; position:relative; }
 .stn-product li:last-child{ border-bottom:none; }
 .stn-product .a-product{ display:block; padding:.7rem 0; }
@@ -25,7 +25,7 @@ body{ background:#f7f5f5; }
 .stn-product .a-product .details .p-money{ color:#e52c02; font-size:.85rem; margin-top:1.30rem; }
 .stn-product .a-product .s-num{ display:block; float:right; color:#939292; font-size:0.74rem; }
 .stn-product .a-btn{ display:block; width:4.54rem; height:1.51rem; line-height:1.51rem; border:1px solid #e62c02; color:#e62c02; text-align:center; border-radius:4px; font-size:.71rem; position:absolute; right:0; bottom:.78rem; }
-/*ÁôÑÔ*/
+/*ç•™è¨€*/
 .stn-message{ margin-bottom:.75rem; }
 .stn-message td{ width:2.29rem; padding:.48rem 0; color:#939292; }
 

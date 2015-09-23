@@ -1,4 +1,4 @@
-/*�ֲ�ͼƬ*/
+/*轮播图片*/
 .banner{ position:relative; }
 .banner .slider { z-index:1; display:block; margin:0 auto; overflow:hidden; position:relative; }
 .banner .slider .sliderlist{ position:absolute; width:2000px; left:0; top:0px; }

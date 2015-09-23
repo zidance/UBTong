@@ -1,4 +1,4 @@
-/*订单列表*/
+/*璁㈠崟鍒楄〃*/
 .stn-order{ width:93.28%; padding:0 3.36%; }
 .art-order{ width:94%; padding:0 3%; border:1px solid #eae8e8; background:#fff; border-radius:4px; margin-top:0.72rem; }
 .art-order .state{ border-bottom:1px solid #eae8e8; font-size:.73rem; padding:.54rem 0; color:#161616; }
@@ -20,7 +20,7 @@
 .art-order .product-btn a.a-orange{ background:#f15a0c; border-color:#f15a0c; }
 .art-order .product-btn a.a-null{ border-color:#939292; color:#939292; background:none; }
 
-/*取消订单*/
+/*鍙栨秷璁㈠崟*/
 .cancel-order .art-order .state span{ color:#c7c7c7; }
 .cancel-order .art-order .product-num{ color:#c7c7c7; }
 .cancel-order .art-order .product-num span{ color:#c7c7c7; }
