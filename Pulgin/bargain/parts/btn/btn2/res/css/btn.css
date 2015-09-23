@@ -1,0 +1,9 @@
+/*按钮*/
+.stn-pbtn{ border-top:1px solid #f1f1f1; }
+.stn-pbtn a{ display:block; width:92.82%; height:2.4rem; line-height:2.4rem; background:#5fbd77; color:#fff; text-align:center; border-radius:6px; margin:1.81rem auto .54rem; }
+.stn-pbtn .p-num{ color:#999999; text-align:center; padding-bottom:1.81rem; }
+.stn-pbtn .p-num span{ color:#5fbd77; }
+
+@media screen and (max-width:320px){
+	.stn-partsbtn a{ height:2.9rem; line-height:2.9rem; }
+}

@@ -1,0 +1,9 @@
+/*商品展示*/
+.stn-exhibition{ position:relative; }
+.stn-exhibition .s-img{ display:block; width:100%; }
+.stn-exhibition .s-img img{ width:100%; height:auto; }
+.stn-exhibition .exhibition{ width:100%; height:2.14rem; line-height:2.14rem; position:absolute; bottom:0; left:0; }
+.stn-exhibition .exhibition .time{ float:left; margin-left:3.59%; background:url(../img/time.png) no-repeat left center; background-size:.83rem .79rem; padding-left:1.5625rem; position:relative; z-index:7; color:#fff; }
+.stn-exhibition .exhibition .time span{ color:#f7c005; }
+.stn-exhibition .exhibition a{ position:relative; z-index:7; display:block; float:right; line-height:2.14rem; margin-right:3.59%; background:url(../img/left.png) no-repeat right center; background-size:.36rem .65rem; padding-right:1.09rem; color:#fff; }
+.stn-exhibition .s-bg{ display:block; width:100%; height:2.14rem; background:#000; opacity:.4; position:absolute; bottom:0; left:0; }

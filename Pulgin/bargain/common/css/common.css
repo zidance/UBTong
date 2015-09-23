@@ -1,0 +1,46 @@
+/* CSS÷ÿ÷√ */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,img,table,th,td,form,fieldset,legend,input,textarea,button,select,header,section,aside,footer{margin: 0; padding: 0;}
+header,section,aside,footer{display:block;}
+body{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif; font-size-webkit-text-size-adjust:none; max-width:640px; min-width:320px; margin:0 auto; }
+input{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;}
+img{border: 0;vertical-align: middle;}
+a{text-decoration:none; -webkit-appearance:none; }
+a,button,input,textarea{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
+a:focus,input:focus{ -webkit-user-modify:read-write-plaintext-only; outline:none; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+ul,ol,li {list-style-type: none;}
+em,i,address {font-style: normal;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+table {border-collapse: collapse;}
+html{font-size:172%; }
+.fz18{ font-size:.5rem; }
+.fz20{ font-size:.59rem; }
+.fz22{ font-size:.62rem; }
+.fz24{ font-size:.65rem; }
+.fz26{ font-size:.68rem; }
+.fz28{ font-size:.71rem; }
+.fz30{ font-size:.78rem; }
+.fz32{ font-size:.85rem; }
+.fz34{ font-size:.9rem; }
+.fz36{ font-size:.94rem; }
+.fz48{ font-size:1.74rem; }
+.fz60{ font-size:2.18rem; }
+.mt20{ margin-top:.72rem; }
+@media screen and (min-width:320px) and (max-width:640px){
+	html{font-size:125%;}
+}
+@media screen and (max-width:320px){
+	html{font-size:85%;}
+	.fz18{ font-size:.65rem; }
+	.fz20{ font-size:.72rem; }
+	.fz22{ font-size:.79rem; }
+	.fz24{ font-size:.87rem; }
+	.fz26{ font-size:.94rem; }
+	.fz28{ font-size:1.01rem; }
+	.fz30{ font-size:1.09rem; }
+	.fz32{ font-size:1.11rem; }
+	.fz34{ font-size:1.23rem; }
+	.fz36{ font-size:1.3rem; }
+	.fz48{ font-size:1.74rem; }
+	.fz60{ font-size:2.18rem; }
+}
+.clr{ clear:both; display:block; font-size:0; height:0; line-height:0; overflow:hidden; }

@@ -1,0 +1,20 @@
+header{ width:100%; height:2.76rem; line-height:2.76rem; background:#27c173; text-align:center; position:fixed; top:0; left:0; }
+header h1{ color:#fff; }
+header .a-back{ display:block; background:url(../img/back.png) no-repeat; background-size:1.38rem 1.23rem; width:1.38rem; height:1.23rem; position:absolute; top:.7rem; left:4%; text-indent:-9999px; }
+header .a-share { display:block; background:url(../img/share.png) no-repeat; background-size:1.19rem 1.45rem; width:1.19rem; height:1.45rem; position:absolute; top:.7rem; right:4%; text-indent:-9999px; }
+
+.stn-share{ width:100%; background:#fff; position:absolute; bottom:0; left:0; z-index:9; display:none; }
+.stn-share h1{ color:#585858; margin:1.01rem 0 2.9rem 3%; }
+.stn-share .a-close{ display:block; background:url(../img/close.png) no-repeat; background-size:1.81rem 1.81rem; width:1.81rem; height:1.81rem; text-indent:-9999px; position:absolute; top:1.01rem; right:3%; }
+.stn-share li{ width:25%; float:left; text-align:center; margin-bottom:.9rem; }
+.stn-share li .s-img{ display:inline-block; width:3.125rem; height:3.125rem; }
+.stn-share li .s-img img{ width:100%; height:100%; }
+.stn-share li p{ color:#585858; margin-top:.36rem; }
+.stn-share .p-prompt{ background:url(../img/prompt.png) no-repeat 0 center; background-size:1.7rem 1.7rem; padding-left:2.54rem; margin:0 3%; color:#939292; margin:2rem 3% .9rem; }
+.stn-share .a-money{ display:block; width:94%; height:2.6rem; line-height:2.6rem; background:#f15a0c; border-radius:5px; text-align:center; margin:0 auto 1.45rem; color:#fff; }
+
+#Background{ width:100%; height:100%; background:#000; opacity:0.5; position:absolute; left:0; top:0; display:none; }
+
+@media screen and (min-width:485px){
+	.stn-share .p-prompt{ height:1.7rem; line-height:1.7rem; }
+}

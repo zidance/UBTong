@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>找人砍价</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/bargain.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _btn = $('#BtnBargain');
+		var _box = $('#BoxShare');
+		var _bg = $('#Background');
+		var _close = _box.find('.a-close');
+		
+		_btn.click(function(){
+			_box.show();
+			_bg.show();
+		})
+		_close.click(function(){
+			_box.hide();
+			_bg.hide();
+		})
+	})
+</script>
+</head>
+
+<body>
+	<!--找人砍价-->
+    <section class="stn-bargain">
+    	<div class="bargain">
+        	<span class="s-name fz28">砍价进度条:</span>
+            <span class="s-scroll"><em class="e7">&nbsp;</em></span> <!-- e1 = 10% / e2 = 20% / e3 = 30% / e4 = 40% / e5 = 50% / e6 = 60% / e7 = 70% / e8 = 80% / e9 = 90% / e10 = 100% -->
+            <span class="s-percent fz28">1.95%</span>
+        	<div class="clr"></div>
+        </div>
+        
+        <div class="message">
+        	<div>
+                <p class="fz28">您已成功砍掉<span>3.52</span>元</p>
+                <p class="fz28">还能砍掉<span>229.21</span>元</p>
+            </div>
+            <a id="BtnBargain" class="fz32" href="#">找人砍价</a>
+        </div>
+        <div class="clr"></div>
+    </section>
+    
+    <!--分享弹出框-->
+    <section class="stn-share" id="BoxShare">
+    	<h1 class="fz32">分享到</h1>
+        <a class="a-close" href="#">关闭</a>
+        
+        <ul>
+        	<li><a href="#"><span class="s-img"><img src="res/img/nav1.png" /></span><p class="fz28">新浪微博</p></a></li>
+            <li><a href="#"><span class="s-img"><img src="res/img/nav2.png" /></span><p class="fz28">腾讯微博</p></a></li>
+            <li><a href="#"><span class="s-img"><img src="res/img/nav3.png" /></span><p class="fz28">QQ好友</p></a></li>
+            <li><a href="#"><span class="s-img"><img src="res/img/nav4.png" /></span><p class="fz28">QQ空间</p></a></li>
+        </ul>
+        <div class="clr"></div>
+    </section>
+    <div id="Background"></div>
+    <!--分享弹出框-end-->
+    
+    <!--找人砍价-end-->
+</body>
+</html>

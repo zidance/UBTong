@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>商品展示</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/exhibition.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="res/js/timeCountDown.js"></script>
+</head>
+
+<body>
+	<!--商品展示-->
+    <section class="stn-exhibition">
+    	<span class="s-img"><img src="res/img/img1.jpg" /></span>
+        
+        <div class="exhibition">
+        	<div class="time fz28">
+            	<span id="hour"></span>小时<span id="mini"></span>分<span id="sec"></span>秒
+            </div>
+        	<a class="fz28" href="#">商品详情</a>
+        </div>
+        <span class="s-bg"></span>
+    </section>
+    <script type="text/javascript">
+		var d = Date.UTC(2016, 6, 2, 20, 34); /* '2016 = 年'  '6 = 月（要比实际月份小1）'  '2 = 日'  '20 = 时'  '34 = 分'*/
+		var obj = {
+			 sec: document.getElementById("sec"),
+			 mini: document.getElementById("mini"),
+			 hour: document.getElementById("hour")
+		}
+		fnTimeCountDown(d, obj);
+	</script>
+    <!--商品展示-end-->
+</body>
+</html>

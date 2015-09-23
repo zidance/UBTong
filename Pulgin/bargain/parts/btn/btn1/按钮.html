@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>按钮</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/btn.css" rel="stylesheet" type="text/css" />
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _btn = $('#PartsBtn');
+		var _bg = $('#Background');
+		var _box = $('#BoxPopup');
+		var _del = _box.find('.a-close');
+		
+		_btn.click(function(){
+			_box.show();
+			_bg.show();
+			_box.css('top',($(window).height()-_box.height())/2);
+		})
+		_del.click(function(){
+			_box.hide();
+			_bg.hide();
+			_box.css('top',($(window).height()-_box.height())/2);
+		})
+	})
+</script>
+</head>
+
+<body>
+	<!--按钮-->
+    <section class="stn-partsbtn">
+    	<a id="PartsBtn" class="a-btn fz32" href="#">立即砍价</a>
+        
+        <div class="box-popup" id="BoxPopup">
+        	<span class="s-img"><img src="res/img/img1.jpg" /></span>
+            <p class="p-money fz28"><span class="fz60">-4.08</span> 元</p>
+            <p class="p-prompt fz28">自砍完成，多砍多惊喜！</p>
+            
+            <a class="a-close fz32" href="#">确定</a>
+        </div>
+        <div id="Background"></div>
+    </section>
+    <!--按钮-end-->
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>快捷购物车栏</title>
+<meta charset="gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/boxcart.css" rel="stylesheet" type="text/css" />
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _boxcart = $('#BoxCart');
+		var _btn = $('#BtnBoxCart');
+		var _content = _boxcart.find('.boxcart-nav');
+		
+		_btn.click(function(){
+			if(_btn.hasClass('act')){
+				_content.find('a').css('display','none');
+				_content.css({'width':'3.74rem','transition':'width 1s'});
+				_btn.removeClass('act');
+			}else{
+				_content.css({'width':'10.24rem','transition':'width 1s'});
+				setTimeout(function(){
+					_content.find('a').css('display','inline-block');
+				},400);
+				_btn.addClass('act');
+			}
+		})
+	})
+</script>
+</head>
+
+<body>
+	<!--快捷购物车栏-->
+	<div class="box-cart" id="BoxCart">
+		<a id="BtnBoxCart" href="#" class="boxcart-btn"><img src="res/img/btncart.png" /></a>  <!--添加购物车未点击状态：btncart.png-->  <!--添加购物车后状态：btncarth.png-->
+		<div class="boxcart-nav">
+			<a class="btn" href="#">
+				<span class="s-img"><img src="res/img/home.png" /></span>
+				<p class="fz26">首页</p>
+			</a>
+			<a class="cart" href="#">
+				<span class="s-img"><img src="res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
+				<p class="fz26">购物车</p>
+			</a>
+		</div>
+	</div>
+    <!--快捷购物车栏-end-->
+</body>
+</html>
