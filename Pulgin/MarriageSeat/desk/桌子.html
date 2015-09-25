@@ -12,8 +12,8 @@
 #desk{ width:10rem; height:10rem; margin:0 auto; position:relative; background:url(res/img/zhuozi@2x.png) no-repeat center;background-size:60% 60%; }
 #desk .desk-span{ display:block; width:100%; height:100%; line-height:14.53rem; color:#fff; text-align:center;}
 #desk .desk-div{ width:100%; height:100%; position:absolute; top:0; left:0;}
-#desk .dot{ position:absolute; width:100%; height:100%; left:50%; top:50%}
-#desk .dot li{ position:absolute; width:15.25%; height:15.25%;}
+#desk .dot{ position:absolute; width:1.19rem; height:1.19rem; left:50%; top:50%}
+#desk .dot li{ position:absolute; width:100%; height:100%;}
 #desk .dot li a{ display:block;}
 #desk .dot li img{ width:100%; height:100%;}
 </style>
@@ -29,7 +29,7 @@ $(function(){
 	var _li=_aLi.eq(0).width()/2;
 	var _r=_oDesk.width()/2-_li;
 	_ospan.css({'line-height':_oDesk.height()+'px'})
-	var _nRe=parseInt(360/_aLi.length);
+	var _nRe=360/_aLi.length;
 	$.each(_aLi,function(i,e){
 		var _nRer=2*Math.PI/360*_nRe*i;	 		<!--当前li的弧度数-->
 		var _xN=Math.cos(_nRer);
@@ -59,6 +59,8 @@ $(function(){
 </script>
 </head>
 <body>
+<!--12张桌子-->
+ 
 <div id="desk">
 	<span class="desk-span fz32">嘉宾席</span>
     <div class="desk-div"> 
@@ -77,8 +79,61 @@ $(function(){
             <li><a href="#"><img src="res/img/yizi.png"></a></li>
         </ul>
     </div>
-
 </div>
+
+<!--14张桌子--->
+<!--
+<div id="desk">
+	<span class="desk-span fz32">嘉宾席</span>
+    <div class="desk-div"> 
+        <ul class="dot" data-num="">
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+        </ul>
+    </div>
+</div>
+-->
+<!--14张桌子--->
+
+<!--16张桌子-->
+<!--
+<div id="desk">
+	<span class="desk-span fz32">嘉宾席</span>
+    <div class="desk-div"> 
+        <ul class="dot" data-num="">
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+        </ul>
+    </div>
+</div>
+-->
+
 
 </body>
 </html>

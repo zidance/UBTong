@@ -41,7 +41,7 @@
 			var _w = $(this).width();
 			$(this).css('height',_w);
 			_ospan.css({'line-height':$(this).height()+'px'})
-			var _nRe=parseInt(360/_aLi.length);
+			var _nRe=360/_aLi.length;
 			$.each(_aLi,function(i,e){
 				var _nRer=2*Math.PI/360*_nRe*i;	 		<!--当前li的弧度数-->
 				var _xN=Math.cos(_nRer);
@@ -77,7 +77,7 @@
         </div>
         
         <div class="desk-lists" id="DeskLists">
-        	<!--主桌-->
+        	<!--主桌 12-14人-->
             <div class="desk big-desk">
                 <span class="desk-span fz26">主桌</span>
                 <div class="desk-div"> 
@@ -94,19 +94,18 @@
                         <li><a href="#"><img src="res/img/place.png"></a></li>
                         <li><a href="#"><img src="res/img/place.png"></a></li>
                         <li><a href="#"><img src="res/img/place.png"></a></li>
+                        <li><a href="#"><img src="res/img/place.png"></a></li>
+                        <li><a href="#"><img src="res/img/place.png"></a></li>
                     </ul>
                 </div>
             </div>
-            <!--主桌-end-->
-            
+            <!--主桌-end--> 
             <!--宾客桌子列表-->
             <div class="small-desk">
             	<div class="desk">
                     <span class="desk-span fz26">嘉宾席</span>
                     <div class="desk-div"> 
                         <ul class="dot">
-                            <li><a href="#"><img src="res/img/place.png"></a></li>
-                            <li><a href="#"><img src="res/img/place.png"></a></li>
                             <li><a href="#"><img src="res/img/place.png"></a></li>
                             <li><a href="#"><img src="res/img/place.png"></a></li>
                             <li><a href="#"><img src="res/img/place.png"></a></li>
