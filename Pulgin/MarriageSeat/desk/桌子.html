@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>婚宴</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="res/css/common.css" rel="stylesheet" type="text/css" />
+<style>
+*{ padding:0; margin:0;}
+#desk{ width:10rem; height:10rem; margin:0 auto; position:relative; background:url(res/img/zhuozi@2x.png) no-repeat center;background-size:60% 60%; }
+#desk .desk-span{ display:block; width:100%; height:100%; line-height:14.53rem; color:#fff; text-align:center;}
+#desk .desk-div{ width:100%; height:100%; position:absolute; top:0; left:0;}
+#desk .dot{ position:absolute; width:100%; height:100%; left:50%; top:50%}
+#desk .dot li{ position:absolute; width:15.25%; height:15.25%;}
+#desk .dot li a{ display:block;}
+#desk .dot li img{ width:100%; height:100%;}
+</style>
+<script src="res/js/zepto-1.16.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	var _oDesk=$('#desk');
+	var _aLi=_oDesk.find('.dot li');
+	var _ospan=_oDesk.find('.desk-span');
+	var _oDiv=_oDesk.find('.desk-div');
+	var _oDot=_oDesk.find('.dot');
+	var _H=_oDesk.height()/2
+	var _li=_aLi.eq(0).width()/2;
+	var _r=_oDesk.width()/2-_li;
+	_ospan.css({'line-height':_oDesk.height()+'px'})
+	var _nRe=parseInt(360/_aLi.length);
+	$.each(_aLi,function(i,e){
+		var _nRer=2*Math.PI/360*_nRe*i;	 		<!--当前li的弧度数-->
+		var _xN=Math.cos(_nRer);
+		var _yN=Math.sin(_nRer);
+		var _x=_xN*_r-_li;						<!--减掉li的高度-->
+		var _y=_yN*_r-_li;						<!--减掉li的高度-->
+		$(this).css({'top':_y,'left':_x})
+
+	})
+	
+	<!--touch点选座位-->
+//	_aLi.find('a').click(function(){
+//		if($(this).hasClass('find')){
+//			$(this).find('img').attr("src","res/img/yizi.png");	
+//			$(this).removeClass('find');
+//		}else{
+//			$(this).find('img').attr("src","res/img/yizi2.png");	
+//			$(this).addClass('find');
+//		}	
+//	});
+	
+
+	
+	
+});
+
+</script>
+</head>
+<body>
+<div id="desk">
+	<span class="desk-span fz32">嘉宾席</span>
+    <div class="desk-div"> 
+        <ul class="dot" data-num="">
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+            <li><a href="#"><img src="res/img/yizi.png"></a></li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
