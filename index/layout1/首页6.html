@@ -21,20 +21,28 @@
 		var _add=$('.foll-add');
 		var _follclose=$('.foll-close');
 		var _erclose=$('.close');
-		var _box=$('.erweima');
-		var _followers=$('.followers');
 		
+		var _followers=$('.followers');
+		var _bg=$('.alpha-bg');
+		var _box=$('.erweima');
+		var nLeft;
 		_follclose.click(function(){
 			_followers.hide();	
 			_box.hide();
+			_bg.hide();
 		});
 		
 		_add.click(function(){
 			_box.show();	
+			_bg.show();
+			_bg.css({'height':$('body').height()});
+			nLeft=($(window).width()-_box.width())/2;
+			_box.css({'left':nLeft});
 		});
 		
 		_erclose.click(function(){
-			_box.hide();	
+			_box.hide();
+			_bg.hide();
 		});
 	})
 
@@ -61,6 +69,8 @@
    		<div class="er-img"><img src="followers/res/img/erweima.png"></div>
     	<p class="er-p fz28">长按此图 识别图中二维码 轻松关注</p>
     </section>
+    
+    <div class="alpha-bg"></div>
 </section>
 	<!--轮播图片-->
 	<script type="text/javascript" src="header/header3/res/js/touchslider.js"></script>

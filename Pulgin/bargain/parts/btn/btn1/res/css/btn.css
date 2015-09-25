@@ -1,0 +1,18 @@
+/*按钮*/
+.stn-partsbtn{ background:#fff; padding-bottom:1.01rem; }
+.stn-partsbtn .a-btn{ display:block; width:92.82%; height:2.4rem; line-height:2.4rem; background:#f15a0c; color:#fff; border-radius:6px; text-align:center; margin:0 auto; }
+.stn-partsbtn .a-green{ background:#5fbd77; }
+.stn-partsbtn .box-popup{ width:84.375%; position:fixed; left:7.8125%; background:#fff; display:none; z-index:11; border-radius:14px; }
+.stn-partsbtn .box-popup .s-img{ display:block; width:83.33%; margin:1.38rem auto 0; }
+.stn-partsbtn .box-popup .s-img img{ width:100%; height:auto; }
+.stn-partsbtn .box-popup .p-money{ text-align:center; color:#464646; margin:.3rem 0 .2rem; }
+.stn-partsbtn .box-popup .p-money span{ color:#f2484b; }
+.stn-partsbtn .box-popup .p-prompt{ text-align:center; color:#464646; }
+.stn-partsbtn .box-popup a{ display:block;  width:83.33%; height:2.4rem; line-height:2.4rem; background:#f15a0c; color:#fff; border-radius:6px; text-align:center; margin:1.86rem auto 1.45rem; }
+
+#Background{ width:100%; height:100%; z-index:10; background:#000; position:fixed; top:0px; left:0px; opacity:0.5; display:none; }
+
+@media screen and (max-width:320px){
+	.stn-partsbtn .a-btn{ height:2.9rem; line-height:2.9rem; }
+	.stn-partsbtn .box-popup a{ height:2.9rem; line-height:2.9rem; }
+}

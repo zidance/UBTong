@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>产品砍价列表</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/list.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _obj = $('#StnLists');
+		var _li = _obj.find('li');
+		$.each(_li,function(i,e){
+			var _img = $(this).find('.s-img').width();
+			var _right = $(this).find('.product-right');
+			if($(window).width()<640){
+				_right.width($(window).width()-_img-$(window).width()*0.1);
+			}
+			else{
+				_right.width(640-_img-640*0.1);
+			}
+		})
+	})
+</script>
+</head>
+
+<body>
+	<!--产品砍价列表-->
+    <section class="stn-lists" id="StnLists">
+    	<ul>
+        	<li>
+            	<a class="a-product" href="#">
+                	<span class="s-img"><img src="res/img/img1.jpg" /></span>
+                    <div class="product-right">
+                        <p class="p-name fz32">Apple watch</p>
+                        <p class="p-synopsis fz26">[包邮]38毫米银色铝金属表壳搭配白色运38毫米银色...</p>
+                        <p class="p-money fz24">￥<em class="fz36">2300</em><span class="fz28">￥2800</span></p>
+                        <p class="p-num fz24">已售<span>5</span> / 库存40</p>
+                    </div>
+                    <div class="clr"></div>
+                </a>
+                <div class="bargain">
+                	<div class="fz28"><span>已有<em>300</em>人参加</span></div>
+                    <div class="fz28"><a href="#">立即砍价</a></div>
+                </div>
+                <div class="clr"></div>
+            </li>
+            <li>
+            	<a class="a-product" href="#">
+                	<span class="s-img"><img src="res/img/img1.jpg" /></span>
+                    <div class="product-right">
+                        <p class="p-name fz32">Apple watch</p>
+                        <p class="p-synopsis fz26">[包邮]38毫米银色铝金属表壳搭配白色运38毫米银色...</p>
+                        <p class="p-money fz24">￥<em class="fz36">2300</em><span class="fz28">￥2800</span></p>
+                        <p class="p-num fz24">已售<span>5</span> / 库存40</p>
+                    </div>
+                    <div class="clr"></div>
+                </a>
+                <div class="bargain">
+                	<div class="fz28"><span>已有<em>300</em>人参加</span></div>
+                    <div class="fz28"><a href="#">立即砍价</a></div>
+                </div>
+                <div class="clr"></div>
+            </li>
+            <li>
+            	<a class="a-product" href="#">
+                	<span class="s-img"><img src="res/img/img1.jpg" /></span>
+                    <div class="product-right">
+                        <p class="p-name fz32">Apple watch</p>
+                        <p class="p-synopsis fz26">[包邮]38毫米银色铝金属表壳搭配白色运38毫米银色...</p>
+                        <p class="p-money fz24">￥<em class="fz36">2300</em><span class="fz28">￥2800</span></p>
+                        <p class="p-num fz24">已售<span>5</span> / 库存40</p>
+                    </div>
+                    <div class="clr"></div>
+                </a>
+                <div class="bargain">
+                	<div class="fz28"><span>已有<em>300</em>人参加</span></div>
+                    <div class="fz28"><a href="#">立即砍价</a></div>
+                </div>
+                <div class="clr"></div>
+            </li>
+        </ul>
+    </section>
+    <!--产品砍价列表-end-->
+</body>
+</html>

@@ -1,0 +1,6 @@
+/*商品信息*/
+.stn-information{ width:92.82%; padding:0 3.59%; background:#fff; }
+.stn-information .p-name{ color:#464646; margin-top:.3rem; }
+.stn-information .p-money{ color:#999999; padding:.72rem 0 1.45rem; }
+.stn-information .p-money em{ color:#f2484b; }
+.stn-information .p-money span{ text-decoration:line-through; margin-left:5%; }

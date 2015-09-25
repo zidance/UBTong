@@ -14,13 +14,12 @@
 .erweima img{ width:100%; height:100%;}
 .erweima .er-p{ color:#555555; text-align:center; width:100%; }
 
+.alpha-bg{ width:100%; height:100%; background:#000; display:none; filter:alpha(opacity:50); opacity:0.5; position:absolute; left:0; top:0; z-index:3333;}
+
+
 @media screen and (min-width:321px) and (max-width:640px){
 .followers .foll-right{ width:84%;}
-.erweima{ width:84%; height:18rem; left:1.4rem;}
+.erweima{ width:84%; height:18rem;}
 .erweima .er-img{ width:10rem; height:10rem;}
 }
 
-@media screen and (max-width:320px){
-	.erweima{ left:1.75rem;}
-
-}

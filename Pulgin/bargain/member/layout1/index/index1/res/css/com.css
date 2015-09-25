@@ -1,0 +1,12 @@
+body{ background:#f7f5f5; }
+.header-member{ position:relative; padding-left:7%; height:7.56rem; }
+.header-member .headbg{ width:100%; height:100%; position:absolute; top:0; left:0; }
+.header-member .headbg img{ width:100%; height:7.56rem; }
+.header-member p{ position:absolute; z-index:10; color:#fff; font-size:1.3rem; margin-top:2rem; }
+.header-member p span{ display:block; font-size:1.16rem; margin:.1rem 0 0 2px; }
+
+nav li{ height:2.83rem; border:solid #dcdcdc; border-width:1px 0 1px; margin-top:.72rem; }
+nav li a{ display:block; height:2.83rem; line-height:2.83rem; background:url(../img/left.png) no-repeat #fff 95% center; background-size:.43rem .76rem; }
+nav li img{ display:block; float:left; width:1.45rem; height:1.45rem; margin:.69rem 0 0 1.7rem; }
+nav li .s-name{ display:block; float:left; color:#242424; margin-left:.94rem; }
+@media screen and (max-width:320px){nav li a{line-height:2.73rem; }}

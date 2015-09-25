@@ -1,0 +1,10 @@
+/*轮播图片*/
+.banner{ position:relative; }
+.banner .slider { z-index:1; display:block; margin:0 auto; overflow:hidden; position:relative; }
+.banner .slider .sliderlist{ position:absolute; width:2000px; left:0; top:0px; }
+.banner .slider .sliderlist li{ float:left; width:100%; display:block; text-align:center; }
+.banner .slider .sliderlist li span{ margin:0 auto; display:inline-block; }
+.banner .slider .sliderlist li img{ width:100%; max-height:300px; }
+.banner .slider #pagenavi{ position:absolute; left:0; bottom:5px; text-align:center; width:100%;}
+.banner .slider #pagenavi a{ width:10px; height:10px; border-radius:100%; line-height:99em; background:#ffffff; margin:0 2px 0 2px; overflow:hidden; cursor:pointer; display:inline-block; *display:inline; zoom:1; }
+.banner .slider #pagenavi a.active{ background:#e60012; }
