@@ -17,11 +17,12 @@ $(function(){
 	var _box = $('#BoxPayment');
 	var _del = _box.find('.a-close');
 		
-	var _oDesk=$('#desk');
+	var _oDesk=$('.desk');
 	var _aLi=_oDesk.find('.dot li');
 	var _ospan=_oDesk.find('.desk-span');
 	var _oDiv=_oDesk.find('.desk-div');
 	var _oDot=_oDesk.find('.dot');
+	_oDesk.height(_oDesk.width());
 	var _H=_oDesk.height()/2
 	var _li=_aLi.eq(0).width()/2;
 	var _r=_oDesk.width()/2-_li;
@@ -66,7 +67,7 @@ $(function(){
     </section>
     
     <div style="background:#f5f5f5;padding:0.65rem 0;">
-        <section id="desk">
+        <section class="desk" style="margin:0 auto;">
             <span class="desk-span fz32">嘉宾席</span>
             <div class="desk-div"> 
                 <ul class="dot" data-num="">
