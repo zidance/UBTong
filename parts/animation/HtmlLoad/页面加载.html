@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>页面加载</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/HtmlLoad.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!--页面加载,该元素每页面限一个-->
+    <section id="stn-pageChange">
+        <div class="load"></div>        
+    </section>
+    <script>
+        var oObj = document.getElementById("stn-pageChange").style,
+            iCount = 20;//超过iCount*检测间隔,遮罩层自动收起,这里是20*0.2=4秒
+        
+        //加载中
+        if(document.readyState==="uninitialized" || document.readyState==="loading"){
+            oObj.display = "block";
+            iCount = 0;
+        }
+        
+        //循环检测
+        (function disHide(){
+            if(iCount<20){
+                setTimeout(function(){
+                    iCount++;
+                    if(document.readyState==="complete"){
+                        iCount=20;
+                    };
+                    disHide();
+                },200)//每0.2秒检测一次
+            }else{
+                oObj.display="none";
+            };
+            
+        })()
+        
+    </script>
+   <!--页面加载--end-->
+   
+</body>
+</html>
