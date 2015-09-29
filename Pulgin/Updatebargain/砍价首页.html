@@ -8,16 +8,136 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="res/css/bargain.css" rel="stylesheet" type="text/css" />
+<script src="../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		/*活动选项*/
+		var _obj = $('#Activlists');
+		var _li = _obj.find('li');
+		$.each(_li,function(i,e){
+			var _this = $(this);
+			_this.find('a').click(function(){
+				_li.find('.con').hide();
+				_li.find('a').css('background-image','url(res/img/right.png)');
+				_this.find('.con').show();
+				$(this).css('background-image','url(res/img/down.png)');
+			})
+		})
+		/*弹出框*/
+		var _btn = $('#btnActivlists');
+		var _bg = $('#Background');
+		var _box = $('#BoxWrite');
+		var _del = _box.find('.a-close');
+		
+		_btn.click(function(){
+			_box.show();
+			_bg.show();
+			_box.css({'top':($(window).height()-_box.height())/2});
+		})
+		_del.click(function(){
+			_box.hide();
+			_bg.hide();
+		})
+	})
+</script>
 </head>
 
 <body style="background:#eb1305;">
+	<!--弹出框-->
+	<div class="box-write" id="BoxWrite">
+    	<h1 class="fz32">请填写个人信息<p class="fz20">以便与获奖后主办方及时通知您</p><a class="a-close" href="#">关闭</a></h1>
+        <input class="fz28" type="text" placeholder="姓名" />
+        <input class="fz28" type="text" placeholder="手机" />
+        <input class="fz28" type="text" placeholder="宝贝姓名" />
+        <input class="fz28" type="text" placeholder="年龄" />
+        <input class="fz28" type="text" placeholder="就读学校\早教\培训" />
+        
+        <a class="a-btn" href="#">开始砍价</a>
+    </div>
+    <div id="Background"></div>
+    <!--弹出框-end-->
+
 	<div class="advertising"><img src="res/img/carousel.jpg" /></div>
     <section class="stn-synopsis">
     	<div class="title">
         	<div class="title-l"></div>
-            <div class="title-m"></div>
+            <div class="title-m fz34">朋友给力海博买单</div>
             <div class="title-r"></div>
         </div>
+        <div class="clr"></div>
+        
+        <div class="content">
+        	<p class="fz26">近期，建行上海市分行积极联动东京分行，以日本税务租赁的方式为东航一架波音737-89P飞机提供融资。该笔业务系建行系统首笔日本税务租赁飞机融资。该融资结构充分发挥了我行在市场上的融资优势，进一步巩固了我行在上海飞机融资市场上的地位。</p>
+        </div>
     </section>
+    <section class="stn-activity">
+    	<h1><img src="res/img/title2.png" /></h1>
+        <div class="content">
+        	<p class="fz24">砍价任意组合套餐（至多选3项，至少选1项目）</p>
+            <p class="fz24">温馨提示：</p>
+            <p class="fz24">价值越高砍价难度越大哦~（可多选）</p>
+        </div>
+    </section>
+    <section class="stn-activlists" id="Activlists">
+    	<ul>
+        	<li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">天才宝贝培训课程一期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+            <li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">童心宝贝培训课程三期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+            <li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">跆拳道培训课程七期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+            <li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">新课堂培训课程二期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+            <li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">海博士培训课程八期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+        
+    <div class="activlists-btn"><a id="btnActivlists" class="a-btn fz34" href="#">我要砍价</a></div>
 </body>
 </html>

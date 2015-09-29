@@ -8,13 +8,14 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="res/css/bargain.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="res/js/timeCountDown.js" ></script>
 </head>
 
 <body>
 	<section class="stn-time">
     	<p class="p-name fz32">时间还剩</p>
         <div class="time fz58">
-        	<span class="s-time">0</span><span class="s-time">4</span><span class="s-icon"><img src="res/img/day.png" /></span><span class="s-time">1</span><span class="s-time">1</span><span class="s-icon"><img src="res/img/hour.png" /></span><span class="s-time">3</span><span class="s-time">5</span><span class="s-icon"><img src="res/img/minute.png" /></span><span class="s-time">5</span><span class="s-time">8</span><span class="s-icon"><img src="res/img/second.png" /></span>
+        	<span id="day"></span><span class="s-icon"><img src="res/img/day.png" /></span><span id="hour"></span><span class="s-icon"><img src="res/img/hour.png" /></span><span id="mini"></span><span class="s-icon"><img src="res/img/minute.png" /></span><span id="sec"></span><span class="s-icon"><img src="res/img/second.png" /></span>
         </div>
     </section>
     <section class="stn-course">
@@ -33,5 +34,16 @@
         <p class="p-money fz28">本次您帮TA砍了39元</p>
     	<div class="btn"><a class="fz32" href="#">帮TA砍价</a><a class="fz32" href="#">我要参加</a><div class="clr"></div><p class="fz26">每人每天可帮助砍价1次</p></div>
     </section>
+    
+	<script type="text/javascript">
+        var d = Date.UTC(2015, 8, 30, 00, 00);  //当前月份减1
+        var obj = {
+             sec: document.getElementById("sec"),
+             mini: document.getElementById("mini"),
+             hour: document.getElementById("hour"),
+             day: document.getElementById("day")
+        }
+        fnTimeCountDown(d, obj);
+    </script>
 </body>
 </html>
