@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>时间倒计时</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/time.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="res/js/timeCountDown.js" ></script>
+</head>
+
+<body>
+	<section class="stn-time">
+    	<p class="p-name fz32">时间还剩</p>
+        <div class="time fz58">
+        	<span id="day"></span><span class="s-icon"><img src="res/img/day.png" /></span><span id="hour"></span><span class="s-icon"><img src="res/img/hour.png" /></span><span id="mini"></span><span class="s-icon"><img src="res/img/minute.png" /></span><span id="sec"></span><span class="s-icon"><img src="res/img/second.png" /></span>
+        </div>
+    </section>
+    
+	<script type="text/javascript">
+        var d = Date.UTC(2030, 8, 30, 00, 00);  //当前月份减1
+        var obj = {
+             sec: document.getElementById("sec"),
+             mini: document.getElementById("mini"),
+             hour: document.getElementById("hour"),
+             day: document.getElementById("day")
+        }
+        fnTimeCountDown(d, obj);
+    </script>
+</body>
+</html>

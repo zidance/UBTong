@@ -1,0 +1,17 @@
+.stn-synopsis{ width:93.75%; position:relative; margin:0 auto; padding-top:1.38rem; }
+.stn-synopsis .title{ width:81%; height:2.14rem; position:absolute; top:1.01rem; left:9.5%; }
+.stn-synopsis .title-l,.stn-synopsis .title-r{ float:left; background:url(../img/tutlel.jpg) no-repeat; background-size:.9rem 2.14rem; width:.9rem; height:2.14rem; }
+.stn-synopsis .title-r{ background-image:url(../img/titler.jpg); }
+.stn-synopsis .title-m{ width:85%; height:2.14rem; line-height:2.14rem; background:#efe939; color:#cf2d22; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; text-align:center; float:left; }
+.stn-synopsis .content{ width:88.76%; background:#ff483a; border-radius:10px; padding:2.54rem 5.62% .9rem; color:#fff; line-height:1.2rem; text-indent:28px; }
+
+
+
+
+
+
+
+
+
+
+
