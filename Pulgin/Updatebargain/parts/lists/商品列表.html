@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>商品列表</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/lists.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		/*活动选项*/
+		var _obj = $('#Activlists');
+		var _li = _obj.find('li');
+		$.each(_li,function(i,e){
+			var _this = $(this);
+			_this.find('a').click(function(){
+				_li.find('.con').hide();
+				_li.find('a').css('background-image','url(res/img/right.png)');
+				_this.find('.con').show();
+				$(this).css('background-image','url(res/img/down.png)');
+			})
+		})
+	})
+</script>
+</head>
+
+<body style="background:#eb1305;">
+    <section class="stn-activlists" id="Activlists">
+    	<ul>
+        	<li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">天才宝贝培训课程一期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+            <li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">童心宝贝培训课程三期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+            <li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">跆拳道培训课程七期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+            <li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">新课堂培训课程二期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+            <li>
+            	<div class="name">
+                    <input type="checkbox" />
+                    <a class="fz30" href="###">海博士培训课程八期</a>
+                </div>
+                <div class="clr"></div>
+                <div class="con">
+                	<p class="p1 fz24">课程介绍：</p>
+                    <p class="p2 fz24">天才宝贝早教中心秉承MBA同样的能力培养理念，致力于为3-6岁的孩子提供全方位的学前教育，培养孩子的综合能力，并帮助发掘他们的潜在天赋。</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
