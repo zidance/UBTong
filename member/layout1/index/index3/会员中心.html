@@ -88,6 +88,24 @@
         </ul>
     </section>
     <!--消息推送和二维码--end-->
+    <script>
+    //开关脚本
+    $(function(){
+        $(".stn-SetAndLink").find(".a-btn").each(function(){
+            $(this).click(function(e){
+                var oImg = $(this).find("img"),
+                    sImgSrc=oImg.attr("src").toString()
+                if(/close/.test(sImgSrc)){//如果关
+                    oImg.attr("src",sImgSrc.replace(/close/,"open"))
+                }else if(/open/.test(sImgSrc)){//如果开
+                    oImg.attr("src",sImgSrc.replace(/open/,"close"))
+                }
+            })
+        })
+    })
+    </script>
+    
+    
     
     <!--指尖管家,样式使用"统计数据"-stn-StatisticsData-->
     <section class="stn-StatisticsData">

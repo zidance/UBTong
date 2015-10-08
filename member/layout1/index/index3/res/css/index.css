@@ -84,13 +84,3 @@ body {
 .stn-StatisticsData li .fz32{display: block;color:#454545;font-weight: bold;}
 .stn-StatisticsData li .fz24{display: block;color:#aaaaaa;padding-top:3.7%;}
 /*统计数据--end*/
-
-
-@media screen and (min-width:321px) and (max-width:639px) {}
-@media screen and (max-width:320px) {}
-
-/*
-border:1px solid #c5c5c5
-
-
-*/
