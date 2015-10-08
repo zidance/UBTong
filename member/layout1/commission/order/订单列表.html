@@ -9,6 +9,7 @@
 <meta content="telephone=no" name="format-detection" />
 <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="res/css/order.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
 </head>
 
 <body style="background-color:#f4f4f4;">
@@ -58,5 +59,21 @@
         
 		<!--订单列表-end-->
 	</section>
+	<script>    
+    //两行排版
+    function _textLine(){
+        var _info = $(".art-order").find(".p-name");
+        _info.each(function(){
+            var _text = $(this).text();
+            var _html = $(this).html();
+            var _length = parseInt($(this).width()/parseFloat($(this).css("font-size")));//每行长度
+            
+            if(_text.length > _length*2){              $(this).html(_html.substring(0,_html.length-(_text.length-_length*2))+"...")
+            };
+        })
+        
+    };
+    _textLine();
+    </script>
 </body>
 </html>
