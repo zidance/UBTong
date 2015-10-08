@@ -2,7 +2,7 @@
 * http://www.zhangxinxu.com/
 * 倒计时的实现
 */
-var fnTimeCountDown = function(d, o){
+var fnTimeCountDown = function(d, o, m){
 	var f = {
 		zero: function(n){
 			var n = parseInt(n, 10);
@@ -57,7 +57,8 @@ var fnTimeCountDown = function(d, o){
 				o.day.innerHTML = '<span class="s-time">'+days[0]+'</span><span class="s-time">'+days[1]+'</span>';
 			}
 			if(o.month){
-				o.month.innerHTML = f.dv().month;
+				months=f.dv().month.split("");
+				o.month.innerHTML = '<span class="s-time">'+months[0]+'</span><span class="s-time">'+months[1]+'</span>';
 			}
 			if(o.year){
 				o.year.innerHTML = f.dv().year;
