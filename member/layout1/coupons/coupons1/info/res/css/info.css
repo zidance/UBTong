@@ -1,6 +1,6 @@
 /*优惠券信息*/
 .stn-CouponsInfo li {position: relative;margin: .72rem auto 0;width: 93.59%;border-top: 1px solid #d4d4d4;
-    background-image:  url(../img/bottom-left2.png), url(../img/bottom-right.png), url(../img/icon4.jpg),url(../img/icon3.jpg);
+    background-image:  url(../img/bottom-left.png), url(../img/bottom-right.png), url(../img/icon4.jpg),url(../img/icon3.jpg);
     background-repeat: no-repeat,no-repeat,repeat-y,repeat-y;
     background-position: left bottom,right bottom,right,left;
     background-size: .12rem, .12rem, .12rem .47rem,.12rem .47rem ;
@@ -20,5 +20,12 @@
 .stn-CouponsInfo li .i-gray{ background:#a1a1a1; }
 
 /*过期*/
-.stn-CouponsInfo .li-overdue .content-l{ color:#cccccc; }
+.stn-CouponsInfo .li-overdue{
+    background-image:  url(../img/bottom-left2.png), url(../img/bottom-right2.png), url(../img/icon4.jpg),url(../img/icon3.jpg);
+    background-repeat: no-repeat,no-repeat,repeat-y,repeat-y;
+    background-position: left bottom,right bottom,right,left;
+    background-size: .12rem, .12rem, .12rem .47rem,.12rem .47rem ;
+}
+.stn-CouponsInfo .li-overdue>a{border-bottom-color: #cccccc;}
+.stn-CouponsInfo .li-overdue .content-l{color:#cccccc;}
 .stn-CouponsInfo .li-overdue .content-r p{ color:#cccccc; }
