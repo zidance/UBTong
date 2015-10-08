@@ -8,15 +8,89 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="res/css/info.css" rel="stylesheet" type="text/css" />
+<!--时间控件样式-->
+<link rel="stylesheet" type="text/css" href="res/css/styleV2.css" />
+
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<!--时间API-->
+<script src="res/js/moment.min.js"></script>
+<!-- 选择区域js-->
+<script src="res/js/scroll_areaV3.js"></script>
 </head>
 
 <body style="background:#f4f4f4;">
 	<!--分佣信息-->
     <section class="stn-CommissionInfo">
-        <p class="p-month">2015年<strong>07</strong>月<span></span></p>
-        <ul></ul>
-    	
+        <p class="p-month fz28" id="selectShow" data-value="201507"><em>2015</em>年 <strong>07</strong>月<span></span></p>
+        <ul>
+            <li>
+               <a href="###">
+                    <span class="fz36">￥3.3</span>
+                   <span class="fz28">本月金额</span>
+               </a>
+           </li>
+            <li>
+               <a href="###">
+                    <span class="fz36">1</span>
+                   <span class="fz28">总订单数</span>
+               </a>
+           </li>
+            
+        </ul>
+    	<p class="p-prompt fz24">（其中3.3元已确认，0元待确认）</p>
     </section>
     <!--分佣信息-end-->  
+    
+    <!--时间控件弹出框-->
+    <a id="timeMb" class="hide" href="javascript:void(0);"></a>
+    <div id="selectTime" class="hide" style="-webkit-transform: translate3d(0px, -190px, 0px);">
+        
+        <h3><a href="javascript:void(0);" class="fl">取消</a><a href="javascript:void(0);" class="fr not">确定</a></h3>
+        
+        <div class="timeFloat">
+            <div class="dateWrap" id="dateSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 0px, 0px);">
+                <ul style="height: 210px;">
+                   <!--active当前选中-->
+                </ul>
+            </div>
+            
+            <div class="timeWrap" id="timeSelect" style="display:none;">
+                <ul style="height: 360px;">
+                    <li class="active">09:00</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+//moment.min.js是一个提供时间API的脚本,不涉及样式.常用调用方法如下
+   	//moment() //获取当前时间(本机的)
+    //.add('days',7)    //几天后,还可以是'months'/'hours'等
+    //.format('YYYY-MM-DD HH:mm:ss') //跟在时间后面,规定了最终输出时间的方式,参数的方式通常有这几种:
+        //"DD"当前是几日,
+        //"d" 当前星期几,返回的是0-6的数字
+        //"YYYYMMDD" 具体时间,中间可以加横杠,但不可加"年/月/日"这样的中文
+    
+    var _obj = $("#dateSelect").find("ul");
+    
+    var t1 = 7;  //倒数几个月的统计数据
+    var t2 = 0;
+    var _day;
+    while(t2<t1){
+        _day = moment().add("months",-t2);
+        _obj.append('<li data-value="'+_day.format('YYYYMM')+'">'+_day.format('YYYY')+'年'+_day.format('MM')+'月</li>');
+        t2++; 
+    }
+   
+    //确定按钮,返回所选时间
+    $("#selectTime").find(".fr").click(function(){
+        var _act = $("#dateSelect").find(".active").attr("data-value");
+        $("#selectShow").find("em").text(_act.substring(0,4));
+        $("#selectShow").find("strong").text(_act.substring(4,6));
+
+    });
+</script>
+    <!--时间控件弹出框--end-->
+    
 </body>
 </html>

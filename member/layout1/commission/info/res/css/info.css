@@ -1,36 +1,13 @@
 /*分佣信息*/
-.stn-commission .money{ width:100%; height:8.25rem; background:url(../img/bg.jpg) repeat-x 0 bottom #fd7d09; background-size:.72rem.36rem; padding-top:.72rem; }
-.stn-commission .money .p-name{ color:#fff; margin:0 4.37% 0 5.31%; }
-.stn-commission .money .p-name a{ display:block; float:right; width:13%; height:1.19rem; line-height:1.19rem; border:2px solid #fff; border-radius:4px; color:#fff; text-align:center; }
-.stn-commission .money .p-money{ color:#fff; margin:.4rem 0 0 5.31%; }
-.stn-commission .lists{ border-top:1px solid #dcdcdc; background:#fff; margin-top:.72rem; }
-.stn-commission .lists li{ border-bottom:1px solid #dcdcdc; padding:0 5.31%; height:7.23rem; }
-.stn-commission .lists li .p-name{ color:#b5b5be; margin-top:.79rem; }
-.stn-commission .lists li .p-money{ color:#ff3333; margin-top:.8rem; }
 
-/*佣金明细*/
-    /*时间*/
-.stn-commission-detail{}
-.stn-commission-detail .commission-time{ padding:.54rem 3.75% .72rem; background:#f7f5f5; }
-.stn-commission-detail .commission-time ul{ margin:0 auto; border:1px solid #eae8e8; border-radius:6px; }
-.stn-commission-detail .commission-time li{ padding:0 3%; border-bottom:1px solid #d9d9d9; background:#fff; border-radius:6px 6px 0 0; }
-.stn-commission-detail .commission-time li:last-child{ border-bottom:none; border-radius:0 0 6px 6px; }
-.stn-commission-detail .commission-time li a{ display:block; background:url(../img/left.png) no-repeat right center; background-size:.58rem 1.09rem; padding:.9rem 0; padding-right:7%; }
-.stn-commission-detail .commission-time li a .p-name{ float:left; color:#000; }
-.stn-commission-detail .commission-time li a .p-time{ float:right; color:#3e9ef9; }
+.stn-CommissionInfo .p-month{color:#fbf4e8;padding:3.5% 0 3.7%;background-color: #f77a02;text-align: center;}
+.stn-CommissionInfo .p-month strong{font-size:178%;font-weight: normal;}
+.stn-CommissionInfo .p-month span{display: inline-block;width:3.1%;background: url(../img/down.png) no-repeat left top;background-size: 100%;vertical-align:.2rem;height:.5rem;margin-left:4.5%; }
 
-    /*列表*/
-.stn-commission-detail .lists{ padding:0 3.75%; background:#fff; }
-.stn-commission-detail .lists li{ border-bottom:1px solid #e7e7e7; padding:1.09rem 3%; }
-.stn-commission-detail .lists li .li-left{ width:50%; float:left; }
-.stn-commission-detail .lists li .li-left p{ color:#000; }
-.stn-commission-detail .lists li .li-left .p-money{ margin-top:.3rem; }
-.stn-commission-detail .lists li .li-right{ width:50%; float:right; text-align:right; }
-.stn-commission-detail .lists li .li-right .p-num{ color:#fd7d09; line-height:1.2rem; }
-.stn-commission-detail .lists li .li-right .p-time{ color:#c3c3c3; margin-top:.2rem; }
+.stn-CommissionInfo ul{font-size:0/*去除inline-block的间距*/;background: #fff;border-width:0 0 1px;border-style:solid;border-color:#c5c5c5;background-color: #fff;}
+.stn-CommissionInfo li{display:inline-block;width:50%;text-align: center;padding:4.5% 0 4.2%;}
+.stn-CommissionInfo li a{display: block;}
+.stn-CommissionInfo li .fz36{display: block;color:#f77a02;}
+.stn-CommissionInfo li .fz28{display: block;color:#939292;padding-top:3.7%;}
 
-
-    /*底部按钮*/
-.stn-commission-detail .stn-query{position: fixed;bottom:0;background-color:#f7f5f5;width:100%;height:4.41rem;max-width:640px;}
-.stn-commission-detail .a-query{display:block;width:96%;text-align: center; margin:.7rem auto 0;background-color:#fd7d09;border:none;border-radius: 6px;line-height: 100%;color:#fff; padding:.9rem 0;}
-
+.stn-CommissionInfo .p-prompt{color:#939292;line-height:1.8;}
