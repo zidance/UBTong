@@ -1,0 +1,10 @@
+/*头部分类排序*/
+.stn-sort{ width:100%; height:2.5rem; border-bottom:1px solid #c3c3c3; background:#fafafa; position:fixed; top:0; left:0; z-index:10; }
+.stn-sort li{ width:33.33%; height:2.5rem; float:left; text-align:center; background:url(../img/bg.gif) no-repeat right center; background-size:1px 1.67rem; }
+.stn-sort li:last-child{ background:none; }
+.stn-sort li a{ display:block; color:#464646; line-height:2.47rem; }
+.stn-sort li a.act{ border-bottom:2px solid #f54e1f; color:#f54e1f; }
+
+@media screen and (max-width:320px){
+	.stn-sort li a{ line-height:2.42rem; }
+}

@@ -1,0 +1,77 @@
+/*--------------------------------------------------------------婚宴桌位--------------------------------------------------------------*/
+.stn-img{ width:100%; }
+.stn-img img{ width:100%; height:100%; }
+.tab-desk .tab-item{ width:100%; height:2.6rem; border-bottom:1px solid #d4d4d4; background:#fff; }
+.tab-desk .tab-item li{ width:50%; float:left; text-align:center; }
+.tab-desk .tab-item li a{ display:inline-block; color:#939393; line-height:2.5rem; padding:0 .72rem; }
+.tab-desk .tab-item li .act{ color:#f12e2e; border-bottom:3px solid #f12e2e; }
+/*桌子位置*/
+.desk-lists{ padding-top:1.5rem; }
+.desk{ width:40.31%; position:relative; background:url(../img/desk.png) no-repeat center; background-size:60% 60%; }
+.floatmargin{ float:left; margin:0 0 1.5rem 6.7%; }
+.big-desk{ width:53%; height:53%; float:none; margin:0 auto 1rem; overflow:hidden; }
+.desk .desk-span{ display:block; width:100%; height:100%; line-height:14.53rem; color:#fff; text-align:center; }
+.desk .desk-div{ width:100%; height:100%; position:absolute; top:0; left:0; overflow:hidden; }
+.desk .dot{ position:absolute; width:1.19rem; height:1.19rem; left:50%; top:50%; }
+.desk .dot li{ position:absolute; width:100%; height:100%; }
+.desk .dot li a{ display:block; }
+.desk .dot li img{ width:100%; height:100%; }
+/*规则*/
+.rule{ width:84.53%; margin:0 auto 1.09rem; }
+.rule h1{ padding-bottom:1.09rem; }
+.rule h1 img{ width:100%; height:auto; }
+.rule p{ color:#454545; line-height:1.2rem; }
+
+.desk-btn{ width:100%; height:3.26rem; line-height:3.26rem; border-top:1px solid #d4d4d4; background:#fff; position:fixed; bottom:0; left:0; }
+.desk-btn p{ margin-left:5.9%; float:left; color:#666666; }
+.desk-btn p span{ color:#f12e2e; margin:0 5px; }
+.desk-btn a{ display:block; width:41.56%; height:2.5rem; line-height:2.5rem; background:#f12e2e; border-radius:5px; color:#fff; float:right; margin-right:5.9%; text-align:center; margin-top:.4rem; }
+
+.stn-boxpayment{ width:87.5%; position:fixed; top:100px; left:6.25%; background:#fff; z-index:10; border-radius:9px; display:none; }
+.stn-boxpayment h1{ text-align:center; color:#333333; position:relative; padding:.8rem 0; }
+.stn-boxpayment h1 a{ display:block; position:absolute; top:.71rem; right:6.4%; background:url(../img/close.png) no-repeat; background-size:1.23rem 1.23rem; width:1.23rem; height:1.23rem; text-indent:-9999px; font-size:0; }
+.stn-boxpayment input{ display:block; width:83.28%; height:2rem; line-height:2rem; padding:0 3%; margin:0 auto; border-radius:5px; border:1px solid #cccccc; }
+.stn-boxpayment input::-webkit-input-placeholder{ color:#cccccc; }
+.stn-boxpayment .a-btn{ display:block; width:89.28%; height:2rem; line-height:2rem; margin:1rem auto; text-align:center; background:#f12e2e; color:#fff; border-radius:5px; }
+
+#Background {
+	width: 100%;
+	height: 100%;
+	z-index: 8;
+	background: #000;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	opacity: 0.5;
+	display: none;
+}
+
+/*--------------------------------------------------------------婚宴入席--------------------------------------------------------------*/
+.top-name{ width:100%; height:3.63rem; background:#fff; border-bottom:1px solid #d4d4d4; padding-top:0.36rem;}
+.top-name .p-name{line-height:2.03rem; text-align:center; color:#333333;}
+.top-name .p-num{ text-align:center; color:#333333;}
+.top-name .p-num span{ color:#f12e2e;}
+
+
+.list-name{ width:92.8%; background:#fff; padding:0 3.6%; border-top:1px solid #d4d4d4; padding-bottom:0.72rem;}
+.list-name li{ width:44%; height:3.15rem; padding-left:6%; float:left; line-height:3.15rem; color:#333333; border-bottom:1px solid #d4d4d4; position:relative;}
+.list-name a{ display:block; width:100%; height:2.9rem; background:#f12e2e; border-radius:0.36rem; line-height:2.9rem; text-align:center; color:#fff; margin-top:0.4rem;}
+.list-name li .act{ display:block; padding:0 0.43rem; height:1.16rem; line-height:1.16rem; background:#f12e2e; color:#fff; text-align:center; border-radius:0.21rem; position:absolute; top:.98rem; left:50%;}
+.list-name li:nth-last-child(1){ border-bottom:none;}
+.list-name li:nth-last-child(2){ border-bottom:none;}
+
+@media screen and (min-width:321px) and (max-width:360px){
+	.desk-btn a{ height:2.2rem; line-height:2.2rem; margin-top:0.53rem;}
+}
+
+@media screen and (max-width:320px){
+	.desk{ width:43.2%;  }
+	.floatmargin{margin:0 0 1.5rem 4.8%;}
+	.big-desk{ width:50%;margin:0 auto 1rem;}/*大桌14人 12 width:50%人   16人 width:55%*/
+	.desk .dot{ width:1.48rem; height:1.48rem;}
+	.list-name li .act{ top:1.03rem; }
+	.desk-btn{ height:3.99rem;}
+	.desk-btn a{ height:2.9rem; line-height:2.9rem; margin-top:0.545rem;}
+	.desk-btn{ line-height:3.99rem;}
+	.rule{ padding-bottom:1rem;}
+}
