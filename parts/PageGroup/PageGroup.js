@@ -45,6 +45,8 @@ $$(function(){
       type:"GET",
 //      async:true,
       error:function(){//可升级,思路:一本地测试,二路径错误时存变量,并在for结束后统一回馈
+        $("body").prepend("<div class='errorInfo'><p style='color:red'>第<span>"+(iPageNum+1)+"</span>个路径有误,请检查.</p><p>如果是在本机测试(没有架设服务器),请参照 <a target='_blank' href='http://blog.sina.com.cn/s/blog_a76aa1590101eams.html' >这里</a></p>")
+        
 //        pageGroup.hasError=true;
 //        pageGroup.errors.page[pageGroup.errors.pageCount] = iPageNum;
 //        pageGroup.errors.pageCount++;
@@ -82,7 +84,8 @@ $$(function(){
         wrapTemp = '.'+wrapTemp
         $(wrapTemp)
           .append(oP.head)
-          .append(oP.body).append('<div class="pageGroupTempChild"')
+          .append(oP.body)
+          .append('<div class="pageGroupTempChild">')
         
         //body属性值设置,可升级,body如有属性,设置到新页面
         //方案1，body改为div　问题：可能对一些css设置和js获取dom树产生影响，如body>h1
@@ -122,7 +125,7 @@ $$(function(){
         
         
         //删除额外的节点
-     $('.pageGroupTempChild').unwrap().remove()
+//     $('.pageGroupTempChild').unwrap().remove()
      
       iPageNum++
       main()
