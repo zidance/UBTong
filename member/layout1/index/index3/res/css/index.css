@@ -78,6 +78,8 @@ body {
 
 
 /*统计数据,包括 指尖管家,分销商推广渠道*/
+.stn-StatisticsData {position:relative;}
+.stn-StatisticsData .a-update{position:absolute; right: 3.4%;top:-.1rem;padding:.15rem .3rem .2rem;background-color:#339900; border-radius: .3rem;color:#fff; }
 .stn-StatisticsData .p-title{color:#86898e;margin:4.2% 0 3% 5%;}
 .stn-StatisticsData ul{font-size:0/*去除inline-block的间距*/;background: #fff;border-width:1px 0;border-style:solid;border-color:#c5c5c5;background-color: #fff;}
 .stn-StatisticsData li{display:inline-block;width:33.3%;text-align: center;padding:4.1% 0 3.7%;}
