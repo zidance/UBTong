@@ -1,5 +1,4 @@
 /*产品列表*/
-.index-lists{ background:#fff;}
 .index-lists li{float:left; width:45.3%;background-color: #fff;margin:.65rem 0 0 3.1%; border:1px solid #dddddd;}
 .index-lists li .a-product{display:block;}
 .index-lists li .s-img{position: relative;display: table-cell;text-align: center;vertical-align: middle;}
