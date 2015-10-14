@@ -3,7 +3,7 @@ if (typeof jQuery === "undefined") { //兼容无jQuery的情况,此时引入的�
   jQuery = 0
 }
 var $$ = jQuery || Zepto; //由于微商城项目主要采用zepto,jQuery交出$控制权
-//jQuery.noConflict();
+jQuery.noConflict();
 $ = Zepto; //如果jQuery采用不完整版,就需要
 
 
@@ -157,8 +157,7 @@ $$(function () {
           else if (iPageNum = pageUrl.length) {
             exportError()
           }
-
-
+        
         } //main
 
       main()
@@ -185,4 +184,5 @@ $$(function () {
       }
 
     }, 300)
+    
   }) //$(function(){})的结束
