@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>轮播图片</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/pic.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
+<script type="text/javascript" src="res/js/touchslider.js"></script>
+
+<script>
+    
+    function imgSize(wrap,isFullScreen){
+        var nWidHei=640/300,/*原图比例,设计稿宽/高*/
+            wrap = $('.'+wrap),
+            wrapWid = wrap.width();
+            var oImg = $(wrap).find('img');
+            wrap.height(wrap.width()/nWidHei);//设容器高]
+
+        if(isFullScreen){
+            wrap.css('top',(window.innerHeight-wrap.height())/4)
+//            wrap.width(window.innerWidth)
+                    
+        }
+        var wrapHei=wrap.height()
+//        alert(wrapHei) 
+        
+        
+        
+        oImg.each(function(i){
+            if(isFullScreen){
+                $(this).height('auto')
+                $(this).width('auto')
+            }
+            
+            var thisHei = $(this).height(),
+                thisWid = $(this).width(),
+                
+                thisWidHei = thisWid/thisHei;
+            
+            if(thisWidHei<nWidHei && thisHei<wrapHei){
+                //小图,不缩放
+            }else if(thisWidHei>=nWidHei){
+                //超出的大图,宽高比大于原图,按宽标准填充
+                $(this).width(wrapWid)
+                
+            }else{
+                //超出的大图,宽高比小于原图,按高标准填充
+                $(this).height(wrapHei)
+            }
+            
+            //上下居中
+            thisHei = $(this).height();//再获取
+            if(thisHei<wrapHei){
+                $(this).css('margin-top',(wrapHei-thisHei)/2)
+            }
+            
+        })
+        
+    }
+    
+    $(function() {
+        imgSize('slider');
+        $('.focusWrap').click(function(e){
+            e.preventDefault();
+            $('.focusWrap').hide()
+            $(".banner").show()
+            $("head").append('<meta name="viewport" content="initial-scale = 1.0,user-scalable=0" />')
+        })
+        //click
+        $('.slider').on('click','img',function(){
+            
+            var focusImg = $('.focusImg').find('img'),
+            focusSrc = $(this).attr('src')
+            focusImg.attr('src',focusSrc)
+            $('.focusWrap').show()
+            
+            imgSize('focusImg',true)
+              
+            $(".banner").hide()
+            $("head").append('<meta name="viewport" content="initial-scale = 1.5,user-scalable=1" />')
+            
+        })
+    })
+</script>
+
+</head>
+
+<body>
+    <!--轮播图片-->
+	<div class="banner">
+		<div id="slider" class="slider">
+		    <div class="focusBg"></div>
+			<ul id="sliderlist" class="sliderlist">
+				<li><a href="#"><img src="res/img/400800.png"></a></li>
+				<li><a href="#"><img src="res/img/800400.png"></a></li>
+				<li><a href="#"><img src="res/img/10050.png"></a></li>
+				<li><a href="#"><img src="res/img/50100.png"></a></li>
+				<li><a href="#"><img src="res/img/img1.jpg"></a></li>
+				<li><a href="#"><img src="res/img/img2.jpg"></a></li>
+			</ul>
+			<div id="pagenavi">
+				<a class="active" href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+			
+		</div>
+	</div>
+	<script type="text/javascript" src="res/js/banner.js"></script>
+	<!--轮播图片--end-->
+	
+	
+	<!--图片弹出放大-->
+	<section class="focusWrap">
+	    <div class="focusBg"></div>
+        <div class="focusImg"><span><img /></span></div>
+	</section>
+	<!--图片弹出放大--end-->
+	
+	
+	
+</body>
+</html>
