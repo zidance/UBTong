@@ -61,11 +61,16 @@
 }
 
 
+
 /*图片弹出放大*/
-.focusWrap{position: fixed;width:100%;height:100%;top:0;left:0;display: none;}
-.focusWrap .focusBg{height:100%;background-color: #000/*b2b2b2*/;opacity: 0.3;z-index:998;}
-.focusWrap .focusImg{position:absolute;top:0;text-align: center;width:100%;height:100%;}
-.focusWrap .focusImg span{float:left; position:relative; left:50%;height:100%;}
-.focusWrap .focusImg img{position:relative;z-index: 9999;left:-50%;}
+body{position:relative;}/*为了兼容微信的中心缩放效果, .focusWrap 采用了针对body的absolute*/
+.focusWrap{position: absolute;width:100%;height:100%;top:0;left:0;/*display: none;*/}
+.focusWrap .focusBg{position:absolute;width:100%;height:100%;background-color: #000/*b2b2b2*/;opacity: 0.3;top:0;left: 0;}
+.pinch-zoom-container{position:relative;}
+.focusWrap .focusImg,.focusWrap .pinch-zoom{position:relative;top:0;left: 0;text-align: center;width:100%;height:auto;overflow: visible;}
+/*.focusWrap .focusImg span{display: block;}*/
+/*.focusWrap .focusImg span{float:left; position:relative; left:50%;height:100%;}*/ /*不放大居中时,需要该项*/
+.focusWrap .pinch-zoom img,.focusWrap .focusImg img{position:relative;/*left:-50%;*/ /*width:100%;*/}
+/*.focusWrap .btn{position:fixed;width:2rem;height:2rem;left:.7rem;top:.7rem;z-index: 1000;}*/
 
 /*.focusBg{height:100%;background-color: #000;opacity: 0;z-index: 998;}*/

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0059)http://manuelstofer.github.io/pinchzoom/demo/pinchzoom.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Pinchzoom.js Demo</title>
+
+    <style type="text/css">
+        div.pinch-zoom,
+        div.pinch-zoom img{
+            width: 100%;
+            -webkit-user-drag: none;
+        }
+
+    </style>
+    <link rel="stylesheet" href="http://manuelstofer.github.io/pinchzoom/demo/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- pinchzoom requires: jquery and underscore -->
+    <script type="text/javascript" src="./Pinchzoom.js Demo_files/jquery-1.7.2.min.js"></script><style type="text/css"></style>
+    <script type="text/javascript" src="./Pinchzoom.js Demo_files/underscore.js"></script>
+    <script type="text/javascript" src="./Pinchzoom.js Demo_files/pinchzoom.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('div.pinch-zoom').each(function () {
+                new RTP.PinchZoom($(this), {});
+            });
+        })
+    </script>
+</head>
+<body>
+
+    <div class="page">
+        <div class="pinch-zoom-container" style="overflow: hidden; position: relative; height: 750px;"><div class="pinch-zoom" style="-webkit-transform-origin: 0% 0% 0px; transform-origin: 0% 0% 0px; position: absolute; -webkit-transform: scale(1, 1) translate(0px, 0px); transform: scale(1, 1) translate(0px, 0px);">
+            <div class="description">
+                <h1>Pinchzoom.js</h1>
+                <p>
+                    Multi-touch zoom in Javascript
+                </p>
+            </div>
+            <img src="./Pinchzoom.js Demo_files/frog.jpg">
+            <a class="image" href="http://www.flickr.com/photos/59446027@N00/5258583198" target="_blank">by Peter Nijenhuis on Flickr; Some rights reserved</a>
+        </div></div>
+        
+    </div>
+<p>y Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuisy Peter Nijenhuis</p>
+
+</body></html>

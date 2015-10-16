@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>轮播图片</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/pic.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
+<!--    <script type="text/javascript" src="../../../../parts/animation/lazyload/res/js/jquery.min.js"></script>-->
+    <script type="text/javascript" src="res/js/touchslider.js"></script>
+
+    <script>
+        function imgSize(wrap, isFullScreen) {
+            var wrap = $(wrap),
+                wrapWid = wrap.width(),
+                oImg = $(wrap).find('img'),
+                /*原图比例,设计稿宽/高 也是允许最大的 宽/高*/
+                nWidHei = 640 / 300; 
+
+            //如果允许任意宽高比的图片,执行该循环
+            for (var i = oImg.length - 1; i >= 0; i--) {
+                var temp = oImg.eq(i).width() / oImg.eq(i).height();
+                if (temp < nWidHei)
+                    nWidHei = temp;
+            }
+
+
+            if (isFullScreen)
+                wrap.width(window.innerWidth);
+
+            wrap.height(wrap.width() / nWidHei); //设容器高
+            var wrapHei = wrap.height();
+            
+
+
+            oImg.each(function() {
+
+                if (isFullScreen) {
+//                    $(this).height('auto')
+                    $(this).width('auto')
+                }
+
+                var thisHei = $(this).height(),
+                    thisWid = $(this).width(),
+                    thisWidHei = thisWid / thisHei;
+//alert($(this).height())
+                //                如果不nWidHei不是循环所得,而是依设计稿为最小值的话,并且小图不放大,图片采用下面的尺寸
+                //                if (thisWidHei < nWidHei && thisHei < wrapHei) {
+                //                    //小图,不缩放
+                //                    $(this).css('margin-top', (wrapHei - thisHei) / 2)
+                //                } else if (thisWidHei >= nWidHei) {
+                //                    //超出的大图,宽高比大于原图,按宽标准填充
+                //                    $(this).width(wrapWid)
+                //                    //上下居中
+                //                    thisHei = $(this).height(); //再获取
+                //                    $(this).css('margin-top', (wrapHei - thisHei) / 2)
+                //                } else {
+                //                    //超出的大图,宽高比小于原图,按高标准填充
+                //                    $(this).height(wrapHei)
+                //                }
+
+                //这种情况下 nWidHei是遍历所有图片后的最小值,thisWidHei 必大于等于 nWidHei,不作比例判断
+                //不论宽大于还是小于容器,都按宽=容器宽处理
+                $(this).width(wrapWid);
+//                setTimeout(function(){
+                thisHei = $(this).height(); //重新获取
+                
+
+
+
+            if (isFullScreen){
+                //兼容iphone大图位置,增加延时
+                setTimeout(function(){
+                thisHei = oImg.eq(0).height()
+                wrapHei = wrap.height()
+                wrap.css('margin-top', (window.innerHeight - thisHei) / 2);
+                },100)
+            }else{
+                $(this).css('margin-top', (wrapHei - thisHei) / 2);
+                }
+
+
+                //                if (thisWidHei < nWidHei && thisHei < wrapHei) {
+                //                    //小图,不缩放
+                //                    $(this).css('margin-top', (wrapHei - thisHei) / 2)
+                //                } else if (thisWidHei >= nWidHei) {
+                //                    //超出的大图,宽高比大于原图,按宽标准填充
+                //                    $(this).width(wrapWid)
+                //                    //上下居中
+                //                    thisHei = $(this).height(); //再获取
+                //                    $(this).css('margin-top', (wrapHei - thisHei) / 2)
+                //                } else {
+                //                    //超出的大图,宽高比小于原图,按高标准填充
+                //                    $(this).height(wrapHei)
+                //                }
+//},200)
+            })
+
+        }
+
+        window.onload = function() { //如果允许任意宽高比的图片,就需要获取图片后再判定比例,就不使用$(function(){})
+//            imgSize('.slider');
+            imgSize('.focusImg', true);
+            //兼容部分浏览器的容器塌陷,重设宽高
+            $('.focusWrap').width(window.innerWidth);
+            $('.focusWrap').height(window.innerHeight);
+                
+            
+
+            $('.focusWrap').on('click tap',function(e) {
+                    window.history.back(-1); 
+//                e.preventDefault();
+//                $(".banner").show();
+//                $('.focusWrap').hide();
+//                
+//                $("body").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />');
+//
+//                //t2是banner.js中定义的轮播对象
+//                t2.play(); 
+            })
+//            $('.focusWrap').on
+
+            /*//关闭按钮
+            $('.focusWrap').find('.btn').on('click tap',function() {
+                $('.focusWrap').trigger('click')
+            })*/
+
+            //点击放大
+//            $('.slider').on('click', 'img', function() {
+//                //t2是banner.js中定义的轮播对象
+//                t2.pause(); 
+//                $('.focusWrap').show();
+//                var focusSrc = $(this).attr('src');
+//                $('.focusImg').find('img').attr('src', focusSrc);
+//                
+//
+//                imgSize('.focusImg', true);
+//
+//                $(".banner").hide();
+//                $("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0,minimum-scale=1.0, user-scalable=1" />');
+//
+//            })
+        }
+    </script>
+
+</head>
+
+<body>
+    
+
+
+    <!--图片弹出放大-->
+    <section class="focusWrap">
+        <div class="focusBg"></div>
+        <div class="focusImg">
+            <img src='res/img/800400.png' />
+        </div>
+        <!--关闭按钮<img class="btn" src="res/img/close_ico.png" />-->
+    </section>
+    <!--图片弹出放大--end-->
+
+
+
+</body>
+
+</html>
