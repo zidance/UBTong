@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="sort/sort1/res/css/sort.css" rel="stylesheet" type="text/css" />
+<link href="pic/pic1/res/css/pic.css" rel="stylesheet" type="text/css" />
+<link href="list/list1/res/css/list.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/footer/footer1/res/css/footer.css" rel="stylesheet" type="text/css" />
+<script src="../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body style="background:#fbfbfb;">
+	<!--头部分类排序 高度:2.5rem-->
+    <section class="stn-sort">
+    	<ul>
+        	<li><a class="fz32" href="#">最新</a></li>
+            <li><a class="fz32 act" href="#">最热</a></li>
+            <li><a class="fz32" href="#">已结束</a></li>
+        </ul>
+        <div class="clr"></div>
+    </section>
+    <!--头部分类排序-end-->
+    
+    <!--轮播图片-->
+	<script type="text/javascript" src="pic/pic1/res/js/touchslider.js"></script>
+	<div class="banner" style="margin-top:2.5rem;">
+		<div id="slider" class="slider">
+			<ul id="sliderlist" class="sliderlist">
+				<li><a href="#"><img src="pic/pic1/res/img/img1.jpg"></a></li>
+				<li><a href="#"><img src="pic/pic1/res/img/img1.jpg"></a></li>
+			</ul>
+			<div id="pagenavi">
+				<a class="active" href="#"></a>
+		        <a href="#"></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="pic/pic1/res/js/banner.js"></script>
+    <!--轮播图片-end-->
+    
+    <!--产品砍价列表-->
+    <script>
+		$(function(){
+			var _obj = $('#StnLists');
+			var _li = _obj.find('li');
+			$.each(_li,function(i,e){
+				var _img = $(this).find('.s-img').width();
+				var _right = $(this).find('.product-right');
+				if($(window).width()<640){
+					_right.width($(window).width()-_img-$(window).width()*0.13);
+				}
+				else{
+					_right.width(640-_img-640*0.1);
+				}
+			})
+		})
+	</script>
+    <section class="stn-lists" id="StnLists" style="margin-bottom:3.27rem;">
+    	<ul>
+        	<li>
+            	<a class="a-product" href="#">
+                	<span class="s-img"><img src="list/list1/res/img/img1.jpg" /></span>
+                    <div class="product-right">
+                        <p class="p-name fz32">Apple watch</p>
+                        <p class="p-synopsis fz26">[包邮]38毫米银色铝金属表壳搭配白色运38毫米银色...</p>
+                        <p class="p-money fz24">￥<em class="fz36">2300</em><span class="fz28">￥2800</span></p>
+                        <p class="p-num fz24">已售<span>5</span> / 库存40</p>
+                    </div>
+                    <div class="clr"></div>
+                </a>
+                <div class="bargain">
+                	<div class="fz28"><span>已有<em>300</em>人参加</span></div>
+                    <div class="fz28"><a href="#">立即砍价</a></div>
+                </div>
+                <div class="clr"></div>
+            </li>
+            <li>
+            	<a class="a-product" href="#">
+                	<span class="s-img"><img src="list/list1/res/img/img1.jpg" /></span>
+                    <div class="product-right">
+                        <p class="p-name fz32">Apple watch</p>
+                        <p class="p-synopsis fz26">[包邮]38毫米银色铝金属表壳搭配白色运38毫米银色...</p>
+                        <p class="p-money fz24">￥<em class="fz36">2300</em><span class="fz28">￥2800</span></p>
+                        <p class="p-num fz24">已售<span>5</span> / 库存40</p>
+                    </div>
+                    <div class="clr"></div>
+                </a>
+                <div class="bargain">
+                	<div class="fz28"><span>已有<em>300</em>人参加</span></div>
+                    <div class="fz28"><a href="#">立即砍价</a></div>
+                </div>
+                <div class="clr"></div>
+            </li>
+            <li>
+            	<a class="a-product" href="#">
+                	<span class="s-img"><img src="list/list1/res/img/img1.jpg" /></span>
+                    <div class="product-right">
+                        <p class="p-name fz32">Apple watch</p>
+                        <p class="p-synopsis fz26">[包邮]38毫米银色铝金属表壳搭配白色运38毫米银色...</p>
+                        <p class="p-money fz24">￥<em class="fz36">2300</em><span class="fz28">￥2800</span></p>
+                        <p class="p-num fz24">已售<span>5</span> / 库存40</p>
+                    </div>
+                    <div class="clr"></div>
+                </a>
+                <div class="bargain">
+                	<div class="fz28"><span>已有<em>300</em>人参加</span></div>
+                    <div class="fz28"><a href="#">立即砍价</a></div>
+                </div>
+                <div class="clr"></div>
+            </li>
+        </ul>
+    </section>
+    <!--产品砍价列表-end-->
+    
+    <!--底部高度：3.27rem-->
+    <script>
+		$(function(){
+			var _stntext = $('#StnTxet');  /*类别框*/
+			var _btntext = $('#BtnText');  /*切换输入框按钮*/
+			var _stninput = $('#StnInput');  /*输入框*/
+			var _btninput = $('#BtnInput');  /*切换类别按钮*/
+			var _li = _stntext.find('.li-type');
+			_btntext.click(function(){
+				_stntext.hide();
+				_stninput.show();
+			});
+			_btninput.click(function(){
+				_stninput.hide();
+				_stntext.show();
+			});
+			
+			_li.click(function(){
+				var _size = $(this).find("li").size();
+				if(_size==0){
+						setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className + ' fadein';document.getElementById('StnNull').style.display='block'");
+						setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className.replace(' fadein', '');document.getElementById('StnNull').style.display='none'",3500);
+				}
+				
+				if(_size > 0){
+					_li.find('ol').hide();
+					_li.find('ol div').hide();
+					$(this).find('ol').show();
+				}
+				return false;
+			})
+			_li.find('ol li').click(function(){
+				if($(this).find('div').hasClass('type-lv'))
+				{
+					_li.find('ol div').hide();
+					$(this).find('div').show();
+				}
+				else{
+					_li.find('ol').hide();
+				}
+				return false;
+			})
+			_li.find('ol li div').click(function(){
+				_li.find('ol').hide();
+				_li.find('ol li div').hide();
+				return false;
+			})
+			
+			$(document).click(function(){
+				_li.find('ol').hide();
+			})
+		})
+	</script>
+	<footer>
+		<!--类别-->
+		<section class="stn-text" id="StnTxet">
+			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">切换输入框</span></a>
+			<ul>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">产品分类</span></a>
+					<ol>
+						<li>
+                        	<a class="fz28" href="#">分类1</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类11</a>
+                                <a class="fz28" href="#">分类12</a>
+                                <a class="fz28" href="#">分类13</a>
+                                <a class="fz28" href="#">分类14</a>
+                            </div>
+                        </li>
+						<li>
+                        	<a class="fz28" href="#">分类2</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类21</a>
+                                <a class="fz28" href="#">分类22</a>
+                                <a class="fz28" href="#">分类23</a>
+                                <a class="fz28" href="#">分类24</a>
+                            </div>
+                        </li>
+						<li><a class="fz28" href="#">分类3</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">会员中心</span></a>
+                    <ol>
+						<li><a class="fz28" href="#">分类7</a></li>
+						<li><a class="fz28" href="#">分类8</a></li>
+						<li><a class="fz28" href="#">分类9</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">关注分享</span></a>
+				</li>
+			</ul>
+			<div class="clr"></div>
+		</section>
+		<!--类别-end-->
+		
+		<!--输入框-->
+		<section class="stn-input" id="StnInput">
+			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">切换类别</span></a>
+			<div class="input"><input type="text" /></div>
+			<button>搜索</button>
+		</section>
+		<!--输入框-end-->
+		
+		<section class="stn-null fz36" id="StnNull">未设置分类</section>
+	</footer>
+	<!--底部-end-->
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>婚宴桌位</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/party.css" rel="stylesheet" type="text/css" />
+<script src="../../common/js/zepto-1.16.min.js" type="text/javascript"></script>
+<script>
+	/*弹出框*/
+	$(function(){
+		var _btn = $('#Btn');
+		var _bg = $('#Background');
+		var _box = $('#BoxPayment');
+		var _del = _box.find('.a-close');
+		
+		_btn.click(function(){
+			_box.show();
+			_bg.show();
+			_box.css({'top':($(window).height()-_box.height())/2});
+		})
+		_del.click(function(){
+			_box.hide();
+			_bg.hide();
+		})
+	})
+	/*凳子位置*/
+	$(function(){
+		var _oDesk=$('#DeskLists .desk');
+		$.each(_oDesk,function(i,e){
+			var _aLi=$(this).find('.dot li');
+			var _ospan=$(this).find('.desk-span');
+			var _oDiv=$(this).find('.desk-div');
+			var _oDot=$(this).find('.dot');
+			var _H=$(this).height()/2
+			var _li=_aLi.eq(0).width()/2;
+			var _r=$(this).width()/2-_li;
+			var _w = $(this).width();
+			$(this).css('height',_w);
+			_ospan.css({'line-height':$(this).height()+'px'})
+			var _nRe=360/_aLi.length;
+			$.each(_aLi,function(i,e){
+				var _nRer=2*Math.PI/360*_nRe*i;	 		<!--当前li的弧度数-->
+				var _xN=Math.cos(_nRer);
+				var _yN=Math.sin(_nRer);
+				var _x=_xN*_r-_li;						<!--减掉li的高度-->
+				var _y=_yN*_r-_li;						<!--减掉li的高度-->
+				$(this).css({'top':_y,'left':_x})
+		
+			})
+		})
+	});
+</script>
+</head>
+
+<body style="background:#f5f5f5;">
+	<!--查找 / 分配座位-->
+	<section class="stn-boxpayment" id="BoxPayment">
+    	<h1 class="fz32">查找 / 分配座位<a class="a-close" href="#">关闭</a></h1>
+        <input class="fz28" type="text" placeholder="请输入您的名字" />
+        <a class="fz32 a-btn" href="#">确定</a>
+    </section>
+    <div id="Background"></div>
+    <!--查找 / 分配座位-end-->
+    
+	<section class="stn-img"><img src="res/img/img.jpg" /></section>
+    <div class="tab-desk" style="margin-bottom:4.26rem;">
+    	<div class="tab-item">
+        	<ul>
+            	<li><a class="act fz32" href="#">男方嘉宾</a></li>
+                <li><a class="fz32" href="#">女方嘉宾</a></li>
+            </ul>
+            <div class="clr"></div>
+        </div>
+        
+        <div class="desk-lists" id="DeskLists">
+        	<!--主桌 12-14人-->
+            <div class="desk floatmargin big-desk">
+                <span class="desk-span fz26">主桌</span>
+                <div class="desk-div"> 
+                    <ul class="dot">
+                        <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                        <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                        <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                        <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                        <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                        <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                        <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                        <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                        <li><a href="#"><img src="res/img/place.png"></a></li>
+                        <li><a href="#"><img src="res/img/place.png"></a></li>
+                        <li><a href="#"><img src="res/img/place.png"></a></li>
+                        <li><a href="#"><img src="res/img/place.png"></a></li>
+                        <li><a href="#"><img src="res/img/place.png"></a></li>
+                        <li><a href="#"><img src="res/img/place.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--主桌-end--> 
+            <!--宾客桌子列表-->
+            <div class="small-desk">
+            	<div class="desk floatmargin">
+                    <span class="desk-span fz26">嘉宾席</span>
+                    <div class="desk-div"> 
+                        <ul class="dot">
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desk floatmargin">
+                    <span class="desk-span fz26">嘉宾席</span>
+                    <div class="desk-div"> 
+                        <ul class="dot">
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desk floatmargin">
+                    <span class="desk-span fz26">嘉宾席</span>
+                    <div class="desk-div"> 
+                        <ul class="dot">
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desk floatmargin">
+                    <span class="desk-span fz26">嘉宾席</span>
+                    <div class="desk-div"> 
+                        <ul class="dot">
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desk floatmargin">
+                    <span class="desk-span fz26">嘉宾席</span>
+                    <div class="desk-div"> 
+                        <ul class="dot">
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desk floatmargin">
+                    <span class="desk-span fz26">嘉宾席</span>
+                    <div class="desk-div"> 
+                        <ul class="dot">
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                            <li><a href="#"><img src="res/img/place.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clr"></div>
+            <!--宾客桌子列表-end-->
+        </div>
+        
+        <div class="rule">
+        	<h1><img src="res/img/title.png" /></h1>
+            <p class="fz20">领导在主席台上就座时座次安排</p>
+            <p class="fz20">主席台必须排座次、，以便领导同志对号入座，避免上台之后互相谦让。</p>
+            <p class="fz20">主席台座次排列：</p>
+            <p class="fz20">1.领导为单数时：主要领导居中；</p>
+            <p class="fz20">2.号领导在1号领导左手位置；</p>
+            <p class="fz20">3.号领导在l号领导右手位置。这个没有争议。</p>
+        </div>
+    </div>
+    
+    <div class="desk-btn">
+    	<p class="fz28">目前空余<span class="fz36">35</span>席位</p>
+        <a id="Btn" class="fz34" href="#">我要入座</a>
+    </div>
+</body>
+</html>

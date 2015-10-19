@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>订单列表</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/order.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body style="background-color:#f4f4f4;">
+	<section class="stn-order">
+		<!--订单列表-->
+        
+        <!--我的订单--->
+		<article class="art-order">
+			<a href="#">
+				<div class="state">
+                    <span>订单号：10349874</span>
+                    <div class="clr"></div>
+                </div>
+				
+				<ul>
+					<li>
+						<span class="s-img"><img src="order/res/img/img1.jpg" /></span>
+						<div class="details">
+							<p class="p-name"><span>[美容]</span>补水深度清洁护理酵素祛斑机理</p>
+							<span class="s-num">数量：1</span>
+						</div>
+						
+						<p class="p-money">￥<span>19.90</span> / 佣金: <span>1.1</span></p>
+						<div class="clr"></div>
+						
+					</li>
+					<li>
+						<span class="s-img"><img src="order/res/img/img2.jpg" /></span>
+						<div class="details">
+							<p class="p-name"><span>[美容]</span>补水深度清洁护理酵素祛斑机理</p>
+							<span class="s-num">数量：1</span>
+						</div>
+						
+						<p class="p-money">￥<span>19.90</span> / 佣金: <span>1.1</span></p>
+						<div class="clr"></div>
+						
+					</li>
+					<!--无图-->
+                    <li>
+						<div class="details longwidth">
+							<p class="p-name">美国原装进口精选优质开心果(奶油味)</p>
+							<span class="s-num">数量：1</span>
+						</div>
+						<div class="clr"></div>
+						<p class="p-money">￥<span>19.90</span> / 佣金: <span>1.1</span></p>
+						
+					</li>
+                    <!--无图 end-->
+				</ul>
+            </a>
+		</article>
+        <!--我的订单-end-->
+        
+		
+	</section>
+	<script>    
+    //两行排版
+    function _textLine(){
+        var _info = $(".art-order").find(".p-name");
+        _info.each(function(){
+            var _text = $(this).text();
+            var _html = $(this).html();
+            var _length = parseInt($(this).width()/parseFloat($(this).css("font-size")));//每行长度
+            
+            if(_text.length > _length*2){              $(this).html(_html.substring(0,_html.length-(_text.length-_length*2))+"...")
+            };
+        })
+        
+    };
+    _textLine();
+    </script>
+    <!--订单列表-end-->
+</body>
+</html>

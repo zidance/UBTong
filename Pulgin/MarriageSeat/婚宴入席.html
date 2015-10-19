@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>婚宴入席</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/party.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/prompt/prompt1/res/css/prompt.css" rel="stylesheet" type="text/css">
+<script src="../../common/js/zepto-1.16.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	var _btn = $('.seat');
+	var _bg = $('#Background');
+	var _box = $('#BoxPayment');
+	var _del = _box.find('.a-close');
+		
+	var _oDesk=$('.desk');
+	var _aLi=_oDesk.find('.dot li');
+	var _ospan=_oDesk.find('.desk-span');
+	var _oDiv=_oDesk.find('.desk-div');
+	var _oDot=_oDesk.find('.dot');
+	_oDesk.height(_oDesk.width());
+	var _H=_oDesk.height()/2
+	var _li=_aLi.eq(0).width()/2;
+	var _r=_oDesk.width()/2-_li;
+	_ospan.css({'line-height':_oDesk.height()+'px'})
+	var _nRe=parseInt(360/_aLi.length);
+	$.each(_aLi,function(i,e){
+		var _nRer=2*Math.PI/360*_nRe*i;	 		<!--当前li的弧度数-->
+		var _xN=Math.cos(_nRer);
+		var _yN=Math.sin(_nRer);
+		var _x=_xN*_r-_li;						<!--减掉li的高度-->
+		var _y=_yN*_r-_li;						<!--减掉li的高度-->
+		$(this).css({'top':_y,'left':_x})
+
+	})
+	/*_aLi.find('a').click(function(){
+		if($(this).hasClass('find')){
+			$(this).find('img').attr("src","res/img/place.png");	
+			$(this).removeClass('find');
+		}else{
+			$(this).find('img').attr("src","res/img/placeh.png");	
+			$(this).addClass('find');
+		}	
+	});*/
+	
+	_btn.click(function(){
+		_box.show();
+		_bg.show();
+		_box.css({'top':($(window).height()-_box.height())/2});
+	})
+	_del.click(function(){
+		_box.hide();
+		_bg.hide();
+	})
+});
+
+</script>
+</head>
+<body style="width:100%; overflow-x:hidden;">
+	<section class="top-name">
+    	<p class="p-name fz36">嘉宾席</p>
+        <p class="p-num fz28"><span>6</span>/10</p>
+    </section>
+    
+    <div style="background:#f5f5f5;padding:0.65rem 0;">
+        <section class="desk" style="margin:0 auto;">
+            <span class="desk-span fz32">嘉宾席</span>
+            <div class="desk-div"> 
+                <ul class="dot" data-num="">
+                    <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                    <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                    <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                    <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                    <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                    <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                    <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                    <li><a href="#"><img src="res/img/placeh.png"></a></li>
+                    <li><a href="#"><img src="res/img/place.png"></a></li>
+                    <li><a href="#"><img src="res/img/place.png"></a></li>
+                    <li><a href="#"><img src="res/img/place.png"></a></li>
+                    <li><a href="#"><img src="res/img/place.png"></a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+    
+    <section class="list-name">
+    	<ul class="fz28">
+        	<li>李冰冰<span class="fz20 act">已入席</span></li>
+            <li>李晨<span class="fz20 act">已入席</span></li>
+            <li>潘长江<span class="fz20 act">已入席</span></li>
+            <li>罗永浩<span class="fz20 act">已入席</span></li>
+            <li>王子如<span class="fz20 act">已入席</span></li>
+            <li>雷军<span class="fz20 act">已入席</span></li>
+            <li>罗子健</li>
+            <li>林功义</li>
+            <li>梁知足</li>
+            <li>范玮琪</li>
+        </ul>
+        <div class="clr"></div>
+        <a href="#" class="fz32 seat">我要入座</a>
+    </section>
+    
+    
+    <!--提示-->
+	<section class="stn-boxpayment" id="BoxPayment">
+    	<p class="fz32">是否入座</p>
+        
+        <div class="btn">
+            <a class="a-close fz32" href="#">取消</a>
+            <a class="fz32" href="#">确认</a>
+            <div class="clr"></div>
+        </div>
+    </section>
+    <div id="Background"></div>
+
+</body>
+</html>
