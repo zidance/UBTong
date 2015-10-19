@@ -111,21 +111,23 @@ window.onload = function () { //如果允许任意宽高比的图片,就需要�
 
     imgSize('.slider');
 
-    $('.imgzoom_pack').on('click tap', function (e) {
+//    $('.imgzoom_pack').on('click tap', function (e) {
+    $(document).on('click tap','.imgzoom_pack', function (e) {
 
-      $(".banner").show();
+//      $(".banner").show();
       $('.imgzoom_pack').hide();
 //轮播继续,t2是banner.js中定义的轮播对象
       t2.play();
     })
 
     //点击放大
-    $('.slider').on('click', 'img', function () {
+//    $('.slider').on('click', 'img', function () {
+    $(document).on('click', '.slider img', function () {
       //轮播暂停,t2是banner.js中定义的轮播对象
       t2.pause();
 //      imgSize('.pinch-zoom' /*, true*/ );
 
-      $(".banner").hide(); //touchslider采用超过屏幕宽度的方法,在手机上是无法被遮罩层盖住的,故hide
+//      $(".banner").hide(); //touchslider采用超过屏幕宽度的方法,在手机上是无法被遮罩层盖住的,故hide
 
     })
   }
