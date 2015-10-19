@@ -61,16 +61,39 @@
 }
 
 
-
-/*图片弹出放大*/
-body{position:relative;}/*为了兼容微信的中心缩放效果, .focusWrap 采用了针对body的absolute*/
-.focusWrap{position: absolute;width:100%;height:100%;top:0;left:0;/*display: none;*/}
-.focusWrap .focusBg{position:absolute;width:100%;height:100%;background-color: #000/*b2b2b2*/;opacity: 0.3;top:0;left: 0;}
-.pinch-zoom-container{position:relative;}
-.focusWrap .focusImg,.focusWrap .pinch-zoom{position:relative;top:0;left: 0;text-align: center;width:100%;height:auto;overflow: visible;}
-/*.focusWrap .focusImg span{display: block;}*/
-/*.focusWrap .focusImg span{float:left; position:relative; left:50%;height:100%;}*/ /*不放大居中时,需要该项*/
-.focusWrap .pinch-zoom img,.focusWrap .focusImg img{position:relative;/*left:-50%;*/ /*width:100%;*/}
-/*.focusWrap .btn{position:fixed;width:2rem;height:2rem;left:.7rem;top:.7rem;z-index: 1000;}*/
-
-/*.focusBg{height:100%;background-color: #000;opacity: 0;z-index: 998;}*/
+/*图片弹出放大  touchzoom插件增加*/
+.imgzoom_pack{
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	background:rgba(0,0,0,.7);
+	display:none;
+}
+.imgzoom_pack .imgzoom_x{
+	color:#fff;
+	height:30px;
+	width:30px;
+	line-height:30px;
+	background:#000;
+	text-align:center;
+	position:absolute;
+	right:5px;
+	top:5px;
+	z-index:10;
+	cursor:pointer;
+}
+.imgzoom_pack .imgzoom_img{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	overflow:hidden;
+}
+.imgzoom_pack .imgzoom_img img{
+	width:100%;
+	position:absolute;
+	top:50%;
+}

@@ -2,280 +2,64 @@
 <html>
 
 <head>
-    <title>轮播图片</title>
-    <meta charset="utf-8">
-    <meta id='t' name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
-    
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-    <link href="res/css/pic.css" rel="stylesheet" type="text/css" />
-    
-    <script type="text/javascript" src="res/js/jquery-1.7.2.min.js"></script><style type="text/css"></style>
-    <script type="text/javascript" src="res/js/underscore.js"></script>
-    <script type="text/javascript" src="res/js/pinchzoom.js"></script>
-    
-<!--    <script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>-->
-<!--    <script type="text/javascript" src="../../../../parts/animation/lazyload/res/js/jquery.min.js"></script>-->
-    <script type="text/javascript" src="res/js/touchslider.js"></script>
-    
-    
-
-    <script>
-        function imgSize(wrap, isFullScreen) {
-            var wrap = $(wrap),
-                wrapWid = wrap.width(),
-                oImg = $(wrap).find('img'),
-                /*原图比例,设计稿宽/高*/
-                nWidHei = 640 / 300; 
-
-            //如果允许任意宽高比的图片,执行该循环
-            for (var i = oImg.length - 1; i >= 0; i--) {
-                var temp = oImg.eq(i).width() / oImg.eq(i).height();
-                if (temp < nWidHei)
-                    nWidHei = temp;
-            }
-
-
-            if (isFullScreen)
-                wrap.width(window.innerWidth);
-
-            wrap.height(wrap.width() / nWidHei); //设容器高
-            var wrapHei = wrap.height();
-            
-
-
-            oImg.each(function() {
-
-                if (isFullScreen) {
-//                    $(this).height('auto')
-                    $(this).width('auto')
-                }
-
-                var thisHei = $(this).height(),
-                    thisWid = $(this).width(),
-                    thisWidHei = thisWid / thisHei;
-//alert($(this).height())
-                //                如果不nWidHei不是循环所得,而是依设计稿为最小值的话,并且小图不放大,图片采用下面的尺寸
-                //                if (thisWidHei < nWidHei && thisHei < wrapHei) {
-                //                    //小图,不缩放
-                //                    $(this).css('margin-top', (wrapHei - thisHei) / 2)
-                //                } else if (thisWidHei >= nWidHei) {
-                //                    //超出的大图,宽高比大于原图,按宽标准填充
-                //                    $(this).width(wrapWid)
-                //                    //上下居中
-                //                    thisHei = $(this).height(); //再获取
-                //                    $(this).css('margin-top', (wrapHei - thisHei) / 2)
-                //                } else {
-                //                    //超出的大图,宽高比小于原图,按高标准填充
-                //                    $(this).height(wrapHei)
-                //                }
-
-                //这种情况下 nWidHei是遍历所有图片后的最小值,thisWidHei 必大于等于 nWidHei,不作比例判断
-                //不论宽大于还是小于容器,都按宽=容器宽处理
-                $(this).width(wrapWid);
-//                setTimeout(function(){
-                thisHei = $(this).height(); //重新获取
-                
-
-
-
-            if (isFullScreen){
-                //兼容iphone大图位置,增加延时
-                setTimeout(function(){
-                thisHei = oImg.eq(0).height()
-                wrapHei = wrap.height()
-                wrap.css('margin-top', (window.innerHeight - thisHei) / 2);
-                },100)
-            }else{
-                $(this).css('margin-top', (wrapHei - thisHei) / 2);
-                }
-
-
-                //                if (thisWidHei < nWidHei && thisHei < wrapHei) {
-                //                    //小图,不缩放
-                //                    $(this).css('margin-top', (wrapHei - thisHei) / 2)
-                //                } else if (thisWidHei >= nWidHei) {
-                //                    //超出的大图,宽高比大于原图,按宽标准填充
-                //                    $(this).width(wrapWid)
-                //                    //上下居中
-                //                    thisHei = $(this).height(); //再获取
-                //                    $(this).css('margin-top', (wrapHei - thisHei) / 2)
-                //                } else {
-                //                    //超出的大图,宽高比小于原图,按高标准填充
-                //                    $(this).height(wrapHei)
-                //                }
-//},200)
-            })
-
-        }
-
-        window.onload = function() { //如果允许任意宽高比的图片,就需要获取图片后再判定比例,就不使用$(function(){})
-            
-            
-            imgSize('.slider');
-            
-            setTimeout(function(){
-            $('div.pinch-zoom').each(function () {
-                new RTP.PinchZoom($(this), {});
-            });
-            $('.pinch-zoom-container').css("overflow","visible")
-            
-            },1000)
-            
-            //兼容部分浏览器的容器塌陷,重设宽高
-            $('.focusWrap').width(window.innerWidth);
-            $('.focusWrap').height(window.innerHeight);
-            
-            
-
-            $('.focusWrap').on('click tap',function(e) {
-
-                e.preventDefault();
-                $(".banner").show();
-                $('.focusWrap').hide();
-                
-                
-                $("body").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />');
-                
-                var detectZoom = function(){ 
-    var ratio = 0,
-        screen = window.screen,
-        ua = navigator.userAgent.toLowerCase();
-    if( ~ua.indexOf('firefox') ){
-        if( window.devicePixelRatio !== undefined ){
-            ratio = window.devicePixelRatio;
-        }
-    }
-    else if( ~ua.indexOf('msie') ){    
-        if( screen.deviceXDPI && screen.logicalXDPI ){
-            ratio = screen.deviceXDPI / screen.logicalXDPI;
-        }
-    }
-    else if( window.outerWidth !== undefined && window.innerWidth !== undefined ){
-        ratio = window.outerWidth / window.innerWidth;
-    }
-    
-    if( ratio ){
-        ratio = Math.round( ratio * 100 );
-    }
-    
-    // 360安全浏览器下浏览器最大化时诡异的outerWidth和innerWidth不相等
-    if( ratio === 99 || ratio === 101 ){
-        ratio = 100;
-    }
-    
-    return ratio;
-};
-                
-                alert(ratio)
-                
-                
-
-                t2.play(); 
-            })
-
-            /*//关闭按钮
-            $('.focusWrap').find('.btn').on('click tap',function() {
-                $('.focusWrap').trigger('click')
-            })*/
-
-            //点击放大
-            $('.slider').on('click', 'img', function() {
-                //t2是banner.js中定义的轮播对象
-                t2.pause(); 
-                $('.focusWrap').show();
-                var focusSrc = $(this).attr('src');
-                $('.focusImg').find('img').attr('src', focusSrc);
-                
-                
-                $('.pinch-zoom').find('img').attr('src', focusSrc);
-                
-
-                imgSize('.pinch-zoom'/*, true*/);
-            
-                
-            
-
-                $(".banner").hide();
-                //头文件的作法在IOS微信中,放大后点回时不缩小到1倍
-            $("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0,minimum-scale=1.0, user-scalable=1" />');
-
-            })
-        }
-    </script>
-
+  <title>轮播图片</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0,user-scalable=0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+  <link href="res/css/pic.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
 </head>
 
 <body>
-    <!--轮播图片-->
-    <div class="banner">
-        <div id="slider" class="slider">
-            <ul id="sliderlist" class="sliderlist">
-                <!--<li>
-                    <a href="###"><img src="res/img/400800.png"></a>
-                </li>-->
-                <li>
-                    <a href="###"><img src="res/img/demo.jpg"></a>
-                </li>
+  <!--轮播图片-->
+  <div class="banner">
+    <div id="slider" class="slider">
+      <ul id="sliderlist" class="sliderlist">
+        <li>
+          <a href="###"><img src="res/img/demo.jpg"></a>
+        </li>
 
-                <li>
-                    <a href="###"><img src="res/img/10050.png"></a>
-                </li>
-                <li>
-                    <a href="###"><img src="res/img/demo.jpg"></a>
-                </li>
-<!--                                				<li><a href="###"><img src="res/img/50100.png"></a></li>-->
-                <li>
-                    <a href="###"><img src="res/img/img1.jpg"></a>
-                </li>
-                <li>
-                    <a href="###"><img src="res/img/img2.jpg"></a>
-                </li>
-            </ul>
-            <div id="pagenavi">
-                <a class="active" href="#"></a>
-                <a href="###"></a>
-            </div>
+        <li>
+          <a href="###"><img src="res/img/10050.png"></a>
+        </li>
+        <li>
+          <a href="###"><img src="res/img/demo.jpg"></a>
+        </li>
+        <!--<li><a href="###"><img src="res/img/50100.png"></a></li>-->
+        <li>
+          <a href="###"><img src="res/img/img1.jpg"></a>
+        </li>
+        <li>
+          <a href="###"><img src="res/img/img2.jpg"></a>
+        </li>
+      </ul>
+      <!--切换轮播图按钮-->
+      <div id="pagenavi">
+      </div>
 
-        </div>
     </div>
-    <script type="text/javascript" src="res/js/banner.js"></script>
-    <!--轮播图片--end-->
+  </div>
+  <script type="text/javascript" src="res/js/touchslider.min.js"></script>
+  <script type="text/javascript" src="res/js/pic.js"></script>
+  <!--轮播图片--end-->
 
 
-    <!--图片弹出放大-->
-    <section class="focusWrap" style="display:none;">
-        <div class="focusBg"></div>
-        <div class="pinch-zoom-container" style="overflow: visible; position: relative;">
-          
-           <div class="pinch-zoom" style="-webkit-transform-origin: 0% 0% 0px; transform-origin: 0% 0% 0px; position: absolute; -webkit-transform: scale(1, 1) translate(0px, 0px); transform: scale(1, 1) translate(0px, 0px);">
-           <div class="focusImg">
-            <img src="">
-            </div>
-            </div>
-        </div>
-        <!--关闭按钮<img class="btn" src="res/img/close_ico.png" />-->
-        
-<!--
-    <div class="page">
-        <div class="pinch-zoom-container" style="overflow: hidden; position: relative; height: 750px;">
-           <div class="pinch-zoom" style="-webkit-transform-origin: 0% 0% 0px; transform-origin: 0% 0% 0px; position: absolute; -webkit-transform: scale(1, 1) translate(0px, 0px); transform: scale(1, 1) translate(0px, 0px);">
-            
-            <img src="">
-            
-            </div>
-        </div>
-        
-    </div>
--->
-        
-        
-        
-    </section>
-    <!--图片弹出放大--end-->
-
-
+  <!--图片弹出放大-->
+  <section class="imgzoom_pack">
+    <div class="imgzoom_x">X</div>
+    <div class="imgzoom_img"><img src="" /></div>
+  </section>
+  <!--图片弹出放大--end-->
+  <script src="res/js/touchzoom.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      ImagesZoom.init({
+        "elem": ".sliderlist"
+      });
+    }, false);
+  </script>
 
 </body>
 
