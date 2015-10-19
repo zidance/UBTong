@@ -2,7 +2,7 @@
 .stn-synopsis{ padding:.72rem 0 .72rem 1.05rem; background:#fff; border-bottom:1px solid #dddddd; position:relative; }
 .stn-synopsis .s-img{  width:5.37rem; height:5.37rem; border:1px solid #d9d9d9; margin:0 1.05rem; display:table-cell;vertical-align: middle;text-align: center;}
 .stn-synopsis .s-img img{max-width:100%; height:auto; margin:0 auto;vertical-align: middle;}
-.stn-synopsis .synopsis{position:absolute; margin-left:6.4rem; top:.5rem;padding-right:.5rem;}
+.stn-synopsis .synopsis{position:absolute; margin-left:6.4rem; top:.5rem;padding-right:.5rem;min-width:53%;}
 .stn-synopsis .synopsis .p-name{color:#000; }
 .stn-synopsis .synopsis .addr{color: #a6a6a6;height:2.9rem;overflow: hidden;}
 
