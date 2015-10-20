@@ -1,0 +1,9 @@
+/*规则详情*/
+.stn-rule .content{background-color: #ff6766;padding:4.7% 5% 4.7% 7%;color:#fff;font-weight: bold;}
+.stn-rule .content .p-describe{margin-top:3%;/*34/28*/ line-height: 1.2;font-weight: lighter;}
+.stn-rule ul{width:92.18%;margin:0 auto;}
+.stn-rule li{border-bottom:1px solid #e7e7e7;overflow: hidden;}/*设计稿li行宽590px*/
+.stn-rule li p{display: inline-block;color:#000;/*97/28*/ line-height: 3.1;white-space: nowrap;}
+.stn-rule ul p:first-child{/*330/590*/ width:56%; }
+.stn-rule li p span{display: inline-block;width: 7.4em;}
+.stn-rule li p em{/*32/28*/ /*font-size: 114%;*/color: #ff6766;font-weight: normal;/*48/32*/ }
