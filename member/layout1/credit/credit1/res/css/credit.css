@@ -5,9 +5,9 @@
 .credit p{ padding:.5rem 0.58rem; margin:0 .72rem;}
 .credit span{ display:block; float:left; color:#252525;}
 .credit .s-left{line-height:2rem; }
-.credit input{ border:none; line-height:2rem; width:70%; float:left; padding-left:0.72rem}
+.credit input{ border:none; line-height:2rem; width:60%; float:left; padding-left:0.72rem}
 .credit input::-webkit-input-placeholder{ color:#a7a7a7; }
-.credit .p-money{ color:#999; line-height:2rem;}
+.credit .p-money{ color:#999; line-height:2rem; float:right;}
 
 /*申请时间*/
 .timer{ margin-top:0.72rem; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background:#fff;}

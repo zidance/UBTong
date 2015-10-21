@@ -34,6 +34,216 @@ html{font-size:172%;}
 .fz103{font-size:3.74rem;}
 .fz120{font-size:4.36rem;}
 .mt20{margin-top:.72rem;}
+
+<!--上下有边框-->
+.border-top-bottom{
+    position: relative;
+    border:none !important;
+}
+.border-top-bottom:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid;
+	border-width:1px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+
+
+<!--左右边有边框-->
+.border-left-right{
+    position: relative;
+    border:none !important;
+}
+.border-left-right:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid;
+	border-width:0 1px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+<!--左边有边框-->
+.border-left{
+    position: relative;
+    border:none !important;
+}
+.border-left:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid;
+	border-width:0 0 0 1px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+<!--右边有边框-->
+.border-right{
+    position: relative;
+    border:none !important;
+}
+.border-right:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid;
+	border-width:0 1px 0 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+
+<!--上面有边框-->
+.border-top{
+    position: relative;
+    border:none !important;
+}
+.border-top:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid;
+	border-width:1px 0 0 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+<!--下面有边框-->
+.border-bottom{
+    position: relative;
+    border:none !important;
+}
+.border-bottom:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid;
+	border-width:0 0 1px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+<!--上右下都有边框-->
+.border-top-right-bottom {
+    position: relative;
+    border:none !important;
+}
+.border-top-right-bottom:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid;
+	border-width:1px 1px 1px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+<!--上左下都有边框-->
+.border-top-left-bottom {
+    position: relative;
+    border:none !important;
+}
+.border-top-left-bottom:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid;
+	border-width:1px 0 1px 1px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+<!--四周都有边框-->
+.border-1px {
+    position: relative;
+    border:none !important;
+}
+.border-1px:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid;
+	border-color:;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
 @media screen and (min-width:320px) and (max-width:640px){
 html{font-size:125%;}
 }
