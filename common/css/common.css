@@ -45,7 +45,7 @@ html{font-size:172%;}
     position: absolute;
     top: 0;
     left: 0;
-    border:solid;
+    border:solid #dcdcdc;
 	border-width:1px 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -70,7 +70,7 @@ html{font-size:172%;}
     position: absolute;
     top: 0;
     left: 0;
-    border:solid;
+    border:solid #c6c6c6;
 	border-width:0 1px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -93,7 +93,7 @@ html{font-size:172%;}
     position: absolute;
     top: 0;
     left: 0;
-    border:solid;
+    border:solid #c6c6c6;
 	border-width:0 0 0 1px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -116,7 +116,7 @@ html{font-size:172%;}
     position: absolute;
     top: 0;
     left: 0;
-    border:solid;
+    border:solid #c6c6c6;
 	border-width:0 1px 0 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -140,7 +140,7 @@ html{font-size:172%;}
     position: absolute;
     top: 0;
     left: 0;
-    border:solid;
+    border:solid #c6c6c6;
 	border-width:1px 0 0 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -163,7 +163,7 @@ html{font-size:172%;}
     position: absolute;
     top: 0;
     left: 0;
-    border:solid;
+    border:solid #c6c6c6;
 	border-width:0 0 1px 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -185,7 +185,7 @@ html{font-size:172%;}
     position: absolute;
     top: 0;
     left: 0;
-    border:solid;
+    border:solid #d9d9d9;
 	border-width:1px 1px 1px 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -208,7 +208,7 @@ html{font-size:172%;}
     position: absolute;
     top: 0;
     left: 0;
-    border:solid;
+    border:solid #d9d9d9;
 	border-width:1px 0 1px 1px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -232,7 +232,7 @@ html{font-size:172%;}
     top: 0;
     left: 0;
     border: 1px solid;
-	border-color:;
+	border-color:#d9d9d9;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 200%;
