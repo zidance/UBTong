@@ -1,4 +1,4 @@
-.button-popup{ width:100%; height:3.27rem; height:3.27rem; border:solid #d9d9d9; border-width:1px 0; background:url(../img/left.png) no-repeat 95% center #fff; background-size:.58rem 1.09rem; padding-left:5%; text-align:left; margin-bottom:.72rem; }
+.button-popup{ width:100%; height:3.27rem; height:3.27rem; border:solid #d9d9d9; border-width:1px 0; background:url(../img/left.png) no-repeat 95% center #fff; background-size:.58rem 1.09rem; padding-left:5%; text-align:left; margin-bottom:.72rem; box-sizing: border-box;}
 
 .box-popup{ width:100%; position:fixed; left:0; bottom:0; background:#fff; z-index:100; display:none; }
 

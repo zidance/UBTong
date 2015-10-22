@@ -14,7 +14,7 @@
 .stn-thelists li{ float:left; width:47%; margin-left:2%; }
 .stn-thelists .li-right{ float:right; margin-right:2%; }
 /*.stn-thelists li .s-img img{max-width:300px;_width:expression(this.width > 300 ? "300px" : this.width); }*/
-.stn-thelists button{ width:96%; margin-left:2%; }
+.stn-thelists button{ width:96%; margin-left:2%;}
 
 /*.s-img img{min-width:10%;min-height: 10%;}*/
 /*必须有这句图片延迟加载脚本才可运行*/
