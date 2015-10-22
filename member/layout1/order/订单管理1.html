@@ -10,12 +10,15 @@
 <link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="header/header1/res/css/header.css" rel="stylesheet" type="text/css" />
 <link href="lists/lists1/res/css/order.css" rel="stylesheet" type="text/css" />
+<link href="../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+<script src="../../../common/js/hover.js"></script>
+<script src="../../../common/js/zepto-1.16.min.js"></script>
 </head>
 
 <body>
 	<!--导航-->
 	<nav>
-		<ul>
+		<ul class="find">
 			<li><a class="a1" href="#">全部</a></li>
 			<li><a class="a2" href="#">待付款</a></li>
 			<li><a class="a3 act" href="#">待发货</a></li>
@@ -26,6 +29,7 @@
 		</ul>
 	</nav>
     <!--导航-end-->
+    <script type="text/javascript">setHover('find');</script>
     
     <section class="stn-order">  <!--已取消状态：cancel-order-->
 		<!--订单列表-->

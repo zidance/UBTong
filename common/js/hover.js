@@ -3,14 +3,17 @@ window.onload=function(){
 }
 
 
-function changeLeftNav(){
-	var _info=$('.information');
-	var _ul=_info.find('.info-ul');
-	var _li=_ul.find('li');
+function setHover(_class){
+	var _obj = $('.' + _class);
+	var _li = _obj.find('li');
+	var _a = _li.find('a');
 	$.each(_li,function(i,e){
 		$(this).click(function(){
-			$('.info-ul a').removeClass('act');
-			$(this).find('a').addClass('act');
-		})
+			if($(this).find('a').hasClass('noAct')){
+			}else{
+				_a.removeClass('act');
+				$(this).find('a').addClass('act');
+			}
+		});
 	})	
 }
