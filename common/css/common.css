@@ -35,12 +35,12 @@ html{font-size:172%;}
 .fz120{font-size:4.36rem;}
 .mt20{margin-top:.72rem;}
 
-<!--上下有边框-->
+/*上下有边框*/
+/*
 .border-top-bottom{
-    position: relative;
     border:none !important;
 }
-.border-top-bottom:after{
+.border-top-bottom:before{
     content: '';
     position: absolute;
     top: 0;
@@ -56,16 +56,15 @@ html{font-size:172%;}
     -webkit-transform-origin: left top;
     transform-origin: left top;
 }
+*/
 
 
 
-
-<!--左右边有边框-->
+/*左右边有边框*/
 .border-left-right{
-    position: relative;
     border:none !important;
 }
-.border-left-right:after{
+.border-left-right:before{
     content: '';
     position: absolute;
     top: 0;
@@ -83,12 +82,11 @@ html{font-size:172%;}
 }
 
 
-<!--左边有边框-->
+/*左边有边框*/
 .border-left{
-    position: relative;
     border:none !important;
 }
-.border-left:after{
+.border-left:before{
     content: '';
     position: absolute;
     top: 0;
@@ -106,12 +104,11 @@ html{font-size:172%;}
 }
 
 
-<!--右边有边框-->
+/*右边有边框*/
 .border-right{
-    position: relative;
     border:none !important;
 }
-.border-right:after{
+.border-right:before{
     content: '';
     position: absolute;
     top: 0;
@@ -130,12 +127,11 @@ html{font-size:172%;}
 
 
 
-<!--上面有边框-->
+/*上面有边框*/
 .border-top{
-    position: relative;
     border:none !important;
 }
-.border-top:after{
+.border-top:before{
     content: '';
     position: absolute;
     top: 0;
@@ -153,12 +149,12 @@ html{font-size:172%;}
 }
 
 
-<!--下面有边框-->
+/*下面有边框*/
+/*
 .border-bottom{
-    position: relative;
     border:none !important;
 }
-.border-bottom:after{
+.border-bottom:before{
     content: '';
     position: absolute;
     top: 0;
@@ -174,13 +170,12 @@ html{font-size:172%;}
     -webkit-transform-origin: left top;
     transform-origin: left top;
 }
-
-<!--上右下都有边框-->
+*/
+/*上右下都有边框*/
 .border-top-right-bottom {
-    position: relative;
     border:none !important;
 }
-.border-top-right-bottom:after{
+.border-top-right-bottom:before{
     content: '';
     position: absolute;
     top: 0;
@@ -198,12 +193,11 @@ html{font-size:172%;}
 }
 
 
-<!--上左下都有边框-->
+/*上左下都有边框*/
 .border-top-left-bottom {
-    position: relative;
     border:none !important;
 }
-.border-top-left-bottom:after{
+.border-top-left-bottom:before{
     content: '';
     position: absolute;
     top: 0;
@@ -221,12 +215,12 @@ html{font-size:172%;}
 }
 
 
-<!--四周都有边框-->
+/*四周都有边框*/
+/*
 .border-1px {
-    position: relative;
     border:none !important;
 }
-.border-1px:after{
+.border-1px:before{
     content: '';
     position: absolute;
     top: 0;
@@ -242,6 +236,83 @@ html{font-size:172%;}
     -webkit-transform-origin: left top;
     transform-origin: left top;
 }
+*/
+
+/*上下都有边框*/
+.border-top-bottom:before{
+	border-top: 1px solid #c8c7cc;
+    content: ' ';
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+	top: 0;
+}
+
+.border-top-bottom:after{
+	border-top: 1px solid #c8c7cc;
+    content: ' ';
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+	bottom: 0;
+}
+/*下都有边框*/
+.border-bottom:before{
+	border-bottom: 1px solid #c8c7cc;
+    content: ' ';
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+	bottom: 0;
+}
+.border-1px:after{
+	border: 1px solid #000;
+}
+
+
+
+
+
+@media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio: 1.5){
+
+  .border-bottom:before,.border-top-bottom:after,.border-top-bottom:before{
+	  -webkit-transform: scaleY(.7);
+      -webkit-transform-origin: 0 0;
+      transform: scaleY(.7);
+   }
+   
+   .border-top-bottom:after{
+	  -webkit-transform-origin: left bottom;
+   }
+   
+   .border-1px:after {
+		content: ' ';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 200%;
+		height: 200%;
+		border: 1px solid #dddddd;
+		-webkit-transform: scale(0.5) translate(-50%, -50%);
+		transform: scale(0.5) translate(-50%, -50%);
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio: 2){
+  .border-bottom:before,.border-top-bottom:after,.border-top-bottom:before{
+      -webkit-transform: scaleY(.5);
+      transform: scaleY(.5);
+  }
+}
+
+
+
 
 
 @media screen and (min-width:320px) and (max-width:640px){
