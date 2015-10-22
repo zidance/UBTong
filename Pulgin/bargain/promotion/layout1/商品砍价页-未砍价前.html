@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>商品砍价页</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="prompt/prompt1/res/css/prompt.css" rel="stylesheet" type="text/css" />
+<link href="exhibition/exhibition1/res/css/exhibition.css" rel="stylesheet" type="text/css" />
+<link href="information/information1/res/css/information.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/btn/btn1/res/css/btn.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/btn/btn2/res/css/btn.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/footer/footer1/res/css/footer.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="exhibition/exhibition1/res/js/timeCountDown.js"></script>
+<script src="../../common/js/zepto-1.16.min.js"></script>
+</head>
+
+<body style="background:#fbfbfb;">
+	<!--提示头部 高度：2.39rem-->
+    <section class="stn-prompt">
+    	<p class="p-prompt fz28">现有<span>14</span>人正在热抢（库存 <span>5</span>）</p>
+        <a class="fz28" href="#">活动规则</a>
+    </section>
+    <!--提示头部-end-->
+    
+    <!--商品展示-->
+    <section class="stn-exhibition" style="margin-top:2.39rem;">
+    	<span class="s-img"><img src="exhibition/exhibition1/res/img/img1.jpg" /></span>
+        
+        <div class="exhibition">
+        	<div class="time fz28">
+            	<span id="hour"></span>小时<span id="mini"></span>分<span id="sec"></span>秒
+            </div>
+        	<a class="fz28" href="#">商品详情</a>
+        </div>
+        <span class="s-bg"></span>
+    </section>
+    <script type="text/javascript">
+		var d = Date.UTC(2016, 6, 2, 20, 34); /* '2016 = 年'  '6 = 月（要比实际月份小1）'  '2 = 日'  '20 = 时'  '34 = 分'*/
+		var obj = {
+			 sec: document.getElementById("sec"),
+			 mini: document.getElementById("mini"),
+			 hour: document.getElementById("hour")
+		}
+		fnTimeCountDown(d, obj);
+	</script>
+    <!--商品展示-end-->
+    
+    <!--商品信息-->
+    <section class="stn-information">
+    	<p class="p-name fz32">[包邮]Apple watch38毫米银色铝金属表壳搭配白色运动表带</p>
+        <p class="p-money fz26">最低价：<em class="fz36">￥2300</em><span>市场价：￥2800</span></p>
+    </section>
+    <!--商品信息-end-->
+    
+    <!--按钮-->
+    <script>
+		$(function(){
+			var _btn = $('#PartsBtn');
+			var _bg = $('#Background');
+			var _box = $('#BoxPopup');
+			var _del = _box.find('.a-close');
+			
+			_btn.click(function(){
+				_box.show();
+				_bg.show();
+				_box.css('top',($(window).height()-_box.height())/2);
+			})
+			_del.click(function(){
+				_box.hide();
+				_bg.hide();
+				_box.css('top',($(window).height()-_box.height())/2);
+			})
+		})
+	</script>
+    <section class="stn-partsbtn">
+    	<a id="PartsBtn" class="a-btn fz32" href="#">立即砍价</a>
+        
+        <div class="box-popup" id="BoxPopup">
+        	<span class="s-img"><img src="../../parts/btn/btn1/res/img/img1.jpg" /></span>
+            <p class="p-money fz28"><span class="fz60">-4.08</span> 元</p>
+            <p class="p-prompt fz28">自砍完成，多砍多惊喜！</p>
+            
+            <a class="a-close fz32" href="#">确定</a>
+        </div>
+        <div id="Background"></div>
+    </section>
+    <!--按钮-end-->
+    
+    <!--按钮-->
+    <section class="stn-pbtn" style="margin-bottom:3.27rem;">
+    	<a class="fz32" href="#">一键关注商家</a>
+        <p class="p-num fz28">本活动客服热线：<span>0591-00000000</span></p>
+    </section>
+    <!--按钮-end-->
+    
+    <!--底部高度：3.27rem-->
+    <script>
+		$(function(){
+			var _stntext = $('#StnTxet');  /*类别框*/
+			var _btntext = $('#BtnText');  /*切换输入框按钮*/
+			var _stninput = $('#StnInput');  /*输入框*/
+			var _btninput = $('#BtnInput');  /*切换类别按钮*/
+			var _li = _stntext.find('.li-type');
+			_btntext.click(function(){
+				_stntext.hide();
+				_stninput.show();
+			});
+			_btninput.click(function(){
+				_stninput.hide();
+				_stntext.show();
+			});
+			
+			_li.click(function(){
+				var _size = $(this).find("li").size();
+				if(_size==0){
+						setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className + ' fadein';document.getElementById('StnNull').style.display='block'");
+						setTimeout("document.getElementById('StnNull').className = document.getElementById('StnNull').className.replace(' fadein', '');document.getElementById('StnNull').style.display='none'",3500);
+				}
+				
+				if(_size > 0){
+					_li.find('ol').hide();
+					_li.find('ol div').hide();
+					$(this).find('ol').show();
+				}
+				return false;
+			})
+			_li.find('ol li').click(function(){
+				if($(this).find('div').hasClass('type-lv'))
+				{
+					_li.find('ol div').hide();
+					$(this).find('div').show();
+				}
+				else{
+					_li.find('ol').hide();
+				}
+				return false;
+			})
+			_li.find('ol li div').click(function(){
+				_li.find('ol').hide();
+				_li.find('ol li div').hide();
+				return false;
+			})
+			
+			$(document).click(function(){
+				_li.find('ol').hide();
+			})
+		})
+	</script>
+	<footer>
+		<!--类别-->
+		<section class="stn-text" id="StnTxet">
+			<a class="a-text fz28" href="#" id="BtnText"><span class="s-icon">切换输入框</span></a>
+			<ul>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">产品分类</span></a>
+					<ol>
+						<li>
+                        	<a class="fz28" href="#">分类1</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类11</a>
+                                <a class="fz28" href="#">分类12</a>
+                                <a class="fz28" href="#">分类13</a>
+                                <a class="fz28" href="#">分类14</a>
+                            </div>
+                        </li>
+						<li>
+                        	<a class="fz28" href="#">分类2</a>
+                            <div class="type-lv">
+                            	<a class="fz28" href="#">分类21</a>
+                                <a class="fz28" href="#">分类22</a>
+                                <a class="fz28" href="#">分类23</a>
+                                <a class="fz28" href="#">分类24</a>
+                            </div>
+                        </li>
+						<li><a class="fz28" href="#">分类3</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">会员中心</span></a>
+                    <ol>
+						<li><a class="fz28" href="#">分类7</a></li>
+						<li><a class="fz28" href="#">分类8</a></li>
+						<li><a class="fz28" href="#">分类9</a></li>
+					</ol>
+				</li>
+				<li class="li-type">
+					<a class="fz28" href="#"><span class="s-icon">关注分享</span></a>
+				</li>
+			</ul>
+			<div class="clr"></div>
+		</section>
+		<!--类别-end-->
+		
+		<!--输入框-->
+		<section class="stn-input" id="StnInput">
+			<a class="a-input fz28" href="#" id="BtnInput"><span class="s-icon">切换类别</span></a>
+			<div class="input"><input type="text" /></div>
+			<button>搜索</button>
+		</section>
+		<!--输入框-end-->
+		
+		<section class="stn-null fz36" id="StnNull">未设置分类</section>
+	</footer>
+	<!--底部-end-->
+</body>
+</html>

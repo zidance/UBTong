@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>砍价个人页</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/bargain.css" rel="stylesheet" type="text/css" />
+<script src="../../common/js/zepto-1.16.min.js"></script>
+<script>
+	$(function(){
+		var _obj = $('#Information');
+		var _num = _obj.find('.s-num').eq(0).width();
+		_obj.find('.s-num').css({'display':'inline-block','width':_num})
+	})
+</script>
+</head>
+
+<body style="background:#eb1305;">
+	<div class="portrait"><span><img src="res/img/portrait1.jpg" /></span></div>
+	<section class="stn-information fz24" id="Information">
+    	<h1 class="fz34">希丹Zidance</h1>
+        <p><span class="s-num">排&nbsp;&nbsp;&nbsp;&nbsp;名：第<span>&nbsp;6&nbsp;</span>名</span></p>
+        <p><span class="s-num">助力值：<span>35</span></span></p>
+        <p><span class="s-num">转发数：<span>12</span></span></p>
+    </section>
+    <section class="stn-lists">
+    	<h1><img src="res/img/title1.png" /></h1>
+        <ul>
+        	<li>
+            	<div class="li-left"><img src="res/img/portrait2.jpg" /></div>
+                <div class="li-right">
+                	<div class="left">
+                        <p class="p-name fz26">Naviad</p>
+                        <p class="p-time fz20">2015-09-10</p>
+                    </div>
+                    <p class="p-money fz30">￥32.00</p>
+                </div>
+                <div class="clr"></div>
+            </li>
+            <li>
+            	<div class="li-left"><img src="res/img/portrait3.jpg" /></div>
+                <div class="li-right">
+                	<div class="left">
+                        <p class="p-name fz26">Naviad</p>
+                        <p class="p-time fz20">2015-09-10</p>
+                    </div>
+                    <p class="p-money fz30">￥32.00</p>
+                </div>
+                <div class="clr"></div>
+            </li>
+            <li>
+            	<div class="li-left"><img src="res/img/portrait4.jpg" /></div>
+                <div class="li-right">
+                	<div class="left">
+                        <p class="p-name fz26">Naviad</p>
+                        <p class="p-time fz20">2015-09-10</p>
+                    </div>
+                    <p class="p-money fz30">￥32.00</p>
+                </div>
+                <div class="clr"></div>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

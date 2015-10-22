@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>红包</title>
@@ -15,13 +15,15 @@
 
 <body style="background:#f7f5f5;">
 	<!--红包-->
+    <div class="wrap">
+    <input type="checkbox" />
 	<div class="subscribe-envelope" id="selectShow">
-		<input type="checkbox" />
 		<a class="integral" href="#">
 			<p class="fz28">红包抵扣<span>&nbsp;10元红包</span></p>
 		</a>
 		<div class="clr"></div>
 	</div>
+    </div>
     <!--红包-end-->
     
     <!--弹出框-->
@@ -31,7 +33,7 @@
         <h3>
         <a href="javascript:void(0);" class="fl" style="display:none;">取消</a>
        <p class="p-title fz32">我的红包</p>
-        <a href="javascript:void(0);" class="fr not">确定</a></h3>
+        <a href="javascript:void(0);" class="fr">确定</a></h3>
         
 <!--        <a class="btn">关闭</a>-->
         
@@ -61,7 +63,7 @@
     <script>
     $("#selectTime").find(".fr").click(function(){
         var a = $("#dateSelect").find(".active").html();
- $("#selectShow").find(".integral").find("span").html(a);
+        $("#selectShow").find(".integral").find("span").html(a);
         
     });
     </script>

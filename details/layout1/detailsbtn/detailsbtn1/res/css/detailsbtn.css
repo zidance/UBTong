@@ -1,6 +1,6 @@
-.details-btn{ width:100%; height:3.77rem; box-shadow:0 0 5px #cac8c9; background:#fff; position:fixed; bottom:0; left:0; text-align:center; z-index:10; }
-.details-btn a{ display:inline-block; width:40%; height:2.9rem; line-height:2.9rem; color:#fff; border-radius:7px; margin-top:.43rem; }
-.details-btn a:last-child{ margin-left:5%; }
+.details-btn{ width:100%; /*height:3.77rem;*/ box-shadow:0 0 5px #cac8c9; background:#fff; position:fixed; bottom:0; left:0; text-align:center; z-index:10;font-size: 0; }
+.details-btn a{ display:inline-block; width:45.7%; color:#fff; border-radius:.3rem; margin:1.7% 0;padding: 4% 0;text-align:center;box-sizing: border-box;}
+.details-btn a:last-child{ margin-left:1.5%; }
 .details-btn .a-orange{ background:#f15a0c; }
 .details-btn .a-yellow{ background:#f08f00; }
 .details-btn .a-red{ background:#f2484c; }

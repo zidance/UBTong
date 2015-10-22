@@ -1,0 +1,43 @@
+/*找人砍价*/
+.stn-bargain{ width:92.82%; padding:0 3.59% .9rem; background:#fff; }
+.stn-bargain .bargain{ padding:1.01rem 0 .9rem; border-top:1px dashed #d9d9d9; }
+.stn-bargain .bargain .s-name{ display:block; float:left; color:#464646; }
+.stn-bargain .bargain .s-percent{ display:block; float:left; color:#464646; margin-left:2%; }
+.stn-bargain .bargain .s-scroll{ display:block; float:left; width:63%; height:.72rem; border-top:1px solid #d7d6d6; background:#fbfbfb; border-radius:30px; margin:.1rem 0 0 2%; position:relative; }
+.stn-bargain .bargain .s-scroll em{ display:block; height:.69rem; background:#f15a0c; position:absolute; top:0; left:0; border-radius:30px 0 0 30px; }
+.stn-bargain .bargain .s-scroll .e1{ width:10%; }
+.stn-bargain .bargain .s-scroll .e2{ width:20%; }
+.stn-bargain .bargain .s-scroll .e3{ width:30%; }
+.stn-bargain .bargain .s-scroll .e4{ width:40%; }
+.stn-bargain .bargain .s-scroll .e5{ width:50%; }
+.stn-bargain .bargain .s-scroll .e6{ width:60%; }
+.stn-bargain .bargain .s-scroll .e7{ width:70%; }
+.stn-bargain .bargain .s-scroll .e8{ width:80%; }
+.stn-bargain .bargain .s-scroll .e9{ width:90%; }
+.stn-bargain .bargain .s-scroll .e10{ width:100%; border-radius:30px; }
+
+.stn-bargain .message div{ width:52%; float:left; }
+.stn-bargain .message div p{ color:#999999; line-height:1.2rem; }
+.stn-bargain .message div p span{ color:#f2484b; }
+.stn-bargain .message a{ display:block; width:48%; height:2.4rem; line-height:2.4rem; background:#f15a0c; color:#fff; text-align:center; border-radius:6px; float:left; }
+
+.stn-share{ width:100%; background:#fff; position:absolute; bottom:0; left:0; z-index:11; display:none; }
+.stn-share h1{ color:#585858; margin:1.01rem 0 2.9rem 3%; }
+.stn-share .a-close{ display:block; background:url(../img/close.png) no-repeat; background-size:1.81rem 1.81rem; width:1.81rem; height:1.81rem; text-indent:-9999px; position:absolute; top:1.01rem; right:3%; }
+.stn-share li{ width:25%; float:left; text-align:center; margin-bottom:.9rem; }
+.stn-share li .s-img{ display:inline-block; width:3.125rem; height:3.125rem; }
+.stn-share li .s-img img{ width:100%; height:100%; }
+.stn-share li p{ color:#585858; margin-top:.36rem; }
+
+#Background{ width:100%; height:100%; background:#000; opacity:0.5; position:absolute; left:0; top:0; display:none; z-index:10; }
+
+@media screen and (min-width:485px){
+	.stn-share .p-prompt{ height:1.7rem; line-height:1.7rem; }
+}
+
+@media screen and (max-width:320px){
+	.stn-bargain .bargain .s-scroll{ width:57%; margin-top:.4rem; }
+	
+	.stn-bargain .message div p{ line-height:1.5rem; }
+	.stn-bargain .message a{ height:2.9rem; line-height:2.9rem; }	
+}

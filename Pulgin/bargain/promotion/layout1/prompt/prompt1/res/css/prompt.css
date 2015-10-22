@@ -1,0 +1,5 @@
+/*提示头部*/
+.stn-prompt{ width:100%; height:2.39rem; line-height:2.39rem; background:#fff; position:fixed; top:0; left:0; z-index:10; }
+.stn-prompt .p-prompt{ color:#464646; float:left; margin-left:3.59%; }
+.stn-prompt .p-prompt span{ color:#f54e1f; }
+.stn-prompt a{ display:block; float:right; color:#f7c005; margin-right:3.59%; }
