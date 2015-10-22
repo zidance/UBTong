@@ -1,7 +1,7 @@
 /* CSS重置 */
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,img,table,th,td,form,fieldset,legend,input,textarea,button,select,header,section,aside,footer{margin:0;padding:0;}
 header,section,aside,footer{display:block;}
-body{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;font-size-webkit-text-size-adjust:none;max-width:640px;min-width:320px;margin:0 auto;}
+body{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;font-size-webkit-text:none;max-width:640px;min-width:320px;margin:0 auto;}
 input{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;}
 img{border:0;vertical-align:middle;}
 a{text-decoration:none;-webkit-appearance:none;}
@@ -216,7 +216,7 @@ html{font-size:172%;}
 
 
 /*四周都有边框*/
-/*
+
 .border-1px {
     border:none !important;
 }
@@ -236,7 +236,7 @@ html{font-size:172%;}
     -webkit-transform-origin: left top;
     transform-origin: left top;
 }
-*/
+
 
 /*上下都有边框*/
 .border-top-bottom:before{
@@ -268,10 +268,6 @@ html{font-size:172%;}
     left: 0;
 	bottom: 0;
 }
-.border-1px:after{
-	border: 1px solid #000;
-}
-
 
 
 
@@ -287,21 +283,7 @@ html{font-size:172%;}
    .border-top-bottom:after{
 	  -webkit-transform-origin: left bottom;
    }
-   
-   .border-1px:after {
-		content: ' ';
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		width: 200%;
-		height: 200%;
-		border: 1px solid #dddddd;
-		-webkit-transform: scale(0.5) translate(-50%, -50%);
-		transform: scale(0.5) translate(-50%, -50%);
-	}
+
 }
 
 @media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio: 2){
