@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>DEMO</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
-<script type="text/javascript">
 $(function(){
 	var _all=$('*');
 	
@@ -41,9 +30,10 @@ $(function(){
 		}
 		/*判断定位*/
 		function getPosition(){
-			if(_this.css('position')!='fixed'||_this.css('position')!='absolute'){
+			if(_this.css('position')=='fixed'||_this.css('position')=='absolute'){
+			}else{
 				_this.css('position','relative');
-		    }
+			};
 		}
 		
 		
@@ -113,53 +103,3 @@ $(function(){
 		}	
 	}	
 })
-
-</script>
-<style>
-
-.border-000 div,.border-f00 div{ width:95%; margin:0.72rem auto; height:3rem; line-height:3rem; text-align:center; color:#000; background:#d6d6d6; position:relative}
-
-.div1{ border:solid; border-width:1px; border-color:#000; border-radius:10px; border-style:dotted;}
-.div2{ border:solid; border-width:1px 0; border-color:#000; }
-.div3{ border:solid; border-width:0 1px; border-color:#000; }
-.div4{ border:solid; border-width:1px 0 0 0; border-color:#000; }
-.div5{ border:solid; border-width:0 0 1px 0; border-color:#000; }
-.div6{ border:solid; border-width:0 0 0 1px; border-color:#000; }
-.div7{ border:solid; border-width:0 1px 0 0; border-color:#000; }
-
-.div8{ border:solid; border-width:1px; border-color:#F60; }
-.div9{ border:solid; border-width:1px 0; border-color:#F60; }
-.div10{ border:solid; border-width:0 1px; border-color:#F60; }
-.div11{ border:solid; border-width:1px 0 0 0; border-color:#F60; }
-.div12{ border:solid; border-width:0 0 1px 0; border-color:#F60; }
-.div13{ border:solid; border-width:0 0 0 1px; border-color:#F60; }
-.div14{ border:solid; border-width:0 1px 0 0; border-color:#F60; }
-
-/*如果需要改变颜色或者是 border-style 必须自己添加 .div:after{ border-style:dotted !important;}只有是四周的才有border-style; 其他四边是没有;因此不能改变四周的border-style; 而改变颜色使用before还是after要看要看你加的是哪个类， 上左都是加before 下右 和上下左右都是加after  但是如果是要改变颜色的话 记得上、下、左、右是改变background的颜色 如：.div:after{ background:#f00;} 或者是.div:before{ background:#f00;} 而上下左右是.div：after{ border-color:#f00;} 同样要记得加！important*/
-
-</style>
-</head>
-
-<body>
-<div class="border-000">
-    <div class="div1">四周</div>
-    <div class="div2">上下</div>
-    <div class="div3">左右</div>
-    <div class="div4">上</div>
-    <div class="div5">下</div>
-    <div class="div6">左</div>
-    <div class="div7">右</div>
-</div>
-<div class="border-f00">
-    <div class="div8">四周</div>
-    <div class="div9">上下</div>
-    <div class="div10">左右</div>
-    <div class="div11">上</div>
-    <div class="div12">下</div>
-    <div class="div13">左</div>
-    <div class="div14">右</div>
-</div>
-
-
-</body>
-</html>
