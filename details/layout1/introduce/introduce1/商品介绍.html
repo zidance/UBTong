@@ -1,19 +1,20 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>商品介绍</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/introduce.css" rel="stylesheet" type="text/css" />
-<script src="../../../../common/js/zepto-1.16.min.js"></script>
-<script>
-	$(function(){
-		var _obj = $('#DetailsIntroduce');
-		var _btn = _obj.find('nav a');
-		var _item = _obj.find('.introduce-con .introduce-item');
+	<title>商品介绍</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="res/css/introduce.css" rel="stylesheet" type="text/css" />
+	<script src="../../../../common/js/zepto-1.16.min.js"></script>
+	<script src="../../../../common/js/default.js"></script>
+	<script>
+		$(function(){
+			var _obj = $('#DetailsIntroduce');
+			var _btn = _obj.find('nav a');
+			var _item = _obj.find('.introduce-con .introduce-item');
 		//初始化
 		_item.eq(0).show();
 		_btn.eq(0).addClass('act');
@@ -76,6 +77,6 @@
 			</div>
 		</div>
 	</div>
-    <!--商品介绍-end-->
+	<!--商品介绍-end-->
 </body>
 </html>

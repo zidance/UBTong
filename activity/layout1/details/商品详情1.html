@@ -1,30 +1,31 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>商品详情</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="pic/pic1/res/css/detailspic.css" rel="stylesheet" type="text/css" />
-<link href="details/details1/res/css/details.css" rel="stylesheet" type="text/css" />
-<link href="outlets/outlets1/res/css/outlets.css" rel="stylesheet" type="text/css" />
-<link href="time/time1/res/css/time.css" rel="stylesheet" type="text/css" />
-<link href="instructions/instructions1/res/css/instructions.css" rel="stylesheet" type="text/css" />
-<link href="introduce/introduce1/res/css/introduce.css" rel="stylesheet" type="text/css" />
-<link href="../../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
-<link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
-<link href="../../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script src="../../../common/js/zepto-1.16.min.js"></script>
-<script src="pic/pic1/res/js/iscroll.js"></script>
-<script src="introduce/introduce1/res/js/jquery.js"></script>
-<script src="../../../common/js/hover.js"></script>
+	<title>商品详情</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="pic/pic1/res/css/detailspic.css" rel="stylesheet" type="text/css" />
+	<link href="details/details1/res/css/details.css" rel="stylesheet" type="text/css" />
+	<link href="outlets/outlets1/res/css/outlets.css" rel="stylesheet" type="text/css" />
+	<link href="time/time1/res/css/time.css" rel="stylesheet" type="text/css" />
+	<link href="instructions/instructions1/res/css/instructions.css" rel="stylesheet" type="text/css" />
+	<link href="introduce/introduce1/res/css/introduce.css" rel="stylesheet" type="text/css" />
+	<link href="../../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
+	<link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
+	<link href="../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+	<script src="../../../common/js/zepto-1.16.min.js"></script>
+	<script src="pic/pic1/res/js/iscroll.js"></script>
+	<script src="introduce/introduce1/res/js/jquery.js"></script>
+	<script src="../../../common/js/default.js"></script>
+	<script src="../../../common/js/zepto-1.16.min.js"></script>
 </head>
 
 <body onload="loaded()" style="background:#f7f5f5;">
 	<!--商品图片-->
-    <script>
+	<script>
 		/*设置宽度、高度*/
 		$(function(){
 			var _obj = $('#scroller');
@@ -82,10 +83,10 @@
 			<div id="dotty"></div>
 		</div>
 	</div>
-    <!--商品图片-end-->
-    
-    <!--商品详细-->
-    <script>
+	<!--商品图片-end-->
+	
+	<!--商品详细-->
+	<script>
 		$(function(){
 			var _obj = $('#ProductDetails');
 			var _reduct = _obj.find('.details-num .reduct');
@@ -106,10 +107,10 @@
 			});	
 		})
 	</script>
-    <div class="product-details" id="ProductDetails">
+	<div class="product-details" id="ProductDetails">
 		<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2袋【快乐邻居】</p>
 		<!--<p class="p-money fz28">预售价：<span class="fz36">￥29.90</span><em class="fz28">3个/份</em></p>-->
-        <p class="p-money fz28">会员价：<span class="fz36">￥1199.00</span></p>
+		<p class="p-money fz28">会员价：<span class="fz36">￥1199.00</span></p>
 		<p class="p-market fz28">市场价：￥40.00</p>
 		<div class="details-num">
 			<div class="number-name fz28">数　量：</div>                   
@@ -118,54 +119,54 @@
 				<input class="fz28" type="text" value="1" />
 				<a href="#" class="fz28 add">+</a>
 			</div>
-            <div class="clr"></div>
+			<div class="clr"></div>
 		</div>
 	</div>
-    <!--商品详细-end-->
-    
-    <!--服务网点-->
-    <section class="stn-outlets">
-    	<!--<h1 class="fz32">服务施工网点</h1>-->
-        <a  class="a-title fz32" href="#">服务施工网点 <span class="fz26">更多</span></a>
-        
-        <ul>
-        	<li>
-            	<span class="s-img"><img src="outlets/outlets1/res/img/img1.jpg" /></span>
-                <p class="p-name fz28">服务网名称</p>
-                <p class="p-address fz24">北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼</p>
-                <em class="e3">星级好评</em>  <!-- 一星：e1  二星：e2  三星：e3  四星：e4  五星：e5 -->
-                <p class="p-science fz20">技术: <span>中级</span></p>
-                <p class="p-num fz24">10km</p>
-                <a class="fz28" href="#">路线导航</a>
-                
-                <div class="clr"></div>
-            </li>
-        </ul>
-    </section>
-    <!--服务网点-end-->
-    
-    <!--活动时间-->
-    <section class="stn-time">
-    	<a class="fz32" href="#">活动时间：2015-05-01</a>
-    </section>
-    <!--活动时间-end-->
-    
-    <!--活动须知-->
-    <section class="stn-instructions">
-    	<h1 class="fz32">活动须知</h1>
-        
-        <div class="content">
-        	<p class="fz28">预约信息</p>
-            <p class="fz28">请您提前1天预约</p>
-        </div>
-        <div class="content">
-        	<p class="fz28">使用规则</p>
-            <p class="fz28">向抚远汽配预约，并将预约短信或二维码到店验证接受服务</p>
-        </div>
-    </section>
-    <!--活动须知-end-->
-    
-    <!--快捷购物车栏-->
+	<!--商品详细-end-->
+	
+	<!--服务网点-->
+	<section class="stn-outlets">
+		<!--<h1 class="fz32">服务施工网点</h1>-->
+		<a  class="a-title fz32" href="#">服务施工网点 <span class="fz26">更多</span></a>
+		
+		<ul>
+			<li>
+				<span class="s-img"><img src="outlets/outlets1/res/img/img1.jpg" /></span>
+				<p class="p-name fz28">服务网名称</p>
+				<p class="p-address fz24">北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼</p>
+				<em class="e3">星级好评</em>  <!-- 一星：e1  二星：e2  三星：e3  四星：e4  五星：e5 -->
+				<p class="p-science fz20">技术: <span>中级</span></p>
+				<p class="p-num fz24">10km</p>
+				<a class="fz28" href="#">路线导航</a>
+				
+				<div class="clr"></div>
+			</li>
+		</ul>
+	</section>
+	<!--服务网点-end-->
+	
+	<!--活动时间-->
+	<section class="stn-time">
+		<a class="fz32" href="#">活动时间：2015-05-01</a>
+	</section>
+	<!--活动时间-end-->
+	
+	<!--活动须知-->
+	<section class="stn-instructions">
+		<h1 class="fz32">活动须知</h1>
+		
+		<div class="content">
+			<p class="fz28">预约信息</p>
+			<p class="fz28">请您提前1天预约</p>
+		</div>
+		<div class="content">
+			<p class="fz28">使用规则</p>
+			<p class="fz28">向抚远汽配预约，并将预约短信或二维码到店验证接受服务</p>
+		</div>
+	</section>
+	<!--活动须知-end-->
+	
+	<!--快捷购物车栏-->
 	<script>
 		$(function(){
 			var _boxcart = $('#BoxCart');
@@ -199,7 +200,7 @@
 				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
 				<p class="fz26">购物车</p>
 			</a>
-            <a class="cart" href="#">
+			<a class="cart" href="#">
 				<span class="s-img"><img src="../../../parts/boxcart/boxcart1/res/img/member.png" /></span>
 				<p class="fz26">会员</p>
 			</a>
@@ -209,10 +210,10 @@
 			</a>
 		</div>
 	</div>
-    <!--快捷购物车栏-end-->
+	<!--快捷购物车栏-end-->
 
-    <!--商品介绍-->
-    <script>
+	<!--商品介绍-->
+	<script>
 		$(function(){
 			var _obj = $('#DetailsIntroduce');
 			var _btn = _obj.find('nav a');
@@ -286,7 +287,7 @@
 		})(jQuery);
 		/*--------------页面滑动效果 - end ----------------*/
 	</script>
-    <div class="details-introduce" id="DetailsIntroduce" style="margin-bottom:0rem;">
+	<div class="details-introduce" id="DetailsIntroduce" style="margin-bottom:0rem;">
 		<nav>
 			<ul>
 				<li><a class="fz28" href="#">商品介绍</a></li>
@@ -329,23 +330,23 @@
 			</div>
 		</div>
 	</div>
-    <script>
-    	$(function(){
+	<script>
+		$(function(){
 			var _obj = $('#DetailsIntroduce');
 			var _fly = _obj.find('nav')  //滑动弹出框
 			
 			_fly.capacity();  /*调用导航跟随滑动效果插件*/
 		})
-    </script>
-    <!--商品介绍-end-->
-    
-    
+	</script>
+	<!--商品介绍-end-->
+	
+	
 
-    
-    <!--详情按钮高度：3.77rem-->
+	
+	<!--详情按钮高度：3.77rem-->
 	<div class="details-btn">
-    	<a class="a-orange fz32" href="#">立即购买</a>
-    </div>
-    <!--详情按钮-end-->
+		<a class="a-orange fz32" href="#">立即购买</a>
+	</div>
+	<!--详情按钮-end-->
 </body>
 </html>
