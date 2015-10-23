@@ -1,105 +1,180 @@
 $(function(){
 	var _all=$('*');
-	
-	for(var i=0; i<_all.length;i++){	
+	for(var i=0; i<_all.length;i++){
 		/*四周都有边框*/
-		var varColor,varRadiu,oParents,varwidth,varstyle;
-		varColor=_all.eq(i).css('border-color');
-		varRadiu=_all.eq(i).css('border-radius');
-		varwidth=_all.eq(i).css('border-width');
-		varstyle=_all.eq(i).css('border-style');
-		var _this=_all.eq(i);
-		oParents = _all.eq(i).parents();
-		var sStyleChain=''; 
-	  
-		/*获取父级元素*/
-		function getParents(){
-			sStyleChain=''; 
-			for(var nTemp = oParents.length-1;nTemp>=0;nTemp--){
-				var sClassName='';
-				if(oParents.get(nTemp).className){
-					sClassName=	oParents.get(nTemp).className;
-					if(sClassName.indexOf(" ")> -1){
-						sClassName=sClassName.substring( 0, sClassName.indexOf(' '));	
-					}
-					sStyleChain += (oParents.get(nTemp).localName+'.'+sClassName+' ');	
-				}else{
-					sStyleChain += (oParents.get(nTemp).localName+' ');	
-				}
-		   }
-		}
-		/*判断定位*/
-		function getPosition(){
-			if(_this.css('position')=='fixed'||_this.css('position')=='absolute'){
+
+		if(parseInt(_all.eq(i).css('border-top-width'))==1&&parseInt(_all.eq(i).css('border-bottom-width'))==1&&parseInt(_all.eq(i).css('border-left-width'))==1&&parseInt(_all.eq(i).css('border-right-width'))==1){
+			 var varColor=_all.eq(i).css('border-color');
+			 var varRadiu=_all.eq(i).css('border-radius');
+			_all.eq(i).css('border','none');
+			_all.eq(i).addClass('border-1px');
+			
+			var oParents = _all.eq(i).parents();
+			   var sStyleChain = '';
+			   for(var nTemp = oParents.length-1;nTemp>=0;nTemp--){
+				   sStyleChain += (oParents.get(nTemp).localName+' ')
+			   }
+			   
+			   if(varRadiu=='0px'){
+				  $('.border-1px').append("<style>"+sStyleChain+".border-1px::after{ border-color:" +varColor+ ";border-radius:0px}</style>");      
+			   }else{
+				  $('.border-1px').append("<style>"+sStyleChain+".border-1px::after{ border-color:" +varColor+ ";border-radius:" +varRadiu+ "}</style>");         
+			   }
+	
+			
+
+			if(_all.eq(i).css('position')=='fixed'||_all.eq(i).css('position')=='absolute'){
 			}else{
-				_this.css('position','relative');
+				$('.border-1px').css('position','relative');
+			};
+
+			/*上下都有边框*/
+		}else if(parseInt(_all.eq(i).css('border-top-width'))==1&&parseInt(_all.eq(i).css('border-bottom-width'))==1){
+			var varColor=_all.eq(i).css('border-color');
+			var varRadiu=_all.eq(i).css('border-radius');
+			_all.eq(i).css('border','none');
+			_all.eq(i).addClass('border-top-bottom');	
+			
+			   var oParents = _all.eq(i).parents();
+			   var sStyleChain = '';
+			   for(var nTemp = oParents.length-1;nTemp>=0;nTemp--){
+				   sStyleChain += (oParents.get(nTemp).localName+' ')
+			   }
+			   
+			   if(varRadiu=='0px'){
+				  $('.border-1px').append("<style>"+sStyleChain+".border-top-bottom::after{ border-color:" +varColor+ ";border-radius:0px}"+sStyleChain+".border-top-bottom::before{ border-color:" +varColor+ "};</style>");      
+			   }else{
+				  $('.border-1px').append("<style>"+sStyleChain+".border-top-bottom::after{ border-color:" +varColor+ ";border-radius:" +varRadiu+ "};"+sStyleChain+".border-top-bottom::before{ border-color:" +varColor+ ";</style>");         
+			   }
+
+
+			if(_all.eq(i).css('position')=='fixed'||_all.eq(i).css('position')=='absolute'){
+			}else{
+				$('.border-top-bottom').css('position','relative');
+			};
+			
+			/*左右都有边框*/
+		}else if(parseInt(_all.eq(i).css('border-left-width'))==1&&parseInt(_all.eq(i).css('border-right-width'))==1){
+			var varColor=_all.eq(i).css('border-color');
+			var varRadiu=_all.eq(i).css('border-radius');
+			_all.eq(i).css('border','none');
+			_all.eq(i).addClass('border-left-right');	
+			
+			var oParents = _all.eq(i).parents();
+			   var sStyleChain = '';
+			   for(var nTemp = oParents.length-1;nTemp>=0;nTemp--){
+				   sStyleChain += (oParents.get(nTemp).localName+' ')
+			   }
+	
+			if(varRadiu=='0px'){
+				  $('.border-left-right').append("<style>"+sStyleChain+".border-left-right::after{ border-color:" +varColor+ ";border-radius:0px}</style>");      
+			   }else{
+				  $('.border-left-right').append("<style>"+sStyleChain+".border-left-right::after{ border-color:" +varColor+ ";border-radius:" +varRadiu+ "}</style>");         
+			   }
+
+			if(_all.eq(i).css('position')=='fixed'||_all.eq(i).css('position')=='absolute'){
+			}else{
+				$('.border-left-right').css('position','relative');
+			};
+			
+			/*上面有边框*/
+		}else if(parseInt(_all.eq(i).css('border-top-width'))==1){
+			var varColor=_all.eq(i).css('border-color');
+			var varRadiu=_all.eq(i).css('border-radius');
+			_all.eq(i).css('border','none');
+			_all.eq(i).addClass('border-top');	
+			
+			var oParents = _all.eq(i).parents();
+			   var sStyleChain = '';
+			   for(var nTemp = oParents.length-1;nTemp>=0;nTemp--){
+				   sStyleChain += (oParents.get(nTemp).localName+' ')
+			   }
+	
+			if(varRadiu=='0px'){
+				  $('.border-top').append("<style>"+sStyleChain+".border-top::after{ border-color:" +varColor+ ";border-radius:0px}</style>");      
+			   }else{
+				  $('.border-top').append("<style>"+sStyleChain+".border-top::after{ border-color:" +varColor+ ";border-radius:" +varRadiu+ "}</style>");         
+			   }
+			
+			if(_all.eq(i).css('position')=='fixed'||_all.eq(i).css('position')=='absolute'){
+			}else{
+				$('.border-top').css('position','relative');
+			};
+		}
+		
+			/*下面有边框*/
+		else if(parseInt(_all.eq(i).css('border-bottom-width'))==1){
+			var varColor=_all.eq(i).css('border-color');
+			var varRadiu=_all.eq(i).css('border-radius');
+			_all.eq(i).css('border','none');
+			_all.eq(i).addClass('border-bottom');
+				
+			var oParents = _all.eq(i).parents();
+			   var sStyleChain = '';
+			   for(var nTemp = oParents.length-1;nTemp>=0;nTemp--){
+				   sStyleChain += (oParents.get(nTemp).localName+' ')
+			   }
+	
+			if(varRadiu=='0px'){
+				  $('.border-bottom').append("<style>"+sStyleChain+".border-bottom::after{ border-color:" +varColor+ ";border-radius:0px}</style>");      
+			   }else{
+				  $('.border-bottom').append("<style>"+sStyleChain+".border-bottom::after{ border-color:" +varColor+ ";border-radius:" +varRadiu+ "}</style>");         
+			   }
+			if(_all.eq(i).css('position')=='fixed'||_all.eq(i).css('position')=='absolute'){
+			}else{
+				$('.border-bottom').css('position','relative');
+			};
+		}
+		
+		  /*左面有边框*/
+		else if(parseInt(_all.eq(i).css('border-left-width'))==1){
+			var varColor=_all.eq(i).css('border-color');
+			var varRadiu=_all.eq(i).css('border-radius');
+			_all.eq(i).css('border','none');
+			_all.eq(i).addClass('border-left');	
+			
+			var oParents = _all.eq(i).parents();
+			   var sStyleChain = '';
+			   for(var nTemp = oParents.length-1;nTemp>=0;nTemp--){
+				   sStyleChain += (oParents.get(nTemp).localName+' ')
+			   }
+	
+			if(varRadiu=='0px'){
+				  $('.border-left').append("<style>"+sStyleChain+".border-left::after{ border-color:" +varColor+ ";border-radius:0px}</style>");      
+			   }else{
+				  $('.border-left').append("<style>"+sStyleChain+".border-left::after{ border-color:" +varColor+ ";border-radius:" +varRadiu+ "}</style>");         
+			   }
+			if(_all.eq(i).css('position')=='fixed'||_all.eq(i).css('position')=='absolute'){
+			}else{
+				$('.border-left').css('position','relative');
 			};
 		}
 		
 		
+		  /*右面有边框*/
+		else if(parseInt(_all.eq(i).css('border-right-width'))==1){
+			var varColor=_all.eq(i).css('border-color');
+			var varRadiu=_all.eq(i).css('border-radius');
+			_all.eq(i).css('border','none');
+			_all.eq(i).addClass('border-right');	
+			
+			var oParents = _all.eq(i).parents();
+			   var sStyleChain = '';
+			   for(var nTemp = oParents.length-1;nTemp>=0;nTemp--){
+				   sStyleChain += (oParents.get(nTemp).localName+' ')
+			   }
+	
+			if(varRadiu=='0px'){
+				  $('.border-right').append("<style>"+sStyleChain+".border-right::after{ border-color:" +varColor+ ";border-radius:0px}</style>");      
+			   }else{
+				  $('.border-right').append("<style>"+sStyleChain+".border-right::after{ border-color:" +varColor+ ";border-radius:" +varRadiu+ "}</style>");         
+			   }
+			if(_all.eq(i).css('position')=='fixed'||_all.eq(i).css('position')=='absolute'){
+			}else{
+				$('.border-right').css('position','relative');
+			};
+		}
 		
 		
-		/*加上各自的Class*/
-		function AddTop(_borderClass){
-			_this.addClass(_borderClass);
-			_this.append("<style>"+sStyleChain+"."+_borderClass+"::before{ background:"+varColor+"}</style>"); 
-			getPosition();        
-		   
-	   }
-	   
-	   function AddBottom(_borderClass1){
-			_this.addClass(_borderClass1);   
-		    _this.append("<style>"+sStyleChain+"."+_borderClass1+"::after{ background:"+varColor+"}</style>");         
-		    getPosition();        
-	   }
-	   
-		 function AddLeft(_borderClass2){
-			_this.addClass(_borderClass2);
-			_this.append("<style>"+sStyleChain+"."+_borderClass2+"::before{ background:"+varColor+"}</style>");         
-            getPosition();        
-	   }
-	   function AddRight(_borderClass){
-			_this.addClass(_borderClass);
-			_this.append("<style>"+sStyleChain+"."+_borderClass+"::after{ background:"+varColor+"}</style>");         
-		    getPosition();        
-	   }
-	   function AddBorder(_borderClass){
-		   _this.addClass(_borderClass);
-		  if(varRadiu=='0px'){
-			  _this.append("<style>"+sStyleChain+"."+_borderClass+"::after{ border-color:"+varColor+";border-radius:0px;border-style:"+varstyle+"}</style>");      
-		   }else{
-			  _this.append("<style>"+sStyleChain+"."+_borderClass+"::after{ border-color:"+varColor+";border-radius:"+varRadiu+";border-style:"+varstyle+"}</style>");         
-		   } 
-		   getPosition();        
-	   }
-	   
-		 /*判断边的情况*/
-		 
-		 
-		if(varwidth=='1px'){
-			_this.css('border','none');
-			getParents();
-			AddBorder('trblBor');
-		}else{
-			if(_this.css('border-top-width')=='1px'){
-				getParents();
-				AddTop('tBor');
-			}
-			if(_this.css('border-bottom-width')=='1px'){
-				getParents();
-				AddBottom('bBor');
-			}
-			if(_this.css('border-left-width')=='1px'){
-				getParents();
-				AddLeft('lBor');
-			}
-			
-			if(_this.css('border-right-width')=='1px'){
-				getParents();
-				AddRight('rBor');
-			}
-			
-			_this.css('border','none');
-		}	
 	}	
 })
