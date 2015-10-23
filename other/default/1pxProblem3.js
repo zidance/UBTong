@@ -7,6 +7,7 @@ $(function(){
 		varColor=_all.eq(i).css('border-color');
 		varRadiu=_all.eq(i).css('border-radius');
 		varwidth=_all.eq(i).css('border-width');
+		varstyle=_all.eq(i).css('border-style');
 		
 		oParents = _all.eq(i).parents();
 		var sStyleChain='';
@@ -40,9 +41,9 @@ $(function(){
 	   
 	   function AddClass1(_borderClass){
 		  if(varRadiu=='0px'){
-				  $('.border-1px').append("<style>"+sStyleChain+".border-top-bottom::after{ border-color:" +varColor+ ";border-radius:0px}"+sStyleChain+".border-top-bottom::before{ border-color:" +varColor+ "};</style>");      
+				  _all.eq(i).append("<style>"+sStyleChain+"."+_borderClass+"::after{ border-color:" +varColor+ ";border-radius:0px}"+sStyleChain+"."+_borderClass+"::before{ border-color:" +varColor+ "};</style>");      
 			   }else{
-				  $('.border-1px').append("<style>"+sStyleChain+".border-top-bottom::after{ border-color:" +varColor+ ";border-radius:" +varRadiu+ "};"+sStyleChain+".border-top-bottom::before{ border-color:" +varColor+ ";</style>");         
+				  _all.eq(i).append("<style>"+sStyleChain+"."+_borderClass+"::after{ border-color:" +varColor+ ";border-radius:" +varRadiu+ "};"+sStyleChain+"."+_borderClass+"::before{ border-color:" +varColor+ ";</style>");         
 			   }
 		   
 		   if(_all.eq(i).css('position')=='fixed'||_all.eq(i).css('position')=='absolute'){
