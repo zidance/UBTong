@@ -12,6 +12,7 @@
 /* »ý·ÖÃ÷Ï¸ */
 .integral-query .stn-detail{width:90%;margin:0 auto;}
 .integral-query .stn-detail div p{height:3.45rem;line-height: 3.45rem;padding:0 2.7% 0 3.2%;border-top:1px solid #d9d9d9;font-size:1.11rem;overflow: hidden;clear:both;}
+.integral-query .stn-detail div p:before{ background: #d9d9d9 !important;}
 .integral-query .stn-detail div p span{float:right;font-size:1.01rem;}
 .integral-query .stn-detail div p:first-child{border-top:none;}
 

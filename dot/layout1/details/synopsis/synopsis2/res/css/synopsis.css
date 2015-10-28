@@ -9,3 +9,4 @@
 
 .stn-synopsis .synopsis .btn a{ display:inline-block; width:45%; height:1.8rem; line-height:1.8rem; text-align:center; background:#3e9ef9; border-radius:6px; color:#fff; }
 .stn-synopsis .synopsis .btn a:first-child{ margin-right:5%; background:#f2484c; }
+.stn-synopsis .s-img:after{ border-radius: 0px !important; }

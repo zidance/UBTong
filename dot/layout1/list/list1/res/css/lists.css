@@ -5,6 +5,9 @@
 .stn-lists .lists-region a:last-child{ border-right:none; }
 .stn-lists .lists-region a span{ display:inline-block; background:url(../img/down.png) no-repeat right center; background-size:.5rem .29rem; padding-right:1.05rem; line-height:2.5rem; color:#343434; }
 
+.stn-lists .lists-region .last:after{ width: 0px !important; background: #fff !important; }
+
+
 /*列表*/
 
 .stn-lists li{ border-bottom:1px solid #dddddd; }
@@ -32,6 +35,7 @@
 .stn-lists li a .content .line3 .s-money{ display:block; color:#f2484c; text-align:right; }
 .stn-lists li a .content .line3 .s-num{ display:block; color:#b2b4af; text-decoration:line-through; text-align:right; margin-top:.2rem; }
 
+.stn-lists li a .s-img:after{ border-radius: 0px !important;}
 
 
 @media screen and (min-width:320px){

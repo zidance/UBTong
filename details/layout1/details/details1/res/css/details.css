@@ -18,6 +18,11 @@
 
 .product-details .a-collect{ display:block; background:url(../img/collect.png) no-repeat; background-size:3.23rem 3.77rem; width:3.23rem; height:3.77rem; position:absolute; top:0; right:5%; text-indent:-9999px; }
 
+
+.product-details .p-prompt:before{ background: #e6e6e6 !important;}
+.product-details .number-input a:after{ border-color: #dbdbdb !important;}
+.product-details .number-input input:after,.product-details .number-input input:before{ background: #dbdbdb !important;}
+
 @media screen and (max-width:320px){
 	.product-details .details-num .number-name{ margin-top:.1rem; }
 }

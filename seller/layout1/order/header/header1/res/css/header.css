@@ -8,3 +8,28 @@ nav li a{ display:block; height:2.47rem; color:#161616; }
 nav li a.act{ background:#f15a0c; color:#fff; }
 nav li:first-child a{ border-radius:.94rem 0 0 .94rem; }
 nav li:last-child a{ border-radius:0 .94rem .94rem  0; }
+
+
+nav {
+    position: relative;
+    border:none !important;
+}
+nav:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid;
+    border-color:#d4d4d4;
+    border-radius:1.7rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+nav li:after{ background: #d4d4d4 !important;}

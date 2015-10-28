@@ -7,6 +7,6 @@
 .stn-information .a-console{display:block;text-align: center;}
 .stn-information .a-console img{width:.9rem;}
 
-.stn-information .btn{ text-align:center; margin:1rem 0; }
+.stn-information .btn{ text-align:center; margin:1rem 0 0; padding-bottom: 1.2rem; }
 .stn-information .btn a{ display:inline-block; width:45%; height:2.34rem; line-height:2.34rem; text-align:center; background:#3e9ef9; border-radius:6px; color:#fff; }
 .stn-information .btn a:first-child{ margin-right:5%; background:#f2484c; }

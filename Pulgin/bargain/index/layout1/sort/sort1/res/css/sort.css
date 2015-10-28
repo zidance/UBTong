@@ -5,6 +5,55 @@
 .stn-sort li a{ display:block; color:#464646; line-height:2.47rem; }
 .stn-sort li a.act{ border-bottom:2px solid #f54e1f; color:#f54e1f; }
 
+.stn-sort li a.act{
+	position: relative;
+	border:none !important;
+}
+
+.stn-sort li a.act:after{
+    position:absolute;
+    content: "";
+    height:2px;
+    background:#f54e1f;
+    left:0;
+    right:0;
+    bottom: 0;
+}
+
+
+@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx), (-ms-high-contrast:active), (-ms-high-contrast:none) {
+    .bBor:after{
+        -webkit-transform:scaleY(.5);
+        -ms-transform:scaleY(.5);
+        -o-transform:scaleY(.5);
+        transform:scaleY(.5);
+        -webkit-transform-origin:100% 100%;
+        -moz-transform-origin:100% 100%;
+        -ms-transform-origin:100% 100%;
+        -o-transform-origin:100% 100%;
+        transform-origin:100% 100%;
+    }
+}
+
+/* 解决1.5屏幕下某些边框不显式问题，小数位多写几位 */
+@media (-webkit-device-pixel-ratio: 1.5){
+    .bBor:after{
+        -webkit-transform:scaleY(.66666666);
+        -ms-transform:scaleY(.66666666);
+        -o-transform:scaleY(.66666666);
+        transform:scaleY(.66666666);
+    }
+}
+
+@media (-webkit-device-pixel-ratio: 3){
+    .bBor:after{
+        -webkit-transform:scaleY(.3333);
+        -ms-transform:scaleY(.3333);
+        -o-transform:scaleY(.3333);
+        transform:scaleY(.3333);
+    }
+}
+
 @media screen and (max-width:320px){
 	.stn-sort li a{ line-height:2.42rem; }
 }
