@@ -23,6 +23,8 @@
 .stn-classification .type-goods tr td:last-child{ border-width:1px 0 0 0 !important;}
 .stn-classification tr:last-child td:last-child{ border-width: 1px 0px 0px 0px !important;}
 
+.stn-classification .type-goods tr td.last{ border-width: 1px 0 0 0 !important;}
+
 .goods-img{ width:100%; margin-top:0.72rem;}
 .goods-img a{ display:block; overflow:hidden;width:100%; height:auto; cursor:pointer;}
 .goods-img a img{ width:100%; height:100%;}
