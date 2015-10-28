@@ -6,10 +6,10 @@
 
 
 
-.border {
+.stn-switch li a{
     border:none !important;
 }
-.border:before{
+.stn-switch li a:before{
     content: '';
     position: absolute;
     top: 0;

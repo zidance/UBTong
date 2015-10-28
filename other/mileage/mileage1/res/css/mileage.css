@@ -2,8 +2,10 @@
 .stn-mileage{ width:93.59%; margin:.9rem auto 0; border:1px solid #d5d5d5; background:#fff; }
 .stn-mileage .mileage{ width:71%; float:left; }
 .stn-mileage .mileage p{ float:left; width:28%; line-height:2.76rem; text-align:right; }
-.stn-mileage .mileage input{ width:67%; line-height:2.76rem; float:left; border:none; margin-left:5%; color:#a6a6a6; }
+.stn-mileage .mileage input{ width:67%; line-height:2.76rem; float:left; border:none !important; margin-left:5%; color:#a6a6a6; }
 .stn-mileage button{ width:29%; height:2.76rem; float:left; background:#ff4948; color:#fff; border:none; }
+
+.stn-mileage:after{ border-radius: 0px !important;}
 
 @media screen and (min-width:320px) and (max-width:360px){
 	.stn-mileage button{ width:29.2%;}
