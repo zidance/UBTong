@@ -32,11 +32,12 @@ if (childFolder) {
     childName = childDir[i].match(/.*[\/\\](.*)/)
     childName = RegExp.$1
 
-    //生成json
     var tempHtmlArray = require(workDir + '/' + childName + '/HTMLArray.js') //返回该文件夹下html文件数组
     var scanResult = JSON.stringify(tempHtmlArray) //数组json化
-    jsonPath = workDir + '/other/demo/各目录html集合/' + childName + '.json'
-    fs.writeFileSync(jsonPath, scanResult)
+
+    //生成json 目前取消
+//    jsonPath = workDir + '/other/demo/各目录html集合/' + childName + '.json'
+//    fs.writeFileSync(jsonPath, scanResult)
 
     //  //删除各子文件夹下的HTMLArray.js
     fs.unlink(childDir[i] + '/HTMLArray.js')

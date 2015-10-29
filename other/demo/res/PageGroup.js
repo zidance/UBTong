@@ -167,7 +167,7 @@ $$(function () {
           else{//iPageNum>=pageGroup.length,即页面循环结束
             exportError()
           }
-        
+
         } //main
 
       main()
@@ -194,5 +194,5 @@ $$(function () {
       }
 
     }, 300)
-    
+
   }) //$(function(){})的结束
