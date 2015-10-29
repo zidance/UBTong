@@ -67,7 +67,8 @@ $$(function () {
               oP.url = oP.url.replace(/\\/g, '\/')
 
               //添加临时包裹节点页面中
-              var wrapTemp = "pgWrapTemp" + iPageNum
+              var wrapTemp = oP.url.replace(/[\/\.]+/mg,'-')
+//              var wrapTemp = "pgWrapTemp" + iPageNum
               var childTemp = "pgChildTemp" + iPageNum
               $$("body").append('<div class="' + wrapTemp + '">')
               wrapTemp = '.' + wrapTemp
