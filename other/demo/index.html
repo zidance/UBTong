@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+  <script src="../../common/js/zepto-1.16.min.js"></script>
+  <script src="../../parts/PageGroup/jquery-2.1.4.min.js"></script>
+
+  <script>
+    //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
+    //接受绝对路径和相对路径 接受斜杠和双反斜杠
+    //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
+    pageGroup = [
+"../../index/layout1/advertising/advertising1/广告专区.html",
+"../../index/layout1/advertising/advertising2/广告专区.html",
+"../../index/layout1/classification/classification1/分类.html",
+"../../index/layout1/classification/classification2/分类.html",
+"../../index/layout1/followers/加关注.html",
+"../../index/layout1/header/header1/头部.html",
+"../../index/layout1/header/header2/头部.html",
+"../../index/layout1/header/header3/头部.html",
+"../../index/layout1/header/header4/头部.html",
+"../../index/layout1/hot/hot1/热卖专区.html",
+"../../index/layout1/lists/list6/产品列表.html",
+"../../index/layout1/lists/lists1/产品列表.html",
+"../../index/layout1/lists/lists2/产品列表.html",
+"../../index/layout1/lists/lists3/产品列表.html",
+"../../index/layout1/lists/lists4/产品列表.html",
+"../../index/layout1/lists/lists5/产品列表.html",
+"../../index/layout1/nav/nav1/导航.html",
+"../../index/layout1/nav/nav2/导航.html",
+"../../index/layout1/nav/nav3/导航.html",
+"../../index/layout1/nav/nav4/导航.html",
+"../../index/layout1/notice/notice1/公告.html",
+"../../index/layout1/notice/notice2/公告.html",
+"../../index/layout1/pic/pic1/轮播图片.html",
+"../../index/layout1/pic/pic2/轮播图片.html",
+"../../index/layout1/组合.html",
+"../../index/layout1/首页1.html",
+"../../index/layout1/首页2.html",
+"../../index/layout1/首页3.html",
+"../../index/layout1/首页4.html",
+"../../index/layout1/首页5.html",
+"../../index/layout1/首页6.html",
+"../../index/layout1/首页7.html"
+]
+
+    ;pageGroup.config = {
+      title: '美丽上门',
+      eachTitle:true,//每个页面显示标题
+//      deleteTemp:false,//删除临时节点
+    };
+  </script>
+  <!--推荐将该脚本放于用户自定义之后-->
+  <script src="../../parts/PageGroup/PageGroup.js"></script>
+  <style rel="stylesheet" type="text/css">
+    a:focus{-webkit-user-modify:read-only;}
+    h1.pgTitle{font-size:1rem;line-height: 1.5;text-align: center;}
+    .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
+    .pgErrorInfo>div{display: none;width:70%;margin:0 auto;}
+    .pgErrorInfo div p{background-color: #fff;padding:1% 3% 1% 5%;width:100%;}
+    .pgErrorInfo div p:first-child{margin-top:30%;}
+    .pgErrorInfo button{display:block;width:20%;margin:0 auto;font-size: 1.3rem;padding:.2rem;}
+    .pgErrorBg{display: none;position: fixed;top:0;left:0;width: 100%;height:100%;background-color: #000;opacity: 0.3;z-index: 99990;}
+  </style>
+
+</head>
+
+<body>
+
+  <div class="pgErrorInfo">
+    <div class="pgErrorInfoPath">
+      <p>第<span></span>个路径有误,请检查.</p>
+      <p>如果是在本机测试(没有架设服务器),请参照 <a id="test" target='_blank' href='http://blog.sina.com.cn/s/blog_a76aa1590101eams.html'>这里</a></p>
+    </div>
+    <button class="pgErrorInfoClose">关闭</button>
+  </div>
+  <div class="pgErrorBg"></div>
+
+</body>
+
+</html>

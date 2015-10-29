@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+  <script src="../../common/js/zepto-1.16.min.js"></script>
+  <script src="../../parts/PageGroup/jquery-2.1.4.min.js"></script>
+
+  <script>
+    //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
+    //接受绝对路径和相对路径 接受斜杠和双反斜杠
+    //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
+    pageGroup = [
+"../../member/layout1/address/address1/收货信息不在配送范围提示页.html",
+"../../member/layout1/address/address1/收货信息无地址提示页.html",
+"../../member/layout1/address/address1/收货信息添加.html",
+"../../member/layout1/address/address1/收货地址.html",
+"../../member/layout1/car/carlist/carlist1/车型管理.html",
+"../../member/layout1/car/editcar/editcar1/修改车型.html",
+"../../member/layout1/car/seletcar/seletcar1/选择型号.html",
+"../../member/layout1/car/seletcar/seletcar1/选择排量.html",
+"../../member/layout1/car/seletcar/seletcar1/选择车型.html",
+"../../member/layout1/car/seletcar/seletcar1/选择车龄.html",
+"../../member/layout1/collection/lists/lists1/收藏列表.html",
+"../../member/layout1/collection/switch/switch1/列表切换.html",
+"../../member/layout1/collection/商品收藏.html",
+"../../member/layout1/commission/info/分佣信息.html",
+"../../member/layout1/commission/order/订单列表.html",
+"../../member/layout1/commission/rule/分佣制度.html",
+"../../member/layout1/commission/分佣管家.html",
+"../../member/layout1/coupons/coupons1/info/info.html",
+"../../member/layout1/coupons/coupons1/switch/切换.html",
+"../../member/layout1/coupons/coupons1/优惠券.html",
+"../../member/layout1/credit/credit1/已申请授信中心-消费明细.html",
+"../../member/layout1/credit/credit1/已申请授信中心.html",
+"../../member/layout1/credit/credit1/已还款.html",
+"../../member/layout1/credit/credit1/授信中心.html",
+"../../member/layout1/credit/credit1/提升额度-申请状态-审核中.html",
+"../../member/layout1/credit/credit1/提升额度-申请状态-已作废.html",
+"../../member/layout1/credit/credit1/提升额度-申请状态-提升失败.html",
+"../../member/layout1/credit/credit1/提升额度.html",
+"../../member/layout1/credit/credit1/提升额度成功.html",
+"../../member/layout1/credit/credit1/申请状态-已作废.html",
+"../../member/layout1/credit/credit1/申请状态-申请中.html",
+"../../member/layout1/credit/credit1/申请状态-申请失败.html",
+"../../member/layout1/credit/credit1/申请状态-申请成功.html",
+"../../member/layout1/envelope/envelope1/我的红包.html",
+"../../member/layout1/evaluation/details/evaluation1/商品评价.html",
+"../../member/layout1/evaluation/details/evaluation2/assessment/assessment1/星级评价.html",
+"../../member/layout1/evaluation/details/evaluation2/message/message1/评价留言.html",
+"../../member/layout1/evaluation/details/evaluation2/trade/trade1/评价详情.html",
+"../../member/layout1/evaluation/details/evaluation2/服务评价.html",
+"../../member/layout1/evaluation/list/evaluate/evaluate1/我的评价.html",
+"../../member/layout1/evaluation/list/我的评价.html",
+"../../member/layout1/financial/amount/amount1/总计收益.html",
+"../../member/layout1/financial/today/today1/今日收益.html",
+"../../member/layout1/financial/yesterday/yesterday1/昨日收益.html",
+"../../member/layout1/financial/财务管理.html",
+"../../member/layout1/index/index1/会员中心.html",
+"../../member/layout1/index/index2/会员中心.html",
+"../../member/layout1/index/index3/会员中心.html",
+"../../member/layout1/information/information1/用户资料.html",
+"../../member/layout1/information/information2/会员信息修改.html",
+"../../member/layout1/integral/integral1/我的积分.html",
+"../../member/layout1/integral/integral1/积分规则.html",
+"../../member/layout1/logistics/logistics1/查看物流.html",
+"../../member/layout1/order/header/header1/头部.html",
+"../../member/layout1/order/lists/lists1/列表.html",
+"../../member/layout1/order/lists/lists1/列表1.html",
+"../../member/layout1/order/lists/lists1/列表2.html",
+"../../member/layout1/order/search/search1/搜索.html",
+"../../member/layout1/order/switch/switch1/切换.html",
+"../../member/layout1/order/订单管理1.html",
+"../../member/layout1/order/订单管理2.html",
+"../../member/layout1/order/订单管理3.html",
+"../../member/layout1/orderverify/orderverify1/订单验证.html",
+"../../member/layout1/popularize/lists/lists1/推广列表.html",
+"../../member/layout1/popularize/rule/rule1/规则详情.html",
+"../../member/layout1/popularize/switch/switch1/切换.html",
+"../../member/layout1/popularize/美丽推广.html",
+"../../member/layout1/popularize/规则详情.html",
+"../../member/layout1/promote/lists/lists1/推广明细列表.html",
+"../../member/layout1/promote/switch/switch1/切换.html",
+"../../member/layout1/promote/total/total1/收入总计.html",
+"../../member/layout1/promote/推广明细.html",
+"../../member/layout1/upgradeVIP/upgradeVIP1/升级VIP.html",
+"../../member/layout1/upgradeVIP/upgradeVIP1/积分升级.html",
+"../../member/layout1/upgradeVIP/upgradeVIP1/线下升级.html",
+"../../member/layout1/vieworder/vieworder1/查看订单1.html",
+"../../member/layout1/vieworder/vieworder1/查看订单2.html",
+"../../member/layout1/vieworder/vieworder1/查看订单3.html",
+"../../member/layout1/withdrawal/btn/btn1/按钮.html",
+"../../member/layout1/withdrawal/lists/lists1/支付接口.html",
+"../../member/layout1/withdrawal/提现管理.html"
+]
+
+    ;pageGroup.config = {
+      title: '美丽上门',
+      eachTitle:true,//每个页面显示标题
+//      deleteTemp:false,//删除临时节点
+    };
+  </script>
+  <!--推荐将该脚本放于用户自定义之后-->
+  <script src="../../parts/PageGroup/PageGroup.js"></script>
+  <style rel="stylesheet" type="text/css">
+    a:focus{-webkit-user-modify:read-only;}
+    h1.pgTitle{font-size:1rem;line-height: 1.5;text-align: center;}
+    .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
+    .pgErrorInfo>div{display: none;width:70%;margin:0 auto;}
+    .pgErrorInfo div p{background-color: #fff;padding:1% 3% 1% 5%;width:100%;}
+    .pgErrorInfo div p:first-child{margin-top:30%;}
+    .pgErrorInfo button{display:block;width:20%;margin:0 auto;font-size: 1.3rem;padding:.2rem;}
+    .pgErrorBg{display: none;position: fixed;top:0;left:0;width: 100%;height:100%;background-color: #000;opacity: 0.3;z-index: 99990;}
+  </style>
+
+</head>
+
+<body>
+
+  <div class="pgErrorInfo">
+    <div class="pgErrorInfoPath">
+      <p>第<span></span>个路径有误,请检查.</p>
+      <p>如果是在本机测试(没有架设服务器),请参照 <a id="test" target='_blank' href='http://blog.sina.com.cn/s/blog_a76aa1590101eams.html'>这里</a></p>
+    </div>
+    <button class="pgErrorInfoClose">关闭</button>
+  </div>
+  <div class="pgErrorBg"></div>
+
+</body>
+
+</html>
