@@ -14,47 +14,11 @@
     //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
     //接受绝对路径和相对路径 接受斜杠和双反斜杠
     //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
-    pageGroup = [
-//      "../../parts/animation/lazyload/图片延迟加载.html",
-      "../../parts/article/article1/文章页.html",
-"../../parts/article/article2/文章页.html",
-"../../parts/blank/blank1/空白底部.html",
-"../../parts/blank/blank1/空白顶部.html",
-"../../parts/blank/blank2/空白底部.html",
-"../../parts/blank/blank3/空白底部.html",
-"../../parts/boxcart/boxcart1/快捷购物车栏.html",
-"../../parts/btn/btn1/按钮.html",
-"../../parts/btn/btn2/按钮.html",
-"../../parts/btn/pay/结算按钮.html",
-"../../parts/btn/pay/结算按钮2.html",
-"../../parts/copyright/copyright1/版权.html",
-"../../parts/footer/footer1/底部.html",
-"../../parts/footer/footer2/底部.html",
-"../../parts/footer/footer3/底部.html",
-"../../parts/footer/footer4/底部.html",
-"../../parts/footer/footer5/底部.html",
-"../../parts/footer/footer6/底部.html",
-"../../parts/location/location1/城市定位.html",
-"../../parts/music/music1/音乐控件.html",
-"../../parts/nodata/nodata1/暂无数据.html",
-"res/组合.html",
-"../../parts/popup/popup1/列表购物车弹出框.html",
-"../../parts/prompt/prompt1/确认提示.html",
-"../../parts/qrcode/qrcode1/code/二维码.html",
-"../../parts/qrcode/qrcode1/shop/店铺信息.html",
-"../../parts/qrcode/qrcode1/推广二维码.html",
-"../../parts/reminder/reminder1/提示语言.html",
-"../../parts/shared/shared1/分享.html",
-"../../parts/time/time1/时间控件.html",
-"../../parts/time/time2/时间控件.html",
-"../../parts/time/time2/时间控件2.html",
-"../../parts/top/top1/头部.html",
-"../../parts/top/top2/头部.html",
-"../../parts/vehicle/vehicle1/车型管理.html"
-]
+    pageGroup =
+["../../parts/animation/lazyload/图片延迟加载.html","../../parts/article/article1/文章页.html","../../parts/article/article2/文章页.html","../../parts/blank/blank1/空白底部.html","../../parts/blank/blank1/空白顶部.html","../../parts/blank/blank2/空白底部.html","../../parts/blank/blank3/空白底部.html","../../parts/boxcart/boxcart1/快捷购物车栏.html","../../parts/btn/btn1/按钮.html","../../parts/btn/btn2/按钮.html","../../parts/btn/pay/结算按钮.html","../../parts/btn/pay/结算按钮2.html","../../parts/copyright/copyright1/版权.html","../../parts/footer/footer1/底部.html","../../parts/footer/footer2/底部.html","../../parts/footer/footer3/底部.html","../../parts/footer/footer4/底部.html","../../parts/footer/footer5/底部.html","../../parts/footer/footer6/底部.html","../../parts/location/location1/城市定位.html","../../parts/music/music1/音乐控件.html","../../parts/nodata/nodata1/暂无数据.html","../../parts/popup/popup1/列表购物车弹出框.html","../../parts/prompt/prompt1/确认提示.html","../../parts/qrcode/qrcode1/code/二维码.html","../../parts/qrcode/qrcode1/shop/店铺信息.html","../../parts/qrcode/qrcode1/推广二维码.html","../../parts/reminder/reminder1/提示语言.html","../../parts/shared/shared1/分享.html","../../parts/time/time1/时间控件.html","../../parts/time/time2/时间控件.html","../../parts/time/time2/时间控件2.html","../../parts/top/top1/头部.html","../../parts/top/top2/头部.html","../../parts/vehicle/vehicle1/车型管理.html"]
 
     ;pageGroup.config = {
-      title: '美丽上门',
+//      title: '美丽上门',
       eachTitle:true,//每个页面显示标题
 //      deleteTemp:false,//删除临时节点
     };
@@ -62,8 +26,9 @@
   <!--推荐将该脚本放于用户自定义之后-->
   <script src="res/PageGroup.js"></script>
   <style rel="stylesheet" type="text/css">
-    a:focus{-webkit-user-modify:read-only;}
-    h1.pgTitle{font-size:1rem;line-height: 1.5;text-align: center;}
+    a:focus{-webkit-user-modify:read-only;}/*pc界面a标签可以点击*/
+    h1.pgTitle{font-size:.5rem;line-height: 1.5;text-align: center;}
+    h1.pgTitle>*{display:inline-block;font-size:.4rem;line-height: 1.5;margin:0 1em;}
     .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
     .pgErrorInfo>div{display: none;width:70%;margin:0 auto;}
     .pgErrorInfo div p{background-color: #fff;padding:1% 3% 1% 5%;width:100%;}

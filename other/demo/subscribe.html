@@ -14,46 +14,11 @@
     //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
     //接受绝对路径和相对路径 接受斜杠和双反斜杠
     //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
-    pageGroup = [
-"../../subscribe/layout1/settle/btn/btn1/按钮.html",
-"../../subscribe/layout1/settle/btn/btn2/按钮.html",
-"../../subscribe/layout1/settle/cartintegral/cartintegral1/结算积分抵用.html",
-"../../subscribe/layout1/settle/contact/contact1/联系人.html",
-"../../subscribe/layout1/settle/distribution/distribution1/交易方式.html",
-"../../subscribe/layout1/settle/envelope/envelope1/红包.html",
-"../../subscribe/layout1/settle/message/message1/留言.html",
-"../../subscribe/layout1/settle/orderinfor/orderinfor1/订单信息.html",
-"../../subscribe/layout1/settle/prices/prices1/总价.html",
-"../../subscribe/layout1/settle/select/select1/已选.html",
-"../../subscribe/layout1/settle/time/time1/预约时间.html",
-"../../subscribe/layout1/settle/确认预约-到店支付.html",
-"../../subscribe/layout1/settle/确认预约-在线支付.html",
-"../../subscribe/layout1/settle/选择支付方式-上门服务.html",
-"../../subscribe/layout1/settle/选择支付方式-到店服务.html",
-"../../subscribe/layout1/subdetails/btn/btn1/按钮.html",
-"../../subscribe/layout1/subdetails/explain/explain1/服务说明.html",
-"../../subscribe/layout1/subdetails/instructions/instructions1/预约须知.html",
-"../../subscribe/layout1/subdetails/outlets/outlets1/服务网点.html",
-"../../subscribe/layout1/subdetails/selective/selective1/选择类型.html",
-"../../subscribe/layout1/subdetails/time/time1/预约时间.html",
-"../../subscribe/layout1/subdetails/trade/trade1/商品名称.html",
-"../../subscribe/layout1/subdetails/way/way1/服务方式.html",
-"../../subscribe/layout1/subdetails/write/write1/预约信息填写.html",
-"../../subscribe/layout1/subdetails/服务说明.html",
-"../../subscribe/layout1/subdetails/预约服务-上门服务.html",
-"../../subscribe/layout1/subdetails/预约服务-到店服务.html",
-"../../subscribe/layout1/sublist/lists/lists1/预约商品列表.html",
-"../../subscribe/layout1/sublist/switch/switch1/列表切换.html",
-"../../subscribe/layout1/sublist/服务类别页-预约到店.html",
-"../../subscribe/layout1/subpay/subfailure/subfailure1/预约不成功.html",
-"../../subscribe/layout1/subpay/subsucceed/subsucceed1/btnsucceed/btnsucceed1/按钮.html",
-"../../subscribe/layout1/subpay/subsucceed/subsucceed1/succeed/succeed1/预约成功.html",
-"../../subscribe/layout1/subpay/subsucceed/subsucceed1/预约成功1.html",
-"../../subscribe/layout1/subpay/subsucceed/subsucceed1/预约成功2.html"
-]
+    pageGroup =
+["../../subscribe/layout1/settle/btn/btn1/按钮.html","../../subscribe/layout1/settle/btn/btn2/按钮.html","../../subscribe/layout1/settle/cartintegral/cartintegral1/结算积分抵用.html","../../subscribe/layout1/settle/contact/contact1/联系人.html","../../subscribe/layout1/settle/distribution/distribution1/交易方式.html","../../subscribe/layout1/settle/envelope/envelope1/红包.html","../../subscribe/layout1/settle/message/message1/留言.html","../../subscribe/layout1/settle/orderinfor/orderinfor1/订单信息.html","../../subscribe/layout1/settle/prices/prices1/总价.html","../../subscribe/layout1/settle/select/select1/已选.html","../../subscribe/layout1/settle/time/time1/预约时间.html","../../subscribe/layout1/settle/确认预约-到店支付.html","../../subscribe/layout1/settle/确认预约-在线支付.html","../../subscribe/layout1/settle/选择支付方式-上门服务.html","../../subscribe/layout1/settle/选择支付方式-到店服务.html","../../subscribe/layout1/subdetails/btn/btn1/按钮.html","../../subscribe/layout1/subdetails/explain/explain1/服务说明.html","../../subscribe/layout1/subdetails/instructions/instructions1/预约须知.html","../../subscribe/layout1/subdetails/outlets/outlets1/服务网点.html","../../subscribe/layout1/subdetails/selective/selective1/选择类型.html","../../subscribe/layout1/subdetails/time/time1/预约时间.html","../../subscribe/layout1/subdetails/trade/trade1/商品名称.html","../../subscribe/layout1/subdetails/way/way1/服务方式.html","../../subscribe/layout1/subdetails/write/write1/预约信息填写.html","../../subscribe/layout1/subdetails/服务说明.html","../../subscribe/layout1/subdetails/预约服务-上门服务.html","../../subscribe/layout1/subdetails/预约服务-到店服务.html","../../subscribe/layout1/sublist/lists/lists1/预约商品列表.html","../../subscribe/layout1/sublist/switch/switch1/列表切换.html","../../subscribe/layout1/sublist/服务类别页-预约到店.html","../../subscribe/layout1/subpay/subfailure/subfailure1/预约不成功.html","../../subscribe/layout1/subpay/subsucceed/subsucceed1/btnsucceed/btnsucceed1/按钮.html","../../subscribe/layout1/subpay/subsucceed/subsucceed1/succeed/succeed1/预约成功.html","../../subscribe/layout1/subpay/subsucceed/subsucceed1/预约成功1.html","../../subscribe/layout1/subpay/subsucceed/subsucceed1/预约成功2.html"]
 
     ;pageGroup.config = {
-      title: '美丽上门',
+//      title: '美丽上门',
       eachTitle:true,//每个页面显示标题
 //      deleteTemp:false,//删除临时节点
     };
@@ -61,8 +26,9 @@
   <!--推荐将该脚本放于用户自定义之后-->
   <script src="res/PageGroup.js"></script>
   <style rel="stylesheet" type="text/css">
-    a:focus{-webkit-user-modify:read-only;}
-    h1.pgTitle{font-size:1rem;line-height: 1.5;text-align: center;}
+    a:focus{-webkit-user-modify:read-only;}/*pc界面a标签可以点击*/
+    h1.pgTitle{font-size:.5rem;line-height: 1.5;text-align: center;}
+    h1.pgTitle>*{display:inline-block;font-size:.4rem;line-height: 1.5;margin:0 1em;}
     .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
     .pgErrorInfo>div{display: none;width:70%;margin:0 auto;}
     .pgErrorInfo div p{background-color: #fff;padding:1% 3% 1% 5%;width:100%;}
