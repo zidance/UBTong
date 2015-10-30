@@ -4,6 +4,7 @@ var fs = require('fs')
 function scan(path) {
   var fileList = [],
     folderList = [],
+      linkData = '',
     count = 0,
     layer = 0,
     walk = function (path, fileList, folderList) {
@@ -11,6 +12,7 @@ function scan(path) {
       files.forEach(function (item) {
         var tmpPath = path + '/' + item,
           stats = fs.statSync(tmpPath);
+
 
         if (stats.isDirectory()) { //遍历到目录
 
@@ -22,6 +24,7 @@ function scan(path) {
           if (/\.html/.test(item)) { //只收集html文件 node自身并不提供详细类型
             //                    fileList.push('"'+tmpPath+'"');
             fileList.push(tmpPath);
+            linkData += '\n<p>'+ (++count) + '、　' + '<a href="' + tmpPath + '">' + tmpPath + '</a></p>'
           }
         }
       });
@@ -30,11 +33,13 @@ function scan(path) {
   walk(path, fileList, folderList);
 
   console.log('位于'+__dirname+'的HTMLArray 组件运行正常')
-  return fileList
-    //    {
-    //      file:fileList,
-    //      fold:folderList
-    //    }
+//console.log(fileList)
+//console.log(linkData)
+  return {
+          file:fileList,
+          linkData:linkData
+//          fold:folderList
+        }
 
 }
 

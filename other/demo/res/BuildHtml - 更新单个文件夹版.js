@@ -2,9 +2,9 @@
 /*直接生成目录的方法,需要拷贝BuildHtml.js,copyFile.js,组合1.html,组合2.html到目录下,workDir配置为空'',命令行进入该目录,再输入 node BuildHtml.js */
 
 //初始化,只配以下三个参数
-var workDir = 'F:/lzz/work/UBTong/'; //需要遍历的目录,不填为本文件所在目录,并且只生成一个总文件  格式F:/lzz/work/UBTong/ F:/git/UBTong F:/lzz/work/企业站/2015/
+var workDir = ''; //需要遍历的目录,不填为本文件所在目录,并且只生成一个总文件  格式 F:/git/UBTong 
 var demoDir = '';//存放组合1.html和组合2.html的位置 为空时默认与本js文件同目录
-var childFolder = true; //是否按第一层子文件夹的数量批量生成 false时只生成一个总文件
+var childFolder = false; //是否按第一层子文件夹的数量批量生成 false时只生成一个总文件
 
 //参数重解析
 var UBTong = /UBTong/.test(workDir);//针对UBTong项目优化
@@ -34,16 +34,16 @@ if (childFolder) {
 
     var tempHtml = require(workDir + '/' + childName + '/HTMLArray.js') //返回该文件夹下html文件数组
     var tempHtmlArray = tempHtml.file
-
+    
     //为UBTong项目专门做的优化
-
+    
     if(UBTong){
       for(var k in tempHtmlArray){
       tempHtmlArray[k] = tempHtmlArray[k].replace(/\\/g,'\/')
       tempHtmlArray[k] = tempHtmlArray[k].replace(workDir,'../../')
       }
     }
-
+      
 //    console.log(tempHtml)
     var scanResult = JSON.stringify(tempHtmlArray) //数组json化
 
@@ -63,8 +63,8 @@ if (childFolder) {
     fs.writeFileSync(htmlPath, str1 + scanResult + str2)
   }
 
-
-
+    
+    
   console.log(workDir + '目录遍历成功,按子文件夹的数目生成了对应的html组合页面,位于' + workDir + '/other/demo/')
 }
 else {
@@ -79,7 +79,7 @@ else {
   //生成对比链接
     var linkStr = fs.readFileSync(__dirname + '/对比链接模板.html')
     fs.writeFileSync(__dirname + '/'+dirName+'-link.html',linkStr+tempHtml.linkData)
-
+    
   console.log(__dirname + '目录遍历成功,集合了该目录下的html页面,位于' + __dirname+'/组合页面.html')
 }
 
