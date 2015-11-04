@@ -10,6 +10,7 @@
     <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
     <link href="res/css/lists.css" rel="stylesheet" type="text/css" />
     <script src="../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../common/js/default.js"></script>
 
 </head>
 
@@ -93,13 +94,13 @@
                 $(this).find('.s-img').width(_this.width());
                 $(this).find('.s-img').height(_this.width());
                 if (_img.width() > $(this).width() && _img.width() > _img.height()) {
-                    _img.css('width', _this.width());
+                    _img.css('width', _this.width()-2);
                 } else if (_img.height() > $(this).height()) {
-                    _img.css('height', _this.width());
+                    _img.css('height', _this.width()-2);
                 }
                 _img.css({
-                    'max-width': _this.width(),
-                    'max-height': _this.width()
+                    'max-width': _this.width()-2,
+                    'max-height': _this.width()-2
                 })
             })
         }
