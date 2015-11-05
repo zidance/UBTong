@@ -313,7 +313,7 @@ html{font-size:172%;}
     position:absolute;
     content: "";
     height:1px;
-    background:green;
+    background:#d9d9d9;
     left:0;
     right:0;
 }
@@ -330,7 +330,7 @@ html{font-size:172%;}
     position:absolute;
     content: "";
     width:1px;
-    background:blue;
+    background:#d9d9d9;
     top:0;
     bottom:0;
 }
