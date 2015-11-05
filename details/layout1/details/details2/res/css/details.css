@@ -14,7 +14,7 @@
 .product-details .price .p-money{color:#ff3430;}
 .product-details .price .p-money span{font-size: .65em;}
 .product-details .price .p-money-old{color: #bebebe;text-decoration: line-through;margin-left:3%;}
-.product-details .price .p-plus{}
+.product-details .price .p-plus{vertical-align: .2rem;}
 .product-details .price .p-money-integral{color: #6633ff;}
 .product-details .price .p-money-integral span{padding-left: .3rem;font-size: 0.6em;}
 

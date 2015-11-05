@@ -24,7 +24,16 @@
 .stn-smalllists li{ width:94%; border-bottom:1px solid #d9d9d9; padding:.72rem 3%; margin-bottom:0; }
 .stn-smalllists li table{ float:left; margin-right:.65rem; }
 .stn-smalllists li .s-img{ width:7.19rem; height:7.19rem; }
-.stn-smalllists li .p-name{ width:8.38rem; height:3.48rem; white-space:inherit; text-overflow:inherit; }
+.stn-smalllists li .p-name{height:3.48rem; white-space:inherit; text-overflow:inherit; }
 .stn-smalllists li .p-money span{ display:block; margin-top:.9rem; }
 .stn-smalllists li .a-cart{ right:.65rem; bottom:.72rem; }
 .stn-smalllists button{ width:94%; margin:.72rem 0 .9rem 3%; }
+
+
+/*积分*/
+.stn-lists li .integral{font-size:0;color:#e52c02; margin-top:.2rem;}
+.stn-lists li .integral .p-money{display: inline-block;}
+.stn-lists li .integral .p-plus{display:inline-block;vertical-align: .1rem;}
+.stn-lists li .integral .p-integral{display:inline-block;color: #6633ff;}
+.stn-lists li .integral .p-integral span{font-size: 0.7em;}
+.stn-lists li .integral .p-sales{ color:#b9b9b9; margin-top:.3rem; }
