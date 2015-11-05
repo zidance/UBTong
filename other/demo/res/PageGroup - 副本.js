@@ -42,24 +42,6 @@ $$(function () {
           }
         };
 
-      //地址转换,绝对路径转相对路径,接受字符串参数
-      var pathChange = function(path){
-        var toPath = {}
-        //兼容采用双反斜杠的路径
-        toPath.dir = path.replace(/\\/g, '\/')
-
-        //防止空路径,尤其是用户设置空路径会引起中断
-        if(toPath.dir===''){
-          toPath.type = null
-        }
-
-//        else if(toPath.dir===)
-
-        return toPath
-      }
-
-
-
       //页面标题
       $$("head").prepend("<title>" + (pageGroup.config.title || defaultConfig.title))
 
