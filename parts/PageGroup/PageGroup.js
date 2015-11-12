@@ -10,21 +10,23 @@ $ = Zepto; //如果jQuery采用不完整版,就需要
 $$(function () {
 
     setTimeout(function () { //等待获取页面文件的参数
+      //兼容pageGroup.config未定义的情况
+
+      if (typeof pageGroup.config !== "object") {
+        pageGroup.config = {}
+      }
       //兼容pageGroup未定义的情况
       if (typeof pageGroup !== "object") {
-        pageGroup = {}
-      }
-      //兼容pageUrl未定义的情况
-      if (typeof pageUrl !== "object") {
-        pageUrl = []
+        pageGroup = []
       }
 
 
-      //默认的初始化,不推荐在此处进行配置. 可配置属性可在组合页配置全局pageGroup={}
+      //默认的初始化,不推荐修改此处. 推荐在组合页配置全局pageGroup.config={}
       var iPageNum = 0, //第n个页面
-        defaultPageGroup = {
-          title: 'PageGroup', //组合页面的标题
+        defaultConfig = {
+          title: 'pageGroup', //组合页面的标题
           deleteTemp: false, //删除临时节点
+          eachTitle:false,//每个页面显示标题
         },
         errors = {
           hasError: false,
@@ -41,26 +43,27 @@ $$(function () {
         };
 
       //页面标题
-      $$("head").prepend("<title>" + (pageGroup.title || defaultPageGroup.title))
+      $$("head").prepend("<title>" + (pageGroup.config.title || defaultConfig.title))
 
-
-      var main = function () { //主循环函数,不采用for是避免异步造成的变量混乱
+      //主循环函数,不采用for是避免异步造成的变量混乱
+      var main = function () {
           var mainEnd = function () {
             iPageNum++
-            main()
+            main() //if中调用主函数的循环
               //exportError()不适合在这里
           }
 
-          if (iPageNum < pageUrl.length) {
+          if (iPageNum < pageGroup.length) {
             var oP = {}; //处理第n个子页面,同时也是循环中的当前子页面
-            oP.url = pageUrl[iPageNum]
+            oP.url = pageGroup[iPageNum]
               //防止路径参数设置为''引起的中断
             if (oP.url === '') {
               errors.pageError()
               mainEnd()
-            } else {
+            }
+            else {
 
-              //允许路径采用反斜杠 '..\\footer\\footer5\\底部.html'
+              //允许路径采用双反斜杠 '..\\footer\\footer5\\底部.html'
               oP.url = oP.url.replace(/\\/g, '\/')
 
               //添加临时包裹节点页面中
@@ -94,18 +97,25 @@ $$(function () {
                       .replace(/<\/?body.*?>|<script[\s\S]*?<\/script>/img, '') //去掉了body属性/去除脚本
                       .replace(/([\r\n]\s*)+/mg, '\n')
 
-
                     $$(wrapTemp)
                       .append(oP.head)
+                      .append(oP.title)
                       .append(oP.body)
                       .append('<div class="' + childTemp + '">')
 
-                    //资源的路径重写 对DOM属性操作 缺乏对相对的判断
+                    //资源的路径重写 对DOM属性操作
                     if (/.*\//.test(oP.url)) { //当子页面与组合页位于不同目录
-                      oP.path = oP.url.replace(/(.*\/).*/, '$1')
+                      oP.path = oP.url.replace(/(.*\/)(.*)\..*/, '$1')
                     } else { //当子页面与组合页位于同一目录
                       oP.path = ''
                     }
+
+                     //加入title字段,不一定需要
+                    if(pageGroup.config.eachTitle||defaultConfig.eachTitle){
+                    oP.title = RegExp.$2
+                    $$(wrapTemp).prepend('<h1 class="pgTitle">'+oP.title+'</h1>')
+                    }
+
                     $$(wrapTemp).find('*').each(function (i) {
                       if ($$(this).attr('href')) { //存在href属性
                         if ((/:\/\//m.test($$(this).attr('href'))) || ($$(this).attr('href').substring(0, 1) === '/') || ($$(this).attr('href').substring(0, 1) === '\\') ||(/^[#\s]*$/.test($$(this).attr('href')))) { //资源绝对路径 或 a链接#
@@ -128,25 +138,25 @@ $$(function () {
 
                     for (var i in oP.js) {
                       var pa = /<script.*?src.*?>/i
-                      var _this = oP.js[i]
-                      if (pa.test(_this)) { //有路径
-                        _this = _this.replace(/src=[\'\"](.*?)[\'\"]/i, "src=" + oP.path + "$1")
-                        $$(wrapTemp).append($$(_this))
+                      var tempjs = oP.js[i]
+                      if (pa.test(tempjs)) { //有路径
+                        tempjs = tempjs.replace(/src=[\'\"](.*?)[\'\"]/i, "src=" + oP.path + "$1")
+                        $$(wrapTemp).append($$(tempjs))
                       } else { //行间js脚本
                         setTimeout(function () {
-                          $$(wrapTemp).append($$(_this))
+                          $$(wrapTemp).append($$(tempjs))
                         }, 500)
                       }
                     }
 
                     //删除临时节点
-                    if (pageGroup.deleteTemp || defaultPageGroup.deleteTemp) {
+                    if (pageGroup.config.deleteTemp || defaultConfig.deleteTemp) {
                       $$('.' + childTemp).unwrap().remove()
                     } else {
                       $$('.' + childTemp).remove()
                     }
 
-                    mainEnd()
+                    mainEnd()//单页面加载结束,也是if中调用主函数的循环
                   }, //success结束
 
                 }) //ajax结束
@@ -154,7 +164,7 @@ $$(function () {
             } //if(oP.url==='')的else结束
 
           } //多个子页面间的if循环结束
-          else if (iPageNum = pageUrl.length) {
+          else{//iPageNum>=pageGroup.length,即页面循环结束
             exportError()
           }
         
