@@ -468,6 +468,8 @@ html{font-size:172%;}
     }
 }
 
+.s-input{ display:inline-block; border: 1px solid #cccccc;}
+
 
 
 @media screen and (min-width:320px) and (max-width:640px){

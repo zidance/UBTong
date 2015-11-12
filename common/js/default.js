@@ -40,6 +40,7 @@ $(function(){
 		oParents = _all.eq(i).parents();
 		var sStyleChain=''; 
 		
+		
 		/*获取父级元素*/
 		function getParents(){
 			sStyleChain=''; 

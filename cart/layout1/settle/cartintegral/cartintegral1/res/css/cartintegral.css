@@ -4,8 +4,8 @@
 .cart-integral .integral{ width:85%; height:3.71rem; background:#fff; border:1px solid #eae8e8; border-radius:4px; float:right; padding:.9rem 0 .6rem; }
 .cart-integral .integral p{ color:#939292; padding:0 .72rem; margin-bottom:.3rem; }
 .cart-integral .integral p span{ color:#e52c02; }
-.cart-integral .integral p input{border: 1px solid #cccccc; width:8.51rem; height:2.1rem; line-height:2.1rem; border-radius:4px; padding-left:.5rem; color:#939292; }
-
+.cart-integral .integral .s-input{ display:inline-block; width:7.3rem; height:2.1rem; border-radius:4px;border: 1px solid #cccccc;}
+.cart-integral .integral .s-input input{ width:6.8rem; height:2.1rem; line-height:2.1rem; color:#939292; border:none; padding-left:.5rem; }
 .cart-integral input[type=checkbox]:after{ border-color: #dbdada !important;}
 
 
