@@ -8,33 +8,27 @@
   <meta content="black" name="apple-mobile-web-app-status-bar-style" />
   <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
   <script src="../../common/js/zepto-1.16.min.js"></script>
-<!--  <script src="jquery-2.1.4.min.js"></script>-->
-  <script src="jquery.min.js"></script>
+  <script src="res/jquery-2.1.4.min.js"></script>
 
-  
   <script>
-    //模块集合的初始化,将需要的模块路径按 ['url1','url2',...] 的格式写入
+    //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
     //接受绝对路径和相对路径 接受斜杠和双反斜杠
     //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
-    pageGroup = [
-      '../../index/layout1/header/header3/头部.html',
-      '/details/layout1/details/details1/商品详细.html',
-      '../boxcart/boxcart1/快捷购物车栏.html',
-      '..\\..\\seller\\layout1\\dot\\网点列表.html',
-      '/seller/layout1/withdraw/withdraw2/余额提现.html',
-      '../blank/blank1/空白底部.html',
-      '../footer/footer6/底部.html',
-    ];
-    pageGroup.config = {
-      title: '美丽上门',
+    pageGroup =
+["../../dot/layout1/details/evaluate/evaluate1/顾客评价.html","../../dot/layout1/details/evaluate/evaluate2/网点留言.html","../../dot/layout1/details/information/information1/商家简介.html","../../dot/layout1/details/information/information1/商家简介2.html","../../dot/layout1/details/information/information1/商家简介3.html","../../dot/layout1/details/pic/pic1/轮播图片.html","../../dot/layout1/details/project/project1/服务项目.html","../../dot/layout1/details/project/project2/服务项目.html","../../dot/layout1/details/synopsis/synopsis1/服务网点简介.html","../../dot/layout1/details/synopsis/synopsis2/服务网点简介.html","../../dot/layout1/details/服务网点.html","../../dot/layout1/details/服务网点详情页.html","../../dot/layout1/details/服务项目选择.html","../../dot/layout1/list/list1/列表.html","../../dot/layout1/list/list2/列表.html","../../dot/layout1/list/switch/switch1/列表切换.html","../../dot/layout1/list/更多服务网点.html","../../dot/layout1/list/车身清洗.html","../../dot/layout1/list/预约服务-到店服务.html"]
+
+    ;pageGroup.config = {
+//      title: '美丽上门',
       eachTitle:true,//每个页面显示标题
 //      deleteTemp:false,//删除临时节点
     };
   </script>
   <!--推荐将该脚本放于用户自定义之后-->
-  <script src="PageGroup.js"></script>
+  <script src="res/PageGroup.js"></script>
   <style rel="stylesheet" type="text/css">
-    h1.pgTitle{font-size:1rem;line-height: 1.5;text-align: center;}
+    a:focus{-webkit-user-modify:read-only;}/*pc界面a标签可以点击*/
+    h1.pgTitle{font-size:.5rem;line-height: 1.5;text-align: center;}
+    h1.pgTitle>*{display:inline-block;font-size:.4rem;line-height: 1.5;margin:0 1em;}
     .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
     .pgErrorInfo>div{display: none;width:70%;margin:0 auto;}
     .pgErrorInfo div p{background-color: #fff;padding:1% 3% 1% 5%;width:100%;}
@@ -46,7 +40,7 @@
 </head>
 
 <body>
-  
+
   <div class="pgErrorInfo">
     <div class="pgErrorInfoPath">
       <p>第<span></span>个路径有误,请检查.</p>

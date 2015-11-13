@@ -26,7 +26,7 @@ $$(function () {
         defaultConfig = {
           title: 'pageGroup', //组合页面的标题
           deleteTemp: false, //删除临时节点
-          eachTitle:false,//每个页面显示标题
+          eachTitle: false, //每个页面显示标题
         },
         errors = {
           hasError: false,
@@ -60,13 +60,13 @@ $$(function () {
             if (oP.url === '') {
               errors.pageError()
               mainEnd()
-            }
-            else {
+            } else {
 
               //允许路径采用双反斜杠 '..\\footer\\footer5\\底部.html'
               oP.url = oP.url.replace(/\\/g, '\/')
 
               //添加临时包裹节点页面中
+              //              var wrapTemp = oP.url.replace(/[\/\.]+/mg,'-')
               var wrapTemp = "pgWrapTemp" + iPageNum
               var childTemp = "pgChildTemp" + iPageNum
               $$("body").append('<div class="' + wrapTemp + '">')
@@ -110,18 +110,33 @@ $$(function () {
                       oP.path = ''
                     }
 
-                     //加入title字段,不一定需要
-                    if(pageGroup.config.eachTitle||defaultConfig.eachTitle){
-                    oP.title = RegExp.$2
-                    $$(wrapTemp).prepend('<h1 class="pgTitle">'+oP.title+'</h1>')
+                    //按源文件路径加入标题字段,不一定需要
+                    if (pageGroup.config.eachTitle || defaultConfig.eachTitle) {
+                      oP.title = RegExp.$2
+                      $$(wrapTemp).before('<h1 class="pgTitle">' + oP.title + '<a target="_blank" href="' + oP.url + '">' + oP.url + '</a><input type="button" value="隐藏" /><span>删除该节点</span></h1>')
+                      var wrapTempControl = $$(wrapTemp).prev('h1')
+                      wrapTempControl.on('click', 'input', function () {
+                        if ($$(wrapTemp).css('display') == 'none') {
+                          $$(wrapTemp).show()
+                          $$(this).val('隐藏')
+                        } else {
+                          $$(wrapTemp).hide();
+                          $$(this).val('显示')
+                        }
+                      })
+                      wrapTempControl.on('click', 'span', function () {
+                        $$(wrapTemp).remove();
+                        $$(this).html("已删除")
+                        wrapTempControl.find('input').remove();
+                      })
                     }
 
                     $$(wrapTemp).find('*').each(function (i) {
                       if ($$(this).attr('href')) { //存在href属性
-                        if ((/:\/\//m.test($$(this).attr('href'))) || ($$(this).attr('href').substring(0, 1) === '/') || ($$(this).attr('href').substring(0, 1) === '\\') ||(/^[#\s]*$/.test($$(this).attr('href')))) { //资源绝对路径 或 a链接#
+                        if ((/:\/\//m.test($$(this).attr('href'))) || ($$(this).attr('href').substring(0, 1) === '/') || ($$(this).attr('href').substring(0, 1) === '\\') || (/^[#\s]*$/.test($$(this).attr('href')))) { //资源绝对路径 或 a链接#
 
                         } else { //资源相对路径
-                        $$(this).attr('href', oP.path + $$(this).attr('href'))
+                          $$(this).attr('href', oP.path + $$(this).attr('href'))
                         }
                       }
                       if ($$(this).attr('src')) { //存在 src
@@ -156,7 +171,7 @@ $$(function () {
                       $$('.' + childTemp).remove()
                     }
 
-                    mainEnd()//单页面加载结束,也是if中调用主函数的循环
+                    mainEnd() //单页面加载结束,也是if中调用主函数的循环
                   }, //success结束
 
                 }) //ajax结束
@@ -164,10 +179,10 @@ $$(function () {
             } //if(oP.url==='')的else结束
 
           } //多个子页面间的if循环结束
-          else{//iPageNum>=pageGroup.length,即页面循环结束
+          else { //iPageNum>=pageGroup.length,即页面循环结束
             exportError()
           }
-        
+
         } //main
 
       main()
@@ -194,5 +209,5 @@ $$(function () {
       }
 
     }, 300)
-    
+
   }) //$(function(){})的结束
