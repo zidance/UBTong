@@ -8,3 +8,31 @@
 .stn-lists li .p-money{ color:#ff6766; margin-top:.5rem; }
 .stn-lists li .a-btn{ display:block; width:20%; height:1.7rem; line-height:1.7rem; text-align:center; background:#f1590d; color:#fff; border-radius:4px; position:absolute; bottom:.72rem; right:3.5%; }
 .stn-lists li .a-null{ background:#c2ceda; }
+
+
+
+.stn-lists li{
+    border:none !important;
+}
+
+.stn-lists li:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid;
+    border-color:#e7e7e7;
+    border-radius:9px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+
+

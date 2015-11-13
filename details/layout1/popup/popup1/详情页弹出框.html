@@ -1,96 +1,96 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>详情页弹出框</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/popup.css" rel="stylesheet" type="text/css" />
-<link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
-<script src="../../../../common/js/hover.js"></script>
-<script>
-	$(function(){
-		var _btn = $('button');
-		var _bg = $('#Background');
-		var _box = $('#BoxPopup');
-		var _cache = $('#BoxCache');
-		var _del = _box.find('.a-close');
-		var _reduct = _box.find('.num .reduct');
-		var _add = _box.find('.num .add');
-		var _inp = _box.find('.num input');
-		
-		_btn.click(function(){
-			_box.show();
-			_bg.show();
-		})
-		_del.click(function(){
-			_box.hide();
-			_bg.hide();
-		})
-		_add.click(function(){
-			_inp.val(function(){
-				return Number($(this).val())+1;
-			})
-		})
-		_reduct.click(function(){
-			if(_inp.val()!=1){
-				_inp.val(function(){
-					return Number($(this).val())-1;
-				});
-			}
-		});	
-	})
-</script>
+    <title>详情页弹出框</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/popup.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../common/js/default.js"></script>
+    <script>
+       $(function(){
+          var _btn = $('button');
+          var _bg = $('#Background');
+          var _box = $('#BoxPopup');
+          var _cache = $('#BoxCache');
+          var _del = _box.find('.a-close');
+          var _reduct = _box.find('.num .reduct');
+          var _add = _box.find('.num .add');
+          var _inp = _box.find('.num input');
+          
+          _btn.click(function(){
+             _box.show();
+             _bg.show();
+         })
+          _del.click(function(){
+             _box.hide();
+             _bg.hide();
+         })
+          _add.click(function(){
+             _inp.val(function(){
+                return Number($(this).val())+1;
+            })
+         })
+          _reduct.click(function(){
+             if(_inp.val()!=1){
+                _inp.val(function(){
+                   return Number($(this).val())-1;
+               });
+            }
+        });	
+      })
+  </script>
 </head>
 
 <body>
 	<!--列表购物车弹出框-->
 	<div class="box-popup" id="BoxPopup">
 		<div class="cartnum-img">
-        	<span class="s-img"><img src="res/img/img1.jpg" /></span>
-            <div class="cartnum-name">
-            	<p class="p-name fz28">美国原装进口精选优质开心<p>
+           <span class="s-img"><img src="res/img/img1.jpg" /></span>
+           <div class="cartnum-name">
+               <p class="p-name fz28">美国原装进口精选优质开心<p>
                 <p class="p-money fz32">￥49.00<p>
-				
-                <a class="a-close" href="#">关闭</a>
+                    
+                    <a class="a-close" href="#">关闭</a>
+                </div>
+                <div class="clr"></div>
             </div>
-            <div class="clr"></div>
-        </div>
-        <div class="type one">
-        	<p class="fz28">系列</p>
-            <ul>
-            	<li><a class="fz28 act" href="#">奶油味</a></li>
-                <li><a class="fz28" href="#">原味</a></li>
-                <li><a class="fz28" href="#">奶油味</a></li>
-                <li><a class="fz28" href="#">原味</a></li>
-                <li><a class="fz28" href="#">奶油味</a></li>
-            </ul>
-            <div class="clr"></div>
-        </div>
-        <div class="type two">
-        	<p class="fz28">规格</p>
-            <ul>
-            	<li><a class="fz28 act" href="#">200g</a></li>
-                <li><a class="fz28" href="#">300g</a></li>
-                <li><a class="fz28" href="#">400g</a></li>
-                <li><a class="fz28 noAct" href="#">500g</a></li>
-            </ul>
-            <div class="clr"></div>
-        </div>
-        <div class="type three">
-        	<p class="fz28">颜色</p>
-            <ul>
-            	<li><a class="fz28 act" href="#">白色</a></li>
-                <li><a class="fz28" href="#">黑色</a></li>
-            </ul>
-            <div class="clr"></div>
-        </div>
-        <div class="num">
-        	<div class="number-name fz28">数　量：</div>                   
-            <div class="number-input">
+            <div class="type one">
+               <p class="fz28">系列</p>
+               <ul>
+                   <li><a class="fz28 act" href="#">奶油味</a></li>
+                   <li><a class="fz28" href="#">原味</a></li>
+                   <li><a class="fz28" href="#">奶油味</a></li>
+                   <li><a class="fz28" href="#">原味</a></li>
+                   <li><a class="fz28" href="#">奶油味</a></li>
+               </ul>
+               <div class="clr"></div>
+           </div>
+           <div class="type two">
+               <p class="fz28">规格</p>
+               <ul>
+                   <li><a class="fz28 act" href="#">200g</a></li>
+                   <li><a class="fz28" href="#">300g</a></li>
+                   <li><a class="fz28" href="#">400g</a></li>
+                   <li><a class="fz28 noAct" href="#">500g</a></li>
+               </ul>
+               <div class="clr"></div>
+           </div>
+           <div class="type three">
+               <p class="fz28">颜色</p>
+               <ul>
+                   <li><a class="fz28 act" href="#">白色</a></li>
+                   <li><a class="fz28" href="#">黑色</a></li>
+               </ul>
+               <div class="clr"></div>
+           </div>
+           <div class="num">
+               <div class="number-name fz28">数　量：</div>                   
+               <div class="number-input">
                 <a href="#" class="fz28 reduct">-</a>
                 <input class="fz28" type="text" value="1" />
                 <a href="#" class="fz28 add">+</a>
@@ -106,14 +106,14 @@
         	<a href="#">立即购买</a>
             <a class="a-last" id="BtnLast" href="#">加入购物车</a>
         </div>
-        -->
-	</div>
-	<div id="Background"></div>
-    <script type="text/javascript">setHover('one');</script>
-    <script type="text/javascript">setHover('two');</script>
-    <script type="text/javascript">setHover('three');</script>
-	
-	<button class="button-popup fz28">请选择系列  规格  颜色</button>
-	<!--列表购物车弹出框-end-->
+    -->
+</div>
+<div id="Background"></div>
+<script type="text/javascript">setHover('one');</script>
+<script type="text/javascript">setHover('two');</script>
+<script type="text/javascript">setHover('three');</script>
+
+<button class="button-popup fz28">请选择系列  规格  颜色</button>
+<!--列表购物车弹出框-end-->
 </body>
 </html>

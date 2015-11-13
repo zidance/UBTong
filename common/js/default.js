@@ -2,9 +2,9 @@
  * 模块说明：
  * @hover 按钮点击脚本
  */
-window.onload=function(){
+$(function(){
 	document.body.addEventListener('touchstart', function (){}); 	
-}
+})
 
 
 function changeLeftNav(){
@@ -32,12 +32,14 @@ $(function(){
 		/*四周都有边框*/
 		var varColor,varRadiu,oParents,varwidth,varstyle;
 		varColor=_all.eq(i).css('border-color');
-		varRadiu=_all.eq(i).css('border-radius');
+		varRadiu=parseInt(_all.eq(i).css('border-radius'))+5;
+		varRadiu=varRadiu+'px';
 		varwidth=_all.eq(i).css('border-width');
 		varstyle=_all.eq(i).css('border-style');
 		var _this=_all.eq(i);
 		oParents = _all.eq(i).parents();
 		var sStyleChain=''; 
+		
 		
 		/*获取父级元素*/
 		function getParents(){
@@ -58,7 +60,7 @@ $(function(){
 
 
 		/*判断定位*/
-		function getPosition(){
+		function getPosition(){    
 			if(_this.css('position')=='fixed'||_this.css('position')=='absolute'){
 			}else{
 				_this.css('position','relative');
@@ -73,8 +75,7 @@ $(function(){
 		function AddTop(_borderClass){
 			_this.addClass(_borderClass);
 			_this.append("<style>"+sStyleChain+"."+_borderClass+"::before{ background:"+varColor+"}</style>"); 
-			getPosition();        
-			
+			getPosition();    
 		}
 		
 		function AddBottom(_borderClass1){
@@ -111,24 +112,27 @@ $(function(){
 			AddBorder('trblBor');
 		}else{
 			if(_this.css('border-top-width')=='1px'){
+				_this.css('border-top','none');
 				getParents();
 				AddTop('tBor');
 			}
 			if(_this.css('border-bottom-width')=='1px'){
+				_this.css('border-bottom','none');
 				getParents();
 				AddBottom('bBor');
 			}
 			if(_this.css('border-left-width')=='1px'){
+				_this.css('border-left','none');
 				getParents();
 				AddLeft('lBor');
 			}
 			
 			if(_this.css('border-right-width')=='1px'){
+				_this.css('border-right','none');
 				getParents();
 				AddRight('rBor');
 			}
 			
-			_this.css('border','none');
 		}	
 	}	
 })

@@ -5,3 +5,7 @@
 .stn-lists li .info .p-name{ float:left; }
 .stn-lists li .info .p-tel{ float:right; }
 .stn-lists li .p-address{ color:#6a6a6a; margin-top:.6rem; }
+
+.stn-lists li:after{
+	background: #d9d9d9 !important;
+};

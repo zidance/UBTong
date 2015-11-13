@@ -3,6 +3,10 @@
 	border-bottom: 1px solid #eae8e8;
 	background: #fff;
 }
+.stn-survey p:after{
+	background: #eae8e8 !important;
+}
+
 .stn-survey span {
 	display: block;
 	line-height: 2.8rem;

@@ -1,35 +1,37 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>已选购商品</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/choose.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
-<script>
-	$(function(){
-		var _li = $('#ChooseLists li');
-		
-		$.each(_li,function(i,e){
-			var _inp = $(this).find('.number-input input');
-			$(this).find('.add').click(function(){
-				$(_inp).val(function(){
-					return Number($(this).val())+1;
-				})
-			});
-			$(this).find('.reduct').click(function(){
-				if($(_inp).val()!=1){
+	<title>已选购商品</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="res/css/choose.css" rel="stylesheet" type="text/css" />
+	<script src="../../../../../common/js/zepto-1.16.min.js"></script>
+	<script src="../../../../../common/js/default.js"></script>
+	
+	<script>
+		$(function(){
+			var _li = $('#ChooseLists li');
+			
+			$.each(_li,function(i,e){
+				var _inp = $(this).find('.number-input input');
+				$(this).find('.add').click(function(){
 					$(_inp).val(function(){
-						return Number($(this).val())-1;
-					});
-				}
-			});	
-		});
-	})
-</script>
+						return Number($(this).val())+1;
+					})
+				});
+				$(this).find('.reduct').click(function(){
+					if($(_inp).val()!=1){
+						$(_inp).val(function(){
+							return Number($(this).val())-1;
+						});
+					}
+				});	
+			});
+		})
+	</script>
 </head>
 
 <body>
@@ -45,7 +47,7 @@
 						<span class="s-img"><img src="res/img/img1.jpg" /></span>
 						<p class="p-name fz28">美国原装进口精选优质开心...</p>
 						<p class="p-money fz32">￥19.90</p>
-                        <!--<p class="p-num fz24">库存：10件</p>-->
+						<!--<p class="p-num fz24">库存：10件</p>-->
 					</a>
 					<div class="clr"></div>
 					<div class="number-input">
@@ -59,9 +61,9 @@
 					<a class="choose-product" href="#">
 						<span class="s-img"><img src="res/img/img2.jpg" /></span>
 						<p class="p-name fz28">美国原装进口精选优质开心...</p>
-                        <p class="p-time fz24">付款后预计5月21日送达</p>
+						<p class="p-time fz24">付款后预计5月21日送达</p>
 						<p class="p-money fz32">￥19.90</p>
-                        <!--<p class="p-num fz24">库存：10件</p>-->
+						<!--<p class="p-num fz24">库存：10件</p>-->
 					</a>
 					<div class="clr"></div>
 					<div class="number-input">
@@ -76,7 +78,7 @@
 						<span class="s-img"><img src="res/img/img1.jpg" /></span>
 						<p class="p-name fz28">美国原装进口精选优质开心...</p>
 						<p class="p-money fz32">￥19.90</p>
-                        <!--<p class="p-num fz24">库存：10件</p>-->
+						<!--<p class="p-num fz24">库存：10件</p>-->
 					</a>
 					<div class="clr"></div>
 					<div class="number-input">
@@ -87,13 +89,13 @@
 				</li>
 			</ul>
 			<div class="choose-all">
-                <input class="checkbox-all" type="checkbox" /><span class="fz28">全选</span>
-                
-                <p class="p-combin fz32">合计：<em>￥39.00</em></p>
-                <div class="clr"></div>
-            </div>
+				<input class="checkbox-all" type="checkbox" /><span class="fz28">全选</span>
+				
+				<p class="p-combin fz32">合计：<em>￥39.00</em></p>
+				<div class="clr"></div>
+			</div>
 		</div>
 	</div>
-    <!--已选购商品-end-->
+	<!--已选购商品-end-->
 </body>
 </html>

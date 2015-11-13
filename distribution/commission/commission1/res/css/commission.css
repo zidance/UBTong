@@ -5,7 +5,7 @@
 .stn-commission .money .p-money{ color:#fff; margin:.4rem 0 0 5.31%; }
 .stn-commission .lists{ border-top:1px solid #dcdcdc; background:#fff; margin-top:.72rem; }
 .stn-commission .lists li{ border-bottom:1px solid #dcdcdc; padding:0 5.31%; height:7.23rem; }
-.stn-commission .lists li .p-name{ color:#b5b5be; margin-top:.79rem; }
+.stn-commission .lists li .p-name{ color:#b5b5be; padding-top:.79rem; }
 .stn-commission .lists li .p-money{ color:#ff3333; margin-top:.8rem; }
 
 /*佣金明细*/

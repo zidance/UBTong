@@ -37,6 +37,10 @@ nav li:last-child a{ border-radius:0 .94rem .94rem  0; }
 .cancel-order .art-order .product-num span{ color:#c7c7c7; }
 .cancel-order .art-order .product-num em{ color:#c7c7c7; }
 
+.art-order .product-btn a.a-green:after{ border-color: #48b574 !important;}
+.art-order .product-btn a.a-orange:after{ border-color: #f15a0c !important;}
+.art-order .product-btn a.a-null:after{ border-color: #939292 !important ;}
+
 
 @media screen and (min-width:321px){
 	.art-order .product-btn a{ width:3.4rem; font-size:.65rem;}

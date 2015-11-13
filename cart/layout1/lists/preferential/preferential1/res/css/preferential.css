@@ -1,8 +1,8 @@
 .cart-preferential{ width:93.75%; margin:0 auto; border:1px solid #eae8e8; border-radius:4px; background:#fff; box-sizing:border-box; }
 .cart-preferential h1{ color:#161616; padding:.54rem 0; border-bottom:1px solid #eae8e8; margin:0 .72rem; }
 .cart-preferential input[type=checkbox]{ -webkit-appearance:none; appearance:none; width:20px; height:20px; margin:1.88rem .72rem 0 0; cursor:pointer; vertical-align:bottom; background:none; border:1px solid #dbdada; -webkit-border-radius:7px; -moz-border-radius:7px; border-radius:7px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; position:relative; outline:none; float:left; }
-.cart-preferential input[type=checkbox]:checked::after{ content:url(../img/checkmark.png); display:block; position:absolute; top:-2px; left:-2px; }
-.cart-preferential .choose-all{ margin:.72rem 0 .72rem .72rem; }
+.cart-preferential input[type=checkbox]:checked::before{ content:url(../img/checkmark.png); display:block; position:absolute; top:0px; left:0px; }
+.cart-preferential .choose-all{ margin:.72rem 0 0 .72rem;  padding-bottom: 0.72rem;}
 .cart-preferential .choose-all .checkbox-all{ margin:0 .54rem 0 0; }
 .cart-preferential .choose-all span{ float:left; margin-top:.1rem; color:#000; }
 .cart-preferential li{ border-bottom:1px solid #eae8e8; padding:.87rem 0; position:relative; margin:0 .72rem; }
@@ -16,17 +16,18 @@
 .cart-preferential li .p-money em{ color:#939292; float:right; margin-top:.1rem; }
 .p-preferential{ width:93.75%; color:#e52c02; margin:.72rem auto; text-align:right; }
 
+.cart-preferential li .s-img:after{ border-radius: 0px !important;}
 @media screen and (min-width:640px){
 	.cart-preferential li .choose-product{ width:17.67rem; }
 	.cart-preferential li .p-name{ width:10.63rem; }
-	.cart-preferential input[type=checkbox]:checked::after{ top:-1px; left:-1px; }
+	.cart-preferential input[type=checkbox]:checked::before{ top:0px; left:0px; }
 }
 @media screen and (min-width:320px){
 	.cart-preferential input[type=checkbox]{ margin:2.08rem .6rem 0 0; }
 }
 @media screen and (max-width:320px){
 	.cart-preferential input[type=checkbox]{ width:20px; height:20px; border-radius:7px; margin:1.78rem .6rem 0 0; }
-	.cart-preferential input[type=checkbox]:checked::after{ content:url(../img/checkmark.png); }
+	.cart-preferential input[type=checkbox]:checked::before{ content:url(../img/checkmark.png); }
 	.cart-preferential li .choose-product{ width:17.97rem; }
 	.cart-preferential li .p-name{ width:8.63rem; }
 	.cart-preferential .choose-all span{ margin-top:.1rem; }

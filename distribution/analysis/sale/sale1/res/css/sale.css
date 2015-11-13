@@ -5,7 +5,7 @@
 .up-date{ padding:0.54rem 3.75% 0.72rem 3.75%; background:#f7f5f5;}
 .date{ height:6.43rem; width:100%; box-sizing:border-box; border:1px solid #eae8e8; border-radius:6px; background:#fff;}
 .date p{ margin:0 .72rem; height:3.2rem; line-height:3.2rem; text-align:left; border-bottom:1px solid #d9d9d9; padding:0 .18rem; color:#000;}
-.date p:last-child{ border-bottom:none;}
+.date p:last-child{ border-bottom:none !important;}
 .date span{ color:#3e9ef9; padding-right:1.38rem; float:right; background:url(../img/dot-right.png) no-repeat right center; background-size:.69rem 1.19rem ;}
 
 .statistical{ width:100%; height:5.09rem; background:#fe7b04;}

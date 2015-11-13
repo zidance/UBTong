@@ -16,3 +16,6 @@ body{ background:#f7f5f5; }
 .introduce-con .introduce-item .introduce-gbook .p-gbook{ color:#686868; margin-top:.2rem; }
 .introduce-con .introduce-item .introduce-gbook .p-time{ color:9b9b9b; margin-top:.6rem; }
 .introduce-con .a-intgbook{ display:block; color:#9b9b9b; text-align:center; padding:.89rem 0; }
+
+.introduce-con .introduce-item .introduce-gbook li:after{ background: #dbdbdb !important;}
+.details-introduce nav:after,.details-introduce nav:before,.details-introduce nav li a:after{ background: #e6e6e6 !important;}

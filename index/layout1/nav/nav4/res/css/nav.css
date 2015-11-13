@@ -9,11 +9,11 @@ nav li a {
 	display: block;
 	height: 3.9675rem;
 	border: solid #f1f1f1;
-	border-width: 0 1px 1px 0;
+	border-width: 0 0 1px 1px;
 	padding-top: .72rem;
 }
-nav .li-last a {
-	border-right: none;
+nav .li-first a {
+	border-width: 0 0 1px 0 !important;
 }
 nav li a span {
 	display: block;

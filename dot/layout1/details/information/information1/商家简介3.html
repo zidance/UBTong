@@ -1,17 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>商家简介</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/information.css" rel="stylesheet" type="text/css" />
-<link href="../../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script src="../../../../../common/js/zepto-1.16.min.js"></script>
-<script src="../../../../../common/js/hover.js"></script>
-<!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <title>商家简介</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/information.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../../common/js/default.js"></script>
+
+    <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
 
 </head>
 
@@ -24,17 +25,17 @@
         <p class="p-first fz28">神州汽车装饰美容中心</p>
         <p class="fz28">地址：鼓楼区东大路123号</p>
         <p class="fz28">营业时间：07:00—22:00</p>
--->
-        
-        <p class="p-infor fz28">美丽上门美容有限公司是集医疗整形、美容美体及美容培训于一体的企业，历经二十多年的创新发展，是目前粤东地区历史悠久。美丽上门美容有限公司是集医疗整形、美容美体及美容培训于一体的企业，历经二十多年的创新发展，是目前粤东地区历史悠久。</p>
-        <a class="a-console" href="#"><img src="res/img/bigdown.png" /></a>
-        
-        
-        <script>
-            var _obj = $(".stn-information");
-            var _info = _obj.find(".p-infor");
-            var _btn = _obj.find(".a-console");
-            var _src = _btn.find("img").attr("src");
+    -->
+    
+    <p class="p-infor fz28">美丽上门美容有限公司是集医疗整形、美容美体及美容培训于一体的企业，历经二十多年的创新发展，是目前粤东地区历史悠久。美丽上门美容有限公司是集医疗整形、美容美体及美容培训于一体的企业，历经二十多年的创新发展，是目前粤东地区历史悠久。</p>
+    <a class="a-console" href="#"><img src="res/img/bigdown.png" /></a>
+    
+    
+    <script>
+        var _obj = $(".stn-information");
+        var _info = _obj.find(".p-infor");
+        var _btn = _obj.find(".a-console");
+        var _src = _btn.find("img").attr("src");
             var num;  //点击计数
             
             //文字展开收起切换,指示箭头路径切换
@@ -58,26 +59,26 @@
             
             //两行排版
             function _textLine(){
-                 var _text = _info.html();
-                 var _length = parseInt(_info.width()/parseFloat(_info.css("font-size")));
-                 if (_length == (Infinity||null||undefined) || _length < 1){
-                 length=4;
-                 };
-                 var _str = {};
-                 _str.line1 = _text.substring(0,_length-1);
-                 _str.line2 = _text.substring(_length);
-                 if(_text.length > _length){
-                 _info.html(_str.line1+"<br />"+_str.line2);
-                 };
-            };
-            
-            _textLine();
-            _btn.on("click",_infoToggle);
-        </script>
-        
-        
-        <div class="btn">
-        	<!--抚远-->
+               var _text = _info.html();
+               var _length = parseInt(_info.width()/parseFloat(_info.css("font-size")));
+               if (_length == (Infinity||null||undefined) || _length < 1){
+                   length=4;
+               };
+               var _str = {};
+               _str.line1 = _text.substring(0,_length-1);
+               _str.line2 = _text.substring(_length);
+               if(_text.length > _length){
+                   _info.html(_str.line1+"<br />"+_str.line2);
+               };
+           };
+           
+           _textLine();
+           _btn.on("click",_infoToggle);
+       </script>
+       
+       
+       <div class="btn">
+           <!--抚远-->
         	<!--<a class="fz32" href="#">电话咨询</a>
             <a class="fz32" href="#">路线导航</a>-->
             

@@ -11,10 +11,11 @@
 
 /*二维码*/
 .stn-subsucceed .qr-code { width: 100%; padding: 0 3.185%; border: solid #eae8e8; border-width: 0 1px; box-sizing: border-box; }
+.stn-subsucceed .qr-code article{ padding-bottom: 1.45rem;}
 .stn-subsucceed .qr-code .p-name { margin-left: .36rem; line-height: 1.35rem; color: #000; }
 .stn-subsucceed .qr-code .p-name span { color: #f2484c; }
 .stn-subsucceed .qr-code .p-prompt { color: #979797; margin: .5rem 0 .9rem .36rem; }
-.stn-subsucceed .qr-code .s-img { display: block; width: 10.1rem; height: 10.1rem; border: 1px solid #d4d1cd; margin: 1.27rem auto 1.45rem; }
+.stn-subsucceed .qr-code .s-img { display: block; width: 10.1rem; height: 10.1rem; border: 1px solid #d4d1cd; margin: 1.27rem auto 0; }
 .stn-subsucceed .qr-code .s-img img { max-width: 100%; height: auto; }
 
 /*商品详情*/
@@ -29,7 +30,7 @@
 .stn-subsucceed .service li .p-money { position: absolute; bottom: 0; right: .36rem; color: #f2484c; }
 
 /*适用服务网点*/
-.stn-subsucceed .outlets { width: 100%; padding: 0 3.185%; border: solid #eae8e8; border-width: 0 1px 1px; box-sizing: border-box; padding-bottom: .36rem; border-radius: 0 0 8px 8px; }
+.stn-subsucceed .outlets { width: 100%; padding:0.1rem 3.185%; border: solid #eae8e8; border-width: 0 1px 1px; box-sizing: border-box; padding-bottom: .36rem; border-radius: 0 0 8px 8px;}
 .stn-subsucceed .outlets .a-title { display: block; padding-left: .36rem; background: url(../img/left.png) no-repeat 95% center; background-size: .5rem .9rem; color: #000; margin-top: .9rem; }
 .stn-subsucceed .outlets .a-title span { display: block; float: right; margin: .1rem 10% 0 0; color: #a6a6a6; }
 .stn-subsucceed .outlets li { padding: .54rem 0 .72rem; position: relative; }
@@ -46,6 +47,176 @@
 .stn-subsucceed .outlets li .p-science span { color: #f08f00; }
 .stn-subsucceed .outlets li .p-num { display: block; float: right; background: url(../img/distance.png) no-repeat 0 center; background-size: .47rem .72rem; padding-left: .72rem; color: #a6a6a6; position: absolute; top: .72rem; right: .36rem; }
 .stn-subsucceed .outlets li a { display: block; width: 5.45rem; height: 1.88rem; line-height: 1.88rem; text-align: center; color: #fff; background: #3e9ef9; border-radius: 6px; position: absolute; bottom: .72rem; right: .36rem; }
+
+
+
+.stn-subsucceed .service li .s-img,.stn-subsucceed .qr-code .s-img,.stn-subsucceed .outlets li .s-img{
+    position: relative;
+    border:none !important;
+}
+.stn-subsucceed .service li .s-img:before,.stn-subsucceed .qr-code .s-img:before,.stn-subsucceed .outlets li .s-img:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #d9d9d9;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+
+
+
+
+.stn-subsucceed .subsucceed,.stn-subsucceed .service li .s-img{
+    position: relative;
+    border:none !important;
+}
+
+
+.stn-subsucceed .service li .s-img:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #d9d9d9;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.stn-subsucceed .subsucceed:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid #eae8e8;
+    border-width:1px 1px 0 1px;
+    border-radius: 11px 11px 0 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+.stn-subsucceed .outlets{
+    position: relative;
+    border:none !important;
+}
+.stn-subsucceed .outlets:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border:solid #eae8e8;
+    border-width:0 1px 1px 1px;
+    border-radius: 0 0 11px 11px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+
+.stn-subsucceed .qr-code,.stn-subsucceed .service{
+	position: relative;
+	border:none !important;
+}
+.stn-subsucceed .qr-code:before,
+.stn-subsucceed .qr-code:after,.stn-subsucceed .service:before,.stn-subsucceed .service:after{
+    position:absolute;
+    content: "";
+    width:1px;
+    background:#eaeaea;
+    top:0;
+    bottom:0;
+}
+.stn-subsucceed .qr-code:before,.stn-subsucceed .service:before{
+    left:0;
+}
+.stn-subsucceed .qr-code:after,.stn-subsucceed .service:after{
+    right:0;
+}
+
+/* 最后两个是为了检测Mobile ie9, 是因为Mobile IE9检测出的dpi为96dpi，与实际不符合 */
+@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx), (-ms-high-contrast:active), (-ms-high-contrast:none) {
+
+.stn-subsucceed .qr-code:before,.stn-subsucceed .service:before,.stn-subsucceed .service:after,
+.stn-subsucceed .qr-code:after{
+        -webkit-transform:scaleX(.5);
+        -ms-transform:scaleX(.5);
+        -o-transform:scaleX(.5);
+        transform:scaleX(.5);
+    }
+
+.stn-subsucceed .qr-code:before,
+.stn-subsucceed .qr-code:after,.stn-subsucceed .service:before,.stn-subsucceed .service:after{
+        -webkit-transform-origin:0 0;
+        -moz-transform-origin:0 0;
+        -ms-transform-origin:0 0;
+        -o-transform-origin:0 0;
+        transform-origin:0 0;
+    }
+.stn-subsucceed .qr-code:after,.stn-subsucceed .service:after{
+        -webkit-transform-origin:100% 100%;
+        -moz-transform-origin:100% 100%;
+        -ms-transform-origin:100% 100%;
+        -o-transform-origin:100% 100%;
+        transform-origin:100% 100%;
+    }
+}
+
+/* 解决1.5屏幕下某些边框不显式问题，小数位多写几位 */
+@media (-webkit-device-pixel-ratio: 1.5){
+
+.stn-subsucceed .qr-code:before,
+.stn-subsucceed .qr-code:after,.stn-subsucceed .service:before,.stn-subsucceed .service:after{
+        -webkit-transform:scaleX(.6666);
+        -ms-transform:scaleX(.6666);
+        -o-transform:scaleX(.6666);
+        transform:scaleX(.6666);
+    }
+}
+
+@media (-webkit-device-pixel-ratio: 3){
+
+    /*左，右边框*/
+.stn-subsucceed .qr-code:before,
+.stn-subsucceed .qr-code:after,.stn-subsucceed .service:before,.stn-subsucceed .service:after{
+        -webkit-transform:scaleX(.3333);
+        -ms-transform:scaleX(.3333);
+        -o-transform:scaleX(.3333);
+        transform:scaleX(.3333);
+    }
+}
+
+
+
+
+
+
+
 @media screen and (max-width:380px) and (min-width:320px) {
 
 /*适用服务网点*/
