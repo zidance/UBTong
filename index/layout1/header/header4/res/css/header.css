@@ -15,7 +15,7 @@
 .head-index .a-img{position:absolute;padding:4px; border-radius:0.21rem; background-color: #fff;left:.65rem;top:-2.42rem;z-index: 22;}
 .head-index .a-img img{width:4.79rem;height:4.79rem;}
 .head-index .contact{line-height: 2.26rem;height:2.26rem;padding:0.62rem 0; position:absolute; right:0;}
-.head-index .contact .things{display:inline-block;color:#999999; line-height:1rem; margin-right:1.81rem; font-weight:400;}
+.head-index .contact .things{display:inline-block;color:#999999; line-height:1rem; margin-right:1.81rem; font-weight:400;text-align: center;}
 .head-index .contact .things em{ color:#f77a02;}
 
 

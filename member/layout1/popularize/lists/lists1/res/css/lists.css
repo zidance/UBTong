@@ -1,4 +1,8 @@
-/*推广列表*/
+/*推广列表和规则*/
+.stn-mbelists .rule{background-color: #fff;}
+.stn-mbelists .rule .p-describe{line-height: 1.25;color: #000;width:90.5%;padding:3.4% 0 3.5%;margin:0 auto;}
+.stn-mbelists .rule .a-more{display: block;line-height: 2.6;color:#ff6766;margin:0 3.1%;text-align: center;border-top:1px solid #e7e7e7;}
+
 .stn-mbelists li{ width:93%; margin:0 auto; border:1px solid #e7e7e7; border-radius:4px; background:#fff; padding:.72rem 0; position:relative; margin-top:.72rem; }
 .stn-mbelists li .a-product{ display:block; width:100%; }
 .stn-mbelists li .a-product .s-img{ display:block; width:5.01rem; height:5.01rem; float:left; border:1px solid #f3f3f3; margin:0 3%; float:left; }

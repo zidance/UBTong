@@ -8,7 +8,9 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="res/css/popup.css" rel="stylesheet" type="text/css" />
+<link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
+<script src="../../../../common/js/hover.js"></script>
 <script>
 	$(function(){
 		var _btn = $('button');
@@ -57,7 +59,7 @@
             </div>
             <div class="clr"></div>
         </div>
-        <div class="type">
+        <div class="type one">
         	<p class="fz28">系列</p>
             <ul>
             	<li><a class="fz28 act" href="#">奶油味</a></li>
@@ -68,7 +70,7 @@
             </ul>
             <div class="clr"></div>
         </div>
-        <div class="type">
+        <div class="type two">
         	<p class="fz28">规格</p>
             <ul>
             	<li><a class="fz28 act" href="#">200g</a></li>
@@ -78,7 +80,7 @@
             </ul>
             <div class="clr"></div>
         </div>
-        <div class="type">
+        <div class="type three">
         	<p class="fz28">颜色</p>
             <ul>
             	<li><a class="fz28 act" href="#">白色</a></li>
@@ -107,6 +109,9 @@
         -->
 	</div>
 	<div id="Background"></div>
+    <script type="text/javascript">setHover('one');</script>
+    <script type="text/javascript">setHover('two');</script>
+    <script type="text/javascript">setHover('three');</script>
 	
 	<button class="button-popup fz28">请选择系列  规格  颜色</button>
 	<!--列表购物车弹出框-end-->

@@ -1,7 +1,7 @@
 /* CSS重置 */
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,img,table,th,td,form,fieldset,legend,input,textarea,button,select,header,section,aside,footer{margin:0;padding:0;}
 header,section,aside,footer{display:block;}
-body{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;font-size-webkit-text-size-adjust:none;max-width:640px;min-width:320px;margin:0 auto;}
+body{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;font-size-webkit-text:none;max-width:640px;min-width:320px;margin:0 auto;}
 input{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;}
 img{border:0;vertical-align:middle;}
 a{text-decoration:none;-webkit-appearance:none;}
@@ -34,6 +34,442 @@ html{font-size:172%;}
 .fz103{font-size:3.74rem;}
 .fz120{font-size:4.36rem;}
 .mt20{margin-top:.72rem;}
+
+/*上下有边框*/
+/*
+.border-top-bottom{
+    border:none !important;
+}
+.border-top-bottom:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid #dcdcdc;
+	border-width:1px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+*/
+
+
+
+/*左右边有边框*/
+/*
+.border-left-right{
+    border:none !important;
+}
+.border-left-right:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid #c6c6c6;
+	border-width:0 1px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+*/
+
+/*左边有边框*/
+/*
+.border-left{
+    border:none !important;
+}
+.border-left:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid #c6c6c6;
+	border-width:0 0 0 1px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+*/
+
+/*右边有边框*/
+/*
+.border-right{
+    border:none !important;
+}
+.border-right:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid #c6c6c6;
+	border-width:0 1px 0 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+*/
+
+
+/*上面有边框*/
+/*
+.border-top{
+    border:none !important;
+}
+.border-top:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid #c6c6c6;
+	border-width:1px 0 0 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+*/
+
+/*下面有边框*/
+/*
+.border-bottom{
+    border:none !important;
+}
+.border-bottom:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid #c6c6c6;
+	border-width:0 0 1px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+*/
+/*上右下都有边框*/
+/*
+.border-top-right-bottom {
+    border:none !important;
+}
+.border-top-right-bottom:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid #d9d9d9;
+	border-width:1px 1px 1px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+*/
+
+/*上左下都有边框*/
+/*
+.border-top-left-bottom {
+    border:none !important;
+}
+.border-top-left-bottom:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:solid #d9d9d9;
+	border-width:1px 0 1px 1px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+*/
+/*四周都有边框*/
+/*
+.border-1px {
+    border:none !important;
+}
+.border-1px:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid;
+	border-color:#d9d9d9;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+*/
+/*上下都有边框*/
+/*
+.border-top-bottom:before{
+	border-top: 1px solid #c8c7cc;
+    content: ' ';
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+	top: 0;
+}
+
+.border-top-bottom:after{
+	border-top: 1px solid #c8c7cc;
+    content: ' ';
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+	bottom: 0;
+}
+*/
+/*下都有边框*/
+/*
+.border-bottom:before{
+	border-bottom: 1px solid #c8c7cc;
+    content: ' ';
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+	bottom: 0;
+}
+
+
+
+
+@media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio: 1.5){
+
+  .border-bottom:before,.border-top-bottom:after,.border-top-bottom:before{
+	  -webkit-transform: scaleY(.7);
+      -webkit-transform-origin: 0 0;
+      transform: scaleY(.7);
+   }
+   
+   .border-top-bottom:after{
+	  -webkit-transform-origin: left bottom;
+   }
+
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio: 2){
+  .border-bottom:before,.border-top-bottom:after,.border-top-bottom:before{
+      -webkit-transform: scaleY(.5);
+      transform: scaleY(.5);
+  }
+}
+
+*/
+
+
+
+/*上，下边框*/
+
+.tBor:before,
+.bBor:after{
+    position:absolute;
+    content: "";
+    height:1px;
+    background:#d9d9d9;
+    left:0;
+    right:0;
+}
+.tBor:before{
+    top:0;
+}
+.bBor:after{
+    bottom:0;
+}
+
+/*左，右边框*/
+.lBor:before,
+.rBor:after{
+    position:absolute;
+    content: "";
+    width:1px;
+    background:#d9d9d9;
+    top:0;
+    bottom:0;
+}
+.lBor:before{
+    left:0;
+}
+.rBor:after{
+    right:0;
+}
+
+.trblBor:after{
+    position:absolute;
+    content:"";
+    top:0;
+    left:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    width:100%;
+    height:100%;
+    border:1px solid blue;
+    point-events:none;
+}
+
+/* 最后两个是为了检测Mobile ie9, 是因为Mobile IE9检测出的dpi为96dpi，与实际不符合 */
+@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx), (-ms-high-contrast:active), (-ms-high-contrast:none) {
+
+    /*上，下边框*/
+    .tBor:before,
+    .bBor:after{
+        -webkit-transform:scaleY(.5);
+        -ms-transform:scaleY(.5);
+        -o-transform:scaleY(.5);
+        transform:scaleY(.5);
+    }
+
+    /*左，右边框*/
+    .lBor:before,
+    .rBor:after{
+        -webkit-transform:scaleX(.5);
+        -ms-transform:scaleX(.5);
+        -o-transform:scaleX(.5);
+        transform:scaleX(.5);
+    }
+
+    /*四边边框*/
+    .trblBor:after{
+        width:200%;
+        height:200%;
+        -webkit-transform:scale(.5);
+        -ms-transform:scale(.5);
+        -o-transform:scale(.5);
+        transform:scale(.5);
+    }
+
+    /*上，左边框, 四边边框*/
+    .tBor:before,
+    .lBor:before,
+    .trblBor:after{
+        -webkit-transform-origin:0 0;
+        -moz-transform-origin:0 0;
+        -ms-transform-origin:0 0;
+        -o-transform-origin:0 0;
+        transform-origin:0 0;
+    }
+
+    /*下，右边框*/
+    .bBor:after,
+    .rBor:after{
+        -webkit-transform-origin:100% 100%;
+        -moz-transform-origin:100% 100%;
+        -ms-transform-origin:100% 100%;
+        -o-transform-origin:100% 100%;
+        transform-origin:100% 100%;
+    }
+}
+
+/* 解决1.5屏幕下某些边框不显式问题，小数位多写几位 */
+@media (-webkit-device-pixel-ratio: 1.5){
+    /*上，下边框*/
+    .tBor:before,
+    .bBor:after{
+        -webkit-transform:scaleY(.66666666);
+        -ms-transform:scaleY(.66666666);
+        -o-transform:scaleY(.66666666);
+        transform:scaleY(.66666666);
+    }
+
+    /*左，右边框*/
+    .lBor:before,
+    .rBor:after{
+        -webkit-transform:scaleX(.6666);
+        -ms-transform:scaleX(.6666);
+        -o-transform:scaleX(.6666);
+        transform:scaleX(.6666);
+    }
+
+    /*四边框*/
+    .trblBor:after{
+        width:150%;
+        height:150%;
+        -webkit-transform:scale(.6666);
+        -ms-transform:scale(.6666);
+        -o-transform:scale(.6666);
+        transform:scale(.6666);
+    }
+}
+
+@media (-webkit-device-pixel-ratio: 3){
+    /*上，下边框*/
+    .tBor:before,
+    .bBor:after{
+        -webkit-transform:scaleY(.3333);
+        -ms-transform:scaleY(.3333);
+        -o-transform:scaleY(.3333);
+        transform:scaleY(.3333);
+    }
+
+    /*左，右边框*/
+    .lBor:before,
+    .rBor:after{
+        -webkit-transform:scaleX(.3333);
+        -ms-transform:scaleX(.3333);
+        -o-transform:scaleX(.3333);
+        transform:scaleX(.3333);
+    }
+    /*四边框*/
+    .trblBor:after{
+        width:300%;
+        height:300%;
+        -webkit-transform:scale(.3333);
+        -ms-transform:scale(.3333);
+        -o-transform:scale(.3333);
+        transform:scale(.3333);
+    }
+}
+
+
+
 @media screen and (min-width:320px) and (max-width:640px){
 html{font-size:125%;}
 }

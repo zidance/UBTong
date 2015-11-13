@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>选择支付方式-到店服务</title>
@@ -12,8 +12,10 @@
 <link href="envelope/envelope1/res/css/envelope.css" rel="stylesheet" type="text/css" />
 <link href="btn/btn1/res/css/pricesbtn.css" rel="stylesheet" type="text/css" />
 <link href="envelope/envelope1/res/css/styleV2.css" rel="stylesheet" type="text/css" />
+<link href="../../../common/css/hover.css" rel="stylesheet" type="text/css" />
 <script src="../../../common/js/zepto-1.16.min.js"></script>
 <script src="envelope/envelope1/res/js/scroll_areaV3.js"></script>
+<script src="../../../common/js/hover.js"></script>
 
 
 </head>
@@ -58,16 +60,17 @@
 	</div>
     <!--留言-end-->
     
-    
-    
-    <!--我的红包-->
+    <!--红包-->
+    <div class="wrap">
+    <input type="checkbox" />
 	<div class="subscribe-envelope" id="selectShow">
-		<input type="checkbox" />
 		<a class="integral" href="#">
 			<p class="fz28">红包抵扣<span>&nbsp;10元红包</span></p>
 		</a>
 		<div class="clr"></div>
 	</div>
+    </div>
+    <!--红包-end-->
     
     <!--弹出框-->
     <a id="timeMb" class="hide" href="javascript:void(0);"></a>
@@ -76,14 +79,14 @@
         <h3>
         <a href="javascript:void(0);" class="fl" style="display:none;">取消</a>
        <p class="p-title fz32">我的红包</p>
-        <a href="javascript:void(0);" class="fr not">确定</a></h3>
+        <a href="javascript:void(0);" class="fr">确定</a></h3>
         
 <!--        <a class="btn">关闭</a>-->
         
         <div class="timeFloat">
             <div class="dateWrap" id="dateSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 0px, 0px);margin-top:-45px;">
                 <ul style="height: 120px;">
-                   <!--active当前选中-->
+                   <!--active当前选中,保证有一个-->
                     <li>美容券<span>&nbsp;5元</span></li>
                     <li>美容券<span>&nbsp;10元</span></li>
                     <li class="active">美体券<span>&nbsp;20元</span></li>
@@ -106,7 +109,7 @@
     <script>
     $("#selectTime").find(".fr").click(function(){
         var a = $("#dateSelect").find(".active").html();
- $("#selectShow").find(".integral").find("span").html(a);
+        $("#selectShow").find(".integral").find("span").html(a);
         
     });
     </script>

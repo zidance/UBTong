@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>商品详情</title>
@@ -14,6 +14,8 @@
 <link href="meal/meal1/res/css/maintenance.css" rel="stylesheet" type="text/css" />
 <link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
 <link href="popup/popup2/res/css/popup.css" rel="stylesheet" type="text/css" />
+<link href="../../common/css/hover.css" rel="stylesheet" type="text/css" />
+<script src="../../common/js/hover.js"></script>
 <script src="../../common/js/zepto-1.16.min.js"></script>
 <script src="pic/pic1/res/js/iscroll.js"></script>
 <script src="introduce/introduce1/res/js/jquery.js"></script>
@@ -125,7 +127,7 @@
     
 	<div class="box-popup" id="BoxPopup">
 		
-        <div class="type">
+        <div class="type one">
         	<p class="fz28">限时</p>
             <ul>
             	<li><a class="fz28 act" href="#">3天</a></li>
@@ -133,7 +135,7 @@
             </ul>
             <div class="clr"></div>
         </div>
-        <div class="type">
+        <div class="type two">
         	<p class="fz28">规格</p>
             <ul>
             	<li><a class="fz28 act" href="#">200g</a></li>
@@ -155,19 +157,20 @@
         
 	</div>	
 	<!--列表购物车-end-->
+    <script type="text/javascript">setHover('one');</script>
+    <script type="text/javascript">setHover('two');</script>
+    <script type="text/javascript">setHover('type-pic');</script>
     
     <!--赠送积分-->
 	<section class="stn-integral">
     	<div class="pro-integral">
             <div class="integral">
-                <div class="integral-left"></div>
-                <div class="integral-main fz60"><span>200</span></div>
-                <div class="integral-right"></div>
-                <div class="clr"></div>
-                
-                <span class="s-send"></span>
+                <div class="integral-left"><span class="s-send"></div>
+                <div class="integral-main fz60"><span>200.00</span></span></div>
+                <div class="integral-right"></div>                
             </div>
-            <p class="fz28">购买单件商品即送购物积分<br>结算时可使用积分抵用现金</p>
+            <!--<p class="fz28">购买单件商品即送购物积分，结算时可使用积分抵用现金</p>-->
+            <p class="fz28">购买此件商品即送购物积分，可在“积分兑换”专区使用</p>
         </div>
     </section>
     <!--赠送积分-end-->
@@ -332,14 +335,7 @@
 			</div>
 		</div>
 	</div>
-    <script>
-    	$(function(){
-			var _obj = $('#DetailsIntroduce');
-			var _fly = _obj.find('nav')  //滑动弹出框
-			
-			_fly.capacity();  /*调用导航跟随滑动效果插件*/
-		})
-    </script>
+
     <!--商品介绍-end-->
     
     <!--详情按钮高度：3.77rem-->

@@ -1,12 +1,11 @@
 /*产品列表*/
-.index-lists{ background:#fff;}
-.index-lists li{float:left; width:45.3%;background-color: #fff;margin:.65rem 0 0 3.1%; border:1px solid #dddddd;}
+.index-lists li{float:left; width:45.3%;background-color: #fff;margin:.65rem 0 0 3.3%; border:1px solid #dddddd;}
 .index-lists li .a-product{display:block;}
 .index-lists li .s-img{position: relative;display: table-cell;text-align: center;vertical-align: middle;}
 .index-lists li .s-img .s-mark{position: absolute;padding:.1rem .25rem;background-color: #ff6633;border-radius: 5px;top:.65rem;left:.65rem;color:#fff;}
 
 .index-lists li .product{padding:.65rem 6.8%;}
-.index-lists li .product .p-name{height:2.5em;overflow: hidden;color:#282828;}
+.index-lists li .product .p-name{height:2.6em;overflow: hidden;color:#282828;}
 .index-lists li .product .p-money{margin-top:.8rem;color:#ff3430;}
 .index-lists li .product .p-money .s-price{color:#616161;text-decoration: line-through;padding-left:.5rem;}
 
