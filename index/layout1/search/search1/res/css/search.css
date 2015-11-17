@@ -1,0 +1,11 @@
+
+/*搜索*/
+.stn-search{padding: 0 1.6% 3.6%;}
+.stn-search input{display: block;width: 100%;outline: none;border: none;color: #000;text-indent: 20%;border-radius: .1rem;padding: .75rem 0px;
+background: url(../img/logo.png) no-repeat left center/11.8%,
+    url(../img/search.png) no-repeat 14% center/4.2%;
+background-color: #fff;
+}
+
+.stn-search input::placeholder{color: #c0c0c0;}
+.stn-search input::-webkit-input-placeholder{color: #c0c0c0;}
