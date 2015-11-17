@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>公告</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/notice.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="res/js/jquery-1.7.2.min.js"></script>
+    <script>
+        $(function() {
+            /*初始化*/
+            var _speed = 10, //几秒过一屏
+                _obj = $('#UlSlide'),
+                _wrap = _obj.parent('.wrap'),
+                _item = _obj.find('li'),
+                _wid = _wrap.width();
+
+
+                _item.css('min-width', _wid)
+            var _objWid = _obj.width()
+
+            //尾部加入头一个li
+            $(_obj).append(_item.eq(0).clone())
+
+
+            var _delay = _objWid / _wid * _speed * 1000,
+                _initleft = _item.eq(0).width()
+
+            function scroll() {
+                _obj.animate({
+                    left: -_objWid,
+                }, _delay, 'linear', function() {
+                    _obj.css('left', 0)
+                    scroll()
+                })
+
+            }
+            scroll()
+
+
+            _obj.on('mouseenter', function() {
+                _obj.stop(true)
+            })
+            _obj.on('mouseleave', function() {
+                scroll()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- 轮播公告 -->
+    <section class="stn-notice-horizontal">
+        <em class="em-notice"><span class="fz22">公告：</span></em>
+        <div class="wrap">
+            <ul class="ul-slide" id="UlSlide">
+                <li><a class="a-name fz22" href="#">今日上新，全场满69元包邮！1</a></li>
+                <li><a class="a-name fz22" href="#">今日上新，全场满69元包邮！2</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="clr"></div>
+    <!-- 轮播公告 -end -->
+</body>
+
+</html>
