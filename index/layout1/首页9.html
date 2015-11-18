@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="telephone=no" name="format-detection" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="header/header5/res/css/header.css" rel="stylesheet" type="text/css" />
+<link href="advertising/advertising3/res/css/advertising.css" rel="stylesheet" type="text/css" />
+<link href="classification/classification3/res/css/classification.css" rel="stylesheet" type="text/css" />
+<link href="notice/notice3/res/css/notice.css" rel="stylesheet" type="text/css" />
+<link href="lists/lists8/res/css/lists.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/footer/footer7/res/css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/blank/blank1/res/css/blank.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
+<script type="text/javascript" src="../../common/js/default.js"></script>
+<script type="text/javascript" src="notice/notice3/res/js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body style="background:#dcdcdc;">
+	<!--轮播图片-->
+	<script type="text/javascript" src="header/header5/res/js/touchslider.js"></script>
+	<div class="banner">
+		<div id="slider" class="slider">
+			<ul id="sliderlist" class="sliderlist">
+				<li><a href="#"><img src="header/header5/res/img/img4.png"></a></li>
+				<li><a href="#"><img src="header/header5/res/img/img4.png"></a></li>
+				<li><a href="#"><img src="header/header5/res/img/img4.png"></a></li>
+			</ul>
+			<div id="pagenavi">
+				<a class="active" href="#"></a>
+		        <a href="#"></a>
+		        <a href="#"></a>
+			</div>
+		</div>
+     </div>
+
+	<script type="text/javascript" src="header/header5/res/js/banner.js"></script>
+    <!--轮播图片-end-->
+
+   <!-- 轮播公告 -->
+    <section class="stn-notice-horizontal">
+        <em class="em-notice"><span class="fz22">公告：</span></em>
+        <div class="wrap">
+            <ul class="ul-slide" id="UlSlide">
+                <li><a class="a-name fz22" href="#">今日上新，全场满69元包邮！1</a></li>
+                <li><a class="a-name fz22" href="#">今日上新，全场满69元包邮！2</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="clr"></div>
+
+
+    <script>
+        var $ = jQuery;
+        $(function() {
+            /*初始化*/
+            var _speed = 10, //几秒过一屏
+                _obj = $('#UlSlide'),
+                _wrap = _obj.parent('.wrap'),
+                _item = _obj.find('li'),
+                _wid = _wrap.width();
+
+
+                _item.css('min-width', _wid)
+            var _objWid = _obj.width()
+
+            //尾部加入头一个li
+            $(_obj).append(_item.eq(0).clone())
+
+
+            var _delay = _objWid / _wid * _speed * 1000,
+                _initleft = _item.eq(0).width()
+
+            function scroll() {
+                _obj.animate({
+                    left: -_objWid,
+                }, _delay, 'linear', function() {
+                    _obj.css('left', 0)
+                    scroll()
+                })
+
+            }
+            scroll()
+
+
+            _obj.on('mouseenter', function() {
+                _obj.stop(true)
+            })
+            _obj.on('mouseleave', function() {
+                scroll()
+            })
+        })
+    </script>
+        <!-- 轮播公告 -end -->
+
+        <!--广告图片-->
+	<section class="stn-advertis">
+		<ul class="ul-picshow">
+			<li><img src="advertising/advertising3/res/img/adver1.jpg" /><p class="fz22">商家入驻</p><span class="s-bg"></span></li>
+			<li><img src="advertising/advertising3/res/img/adver2.jpg" /><p class="fz22">开店创业</p><span class="s-bg"></span></li>
+			<li><img src="advertising/advertising3/res/img/adver3.jpg" /><p class="fz22">玩转商城</p><span class="s-bg"></span></li>
+		</ul>
+	</section>
+	<!--广告图片-end-->
+
+    <!--分类-->
+    <section class="goods-img">
+    	<a href="#"><img src="classification/classification3/res/img/goods-img1.png"></a>
+    </section>
+
+    <section class="goods-img">
+    	<a href="#"><img src="classification/classification3/res/img/goods-img2.png"></a>
+    </section>
+
+	<section class="stn-classification stn-border">
+
+        <div class="type-goods">
+        	<table cellpadding="0" cellspacing="0">
+            	<tr>
+                	<td rowspan="2" class="img1"><a href="#"><img src="classification/classification3/res/img/img5.png" /></a></td>
+                    <td class="img2"><a href="#"><img src="classification/classification3/res/img/img1.png"></a></td>
+                    <td class="img2"><a href="#"><img src="classification/classification3/res/img/img2.png"></a></td>
+                </tr>
+                <tr>
+                	<td class="img2"><a href="#"><img src="classification/classification3/res/img/img3.png"></a></td>
+                    <td class="img2"><a href="#"><img src="classification/classification3/res/img/img4.png"><span><img src="classification/classification3/res/img/hot.png"></span></a></td>
+                </tr>
+            </table>
+        </div>
+	</section>
+
+
+
+    <section class="goods-img">
+    	<a href="#"><img src="classification/classification3/res/img/goods-img3.png"></a>
+    </section>
+    <!--分类--end-->
+
+    <!--产品列表 间距：.65rem-->
+	<section class="index-lists" id="thelist">
+		<ul>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists8/res/img/img1.png" />
+                        <!--新品标志-->
+                        <!--<span class="s-mark fz20">新品</span>-->
+                    </span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果
+碧根果炭烧...</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
+                    </div>
+				</a>
+			</li>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists8/res/img/img2.png" />
+                        <!--新品标志-->
+                        <!--<span class="s-mark fz20">新品</span>-->
+                    </span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果
+碧根果炭烧...</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
+                    </div>
+				</a>
+			</li>
+            <li>
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists8/res/img/img3.png" />
+                        <!--新品标志-->
+                        <!--<span class="s-mark fz20">新品</span>-->
+                    </span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果
+碧根果炭烧...</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
+                    </div>
+				</a>
+			</li>
+            <li>
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists8/res/img/img4.png" />
+                        <!--新品标志-->
+                        <!--<span class="s-mark fz20">新品</span>-->
+                    </span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果
+碧根果炭烧...</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
+                    </div>
+				</a>
+			</li>
+			<li>
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists8/res/img/img3.png" />
+                        <!--新品标志-->
+                        <!--<span class="s-mark fz20">新品</span>-->
+                    </span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果
+碧根果炭烧...</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
+                    </div>
+				</a>
+			</li>
+            <li>
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists8/res/img/img4.png" />
+                        <!--新品标志-->
+                        <!--<span class="s-mark fz20">新品</span>-->
+                    </span>
+                    <div class="product fz26">
+                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果
+碧根果炭烧...</p>
+                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
+                    </div>
+				</a>
+			</li>
+		</ul>
+        <div class="clr"></div>
+	</section>
+    <script>
+	function imgZoomControl(){
+		var _li = $('#thelist li');
+		$.each(_li,function(i,e){
+			var _this= $(this);
+			var _img = $(this).find('.s-img img');
+			$(this).find('.s-img').width(_this.width());
+			$(this).find('.s-img').height(_this.width());
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
+			{
+				_img.css('width',_this.width());
+			}else if(_img.height() > $(this).height()){
+				_img.css('height',_this.width());
+			}
+			_img.css({'max-width':_this.width(),'max-height':_this.width()})
+		})
+	}
+		imgZoomControl();
+
+    </script>
+    <!--产品列表-end-->
+
+    <!--购物需知-->
+    <section style="width:100%;margin-top:.75rem;">
+        <img src="res/img/BuyingGuide.png" style="width:100%;"/>
+    </section>
+    <!--购物需知--end-->
+
+    <!--空白BOTTOM部件 -3.27rem-->
+	<div class="blank-bottom" style="margin-top:9%;"></div>
+	<!--空白BOTTOM部件 -end-->
+
+    <!--底部高度：3.59rem-->
+    <footer>
+    	<ul>
+    		<!--当前目录状态:p class="p-footact"-->
+        	<li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/homeh.png" /></span><p class="fz22 p-footact">首页</p></a></li>  <!--当前目录状态：homeh.png-->   <!--未在当前目录状态：homeh1.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/goods.png" /></span><p class="fz22">商品分类</p></a></li>  <!--当前目录状态：goods.png-->   <!--未在当前目录状态：goods1.png-->
+            <li class="li-logo"><a href="#"><img src="../../parts/footer/footer7/res/img/logo.png" /></a></li>  <!--当前目录状态：goods.png-->   <!--未在当前目录状态：goods1.png-->
+            <li>
+            <li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/member.png" /></span><p class="fz22">会员中心</p></a></li>  <!--当前目录状态：member.png-->   <!--未在当前目录状态：menber1.png-->
+            <li><a href="#"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/income.png" /></span><p class="fz22">店收入</p></a></li>  <!--当前目录状态：cart.png-->    <!--未在当前目录状态：cart1.png-->
+        </ul>
+    </footer>
+    <!--底部-end-->
+
+
+
+</body>
+</html>
