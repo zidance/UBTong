@@ -1,0 +1,42 @@
+/*分类*/
+.stn-classification{ width:100%; overflow:hidden; background:#fff;}
+.stn-border{ border-top:1px solid #dddddd; margin-top:.72rem;}
+.stn-border:before{ background:#dddddd !important;}
+.stn-classification .type{ height:3.27rem; position:relative; width:100%;}
+.stn-classification .type .type-border{width:96%; border-top:1px solid #dddddd; position:absolute; margin:1.63rem 0.36rem 0;}
+.stn-classification .type .type-border:before{
+	 background:#dddddd !important;
+}
+.stn-classification .type .type-box{ padding:0 .36rem; background:#fff; position:absolute; top:.8rem; color:#2f2f2f; line-height:1.52rem; left:8.43rem;}
+.stn-classification .type .type-th{ display:inline-block; text-align:center; line-height:1.01rem; width:1.27rem; height:1.01rem; border-radius:6px; background-color:#ff6633; color:#fff; margin-right:.36rem;}
+.none-border{ border-top:0;}
+.stn-classification .type-goods{ width:100%; height:auto;}
+.stn-classification .type-goods tr{width:100%;}
+.stn-classification .type-goods td{ border:1px solid #dddddd; border-width:1px 1px 0 0; position:relative;width:33.3% !important;}
+.stn-classification .type-goods td.img2{ width:7.7rem; }
+.stn-classification .type-goods td.img1{ width:7.77rem; }
+.stn-classification .type-goods td a{ display:block;}
+.stn-classification .type-goods td img{ width:100%; height:auto;}
+.stn-classification .type-goods td span{ position:absolute; left:0; top:0; width:2.18rem; height:2.18rem;}
+.stn-classification .type-goods td span img{ width:100%; height:100%; }
+.stn-classification .type-goods tr:last-child{ border-bottom:1px solid #dddddd;}
+.stn-classification .type-goods tr:last-child:after{ background:#dddddd !important; position:relative !important;}
+.stn-classification .type-goods tr td:last-child{ border-width:1px 0 0 0 !important;}
+.stn-classification tr:last-child td:last-child{ border-width: 1px 0px 0px 0px !important;}
+
+.stn-classification .type-goods tr td.last{ border-width: 1px 0 0 0 !important;}
+
+.goods-img{ width:100%; margin-top:0.72rem;}
+.goods-img a{ display:block; overflow:hidden;width:100%; height:auto; cursor:pointer;}
+.goods-img a img{ width:100%; height:100%;}
+
+@media screen and (min-width:321px) and (max-width:640px){
+    .stn-classification .type .type-box{ left:6.1rem;}
+	.stn-classification .type .type-th{ line-height:1.2rem;}
+
+}
+@media screen and (max-width:320px){
+
+   .stn-classification .type .type-th{ line-height:1.2rem;width:1.5rem; height:1.25rem;}
+
+}

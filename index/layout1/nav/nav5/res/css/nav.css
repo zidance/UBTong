@@ -1,6 +1,6 @@
 /*导航*/
 nav {
-	box-shadow: 0 0 5px #efefef;
+	box-shadow: 0 0 5px #efefef;margin-top:3.6%;background-color:#fff;
 }
 nav li {
 	float: left;
@@ -11,13 +11,16 @@ nav li {
 nav li a {
 	display: block;
 	height: 3.9675rem;
-	border: solid #f1f1f1;
-	border-width: 0 0 1px 1px;
+	border-bottom:1px solid #f1f1f1;
+/*	border-width: 0 0 1px 1px;*/
 	padding-top: .72rem;
 }
+nav li.li-last-line a{border-bottom: none;}
+/*
 nav .li-first a {
 	border-width: 0 0 1px 0 !important;
 }
+*/
 nav li a span {
 	display: block;
 	width: 2.29rem;
