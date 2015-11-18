@@ -10,10 +10,10 @@ nav li {
 }
 nav li a {
 	display: block;
-	height: 3.9675rem;
+/*	height: 3.9675rem;*/
 	border-bottom:1px solid #f1f1f1;
 /*	border-width: 0 0 1px 1px;*/
-	padding-top: .72rem;
+	padding-top: 8%;
 }
 nav li.li-last-line a{border-bottom: none;}
 /*
@@ -25,7 +25,7 @@ nav li a span {
 	display: block;
 	width: 2.29rem;
 	height: 2.29rem;
-	margin: 0 auto .08rem;
+	margin: 0 auto;
 	border-radius: 100%;
 	text-align: center;
 }
@@ -36,4 +36,5 @@ nav li a span img {
 nav li a p {
 	font-size: .8rem;
 	color: #464646;
+    padding:6% 0 8%;
 }

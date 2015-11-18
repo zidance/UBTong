@@ -1,0 +1,25 @@
+/*天天捡钱*/
+.stn-daily-wrap{position: fixed;z-index:9999;width: 100%;height: 100%;top: 0;left: 0;}
+.stn-daily-wrap .daily-bg{position: absolute;width: 100%;height: 100%;background-color: #000;opacity: 0.6;}
+.stn-daily-wrap .stn-daily-pick{position: absolute;width: 87%;/*559/640*/opacity: 1;background-color: #fc2c39;left: 0;right: 0;margin:22% auto 0;}
+.stn-daily-pick .daily-head{position:relative;background:url(../img/daily-head.png) no-repeat top center;background-size: 100%;padding-top: 33.2%;}
+.stn-daily-pick .daily-head .a-btn{position: absolute;right:.6rem;top:.6rem;width:7%;/*40/559*/ padding-top:7%;background: url(../img/btn-close.png) no-repeat center center;background-size: 100%;}
+.stn-daily-pick .pick-money{display:none;position:relative;background-repeat: no-repeat;background-size: 96.5%;background-position: center center; padding-top:63%;/*353/559*/ }
+.stn-daily-pick .pick-money.type0{display: block; background-image:url(../img/money0.png);}
+.stn-daily-pick .pick-money.type0 .begin{display: block;position:absolute;left:34%;font-size: 0; background:url(../img/begin.png) no-repeat;width:31%;padding-top: 12%;/*68/559*/ background-size: 100%;margin:0 auto;top:31%;}
+.stn-daily-pick .pick-money.type1{background-image: url(../img/money1.png);}
+.stn-daily-pick .pick-money.type2{background-image: url(../img/money2.png);}
+.stn-daily-pick .pick-money.type3{background-image: url(../img/money3.png);}
+.stn-daily-pick .pick-money.type4{background-image: url(../img/money4.png);}
+.stn-daily-pick .pick-money.type5{background-image: url(../img/money5.png);}
+.stn-daily-pick .pick-money .income{position:absolute;width: 56%;/*313px/559*/ left: 21%;top:6.4%; box-sizing: border-box;border:.15rem solid #fff;padding:18% 0 2.5%;/*107/559*/ text-align: center;background: url(../img/logo-income.png) no-repeat center 5% #ff0000;/*14/269*/ background-size: 30%; /*95/313*/}
+.stn-daily-pick .pick-money .income .p-type{color: #ffffff;}
+.stn-daily-pick .pick-money .income .p-money{color: #ffffff; }
+.stn-daily-pick .pick-money .income .p-money{color: #fff600;}
+.stn-daily-pick .pick-money .income .p-bottom{color: #000000;margin-top: .15rem;;}
+
+.stn-daily-wrap{display: none;}
+
+
+.stn-daily-pick .pick-money.type0{display:none;}
+.stn-daily-pick .pick-money.type1{display: block;}

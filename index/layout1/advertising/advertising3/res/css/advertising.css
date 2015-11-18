@@ -2,5 +2,5 @@
 .stn-advertis .ul-picshow{font-size: 0;}
 .stn-advertis .ul-picshow li{display: inline-block;width: 31.25%;position:relative;margin : 0 0 0 1.5%;}
 .stn-advertis .ul-picshow li img{width: 100%;}
-.stn-advertis .ul-picshow li p{position:absolute;bottom: 0;padding: .2em 0;text-align: center;width: 100%;color: #fff;z-index: 2;}
-.stn-advertis .ul-picshow li .s-bg{display: block;position: absolute;bottom: 0;width:100%;padding-top:15%;background-color: #000;z-index: 1;background:rgba(0, 0, 0, 0.4) none repeat scroll 0 0}
+.stn-advertis .ul-picshow li p{position:absolute;bottom:0;padding-bottom: .04rem; text-align: center;width: 100%;color: #fff;z-index: 2;}
+.stn-advertis .ul-picshow li .s-bg{display: block;position: absolute;bottom: 0;width:100%;padding-top:16%;background-color: #000;z-index: 1;background:rgba(0, 0, 0, 0.4) none repeat scroll 0 0}
