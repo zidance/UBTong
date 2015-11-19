@@ -19,7 +19,7 @@
     <link href="search/search1/res/css/search.css" rel="stylesheet" type="text/css" />
     <link href="nav/nav5/res/css/nav.css" rel="stylesheet" type="text/css" />
     <link href="daily/daily1/res/css/daily.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="notice/notice3/res/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="notice/notice3/res/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
     <script type="text/javascript" src="../../common/js/default.js"></script>
 
@@ -66,7 +66,7 @@
 
     <script>
         jQuery.noConflict;
-        var $$=jQuery;
+        var $$ = jQuery;
         $$(function() {
             /*初始化*/
             var _speed = 10, //几秒过一屏
@@ -76,7 +76,7 @@
                 _wid = _wrap.width();
 
 
-                _item.css('min-width', _wid)
+            _item.css('min-width', _wid)
             var _objWid = _obj.width()
 
             //尾部加入头一个li
@@ -155,67 +155,67 @@
                 <a class="a-btn"></a>
             </div>
 
+            <!--type0-type5,只会弹出其中一个-->
             <!--type0,开始-->
             <div class="pick-money type0">
                 <a class="begin" href="###">开始捡钱</a>
             </div>
             <!--type1,最少-->
-            <div class="pick-money type1">
+            <!--<div class="pick-money type1">
                 <div class="income">
-                    <p class="p-type fz36">哇塞最少吗</p>
-                    <p class="p-money fz34"><span class="fz55">0.28</span>+<span class="fz55">0.05</span>元</p>
-                    <p class="p-bottom fz20">已存入您的收益账户</p>
+                    <p class="p-type fz32">哇塞最少吗</p>
+                    <p class="p-money fz34"><span class="fz48">0.28</span>+<span class="fz48">0.05</span>元</p>
+                    <p class="p-bottom fz18">已存入您的收益账户</p>
                 </div>
-            </div>
+            </div>-->
             <!--type2-->
-            <div class="pick-money type2">
+            <!--<div class="pick-money type2">
                 <div class="income">
-                    <p class="p-type fz36">快安慰下我</p>
-                    <p class="p-money fz34"><span class="fz55">0.38</span>+<span class="fz55">0.05</span>元</p>
-                    <p class="p-bottom fz20">已存入您的收益账户</p>
+                    <p class="p-type fz32">快安慰下我</p>
+                    <p class="p-money fz34"><span class="fz48">0.38</span>+<span class="fz48">0.05</span>元</p>
+                    <p class="p-bottom fz18">已存入您的收益账户</p>
                 </div>
-            </div>
+            </div>-->
             <!--type3-->
-            <div class="pick-money type3">
+            <!--<div class="pick-money type3">
                 <div class="income">
-                    <p class="p-type fz36">貌似不错噢</p>
-                    <p class="p-money fz34"><span class="fz55">0.48</span>+<span class="fz55">0.05</span>元</p>
-                    <p class="p-bottom fz20">已存入您的收益账户</p>
+                    <p class="p-type fz32">貌似不错噢</p>
+                    <p class="p-money fz34"><span class="fz48">0.48</span>+<span class="fz48">0.05</span>元</p>
+                    <p class="p-bottom fz18">已存入您的收益账户</p>
                 </div>
-            </div>
+            </div>-->
             <!--type4-->
-            <div class="pick-money type4">
+            <!--<div class="pick-money type4">
                 <div class="income">
-                    <p class="p-type fz36">女神么么哒</p>
-                    <p class="p-money fz34"><span class="fz55">0.58</span>+<span class="fz55">0.05</span>元</p>
-                    <p class="p-bottom fz20">已存入您的收益账户</p>
+                    <p class="p-type fz32">女神么么哒</p>
+                    <p class="p-money fz34"><span class="fz48">0.58</span>+<span class="fz48">0.05</span>元</p>
+                    <p class="p-bottom fz18">已存入您的收益账户</p>
                 </div>
-            </div>
+            </div>-->
             <!--type5-->
-            <div class="pick-money type5">
+            <!--<div class="pick-money type5">
                 <div class="income">
-                    <p class="p-type fz36">恭喜您抢到</p>
-                    <p class="p-money fz34"><span class="fz55">0.66</span>+<span class="fz55">0.05</span>元</p>
-                    <p class="p-bottom fz20">已存入您的收益账户</p>
+                    <p class="p-type fz32">恭喜您抢到</p>
+                    <p class="p-money fz34"><span class="fz48">0.66</span>+<span class="fz48">0.05</span>元</p>
+                    <p class="p-bottom fz18">已存入您的收益账户</p>
                 </div>
-            </div>
+            </div>-->
 
         </section>
     </section>
     <script type="text/javascript">
-        $(function(){
-            $('body').on('click','.dailyPopup',function(){
+        $(function() {
+            $('body').on('click', '.dailyPopup', function() {
                 $('.stn-daily-wrap').show()
             })
-            $('body').on('click','.stn-daily-pick .daily-head .a-btn',function(){
+            $('body').on('click', '.stn-daily-pick .daily-head .a-btn', function() {
                 $('.stn-daily-wrap').hide()
             })
-            $('body').on('click','.daily-bg',function(){
+            $('body').on('click', '.daily-bg', function() {
                 $('.stn-daily-wrap').hide()
             })
 
         })
-
     </script>
     <!-- 天天捡钱 -end -->
 

@@ -5,15 +5,15 @@ nav {
 nav li {
 	float: left;
 	width: 25%;
-	height: 4.6875rem;
+/*	height: 4.6875rem;*/
 	text-align: center;
+    padding-top: 3.125%;
+    border-bottom:1px solid #f1f1f1;
 }
 nav li a {
 	display: block;
 /*	height: 3.9675rem;*/
-	border-bottom:1px solid #f1f1f1;
-/*	border-width: 0 0 1px 1px;*/
-	padding-top: 8%;
+
 }
 nav li.li-last-line a{border-bottom: none;}
 /*
@@ -36,5 +36,5 @@ nav li a span img {
 nav li a p {
 	font-size: .8rem;
 	color: #464646;
-    padding:6% 0 8%;
+    padding:10% 0 12.5%;
 }
