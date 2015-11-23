@@ -14,19 +14,19 @@
     //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
     //接受绝对路径和相对路径 接受斜杠和双反斜杠
     //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
-    pageGroup = [
+    HtmlArray = [
 "./../other/default/DEMO.html",
 "../../other/mileage/mileage1/行驶里程.html"
 ]
 
-    ;pageGroup.config = {
+    ;HtmlArray.config = {
 //      title: '美丽上门',
       eachTitle:true,//每个页面显示标题
 //      deleteTemp:false,//删除临时节点
     };
   </script>
   <!--推荐将该脚本放于用户自定义之后-->
-  <script src="res/PageGroup.js"></script>
+  <script src="res/HtmlArray.js"></script>
   <style rel="stylesheet" type="text/css">
     a:focus{-webkit-user-modify:read-only;}/*pc界面a标签可以点击*/
     h1.pgTitle{position:relative;z-index = 999999;font-size:.5rem;line-height: 1.5;text-align: center;}

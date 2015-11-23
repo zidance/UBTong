@@ -1,4 +1,4 @@
-/*功能说明,指定一个目录如UBTong,将HTMLArray.js拷贝到UBTong的所有第一级子目录下.
+/*功能说明,指定一个目录如UBTong,将BuildArray.js拷贝到UBTong的所有第一级子目录下.
 返回数组,含所有第一级子目录的路径
 */
 var fs = require('fs')
@@ -6,7 +6,7 @@ var fs = require('fs')
 function copyFile(to) {
   //三个配置参数
   var childDir = true, //传给第一层子文件夹内
-    fromFile = './HTMLArray.js',
+    fromFile = './BuildArray.js',
     toDir = to || __dirname;
 
 
