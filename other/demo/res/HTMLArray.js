@@ -31,7 +31,7 @@ $$(function () {
             title: HtmlArray.config.title || 'HtmlArray',
             deleteTemp: HtmlArray.config.deleteTemp || false, //删除临时节点
             eachTitle: HtmlArray.config.eachTitle || false, //每个页面显示标题
-            fixed: HtmlArray.config.fixed && true,//允许fixed定位
+            fixed: HtmlArray.config.fixed, //允许fixed定位
             src: ['src', 'href'], //自定义的资源路径属性
             disable: [] //禁用文件路径集
           },
@@ -237,19 +237,17 @@ $$(function () {
               return false;
             })
 
-            //fixed为false时时
-            if (!init.fixed) {
-
-              $$('*').each(function () {
+            $$('*').each(function () {
+              if ($$(this).attr('href') == '#') {
+                $$(this).attr('href', '###')
+              }
+              //fixed允许时
+              if (init.fixed) {
                 if ($$(this).css('position') == 'fixed') {
                   $$(this).css('position', 'relative')
                 }
-              })
-            }
-            if ($$(this).attr('href') == '#') {
-              $$(this).attr('href', '###')
-            }
-
+              }
+            })
 
           }, 3000)
         }
