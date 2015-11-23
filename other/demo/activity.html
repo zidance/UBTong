@@ -7,24 +7,26 @@
   <meta content="yes" name="apple-mobile-web-app-capable" />
   <meta content="black" name="apple-mobile-web-app-status-bar-style" />
   <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
-  <script src="../../common/js/zepto-1.16.min.js"></script>
   <script src="res/jquery-2.1.4.min.js"></script>
+  <script src="../../common/js/zepto-1.16.min.js"></script>
 
   <script>
     //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
     //接受绝对路径和相对路径 接受斜杠和双反斜杠
     //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
-    pageGroup =
+    HtmlArray =
 ["../../activity/layout1/actpay/actfailure/actfailure1/支付不成功.html","../../activity/layout1/actpay/actsucceed/actsucceed1/btnsucceed/btnsucceed1/按钮.html","../../activity/layout1/actpay/actsucceed/actsucceed1/succeed/succeed1/支付成功.html","../../activity/layout1/actpay/actsucceed/actsucceed1/支付成功.html","../../activity/layout1/details/details/details1/商品详细.html","../../activity/layout1/details/detailsbtn/detailsbtn1/详情按钮.html","../../activity/layout1/details/instructions/instructions1/活动须知.html","../../activity/layout1/details/introduce/introduce1/商品介绍.html","../../activity/layout1/details/outlets/outlets1/服务网点.html","../../activity/layout1/details/pic/pic1/商品详情轮播图.html","../../activity/layout1/details/time/time1/活动时间.html","../../activity/layout1/details/商品详情1.html","../../activity/layout1/list/list1/活动列表.html","../../activity/layout1/list/活动列表.html","../../activity/layout1/settle/btn/btn1/按钮.html","../../activity/layout1/settle/btn/btn2/按钮.html","../../activity/layout1/settle/cartintegral/cartintegral1/结算积分抵用.html","../../activity/layout1/settle/contact/contact1/联系人.html","../../activity/layout1/settle/details/details1/商品详情.html","../../activity/layout1/settle/distribution/distribution1/交易方式选择.html","../../activity/layout1/settle/explain/explain1/服务说明.html","../../activity/layout1/settle/outlets/outlets1/服务网点.html","../../activity/layout1/settle/活动订单提交-到店支付.html","../../activity/layout1/settle/活动订单提交-在线支付.html"]
 
-    ;pageGroup.config = {
+    ;HtmlArray.config = {
 //      title: '美丽上门',
       eachTitle:true,//每个页面显示标题
+//      fixed:true,//默认为false
 //      deleteTemp:false,//删除临时节点
+      disable : ['common/css/common.css','hover.js','common.*?zepto-1.16.min.js','common/js/default.js','jquery.js']//推荐直接写路径
     };
   </script>
   <!--推荐将该脚本放于用户自定义之后-->
-  <script src="res/PageGroup.js"></script>
+  <script src="res/HtmlArray.js"></script>
   <style rel="stylesheet" type="text/css">
     a:focus{-webkit-user-modify:read-only;}/*pc界面a标签可以点击*/
     h1.pgTitle{font-size:.5rem;line-height: 1.5;text-align: center;}
