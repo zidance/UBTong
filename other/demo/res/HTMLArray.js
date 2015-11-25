@@ -1,5 +1,5 @@
 /*依赖于jQuery*/
-if (typeof jQuery === "undefined") {
+;if (typeof jQuery === "undefined") {
   jQuery = {}
 }
 if (!window.Zepto) {
@@ -9,7 +9,7 @@ var $$ = jQuery || Zepto; //测试中zepto的ajax页面不加载js
 //jQuery.noConflict();
 //$ = Zepto;
 
-$$(function () {
+;$$(function () {
 
     setTimeout(function () { //等待获取页面文件的参数
 
@@ -46,6 +46,7 @@ $$(function () {
               }
             }
           };
+      var jsArray = [];
 
         /*参数重设*/
         //是否允许fixed,默认true
@@ -187,13 +188,12 @@ $$(function () {
                       //res处理, meta标签暂不删
                       res = res.replace(/(<\/?!doctype.*?>)|(<\/?html>)|(<\/?head>)|(<\/?body.*?>)|(<title.*?<\/title>)/ig, '').replace(/([\r\n]\s*)+/g, '\n')
 
-                      //script标签改名,目的:暂时不加载
-                      res = res.replace(/<script([\s\S]*?)<\/script>/ig,'<hascript'+'$1'+'</hascript>')
 
-                      //res插入到组合页中
-                      oP.css = res.match(/(<style[\s\S]*?<\/style>)|(<link.*?>)/ig).join(',')
-                      res = res.replace(/(<style[\s\S]*?<\/style>)|(<link.*?>)/ig,'')
-                      $$('head').append(oP.css)
+                      oP.js = res.match(/<script[\s\S]*?<\/script>/ig)
+                      if(oP.js != null)
+                        argsToArray(jsArray,oP.js)
+
+                      res = res.replace(/<script[\s\S]*?<\/script>/ig,'')
                       oP.wrapTemp.append(res)
 
                       mainEnd() //单页面加载结束,也是if中调用主函数的循环
@@ -217,12 +217,8 @@ $$(function () {
         function exportError() {
           setTimeout(function () {
 
-            //script还原
-            $$('body').wrapInner('<div id="habodytemp">')
-              var all = $$('#habodytemp').html()
-              all = all.replace(/<hascript([\s\S]*?)<\/hascript>/g,'<script'+'$1'+'</script>')
-              $('#habodytemp').replaceWith(all)
-
+            jsArray.join('\n')
+            $$('body').append(jsArray)
 
             if (errors.hasError) {
               $$(".pgErrorInfo").css("display", "block")
