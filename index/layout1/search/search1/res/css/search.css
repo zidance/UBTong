@@ -1,6 +1,6 @@
 
 /*搜索*/
-.stn-search{padding: 0 1.6%;}
+.stn-search{padding: 0 1.6%;margin-top: 3.8%;}
 .stn-search input{display: block;width: 100%;outline: none;border: none;color: #000;border-radius: .2rem;padding: .75rem 0 .75rem 20%;box-sizing: border-box;
 background: url(../img/logo.png) no-repeat left center,
     url(../img/search.png) no-repeat 14% center;

@@ -5,28 +5,21 @@ nav {
 nav li {
 	float: left;
 	width: 25%;
-/*	height: 4.6875rem;*/
 	text-align: center;
     padding-top: 3.125%;
     border-bottom:1px solid #f1f1f1;
 }
 nav li a {
 	display: block;
-/*	height: 3.9675rem;*/
 
 }
 nav li.li-last-line a{border-bottom: none;}
-/*
-nav .li-first a {
-	border-width: 0 0 1px 0 !important;
-}
-*/
 nav li a span {
 	display: block;
 	width: 2.29rem;
 	height: 2.29rem;
 	margin: 0 auto;
-	border-radius: 100%;
+/*	border-radius: 100%;*/
 	text-align: center;
 }
 nav li a span img {
