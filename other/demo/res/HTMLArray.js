@@ -6,8 +6,8 @@ if (!window.Zepto) {
   Zepto = {}
 }
 var $$ = jQuery || Zepto; //测试中zepto的ajax页面不加载js
-//jQuery.noConflict();
-//$ = Zepto;
+jQuery.noConflict();
+$ = Zepto;
 
 ;$$(function () {
 
