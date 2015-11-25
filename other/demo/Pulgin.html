@@ -2,45 +2,40 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta content="yes" name="apple-mobile-web-app-capable" />
-  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+  <script type="text/javascript" src="res/jquery-2.1.4.min.js"></script>
   <script src="../../common/js/zepto-1.16.min.js"></script>
-  <script src="res/jquery-2.1.4.min.js"></script>
-
   <script>
-    //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
-    //接受绝对路径和相对路径 接受斜杠和双反斜杠
-    //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
-    pageGroup =
+    //HtmlArray,子页面集合,数组格式,接受相对路径和绝对路径(不包括跨域),接受斜杠和双反斜杠
+    HtmlArray =
 ["../../Pulgin/bargain/details/layout1/details/details1/商品详细.html","../../Pulgin/bargain/details/layout1/detailsbtn/detailsbtn1/详情按钮.html","../../Pulgin/bargain/details/layout1/introduce/introduce1/商品介绍.html","../../Pulgin/bargain/details/layout1/pic/pic1/商品详情轮播图.html","../../Pulgin/bargain/details/layout1/商品详情1.html","../../Pulgin/bargain/index/layout1/list/list1/产品砍价列表.html","../../Pulgin/bargain/index/layout1/pic/pic1/轮播图片.html","../../Pulgin/bargain/index/layout1/sort/sort1/头部分类排序.html","../../Pulgin/bargain/index/layout1/首页1.html","../../Pulgin/bargain/member/layout1/address/address1/收货信息不在配送范围提示页.html","../../Pulgin/bargain/member/layout1/address/address1/收货信息无地址提示页.html","../../Pulgin/bargain/member/layout1/address/address1/收货信息添加.html","../../Pulgin/bargain/member/layout1/address/address1/收货地址.html","../../Pulgin/bargain/member/layout1/evaluation/evaluation1/商品评价.html","../../Pulgin/bargain/member/layout1/index/index1/会员中心.html","../../Pulgin/bargain/member/layout1/logistics/logistics1/查看物流.html","../../Pulgin/bargain/member/layout1/order/header/header1/头部.html","../../Pulgin/bargain/member/layout1/order/lists/lists1/列表.html","../../Pulgin/bargain/member/layout1/order/订单管理1.html","../../Pulgin/bargain/member/layout1/vieworder/vieworder1/查看订单.html","../../Pulgin/bargain/parts/article/article1/文章页.html","../../Pulgin/bargain/parts/boxcart/boxcart1/快捷购物车栏.html","../../Pulgin/bargain/parts/btn/btn1/按钮.html","../../Pulgin/bargain/parts/btn/btn2/按钮.html","../../Pulgin/bargain/parts/footer/footer1/底部.html","../../Pulgin/bargain/parts/top/top1/头部.html","../../Pulgin/bargain/parts/top/top2/头部.html","../../Pulgin/bargain/promotion/layout1/bargain/bargain1/找人砍价.html","../../Pulgin/bargain/promotion/layout1/exhibition/exhibition1/商品展示.html","../../Pulgin/bargain/promotion/layout1/information/information1/商品信息.html","../../Pulgin/bargain/promotion/layout1/prompt/prompt1/提示头部.html","../../Pulgin/bargain/promotion/layout1/商品砍价页-未砍价前.html","../../Pulgin/bargain/promotion/layout1/商品砍价页-砍价后.html","../../Pulgin/MarriageSeat/desk/桌子.html","../../Pulgin/MarriageSeat/婚宴入席.html","../../Pulgin/MarriageSeat/婚宴桌位.html","../../Pulgin/powerhelp/powerhelp.html","../../Pulgin/Updatebargain/parts/btn/砍价按钮.html","../../Pulgin/Updatebargain/parts/information/砍价简介.html","../../Pulgin/Updatebargain/parts/lists/商品列表.html","../../Pulgin/Updatebargain/parts/time/时间倒计时.html","../../Pulgin/Updatebargain/砍价个人页.html","../../Pulgin/Updatebargain/砍价二级页-成功.html","../../Pulgin/Updatebargain/砍价二级页.html","../../Pulgin/Updatebargain/砍价首页.html"]
-
-    ;pageGroup.config = {
-//      title: '美丽上门',
-      eachTitle:true,//每个页面显示标题
-//      deleteTemp:false,//删除临时节点
-    };
+     ;HtmlArray.config = {
+      console: true, //默认false,按每个源页面,生成标题和控制栏,开启可以很好地帮助定位问题所在
+//      fixed: false, //允许fixed定位,默认true,当元素重叠严重时可以用false尝试
+      nullHref: '###', //改变href="#"路径,使空链接不跳转到头部,默认不改变,只有设'###'时会改变
+      disable: ['zepto-1.16.min.js','common/css/common.css'], //禁用文件集,接受格式为数组或单个字符串,推荐只写文件名不带路径.用来禁用引发错误的文件,可用来禁用多次引入会引起问题的脚本,如zepto(这一类需要在本组合页头部去引入一次).
+    }
   </script>
-  <!--推荐将该脚本放于用户自定义之后-->
-  <script src="res/PageGroup.js"></script>
+  <script src="res/HtmlArray.js"></script>
   <style rel="stylesheet" type="text/css">
     a:focus{-webkit-user-modify:read-only;}/*pc界面a标签可以点击*/
-    h1.pgTitle{font-size:.5rem;line-height: 1.5;text-align: center;}
-    h1.pgTitle>*{display:inline-block;font-size:.4rem;line-height: 1.5;margin:0 1em;}
+    /*帮助报错的样式控制*/
+    h1.pgTitle{position:relative;z-index = 999999;font-size:.5rem;line-height: 1.5;text-align: center;}
+    h1.pgTitle>*{display:inline-block;font-size:.4rem;line-height: 1.5;margin:0 1em;word-break: break-all;}
     .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
-    .pgErrorInfo>div{display: none;width:70%;margin:0 auto;}
+    .pgErrorInfo>div{width:70%;margin:0 auto;}
     .pgErrorInfo div p{background-color: #fff;padding:1% 3% 1% 5%;width:100%;}
     .pgErrorInfo div p:first-child{margin-top:30%;}
     .pgErrorInfo button{display:block;width:20%;margin:0 auto;font-size: 1.3rem;padding:.2rem;}
     .pgErrorBg{display: none;position: fixed;top:0;left:0;width: 100%;height:100%;background-color: #000;opacity: 0.3;z-index: 99990;}
+    hascript{display: none;}
   </style>
 
 </head>
 
 <body>
-
+  <!--报错区-->
   <div class="pgErrorInfo">
     <div class="pgErrorInfoPath">
       <p>第<span></span>个路径有误,请检查.</p>
