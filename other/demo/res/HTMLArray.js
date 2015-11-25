@@ -1,14 +1,13 @@
+/*依赖于jQuery*/
 if (typeof jQuery === "undefined") {
   jQuery = {}
 }
 if (!window.Zepto) {
   Zepto = {}
 }
-
 var $$ = jQuery || Zepto; //测试中zepto的ajax页面不加载js
-jQuery.noConflict();
-$ = Zepto; //如果jQuery采用不完整版,就需要
-
+//jQuery.noConflict();
+//$ = Zepto;
 
 $$(function () {
 
@@ -23,18 +22,16 @@ $$(function () {
           HtmlArray.config = {}
         }
 
-
-        //默认的初始化,不推荐修改此处. 推荐在组合页配置全局HtmlArray.config={}
+        /*默认的初始化,不推荐修改此处. 推荐在组合页配置全局HtmlArray.config={}*/
         var iPageNum = 0, //第n个页面
           init = {
-            //组合页面的标题
-            title: HtmlArray.config.title || 'HtmlArray',
-            deleteTemp: HtmlArray.config.deleteTemp || false, //删除临时节点
-            eachTitle: HtmlArray.config.eachTitle || false, //每个页面显示标题
-            noFixed: HtmlArray.config.noFixed, //禁止fixed定位,默认false
+            title: HtmlArray.config.title || 'HtmlArray',//组合页面的标题
+            deleteWrap: HtmlArray.config.deleteWrap, //删除临时节点
+            console: HtmlArray.config.console || false, //每个页面显示标题
+            fixed: HtmlArray.config.fixed, //fixed定位
             src: ['src', 'href'], //自定义的资源路径属性
-            disable: [], //禁用文件路径集
-            nullHref:HtmlArray.config.nullHref || '#' //改变href="#"路径,默认不改变
+            disable: ['HtmlArray.js'], //禁用文件集
+            nullHref: HtmlArray.config.nullHref || '#' //改变href="#"路径
           },
           errors = {
             hasError: false,
@@ -50,7 +47,12 @@ $$(function () {
             }
           };
 
-        //集合用户参数和默认初始化,对参数重设
+        /*参数重设*/
+        //是否允许fixed,默认true
+      if(undefined === init.fixed)
+        init.fixed = true
+
+        //集合用户参数和默认初始化
         var argsToArray = function (initarg, user) {
           if (user instanceof Array)
             Array.prototype.push.apply(initarg, user)
@@ -69,7 +71,6 @@ $$(function () {
         //资源路径的匹配原则,配合循环体中的replace用
         var srcReg = new RegExp('(' + init.src.join('|') + ')\\s*=\\s*[\'\"]((?!#|\/|(.*?:\/)).*?)[\'\"]', 'ig')
 
-
         //页面标题
         $$("head").prepend("<title>" + (init.title))
 
@@ -87,26 +88,31 @@ $$(function () {
           else if (/:\//.test(dir)) toPath.type = 'absolute_http'
             //本页内部锚点链接--文件名可带# 且资源路径已经改为独立处理
             //        else if (/^#/.test(dir)) toPath.type = 'anchor'
-
-          //相对路径
+            //相对路径
           else {
             toPath.type = 'relative'
               //兼容node方式的相对路径写法
             if (/^.\//.test(dir)) {
               dir = dir.replace(/^.\//, '')
             }
-
           }
-
           toPath.url = dir
           return toPath
         }
 
-
-        //主循环函数,不采用for是避免异步造成的变量混乱
+        /*主循环函数,不采用for是避免异步造成的变量混乱*/
         var main = function () {
             var mainEnd = function () {
               iPageNum++
+
+              //删除临时节点
+              if (init.deleteWrap) {
+                  var temp = $$(oP.wrapTemp).html()
+                  $$(oP.wrapTemp).replaceWith(temp)
+              }
+
+
+
               main() //if中调用主函数的循环
                 //exportError()不适合在这里
             }
@@ -115,18 +121,14 @@ $$(function () {
               //处理第n个子页面,同时也是循环中的当前子页面
               var oP = pathChange(HtmlArray[iPageNum]);
 
+              //包裹节点和控制节点
               (function wrap() {
-                //添加临时包裹节点页面中
-                //oP.wrapTemp = oP.url.replace(/[\/\.]+/mg,'-')//以路径命名类
                 oP.wrapTemp = "pgwrapTemp" + iPageNum
-                oP.childTemp = "pgchildTemp" + iPageNum
                 $$("body").append('<div class="' + oP.wrapTemp + '">')
                 oP.wrapTemp = $$('.' + oP.wrapTemp)
-                oP.wrapTemp.append('<div class="' + oP.childTemp + '">')
-                oP.childTemp = $$('.' + oP.childTemp)
 
                 //按源文件路径加入标题字段
-                if (init.eachTitle) {
+                if (init.console) {
                   ('/' + oP.url).match(/.*\/(.*)\..*/)
                   oP.title = RegExp.$1
                   oP.wrapTemp.before('<h1 class="pgTitle">' + oP.title + '<a target="_blank" href="' + oP.url + '">' + oP.url + '</a><input type="button" value="隐藏" /><span title="删除后,恢复请刷新页面">删除该节点</span></h1>')
@@ -157,6 +159,7 @@ $$(function () {
               //非空路径,执行ajax
               else {
 
+                /*ajax主体*/
                 $$.ajax({
                     url: oP.url,
                     type: "GET",
@@ -173,21 +176,25 @@ $$(function () {
                         oP.path = ''
                       }
 
-
-
                       //源文件中的资源 路径处理
                       //禁用文件处理
-                      if (init.disable) {
                         for (var i = init.disable.length - 1; i >= 0; i--) {
                           res = res.replace(new RegExp('(' + init.src.join('|') + ')\\s*=\\s*[\'\"].*?' + init.disable[i] + '.*?[\'\"]', 'ig'), '')
                         }
-                      }
                       //非禁用文件的通用处理
                       res = res.replace(srcReg, '$1="' + oP.path + '$2"')
 
+                      //res处理, meta标签暂不删
+                      res = res.replace(/(<\/?!doctype.*?>)|(<\/?html>)|(<\/?head>)|(<\/?body.*?>)|(<title.*?<\/title>)/ig, '').replace(/([\r\n]\s*)+/g, '\n')
 
-                      //res处理,并插入到组合页中 meta标签暂不删
-                      oP.wrapTemp.append(res = res.replace(/(<\/?!doctype.*?>)|(<\/?html>)|(<\/?head>)|(<\/?body.*?>)|(<title.*?<\/title>)/ig, '').replace(/([\r\n]\s*)+/g, '\n'))
+                      //script标签改名,目的:暂时不加载
+                      res = res.replace(/<script([\s\S]*?)<\/script>/ig,'<hascript'+'$1'+'</hascript>')
+
+                      //res插入到组合页中
+                      oP.css = res.match(/(<style[\s\S]*?<\/style>)|(<link.*?>)/ig).join(',')
+                      res = res.replace(/(<style[\s\S]*?<\/style>)|(<link.*?>)/ig,'')
+                      $$('head').append(oP.css)
+                      oP.wrapTemp.append(res)
 
                       mainEnd() //单页面加载结束,也是if中调用主函数的循环
                     }, //success结束
@@ -198,28 +205,25 @@ $$(function () {
 
 
 
-              //删除临时节点
-              if (init.deleteTemp) {
-                //                      oP.wrapTempControl.remove()
-                //                      oP.childTemp.unwrap().remove()
-              } else {
-                oP.childTemp.remove()
-              }
-
             } //多个子页面间的if循环结束
             //下面else 为iPageNum>=HtmlArray.length,即页面循环结束
             else {
               exportError()
             }
-
           } //main
-
         main()
-
 
         //错误输出
         function exportError() {
           setTimeout(function () {
+
+            //script还原
+            $$('body').wrapInner('<div id="habodytemp">')
+              var all = $$('#habodytemp').html()
+              all = all.replace(/<hascript([\s\S]*?)<\/hascript>/g,'<script'+'$1'+'</script>')
+              $('#habodytemp').replaceWith(all)
+
+
             if (errors.hasError) {
               $$(".pgErrorInfo").css("display", "block")
               $$(".pgErrorBg").css("display", "block")
@@ -239,24 +243,24 @@ $$(function () {
             })
 
             //href="#"改写为"###"
-            if('###' == init.nullHref){
-            $$('*').each(function () {
-              if ($$(this).attr('href') == '#') {
-                $$(this).attr('href', '###')
-              }
-            })
+            if ('###' == init.nullHref) {
+              $$('*').each(function () {
+                if ($$(this).attr('href') == '#') {
+                  $$(this).attr('href', '###')
+                }
+              })
             }
 
             //固定定位改写为相对定位
-              if (init.noFixed) {
-                  $$('*').each(function () {
+            if (!init.fixed) {
+              $$('*').each(function () {
                 if ($$(this).css('position') == 'fixed') {
                   $$(this).css('position', 'relative')
                 }
               })
-              }
+            }
 
-          }, 3000)
+          }, 1000)
         }
 
       }, 300) //setTimeout //等待获取页面文件的参数
