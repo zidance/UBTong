@@ -1,7 +1,40 @@
 /*CPA/CPS切换*/
 .stn-switch{ width:100%; height:3.7rem; border-bottom:1px solid #d4d4d4; background:#fff; position:fixed; top:0; left:0; z-index:10; }
+.stn-switch:after{ background: #d4d4d4 !important;}
 .stn-switch ul{ width:78%; margin:.61rem auto 0; }
 .stn-switch li{ width:50%; height:2.47rem; float:left; }
 .stn-switch li a{ display:block; height:2.32remn; line-height:2.32rem; text-align:center; border:1px solid #f1590d; border-radius:6px 0 0 6px; color:#ff6766; }
 .stn-switch li:last-child a{ border-width:1px 1px 1px 0; border-radius:0 6px 6px 0; }
 .stn-switch li a.act{ background:#f1590d; color:#fff; }
+
+.stn-switch li a{
+    position: relative;
+    border:none !important;
+}
+
+.stn-switch li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid;
+    border-color:#f1590d;
+    border-radius:10px 0 0 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.stn-switch li:last-child a:before{
+	 border-width:1px 1px 1px 0 !important; 
+	 border-radius:0 10px 10px 0 !important; 
+}
+
+
+
+

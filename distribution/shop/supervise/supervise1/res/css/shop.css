@@ -74,6 +74,9 @@
 	background-size: 4.46rem 4.46rem;
 	margin: 0 auto;
 }
+
+.stn-info .pic li a:after{ border-radius: 0px !important;}
+
 .stn-info .pic li a img {
 	width: 100%;
 	height: 100%;

@@ -1,69 +1,69 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>确认发货</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/logistics.css" rel="stylesheet" type="text/css" />
-<link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script src="../../../../common/js/zepto-1.16.min.js"></script>
-<script src="../../../../common/js/hover.js"></script>
-<script>
-	$(function(){
-		var _box = $('#BoxLogistics');
-		var _ul = _box.find('ul');
-		var _bg = $('#BackgroundDiv');
-		var _left,_top;
-		$('#BtnInput').focus(function(){
-			_box.show();
-			_bg.show();
-			BgLocation();
-		});
-		_box.find('.a-closed').click(function(){
-			_box.hide();
-			_bg.hide();
-		});
-		_bg.click(function(){
-			_box.hide();
-			_bg.hide();
+	<title>确认发货</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="res/css/logistics.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+	<script src="../../../../common/js/zepto-1.16.min.js"></script>
+	<script src="../../../../common/js/default.js"></script>
+	<script>
+		$(function(){
+			var _box = $('#BoxLogistics');
+			var _ul = _box.find('ul');
+			var _bg = $('#BackgroundDiv');
+			var _left,_top;
+			$('#BtnInput').focus(function(){
+				_box.show();
+				_bg.show();
+				BgLocation();
+			});
+			_box.find('.a-closed').click(function(){
+				_box.hide();
+				_bg.hide();
+			});
+			_bg.click(function(){
+				_box.hide();
+				_bg.hide();
+			})
+			function BgLocation(){
+				_ul.height($(window).height()*0.5);
+
+				_left= ($(window).width()-_box.width())/2;
+				_top = ($(window).height()-_box.height())/2;
+				_box.css({'left':_left,'top':_top});
+			}
+			$(window).resize(function(){
+				BgLocation();
+			})	
 		})
-		function BgLocation(){
-			_ul.height($(window).height()*0.5);
-			
-			_left= ($(window).width()-_box.width())/2;
-			_top = ($(window).height()-_box.height())/2;
-			_box.css({'left':_left,'top':_top});
-		}
-		$(window).resize(function(){
-			BgLocation();
-		})	
-	})
-</script>
+	</script>
 </head>
 
 <body>
 	<!--物流弹出框-->
 	<div class="box-logistics" id="BoxLogistics">
-    	<h1 class="fz32">请选择</h1>
-        
-        <ul>
-        	<li><input type="checkbox" /><span>顺丰快递</span><div class="clr"></div></li>
-            <li><input type="checkbox" /><span>申通快递</span><div class="clr"></div></li>
-            <li><input type="checkbox" /><span>圆通快递</span><div class="clr"></div></li>
-            <li><input type="checkbox" /><span>韵达快递</span><div class="clr"></div></li>
-            <li><input type="checkbox" /><span>天天快递</span><div class="clr"></div></li>
-        </ul>
-        
-        <div class="btn">
-        	<a class="a-closed fz28" href="#">取消</a>
-            <a class="fz28" href="#">确定</a>
-        </div>
-    </div>
-    <div id="BackgroundDiv"></div>
-    <!--物流弹出框-end-->
+		<h1 class="fz32">请选择</h1>
+
+		<ul>
+			<li><input type="checkbox" /><span>顺丰快递</span><div class="clr"></div></li>
+			<li><input type="checkbox" /><span>申通快递</span><div class="clr"></div></li>
+			<li><input type="checkbox" /><span>圆通快递</span><div class="clr"></div></li>
+			<li><input type="checkbox" /><span>韵达快递</span><div class="clr"></div></li>
+			<li><input type="checkbox" /><span>天天快递</span><div class="clr"></div></li>
+		</ul>
+
+		<div class="btn">
+			<a class="a-closed fz28" href="#">取消</a>
+			<a class="fz28" href="#">确定</a>
+		</div>
+	</div>
+	<div id="BackgroundDiv"></div>
+	<!--物流弹出框-end-->
 
 	<p class="logistics-order fz32">订单号：1234567890</p>
 	<section class="stn-logistics">
@@ -71,6 +71,6 @@
 		<p class="fz28">物流运单号：<input type="text" placeholder="请填写正确的物流运单号" value="" /></p>
 	</section>
 	
-	<button class="fz32">确定</button>
+	<button class="fz32 btn-btn">确定</button>
 </body>
 </html>

@@ -11,7 +11,23 @@ body{ background:#f7f5f5; }
 .product-details .details-num .number-name{ color:#939292; float:left; margin:.3rem .8rem 0 0; }
 .product-details .number-input{ width:7.8125rem; height:1.63rem; float:left; }
 .product-details .number-input a{ float:left; width:2.54rem; height:1.63rem; line-height:1.43rem; text-align:center; border:1px solid #dbdbdb; color:#686868; box-sizing:border-box; }
-.product-details .number-input input{ float:left; border:none; background:#fff; border-radius:0px; border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; width:2.54rem; height:1.63rem; height:1.63rem; text-align:center; box-sizing:border-box; }
+.product-details .number-input span{
+	float:left;
+	width:2.54rem;
+	height:1.63rem;
+	box-sizing:border-box;
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+}
+.product-details .number-input input {
+	float: left;
+	border: none;
+	background: #fff;
+	border-radius: 0px;
+	width: 2.54rem;
+	height: 1.63rem;
+	text-align: center;
+}
 
 @media screen and (max-width:320px){
 	.product-details .details-num .number-name{ margin-top:.1rem; }

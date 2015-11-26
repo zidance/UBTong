@@ -7,6 +7,8 @@
 .stn-lists .lists-region a .up{ background-image:url(../img/up.png); }
 .stn-lists .lists-region a .down{ background-image:url(../img/down.png); }
 
+.stn-lists .lists-region .last:after{ width: 0px;}
+
 /*地区选择框*/
 .box-region{ position:fixed; left:14.21875%; width:71.5625%; background:#fff; border-radius:7px; z-index:90; display:none; }
 .box-region h1{ text-align:center; color:#6a6a6a; border-bottom:1px solid #e6e6e6; padding:.79rem 0; position:relative; }
@@ -14,7 +16,7 @@
 .box-region ul{ overflow-y:auto; }
 .box-region li{ border-bottom:1px solid #e6e6e6; padding:.69rem 0; }
 .box-region li input[type=checkbox]{ -webkit-appearance:none; appearance:none; width:20px; height:20px; margin:.1rem 5% 0; cursor:pointer; vertical-align:bottom; background:none; border:1px solid #dbdada; -webkit-border-radius:50px; -moz-border-radius:50px; border-radius:50px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; position:relative; outline:none; float:left; }
-.box-region li input[type=checkbox]:checked::after{ content:url(../img/selective.png); display:block; position:absolute; top:-1px; left:-1px; }
+.box-region li input[type=checkbox]:checked::before{ content:url(../img/selective.png); display:block; position:absolute; top:0px; left:0px; }
 .box-region li span{ display:block; float:left; color:#6a6a6a; }
 .box-region .btn{ padding:.72rem 0; }
 .box-region .a-btn{ display:block; width:40%; height:1.8rem; line-height:1.8rem; text-align:center; background:#d21c26; color:#fff; border-radius:4px; margin:0 auto; }
@@ -39,6 +41,7 @@
 .stn-lists li .p-science{ color:#676767; margin-top:.7rem; }
 .stn-lists li .p-science span{ color:#f08f00; }
 
+.stn-lists li .a-img:after{ border-radius: 0px !important;}
 /*默认灰色图标*/
 .stn-lists li .p-num{ display:block; float:right; background:url(../img/distance.png) no-repeat 0 center; background-size:.47rem .72rem; padding-left:.72rem; color:#a6a6a6; position:absolute; top:0; right:.36rem; }
 

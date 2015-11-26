@@ -9,12 +9,15 @@
 <link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="header/header1/res/css/header.css" rel="stylesheet" type="text/css" />
 <link href="lists/lists1/res/css/lists.css" rel="stylesheet" type="text/css" />
+<link href="../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+<script type="text/javascript" src="../../../common/js/default.js"></script>
 </head>
 
 <body>
 	<!--导航-->
 	<nav>
-		<ul>
+		<ul class="find">
 			<li><a class="fz28" href="#">未付款</a></li>
 			<li><a class="act fz28" href="#">待发货</a></li>
 			<li><a class="fz28" href="#">未收货</a></li>
@@ -23,6 +26,7 @@
 		</ul>
 	</nav>
 	<!--导航-end-->
+    <script type="text/javascript">setHover('find');</script>
     
     <section class="stn-order"> <!--已取消状态：cancel-order-->
 		<!--订单列表-->

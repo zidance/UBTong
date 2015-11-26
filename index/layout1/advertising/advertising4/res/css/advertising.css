@@ -1,0 +1,7 @@
+.stn-advertis-pic{padding:0 7%;box-sizing: border-box;width: 100%;background-color: #fff;margin-top: 3.9%;/*25/640*/}
+.stn-advertis-pic .p-title{color: #454545;max-width: 110%;margin:0 auto;padding:4.4% 0;/*28/640*/ text-align: center;}
+.stn-advertis-pic .img-big{width: 100%;}
+.stn-advertis-pic .btn{font-size: 0;padding: 4% 0 5.6%;/*20/500 28/500*/}
+.stn-advertis-pic .btn a{display: inline-block;width: 49%;/*245/500*/}
+.stn-advertis-pic .btn a:first-child{margin-right:2%;}
+.stn-advertis-pic .btn a img{width:100%;}

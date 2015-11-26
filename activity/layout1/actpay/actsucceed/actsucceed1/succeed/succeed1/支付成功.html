@@ -1,85 +1,87 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>预约成功</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/actsucceed.css" rel="stylesheet" type="text/css" />
-<link href="../../../../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script src="../../../../../../../common/js/hover.js"></script>
-
+    <title>预约成功</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/actsucceed.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../../../../common/js/zepto-1.16.min.js"></script>
 </head>
 
 <body style="background:#f7f5f5;">
 	<script>
-	window.onload = function(){ 
-		document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
-    } 
-	 window.onresize = function(){ 
-		document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
-    } 
-	</script>
-	
-	<!--预约成功-->
-    <section class="stn-subsucceed">
-    	<div class="subsucceed">
-        	<span class="s-img"><img src="res/img/succeed.png" /></span>
-            <p class="fz32">恭喜您，订单支付成功！</p>
-        </div>
-        <div class="subsucceed-seal" id="Seal"><img src="res/img/seal.png" /></div>
-        
-        <!--二维码-->
-        <div class="qr-code" id="Code">
-        	<article>
-                <p class="p-name fz32">订单编号：6879 2565</p>
-                <p class="p-name fz32">订单金额：<span>￥389.00元</span></p>
-                <p class="p-prompt fz24">请在预约时间持此订单前往网点享受服务</p>
-				  <span class="s-img"><img src="res/img/img2.jpg" /></span>
-            </article>
-        </div>
-        
-        <!--商品详情-->
-        <div class="service">
-        	<article>
-                <h1 class="fz32">商品详情</h1>
-            
-                <ul>
-                    <li>
-                        <span class="s-img"><img src="res/img/img1.jpg" /></span>
-                        <div class="content">
-                            <p class="p-name fz28">奇瑞东方之子、威麟开瑞汽车配件...</p>
-                        </div>
-                        <p class="p-num fz28">销量：27件</p>
-                        <p class="p-money fz32">￥389.00</p>
-                        
-                        <div class="clr"></div>
-                    </li>
-                </ul>
-            </article>
-        </div>
-        
-        <!--适用服务网点-->
-        <div class="outlets">
-            <a class="a-title fz32" href="#">预约服务网点 <span class="fz26">更多</span></a>
-        
-            <ul>
-                <li>
-                    <span class="s-img"><img src="res/img/img1.jpg" /></span>
-                    <p class="p-name fz28">服务网名称</p>
-                    <p class="p-address fz24">北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼</p>
-                    <em class="e3">星级好评</em>  <!-- 一星：e1  二星：e2  三星：e3  四星：e4  五星：e5 -->
-                    <p class="p-science fz20">技术: <span>中级</span></p>
-                    <p class="p-num fz24">10km</p>
-                    <a class="fz28" href="#">路线导航</a>
-                    
-                    <div class="clr"></div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!--预约成功-end-->
+       window.onload = function(){ 
+          document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
+      } 
+      window.onresize = function(){ 
+          document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
+      } 
+      $(function(){
+        document.body.addEventListener('touchstart', function (){});  
+      })
+  </script>
+
+  <!--预约成功-->
+  <section class="stn-subsucceed">
+   <div class="subsucceed">
+       <span class="s-img"><img src="res/img/succeed.png" /></span>
+       <p class="fz32">恭喜您，订单支付成功！</p>
+   </div>
+   <div class="subsucceed-seal" id="Seal"><img src="res/img/seal.png" /></div>
+
+   <!--二维码-->
+   <div class="qr-code" id="Code">
+       <article>
+        <p class="p-name fz32">订单编号：6879 2565</p>
+        <p class="p-name fz32">订单金额：<span>￥389.00元</span></p>
+        <p class="p-prompt fz24">请在预约时间持此订单前往网点享受服务</p>
+        <span class="s-img"><img src="res/img/img2.jpg" /></span>
+    </article>
+</div>
+
+<!--商品详情-->
+<div class="service">
+   <article>
+    <h1 class="fz32">商品详情</h1>
+
+    <ul>
+        <li>
+            <span class="s-img"><img src="res/img/img1.jpg" /></span>
+            <div class="content">
+                <p class="p-name fz28">奇瑞东方之子、威麟开瑞汽车配件...</p>
+            </div>
+            <p class="p-num fz28">销量：27件</p>
+            <p class="p-money fz32">￥389.00</p>
+
+            <div class="clr"></div>
+        </li>
+    </ul>
+</article>
+</div>
+
+<!--适用服务网点-->
+<div class="outlets">
+    <a class="a-title fz32" href="#">预约服务网点 <span class="fz26">更多</span></a>
+
+    <ul>
+        <li>
+            <span class="s-img"><img src="res/img/img1.jpg" /></span>
+            <p class="p-name fz28">服务网名称</p>
+            <p class="p-address fz24">北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼北京市大兴区黄村东大街1号楼</p>
+            <em class="e3">星级好评</em>  <!-- 一星：e1  二星：e2  三星：e3  四星：e4  五星：e5 -->
+            <p class="p-science fz20">技术: <span>中级</span></p>
+            <p class="p-num fz24">10km</p>
+            <a class="fz28" href="#">路线导航</a>
+
+            <div class="clr"></div>
+        </li>
+    </ul>
+</div>
+</section>
+<!--预约成功-end-->
 </body>
 </html>

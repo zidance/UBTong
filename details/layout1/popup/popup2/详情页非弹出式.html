@@ -1,23 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>详情页非弹出式</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/popup.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
+    <title>详情页非弹出式</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/popup.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../common/js/default.js"></script>
+    
 </head>
 
 <body>
 	<!--列表购物车-->
     <button class="button-popup fz28">请选择系列  规格  颜色</button>
     
-	<div class="box-popup" id="BoxPopup">
-		
-        <div class="type">
+    <div class="box-popup" id="BoxPopup">
+      
+        <div class="type one">
         	<p class="fz28">限时</p>
             <ul>
             	<li><a class="fz28 act" href="#">3天</a></li>
@@ -25,7 +27,7 @@
             </ul>
             <div class="clr"></div>
         </div>
-        <div class="type">
+        <div class="type two">
         	<p class="fz28">规格</p>
             <ul>
             	<li><a class="fz28 act" href="#">200g</a></li>
@@ -46,10 +48,13 @@
         </div>
         
         
-	</div>
-	
-	
-	
-	<!--列表购物车-end-->
+    </div>
+    <script type="text/javascript">setHover('one');</script>
+    <script type="text/javascript">setHover('two');</script>
+    <script type="text/javascript">setHover('type-pic');</script>
+    
+    
+    
+    <!--列表购物车-end-->
 </body>
 </html>

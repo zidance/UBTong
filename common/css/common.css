@@ -313,7 +313,7 @@ html{font-size:172%;}
     position:absolute;
     content: "";
     height:1px;
-    background:green;
+    background:#eaeaea;
     left:0;
     right:0;
 }
@@ -330,7 +330,7 @@ html{font-size:172%;}
     position:absolute;
     content: "";
     width:1px;
-    background:blue;
+    background:#eaeaea;
     top:0;
     bottom:0;
 }
@@ -351,8 +351,8 @@ html{font-size:172%;}
     box-sizing:border-box;
     width:100%;
     height:100%;
-    border:1px solid blue;
-    point-events:none;
+    border:1px solid #eaeaea;
+    pointer-events:none;
 }
 
 /* 最后两个是为了检测Mobile ie9, 是因为Mobile IE9检测出的dpi为96dpi，与实际不符合 */
@@ -467,6 +467,8 @@ html{font-size:172%;}
         transform:scale(.3333);
     }
 }
+
+.s-input{ display:inline-block; border: 1px solid #cccccc;}
 
 
 
