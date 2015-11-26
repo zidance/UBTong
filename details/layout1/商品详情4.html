@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>商品详情</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="pic/pic1/res/css/detailspic.css" rel="stylesheet" type="text/css" />
+    <link href="details/details2/res/css/details.css" rel="stylesheet" type="text/css" />
+    <link href="popup/popup2/res/css/popup.css" rel="stylesheet" type="text/css" />
+    <link href="meal/meal1/res/css/maintenance.css" rel="stylesheet" type="text/css" />
+    <link href="introduce/introduce1/res/css/introduce.css" rel="stylesheet" type="text/css" />
+    <link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
+
+    <script src="introduce/introduce1/res/js/jquery.js"></script>
+    <script src="../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../common/js/default.js"></script>
+
+
+</head>
+
+<body onload="loaded()" style="background:#f7f5f5;">
+    <!--商品图片-->
+    <script src="pic/pic1/res/js/iscroll.js"></script>
+    <script>
+        /*设置宽度、高度*/
+        $(function() {
+            var _obj = $('#scroller');
+            var _indicator = $('#indicator');
+            var _slide = _obj.find('.slide').size();
+            _obj.width(11.62 * _slide + 0.3 + 'rem');
+            _indicator.width(20 * _slide - 10);
+        })
+
+        /*使用iscroll插件*/
+        var myScroll;
+
+        function loaded() {
+            myScroll = new IScroll('#wrapper', {
+                scrollX: true,
+                scrollY: false,
+                momentum: false,
+                snap: true,
+                snapSpeed: 1000,
+                keyBindings: true,
+                indicators: {
+                    el: document.getElementById('indicator'),
+                    resize: false
+                }
+            });
+        }
+        //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+    <div class="details-pic">
+        <div id="viewport">
+            <div id="wrapper">
+                <div id="scroller">
+                    <div class="slide">
+                        <div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
+                    </div>
+                    <div class="slide">
+                        <div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
+                    </div>
+                    <div class="slide">
+                        <div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
+                    </div>
+                    <div class="slide">
+                        <div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
+                    </div>
+                    <div class="slide">
+                        <div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
+                    </div>
+                    <div class="slide">
+                        <div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="indicator">
+            <div id="dotty"></div>
+        </div>
+    </div>
+    <!--商品图片-end-->
+
+
+
+
+    <!--商品详细-->
+    <div class="product-details" id="ProductDetails">
+        <p class="p-name fz28">凯胜KASON汤仙虎碳素羽毛球拍109TI 复刻版支持货到付款</p>
+        <div class="price price-member">
+            <!--未选状态a-btn,选中状态a-checked-->
+            <a class="a-checked" href="###">
+                <p class="p-title fz22">会员价</p>
+                <p class="p-money fz40"><span>￥</span>129.90</p>
+                <p class="p-money-old fz28">￥140.00</p>
+            </a>
+        </div>
+        <div class="price price-integral">
+            <!--未选状态a-btn,选中状态a-checked-->
+            <a class="a-btn" href="###">
+                <p class="p-title fz22">积分价</p>
+                <p class="p-money fz40"><span>￥</span>109.90</p>
+                <p class="p-plus fz28">+</p>
+                <p class="p-money-integral fz40">500<span>积分</span></p>
+            </a>
+        </div>
+
+        <div class="details-num">
+            <div class="number-name fz28">数　量</div>
+            <div class="number-input">
+                <a href="#" class="fz28 reduct">-</a>
+                <input class="fz28" type="text" value="1" />
+                <a href="#" class="fz28 add">+</a>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <!--<p class="p-prompt fz28">付款后预计5月21日送达</p>-->
+        <p class="p-prompt2 fz28">定制产品不享有七天无理由退换货</p>
+        <!--<a class="a-collect" href="#">收藏</a>-->
+    </div>
+    <script>
+        $(function() {
+            var _obj = $('#ProductDetails');
+            var _reduct = _obj.find('.details-num .reduct');
+            var _add = _obj.find('.details-num .add');
+            var _inp = _obj.find('.details-num input');
+
+            _add.click(function() {
+                _inp.val(function() {
+                    return Number($(this).val()) + 1;
+                })
+            })
+            _reduct.click(function() {
+                if (_inp.val() != 1) {
+                    _inp.val(function() {
+                        return Number($(this).val()) - 1;
+                    });
+                }
+            });
+        })
+    </script>
+    <!--商品详细-end-->
+
+    <!--列表购物车-->
+    <div class="button-popup fz28">请选择系列 规格 颜色 </div>
+
+    <div class="box-popup" id="BoxPopup">
+
+        <div class="type">
+            <p class="fz28">限时</p>
+            <ul>
+                <li><a class="fz28 act" href="#">3天</a></li>
+                <li><a class="fz28" href="#">6天</a></li>
+            </ul>
+            <div class="clr"></div>
+        </div>
+        <div class="type">
+            <p class="fz28">规格</p>
+            <ul>
+                <li><a class="fz28 act" href="#">200g</a></li>
+                <li><a class="fz28" href="#">300g</a></li>
+                <li><a class="fz28 noAct" href="#">400g</a></li>
+            </ul>
+            <div class="clr"></div>
+        </div>
+        <div class="type type-pic">
+            <p class="fz28">涂装选择</p>
+            <ul>
+                <li>
+                    <a class="fz28 act" href="#"><img src="popup/popup2/res/img/exam.png" />
+                        <p>酷炫迷彩</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="fz28" href="#"><img src="popup/popup2/res/img/exam.png" />
+                        <p>酷炫迷彩</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="fz28" href="#"><img src="popup/popup2/res/img/exam.png" />
+                        <p>酷炫迷彩</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="fz28" href="#"><img src="popup/popup2/res/img/exam.png" />
+                        <p>酷炫迷彩</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="clr"></div>
+        </div>
+
+    </div>
+    <!--列表购物车-end-->
+
+
+    <!--养护套餐-->
+    <script>
+        function Package() {
+            var _obj = $('#Maintenance .package');
+            var _img = _obj.find('.s-img');
+            _img.width(_obj.width() * 0.29);
+            _img.height(_obj.width() * 0.29);
+        }
+        $(window).resize(function() {
+            Package();
+        });
+        Package();
+    </script>
+    <section class="stn-maintenance" id="Maintenance">
+        <div class="maintenance-lists">
+            <a class="a-title fz32" href="#">养护套餐<span class="fz26">更多</span></a>
+
+            <div class="package" id="Package">
+                <table>
+                    <tr>
+                        <td width="29%"><a href="#"><span class="s-img"><img src="meal/meal1/res/img/img1.jpg" /><span class="s-money fz24"><i>￥332.90</i><em class="e-bg"></em></span></span></a></td>
+                        <td><span class="s-symbol"><img src="meal/meal1/res/img/add.png" /></span></td>
+                        <td width="29%"><a href="#"><span class="s-img"><img src="meal/meal1/res/img/img1.jpg" /><span class="s-money fz24"><i>￥332.90</i><em class="e-bg"></em></span></span></a></td>
+                        <td><span class="s-symbol"><img src="meal/meal1/res/img/add.png" /></span></td>
+                        <td width="29%"><a href="#"><span class="s-img"><img src="meal/meal1/res/img/img1.jpg" /><span class="s-money fz24"><i>￥332.90</i><em class="e-bg"></em></span></span></a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="package-btn">
+                <p class="p-money fz24">市场价：￥532.90</p>
+                <p class="p-price fz24">套餐价：<span class="fz28">￥332.90</span></p>
+
+                <div class="btn">
+                    <a class="fz24" href="#">立即购买</a>
+                    <a class="fz24" href="#">加入购物车</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--养护套餐-end-->
+
+    <!--商品介绍-->
+    <script>
+        $(function() {
+            var _obj = $('#DetailsIntroduce');
+            var _btn = _obj.find('nav a');
+            var _item = _obj.find('.introduce-con .introduce-item');
+            //初始化
+            _item.eq(0).show();
+            _btn.eq(0).addClass('act');
+
+            $.each(_btn, function(i, e) {
+                var _this = $(e);
+                _this.click(function() {
+                    _btn.removeClass('act');
+                    _this.addClass('act');
+                    _item.hide();
+                    _item.eq(i).show();
+                });
+            });
+        });
+
+        /*导航跟随滑动效果插件*/
+        (function($) {
+            $.fn.capacity = function(options) {
+                var opts = $.extend({}, $.fn.capacity.deflunt, options);
+
+                var FixedFun = function(element) {
+
+                    var top = opts.top;
+                    var right = ($(window).width() - opts.pageWidth) / 2 + opts.right;
+                    element.css({
+                        "right": right,
+                        "top": top
+                    });
+                    $(window).resize(function() {
+                        var right = ($(window).width() - opts.pageWidth) / 2 + opts.right;
+                        element.css({
+                            "right": right
+                        });
+                    });
+
+                    $(window).scroll(function() {
+                        var scrolls = $(this).scrollTop();
+                        if (scrolls > 500) {
+                            if (window.XMLHttpRequest) {
+                                element.css({
+                                    position: "fixed",
+                                    top: 0
+                                });
+                            } else {
+                                element.css({
+                                    top: scrolls
+                                });
+                            }
+                        } else {
+                            element.css({
+                                position: "relative",
+                                top: top
+                            });
+                        }
+                    });
+                };
+                return $(this).each(function() {
+                    FixedFun($(this));
+                });
+            };
+            $.fn.capacity.deflunt = {
+                right: 0, //相对于页面宽度的右边定位
+                top: 0,
+
+
+            };
+        })(jQuery);
+        /*--------------页面滑动效果 - end ----------------*/
+    </script>
+    <div class="details-introduce" id="DetailsIntroduce" style="margin-bottom:3.77rem;">
+        <nav>
+            <ul>
+                <li><a class="fz28" href="#">商品介绍</a></li>
+                <li><a class="fz28" href="#">商品参数</a></li>
+                <li><a class="fz28" href="#">评价(2039)</a></li>
+            </ul>
+        </nav>
+
+        <div class="introduce-con">
+            <div class="introduce-item">
+                <img src="introduce/introduce1/res/img/img1.jpg" />
+            </div>
+            <div class="introduce-item">
+                <img src="introduce/introduce1/res/img/img1.jpg" />
+            </div>
+            <div class="introduce-item">
+                <ul class="introduce-gbook">
+                    <li>
+                        <p class="p-tel fz28">13*******89</p>
+                        <p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+                        <p class="p-time fz24">2014-07-14 09:06:19 颜色：红色</p>
+                    </li>
+                    <li>
+                        <p class="p-tel fz28">13*******89</p>
+                        <p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+                        <p class="p-time fz24">2014-07-14 09:06:19 颜色：红色</p>
+                    </li>
+                    <li>
+                        <p class="p-tel fz28">13*******89</p>
+                        <p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+                        <p class="p-time fz24">2014-07-14 09:06:19 颜色：红色</p>
+                    </li>
+                    <li>
+                        <p class="p-tel fz28">13*******89</p>
+                        <p class="p-gbook fz28">衣服不错，准备介绍别人穿</p>
+                        <p class="p-time fz24">2014-07-14 09:06:19 颜色：红色</p>
+                    </li>
+                </ul>
+                <a class="a-intgbook fz24" href="#">加载更多</a>
+            </div>
+        </div>
+    </div>
+
+    <!--商品介绍-end-->
+
+    <!--详情按钮高度：3.77rem-->
+    <div class="details-btn">
+        <a class="a-orange fz32" href="#">立即购买</a>
+        <a class="a-yellow fz32" href="#">加入购物车</a>
+    </div>
+    <!--详情按钮-end-->
+
+</body>
+
+</html>

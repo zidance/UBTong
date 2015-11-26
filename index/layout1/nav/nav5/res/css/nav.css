@@ -1,29 +1,25 @@
 /*导航*/
 nav {
-	box-shadow: 0 0 5px #efefef;
+	box-shadow: 0 0 5px #efefef;margin-top:3.6%;background-color:#fff;
 }
 nav li {
 	float: left;
 	width: 25%;
-	height: 4.6875rem;
 	text-align: center;
+    padding-top: 3.125%;
+    border-bottom:1px solid #f1f1f1;
 }
 nav li a {
 	display: block;
-	height: 3.9675rem;
-	border: solid #f1f1f1;
-	border-width: 0 0 1px 1px;
-	padding-top: .72rem;
+
 }
-nav .li-first a {
-	border-width: 0 0 1px 0 !important;
-}
+nav li.li-last-line a{border-bottom: none;}
 nav li a span {
 	display: block;
 	width: 2.29rem;
 	height: 2.29rem;
-	margin: 0 auto .08rem;
-	border-radius: 100%;
+	margin: 0 auto;
+/*	border-radius: 100%;*/
 	text-align: center;
 }
 nav li a span img {
@@ -33,4 +29,5 @@ nav li a span img {
 nav li a p {
 	font-size: .8rem;
 	color: #464646;
+    padding:10% 0 12.5%;
 }

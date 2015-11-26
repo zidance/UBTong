@@ -4,21 +4,16 @@
 .notice .em-notice{float:left;margin:0 .55rem 0 1.12rem;height: inherit;line-height: 2.66rem;display: table-cell;vertical-align: middle;}
 .notice .em-notice span{display:inline-block;height:1.3rem;line-height: 1.2rem;border:1px solid #f98700; border-radius:4px;box-sizing: border-box;padding:0 .08rem;color:#f98700;}
 
-#ul-notice{position:absolute;left:3.68rem;}
+#UlNotice{position:absolute;left:3.68rem;}
 
 @media screen and (min-width:320px) and (max-width:640px){
     .notice{ height: 1.8rem; }
     .notice .em-notice,.notice .a-name{line-height: 1.8rem;}
     .notice .em-notice span{height:.9rem;line-height:.9rem;}
-    #ul-notice{left:3.68rem;}
 }
 @media screen and (max-width:320px){
     .notice{ height: 2.66rem; }
     .notice .a-name,.notice .em-notice{height:2.66rem;line-height: 2.66rem;}
     .notice .em-notice{padding:0 .03rem;}
     .notice .em-notice span{height:1.3rem;line-height: 1.2rem;}
-    #ul-notice{left:3.68rem;}
 }
-
-
-
