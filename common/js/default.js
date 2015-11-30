@@ -32,8 +32,13 @@ $(function(){
 		/*四周都有边框*/
 		var varColor,varRadiu,oParents,varwidth,varstyle;
 		varColor=_all.eq(i).css('border-color');
-		varRadiu=parseInt(_all.eq(i).css('border-radius'))+5;
-		varRadiu=varRadiu+'px';
+		varRadiu=parseInt(_all.eq(i).css('border-radius'));
+		if(varRadiu == 0){
+			varRadiu=varRadiu+'px';
+		}else{
+			varRadiu=varRadiu+5+'px';	
+		}
+		
 		varwidth=_all.eq(i).css('border-width');
 		varstyle=_all.eq(i).css('border-style');
 		var _this=_all.eq(i);
