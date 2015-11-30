@@ -39,7 +39,7 @@ html{font-size:172%;}
 .s-input{ display:inline-block; border: 1px solid #cccccc;}
 
 /*边框苗条化*/
-.border:after{
+.bd::after{
     position:absolute;
     content:"";
     top:0;
@@ -57,9 +57,15 @@ html{font-size:172%;}
     transform-origin:0 0;
 }
 
+/*table中的各元素通过按需定义以下类,实现边框细化,必须与default.js共用*/
+.bd-left{border-left:1px solid #c6c6c6;}
+.bd-right{border-right:1px solid #c6c6c6;}
+.bd-top{border-top:1px solid #c6c6c6;}
+.bd-bottom{border-bottom:1px solid #c6c6c6;}
+
 /* 最后两个是为了检测Mobile ie9*/
 @media (-moz-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx), (-ms-high-contrast:active), (-ms-high-contrast:none) {
-    .border:after{
+    .bd::after{
         width:200%;
         height:200%;
         -webkit-transform:scale(.5);

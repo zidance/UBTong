@@ -104,7 +104,7 @@ $(function () {
 
           /*写入元素计数器,以免li:last-child 之类的影响到同级元素*/
             $('#fix-1px').prepend('\n' + sStyleChain + '.fix-border' + i + '::after{' + sStyleText + '}')
-          oThis.addClass('fix-border' + i + ' border');
+          oThis.addClass('bd fix-border' + i);
           oThis.css('border', 'none')
         }
       }
