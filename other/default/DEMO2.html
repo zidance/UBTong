@@ -30,13 +30,37 @@
 .div12{ border:solid; border-width:0 0 1px 0; border-color:#F60; }
 .div13{ border:solid; border-width:0 0 0 1px; border-color:#F60; }
 .div14{ border:solid; border-width:0 1px 0 0; border-color:#F60; }
-  .div111::after{border:1px solid #000;}
+  .div111::after{border:1px solid #000;}/*.bd定义于html中,不依赖脚本*/
 /*如果需要改变颜色或者是 border-style 必须自己添加 .div:after{ border-style:dotted !important;}只有是四周的才有border-style; 其他四边是没有;因此不能改变四周的border-style; 而改变颜色使用before还是after要看要看你加的是哪个类， 上左都是加before 下右 和上下左右都是加after  但是如果是要改变颜色的话 记得上、下、左、右是改变background的颜色 如：.div:after{ background:#f00;} 或者是.div:before{ background:#f00;} 而上下左右是.div：after{ border-color:#f00;} 同样要记得加！important*/
+
+  table {margin:10px auto;border-color:#ddd;}
+  table td{text-align: center;width:80px;border-color:#ddd;}
 
 </style>
 </head>
 
 <body>
+<!--表格在html中定义边框类,细化需要引入default.js,边框颜色可覆盖-->
+<table class="bd-right bd-bottom">
+  <tr>
+    <td class="bd-top bd-left">一行一列</td>
+    <td class="bd-top bd-left">一行二列</td>
+    <td class="bd-top bd-left">一行三列</td>
+  </tr>
+  <tr>
+    <td class="bd-top bd-left" rowspan="2">二三行一列</td>
+    <td class="bd-top bd-left" colspan="2">二行二三列</td>
+  </tr>
+  <tr>
+    <td class="bd-top bd-left">三行二列</td>
+    <td class="bd-top bd-left"></td>
+  </tr>
+  <tr>
+    <td class="bd-top bd-left" colspan="2">四行一二列</td>
+    <td class="bd-top bd-left">四行三列</td>
+  </tr>
+
+</table>
 <div class="border-000">
     <div class="div111 border">四周</div>
     <div class="div1">四周</div>
@@ -56,6 +80,7 @@
     <div class="div13">左</div>
     <div class="div14">右</div>
 </div>
+
 
 
 </body>

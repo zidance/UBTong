@@ -36,11 +36,9 @@ footer .stn-text ul {
 	float: left;
 }
 footer .stn-text .li-type {
-	border-right: 1px solid #202020;
 	height: 3.27rem;
 	line-height: 3.27rem;
 	border-left: 1px solid #303030;
-	border-right: 1px solid #202020;
 	width: 33.33%;
 	float: left;
 	text-align: center;
@@ -169,6 +167,7 @@ footer .stn-input button {
 	border-radius: 18px;
 	position: fixed;
 	display: none;
+    padding:.3rem 0;
 }
 .fadein {
 	animation: fadein 4s;
