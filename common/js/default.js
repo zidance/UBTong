@@ -3,7 +3,7 @@
  * @hover 按钮点击脚本
  */
 $(function(){
-	document.body.addEventListener('touchstart', function (){}); 	
+//	document.body.addEventListener('touchstart', function (){});
 })
 
 
@@ -108,7 +108,6 @@ $(function () {
 
         //跳出四方向循环前,写入样式
         if (k == 0 && iCount == 0) {
-console.log('\n' + sStyleChain + '.fix-border' + i + '::after{' + sStyleText + '}')
           /*写入元素计数器,以免li:last-child 之类的影响到同级元素*/
             $('#fix-1px').prepend('\n' + sStyleChain + '.fix-border' + i + '::after{' + sStyleText + '}')
           oThis.addClass('bd fix-border' + i);

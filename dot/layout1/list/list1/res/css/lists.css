@@ -5,9 +5,6 @@
 .stn-lists .lists-region a:last-child{ border-right:none; }
 .stn-lists .lists-region a span{ display:inline-block; background:url(../img/down.png) no-repeat right center; background-size:.5rem .29rem; padding-right:1.05rem; line-height:2.5rem; color:#343434; }
 
-.stn-lists .lists-region .last:after{ width: 0px !important; background: #fff !important; }
-
-
 /*列表*/
 
 .stn-lists li{ border-bottom:1px solid #dddddd; }

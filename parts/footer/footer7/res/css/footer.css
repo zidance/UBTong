@@ -11,9 +11,6 @@ footer {
     right: 0;
     margin: 0 auto;
 }
-footer:before{
-   background:#c6c6c6 !important;
-}
 footer li {
 	width: 19.4%;
 	float: left;
