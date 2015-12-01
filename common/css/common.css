@@ -36,8 +36,6 @@ html{font-size:172%;}
 .fz120{font-size:4.36rem;}
 .mt20{margin-top:.72rem;}
 
-.s-input{ display:inline-block; border: 1px solid #cccccc;}
-
 /*边框苗条化*/
 .bd::after{
     position:absolute;

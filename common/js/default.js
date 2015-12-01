@@ -3,7 +3,7 @@
  * @hover 按钮点击脚本
  */
 $(function(){
-//	document.body.addEventListener('touchstart', function (){});
+	document.body.addEventListener('touchstart', function (){});
 })
 
 
