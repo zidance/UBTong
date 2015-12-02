@@ -8,8 +8,6 @@
 .btn-setpayment a:hover{ background:#f15a0c; border-color:#f15a0c; color:#fff; }
 #SetBackground{ width:100%; height:100%; background:#000; opacity:0.5; position:absolute; top:0; left:0; display:none; }
 
-.btn-settlement a:after{ border-color: #f15a0c !important;border-radius:8px; }
-.btn-settlement a:last-child:after{ border-color: #c9c9c9 !important;}
 
-.btn-setpayment a:after{ border-color: #c9c9c9 !important;border-radius:8px;}
-.btn-setpayment a:hover:after{ border-color: #f15a0c !important;border-radius:8px;}
+
+

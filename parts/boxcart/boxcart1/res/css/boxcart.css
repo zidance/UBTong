@@ -2,15 +2,16 @@
 	position: fixed;
 	right: 5%;
 	bottom: 14%;
-	z-index: 80;
+	z-index: 900;
 }
 .box-cart .boxcart-btn {
 	display: block;
 	width: 2.48rem;
 	height: 2.48rem;
 	position: absolute;
-	top: .42rem;
-	right: .42rem;
+    z-index: 901;
+	top: .38rem;
+	right: .38rem;
 }
 .box-cart .boxcart-btn img {
 	width: 100%;

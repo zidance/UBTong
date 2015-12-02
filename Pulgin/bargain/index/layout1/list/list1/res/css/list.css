@@ -15,33 +15,3 @@
 .stn-lists li .bargain div span{ display:inline-block; background:url(../img/num.gif) no-repeat left center; background-size:1.05rem 1.05rem; padding-left:1.59rem; color:#464646; }
 .stn-lists li .bargain div span em{ color:#f54e1f; }
 .stn-lists li .bargain div:last-child a{ display:inline-block; background:url(../img/money.gif) no-repeat left center; background-size:1.05rem 1.05rem; padding-left:1.59rem; color:#464646;  }
-
-.stn-lists li .a-product .product-right{
-	border:none !important;
-}
-
-.stn-lists li .a-product .product-right:before{
-    border-bottom: 1px dotted #d9d9d9 !important;
-    content: ' ';
-    display: block;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-@media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio: 1.5){
-
-  .border-bottom:before,{
-      -webkit-transform: scaleY(.7);
-      -webkit-transform-origin: 0 0;
-      transform: scaleY(.7);
-   }
-
-}
-
-@media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio: 2){
-  .border-bottom:before{
-      -webkit-transform: scaleY(.5);
-      transform: scaleY(.5);
-  }
-}

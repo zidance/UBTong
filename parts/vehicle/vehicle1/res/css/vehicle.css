@@ -7,7 +7,6 @@
 	box-sizing: border-box;
 	border-radius: 6px;
 }
-.stn-vehicle:after{ border-style: dashed !important;}
 
 .stn-vehicle a {
 	display: block;

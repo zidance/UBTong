@@ -41,7 +41,6 @@
 .stn-lists li .p-science{ color:#676767; margin-top:.7rem; }
 .stn-lists li .p-science span{ color:#f08f00; }
 
-.stn-lists li .a-img:after{ border-radius: 0px !important;}
 /*默认灰色图标*/
 .stn-lists li .p-num{ display:block; float:right; background:url(../img/distance.png) no-repeat 0 center; background-size:.47rem .72rem; padding-left:.72rem; color:#a6a6a6; position:absolute; top:0; right:.36rem; }
 
