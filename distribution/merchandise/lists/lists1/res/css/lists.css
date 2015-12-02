@@ -13,7 +13,6 @@
 .stn-lists li .a-btn{ display:block; width:20%; height:1.81rem; line-height:1.81rem; text-align:center; background:#fd7d09; color:#fff; border-radius:4px; position:absolute; bottom:1.09rem; right:4.51%; }
 .stn-lists li .a-null{ background:#c2ceda; }
 
-.stn-lists li .content .s-img:after{ border-radius: 0px !important;}
 
 @media screen and (max-width:320px){
 	.stn-lists li .content .con .p-name{ margin-bottom:.6rem; }

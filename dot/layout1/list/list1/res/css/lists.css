@@ -32,8 +32,6 @@
 .stn-lists li a .content .line3 .s-money{ display:block; color:#f2484c; text-align:right; }
 .stn-lists li a .content .line3 .s-num{ display:block; color:#b2b4af; text-decoration:line-through; text-align:right; margin-top:.2rem; }
 
-.stn-lists li a .s-img:after{ border-radius: 0px !important;}
-
 
 @media screen and (min-width:320px){
 	.stn-lists li a .content .name{ margin-top:.3rem; }

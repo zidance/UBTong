@@ -16,7 +16,7 @@
 .cart-preferential li .p-money em{ color:#939292; float:right; margin-top:.1rem; }
 .p-preferential{ width:93.75%; color:#e52c02; margin:.72rem auto; text-align:right; }
 
-.cart-preferential li .s-img:after{ border-radius: 0px !important;}
+
 @media screen and (min-width:640px){
 	.cart-preferential li .choose-product{ width:17.67rem; }
 	.cart-preferential li .p-name{ width:10.63rem; }

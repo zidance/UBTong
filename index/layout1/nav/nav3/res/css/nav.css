@@ -16,7 +16,7 @@ nav li a {
 	padding-top: .72rem;
 }
 nav .li-first a {
-	border-width: 0 0 1px 0 !important;
+	border-width: 0 0 1px 0;
 }
 nav li a span {
 	display: block;
