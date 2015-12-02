@@ -2,7 +2,7 @@
 	position: fixed;
 	right: 5%;
 	bottom: 14%;
-	z-index: 180;
+	z-index: 900;
 }
 .box-cart .boxcart-btn {
 	display: block;
@@ -11,7 +11,7 @@
 	position: absolute;
 	top: .42rem;
 	right: .4rem;
-	z-index:99
+    z-index: 901;
 }
 .box-cart .boxcart-btn img {
 	width: 100%;
@@ -50,7 +50,6 @@
 }
 
 @media screen and (min-width:321px) and (max-width:360px){
-	.box-cart .boxcart-nav:after{ border-radius:3.8rem !important;}
 	.box-cart .boxcart-btn{top: .39rem;	right: .38rem;}
 }
 
@@ -63,4 +62,3 @@
 		margin: .28rem 0 0 .82rem;
 	}
 }
-

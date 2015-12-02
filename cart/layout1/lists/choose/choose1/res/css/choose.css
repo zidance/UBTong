@@ -22,11 +22,10 @@
 .cart-choose .choose-lists li .number-input input{ display:block; width:2.18rem; height:2.18rem; line-height:2.18rem; float:left; background:url(../img/inp.png) no-repeat; background-size:2.18rem 2.18rem; border:none; text-align:center; color:#414141; }
 
 
-.cart-choose .choose-lists li .s-img:after{ border-radius: 0px !important;}
 @media screen and (min-width:640px){
 	.cart-choose .choose-lists li .choose-product{ width:18.47rem; }
 	.cart-choose .choose-lists li .p-name{ width:10.63rem; }
-	.cart-choose .choose-lists input[type=checkbox]:checked::after{ top:0px; left:0px; }
+
 	
 }
 @media screen and (min-width:320px){
@@ -51,7 +50,6 @@
 
 @media screen and (max-width:320px){
 	.cart-choose .choose-lists input[type=checkbox]{ width:20px; height:20px; border-radius:7px; margin:1.58rem .6rem 0 .72rem; }
-	.cart-choose .choose-lists input[type=checkbox]:checked::after{ content:url(../img/checkmark.png); }
 	.cart-choose .choose-lists li .choose-product{ width:17.47rem; }
 	.cart-choose .choose-lists li .p-name{ width:8.63rem; height:1.53rem; }
 	.cart-choose .choose-lists .choose-all span{ margin-top:.1rem; }

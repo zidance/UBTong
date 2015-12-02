@@ -30,5 +30,5 @@ body{ background:#f7f5f5; }
 }
 
 @media screen and (max-width:320px){
-	.product-details .details-num .number-name{ margin-top:.1rem; }
+/*	.product-details .details-num .number-name{ margin-top:.1rem; }*/
 }

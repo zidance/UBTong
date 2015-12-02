@@ -10,9 +10,8 @@ footer {
     left: 0;
     right: 0;
     margin: 0 auto;
-}
-footer:before{
-   background:#c6c6c6 !important;
+    max-width: 640px;
+    z-index: 800;
 }
 footer li {
 	width: 19.4%;
@@ -44,7 +43,7 @@ footer li a p.p-footact{
 footer .li-logo{
     width:22.3%;height: 3.59rem;position: relative;
 }
-footer .li-logo a{width:100%;height:auto;position: absolute; top:-.6rem;}
+footer .li-logo a{width:100%;height:auto;position: absolute; top:-.6rem;z-index: 801;}
 
 footer .li-logo a img{width:100%;vertical-align: bottom;}
 

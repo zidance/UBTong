@@ -22,7 +22,7 @@
 		$.each(_li,function(i,e){
 			var _this= $(this);
 			var _img = $(this).find('.s-img img');
-			if(_img.width() > '7.19rem' && _img.width() > _img.height())
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
 			{
 				_img.css('width','7.19rem');
 			}else if(_img.height() > $(this).height()){
