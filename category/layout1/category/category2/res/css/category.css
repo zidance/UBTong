@@ -1,0 +1,12 @@
+/*项目分类*/
+.stn-category{ width:93.59%; margin:0.36rem auto 0; background:#fff; }
+.stn-category li{ width:33.33%; float:left; text-align:center; margin-bottom:1rem; }
+.stn-category li a{ display:block; width:3.7rem; margin:0 auto; }
+.stn-category li a .s-img{ display:block; width:3.7rem; height:3.7rem; border-radius:10px; }
+.stn-category li a .s-img img{ max-width:100%; height:auto; }
+.stn-category li a p{ margin:.36rem 0; color:#343434; height:1.3rem;overflow: hidden;}
+
+
+.ad{ border-top:1px solid #bfbfbf; padding:0.72rem 0; background:#fff;}
+.ad .ad-img{ width:96.59%; margin:0 auto; height:6.72rem;}
+.ad .ad-img img{ width:100%; height:100%;}
