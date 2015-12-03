@@ -7,7 +7,7 @@
 .product-details .price a p{display: inline-block;}
 .product-details .price .p-title{color:#fff;line-height: 1.27rem; padding:0 1.3%;border-radius:.2rem;vertical-align:.2rem;}
 .product-details .price .a-btn .p-title{background-color: #6633ff;}
-.product-details .price .p-title{background-color: #ff3430;}
+.product-details .price .a-checked .p-title{background-color: #ff3430;}
 .product-details .price .p-money{color:#ff3430;}
 .product-details .price .p-money span{font-size: .65em;}
 .product-details .price .p-money-old{color: #bebebe;text-decoration: line-through;margin-left:3%;}
