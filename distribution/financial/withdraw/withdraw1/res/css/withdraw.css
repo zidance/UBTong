@@ -1,0 +1,14 @@
+/*提现*/
+.stn-withdraw .withdraw-main{padding-top:3.1%;background-color: #ebebeb;font-size: 0;}
+.stn-withdraw .withdraw-main a{display: inline-block; width:50%; box-sizing: border-box;background-color: #fff;padding:4.7% 0 0 4.7%;/*30/640*/ white-space: nowrap;overflow: hidden;}
+.stn-withdraw .withdraw-main a .p-name{color: #b5b5be;}
+.stn-withdraw .withdraw-main a .p-num{color: #ff3333;line-height: 1.87;/*150/80*/ font-family: "宋体","Microsoft Yahei";}
+
+.stn-withdraw .withdraw-btn{padding:4.7% 4.7% 5.2% 4.7%;background-color: #ebebeb;}
+.stn-withdraw .withdraw-btn .a-btn{display: block;line-height: 2.4;color: #fff;text-align: center;background-color: #fd7d09;border-radius: 3px;font-family: "宋体","Microsoft Yahei";}
+.stn-withdraw .withdraw-btn .a-btn:hover{background-color: ;}
+.stn-withdraw .withdraw-btn .a-btn span{}
+.stn-withdraw .withdraw-btn .p-mark{margin: 2.6% 0 0 .3rem;}
+
+.stn-withdraw .withdraw-prompt{ padding:1.9% 5.6% 4.6%; /*12 36 30 /640*/}
+.stn-withdraw .withdraw-prompt p{line-height: 1.8;/*40/22*/}
