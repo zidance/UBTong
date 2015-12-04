@@ -7,4 +7,4 @@
 .stn-integral .integral .integral-main span{display: inline-block; position:relative; z-index:9; text-shadow:2px 2px 1px #e86735;height:100%;}
 .stn-integral .integral .integral-right{ background:url(../img/right.gif) no-repeat; background-size:2.18rem 3.59rem; width:2.18rem; height:100%; display: inline-block; }
 .stn-integral .integral .s-send{ background:url(../img/send.png) no-repeat; background-size:2.32rem 2.43rem; width:2.32rem; height:2.43rem; position:absolute; top:.35rem; left:.46rem; }
-.stn-integral p{ color:#000;  line-height:1.5; max-width:87.5%;margin:.5rem auto .9rem;}
+.stn-integral p{ color:#000;  line-height:1.5; max-width:87.5%;padding:.5rem 0 .8rem;margin:0 auto;}
