@@ -12,8 +12,8 @@
 
 .box-popup .type{ padding:.79rem 0 .43rem .79rem; border-bottom:1px solid #e5e5e5; }
 .box-popup .type p{ color:#828282; margin-bottom:.3rem; }
-.box-popup .type li{ width:22%; height:1.53rem; line-height:1.53rem; float:left; margin:0 3% .72rem 0; }
-.box-popup .type li a{ display:block; border:1px solid #999999; border-radius:4px; text-align:center; color:#999999; }
+.box-popup .type li{float:left; margin:0 3% .72rem 0; }
+.box-popup .type li a{ display:block; border:1px solid #999999; border-radius:4px; text-align:center; color:#999999; box-sizing: border-box;line-height:2;/*56/28*/ padding:0 1rem;min-width:4rem;}
 .box-popup .type li a.act{ border-color:#ff6600; color:#ff6600; background:url(../img/select.png) no-repeat right bottom; background-size:.79rem .79rem; }
 .box-popup .type li a.noAct{ border: 1px dotted; border-color:#cecece; color:#cecece; background-size:.79rem .79rem; }
 
