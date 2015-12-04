@@ -1,5 +1,5 @@
 /*头部*/
-.stn-head{color: #ffffff;background-color: #fd7d09;padding:4.5% 0 8.3% 4%}
+.stn-head{color: #ffffff;background-color: #fd7d09;padding:4.5% 0 8.3% 4%;}
 .stn-head .p-title{margin-bottom:3.5%;}
-.stn-head .p-total{font-family: '宋体','Microsoft YaHei';}
+.stn-head .p-total{letter-spacing:-.2rem;text-shadow: 2px 2px  #e57109;}
 
