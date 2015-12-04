@@ -1,0 +1,18 @@
+
+.recommendation{ border-bottom:1px solid #d9d9d9; border-top:1px solid #d9d9d9; margin-bottom:.72rem; background:#fff;}
+.recommendation h1{ margin:0 2.6%; border-bottom:1px solid #d9d9d9; color:#000; padding:.72rem 0 .72rem .32rem;}
+.recommendation ul{ width:94.4%; margin:0.72rem auto 0;}
+.recommendation li{ float:left; width:25%; margin-bottom:0.72rem}
+.recommendation li a{ display:block;}
+.recommendation li .img{ margin:0 .18rem; border:1px solid #dddddd; position:relative;}
+.recommendation li .img img{ width:100%; height:100%;}
+.recommendation li .img .p-bg{ height:25%; position:absolute; bottom:0; left:0; width:100%;}
+.recommendation li .img .p-bg .bg{ display:block; height:100%; width:100%; position:absolute; top:0; left:0; background:#000; opacity:0.5; filter:alpha(opacity:50);}
+.recommendation li .img .p-bg .font{ display:block; position:absolute; width:100%; text-align:center; line-height:1.1rem; color:#fff;}
+.recommendation .d-btn{ border-top:1px solid #d9d9d9;}
+.recommendation .d-btn a{ display:block; height:3rem; width:50%; box-sizing:border-box; float:left; color:#585858; text-align:center; line-height:3rem;}
+.recommendation .d-btn a.frist{ border-right:1px solid #dddddd;}
+
+@media screen and (max-width:320px){
+	.recommendation li .img .p-bg .font{ line-height:1.16rem;}
+}

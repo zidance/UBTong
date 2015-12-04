@@ -8,7 +8,6 @@ footer {
 	left: 0;
 	background: #f8f8f8;
 }
-footer :before{ background: #c6c6c6 !important;}
 footer li {
 	width: 25%;
 	float: left;

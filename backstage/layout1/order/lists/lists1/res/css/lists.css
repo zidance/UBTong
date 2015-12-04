@@ -1,6 +1,6 @@
 body{ background:#f7f5f5; }
 
-/*导航*/
+/*瀵艰埅*/
 nav{ width:94.53%; height:2.47rem; line-height:2.45rem; margin:.72rem auto 0; border:1px solid #d4d4d4; border-radius:.94rem; background:#fff; }
 nav li{ width:20%; float:left; text-align:center; box-sizing:border-box; border-right:1px solid #d4d4d4; }
 nav li:last-child{ border-right:none; }
@@ -9,7 +9,7 @@ nav li a.act{ background:#f15a0c; color:#fff; }
 nav li:first-child a{ border-radius:.94rem 0 0 .94rem; }
 nav li:last-child a{ border-radius:0 .94rem .94rem  0; }
 
-/*订单列表*/
+/*璁㈠崟鍒楄〃*/
 .stn-order{ width:93.28%; padding:0 3.36%; }
 .art-order{ width:94%; padding:0 3%; border:1px solid #eae8e8; background:#fff; border-radius:4px; margin-top:0.72rem; }
 .art-order .state{ border-bottom:1px solid #eae8e8; font-size:.73rem; padding:.54rem 0; color:#161616; }
@@ -31,15 +31,12 @@ nav li:last-child a{ border-radius:0 .94rem .94rem  0; }
 .art-order .product-btn a.a-orange{ background:#f15a0c; border-color:#f15a0c; }
 .art-order .product-btn a.a-null{ border-color:#939292; color:#939292; background:none; }
 
-/*取消订单*/
+/*鍙栨秷璁㈠崟*/
 .cancel-order .art-order .state span{ color:#c7c7c7; }
 .cancel-order .art-order .product-num{ color:#c7c7c7; }
 .cancel-order .art-order .product-num span{ color:#c7c7c7; }
 .cancel-order .art-order .product-num em{ color:#c7c7c7; }
 
-.art-order .product-btn a.a-green:after{ border-color: #48b574 !important;}
-.art-order .product-btn a.a-orange:after{ border-color: #f15a0c !important;}
-.art-order .product-btn a.a-null:after{ border-color: #939292 !important ;}
 
 
 @media screen and (min-width:321px){

@@ -59,6 +59,9 @@
 	*display: inline;
 	zoom: 1;
 }
+.banner .slider #pagenavi.dotColor a{
+	background:#a4a4a4;
+}
 .banner .slider #pagenavi a.active {
 	background: #e60012;
 }

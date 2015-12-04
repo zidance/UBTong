@@ -152,33 +152,3 @@
 		line-height: 1.5rem;
 	}
 }
-
-
-.top-list li a{
-    position: relative;
-    border:none !important;
-}
-.top-list li a:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border:solid #fe7b04;
-    border-width: 1px 0 1px 1px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 200%;
-    height: 200%;
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    -webkit-transform-origin: left top;
-    transform-origin: left top;
-}
-
-.top-list li:first-child a:before{
-	border-radius: .4rem 0 0 .4rem !important;
-}
-.top-list li:last-child a:before{
-	border-radius: 0 .4rem .4rem  0 !important;
-	border-right: 1px solid #fe7b04 !important;
-}

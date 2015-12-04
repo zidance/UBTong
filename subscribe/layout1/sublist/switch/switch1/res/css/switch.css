@@ -4,23 +4,3 @@
 .stn-switch li a{ display:block; line-height:2.25rem; width:94.375%; text-align:center; color:#b8b8b8; background:#eaeaea; border:solid #d9d9d9; border-width:1px 1px 0 1px; position:absolute; bottom:0; left:2.8125%; }
 .stn-switch li a.act{ position:absolute; bottom:-1px; padding-bottom:1px; background:#fff; color:#ff6766; }
 
-
-.stn-switch li a {
-    border:none !important;
-}
-.stn-switch li a:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border:solid #d9d9d9;
-    border-width:1px 1px 0 1px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 200%;
-    height: 200%;
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    -webkit-transform-origin: left top;
-    transform-origin: left top;
-}

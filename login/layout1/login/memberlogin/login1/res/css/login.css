@@ -2,13 +2,12 @@
 .stn-login{ width:91%; margin:0 auto; background:#fff; box-shadow:0 0 8px #e9e9e9; position:relative; border-radius:50px 0 0 0; }
 .stn-login .s-angle{ display:block; width:1.16rem; height:1.16rem; position:absolute; top:0; left:0; z-index:9; }
 .stn-login .s-angle img{ width:100%; height:100%; display:block; }
-.stn-login .login{ background:url(../img/bg.jpg) repeat-x 0 bottom #ff6766; background-size:.65rem .29rem; position:relative !important; }
+.stn-login .login{ background:url(../img/bg.jpg) repeat-x 0 bottom #ff6766; background-size:.65rem .29rem; }
 .stn-login .login p{ height:7.59rem; line-height:7.59rem; text-align:center; color:#ff7a79; text-shadow:0 0 7px #ff5a59; }
 .stn-login .login .s-img{ display:block; width:5.45rem; height:5.45rem; border-radius:50%; padding:4px; background:#fff; position:absolute; left:50%; top:3.34rem; margin-left:-2.725rem; }
 .stn-login .login .s-img img{ width:100%; height:100%; border-radius:50%; }
 .stn-login .text{ width:93%; margin:2.54rem auto 0; }
 .stn-login .text p{ border-bottom:1px solid #d9d9d9; }
-.stn-login .text p:after{ background: #d9d9d9 !important;}
 .stn-login .text .p-last{ border-bottom:none; }
 .stn-login .text input{ width:70%; height:2.4rem; line-height:2.4rem; border:none; color:#454545; padding-left:2.18rem; float:left; }
 .stn-login .text input::-webkit-input-placeholder{ color:#a1a1a1; }
@@ -18,4 +17,4 @@
 .stn-login .text .a-btn{ display:block; width:91%; height:2.4rem; line-height:2.4rem; margin:1.81rem auto 0; text-align:center; color:#fff; background:#ff6766; border-radius:6px; }
 .stn-login .text .a-forget{ display:block; float:right; margin-right:4.5%; color:#454545; margin-top:.3rem; }
 
-.stn-login .a-register{ display:block; width:90%; height:2.26rem; line-height:2.26rem; text-align:center; border:2px solid #898989 !important; background:#fff; color:#898989; border-radius:50px; position:absolute; bottom:4%; left:5%; }
+.stn-login .a-register{ display:block; width:90%; height:2.26rem; line-height:2.26rem; text-align:center; border:2px solid #898989; background:#fff; color:#898989; border-radius:50px; position:absolute; bottom:4%; left:5%; }
