@@ -45,7 +45,7 @@ footer .li-logo{
 }
 footer .li-logo a{width:100%;height:auto;position: absolute; top:-.6rem;z-index: 801;}
 
-footer .li-logo a img{width:100%;vertical-align: bottom;}
+footer .li-logo a img{width:100%;border-radius:50%;overflow: hidden;}
 
 @media screen and (min-width:321px) and (max-width:640px){
 	footer .li-logo a{ top:-.38rem; }
