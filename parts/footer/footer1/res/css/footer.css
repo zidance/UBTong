@@ -6,6 +6,9 @@ footer {
 	left: 0;
 	bottom: 0;
 	z-index: 9;
+    margin:0 auto;
+    max-width:640px;
+    right:0;
 }
 footer .stn-text {
 	background: #262626;

@@ -16,147 +16,6 @@
 <script src="../../common/js/zepto-1.16.min.js"></script>
 <script src="../../common/js/default.js"></script>
 <script src="lists/lists1/res/js/iscroll.js"></script>
-<script>
-	function imgZoomControl(){
-		var _li = $('#thelist li');
-		$.each(_li,function(i,e){
-			var _this= $(this);
-			var _img = $(this).find('.s-img img');
-			if(_img.width() > $(this).width() && _img.width() > _img.height())
-			{
-				_img.css('width','7.19rem');
-			}else if(_img.height() > $(this).height()){
-				_img.css('height','7.19rem');
-			}
-			_img.css({'max-width':'7.19rem','max-height':'7.19rem'})
-		})
-	}
-
-	$(function(){
-		imgZoomControl();
-	})
-
-	var myScroll,
-		pullDownEl, pullDownOffset,
-		pullUpEl, pullUpOffset,
-		generatedCount = 0;
-		
-		/**
-		 * 下拉刷新 （自定义实现此方法）
-		 * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
-		 */
-		function pullDownAction () {
-			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
-				var el, li, i;
-				el = document.getElementById('thelist');
-		
-				/*for (i=0; i<3; i++) {
-					li = document.createElement('li');
-					li.className = "li-commodity";
-					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>华为荣耀3c手机壳 荣耀3C手机套金属外壳" + (++generatedCount) + "</span><span class='s-money'>￥120.00<em>130.00</em></span><span class='s-num'>已售出：2000件</span></span><span class='clr'></span></a>";
-					el.insertBefore(li, el.childNodes[0]);
-				}*/
-				
-				myScroll.refresh();		//数据加载完成后，调用界面更新方法   Remember to refresh when contents are loaded (ie: on ajax completion)
-			}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
-		}
-		function pull () {
-			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
-				var el, li, i;
-				el = document.getElementById('thelist');
-		
-				/*for (i=0; i<3; i++) {
-					li = document.createElement('li');
-					li.innerText = 'Generated row ' + (++generatedCount);
-					el.insertBefore(li, el.childNodes[0]);
-				}*/
-				
-				myScroll.refresh();		//数据加载完成后，调用界面更新方法   Remember to refresh when contents are loaded (ie: on ajax completion)
-			}, 100);	// <-- Simulate network congestion, remove setTimeout from production!
-		}
-		/**
-		 * 滚动翻页 （自定义实现此方法）
-		 * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
-		 */
-		function pullUpAction () {
-			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
-				var el, li, i;
-				el = document.getElementById('thelist');
-		
-				/*for (i=0; i<3; i++) {
-					li = document.createElement('li');
-					li.className = "li-commodity";
-					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>华为荣耀3c手机壳 荣耀3C手机套金属外壳" + (++generatedCount) + "</span><span class='s-money'>￥120.00<em>130.00</em></span><span class='s-num'>已售出：2000件</span></span><span class='clr'></span></a>";
-					//li.innerText = '操作系统 ' + (++generatedCount);
-					el.appendChild(li, el.childNodes[0]);
-				}*/
-				
-				myScroll.refresh();		// 数据加载完成后，调用界面更新方法 Remember to refresh when contents are loaded (ie: on ajax completion)
-			}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
-		}
-		
-		/**
-		 * 初始化iScroll控件
-		 */
-		function loaded() {
-			pullDownEl = document.getElementById('pullDown');
-			pullDownOffset = pullDownEl.offsetHeight;
-			pullUpEl = document.getElementById('pullUp');	
-			pullUpOffset = pullUpEl.offsetHeight;
-			
-			myScroll = new iScroll('wrapper', {
-				scrollbarClass: 'myScrollbar', /* 重要样式 */
-				useTransition: false, /* 此属性不知用意，本人从true改为false */
-				topOffset: pullDownOffset,
-				onRefresh: function () {
-					if (pullDownEl.className.match('loading')) {
-						pullDownEl.className = '';
-						pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
-					} else if (pullUpEl.className.match('loading')) {//下拉松开
-						pullUpEl.className = '';
-						pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
-					}
-				},
-				onScrollMove: function () {
-					if (this.y > 5 && !pullDownEl.className.match('flip')) {
-						pullDownEl.className = 'flip';
-						pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
-						this.minScrollY = 0;
-					} else if (this.y < 5 && pullDownEl.className.match('flip')) {
-						pullDownEl.className = '';
-						pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
-						this.minScrollY = -pullDownOffset;
-					} else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) { //下拉松开
-						pullUpEl.className = 'flip';
-						pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
-						this.maxScrollY = this.maxScrollY;
-					} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
-						pullUpEl.className = '';
-						pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
-						this.maxScrollY = pullUpOffset;
-					}
-				},
-				onScrollEnd: function () {
-					if (pullDownEl.className.match('flip')) {
-						pullDownEl.className = 'loading';
-						pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';				
-						pullDownAction();	// Execute custom function (ajax call?)
-					} else if (pullUpEl.className.match('flip')) {//下拉松开
-						pullUpEl.className = 'loading';
-						//pullUpEl.querySelector('.pullUpIcon').style.display = "none";
-						pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';				
-						pullUpAction();	// Execute custom function (ajax call?)
-					}
-				}
-			});
-			
-			setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
-		}
-		
-		//初始化绑定iScroll控件 
-		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-		document.addEventListener('DOMContentLoaded', loaded, false); 
-</script>
 
 <style type="text/css" media="all">
 body,ul,li {
@@ -293,7 +152,7 @@ body {
                             <p class="p-money fz36">￥49.00<span class="fz24">102.70</span></p>
                             <p class="p-num fz24 pdl">立赚10元<span>售&nbsp;6666&nbsp;笔</span></p>
                         </a>
-                        <!--<a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>-->
+                        <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
                     </li>
                     <li>
                         <a href="#">
@@ -302,7 +161,7 @@ body {
                             <p class="p-money fz36">￥49.00<span class="fz24">102.70</span></p>
                             <p class="p-num fz24 pdl">立赚10元<span>售&nbsp;6666&nbsp;笔</span></p>
                         </a>
-                        <!--<a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>-->
+                        <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
                     </li>
                     <li>
                         <a href="#">
@@ -311,7 +170,7 @@ body {
                             <p class="p-money fz36">￥49.00<span class="fz24">102.70</span></p>
                             <p class="p-num fz24 pdl">立赚10元<span>售&nbsp;6666&nbsp;笔</span></p>
                         </a>
-                        <!--<a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>-->
+                        <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
                     </li>
                     <li>
                         <a href="#">
@@ -320,7 +179,7 @@ body {
                             <p class="p-money fz36">￥49.00<span class="fz24">102.70</span></p>
                             <p class="p-num fz24 pdl">立赚10元<span>售&nbsp;6666&nbsp;笔</span></p>
                         </a>
-                        <!--<a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>-->
+                        <a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
                     </li>
                 </ul>
                 <div class="clr"></div>
@@ -331,6 +190,147 @@ body {
             </div>
         </div>
     </div>
+    <script>
+    function imgZoomControl(){
+		var _li = $('#thelist li');
+		$.each(_li,function(i,e){
+			var _this= $(this);
+			var _img = $(this).find('.s-img img');
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
+			{
+				_img.css('width','7.19rem');
+			}else if(_img.height() > $(this).height()){
+				_img.css('height','7.19rem');
+			}
+			_img.css({'max-width':'7.19rem','max-height':'7.19rem'})
+		})
+	}
+
+	$(function(){
+		imgZoomControl();
+	})
+
+	var myScroll,
+		pullDownEl, pullDownOffset,
+		pullUpEl, pullUpOffset,
+		generatedCount = 0;
+
+		/**
+		 * 下拉刷新 （自定义实现此方法）
+		 * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+		 */
+		function pullDownAction () {
+			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+				var el, li, i;
+				el = document.getElementById('thelist');
+
+				/*for (i=0; i<3; i++) {
+					li = document.createElement('li');
+					li.className = "li-commodity";
+					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>华为荣耀3c手机壳 荣耀3C手机套金属外壳" + (++generatedCount) + "</span><span class='s-money'>￥120.00<em>130.00</em></span><span class='s-num'>已售出：2000件</span></span><span class='clr'></span></a>";
+					el.insertBefore(li, el.childNodes[0]);
+				}*/
+
+				myScroll.refresh();		//数据加载完成后，调用界面更新方法   Remember to refresh when contents are loaded (ie: on ajax completion)
+			}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+		}
+		function pull () {
+			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+				var el, li, i;
+				el = document.getElementById('thelist');
+
+				/*for (i=0; i<3; i++) {
+					li = document.createElement('li');
+					li.innerText = 'Generated row ' + (++generatedCount);
+					el.insertBefore(li, el.childNodes[0]);
+				}*/
+
+				myScroll.refresh();		//数据加载完成后，调用界面更新方法   Remember to refresh when contents are loaded (ie: on ajax completion)
+			}, 100);	// <-- Simulate network congestion, remove setTimeout from production!
+		}
+		/**
+		 * 滚动翻页 （自定义实现此方法）
+		 * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+		 */
+		function pullUpAction () {
+			setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+				var el, li, i;
+				el = document.getElementById('thelist');
+
+				/*for (i=0; i<3; i++) {
+					li = document.createElement('li');
+					li.className = "li-commodity";
+					li.innerHTML = "<a href='#'><span class='s-img'><img src='../res/img/product/147x147img.jpg'></span><span class='s-argument'><span class='s-title'>华为荣耀3c手机壳 荣耀3C手机套金属外壳" + (++generatedCount) + "</span><span class='s-money'>￥120.00<em>130.00</em></span><span class='s-num'>已售出：2000件</span></span><span class='clr'></span></a>";
+					//li.innerText = '操作系统 ' + (++generatedCount);
+					el.appendChild(li, el.childNodes[0]);
+				}*/
+
+				myScroll.refresh();		// 数据加载完成后，调用界面更新方法 Remember to refresh when contents are loaded (ie: on ajax completion)
+			}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+		}
+
+		/**
+		 * 初始化iScroll控件
+		 */
+		function loaded() {
+			pullDownEl = document.getElementById('pullDown');
+			pullDownOffset = pullDownEl.offsetHeight;
+			pullUpEl = document.getElementById('pullUp');
+			pullUpOffset = pullUpEl.offsetHeight;
+
+			myScroll = new iScroll('wrapper', {
+				scrollbarClass: 'myScrollbar', /* 重要样式 */
+				useTransition: false, /* 此属性不知用意，本人从true改为false */
+				topOffset: pullDownOffset,
+				onRefresh: function () {
+					if (pullDownEl.className.match('loading')) {
+						pullDownEl.className = '';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+					} else if (pullUpEl.className.match('loading')) {//下拉松开
+						pullUpEl.className = '';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+					}
+				},
+				onScrollMove: function () {
+					if (this.y > 5 && !pullDownEl.className.match('flip')) {
+						pullDownEl.className = 'flip';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+						this.minScrollY = 0;
+					} else if (this.y < 5 && pullDownEl.className.match('flip')) {
+						pullDownEl.className = '';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+						this.minScrollY = -pullDownOffset;
+					} else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) { //下拉松开
+						pullUpEl.className = 'flip';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+						this.maxScrollY = this.maxScrollY;
+					} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+						pullUpEl.className = '';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+						this.maxScrollY = pullUpOffset;
+					}
+				},
+				onScrollEnd: function () {
+					if (pullDownEl.className.match('flip')) {
+						pullDownEl.className = 'loading';
+						pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';
+						pullDownAction();	// Execute custom function (ajax call?)
+					} else if (pullUpEl.className.match('flip')) {//下拉松开
+						pullUpEl.className = 'loading';
+						//pullUpEl.querySelector('.pullUpIcon').style.display = "none";
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+						pullUpAction();	// Execute custom function (ajax call?)
+					}
+				}
+			});
+
+			setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+		}
+
+		//初始化绑定iScroll控件
+//		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+		document.addEventListener('DOMContentLoaded', loaded, false);
+    </script>
     
     <!--列表-end-->
     

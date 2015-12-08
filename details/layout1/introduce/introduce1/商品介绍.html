@@ -10,33 +10,13 @@
 	<link href="res/css/introduce.css" rel="stylesheet" type="text/css" />
 	<script src="../../../../common/js/zepto-1.16.min.js"></script>
 	<script src="../../../../common/js/default.js"></script>
-	<script>
-		$(function(){
-			var _obj = $('#DetailsIntroduce');
-			var _btn = _obj.find('nav a');
-			var _item = _obj.find('.introduce-con .introduce-item');
-		//初始化
-		_item.eq(0).show();
-		_btn.eq(0).addClass('act');
-		
-		$.each(_btn, function(i,e){
-			var _this = $(e);
-			_this.click(function(){
-				_btn.removeClass('act');
-				_this.addClass('act');
-				_item.hide();
-				_item.eq(i).show();
-			});
-		});
-	});
-</script>
 </head>
 
 <body>
 	<!--商品介绍-->
 	<div class="details-introduce" id="DetailsIntroduce">
 		<nav>
-		    <!--按li的个数为ul分类,已定为的有ul-col-2/3/4-->
+		    <!--按li的个数为ul分类,已定为的有ul-col-2/3/4,一定要注意下面<div class="introduce-item">与此处相同-->
 			<ul class="ul-col-3">
 				<li><a class="fz28" href="#">商品介绍</a></li>
 				<li><a class="fz28" href="#">商品参数</a></li>
@@ -50,7 +30,7 @@
 				<img src="res/img/img1.jpg" />
 			</div>
 			<div class="introduce-item">
-				
+				<img src="res/img/img1.jpg" />
 			</div>
 			<div class="introduce-item">
 				<ul class="introduce-gbook">
@@ -79,6 +59,27 @@
 			</div>
 		</div>
 	</div>
+	<script>
+        $(function() {
+            var _obj = $('#DetailsIntroduce');
+            var _btn = _obj.find('nav a');
+            var _item = _obj.find('.introduce-con .introduce-item');
+            //初始化
+            _item.eq(0).show();
+            _btn.eq(0).addClass('act');
+
+            _btn.each(function(i){
+                $(this).on('tap click',{data:i},function(){
+                    _btn.removeClass('act');
+                    $(this).addClass('act');
+                    _item.hide();
+                    _item.eq(i).show()
+                })
+            })
+        })
+    </script>
 	<!--商品介绍-end-->
+
+
 </body>
 </html>
