@@ -1,0 +1,8 @@
+/*头部*/
+.h-APP{position:fixed;z-index: 800;top:0;left:0;width:100%; background-color: #fff;text-align: center;height:3.2rem;line-height: 3.2rem;white-space: nowrap;max-width: 640px;left: 0;right: 0;margin:0 auto;}
+.h-APP+.h-APP-next{height:3.2rem;}
+.h-APP .location{float:left;max-width: 20%;}
+.h-APP .location a{padding:0 1rem 0 .8rem;background: url(../img/location-bg.png) no-repeat right center/.6rem;color: #464646;}
+.h-APP .brand-name{display: inline-block;max-width:67%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.h-APP .brand-name a{color:#000;padding-right:1rem;}
+.h-APP .more{float:right;margin-right:4%;line-height:inherit;height:inherit;width:6.7%;background: url(../img/more.png) no-repeat center center /100%;}
