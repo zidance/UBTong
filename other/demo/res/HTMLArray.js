@@ -25,7 +25,7 @@ $ = Zepto;
         /*默认的初始化,不推荐修改此处. 推荐在组合页配置全局HtmlArray.config={}*/
         var iPageNum = 0, //第n个页面
           init = {
-            title: HtmlArray.config.title || 'HtmlArray',//组合页面的标题
+            title: HtmlArray.config.title,//组合页面的标题
             debug: HtmlArray.config.debug || false, //调试模式，默认false，设为true时将删除分页的包裹节点
             fixed: HtmlArray.config.fixed, //fixed定位
             src: ['src', 'href'], //自定义的资源路径属性
@@ -75,6 +75,7 @@ $ = Zepto;
         var srcReg = new RegExp('(' + init.src.join('|') + ')\\s*=\\s*[\'\"]((?!#|\/|(.*?:\/)).*?)[\'\"]', 'ig')
 
         //页面标题
+        if(undefined !== init.title)
         $$("head").prepend("<title>" + (init.title))
 
         //
