@@ -29,9 +29,6 @@
 .cancel-order .art-order .product-num span{ color:#c7c7c7; }
 .cancel-order .art-order .product-num em{ color:#c7c7c7; }
 
-.art-order li .s-img:after{ border-radius: 0px !important;}
-.art-order .product-btn a:after,.art-order:after{ border-radius: 7px !important;}
-.art-order .product-btn a.a-null:after{ border-color: #939292 !important;}
 
 @media screen and (min-width:640px){
 	.art-order li .details{ width:10.25rem; }

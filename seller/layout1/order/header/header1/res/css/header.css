@@ -1,6 +1,6 @@
 body{ background:#f7f5f5; }
 
-/*µ¼º½*/
+/*å¯¼èˆª*/
 nav{ width:94.53%; height:2.47rem; line-height:2.45rem; margin:.72rem auto 0; border:1px solid #d4d4d4; border-radius:.94rem; background:#fff; }
 nav li{ width:20%; float:left; text-align:center; box-sizing:border-box; border-right:1px solid #d4d4d4; }
 nav li:last-child{ border-right:none; }
@@ -12,24 +12,5 @@ nav li:last-child a{ border-radius:0 .94rem .94rem  0; }
 
 nav {
     position: relative;
-    border:none !important;
+    border:1px solid #d4d4d4;
 }
-nav:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid;
-    border-color:#d4d4d4;
-    border-radius:1.7rem;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 200%;
-    height: 200%;
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    -webkit-transform-origin: left top;
-    transform-origin: left top;
-}
-
-nav li:after{ background: #d4d4d4 !important;}

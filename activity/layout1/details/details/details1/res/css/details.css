@@ -49,7 +49,7 @@ body {
 	box-sizing: border-box;
 }
 
-.product-details .number-input span{
+.product-details .number-input .s-input{
 	float:left;
 	width:2.54rem;
 	height:1.63rem;
@@ -57,15 +57,7 @@ body {
 	border-top: 1px solid #dbdbdb;
 	border-bottom: 1px solid #dbdbdb;
 }
-.product-details .number-input input {
-	float: left;
-	border: none;
-	background: #fff;
-	border-radius: 0px;
-	width: 2.54rem;
-	height: 1.63rem;
-	text-align: center;
-}
+.product-details .number-input .s-input input{width:100%;height:100%;text-align: center;vertical-align: top;line-height: 1.63rem;}
 @media screen and (max-width:320px) {
 	.product-details .details-num .number-name {
 		margin-top: .1rem;

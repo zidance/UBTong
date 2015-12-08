@@ -17,10 +17,6 @@ box-sizing: border-box;}
 .box-popup .type-pic li a img{position:absolute;left:0px;top:0px;width:100%;height:6.3rem;}
 .box-popup .type-pic li a p{position: absolute;bottom:0;left:0;width:100%;text-align: center;height:1.84rem;line-height:1.84rem;margin-bottom:0;}
 
-.box-popup .type li a:after{ border-style:solid !important; border-color:#999999 !important;}
-.box-popup .type li a.act:after{ border-color: #ff6600 !important; border-style:solid !important;}
-
-.box-popup .type li a.noAct:after{ border-color: #cecece !important; border-style:dotted !important;}
 
 @media screen and (min-width:320px) and (max-width:640px){
     .box-popup .type li{width:2.8rem;/* height:1.6rem;line-height:1.6rem;*/}
