@@ -1,12 +1,3 @@
-* {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-body{
-	margin-top:.54rem;
-}
 
 .details-pic{
 	background:#fff;
@@ -81,5 +72,4 @@ body{
 	border-radius: 10px;
 	background: #e84327;
 }
-
 

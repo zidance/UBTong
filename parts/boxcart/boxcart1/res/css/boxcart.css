@@ -9,9 +9,9 @@
 	width: 2.48rem;
 	height: 2.48rem;
 	position: absolute;
+	top: .42rem;
+	right: .4rem;
     z-index: 901;
-	top: .38rem;
-	right: .38rem;
 }
 .box-cart .boxcart-btn img {
 	width: 100%;
@@ -23,8 +23,9 @@
 	/*width:10.24rem;*/ height: 3.24rem;
 	border: 1px solid #e1e1e1;
 	background: #fff;
-	border-radius: 2rem; /*border-radius:100%;*/
+	border-radius: 2.8rem; /*border-radius:100%;*/
 }
+
 
 .box-cart .boxcart-nav a {
 	display: none;
@@ -47,10 +48,15 @@
 .box-cart .boxcart-nav a p {
 	color: #979797;
 }
+
+@media screen and (min-width:321px) and (max-width:360px){
+	.box-cart .boxcart-btn{top: .39rem;	right: .38rem;}
+}
+
 @media screen and (max-width:320px) {
 	.box-cart .boxcart-btn {
-		top: .5rem;
-		right: .5rem;
+		top: .41rem;
+		right: .40rem;
 	}
 	.box-cart .boxcart-nav .btn {
 		margin: .28rem 0 0 .82rem;
