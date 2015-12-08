@@ -17,5 +17,5 @@ padding-bottom:2%;
 .index-lists li .product .p-money .s-integral em{padding: 0 .1rem 0 .1rem;color:#bebebe;vertical-align:.1rem;}
 .index-lists li .product .p-money .s-integral b{padding-left: .1rem;}
 
-.index-lists li .product .p-count{color: #c8c8c8;margin-top:3%;}
+.index-lists li .product .p-count{color: #c8c8c8;margin-top:3%; line-height:0.76rem; height:0.76rem;}
 .index-lists li .product .p-count span{float:right;}

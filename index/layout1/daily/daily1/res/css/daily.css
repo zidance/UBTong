@@ -1,5 +1,5 @@
 /*天天捡钱*/
-.stn-daily-goods{ width:100%;margin-top:0.3rem;}
+.stn-daily-goods{ width:100%;margin-top:0.2rem;}
 .stn-daily-goods a{ display:block;position: relative; overflow:hidden;width:100%; height:auto; cursor:pointer;}
 .stn-daily-goods a img{ width:100%; height:100%;}
 .stn-daily-goods a .p-num{position:absolute;top:.5rem;left:.74rem;width:1.5rem;height:1.5rem;border-radius: 50%;border:2px solid #fff;box-sizing: border-box;color: #fff;background-color: #df0f1a;text-align: center;line-height:1.5rem; text-indent: -.05rem;}
