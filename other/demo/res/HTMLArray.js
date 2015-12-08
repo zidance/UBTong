@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*依赖于jQuery*/
 ;if (typeof jQuery === "undefined") {
   jQuery = {}
@@ -27,8 +26,7 @@ $ = Zepto;
         var iPageNum = 0, //第n个页面
           init = {
             title: HtmlArray.config.title || 'HtmlArray',//组合页面的标题
-            deleteWrap: HtmlArray.config.deleteWrap, //删除临时节点
-            console: HtmlArray.config.console || false, //每个页面显示标题
+            debug: HtmlArray.config.debug || false, //调试模式，默认false，设为true时将删除分页的包裹节点
             fixed: HtmlArray.config.fixed, //fixed定位
             src: ['src', 'href'], //自定义的资源路径属性
             disable: ['HtmlArray.js'], //禁用文件集
@@ -37,14 +35,17 @@ $ = Zepto;
           errors = {
             hasError: false,
             pageCount: 0,
+            pageNums:'',
             pageError: function () { //路径错误
               errors.hasError = true;
               if (errors.pageCount === 0) {
-                $$(".pgErrorInfo").find("span").append(iPageNum + 1)
+                errors.pageNums += (iPageNum + 1)
                 errors.pageCount = 1
-              } else {
-                $$(".pgErrorInfo").find("span").append('/' + (iPageNum + 1))
               }
+              else {
+                errors.pageNums += '/' + (iPageNum + 1)
+              }
+              return errors.pageNums
             }
           };
       var jsArray = [];
@@ -75,6 +76,11 @@ $ = Zepto;
 
         //页面标题
         $$("head").prepend("<title>" + (init.title))
+
+        //
+       if(init.debug){
+         $$('head').append('<style rel=\"stylesheet\" type=\"text/css\">/*分页控制样式*/h1.pgTitle{position:relative;z-index = 999999;font-size:.8rem;line-height: 1.5;text-align: center;} \n h1.pgTitle>*{display:inline-block;line-height: 1.5;margin:0 1em;word-break: break-all;}</style>')
+       }
 
         //地址转换,接受字符串参数,返回值{dir:'xx',type:'xx'}
         var pathChange = function (path) {
@@ -108,7 +114,7 @@ $ = Zepto;
               iPageNum++
 
               //删除临时节点
-              if (init.deleteWrap) {
+              if (!init.debug) {
                   var temp = $$(oP.wrapTemp).html()
                   $$(oP.wrapTemp).replaceWith(temp)
               }
@@ -130,7 +136,7 @@ $ = Zepto;
                 oP.wrapTemp = $$('.' + oP.wrapTemp)
 
                 //按源文件路径加入标题字段
-                if (init.console) {
+                if (init.debug) {
                   ('/' + oP.url).match(/.*\/(.*)\..*/)
                   oP.title = RegExp.$1
                   oP.wrapTemp.before('<h1 class="pgTitle">' + oP.title + '<a target="_blank" href="' + oP.url + '">' + oP.url + '</a><input type="button" value="隐藏" /><span title="删除后,恢复请刷新页面">删除该节点</span></h1>')
@@ -222,21 +228,20 @@ $ = Zepto;
             $$('body').append(jsArray)
 
             if (errors.hasError) {
+              //插入错误样式和内容
+              $$('head').append('<style rel=\"stylesheet\" type=\"text/css\">/*帮助报错的样式控制*/ \n .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;left: 0;right: 0;margin:auto;background-color: #e6e6e6;padding-bottom:10px;} \n .pgErrorInfo>div{width:70%;margin:0 auto;} \n .pgErrorInfo div p{padding:3% 3% 0 5%;width:100%;} \n .pgErrorInfo button{display:block;width:20%;margin:0 auto;font-size: 1.3rem;padding:.2rem;} \n .pgErrorBg{display: none;position: fixed;top:0;left:0;width: 100%;height:100%;background-color: #000;opacity: 0.3;z-index: 99990;}</style>')
+              $$('body').prepend('<!--报错区--> \n <div class=\"pgErrorInfo\"> \n <div class=\"pgErrorInfoPath\"> \n <p>第<span>'+errors.pageNums+'</span>个路径有误,请检查.</p> \n <p>如果是在本机测试(没有架设服务器),请参照 <a target=\"_blank\" href=\"http://blog.sina.com.cn/s/blog_a76aa1590101eams.html\">这里</a></p> \n </div> \n <button class=\"pgErrorInfoClose\">关闭</button> \n </div> \n <div class=\"pgErrorBg\"></div>')
+
+
               $$(".pgErrorInfo").css("display", "block")
               $$(".pgErrorBg").css("display", "block")
             }
-            $$(".pgErrorInfo").click(function () {
-              $$(".pgErrorInfoClose").trigger('click')
-            })
             $$(".pgErrorBg").click(function () {
               $$(".pgErrorInfoClose").trigger('click')
             })
             $$(".pgErrorInfoClose").click(function () {
               $$(".pgErrorInfo").css("display", "none")
               $$(".pgErrorBg").css("display", "none")
-            })
-            $$(".pgErrorInfoPath").click(function (e) {
-              return false;
             })
 
             //href="#"改写为"###"
@@ -265,62 +270,7 @@ $ = Zepto;
 
 
   }) //$$(function(){})的结束
-=======
-/*功能说明,将该文件放在某目录下,用node启动,将遍历目录下的所有html文档形成一个数组,以配合pageGroup使用*/
-var fs = require('fs')
-
-function scan(path) {
-  var fileList = [],
-    folderList = [],
-      linkData = '',
-    count = 0,
-    layer = 0,
-    walk = function (path, fileList, folderList) {
-      files = fs.readdirSync(path); //这里没有太多记数器,必须采用同步
-      files.forEach(function (item) {
-        var tmpPath = path + '/' + item,
-          stats = fs.statSync(tmpPath);
 
 
-        if (stats.isDirectory()) { //遍历到目录
-
-          walk(tmpPath, fileList, folderList);
-
-          folderList.push(tmpPath);
-        } else { //遍历到文件
-
-          if (/\.html/.test(item)) { //只收集html文件 node自身并不提供详细类型
-            //                    fileList.push('"'+tmpPath+'"');
-            fileList.push(tmpPath);
-            linkData += '\n<p>'+ (++count) + '、　' + '<a href="' + tmpPath + '">' + tmpPath + '</a></p>'
-          }
-        }
-      });
-    };
-
-  walk(path, fileList, folderList);
-
-  console.log('位于'+__dirname+'的HTMLArray 组件运行正常')
-//console.log(fileList)
-//console.log(linkData)
-  return {
-          file:fileList,
-          linkData:linkData
-//          fold:folderList
-        }
-
-}
-
-var path = __dirname
-
-module.exports = scan(path)
-
-
-//var scanResult = JSON.stringify(scan(path)) //待写入文件的内容
-//
-//var statDir = path.match(/.*\\(.*)/)
-//jsonPath = 'F:/lzz/work/UBTong/other/demo/各目录html集合/' + RegExp.$1 + '.json'
-//fs.writeFileSync(jsonPath, scanResult)
-//
-////继续处理,如写入到组合页的数组中
->>>>>>> origin/Develop
+/*h1.pgTitle{position:relative;z-index = 999999;font-size:.8rem;line-height: 1.5;text-align: center;}
+    h1.pgTitle>*{display:inline-block;line-height: 1.5;margin:0 1em;word-break: break-all;}*/
