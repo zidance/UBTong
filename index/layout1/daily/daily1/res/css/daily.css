@@ -1,8 +1,8 @@
 /*天天捡钱*/
-.stn-daily-goods{ width:100%;margin-top:3.7%;}
+.stn-daily-goods{ width:100%;margin-top:0.3rem;}
 .stn-daily-goods a{ display:block;position: relative; overflow:hidden;width:100%; height:auto; cursor:pointer;}
 .stn-daily-goods a img{ width:100%; height:100%;}
-.stn-daily-goods a .p-num{position:absolute;top:.5rem;left:.74rem;width:2rem;height:2rem;border-radius: 50%;border:2px solid #fff;box-sizing: border-box;color: #fff;background-color: #df0f1a;text-align: center;line-height:2.06rem; text-indent: -.05rem;}
+.stn-daily-goods a .p-num{position:absolute;top:.5rem;left:.74rem;width:1.5rem;height:1.5rem;border-radius: 50%;border:2px solid #fff;box-sizing: border-box;color: #fff;background-color: #df0f1a;text-align: center;line-height:1.5rem; text-indent: -.05rem;}
 
 .stn-daily-wrap{display:none;position: fixed;z-index:9999;width: 100%;height: 100%;top: 0;left: 0;right:0;bottom:0;margin:auto;max-width: 640px;}
 .stn-daily-wrap .daily-bg{position: absolute;width: 100%;height: 100%;background-color: #000;opacity: 0.6;}

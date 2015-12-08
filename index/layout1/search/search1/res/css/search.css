@@ -1,7 +1,7 @@
 
 /*搜索*/
 .stn-search{font-size: 0;padding: 3.8% 1.6% 0.47rem; background:#f3f4f6;height:2.5rem;}
-.stn-search .i-logo{width:11.8%;display: inline-block;height:100%;background-color: #fff;vertical-align: middle;}
+.stn-search .i-logo{width:2.5rem;display: inline-block;height:100%;background-color: #fff;vertical-align: middle;}
 .stn-search input{display: inline-block;width: 88%;outline: none;border: none;color: #000;border-radius: .2rem;padding: .75rem 0 .75rem 8%;box-sizing: border-box;height:100%;
 background: url(../img/search.png) no-repeat 2% center /4.2%;
 background-color: #fff;vertical-align: middle;}
