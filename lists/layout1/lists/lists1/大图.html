@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>大图</title>
@@ -9,6 +9,7 @@
 <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="res/css/lists.css" rel="stylesheet" type="text/css" />
 <script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script src="../../../../common/js/default.js"></script>
 <script>
 	function imgZoomControl(){
 		var _li = $('#thelist li');
@@ -35,7 +36,8 @@
 </head>
 
 <body>
-	<section class="stn-lists" id="thelist">
+	<!--列表-->
+    <section class="stn-lists" id="thelist" style="margin-top:2.47rem;">
 		<ul>
 			<li>
 				<a href="#">
@@ -65,5 +67,28 @@
 		
 		<button class="fz28">加载更多</button>
 	</section>
+   <script>
+	function imgZoomControl(){
+		var _li = $('#thelist li');
+		$.each(_li,function(i,e){
+			var _this= $(this);
+			var _img = $(this).find('.s-img img');
+			$(this).find('.s-img').width(_this.width()-2);
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
+			{
+				_img.css('width',_this.width()-2);
+			}else if(_img.height() > $(this).height()){
+				_img.css('height',_this.width()-2);
+			}
+			_img.css({'max-width':_this.width()-2,'max-height':_this.width()-2})
+		})
+	}
+
+
+	$(function(){
+		imgZoomControl();
+	})
+</script>
+    <!--列表-end-->
 </body>
 </html>

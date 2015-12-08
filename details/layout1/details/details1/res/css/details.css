@@ -1,4 +1,4 @@
-﻿body{ background:#f7f5f5; }
+body{ background:#f7f5f5; }
 .product-details{ width:90.625%; margin:0 auto; padding:.9rem 0; position:relative; }
 .product-details .p-name{ color:#000; width:70%; }
 .product-details .p-money{ color:#939292; margin-top:.2rem; }
@@ -14,9 +14,19 @@
 .product-details .details-num .number-name{ color:#939292; float:left; margin:.3rem .8rem 0 0; }
 .product-details .number-input{ width:7.8125rem; height:1.63rem; float:left; }
 .product-details .number-input a{ float:left; width:2.54rem; height:1.63rem; line-height:1.43rem; text-align:center; border:1px solid #dbdbdb; color:#686868; box-sizing:border-box; }
-.product-details .number-input input{ float:left; border:none; background:#fff; border-radius:0px; border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; width:2.54rem; height:1.63rem; height:1.63rem; text-align:center; box-sizing:border-box; }
+.product-details .number-input .s-input{
+	float:left;
+	width:2.54rem;
+	height:1.63rem;
+	box-sizing:border-box;
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+	background: #fff;
+}
+.product-details .number-input .s-input input{width:100%;height:100%;text-align: center;vertical-align: top;line-height: 1.63rem;}
 
 .product-details .a-collect{ display:block; background:url(../img/collect.png) no-repeat; background-size:3.23rem 3.77rem; width:3.23rem; height:3.77rem; position:absolute; top:0; right:5%; text-indent:-9999px; }
+
 
 @media screen and (max-width:320px){
 	.product-details .details-num .number-name{ margin-top:.1rem; }

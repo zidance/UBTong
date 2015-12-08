@@ -2,6 +2,7 @@
 <html>
 
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
   <script type="text/javascript" src="res/jquery-2.1.4.min.js"></script>
@@ -25,17 +26,55 @@
     h1.pgTitle>*{display:inline-block;font-size:.4rem;line-height: 1.5;margin:0 1em;word-break: break-all;}
     .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
     .pgErrorInfo>div{width:70%;margin:0 auto;}
+=======
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+  <script src="../../common/js/zepto-1.16.min.js"></script>
+  <script src="res/jquery-2.1.4.min.js"></script>
+
+  <script>
+    //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
+    //接受绝对路径和相对路径 接受斜杠和双反斜杠
+    //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
+    pageGroup =
+["../../seller/layout1/bill/bill1/账户明细查询-查询结果.html","../../seller/layout1/bill/bill1/账户明细查询.html","../../seller/layout1/commission/commission1/佣金管理.html","../../seller/layout1/confirm/confirm1/出示确认页-已完成.html","../../seller/layout1/confirm/confirm1/出示确认页.html","../../seller/layout1/confirm/confirm1/等待验证.html","../../seller/layout1/dot/lists/lists1/列表.html","../../seller/layout1/dot/lists/lists2/列表.html","../../seller/layout1/dot/lists/lists3/列表.html","../../seller/layout1/dot/switch/switch1/列表切换.html","../../seller/layout1/dot/佣金设置.html","../../seller/layout1/dot/网点业绩.html","../../seller/layout1/dot/网点列表.html","../../seller/layout1/index/index1/卖家中心1.html","../../seller/layout1/index/index1/卖家中心2.html","../../seller/layout1/index/index1/卖家中心3.html","../../seller/layout1/information/info/info1/基本资料.html","../../seller/layout1/integral/integral1/积分查询.html","../../seller/layout1/logistics/logistics1/确认发货.html","../../seller/layout1/mybank/mybank1/我的银行卡.html","../../seller/layout1/mybank/mybank1/提现成功.html","../../seller/layout1/mybank/mybank1/添加银行卡-填写验证码.html","../../seller/layout1/mybank/mybank1/添加银行卡.html","../../seller/layout1/mybank/mybank2/我的银行卡-删除.html","../../seller/layout1/mybank/mybank2/我的银行卡.html","../../seller/layout1/mybank/mybank2/添加银行卡-填写验证码.html","../../seller/layout1/mybank/mybank2/添加银行卡.html","../../seller/layout1/order/header/header1/头部.html","../../seller/layout1/order/header/header2/头部.html","../../seller/layout1/order/lists/lists1/列表.html","../../seller/layout1/order/search/search1/搜索.html","../../seller/layout1/order/订单管理1.html","../../seller/layout1/order/订单管理2.html","../../seller/layout1/popularize/detail/CPA明细.html","../../seller/layout1/popularize/detail/CPS明细.html","../../seller/layout1/popularize/detail/lists/lists1/推广明细列表.html","../../seller/layout1/popularize/detail/switch/switch1/切换.html","../../seller/layout1/popularize/detail/total/total1/收入总计.html","../../seller/layout1/popularize/manage/CPA管理.html","../../seller/layout1/popularize/manage/CPS管理.html","../../seller/layout1/popularize/manage/lists/lists1/列表.html","../../seller/layout1/popularize/manage/survey/survey1/CPA概况.html","../../seller/layout1/popularize/manage/switch/switch1/切换.html","../../seller/layout1/vieworder/vieworder1/查看订单.html","../../seller/layout1/vieworder/vieworder3/查看订单-上门服务.html","../../seller/layout1/vieworder/vieworder3/查看订单-到店消费.html","../../seller/layout1/vieworder/vieworder3/查看订单.html","../../seller/layout1/withdraw/withdraw1/余额提现-提现页面.html","../../seller/layout1/withdraw/withdraw1/余额提现.html","../../seller/layout1/withdraw/withdraw2/余额提现.html"]
+
+    ;pageGroup.config = {
+//      title: '美丽上门',
+      eachTitle:true,//每个页面显示标题
+//      deleteTemp:false,//删除临时节点
+    };
+  </script>
+  <!--推荐将该脚本放于用户自定义之后-->
+  <script src="res/PageGroup.js"></script>
+  <style rel="stylesheet" type="text/css">
+    a:focus{-webkit-user-modify:read-only;}/*pc界面a标签可以点击*/
+    h1.pgTitle{font-size:.5rem;line-height: 1.5;text-align: center;}
+    h1.pgTitle>*{display:inline-block;font-size:.4rem;line-height: 1.5;margin:0 1em;}
+    .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
+    .pgErrorInfo>div{display: none;width:70%;margin:0 auto;}
+>>>>>>> origin/Develop
     .pgErrorInfo div p{background-color: #fff;padding:1% 3% 1% 5%;width:100%;}
     .pgErrorInfo div p:first-child{margin-top:30%;}
     .pgErrorInfo button{display:block;width:20%;margin:0 auto;font-size: 1.3rem;padding:.2rem;}
     .pgErrorBg{display: none;position: fixed;top:0;left:0;width: 100%;height:100%;background-color: #000;opacity: 0.3;z-index: 99990;}
+<<<<<<< HEAD
     hascript{display: none;}
+=======
+>>>>>>> origin/Develop
   </style>
 
 </head>
 
 <body>
+<<<<<<< HEAD
   <!--报错区-->
+=======
+
+>>>>>>> origin/Develop
   <div class="pgErrorInfo">
     <div class="pgErrorInfoPath">
       <p>第<span></span>个路径有误,请检查.</p>

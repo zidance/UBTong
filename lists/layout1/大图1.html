@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>大图</title>
@@ -13,11 +13,12 @@
 <link href="../../parts/footer/footer1/res/css/footer.css" rel="stylesheet" type="text/css" />
 <link href="../../parts/blank/blank1/res/css/blank.css" rel="stylesheet" type="text/css">
 <script src="../../common/js/zepto-1.16.min.js"></script>
+<script src="../../common/js/default.js"></script>
 </head> 
 
 <body>
 	<!--头部高度：2.47rem-->
-	<header class="list-head">
+	<header class="list-head" style="top:0;">
 		<ul>  <!--从高到底： s-down  --><!--从底到高： s-up  -->
 			<li><a class="fz24" href="#"><span class="s-name s-down">综合</span></a></li>
 			<li><a class="fz24" href="#"><span class="s-name">销量</span></a></li>
@@ -28,11 +29,11 @@
 	<!--头部-end-->
     
     <!--列表-->
-    <section class="stn-lists" style="padding:2.47rem 0 0;">
+    <section class="stn-lists" id="thelist" style="margin-top:2.47rem;">
 		<ul>
 			<li>
 				<a href="#">
-					<span class="s-img"><img src="lists/lists1/res/img/img1.jpg" /></span>
+					<table><tr><td class="s-img"><img src="../../login/layout1/login/sellerlogin/login1/res/img/bg.jpg" /></td></tr></table>
 					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
 					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
 				</a>
@@ -40,7 +41,15 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="s-img"><img src="lists/lists1/res/img/img2.jpg" /></span>
+					<table><tr><td class="s-img"><img src="../../index/layout1/pic/pic1/res/img/img1.jpg" /></td></tr></table>
+					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
+					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
+				</a>
+				<a class="a-cart" href="#"><img src="lists/lists1/res/img/cart.png" /></a>
+			</li>
+            <li>
+				<a href="#">
+					<table><tr><td class="s-img"><img src="lists/lists1/res/img/img1.jpg" /></td></tr></table>
 					<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2美国原装进口精选优质开心果(奶油味)218gx2</p>
 					<p class="p-money fz36">￥49.00<span class="fz24">销量:27件</span></p>
 				</a>
@@ -50,6 +59,28 @@
 		
 		<button class="fz28">加载更多</button>
 	</section>
+   <script>
+	function imgZoomControl(){
+		var _li = $('#thelist li');
+		$.each(_li,function(i,e){
+			var _this= $(this);
+			var _img = $(this).find('.s-img img');
+			$(this).find('.s-img').width(_this.width()-2);
+			if(_img.width() > $(this).width() && _img.width() > _img.height())
+			{
+				_img.css('width',_this.width()-2);
+			}else if(_img.height() > $(this).height()){
+				_img.css('height',_this.width()-2);
+			}
+			_img.css({'max-width':_this.width()-2,'max-height':_this.width()-2})
+		})
+	}
+
+
+	$(function(){
+		imgZoomControl();
+	})
+</script>
     <!--列表-end-->
     
     <!--快捷购物车栏-->
@@ -83,7 +114,7 @@
 				<p class="fz26">首页</p>
 			</a>
 			<a class="cart" href="#">
-				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
+				<span class="s-img"><img src="../../parts/boxcart/boxcart1/lists/lists1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
 				<p class="fz26">购物车</p>
 			</a>
             <a class="cart" href="#">

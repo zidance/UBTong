@@ -1,60 +1,60 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>服务信息</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="pic/pic1/res/css/detailspic.css" rel="stylesheet" type="text/css" />
-<link href="details/details1/res/css/details.css" rel="stylesheet" type="text/css" />
-<link href="service/service1/res/css/service.css" rel="stylesheet" type="text/css" />
-<link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
-<link href="../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
-<link href="../../parts/reminder/reminder1/res/css/reminder.css" rel="stylesheet" type="text/css">
-<link href="../../dot/layout1/details/evaluate/evaluate1/res/css/evaluate.css" rel="stylesheet" type="text/css" />
-<link href="../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script src="../../common/js/zepto-1.16.min.js"></script>
-<script src="../../common/js/hover.js"></script>
-<script src="pic/pic1/res/js/iscroll.js"></script>
-<script>
-	/*设置宽度、高度*/
-	$(function(){
-		var _obj = $('#scroller');
-		var _indicator = $('#indicator');
-		var _slide = _obj.find('.slide').size();
-		_obj.width(11.62*_slide+0.3+'rem');
-		_indicator.width(20*_slide-10);
-		
-		var _btn = $('.a-collect');
-		var _cache = $('#BoxCache');
-		var _btnlast = $('#BtnLast');
-		
-		_btn.click(function(){
-			_cache.show();
-			setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className + ' fadein';;document.getElementById('BoxCache').style.display = 'block';");
-			setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className.replace(' fadein', '');document.getElementById('BoxCache').style.display = 'none'",2625);
+	<title>服务信息</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="pic/pic1/res/css/detailspic.css" rel="stylesheet" type="text/css" />
+	<link href="details/details1/res/css/details.css" rel="stylesheet" type="text/css" />
+	<link href="service/service1/res/css/service.css" rel="stylesheet" type="text/css" />
+	<link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
+	<link href="../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
+	<link href="../../parts/reminder/reminder1/res/css/reminder.css" rel="stylesheet" type="text/css">
+	<link href="../../dot/layout1/details/evaluate/evaluate1/res/css/evaluate.css" rel="stylesheet" type="text/css" />
+	<link href="../../common/css/hover.css" rel="stylesheet" type="text/css" />
+	<script src="../../common/js/zepto-1.16.min.js"></script>
+	<script src="../../common/js/default.js"></script>
+	<script src="pic/pic1/res/js/iscroll.js"></script>
+	<script>
+		/*设置宽度、高度*/
+		$(function(){
+			var _obj = $('#scroller');
+			var _indicator = $('#indicator');
+			var _slide = _obj.find('.slide').size();
+			_obj.width(11.62*_slide+0.3+'rem');
+			_indicator.width(20*_slide-10);
+
+			var _btn = $('.a-collect');
+			var _cache = $('#BoxCache');
+			var _btnlast = $('#BtnLast');
+
+			_btn.click(function(){
+				_cache.show();
+				setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className + ' fadein';;document.getElementById('BoxCache').style.display = 'block';");
+				setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className.replace(' fadein', '');document.getElementById('BoxCache').style.display = 'none'",2625);
+			})
+
 		})
 		
-	})
-	
-	/*使用iscroll插件*/
-	var myScroll;
-	function loaded () {
-		myScroll = new IScroll('#wrapper', {
-			scrollX: true,
-			scrollY: false,
-			momentum: false,
-			snap: true,
-			snapSpeed: 1000,
-			keyBindings: true,
-			indicators: {
-				el: document.getElementById('indicator'),
-				resize: false
-			}
-		});
-	}
+		/*使用iscroll插件*/
+		var myScroll;
+		function loaded () {
+			myScroll = new IScroll('#wrapper', {
+				scrollX: true,
+				scrollY: false,
+				momentum: false,
+				snap: true,
+				snapSpeed: 1000,
+				keyBindings: true,
+				indicators: {
+					el: document.getElementById('indicator'),
+					resize: false
+				}
+			});
+		}
 //原	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 document.addEventListener('touchmove', function () {}, false);
 </script>
@@ -92,75 +92,75 @@ document.addEventListener('touchmove', function () {}, false);
 			<div id="dotty"></div>
 		</div>
 	</div>
-    <!--商品图片-end-->
-    
-    <!--商品详细-->
+	<!--商品图片-end-->
+
+	<!--商品详细-->
 	<div class="product-details" id="ProductDetails">
 		<p class="p-name fz28">美丽上门美容馆出水芙蓉SPA+花草茶+甜品+服务员</p>
 		<p class="p-money fz28">预售价：<span class="fz36">￥29.90</span><i class="fz26">￥1230.00</i></p>
-        <p class="p-num fz26">已销售<span>281</span>笔</p>
-        
-        <a class="a-collect" href="#">收藏</a>
+		<p class="p-num fz26">已销售<span>281</span>笔</p>
+
+		<a class="a-collect" href="#">收藏</a>
 	</div>
-    <!--商品详细-end-->
-    
-    <!--提示框-->
-    <div class="box-cache" id="BoxCache">
-    	<div class="cachebg"></div>
-        <div class="cache-content">
-        	<span class="fz32">已成功加入购物车</span>
-        </div>
-    </div>
-    <!--提示框 end-->
-    
-    <!--服务详情-->
-    <section class="stn-detailsservice">
-    	<h1 class="fz32">服务详情</h1>
-        
-        <p class="p1 fz26">美丽上门SPA会所立志与每一个客人成为真正的朋友。您进店以后，会为您奉上一杯热茶，邀您吃些水果点心； 您躺在按摩床上时，为您舒缓身体的疲劳；您坐在沙发上，听您倾诉工作的压力。</p>
-        <p class="p2 fz30">服务流程/时长：</p>
-        <p class="p1 fz26">汗蒸（20分钟/次）+背部按摩（约30分钟/次）+后腿按摩（约15分钟/次）+前腿按摩（约10分钟/次）+腹部按摩（约5分钟/次）+胸部按摩（约5分钟/次）+头肩颈按摩（约10分钟/次）+面部水膜+滑罐（约30分钟/次）+花草茶+甜品+服务员</p>
-        <img class="img1" src="service/service1/res/img/img.jpg" />
-        
-        <a class="fz28" href="#">点击显示更多图片</a>
-    </section>
-    <!--服务详情-end-->
-    
-    <!--顾客评价 间距:.72rem-->
-    <section class="stn-evaluate" style="margin-bottom:4.49rem;">
-    	<h1 class="fz32">顾客评价（281）</h1>
-        
-        <ul>
-        	<li>
-            	<p class="p-name fz28">悦有然&nbsp;&nbsp;13*******89<span class="fz24">2015-07-14</span></p>
-                <div class="clr"></div>
-                <p class="p-gbook fz28">效果很不错，手法很好，技师的态度超级赞！对我的要求都逐个满足咯！下次还会再找你的~</p>
-                <div class="level">  <!-- 1星：star1 2星：star2 3星：star3 4星：star4 5星：star5 -->
-                	<p class="fz24"><em>态度：</em><span class="star1"></span></p>
-                    <p class="fz24"><em>礼仪：</em><span class="star2"></span></p>
-                    <p class="fz24"><em>技术：</em><span class="star3"></span></p>
-                    <p class="fz24"><em>细节：</em><span class="star5"></span></p>
-                </div>
-                <div class="clr"></div>
-            </li>
-            <li>
-            	<p class="p-name fz28">悦有然&nbsp;&nbsp;13*******89<span class="fz24">2015-07-14</span></p>
-                <div class="clr"></div>
-                <p class="p-gbook fz28">效果很不错，手法很好，技师的态度超级赞！对我的要求都逐个满足咯！下次还会再找你的~</p>
-                <div class="level">  <!-- 1星：star1 2星：star2 3星：star3 4星：star4 5星：star5 -->
-                	<p class="fz24"><em>态度：</em><span class="star1"></span></p>
-                    <p class="fz24"><em>礼仪：</em><span class="star2"></span></p>
-                    <p class="fz24"><em>技术：</em><span class="star3"></span></p>
-                    <p class="fz24"><em>细节：</em><span class="star5"></span></p>
-                </div>
-                <div class="clr"></div>
-            </li>
-        </ul>
-        <a class="fz28" href="#">查看更多评论</a>
-    </section>
-    <!--顾客评价-end-->
-    
-    <!--快捷购物车栏-->
+	<!--商品详细-end-->
+
+	<!--提示框-->
+	<div class="box-cache" id="BoxCache">
+		<div class="cachebg"></div>
+		<div class="cache-content">
+			<span class="fz32">已成功加入购物车</span>
+		</div>
+	</div>
+	<!--提示框 end-->
+
+	<!--服务详情-->
+	<section class="stn-detailsservice">
+		<h1 class="fz32">服务详情</h1>
+
+		<p class="p1 fz26">美丽上门SPA会所立志与每一个客人成为真正的朋友。您进店以后，会为您奉上一杯热茶，邀您吃些水果点心； 您躺在按摩床上时，为您舒缓身体的疲劳；您坐在沙发上，听您倾诉工作的压力。</p>
+		<p class="p2 fz30">服务流程/时长：</p>
+		<p class="p1 fz26">汗蒸（20分钟/次）+背部按摩（约30分钟/次）+后腿按摩（约15分钟/次）+前腿按摩（约10分钟/次）+腹部按摩（约5分钟/次）+胸部按摩（约5分钟/次）+头肩颈按摩（约10分钟/次）+面部水膜+滑罐（约30分钟/次）+花草茶+甜品+服务员</p>
+		<img class="img1" src="service/service1/res/img/img.jpg" />
+
+		<a class="fz28" href="#">点击显示更多图片</a>
+	</section>
+	<!--服务详情-end-->
+
+	<!--顾客评价 间距:.72rem-->
+	<section class="stn-evaluate" style="margin-bottom:4.49rem;">
+		<h1 class="fz32">顾客评价（281）</h1>
+
+		<ul>
+			<li>
+				<p class="p-name fz28">悦有然&nbsp;&nbsp;13*******89<span class="fz24">2015-07-14</span></p>
+				<div class="clr"></div>
+				<p class="p-gbook fz28">效果很不错，手法很好，技师的态度超级赞！对我的要求都逐个满足咯！下次还会再找你的~</p>
+				<div class="level">  <!-- 1星：star1 2星：star2 3星：star3 4星：star4 5星：star5 -->
+					<p class="fz24"><em>态度：</em><span class="star1"></span></p>
+					<p class="fz24"><em>礼仪：</em><span class="star2"></span></p>
+					<p class="fz24"><em>技术：</em><span class="star3"></span></p>
+					<p class="fz24"><em>细节：</em><span class="star5"></span></p>
+				</div>
+				<div class="clr"></div>
+			</li>
+			<li>
+				<p class="p-name fz28">悦有然&nbsp;&nbsp;13*******89<span class="fz24">2015-07-14</span></p>
+				<div class="clr"></div>
+				<p class="p-gbook fz28">效果很不错，手法很好，技师的态度超级赞！对我的要求都逐个满足咯！下次还会再找你的~</p>
+				<div class="level">  <!-- 1星：star1 2星：star2 3星：star3 4星：star4 5星：star5 -->
+					<p class="fz24"><em>态度：</em><span class="star1"></span></p>
+					<p class="fz24"><em>礼仪：</em><span class="star2"></span></p>
+					<p class="fz24"><em>技术：</em><span class="star3"></span></p>
+					<p class="fz24"><em>细节：</em><span class="star5"></span></p>
+				</div>
+				<div class="clr"></div>
+			</li>
+		</ul>
+		<a class="fz28" href="#">查看更多评论</a>
+	</section>
+	<!--顾客评价-end-->
+
+	<!--快捷购物车栏-->
 	<script>
 		$(function(){
 			var _boxcart = $('#BoxCart');
@@ -194,7 +194,7 @@ document.addEventListener('touchmove', function () {}, false);
 				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/cart.png" /></span>  <!--购物车未点击状态：carth.png-->  <!--添加购物车后状态：cart.png-->
 				<p class="fz26">购物车</p>
 			</a>
-            <a class="cart" href="#">
+			<a class="cart" href="#">
 				<span class="s-img"><img src="../../parts/boxcart/boxcart1/res/img/member.png" /></span>
 				<p class="fz26">会员</p>
 			</a>
@@ -204,13 +204,13 @@ document.addEventListener('touchmove', function () {}, false);
 			</a>
 		</div>
 	</div>
-    <!--快捷购物车栏-end-->
+	<!--快捷购物车栏-end-->
 
-    <!--详情按钮高度：3.77rem-->
+	<!--详情按钮高度：3.77rem-->
 	<div class="details-btn">
-    	<a class="a-red fz32" href="#">联系商家</a>
-        <a class="a-rosered fz32" href="#">立即预约</a>
-    </div>
-    <!--详情按钮-end-->
+		<a class="a-red fz32" href="#">联系商家</a>
+		<a class="a-rosered fz32" href="#">立即预约</a>
+	</div>
+	<!--详情按钮-end-->
 </body>
 </html>

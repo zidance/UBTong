@@ -9,6 +9,7 @@
 .stn-lists li .li-right .p-money em{ display:block; float:right; padding:0 .1rem; border:1px solid #f1590d; color:#f1590d; margin-left:2%; }
 .stn-lists li .li-right .p-state{ color:#c3c3c3; margin-top:.4rem; }
 
+
 @media screen and (max-width:320px){
 	.stn-lists li .li-right{ margin-top:.4rem; }
 	.stn-lists li .li-right .p-state{ margin-top:.5rem; }

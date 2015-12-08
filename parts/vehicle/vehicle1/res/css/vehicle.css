@@ -7,6 +7,7 @@
 	box-sizing: border-box;
 	border-radius: 6px;
 }
+
 .stn-vehicle a {
 	display: block;
 	background: url(../img/left.png) no-repeat 95% center;

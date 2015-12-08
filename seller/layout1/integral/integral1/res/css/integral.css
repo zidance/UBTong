@@ -1,15 +1,15 @@
-/* 积分概况 */
+/* 绉垎姒傚喌 */
 .integral-query .stn-general{width:100%;height:11.5rem;color:#fff;text-align: center;background-image: url(../img/general-bottom-bg.png),url(../img/general-bg.png);background-repeat: repeat-x,no-repeat;background-position: left bottom,right bottom;background-size:.88rem .22rem,38.4% 28.9%;background-color: #f15a0c;}
 .integral-query .stn-general .p-number{font-size:2.9rem;;padding-top:3.3rem;}
 .integral-query .stn-general .p-describe{font-size:1rem;}
 
-/* 收入支出切换 */
+/* 鏀跺叆鏀嚭鍒囨崲 */
 .integral-query .stn-switch ul{width:90%;height:1.95rem;line-height: 2.2rem; margin:.75rem auto 0;border:1px solid #5b5d69;border-radius: 7px; overflow: hidden;}
 .integral-query .stn-switch ul li{float:left;width:50%;height:100%;background-color: #fff;}
 .integral-query .stn-switch ul li a{display:block;color:#5b5d69;height:100%;text-align: center;}
 .integral-query .stn-switch ul li a.act{background-color: #5b5d69;color:#fff;}
 
-/* 积分明细 */
+/* 绉垎鏄庣粏 */
 .integral-query .stn-detail{width:90%;margin:0 auto;}
 .integral-query .stn-detail div p{height:3.45rem;line-height: 3.45rem;padding:0 2.7% 0 3.2%;border-top:1px solid #d9d9d9;font-size:1.11rem;overflow: hidden;clear:both;}
 .integral-query .stn-detail div p span{float:right;font-size:1.01rem;}

@@ -5,6 +5,7 @@
 .stn-sort li a{ display:block; color:#464646; line-height:2.47rem; }
 .stn-sort li a.act{ border-bottom:2px solid #f54e1f; color:#f54e1f; }
 
+
 @media screen and (max-width:320px){
 	.stn-sort li a{ line-height:2.42rem; }
 }

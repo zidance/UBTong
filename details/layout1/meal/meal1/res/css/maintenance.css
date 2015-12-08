@@ -24,7 +24,6 @@
 .stn-maintenance .package-btn .btn a{ display:block; width:47%; height:1.88rem; line-height:1.88rem; text-align:center; background:#ff4949; color:#fff; border-radius:6px; float:left; }
 .stn-maintenance .package-btn .btn a:last-child{ background:#17c7c9; float:right; }
 
-
 @media screen and (min-width:321px) and (max-width:360px){
 .stn-maintenance .package td .s-img{ height:5.3rem;}
 .stn-maintenance .package-btn .btn{  width:50%; top:.35rem;}

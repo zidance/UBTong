@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>商品详情轮播图</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/detailspic.css" rel="stylesheet" type="text/css" />
-<script src="../../../../../common/js/zepto-1.16.min.js"></script>
-<script src="res/js/iscroll.js"></script>
-<script>
-	/*设置宽度、高度*/
-	$(function(){
-		var _obj = $('#scroller');
-		var _indicator = $('#indicator');
-		var _slide = _obj.find('.slide').size();
-		_obj.width(11.62*_slide+0.3+'rem');
-		_indicator.width(20*_slide-10);
-	})
-	
+	<title>商品详情轮播图</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="res/css/detailspic.css" rel="stylesheet" type="text/css" />
+	<script src="../../../../../common/js/zepto-1.16.min.js"></script>
+	<script src="../../../../../common/js/default.js"></script>
+	<script src="res/js/iscroll.js"></script>
+	<script>
+
 	/*使用iscroll插件*/
 	var myScroll;
 	function loaded () {
@@ -38,6 +31,7 @@
 	}
 //	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 </script>
+
 </head>
 
 <body onload="loaded()" style="background:#f7f5f5;">
@@ -67,11 +61,11 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="indicator">
 			<div id="dotty"></div>
 		</div>
 	</div>
-    <!--商品图片-end-->
+	<!--商品图片-end-->
 </body>
 </html>

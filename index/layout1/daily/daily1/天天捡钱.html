@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>公告</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/daily.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
+    <script type="text/javascript" src="../../../../common/js/default.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 天天捡钱 -->
+    <section class="stn-daily-goods">
+        <a class="dailyPopup" href="#">
+            <img src="res/img/goods-img1.png">
+            <p class="p-num">20</p>
+        </a>
+    </section>
+    <section class="stn-daily-wrap">
+        <div class="daily-bg"></div>
+        <section class="stn-daily-pick">
+            <div class="daily-head">
+                <img src="res/img/daily-head.png" />
+                <a class="a-btn"></a>
+            </div>
+
+            <!--type0-type5,只会弹出其中一个-->
+            <!--type0,开始-->
+            <div class="pick-money type0">
+                <img class="i-pic" src="res/img/money0.png">
+                <a class="a-begin" href="###">开始捡钱<img src="res/img/begin.png" /></a>
+            </div>
+
+            <div class="pick-money type1">
+                <img class="i-pic" src="res/img/money1.png">
+                <div class="income-wrap">
+                    <div class="income">
+                        <p class="p-type fz32">哇塞最少吗</p>
+                        <p class="p-money fz34"><span class="fz48">0.28</span>+<span class="fz48">0.05</span>元</p>
+                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                    </div>
+                </div>
+            </div>
+            <!--type2-->
+            <div class="pick-money type2">
+                <img class="i-pic" src="res/img/money2.png">
+                <div class="income-wrap">
+                    <div class="income">
+                        <p class="p-type fz32">快安慰下我</p>
+                        <p class="p-money fz34"><span class="fz48">0.38</span>+<span class="fz48">0.05</span>元</p>
+                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                    </div>
+                </div>
+            </div>
+            <!--type3-->
+            <div class="pick-money type3">
+                <img class="i-pic" src="res/img/money3.png">
+                <div class="income-wrap">
+                    <div class="income">
+                        <p class="p-type fz32">貌似不错噢</p>
+                        <p class="p-money fz34"><span class="fz48">0.48</span>+<span class="fz48">0.05</span>元</p>
+                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                    </div>
+                </div>
+            </div>
+            <!--type4-->
+            <div class="pick-money type4">
+                <img class="i-pic" src="res/img/money4.png">
+                <div class="income-wrap">
+                    <div class="income">
+                        <p class="p-type fz32">女神么么哒</p>
+                        <p class="p-money fz34"><span class="fz48">0.58</span>+<span class="fz48">0.05</span>元</p>
+                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                    </div>
+                </div>
+            </div>
+            <!--type5-->
+            <div class="pick-money type5">
+                <img class="i-pic" src="res/img/money5.png">
+                <div class="income-wrap">
+                    <div class="income">
+                        <p class="p-type fz32">恭喜您抢到</p>
+                        <p class="p-money fz34"><span class="fz48">0.66</span>+<span class="fz48">0.05</span>元</p>
+                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+    <script type="text/javascript">
+        $(function() {
+            $('body').on('click', '.dailyPopup', function() {
+                $('.stn-daily-wrap').show()
+                $('.pick-money').hide()
+                $('.stn-daily-wrap').find('.type0').show()
+            })
+            $('body').on('click', '.stn-daily-pick .daily-head .a-btn', function() {
+                $('.stn-daily-wrap').hide()
+            })
+            $('body').on('click', '.daily-bg', function() {
+                $('.stn-daily-wrap').hide()
+            })
+
+            $('.stn-daily-wrap').on('click', '.a-begin', function() {
+                $('.pick-money').hide()
+                $('.stn-daily-wrap').find('.type1').show()
+            })
+        })
+    </script>
+    <!-- 天天捡钱 -end -->
+
+
+
+</body>
+
+</html>

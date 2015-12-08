@@ -59,6 +59,7 @@
 .stn-subsucceed .outlets li .p-num{ display:block; float:right; background:url(../img/distance.png) no-repeat 0 center; background-size:.47rem .72rem; padding-left:.72rem; color:#a6a6a6; position:absolute; top:.72rem; right:.36rem; }
 .stn-subsucceed .outlets li a{ display:block; width:5.45rem; height:1.88rem; line-height:1.88rem; text-align:center; color:#fff; background:#3e9ef9; border-radius:6px; position:absolute; bottom:.72rem; right:.36rem; }
 
+
 @media screen and (max-width:380px) and (min-width:320px){
 	/*服务施工网点*/
 	.stn-subsucceed .outlets li a{ width:4.35rem; height:1.48rem; line-height:1.48rem; }

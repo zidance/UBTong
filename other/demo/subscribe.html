@@ -2,6 +2,7 @@
 <html>
 
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
   <script type="text/javascript" src="res/jquery-2.1.4.min.js"></script>
@@ -25,17 +26,55 @@
     h1.pgTitle>*{display:inline-block;font-size:.4rem;line-height: 1.5;margin:0 1em;word-break: break-all;}
     .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
     .pgErrorInfo>div{width:70%;margin:0 auto;}
+=======
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+  <script src="../../common/js/zepto-1.16.min.js"></script>
+  <script src="res/jquery-2.1.4.min.js"></script>
+
+  <script>
+    //模块集合的初始化,将需要的模块路径按数组的格式写入,如 ['url1','url2',...]
+    //接受绝对路径和相对路径 接受斜杠和双反斜杠
+    //由于禁止跨域,设置页面绝对路径时,文件需在同一个工作目录下,不支持类似于http://qq.com/xxx.html
+    pageGroup =
+["../../subscribe/layout1/settle/btn/btn1/按钮.html","../../subscribe/layout1/settle/btn/btn2/按钮.html","../../subscribe/layout1/settle/cartintegral/cartintegral1/结算积分抵用.html","../../subscribe/layout1/settle/contact/contact1/联系人.html","../../subscribe/layout1/settle/distribution/distribution1/交易方式.html","../../subscribe/layout1/settle/envelope/envelope1/红包.html","../../subscribe/layout1/settle/message/message1/留言.html","../../subscribe/layout1/settle/orderinfor/orderinfor1/订单信息.html","../../subscribe/layout1/settle/prices/prices1/总价.html","../../subscribe/layout1/settle/select/select1/已选.html","../../subscribe/layout1/settle/time/time1/预约时间.html","../../subscribe/layout1/settle/确认预约-到店支付.html","../../subscribe/layout1/settle/确认预约-在线支付.html","../../subscribe/layout1/settle/选择支付方式-上门服务.html","../../subscribe/layout1/settle/选择支付方式-到店服务.html","../../subscribe/layout1/subdetails/btn/btn1/按钮.html","../../subscribe/layout1/subdetails/explain/explain1/服务说明.html","../../subscribe/layout1/subdetails/instructions/instructions1/预约须知.html","../../subscribe/layout1/subdetails/outlets/outlets1/服务网点.html","../../subscribe/layout1/subdetails/selective/selective1/选择类型.html","../../subscribe/layout1/subdetails/time/time1/预约时间.html","../../subscribe/layout1/subdetails/trade/trade1/商品名称.html","../../subscribe/layout1/subdetails/way/way1/服务方式.html","../../subscribe/layout1/subdetails/write/write1/预约信息填写.html","../../subscribe/layout1/subdetails/服务说明.html","../../subscribe/layout1/subdetails/预约服务-上门服务.html","../../subscribe/layout1/subdetails/预约服务-到店服务.html","../../subscribe/layout1/sublist/lists/lists1/预约商品列表.html","../../subscribe/layout1/sublist/switch/switch1/列表切换.html","../../subscribe/layout1/sublist/服务类别页-预约到店.html","../../subscribe/layout1/subpay/subfailure/subfailure1/预约不成功.html","../../subscribe/layout1/subpay/subsucceed/subsucceed1/btnsucceed/btnsucceed1/按钮.html","../../subscribe/layout1/subpay/subsucceed/subsucceed1/succeed/succeed1/预约成功.html","../../subscribe/layout1/subpay/subsucceed/subsucceed1/预约成功1.html","../../subscribe/layout1/subpay/subsucceed/subsucceed1/预约成功2.html"]
+
+    ;pageGroup.config = {
+//      title: '美丽上门',
+      eachTitle:true,//每个页面显示标题
+//      deleteTemp:false,//删除临时节点
+    };
+  </script>
+  <!--推荐将该脚本放于用户自定义之后-->
+  <script src="res/PageGroup.js"></script>
+  <style rel="stylesheet" type="text/css">
+    a:focus{-webkit-user-modify:read-only;}/*pc界面a标签可以点击*/
+    h1.pgTitle{font-size:.5rem;line-height: 1.5;text-align: center;}
+    h1.pgTitle>*{display:inline-block;font-size:.4rem;line-height: 1.5;margin:0 1em;}
+    .pgErrorInfo{display: none;position: fixed;width:100%;z-index: 99999;max-width:640px;}
+    .pgErrorInfo>div{display: none;width:70%;margin:0 auto;}
+>>>>>>> origin/Develop
     .pgErrorInfo div p{background-color: #fff;padding:1% 3% 1% 5%;width:100%;}
     .pgErrorInfo div p:first-child{margin-top:30%;}
     .pgErrorInfo button{display:block;width:20%;margin:0 auto;font-size: 1.3rem;padding:.2rem;}
     .pgErrorBg{display: none;position: fixed;top:0;left:0;width: 100%;height:100%;background-color: #000;opacity: 0.3;z-index: 99990;}
+<<<<<<< HEAD
     hascript{display: none;}
+=======
+>>>>>>> origin/Develop
   </style>
 
 </head>
 
 <body>
+<<<<<<< HEAD
   <!--报错区-->
+=======
+
+>>>>>>> origin/Develop
   <div class="pgErrorInfo">
     <div class="pgErrorInfoPath">
       <p>第<span></span>个路径有误,请检查.</p>

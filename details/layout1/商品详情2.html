@@ -1,197 +1,283 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>商品详情</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="pic/pic1/res/css/detailspic.css" rel="stylesheet" type="text/css" />
-<link href="details/details1/res/css/details.css" rel="stylesheet" type="text/css" />
-<link href="introduce/introduce1/res/css/introduce.css" rel="stylesheet" type="text/css" />
-<link href="integral/integral1/res/css/integral.css" rel="stylesheet" type="text/css" />
-<link href="meal/meal1/res/css/maintenance.css" rel="stylesheet" type="text/css" />
-<link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
-<link href="popup/popup2/res/css/popup.css" rel="stylesheet" type="text/css" />
-<link href="../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script src="../../common/js/hover.js"></script>
-<script src="../../common/js/zepto-1.16.min.js"></script>
-<script src="pic/pic1/res/js/iscroll.js"></script>
-<script src="introduce/introduce1/res/js/jquery.js"></script>
+    <title>商品详情</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="pic/pic2/res/css/pic.css" rel="stylesheet" type="text/css" />
+    <link href="details/details2/res/css/details.css" rel="stylesheet" type="text/css" />
+    <link href="popup/popup1/res/css/popup.css" rel="stylesheet" type="text/css" />
+    <link href="meal/meal1/res/css/maintenance.css" rel="stylesheet" type="text/css" />
+    <link href="introduce/introduce1/res/css/introduce.css" rel="stylesheet" type="text/css" />
+    <link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
+    <link href="recommendation/res/css/recommendation.css" rel="stylesheet" type="text/css" />
+    <link href="service/service1/res/css/service.css" rel="stylesheet" type="text/css" />
+    <link href="integral/integral1/res/css/integral.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../common/js/default.js"></script>
+	<script>
+	$(function(){
+		var _boxcart = $('#BoxCart');
+		var _btn = $('#BtnBoxCart');
+		var _content = _boxcart.find('.boxcart-nav');
+		var _num = 5.18 + 2.89*_content.find('a').size() + 'rem';
+
+		_btn.click(function(){
+			if(_btn.hasClass('act')){
+				_content.find('a').css('display','none');
+				_content.css({'width':'3.24rem','transition':'width 1s'});
+				_btn.removeClass('act');
+			}else{
+
+				_content.css({'width':_num,'transition':'width 0.8s'});
+				/* 4枚图标width为16.84rem  3枚图标width为13.84rem  2枚图标width为10.24rem */
+				setTimeout(function(){
+					_content.find('a').css('display','inline-block');
+				},400);
+				_btn.addClass('act');
+			}
+		})
+	})
+
+</script>
+
+
 </head>
 
 <body onload="loaded()" style="background:#f7f5f5;">
-	<!--商品图片-->
-    <script>
-		/*设置宽度、高度*/
-		$(function(){
-			var _obj = $('#scroller');
-			var _indicator = $('#indicator');
-			var _slide = _obj.find('.slide').size();
-			_obj.width(11.62*_slide+0.3+'rem');
-			_indicator.width(20*_slide-10);
-		})
-		
-		/*使用iscroll插件*/
-		var myScroll;
-		function loaded () {
-			myScroll = new IScroll('#wrapper', {
-				scrollX: true,
-				scrollY: false,
-				momentum: false,
-				snap: true,
-				snapSpeed: 1000,
-				keyBindings: true,
-				indicators: {
-					el: document.getElementById('indicator'),
-					resize: false
-				}
-			});
-		}
-		//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-	</script>
-	<div class="details-pic">
-		<div id="viewport">
-			<div id="wrapper">
-				<div id="scroller">
-					<div class="slide">
-						<div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
-					</div>
-					<div class="slide">
-						<div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
-					</div>
-					<div class="slide">
-						<div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
-					</div>
-					<div class="slide">
-						<div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
-					</div>
-					<div class="slide">
-						<div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
-					</div>
-					<div class="slide">
-						<div class="painting"><img src="pic/pic1/res/img/pic1.jpg" /></div>
-					</div>
-				</div>
+    <!--轮播图片-->
+	<div class="banner">
+		<div id="slider" class="slider">
+			<ul id="sliderlist" class="sliderlist">
+				<li>
+					<a href="###"><img src="recommendation/res/img/lunbo.jpg"></a>
+				</li>
+
+				<li>
+					<a href="###"><img src="recommendation/res/img/lunbo.jpg"></a>
+				</li>
+				<li>
+					<a href="###"><img src="recommendation/res/img/lunbo.jpg"></a>
+				</li>
+				<!--<li><a href="###"><img src="pic/pic2/res/img/50100.png"></a></li>-->
+				<li>
+					<a href="###"><img src="recommendation/res/img/lunbo.jpg"></a>
+				</li>
+				<li>
+					<a href="###"><img src="recommendation/res/img/lunbo.jpg"></a>
+				</li>
+			</ul>
+			<div class="clr"></div>
+			<!--切换轮播图按钮-->
+			<div id="pagenavi" class="dotColor">
 			</div>
-		</div>
-		
-		<div id="indicator">
-			<div id="dotty"></div>
+
 		</div>
 	</div>
+	<script type="text/javascript" src="pic/pic2/res/js/touchslider.min.js"></script>
+	<script type="text/javascript" src="pic/pic2/res/js/pic.js"></script>
     <!--商品图片-end-->
-    
+
+
+
+
     <!--商品详细-->
-    <script>
-		$(function(){
-			var _obj = $('#ProductDetails');
-			var _reduct = _obj.find('.details-num .reduct');
-			var _add = _obj.find('.details-num .add');
-			var _inp = _obj.find('.details-num input');
-			
-			_add.click(function(){
-				_inp.val(function(){
-					return Number($(this).val())+1;
-				})
-			})
-			_reduct.click(function(){
-				if(_inp.val()!=1){
-					_inp.val(function(){
-						return Number($(this).val())-1;
-					});
-				}
-			});	
-		})
-	</script>
     <div class="product-details" id="ProductDetails">
-		<p class="p-name fz28">美国原装进口精选优质开心果(奶油味)218gx2袋【快乐邻居】</p>
-		<p class="p-money fz28">预售价：<span class="fz36">￥29.90</span><em class="fz28">3个/份</em></p>
-		<!--<p class="p-market fz28">市场价：￥40.00</p>-->
-		<div class="details-num">
-			<div class="number-name fz28">数　量：</div>                   
-			<div class="number-input">
-				<a href="#" class="fz28 reduct">-</a>
-				<input class="fz28" type="text" value="1" />
-				<a href="#" class="fz28 add">+</a>
-			</div>
+        <p class="p-name fz28">坚果组合3袋580g 夏威夷果碧根果炭烧218gx3支持货到付款</p>
+        <div class="price price-member">
+            <!--未选状态a-btn,选中状态a-checked-->
+            <a class="a-checked" href="###">
+                <p class="p-title fz22">会员价</p>
+                <p class="p-money fz40"><span>￥</span>129.90</p>
+                <p class="p-money-old fz28">￥140.00</p>
+            </a>
+        </div>
+
+        <!--未选状态a-btn,选中状态a-checked
+        <div class="price price-integral">
+            <a class="a-btn" href="###">
+                <p class="p-title fz22">积分价</p>
+                <p class="p-money fz40"><span>￥</span>109.90</p>
+                <p class="p-plus fz28">+</p>
+                <p class="p-money-integral fz40">500<span>积分</span></p>
+            </a>
+        </div>-->
+
+        <div class="details-num">
+            <div class="number-name fz28">数　量</div>
+            <div class="number-input">
+                <a href="#" class="fz28 reduct">-</a>
+                <span class="s-input"><input class="fz28" type="text" value="1" /></span>
+                <a href="#" class="fz28 add">+</a>
+            </div>
             <div class="clr"></div>
-		</div>
-        <p class="p-prompt fz28">付款后预计5月21日送达</p>
-	</div>
+        </div>
+        <!--<p class="p-prompt fz28">付款后预计5月21日送达</p>-->
+        <p class="p-prompt2 fz28">定制产品不享有七天无理由退换货</p>
+        <a class="a-collect" href="#">收藏</a>
+    </div>
+    <script>
+        $(function() {
+            var _obj = $('#ProductDetails');
+            var _reduct = _obj.find('.details-num .reduct');
+            var _add = _obj.find('.details-num .add');
+            var _inp = _obj.find('.details-num input');
+
+            _add.click(function() {
+                _inp.val(function() {
+                    return Number($(this).val()) + 1;
+                })
+            })
+            _reduct.click(function() {
+                if (_inp.val() != 1) {
+                    _inp.val(function() {
+                        return Number($(this).val()) - 1;
+                    });
+                }
+            });
+        })
+    </script>
     <!--商品详细-end-->
-    
-	<!--列表购物车-->
-    <div class="button-popup fz28">请选择系列  规格  颜色 </div>
-    
+
+    <!--列表购物车弹出框-->
 	<div class="box-popup" id="BoxPopup">
-		
-        <div class="type one">
-        	<p class="fz28">限时</p>
-            <ul>
-            	<li><a class="fz28 act" href="#">3天</a></li>
-                <li><a class="fz28" href="#">6天</a></li>
-            </ul>
+		<div class="cartnum-img">
+           <span class="s-img"><img src="popup/popup1/res/img/img1.jpg" /></span>
+           <div class="cartnum-name">
+               <p class="p-name fz28">美国原装进口精选优质开心<p>
+                <p class="p-money fz32">￥49.00<p>
+
+                    <a class="a-close" href="#">关闭</a>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div class="type one">
+               <p class="fz28">系列</p>
+               <ul>
+                   <li><a class="fz28 act" href="#">奶油味</a></li>
+                   <li><a class="fz28" href="#">原味</a></li>
+                   <li><a class="fz28" href="#">奶油味</a></li>
+                   <li><a class="fz28" href="#">原味</a></li>
+                   <li><a class="fz28" href="#">奶油味</a></li>
+               </ul>
+               <div class="clr"></div>
+           </div>
+           <div class="type two">
+               <p class="fz28">规格</p>
+               <ul>
+                   <li><a class="fz28 act" href="#">200g</a></li>
+                   <li><a class="fz28" href="#">300g</a></li>
+                   <li><a class="fz28" href="#">400g</a></li>
+                   <li><a class="fz28 noAct" href="#">500g</a></li>
+               </ul>
+               <div class="clr"></div>
+           </div>
+           <div class="type three">
+               <p class="fz28">颜色</p>
+               <ul>
+                   <li><a class="fz28 act" href="#">白色</a></li>
+                   <li><a class="fz28" href="#">黑色</a></li>
+               </ul>
+               <div class="clr"></div>
+           </div>
+           <div class="num">
+               <div class="number-name fz28">数　量：</div>
+               <div class="number-input">
+                <a href="#" class="fz28 reduct">-</a>
+<span class="s-input"><input class="fz28" type="text" value="1" /></span>
+                <a href="#" class="fz28 add">+</a>
+            </div>
             <div class="clr"></div>
         </div>
-        <div class="type two">
-        	<p class="fz28">规格</p>
-            <ul>
-            	<li><a class="fz28 act" href="#">200g</a></li>
-                <li><a class="fz28" href="#">300g</a></li>
-                <li><a class="fz28 noAct" href="#">400g</a></li>
-            </ul>
-            <div class="clr"></div>
+        <div class="gbook fz28"><span>留言<input type="text" /></span></div>
+        <div class="btn fz28">
+        	<a href="#">确认</a>
         </div>
-        <div class="type type-pic">
-        	<p class="fz28">涂装选择</p>
-            <ul>
-            	<li><a class="fz28 act" href="#"><img src="popup/popup2/res/img/exam.png" /><p>酷炫迷彩</p></a></li>
-                <li><a class="fz28" href="#"><img src="popup/popup2/res/img/exam.png" /><p>酷炫迷彩</p></a></li>
-                <li><a class="fz28" href="#"><img src="popup/popup2/res/img/exam.png" /><p>酷炫迷彩</p></a></li>
-                <li><a class="fz28" href="#"><img src="popup/popup2/res/img/exam.png" /><p>酷炫迷彩</p></a></li>
-            </ul>
-            <div class="clr"></div>
+		<!--
+        <div class="t-btn fz28">
+        	<a href="#">立即购买</a>
+            <a class="a-last" id="BtnLast" href="#">加入购物车</a>
         </div>
-        
-	</div>	
-	<!--列表购物车-end-->
-    <script type="text/javascript">setHover('one');</script>
-    <script type="text/javascript">setHover('two');</script>
-    <script type="text/javascript">setHover('type-pic');</script>
-    
+    -->
+</div>
+<div id="Background"></div>
+<script type="text/javascript">setHover('one');</script>
+<script type="text/javascript">setHover('two');</script>
+<script type="text/javascript">setHover('three');</script>
+
+<button class="button-popup fz28">请选择系列  规格  颜色</button>
+
+<script>
+       $(function(){
+          var _btn = $('button');
+          var _bg = $('#Background');
+          var _box = $('#BoxPopup');
+          var _cache = $('#BoxCache');
+          var _del = _box.find('.a-close');
+          var _reduct = _box.find('.num .reduct');
+          var _add = _box.find('.num .add');
+          var _inp = _box.find('.num input');
+
+          _btn.click(function(){
+             _box.show();
+             _bg.show();
+         })
+          _del.click(function(){
+             _box.hide();
+             _bg.hide();
+         })
+          _add.click(function(){
+             _inp.val(function(){
+                return Number($(this).val())+1;
+            })
+         })
+          _reduct.click(function(){
+             if(_inp.val()!=1){
+                _inp.val(function(){
+                   return Number($(this).val())-1;
+               });
+            }
+        });
+      })
+  </script>
+<!--列表购物车弹出框-end-->
+
     <!--赠送积分-->
 	<section class="stn-integral">
-    	<div class="pro-integral">
-            <div class="integral">
-                <div class="integral-left"><span class="s-send"></div>
-                <div class="integral-main fz60"><span>200.00</span></span></div>
-                <div class="integral-right"></div>                
-            </div>
-            <!--<p class="fz28">购买单件商品即送购物积分，结算时可使用积分抵用现金</p>-->
-            <p class="fz28">购买此件商品即送购物积分，可在“积分兑换”专区使用</p>
-        </div>
-    </section>
-    <!--赠送积分-end-->
-    
+		<div class="pro-integral">
+			<div class="integral">
+				<div class="integral-left"><span class="s-send"></div>
+				<div class="integral-main fz60"><span>200.00</span></span></div>
+				<div class="integral-right"></div>
+			</div>
+			<!--<p class="fz28">购买单件商品即送购物积分，结算时可使用积分抵用现金</p>-->
+			<p class="fz28">购买此件商品即送购物积分，可在“积分兑换”专区使用</p>
+		</div>
+	</section>
+	<!--赠送积分-end-->
+
     <!--养护套餐-->
     <script>
-		function Package(){
-			var _obj = $('#Maintenance .package');
-			var _img = _obj.find('.s-img');
-			_img.width(_obj.width()*0.29);
-			_img.height(_obj.width()*0.29);
-		}
-		$(window).resize(function() {
-			Package();
-		});
-		Package();
-	</script>
+        function Package() {
+            var _obj = $('#Maintenance .package');
+            var _img = _obj.find('.s-img');
+            _img.width(_obj.width() * 0.29);
+            _img.height(_obj.width() * 0.29);
+        }
+        $(window).resize(function() {
+            Package();
+        });
+        Package();
+    </script>
     <section class="stn-maintenance" id="Maintenance">
-    	<div class="maintenance-lists">
+        <div class="maintenance-lists">
             <a class="a-title fz32" href="#">养护套餐<span class="fz26">更多</span></a>
-            
+
             <div class="package" id="Package">
                 <table>
                     <tr>
@@ -203,11 +289,11 @@
                     </tr>
                 </table>
             </div>
-            
+
             <div class="package-btn">
                 <p class="p-money fz24">市场价：￥532.90</p>
                 <p class="p-price fz24">套餐价：<span class="fz28">￥332.90</span></p>
-                
+
                 <div class="btn">
                     <a class="fz24" href="#">立即购买</a>
                     <a class="fz24" href="#">加入购物车</a>
@@ -216,98 +302,82 @@
         </div>
     </section>
     <!--养护套餐-end-->
-    
+
+    <!--商品推荐-->
+	<div class="recommendation" id="recommendation">
+		<h1 class="fz32">商品推荐</h1>
+        <ul>
+        	<li>
+            	<a href="#">
+                	<div class="img">
+                    	<img src="recommendation/res/img/r1.jpg">
+                        <p class="p-bg"><span class="bg"></span><span class="fz24 font">￥32.90</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<div class="img">
+                    	<img src="recommendation/res/img/r2.jpg">
+                        <p class="p-bg"><span class="bg"></span><span class="fz24 font">￥32.90</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<div class="img">
+                    	<img src="recommendation/res/img/r3.jpg">
+                        <p class="p-bg"><span class="bg"></span><span class="fz24 font">￥32.90</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+                	<div class="img">
+                    	<img src="recommendation/res/img/r4.jpg">
+                        <p class="p-bg"><span class="bg"></span><span class="fz24 font">￥32.90</span></p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="clr"></div>
+        <div class="d-btn">
+        	<a href="###" class="fz28 frist">换一换</a>
+            <a href="###" class="fz28">更多商品</a>
+            <div class="clr"></div>
+        </div>
+	</div>
+    <script type="text/javascript">
+    $(function(){
+		var _rcom = $('#recommendation');
+		var _img = _rcom.find('.img');
+		_img.height(_img.width());
+		_rcom.find('li').height(_img.width());
+		_rcom.find('li a').height(_img.width());
+	})
+
+    </script>
+    <!--商品推荐 end-->
+
     <!--商品介绍-->
-    <script>
-		$(function(){
-			var _obj = $('#DetailsIntroduce');
-			var _btn = _obj.find('nav a');
-			var _item = _obj.find('.introduce-con .introduce-item');
-			//初始化
-			_item.eq(0).show();
-			_btn.eq(0).addClass('act');
-			
-			$.each(_btn, function(i,e){
-				var _this = $(e);
-				_this.click(function(){
-					_btn.removeClass('act');
-					_this.addClass('act');
-					_item.hide();
-					_item.eq(i).show();
-				});
-			});
-		});
-		
-		/*导航跟随滑动效果插件*/
-		(function($){
-			$.fn.capacity = function(options) {
-				var opts = $.extend({},$.fn.capacity.deflunt,options);
-				
-				var FixedFun = function(element) {
-					
-					var top = opts.top;
-					var right = ($(window).width()-opts.pageWidth)/2+opts.right;
-					element.css({
-						"right":right,
-						"top":top
-					});
-					$(window).resize(function(){
-						var right = ($(window).width()-opts.pageWidth)/2+opts.right;
-						element.css({
-							"right":right
-						});
-					});
-					
-					$(window).scroll(function() {
-						var scrolls = $(this).scrollTop();
-						if (scrolls > 500) {
-							if (window.XMLHttpRequest) {
-								element.css({
-									position: "fixed",
-									top: 0
-								});
-							} else {
-								element.css({
-									top: scrolls
-								});
-							}
-						}else {
-							element.css({
-								position: "relative",
-								top: top
-							});
-						}
-					});
-				};
-				return $(this).each(function() {
-					FixedFun($(this));
-				});
-			};
-			$.fn.capacity.deflunt={
-				right : 0,//相对于页面宽度的右边定位
-				top:0,
-				
-				
-			};
-		})(jQuery);
-		/*--------------页面滑动效果 - end ----------------*/
-	</script>
-    <div class="details-introduce" id="DetailsIntroduce" style="margin-bottom:3.77rem;">
+	<div class="details-introduce" id="DetailsIntroduce">
 		<nav>
-			<ul>
+		    <!--按li的个数为ul分类,已定为的有ul-col-2/3/4,一定要注意下面<div class="introduce-item">与此处相同-->
+			<ul class="ul-col-2">
 				<li><a class="fz28" href="#">商品介绍</a></li>
-				<li><a class="fz28" href="#">商品参数</a></li>
+				<!--<li><a class="fz28" href="#">商品参数</a></li>-->
 				<li><a class="fz28" href="#">评价(2039)</a></li>
 			</ul>
+			<div class="clr"></div>
 		</nav>
 		
 		<div class="introduce-con">
 			<div class="introduce-item">
 				<img src="introduce/introduce1/res/img/img1.jpg" />
 			</div>
-			<div class="introduce-item">
+			<!--<div class="introduce-item">
 				<img src="introduce/introduce1/res/img/img1.jpg" />
-			</div>
+			</div>-->
 			<div class="introduce-item">
 				<ul class="introduce-gbook">
 					<li>
@@ -335,14 +405,36 @@
 			</div>
 		</div>
 	</div>
+	<script>
+        $(function() {
+            var _obj = $('#DetailsIntroduce');
+            var _btn = _obj.find('nav a');
+            var _item = _obj.find('.introduce-con .introduce-item');
+            //初始化
+            _item.eq(0).show();
+            _btn.eq(0).addClass('act');
 
-    <!--商品介绍-end-->
-    
+            _btn.each(function(i){
+                $(this).on('tap click',{data:i},function(){
+                    _btn.removeClass('act');
+                    $(this).addClass('act');
+                    _item.hide();
+                    _item.eq(i).show()
+                })
+            })
+        })
+    </script>
+	<!--商品介绍-end-->
+
+
     <!--详情按钮高度：3.77rem-->
+	<div style="margin-top:16.3%;"></div>
 	<div class="details-btn">
-    	<a class="a-orange fz32" href="#">立即购买</a>
-        <a class="a-yellow fz32" href="#">加入购物车</a>
-    </div>
-    <!--详情按钮-end-->
+		<a class="a-orange fz32" href="#">立即购买</a>
+		<a class="a-yellow fz32" href="#">加入购物车</a>
+	</div>
+	<!--详情按钮-end-->
+
 </body>
+
 </html>

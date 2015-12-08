@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>分销管理首页</title>
@@ -7,27 +7,35 @@
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+
 <link href="store/store1/res/css/store.css" rel="stylesheet" type="text/css" />
 <link href="state/state1/res/css/state.css" rel="stylesheet" type="text/css" />
 <link href="bottom/bottom1/res/css/bottom.css" rel="stylesheet" type="text/css" />
 <link href="lists/lists1/res/css/lists.css" rel="stylesheet" type="text/css" />
+<script src="../../common/js/zepto-1.16.min.js"></script>
+<script src="../../common/js/default.js"></script>
 </head>
 
 <body>
 	<!--店铺信息-->
     <section class="stn-store">
     	<a class="a-img" href="#"><img src="store/store1/res/img/img.jpg" /></a>
-        <p class="fz36">小米之家</p>
+        <p class="fz36">六六特卖</p>
+        <div class="clr"></div>
+        <div class="income">
+            <p class="fz28">我的收益<span>1980.00</span></p>
+        </div>
     </section>
     <!--店铺信息-end-->
     
     <!--店铺状态-->
     <section class="stn-state">
-    	<table>
+    <!--按表格列数给table赋予类,现定义有col-2/3,对应二列/三列-->
+    	<table class="col-2">
         	<tr>
-            	<td width="33.33%"><p class="fz36">0</p><em class="fz22">待处理订单</em></td>
-                <td width="33.33%"><p class="fz36">3</p><em class="fz22">分销商</em></td>
-                <td width="33.33%"><p class="p-red fz36">100.00</p><em class="fz22">我的收益(元)</em></td>
+            	<td><p class="fz36">0</p><em class="fz22">待处理订单</em></td>
+                <td><p class="fz36">3</p><em class="fz22">分销商</em></td>
+<!--                <td><p class="p-red fz36">100.00</p><em class="fz22">我的收益(元)</em></td>-->
             </tr>
         </table>
     </section>
@@ -42,7 +50,7 @@
                     <p class="fz22">进入店铺首页</p>
                 </a>
             </li>
-            <li class="li-right">
+            <!--<li class="li-right">
             	<a class="a2" href="#">
                 	<p class="p-name fz30">店铺管理</p>
                     <p class="fz22">进入店铺设置</p>
@@ -53,7 +61,7 @@
                 	<p class="p-name fz30">商品管理</p>
                     <p class="fz22">设置分销商品</p>
                 </a>
-            </li>
+            </li>-->
             <li class="li-right">
             	<a class="a4" href="#">
                 	<p class="p-name fz30">我的订单</p>
@@ -79,19 +87,21 @@
                 </a>
             </li>
             <li class="li-right">
-            	<a class="a8" href="#">
-                	<p class="p-name fz30">店铺分析</p>
-                    <p class="fz22">查看店铺数据</p>
-                </a>
-            </li>
-            <li class="li-bottom">
             	<a class="a9" href="#">
                 	<p class="p-name fz30">消息中心</p>
                     <p class="fz22">查看</p>
                 </a>
             </li>
-            <li class="li-right li-img">
-            	<img src="lists/lists1/res/img/img10.jpg" />
+            <li class="li-bottom">
+            	<a class="a8" href="#">
+                	<p class="p-name fz30">店铺分析</p>
+                    <p class="fz22">查看店铺数据</p>
+                </a>
+            </li>
+            <li class="li-bottom li-img li-right">
+                <a href="#">
+            	    <img src="lists/lists1/res/img/img10.jpg" />
+                </a>
             </li>
         </ul>
         <div class="clr"></div>
