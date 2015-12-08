@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>服务信息</title>
@@ -26,17 +26,17 @@
 			var _slide = _obj.find('.slide').size();
 			_obj.width(11.62*_slide+0.3+'rem');
 			_indicator.width(20*_slide-10);
-			
+
 			var _btn = $('.a-collect');
 			var _cache = $('#BoxCache');
 			var _btnlast = $('#BtnLast');
-			
+
 			_btn.click(function(){
 				_cache.show();
 				setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className + ' fadein';;document.getElementById('BoxCache').style.display = 'block';");
 				setTimeout("document.getElementById('BoxCache').className = document.getElementById('BoxCache').className.replace(' fadein', '');document.getElementById('BoxCache').style.display = 'none'",2625);
 			})
-			
+
 		})
 		
 		/*使用iscroll插件*/
@@ -93,17 +93,17 @@ document.addEventListener('touchmove', function () {}, false);
 		</div>
 	</div>
 	<!--商品图片-end-->
-	
+
 	<!--商品详细-->
 	<div class="product-details" id="ProductDetails">
 		<p class="p-name fz28">美丽上门美容馆出水芙蓉SPA+花草茶+甜品+服务员</p>
 		<p class="p-money fz28">预售价：<span class="fz36">￥29.90</span><i class="fz26">￥1230.00</i></p>
 		<p class="p-num fz26">已销售<span>281</span>笔</p>
-		
+
 		<a class="a-collect" href="#">收藏</a>
 	</div>
 	<!--商品详细-end-->
-	
+
 	<!--提示框-->
 	<div class="box-cache" id="BoxCache">
 		<div class="cachebg"></div>
@@ -112,24 +112,24 @@ document.addEventListener('touchmove', function () {}, false);
 		</div>
 	</div>
 	<!--提示框 end-->
-	
+
 	<!--服务详情-->
 	<section class="stn-detailsservice">
 		<h1 class="fz32">服务详情</h1>
-		
+
 		<p class="p1 fz26">美丽上门SPA会所立志与每一个客人成为真正的朋友。您进店以后，会为您奉上一杯热茶，邀您吃些水果点心； 您躺在按摩床上时，为您舒缓身体的疲劳；您坐在沙发上，听您倾诉工作的压力。</p>
 		<p class="p2 fz30">服务流程/时长：</p>
 		<p class="p1 fz26">汗蒸（20分钟/次）+背部按摩（约30分钟/次）+后腿按摩（约15分钟/次）+前腿按摩（约10分钟/次）+腹部按摩（约5分钟/次）+胸部按摩（约5分钟/次）+头肩颈按摩（约10分钟/次）+面部水膜+滑罐（约30分钟/次）+花草茶+甜品+服务员</p>
 		<img class="img1" src="service/service1/res/img/img.jpg" />
-		
+
 		<a class="fz28" href="#">点击显示更多图片</a>
 	</section>
 	<!--服务详情-end-->
-	
+
 	<!--顾客评价 间距:.72rem-->
 	<section class="stn-evaluate" style="margin-bottom:4.49rem;">
 		<h1 class="fz32">顾客评价（281）</h1>
-		
+
 		<ul>
 			<li>
 				<p class="p-name fz28">悦有然&nbsp;&nbsp;13*******89<span class="fz24">2015-07-14</span></p>
@@ -159,7 +159,7 @@ document.addEventListener('touchmove', function () {}, false);
 		<a class="fz28" href="#">查看更多评论</a>
 	</section>
 	<!--顾客评价-end-->
-	
+
 	<!--快捷购物车栏-->
 	<script>
 		$(function(){
