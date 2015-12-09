@@ -118,4 +118,4 @@
 	top:50%;
 }
 
-.banner .erweima{ display:block; width:1.81rem; height:1.81rem; background:url(../../../../../../index/layout1/pic/pic2/res/img/erweima.png); position:absolute; bottom:0; right:0; z-index:10000; text-indent:-9999px; background-size:100% 100%;}
+.banner .erweima{ display:block; width:1.81rem; height:1.81rem; background:url(../img/erweima.png); position:absolute; bottom:0; right:0; z-index:10000; text-indent:-9999px; background-size:100% 100%;}
