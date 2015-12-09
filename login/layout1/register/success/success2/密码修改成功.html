@@ -21,18 +21,24 @@
 		$('#StnSuccess').find('.a-btn').css('margin-top',$(window).height()*0.1);
 	})
 </script>
+<style>
+.color-blue{ color:#77cac8 !important;}
+.bg-blue{ background:url(res/img/bg-blue.jpg) repeat-x bottom #69c2c0 !important;}
+.btn-bg-blue{ background:#69c2c0 !important;}
+.text-shadow{ text-shadow:0 0 3px #2fb2af !important;}
+</style>
 </head>
 
 <body style="background:#f4f4f4;">
 	<!--密码修改成功-->
     <section class="stn-success" id="StnSuccess">
-        <span class="s-angle"><img src="res/img/angle.jpg" /></span>
-    	<div class="success">
-            <span class="s-img"><img src="res/img/img.jpg" /></span>
-            <p class="fz42">恭喜，密码修改成功！</p>
+        <span class="s-angle"><img src="res/img/angle-blue.jpg" /></span>
+    	<div class="success bg-blue">
+            <span class="s-img"><img src="res/img/img-blue.jpg" /></span>
+            <p class="fz42 text-shadow">恭喜，密码修改成功！</p>
         </div>
         
-        <a class="a-btn blue fz34" href="#">直接登陆</a>
+        <a class="a-btn blue fz34 btn-bg-blue" href="#">直接登陆</a>
     </section>
     <!--密码修改成功-end-->
 </body>
