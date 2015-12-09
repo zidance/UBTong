@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>体验厨房</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/lists.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script src="../../../../common/js/default.js"></script>
+<script src="res/js/jquery-1.11.3.min.js"></script>
+<script src="res/js/jquery.masonry.min.js"></script>
+</head>
+
+<body style="background-color:#f4f4f4;">
+	<!--文章页列表-->
+   <section class="stn-artlist">
+       <ul id="grid">
+           <li class="grid-item">
+               <a class="a-main" href="###">
+                   <span class="s-img"><img src="res/img/img1.jpg" /></span>
+                   <p class="p-name fz28">辣炒帝王蟹</p>
+               </a>
+               <div class="more">
+                   <a href="###" class="a-look fz24">300</a>
+                   <a href="###" class="a-comment fz24">15</a>
+               </div>
+           </li>
+           <li class="grid-item">
+               <a class="a-main" href="###">
+                   <span class="s-img"><img src="res/img/img2.jpg" /></span>
+                   <p class="p-name fz28">寿司三文鱼</p>
+               </a>
+               <div class="more">
+                   <a href="###" class="a-look fz24">300</a>
+                   <a href="###" class="a-comment fz24">15</a>
+               </div>
+           </li>
+           <li class="grid-item">
+               <a class="a-main" href="###">
+                   <span class="s-img"><img src="res/img/img3.jpg" /></span>
+                   <p class="p-name fz28">毛蟹炒年糕</p>
+               </a>
+               <div class="more">
+                   <a href="###" class="a-look fz24">300</a>
+                   <a href="###" class="a-comment fz24">15</a>
+               </div>
+           </li>
+           <li class="grid-item">
+               <a class="a-main" href="###">
+                   <span class="s-img"><img src="res/img/img4.jpg" /></span>
+                   <p class="p-name fz28">避风塘帝王蟹</p>
+               </a>
+               <div class="more">
+                   <a href="###" class="a-look fz24">300</a>
+                   <a href="###" class="a-comment fz24">15</a>
+               </div>
+           </li>
+       </ul>
+   </section>
+    <script>
+    var $$ = jQuery;
+    jQuery.noConflict;
+    $$(function(){
+        $$('#grid').masonry({
+            itemSelector : '.grid-item',
+        });
+    });
+    </script>
+    <!--文章页列表-end-->
+</body>
+</html>
