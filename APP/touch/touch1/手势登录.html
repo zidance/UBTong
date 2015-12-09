@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>手势密码</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+   	<link href="../../../common/css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="res/css/gesture.css" rel="stylesheet" type="text/css"/>
+    <script src="res/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="res/js/patternLock.js" type="text/javascript"></script>
+    <script>
+	$(function(){
+		var lock2 = new PatternLock("#patternContainer",{patternVisible:false});
+		$('#warp li.patt-circ').height($('#warp li.patt-circ').width());
+	})
+	
+</script>
+    
+</head>
+<body style="background:#f4f4f4;">
+	<section class="gesture" style="background:none;">
+    	<div class="photo"><span><img src="res/img/phtop.jpg"/></span></div>
+        <h2 class="fz32">希丹ZIDANCE</h2>
+        <div class="set-gesture" id="warp">
+        	<div id="patternContainer"></div>
+        </div>
+        <p class="p-btn">
+        	<a href="###" class="fz24 a-forget">忘记手势密码</a>
+            <a href="###" class="fz24 a-change">切换登陆</a>
+            <div class="clr"></div>
+        </p>
+    </section>
+</body>
+</html>
+
