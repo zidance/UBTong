@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+.gesture{ width:89.0625%; margin:0 auto; background:#fff;} 
+.gesture h1{ color:#000; text-align:center; margin-top:1.56rem;}
+.gesture .pwd{ display:block; margin:0 auto; width:3.31rem; height:3.31rem; margin-top:0.91rem;}
+.gesture .pwd img{ width:100%; height:100%;}
+.gesture h2{ color:#000; text-align:center; margin-top:1.81rem; font-weight:200px;}
+.gesture .set-gesture{ padding-top:0.72rem; width:100%;}
+.gesture .reset{ color:#fd5b57; text-align:center; padding-top:0.72rem;}
+.patt-wrap{position:relative; cursor:pointer;}
+.patt-wrap ul, .patt-wrap li{
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+.patt-circ{
+	position:relative;
+	float: left;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+ }
+.patt-circ.hovered{
+	
+} 
+
+.patt-circ.hovered .patt-hovered{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-5px;
+	margin-left:-5px;
+	width:10px;
+	height:10px;
+	background:#69c2c0;
+	border-radius:5px;
+}
+
+.patt-error .patt-circ.hovered .patt-hovered{
+	border:2px solid #BA1B26;
+}
+
+.patt-hidden .patt-circ.hovered .patt-hovered{border:0;}
+
+.patt-dots{
+	width: 100%;height: 100%;
+	border-radius:50%;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-50%;
+	margin-left:-50%;
+	border:2px solid #7e7e7e;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	
+}
+.patt-lines{
+	border-radius:5px;
+	height:10px;
+	background:rgba(105,194,192,.5);
+	position:absolute;
+	transform-origin:5px 5px;
+	-ms-transform-origin:5px 5px; /* IE 9 */
+	-webkit-transform-origin:5px 5px;
+}
+
+.patt-hidden .patt-lines{
+	display:none;
+}
+
+

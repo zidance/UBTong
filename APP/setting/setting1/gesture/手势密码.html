@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>手势密码</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+   	<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="res/css/gesture.css" rel="stylesheet" type="text/css"/>
+    <script src="res/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="res/js/patternLock.js" type="text/javascript"></script>
+    <script>
+	$(function(){
+		var lock2 = new PatternLock("#patternContainer",{patternVisible:false});
+		$('#warp li.patt-circ').height($('#warp li.patt-circ').width());
+	})
+	
+</script>
+    
+</head>
+<body>
+	<section class="gesture">
+        <h2 class="fz24">绘制解锁图案</h2>
+        <!--第二次绘制 <h2 class="fz24">再次绘制解锁图案</h2>-->
+        <div class="set-gesture" id="warp">
+        	<div id="patternContainer"></div>
+        </div>
+        <p class="reset fz24">与上次绘制不一致，请重新绘制！</p>
+    </section>
+</body>
+</html>
+
