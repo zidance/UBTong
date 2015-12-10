@@ -482,12 +482,12 @@
             var _item = _obj.find('.introduce-con .introduce-item');
             //初始化
             _item.eq(0).show();
-            _btn.eq(0).addClass('act');
+            _btn.eq(0).addClass('color');
 
             _btn.each(function(i){
                 $(this).on('tap click',{data:i},function(){
-                    _btn.removeClass('act');
-                    $(this).addClass('act');
+                    _btn.removeClass('color');
+                    $(this).addClass('color');
                     _item.hide();
                     _item.eq(i).show()
                 })
