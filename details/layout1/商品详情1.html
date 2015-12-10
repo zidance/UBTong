@@ -10,7 +10,9 @@
     <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
     <link href="pic/pic2/res/css/pic.css" rel="stylesheet" type="text/css" />
     <link href="details/details2/res/css/details.css" rel="stylesheet" type="text/css" />
+    <link href="popup/popup1/res/css/popup.css" rel="stylesheet" type="text/css" />
     <link href="popup/popup2/res/css/popup.css" rel="stylesheet" type="text/css" />
+    <link href="method/method1/res/css/method.css" rel="stylesheet" type="text/css" />
     <link href="meal/meal1/res/css/maintenance.css" rel="stylesheet" type="text/css" />
     <link href="introduce/introduce1/res/css/introduce.css" rel="stylesheet" type="text/css" />
     <link href="detailsbtn/detailsbtn1/res/css/detailsbtn.css" rel="stylesheet" type="text/css" />
@@ -76,7 +78,7 @@
 			<!--切换轮播图按钮-->
 			<div id="pagenavi" class="dotColor">
 			</div>
-
+			<a href="###" class="erweima">二维码</a>
 		</div>
 	</div>
 	<script type="text/javascript" src="pic/pic2/res/js/touchslider.min.js"></script>
@@ -118,6 +120,7 @@
         </div>
         <!--<p class="p-prompt fz28">付款后预计5月21日送达</p>-->
         <p class="p-prompt2 fz28">定制产品不享有七天无理由退换货</p>
+        <a class="a-collect" href="#">收藏</a>
         <!--<a class="a-collect" href="#">收藏</a>-->
     </div>
     <script>
@@ -143,15 +146,130 @@
     </script>
     <!--商品详细-end-->
 
-    <!--列表购物车-->
-    <div class="button-popup fz28">请选择系列 规格 颜色 </div>
+    <!--交易方式-->
+	<section class="stn-method fz28">
+	    <p class="p-title">交易方式</p>
+	    <div class="method">
+	        <label>送货上门<input class="ck-bg-color" name="method" type="radio" value="" /></label>
+	        <label>上门自提<input class="ck-bg-color" name="method" type="radio" value="" /></label>
+	    </div>
+	</section>
+	<!--交易方式-end-->
 
-    <div class="box-popup" id="BoxPopup">
+    <!--列表购物车弹出框-->
+	<div class="box-popup" id="BoxPopup">
+		<div class="cartnum-img">
+           <span class="s-img"><img src="popup/popup1/res/img/img1.jpg" /></span>
+           <div class="cartnum-name">
+               <p class="p-name fz28">美国原装进口精选优质开心<p>
+                <p class="p-money color fz32">￥49.00<p>
+
+                    <a class="a-close" href="#">关闭</a>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div class="type one">
+               <p class="fz28">系列</p>
+               <ul>
+                  <!--原act类改为color和bd-color(common中定义的公用类名),且内含em.原来的非选中状态和禁选状态(noAct类)保持原样-->
+                   <li><a class="fz28 bd-color color" href="#"><em class="bd-color"></em>奶油味</a></li>
+                   <li><a class="fz28" href="#">原味</a></li>
+                   <li><a class="fz28" href="#">奶油味</a></li>
+                   <li><a class="fz28" href="#">原味</a></li>
+                   <li><a class="fz28" href="#">奶油味</a></li>
+               </ul>
+               <div class="clr"></div>
+           </div>
+           <div class="type two">
+               <p class="fz28">规格</p>
+               <ul>
+                   <li><a class="fz28 bd-color color" href="#"><em class="bd-color"></em>200g</a></li>
+                   <li><a class="fz28" href="#">300g</a></li>
+                   <li><a class="fz28" href="#">400g</a></li>
+                   <li><a class="fz28 noAct" href="#">500g</a></li>
+               </ul>
+               <div class="clr"></div>
+           </div>
+           <div class="type three">
+               <p class="fz28">颜色</p>
+               <ul>
+                   <li><a class="fz28 bd-color color" href="#"><em class="bd-color"></em>白色</a></li>
+                   <li><a class="fz28" href="#">黑色</a></li>
+               </ul>
+               <div class="clr"></div>
+           </div>
+           <div class="num">
+               <div class="number-name fz28">数　量：</div>
+               <div class="number-input">
+                <a href="#" class="fz28 reduct">-</a>
+<span class="s-input"><input class="fz28" type="text" value="1" /></span>
+                <a href="#" class="fz28 add">+</a>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div class="gbook fz28"><span>留言<input type="text" /></span></div>
+        <div class="btn fz28">
+        	<a class="bg-color" href="#">确认</a>
+        </div>
+
+        <div class="t-btn fz28">
+        	<a  class="bg-color" href="#">立即购买</a>
+            <a class="a-last bg-color2" id="BtnLast" href="#">加入购物车</a>
+        </div>
+
+</div>
+<div id="Background"></div>
+<script type="text/javascript">setHover('one');</script>
+<script type="text/javascript">setHover('two');</script>
+<script type="text/javascript">setHover('three');</script>
+
+<button class="button-popup fz28">请选择系列  规格  颜色</button>
+<script>
+       $(function(){
+          var _btn = $('.button-popup');
+          var _bg = $('#Background');
+          var _box = $('#BoxPopup');
+          var _cache = $('#BoxCache');
+          var _del = _box.find('.a-close');
+          var _reduct = _box.find('.num .reduct');
+          var _add = _box.find('.num .add');
+          var _inp = _box.find('.num input');
+
+          _btn.click(function(){
+             _box.show();
+             _bg.show();
+         })
+          _del.click(function(){
+             _box.hide();
+             _bg.hide();
+         })
+          _add.click(function(){
+             _inp.val(function(){
+                return Number($(this).val())+1;
+            })
+         })
+          _reduct.click(function(){
+             if(_inp.val()!=1){
+                _inp.val(function(){
+                   return Number($(this).val())-1;
+               });
+            }
+        });
+      })
+  </script>
+    <!--列表购物车弹出框-end-->
+
+
+    <!--列表购物车--非弹出式-->
+    <div class="button-nopopup fz28">请选择系列 规格 颜色 </div>
+
+    <div class="box-nopopup" id="BoxNoPopup">
 
         <div class="type">
             <p class="fz28">限时</p>
             <ul>
-                <li><a class="fz28 act" href="#">3天</a></li>
+               <!--原act类改为color和bd-color(common中定义的公用类名),且内含em.原来的非选中状态和禁选状态(noAct类)保持原样-->
+                <li><a class="fz28 bd-color color" href="#"><em class="bd-color"></em>3天</a></li>
                 <li><a class="fz28" href="#">6天</a></li>
             </ul>
             <div class="clr"></div>
@@ -159,7 +277,7 @@
         <div class="type">
             <p class="fz28">规格</p>
             <ul>
-                <li><a class="fz28 act" href="#">200g</a></li>
+                <li><a class="fz28 bd-color color" href="#"><em class="bd-color"></em>200g</a></li>
                 <li><a class="fz28" href="#">300g</a></li>
                 <li><a class="fz28 noAct" href="#">400g</a></li>
             </ul>
@@ -169,7 +287,7 @@
             <p class="fz28">涂装选择</p>
             <ul>
                 <li>
-                    <a class="fz28 act" href="#"><img src="popup/popup2/res/img/exam.png" />
+                    <a class="fz28 bd-color color" href="#"><em class="bd-color"></em><img src="popup/popup2/res/img/exam.png" />
                         <p>酷炫迷彩</p>
                     </a>
                 </li>
@@ -193,21 +311,25 @@
         </div>
 
     </div>
-    <!--列表购物车-end-->
+    <!--列表购物车--非弹出式end-->
+
+
 
     <!--赠送积分-->
-	<section class="stn-integral">
-		<div class="pro-integral">
-			<div class="integral">
-				<div class="integral-left"><span class="s-send"></div>
-				<div class="integral-main fz60"><span>200.00</span></span></div>
-				<div class="integral-right"></div>
-			</div>
-			<!--<p class="fz28">购买单件商品即送购物积分，结算时可使用积分抵用现金</p>-->
-			<p class="fz28">购买此件商品即送购物积分，可在“积分兑换”专区使用</p>
-		</div>
-	</section>
-	<!--赠送积分-end-->
+    <section class="stn-integral">
+    	<div class="pro-integral">
+            <div class="integral">
+                <div class="integral-left"><img src="integral/integral1/res/img/left-green.png" />
+                    <span class="s-send"><img src="integral/integral1/res/img/send-green.png" /></span>
+                </div>
+                <div class="integral-main fz60"><img src="integral/integral1/res/img/main-green.png" /><span>200.00</span></span></div>
+                <div class="integral-right"><img src="integral/integral1/res/img/right-green.png" /></div>
+            </div>
+            <!--<p class="fz28">购买单件商品即送购物积分，结算时可使用积分抵用现金</p>-->
+            <p class="fz28">购买此件商品即送购物积分，可在“积分兑换”专区使用</p>
+        </div>
+    </section>
+    <!--赠送积分-end-->
 
     <!--养护套餐-->
     <script>
@@ -243,8 +365,8 @@
                 <p class="p-price fz24">套餐价：<span class="fz28">￥332.90</span></p>
 
                 <div class="btn">
-                    <a class="fz24" href="#">立即购买</a>
-                    <a class="fz24" href="#">加入购物车</a>
+                    <a class="bg-color fz24" href="#">立即购买</a>
+                    <a class="bg-color2 fz24" href="#">加入购物车</a>
                 </div>
             </div>
         </div>
@@ -312,7 +434,7 @@
 		<nav>
 		    <!--按li的个数为ul分类,已定为的有ul-col-2/3/4,一定要注意下面<div class="introduce-item">与此处相同-->
 			<ul class="ul-col-3">
-				<li><a class="fz28" href="#">商品介绍</a></li>
+				<li><a class="fz28 color" href="#">商品介绍</a></li>
 				<li><a class="fz28" href="#">商品参数</a></li>
 				<li><a class="fz28" href="#">评价(2039)</a></li>
 			</ul>
