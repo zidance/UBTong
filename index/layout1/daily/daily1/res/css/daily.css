@@ -16,15 +16,18 @@
 .stn-daily-pick .pick-money.type0 .a-begin img{width:100%;}
 
 .stn-daily-pick .pick-money .i-pic{width:97%;margin:0 auto;}
-.stn-daily-pick .pick-money .income-wrap{position:absolute;left:50%;top:7%;min-width: 70%;max-width: 80%;}
-.stn-daily-pick .pick-money .income{position:relative;left:-50%;border:.3rem solid #fff;padding:3.6rem .8rem .5rem;/*107/559*/ text-align: center;background: url(../img/logo-income.png) no-repeat center .5rem #ff0000;/*14/269*/ background-size: 30%; /*95/313*/ display: inline-block;white-space: nowrap;}
-
+.stn-daily-pick .pick-money .income-wrap{position:absolute; left:50%;top:7%;/*min-width: 70%;max-width: 80%;*/ width:50%;}
+.stn-daily-pick .pick-money .income{position:relative;left:-50%;border:.3rem solid #fff;padding:0 .8rem .5rem;/*107/559*/ text-align: center;background:#ff0000;/*14/269*/ background-size: 30%; /*95/313*/ display: inline-block; width:100%; margin-left:-0.8rem;}
+.stn-daily-pick .pick-money .income .img{ display:block; width:3.45rem; height:3.45rem; margin:0.36rem auto 0.36rem;}
+.stn-daily-pick .pick-money .income .img img{ width:100%; height:100%}
 .stn-daily-pick .pick-money .income .p-type{color: #ffffff;}
 .stn-daily-pick .pick-money .income .p-money{margin-top:.1rem;color: #ffffff; text-shadow: .1rem .1rem .1rem #bf0000;}
 .stn-daily-pick .pick-money .income .p-money span{color: #fff600;}
 .stn-daily-pick .pick-money .income .p-bottom{color: #000000;margin-top: .2rem;}
 
 .stn-daily-pick .pick-money.type0{display: block;}
+
+.stn-daily-pick .pick-money .income .yellow{ color:#fff100;}
 
 /*以下为快速开关测试区*/
 /*
