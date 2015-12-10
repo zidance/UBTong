@@ -1,7 +1,7 @@
 /*大图*/
 .stn-lists{ width:91.875%; margin:0 auto; max-width:640px;}
 .stn-lists li{ position:relative; margin-bottom:1.09rem; }
-.stn-lists li .s-img{ display:table-cell; border:1px solid #d9d9d9; overflow:hidden; text-align:center; padding-top:100%;}
+.stn-lists li .s-img{ display:table-cell;position:relative; border:1px solid #d9d9d9; overflow:hidden; text-align:center; padding-top:100%;}
 /*此法用于绝对定位元素的水平垂直居中*/
 .stn-lists li .s-img img{position:absolute;top: 0;right: 0;bottom: 0;left: 0;margin:auto;min-width: 10px;min-height: 10px;}
 .stn-lists li .p-name{ color:#000; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; margin-top:.4rem; }
