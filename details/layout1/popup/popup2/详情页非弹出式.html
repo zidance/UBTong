@@ -15,14 +15,15 @@
 
 <body>
 	<!--列表购物车-->
-    <button class="button-popup fz28">请选择系列  规格  颜色</button>
-    
-    <div class="box-popup" id="BoxPopup">
 
+
+    <div class="box-nopopup" id="BoxNoPopup">
+<div class="button-nopopup fz28">请选择系列  规格  颜色</div>
         <div class="type one">
         	<p class="fz28">限时</p>
             <ul>
-            	<li><a class="fz28 act" href="#">3天</a></li>
+            <!--原act类改为color和bd-color(common中定义的公用类名),且内含em.原来的非选中状态和禁选状态(noAct类)保持原样-->
+            	<li><a class="fz28 bd-color color" href="#">3天<em class="bd-color"></em></a></li>
                 <li><a class="fz28" href="#">6天</a></li>
             </ul>
             <div class="clr"></div>
@@ -30,7 +31,7 @@
         <div class="type two">
         	<p class="fz28">规格</p>
             <ul>
-            	<li><a class="fz28 act" href="#">200g</a></li>
+            	<li><a class="fz28 bd-color color" href="#">200g<em class="bd-color"></em></a></li>
                 <li><a class="fz28" href="#">300g</a></li>
                 <li><a class="fz28 noAct" href="#">400g</a></li>
             </ul>
@@ -39,7 +40,7 @@
         <div class="type type-pic">
         	<p class="fz28">涂装选择</p>
             <ul>
-            	<li><a class="fz28 act" href="#"><img src="res/img/exam.png" /><p>酷炫迷彩</p></a></li>
+            	<li><a class="fz28 bd-color color" href="#"><img src="res/img/exam.png" /><p>酷炫迷彩</p><em class="bd-color"></em></a></li>
                 <li><a class="fz28" href="#"><img src="res/img/exam.png" /><p>酷炫迷彩</p></a></li>
                 <li><a class="fz28" href="#"><img src="res/img/exam.png" /><p>酷炫迷彩</p></a></li>
                 <li><a class="fz28" href="#"><img src="res/img/exam.png" /><p>酷炫迷彩</p></a></li>

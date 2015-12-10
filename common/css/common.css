@@ -12,6 +12,8 @@ em,i,address{font-style:normal;}
 h1,h2,h3,h4,h5,h6{font-weight:normal;}
 table{border-collapse:collapse;}
 .clr{clear:both;display:block;font-size:0;height:0;line-height:0;overflow:hidden;}
+
+/*字体*/
 html{font-size:172%;}
 .fz18{font-size:.5rem;}
 .fz19{font-size:.53rem;}
@@ -36,7 +38,36 @@ html{font-size:172%;}
 .fz120{font-size:4.36rem;}
 .mt20{margin-top:.72rem;}
 
-/*边框苗条化*/
+@media screen and (min-width:320px) and (max-width:640px){
+html{font-size:125%;}
+}
+@media screen and (max-width:320px){
+html{font-size:85%;}
+.fz19{font-size:.69rem;}
+.fz18{font-size:.65rem;}
+.fz20{font-size:.72rem;}
+.fz22{font-size:.79rem;}
+.fz24{font-size:.87rem;}
+.fz26{font-size:.94rem;}
+.fz28{font-size:1.01rem;}
+.fz30{font-size:1.09rem;}
+.fz32{font-size:1.11rem;}
+.fz35{font-size:1.26rem;}
+.fz34{font-size:1.23rem;}
+.fz36{font-size:1.3rem;}
+.fz40{font-size:1.45rem;}
+.fz42{font-size:1.52rem;}
+.fz48{font-size:1.74rem;}
+.fz55{font-size:1.99rem;}
+.fz58{font-size:2.1rem;}
+.fz60{font-size:2.18rem;}
+.fz80{font-size:2.9rem;}
+.fz103{font-size:3.74rem;}
+.fz120{font-size:4.36rem;}
+}
+
+
+/*边框细化*/
 .bd::after{
     position:absolute;
     content:"";
@@ -73,31 +104,18 @@ html{font-size:172%;}
     }
 }
 
+/*风格颜色类*/
+/*主要风格,当前绿色*/
+.color{color:#69c2c0 !important;}
+.bg-color{background-color: #67bebc !important;}
+.bd-color{border-color:#69c2c0 !important;}
+/*主要风格,以下为input-radio/checkbox选择后变色为主色调的*/
+.ck-color{color:#69c2c0 !important;}
+.ck-bg-color:checked{background-color: #67bebc !important;}
+.ck-bd-color:checked{border-color:#69c2c0 !important;}
+/*交互后后变色的,可以在脚本中赋予.color等类*/
 
-@media screen and (min-width:320px) and (max-width:640px){
-html{font-size:125%;}
-}
-@media screen and (max-width:320px){
-html{font-size:85%;}
-.fz19{font-size:.69rem;}
-.fz18{font-size:.65rem;}
-.fz20{font-size:.72rem;}
-.fz22{font-size:.79rem;}
-.fz24{font-size:.87rem;}
-.fz26{font-size:.94rem;}
-.fz28{font-size:1.01rem;}
-.fz30{font-size:1.09rem;}
-.fz32{font-size:1.11rem;}
-.fz35{font-size:1.26rem;}
-.fz34{font-size:1.23rem;}
-.fz36{font-size:1.3rem;}
-.fz40{font-size:1.45rem;}
-.fz42{font-size:1.52rem;}
-.fz48{font-size:1.74rem;}
-.fz55{font-size:1.99rem;}
-.fz58{font-size:2.1rem;}
-.fz60{font-size:2.18rem;}
-.fz80{font-size:2.9rem;}
-.fz103{font-size:3.74rem;}
-.fz120{font-size:4.36rem;}
-}
+
+/*配套颜色,当前深蓝*/
+.color2{}
+.bg-color2{background-color: #5c6ed6 !important;}

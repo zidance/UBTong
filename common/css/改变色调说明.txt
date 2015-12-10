@@ -1,0 +1,31 @@
+/*风格颜色类*/
+关于配套颜色
+配套颜色不是完全自主的另一套风格,而是在该风格中时常出现的另一种色调.比如确定按钮的背景色是.bg-color,取消按键是.bg-color2
+
+
+绿色一套 主调 #69c2c0 #67bebc
+/*主要风格,当前绿色 -可做为复制模板*/
+.color{color:#69c2c0 !important;}
+.bg-color{background-color: #67bebc !important;}
+.bd-color{border-color:#69c2c0 !important;}
+/*主要风格,以下为input-radio/checkbox选择后变色为主色调的,通常与上方保持一致即可*/
+.ck-color{color:#69c2c0 !important;}
+.ck-bg-color:checked{background-color: #67bebc !important;}
+.ck-bd-color:checked{border-color:#69c2c0 !important;}
+/*交互后后变色的,可以在脚本中赋予.color等类*/
+
+
+/*配套颜色,当前深蓝 */
+.color2{}
+.bg-color2{background-color: #5c6ed6 !important;}
+
+橙色一套 主调 #ff6600  #f15a0c
+/*主要风格*/
+.color{color:#ff6600 !important;}
+.bg-color{background-color: #f15a0c !important;}
+.bd-color{border-color:#ff6600 !important;}
+/*交互后后变色的,可以在脚本中赋予.color等类*/
+
+
+
+
