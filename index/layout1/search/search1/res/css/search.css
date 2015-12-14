@@ -1,10 +1,15 @@
 
 /*搜索*/
 .stn-search{font-size: 0;padding: 3.8% 1.6% 0.47rem; background:#f3f4f6;height:2.5rem;}
-.stn-search .i-logo{width:2.5rem;display: inline-block;height:100%;vertical-align: middle;}
-.stn-search input{display: inline-block;width: 85%;outline: none;border: none;color: #000;border-radius: 0 .2rem .2rem 0;padding: .75rem 0 .75rem 8%;box-sizing: border-box;height:100%;
-background: url(../img/search.png) no-repeat 2% center /4.2%;
-background-color: #fff;vertical-align: middle;}
+.stn-search .i-logo{width:2.5rem;display: inline-block;height:100%;vertical-align: middle; float:left;}
+.stn-search .d-search{ float:left; width:85%;height:100%;border-radius: 0 .2rem .2rem 0;box-sizing: border-box;background-color: #fff;}
+.stn-search .d-search a{ display:block; float:left; height:1rem; width:1rem; background:#fff; margin-top:0.75rem; margin-left:0.2rem;}
+.stn-search .d-search a img{ width:100%; height:100%;}
+.stn-search .d-search input{ display:block; height:0.84rem; float:left; width: 82.6%;outline: none;border: none;color: #000;padding: 0.9rem 0 .76rem 2.5%;}
 
 .stn-search input::placeholder{color: #c0c0c0;}
 .stn-search input::-webkit-input-placeholder{color: #c0c0c0;}
+
+@media screen and (max-width:320px){
+	.stn-search .d-search input{padding: 0.83rem 0 .83rem 2.5%;}
+}
