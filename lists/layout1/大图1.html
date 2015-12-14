@@ -60,21 +60,15 @@
 		<button class="fz28">加载更多</button>
 	</section>
    <script>
-	function imgZoomControl(){
-		var _li = $('#thelist li');
-		$.each(_li,function(i,e){
-			var _this= $(this);
-			var _img = $(this).find('.s-img img');
-			$(this).find('.s-img').width(_this.width()-2);
-			if(_img.width() > $(this).width() && _img.width() > _img.height())
-			{
-				_img.css('width',_this.width()-2);
-			}else if(_img.height() > $(this).height()){
-				_img.css('height',_this.width()-2);
-			}
-			_img.css({'max-width':_this.width()-2,'max-height':_this.width()-2})
-		})
-	}
+	/*图片图片尺寸脚本,大图缩小,小图不放大,定义尺寸,居中靠css*/
+function imgZoomControl() {
+    var oImgWraps = $('#thelist li .s-img'),
+        nWidth = oImgWraps.eq(0).width();
+    oImgWraps.find('img').css({
+        'max-width': nWidth,
+        'max-height': nWidth
+    })
+}
 
 
 	$(function(){
