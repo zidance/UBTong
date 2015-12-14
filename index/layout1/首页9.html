@@ -22,7 +22,16 @@
     <script type="text/javascript" src="notice/notice3/res/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
     <script type="text/javascript" src="../../common/js/default.js"></script>
-
+	<script type="text/javascript">
+	$(function(){
+    	$('#phone').bind('focus',function(){  
+            $('#footer').css('position','static');   
+        }).bind('blur',function(){  
+            $('#footer').css({'position':'fixed','bottom':'0'});  
+        });
+		
+	})
+    </script>
 </head>
 
 <body style="background:#dcdcdc;">
@@ -109,11 +118,14 @@
     <!-- 轮播公告 -end -->
 
     <!--搜索-->
-    <section class="stn-search" style="background-color:#dcdcdc;">
-        <img class="i-logo" src="search/search1/res/img/logo.png" />
-        <input class="fz24" type="text" placeholder="商品搜索：请输入商品关键字" />
-    </section>
-    <!--搜索-end-->
+	<section class="stn-search">
+		<img class="i-logo" src="search/search1/res/img/logo.png" />
+        <div class="d-search">
+        	<a href="###"><img src="search/search1/res/img/search.png"></a>
+            <input class="fz24" type="text"  id="phone" placeholder="商品搜索：请输入商品关键字"/>
+        </div>
+	</section>
+	<!--搜索-end-->
 
 
     <!-- 天天捡钱 -->
@@ -326,7 +338,7 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合
                         </p>
                         <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
                         <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
@@ -449,7 +461,7 @@
     <!--空白BOTTOM部件 -end-->
 
     <!--底部高度：3.59rem-->
-    <footer>
+    <footer id="footer">
         <ul>
             <!--当前目录状态:p class="p-footact"-->
             <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/homeh.png" /></span><p class="fz22 p-footact">首页</p></a></li>

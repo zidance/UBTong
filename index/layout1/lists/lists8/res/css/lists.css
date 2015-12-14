@@ -8,7 +8,7 @@
 
 .index-lists li .product{padding:.2rem 3% .65rem;}
 .index-lists li .product .p-name{
-    height:2.7em;overflow: hidden;color: #282828;
+    height:2.53em;overflow: hidden;color: #282828;
 padding-bottom:2%; line-height:0.85rem; 
 }
 .index-lists li .product .p-money{color:#ff3430;white-space: nowrap;}
