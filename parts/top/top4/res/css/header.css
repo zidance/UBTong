@@ -1,7 +1,6 @@
 /*头部*/
 .h-APP-relative{height:3.2rem;}
-.h-APP{position:fixed;z-index: 800;top:0;left:0;width:100%; background-color: #fff;text-align: center;height:3.2rem;line-height: 3.2rem;white-space: nowrap;max-width: 640px;left: 0;right: 0;margin:0 auto;}
-.h-APP+.h-APP-next{height:3.2rem;}
+.h-APP{position:fixed;z-index: 800;top:0;left:0;width:100%; background-color: #fff;text-align: center;height:3.2rem;line-height: 3.2rem;white-space: nowrap;max-width: 640px;left: 0;right: 0;margin:0 auto;border-bottom:1px solid #f7f5f5;box-sizing: border-box;}
 .h-APP .d-left{float:left;max-width: 20%;}
 .h-APP .d-left a{padding:0 1rem 0 .9rem;background: url(../img/d-left.png) no-repeat left center/.7rem;color: #464646;margin-left:.9rem;}
 .h-APP .d-center{display: inline-block;max-width:67%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
