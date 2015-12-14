@@ -14,23 +14,14 @@
 </head>
 
 <body style="background:#f7f5f5;">
-	<script>
-       window.onload = function(){
-          document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
-      }
-      window.onresize = function(){
-          document.getElementById('Code').style.marginTop = document.getElementById('Seal').offsetHeight + 'px';
-      }
-      $(function(){
-        document.body.addEventListener('touchstart', function (){});
-      })
-  </script>
 
   <!--预约成功-->
   <section class="stn-subsucceed">
    <div class="subsucceed">
-       <span class="s-img"><img src="res/img/succeed.png" /></span>
-       <p class="fz32">恭喜您，订单支付成功！</p>
+       <span class="s-img"><img src="res/img/succeed-green.png" /></span>
+       <p class="p-main color fz32">恭喜您，订单支付成功！</p>
+       <p class="p-plus fz26">我们将为您保留订单2日，如果2日后您
+仍未付款，我们将会自动取消此单。</p>
    </div>
    <div class="subsucceed-seal" id="Seal"><img src="res/img/seal.png" /></div>
 
@@ -38,6 +29,7 @@
    <div class="qr-code" id="Code">
        <article>
         <p class="p-name fz32">订单编号：6879 2565</p>
+        <p class="p-name fz32">付款方式：支付宝，银联，财付通</p>
         <p class="p-name fz32">订单金额：<span>￥389.00元</span></p>
         <p class="p-prompt fz24">请在预约时间持此订单前往网点享受服务</p>
         <span class="s-img"><img src="res/img/img2.jpg" /></span>
