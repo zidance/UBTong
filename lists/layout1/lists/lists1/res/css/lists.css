@@ -10,7 +10,7 @@
 .stn-lists li .a-cart{ display:block; width:1.52rem; height:1.23rem; position:absolute; right:0; /*bottom:1.5rem;*/ top:0;margin-top:108%;}
 .stn-lists li .a-cart img{ display:block; width:100%; height:100%; } 
 .stn-lists button{ width:100%; height:2.72rem; line-height:2.72rem; text-align:center; background:#efefef; border:none; color:#8c8c8c; margin-bottom:.9rem; }
-.stn-lists li .p-num{ color:#b9b9b9; padding-top:0.3rem;}
+.stn-lists li .p-num{ color:#b9b9b9; padding-top:0.3rem; line-height:0.87rem;}
 .stn-lists li .p-num span{ float:right;}
 
 
