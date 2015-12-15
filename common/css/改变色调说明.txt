@@ -9,9 +9,9 @@
 .bg-color{background-color: #67bebc !important;}
 .bd-color{border-color:#69c2c0 !important;}
 /*主要风格,以下为input-radio/checkbox选择后变色为主色调的,通常与上方保持一致即可*/
-.ck-color{color:#69c2c0 !important;}
-.ck-bg-color:checked{background-color: #67bebc !important;}
-.ck-bd-color:checked{border-color:#69c2c0 !important;}
+.chk-color{color:#69c2c0 !important;}
+.chk-bg-color:checked{background-color: #67bebc !important;}
+.chk-bd-color:checked{border-color:#69c2c0 !important;}
 /*交互后后变色的,可以在脚本中赋予.color等类*/
 
 
