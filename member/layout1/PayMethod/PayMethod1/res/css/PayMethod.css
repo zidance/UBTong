@@ -7,7 +7,7 @@
 
 .stn-pay-method li input[type="radio"]{display: inline-block; -webkit-appearance:none; appearance:none; width:6.5%; padding-bottom:6.5%;height:0; margin-right:6.5%; cursor:pointer; background:none; border:1px solid #dddcdc;  border-radius:50%; box-sizing:border-box; outline:none;vertical-align:middle; }
 .stn-pay-method li input[type="radio"]:checked{ position:relative;border:none;}
-.stn-pay-method li input[type="radio"]:checked::before{  content: ''; position:absolute;top: 0;left: 0; background: url(../../../../../../common/img/select.png) no-repeat center center /56%;width:100%;height:100%;}
+.stn-pay-method li input[type="radio"]:checked::before{content: ''; position:absolute;top: 0;left: 0; background: url(../../../../../../common/img/select.png) no-repeat center center /56%;width:100%;height:100%;}
 .stn-pay-method li input[type="radio"]:checked::after{border:none !important;}/*覆盖default.js*/
 .stn-pay-method .li-card{background-color: #f5f5f5;margin:0;padding:0;border-bottom:none;}
 .stn-pay-method .li-card .d-border{margin:0 2%;border-bottom:1px solid #d9d9d9;}
