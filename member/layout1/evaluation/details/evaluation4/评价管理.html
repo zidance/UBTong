@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>订单评价</title>
+    <title>评价管理</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta content="yes" name="apple-mobile-web-app-capable" />
@@ -14,8 +14,8 @@
 
 </head>
 
-<body>
-    <!--订单评价-->
+<body style="bgckground-color:#fff;">
+    <!--评价管理-->
     <section class="stn-appraise">
        <!--每个d-product,为一个商品的评论块-->
         <div class="d-product">
@@ -30,20 +30,20 @@
                 </span>
             </div>
             <div class="d-text">
-                <textarea class="fz28" placeholder="您的意见很重要！快来点评一下把。"></textarea>
-                <p class="p-num fz20"><span>0</span>/100</p>
+                <p>还行吧，价格有点偏贵。重量很足。</p>
             </div>
             <div class="d-imgs">
-                <p class="p-upload"><input name="UploadImgs" type="file" multiple="multiple" accept="image/*" /></p>
 				<p><img src="res/img/img11.jpg" /></p>
 				<p><img src="../../../../../common/img/400200.png" /></p>
+				<p><img src="../../../../../common/img/7070.png" /></p>
+				<p><img src="../../../../../common/img/200400.png" /></p>
             </div>
-
         </div>
 
-         <div class="d-product">
+        <!--每个d-product,为一个商品的评论块-->
+        <div class="d-product">
             <div class="d-head">
-                <span class="s-img"><img src="../../../../../common/img/200400.png" /></span>
+                <span class="s-img"><img src="res/img/img11.jpg" /></span>
                 <span class="s-des">
                     <p class="p-title fz24">北朝鲜 帝王蟹 野生大规格 两斤起售 支持货到付款</p>
                     <p class="fz24">
@@ -52,43 +52,32 @@
                     </p>
                 </span>
             </div>
-            <div class="d-text">
-                <textarea class="fz28" placeholder="您的意见很重要！快来点评一下把。"></textarea>
-                <p class="p-num fz20"><span>0</span>/100</p>
+            <div class="d-text fz28">
+                <p>还行吧，价格有点偏贵。重量很足。</p>
             </div>
-            <div class="d-imgs">
-                <p class="p-upload"><input name="UploadImgs" type="file" multiple="multiple" accept="image/*" /></p>
-				<p><img src="res/img/img11.jpg" /></p>
-				<p><img src="../../../../../common/img/200400.png" /></p>
-            </div>
-
         </div>
 
+        <!--每个d-product,为一个商品的评论块-->
+        <div class="d-product">
+            <div class="d-head">
+                <span class="s-img"><img src="res/img/img11.jpg" /></span>
+                <span class="s-des">
+                    <p class="p-title fz24">北朝鲜 帝王蟹 野生大规格 两斤起售 支持货到付款</p>
+                    <p class="fz24">
+                        <span>2014-07-14 </span>
+                        <span>规格：1-1.3公斤 塑料 黄椒</span>
+                    </p>
+                </span>
+            </div>
+            <div class="d-text fz28">
+                <p>还行吧，价格有点偏贵。重量很足。</p>
+            </div>
+        </div>
+
+
+
     </section>
-
-
-    <script>
-        $(function() {
-        //数字限制500字脚本
-        //oText输入区,iMax最大字数,oCount记录当前字数的节点
-        var oText = $('.stn-appraise').find('.d-text').find('textarea'),
-            iMax = 100,
-            oCount = $('.stn-appraise').find('.d-text').find('.p-num').find('span');
-
-            oText.keydown(function() {
-                clearTimeout(wordCount)
-                var wordCount = setTimeout(function() {
-                    var iNum = oText.val().length
-                    if (iNum > iMax) {
-                        oText.val(oText.val().substring(0, iMax))
-                        iNum = iMax
-                    }
-                    oCount.html(iNum)
-                }, 100)
-            })
-        })
-    </script>
-    <!--订单评价-end-->
+    <!--评价管理-end-->
 
 </body>
 
