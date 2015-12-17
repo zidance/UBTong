@@ -1,11 +1,15 @@
 /*用户资料*/
-.stn-information{ border:solid #c5c5c5; border-width:1px 0; background:#fff;  }
-.stn-information table{ width:100%; }
-.stn-information td{ padding:.9rem 0rem.9rem .7rem; border-bottom:1px solid #dedede; color:#454545;box-sizing: border-box; }
+.stn-information{ margin:3%;border-top:1px solid #c5c5c5;  }
+.stn-information table{ width:100%; background:#fff;}
+.stn-information td{position:relative;padding:.9rem 0rem.9rem .7rem; border-bottom:1px solid #dedede; color:#454545;box-sizing: border-box; }
 .stn-information  td .s-coupon{display: inline-block;margin-left: .4rem;padding:.1rem .4rem .15rem;color: #f77a02;background-color: #fff7ef;border:2px solid #f77a02;border-radius: 4px;vertical-alig:top;}
-.stn-information .tr-bottom td{ border-bottom:none; }
+
 .stn-information td .a-img{ display:block; width:3.63rem; height:3.63rem; border-radius:50%; }
 .stn-information td .a-img img{ width:100%; height:100%; border-radius:50%; }
 .stn-information td a{ display:block; background:url(../img/left.png) no-repeat 95% center; background-size:.58rem 1.09rem; color:#454545; }
 .stn-information td input{ border:none; max-width:90%; }
 .stn-information .phone-num{ font-size:0.71rem; line-height:0.71rem; color:#454545;}
+
+.stn-information td .a-btn{position:absolute;width:18.1%;height:100%;right:4%;top:0;background: none;}
+.stn-information td .a-btn img{position:absolute;top: 0;bottom: 0;left: 0;margin:auto;width:100%;}
+.stn-information  .p-moreinfo{margin:1% auto 0;line-height: 1.3;}

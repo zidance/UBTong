@@ -23,6 +23,6 @@ input[type="number"]{-moz-appearance:textfield;}
 @media screen and (min-width:321px) and (max-width:639px){
     .meminfo-change .stn-info p{padding:.1rem .3rem;}
     .meminfo-change .stn-user .s-left,.meminfo-change .stn-car .s-left{text-align: right;width:3rem;}
-    
+
     .meminfo-change .a-save{height:2.16rem; line-height:2.16rem;margin-top:1.45rem;}
 }
