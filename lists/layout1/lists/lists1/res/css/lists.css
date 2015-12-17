@@ -4,7 +4,7 @@
 .stn-lists li .s-img{ display:table-cell;position:relative; border:1px solid #d9d9d9; overflow:hidden; text-align:center; padding-top:100%;}
 /*此法用于绝对定位元素的水平垂直居中*/
 .stn-lists li .s-img img{position:absolute;top: 0;right: 0;bottom: 0;left: 0;margin:auto;min-width: 10px;min-height: 10px;}
-.stn-lists li .p-name{ color:#000; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; margin-top:.4rem; }
+.stn-lists li .p-name{ color:#000; height:2.53em;overflow: hidden;line-height:0.85rem;  /*text-overflow:ellipsis; overflow:hidden; white-space:nowrap;*/ margin-top:.4rem; }
 .stn-lists li .p-money{ color:#e52c02; margin-top:.2rem; }
 .stn-lists li .p-money span{ color:#b9b9b9; margin-left:.5rem; text-decoration:line-through; }
 .stn-lists li .a-cart{ display:block; width:1.52rem; height:1.23rem; position:absolute; right:0; /*bottom:1.5rem;*/ top:0;margin-top:108%;}
@@ -43,3 +43,8 @@
 .stn-lists li .integral .p-integral{display:inline-block;color: #6633ff;}
 .stn-lists li .integral .p-integral span{font-size: 0.7em;}
 .stn-lists li .integral .p-sales{ color:#b9b9b9; margin-top:.3rem; }
+
+@media screen and (max-width:320px){
+.stn-lists li .p-name{
+ line-height:1.15rem;}
+}
