@@ -10,11 +10,11 @@
 	<link href="res/css/choose.css" rel="stylesheet" type="text/css" />
 	<script src="../../../../../common/js/zepto-1.16.min.js"></script>
 	<script src="../../../../../common/js/default.js"></script>
-	
+
 	<script>
 		$(function(){
 			var _li = $('#ChooseLists li');
-			
+
 			$.each(_li,function(i,e){
 				var _inp = $(this).find('.number-input input');
 				$(this).find('.add').click(function(){
@@ -28,7 +28,7 @@
 							return Number($(this).val())-1;
 						});
 					}
-				});	
+				});
 			});
 		})
 	</script>
@@ -90,7 +90,7 @@
 			</ul>
 			<div class="choose-all">
 				<input class="checkbox-all" type="checkbox" /><span class="fz28">全选</span>
-				
+
 				<p class="p-combin fz32">合计：<em>￥39.00</em></p>
 				<div class="clr"></div>
 			</div>
