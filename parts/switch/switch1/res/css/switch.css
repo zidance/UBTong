@@ -1,0 +1,7 @@
+/*切换*/
+.stn-switch{ width:100%; border-bottom:1px solid #d4d4d4; background:#fff; padding:2.3%;}
+.stn-switch ul{ width:80%; margin:0 auto; }
+.stn-switch li{ width:50%; float:left; }
+.stn-switch li a{ display:block; padding:4%;text-align:center; border:1px solid #f77a02; border-radius:6px 0 0 6px; color:#fff;  }
+.stn-switch li:last-child a{ border-width:1px 1px 1px 0; border-radius:0 6px 6px 0; }
+.stn-switch li a.bg-color{ background:#f77a02;}

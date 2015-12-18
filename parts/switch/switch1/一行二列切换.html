@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>一行二列切换</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/switch.css" rel="stylesheet" type="text/css" />
+    <script src="../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../common/js/default.js"></script>
+
+</head>
+
+<body>
+    <!--切换-->
+    <section class="stn-switch">
+        <ul>
+            <!--二者都有.bd-color类,激活状态.bg-color,非激活状态.color-->
+            <li><a class="bg-color bd-color fz28" href="#">激活状态</a></li>
+            <li><a class="color bd-color fz28" href="#">非激活</a></li>
+        </ul>
+        <div class="clr"></div>
+    </section>
+    <!--需要切换的两块内容,加上类switch-content,以下两块做为演示-->
+    <!--<div class="switch-content" style="height:50px;background-color:#000;"></div>
+    <div class="switch-content" style="display:none;height:50px;background-color:#f00;"></div>-->
+    <script>
+        $(function() {
+            var oSwitchBtns = $('.stn-switch').find('li').find('a'),
+                oSwitchCons = $('.switch-content');
+            oSwitchBtns.eq(0).on('click tap', function() {
+                if ($(this).hasClass('color')) {
+                    oSwitchBtns.eq(1).removeClass('bg-color').addClass('color')
+                    $(this).removeClass('color').addClass('bg-color')
+                    oSwitchCons.eq(0).show()
+                    oSwitchCons.eq(1).hide()
+                }
+            })
+            oSwitchBtns.eq(1).on('click tap', function() {
+                if ($(this).hasClass('color')) {
+                    oSwitchBtns.eq(0).removeClass('bg-color').addClass('color')
+                    $(this).removeClass('color').addClass('bg-color')
+                    oSwitchCons.eq(1).show()
+                    oSwitchCons.eq(0).hide()
+                }
+            })
+
+        })
+    </script>
+    <!--切换-end-->
+</body>
+
+</html>
