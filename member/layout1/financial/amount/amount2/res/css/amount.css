@@ -1,0 +1,6 @@
+/*总览*/
+.stn-yesterday{ margin-top:3%; }
+.stn-yesterday .money table{ width:100%;padding:5%;box-sizing: border-box;background-color: #fff; }
+.stn-yesterday .money td{ padding:3%;box-sizing: border-box;width: 50%;}
+.stn-yesterday .money td p{ color:#b5b5be; }
+.stn-yesterday .money td .p-money{ color:#7a7b81; }

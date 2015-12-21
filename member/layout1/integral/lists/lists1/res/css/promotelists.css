@@ -1,0 +1,25 @@
+/*推广明细列表*/
+.stn-promotelists li{
+    display: -webkit-box;
+    display: box;
+    -webkit-box-pack:justify;
+    -webkit-box-align:center;
+    box-pack:justify;
+    box-align:center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items:center;
+    align-items:center;
+    width:93%; margin:3% auto 0; border:1px solid #e7e7e7; border-radius:4px; background:#fff; }
+.stn-promotelists li .d-money{ margin-left:4%; color:#ff6766;max-width:20%;width:30%;}
+.stn-promotelists li .detail{ margin-right:4%; padding:.5rem 0;max-width: 65%;}
+.stn-promotelists li .detail p{ text-align:right;color:#000;line-height:1.6;}
+.stn-promotelists li .detail .p-time{ color:#c3c3c3; }
+.stn-promotelists li .detail .p-num{  margin-top:.2rem; }
+
+
