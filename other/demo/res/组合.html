@@ -5,8 +5,7 @@
   <link href="../../common/css/common.css"  rel="stylesheet"  type="text/css" />
   <script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
 
-  <script type="text/javascript" src="res/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="../../common/js/default.js"></script>
+  <script type="text/javascript" src="../../other/demo/res/jquery-2.1.4.min.js"></script>
   <script>
     //HtmlArray,子页面集合,数组格式,接受相对路径和绝对路径(不包括跨域),接受斜杠和双反斜杠
     HtmlArray = [
@@ -19,9 +18,10 @@
       nullHref: '###', //改变href="#"路径,使空链接不跳转到头部,默认不改变,只有设'###'时会改变
       src: [], //自定义的资源路径属性,将加入到原有数组['src', 'href']中,接受格式为数组(多个字符串)或单个字符串
       disable: ['zepto-1.16.min.js','common.css','default.js'], //禁用文件集,接受格式为数组或单个字符串,推荐只写文件名不带路径.用来禁用引发错误的文件,可用来禁用多次引入会引起问题的脚本,如zepto(这一类需要在本组合页头部去引入一次).
+      lazyload: ['../../common/js/default.js'], //加强延迟文件集,把一些脚本有意地再延迟.接受格式为数组或单个字符串,必须是完整的正确路径
     }
   </script>
-  <script type="text/javascript" src="res/HtmlArray.js"></script>
+  <script type="text/javascript" src="../../other/demo/res/HtmlArray.js"></script>
 </head>
 
 <body>

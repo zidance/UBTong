@@ -30,7 +30,8 @@ $ = Zepto;
             fixed: HtmlArray.config.fixed, //fixed定位
             src: ['src', 'href'], //自定义的资源路径属性
             disable: ['HtmlArray.js'], //禁用文件集
-            nullHref: HtmlArray.config.nullHref || '#' //改变href="#"路径
+            nullHref: HtmlArray.config.nullHref || '#', //改变href="#"路径
+            lazyload:[]  //加强延迟集,把一些脚本有意地再延迟
           },
           errors = {
             hasError: false,
@@ -65,11 +66,15 @@ $ = Zepto;
             initarg.push(user)
         }
 
+        //加强延迟集
+        argsToArray(init.lazyload,HtmlArray.config.lazyload)
+
         //源文件中的资源 前缀字符集,如href
         argsToArray(init.src, HtmlArray.config.src)
 
         //disable文件集
         argsToArray(init.disable, HtmlArray.config.disable)
+
 
         //资源路径的匹配原则,配合循环体中的replace用
         var srcReg = new RegExp('(' + init.src.join('|') + ')\\s*=\\s*[\'\"]((?!#|\/|(.*?:\/)).*?)[\'\"]', 'ig')
@@ -261,6 +266,15 @@ $ = Zepto;
                   $$(this).css('position', 'relative')
                 }
               })
+            }
+
+            //加强延迟
+            if(init.lazyload.length>0){
+              setTimeout(function(){
+                for (var i = init.lazyload.length - 1; i >= 0; i--) {
+                  $$('head').append('<script src="'+init.lazyload[i]+'">')
+                }
+              },700)
             }
 
           }, 1000)
