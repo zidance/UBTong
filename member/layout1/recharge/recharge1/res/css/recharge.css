@@ -1,6 +1,24 @@
 /*充值*/
 .stn-recharge .p-recharge{margin-top:3%;border:solid #c5c5c5;border-width:1px 0;color: #454545;line-height: 3.5;background-color: #fff;}
 .stn-recharge .p-recharge span{display: inline-block;margin:0 4.5% 0 3%;}
+.stn-recharge input{border:none;outline:none;width:auto;}
 .stn-recharge input::-webkit-inner-spin-button{display: none;}
 .stn-recharge .d-remind{padding:2% 4.5%;}
 .stn-recharge .d-remind p{color: #939292;line-height: 1.5;}
+.stn-recharge .d-remind .p-wrong{display: none;color:#fe3430;}
+
+.stn-recharge{display: none;}
+ .stn-recharge-show{display: block;}
+
+/*充值确认弹出*/
+.d-fixed{display:none;position:fixed; left: 0;right:0;bottom: 0;margin:auto;width:100%;height: 100%;z-index: 998;max-width: 640px;}
+.d-fixed .d-bg{width:100%;height: 100%;background-color:rgba(0,0,0,0.5);}
+.d-fixed .d-prompt{position: absolute;bottom: 0;left: 0;z-index: 999;background-color: #fff;}
+
+.d-fixed .d-prompt .p-title{padding:0 4%;color: #585858;border-bottom: 1px solid #e7e7e7;line-height: 4.3;}
+.d-fixed .d-prompt .p-title .a-close{float:right;width:1.9rem;line-height: inherit;background: url(../../../../../../common/img/close.png) no-repeat center center /100%;text-indent: -9999px;}
+.d-fixed .d-prompt .d-text{padding-top:.6rem;min-height:8rem;}
+.d-fixed .d-prompt .d-text p{color: #000;line-height: 1.6;padding:3% 4%;}
+
+.d-fixed .d-prompt .stn-btns{background-color: transparent;}
+

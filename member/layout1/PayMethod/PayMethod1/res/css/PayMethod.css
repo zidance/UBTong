@@ -11,7 +11,7 @@
 .stn-pay-method li input[type="radio"]:checked::after{border:none !important;}/*覆盖default.js*/
 .stn-pay-method .li-card{background-color: #f5f5f5;margin:0;padding:0;border-bottom:none;}
 .stn-pay-method .li-card .d-border{margin:0 2%;border-bottom:1px solid #d9d9d9;}
-.stn-pay-method li .in-card{ display: block; -webkit-appearance:none; appearance:none;  outline:none; background: none;padding:4.2% 4.8% 4.2% 18%; /*27 31 27 110 /640*/}
+.stn-pay-method li .in-card{ display: block; -webkit-appearance:none; appearance:none;  outline:none;border:none; background: none;padding:4.2% 4.8% 4.2% 18%; /*27 31 27 110 /640*/}
 
 .stn-pay-method li .a-more{float:right;color: #ff3430;padding:.1rem 5%;vertical-align: middle;background: url(../../../../../../common/img/right.png) no-repeat right center/.55rem;height:100%;}
 

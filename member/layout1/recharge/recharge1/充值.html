@@ -1,29 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>充值</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<meta content="telephone=no" name="format-detection" />
-<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/recharge.css" rel="stylesheet" type="text/css" />
-<link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script src="../../../../common/js/zepto-1.16.min.js"></script>
-<script src="../../../../common/js/default.js"></script>
+    <title>充值</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/recharge.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../parts/btn/flex/res/css/btn.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../common/js/default.js"></script>
 </head>
 
 <body style="background:#f4f4f4;">
     <!--充值-->
-	<section class="stn-recharge">
-	    <p class="p-recharge fz28"><span>充值金额</span><input type="number" placeholder="输入金额" /></p>
-	    <div class="d-remind fz20">
+    <!--两块switch-content,用来切换内容-->
+    <section class="stn-recharge stn-recharge-show switch-content">
+        <p class="p-recharge fz28"><span>充值金额</span>
+            <input class="fz28" type="number" placeholder="输入金额" />
+        </p>
+        <div class="d-remind fz20">
             <p>充值注意：</p>
             <p>1、请输入整数如1元，不能输入1.01元</p>
             <p>2、您需要充值的金额，充值完毕后可以在线订购我们的产品</p>
-	    </div>
-	</section>
-	<!--充值-end-->
+        </div>
+    </section>
+    <section class="stn-recharge switch-content">
+        <p class="p-recharge fz28">
+            <span>充值卡号</span>
+            <!--i-limit,配合脚本对输入验证-->
+            <input class="i-limit fz28" type="text" placeholder="输入金额" />
+        </p>
+        <div class="d-remind">
+            <p class="p-wrong fz24">您输入的卡号无效，请重新输入！</p>
+        </div>
+        <div class="d-fixed">
+            <div class="d-bg"></div>
+            <div class="d-prompt">
+                <p class="p-title fz32">会员卡充值<a class="a-close" href="###">关闭</a></p>
+                <div class="d-text fz28">
+                    <p>您输入的是1000元充值卡，选择确定将充值到您的账户内，通过会员卡充值的金额不支持提现！</p>
+                </div>
+                <div class="stn-btns-relative"></div>
+                <section class="stn-btns fz32">
+                    <!--可以接受任意个数的a元素,排列在同一行内,并且大小相等-->
+                    <a class="bg-color" href="###">确认充值</a>
+                    <a class="a-close" href="###">取消</a>
+                </section>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        //页面中没有按钮,有按钮时可用,组合页中点击按钮触发充值,此时验证用户输入字段长度是否正确
+        $(function() {
+            var btn = $('.parts-btn').find('a'),
+                input = $('.stn-recharge').find('.i-limit'),
+                wrong = input.parents('.stn-recharge').find('.p-wrong');
+            var fixed = input.parents('.stn-recharge').find('.d-fixed')
+            btn.on('tap click', function() {
+                if (input.val().length == 18) {
+                    fixed.show();
+                } else {
+                    wrong.show()
+                    setTimeout(function() {
+                        wrong.hide()
+                    }, 1500)
+                }
+            })
+            input.on('keypress',function(e){
+                if(e.keyCode==13){
+                    btn.trigger('click')
+                }
+            })
+
+            fixed.find('.a-close').on('tap click', function() {
+                fixed.hide()
+            })
+            fixed.find('.d-bg').on('tap click', function() {
+                fixed.find('.a-close').trigger('click')
+            })
+        })
+    </script>
+    <!--充值-end-->
+
+    <!--按钮大概如下,详见/parts/btn/btn1/-->
+    <!--<section class="parts-btn">
+	    <a href="###">按钮</a>
+	</section>-->
+
+
 </body>
+
 </html>
