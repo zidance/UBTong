@@ -20,7 +20,7 @@
         <h1 class="fz32">辣炒帝王蟹</h1>
         <h3 class="fz28">2015-10-20  20:12:51 作者：菓小红</h3>
         <div class="d-art d-limit fz26">
-           <!--允许有多个p,只会显示第一个,截取其前三行-->
+            <!--允许有多个p,只会显示第一个,截取其前三行-->
             <p>无论是夏天，还是初秋的季节，人们都会选择吃些海鲜。新鲜，人都喜欢新鲜的，帝王蟹是不错的选择，可比螃 蟹肉多多了，用红绿小米椒提味，加大量无论是夏天，还是初秋的季节，人们都会选择吃些海鲜。新鲜，人都喜欢新鲜的，帝王蟹是不错的选择，可比螃 蟹肉多多了，用红绿小米椒提味，加大量...</p>
             <p>第二段</p>
         </div>
@@ -29,7 +29,22 @@
     </article>
 
     </section>
-
+    <script>
+        $(function() {
+            var art = $('.art-main').find('.d-art')
+            var btn = $('.art-main').find('.a-more')
+            console.log(art)
+            btn.on('tap click', function() {
+                if (art.hasClass('d-limit')) {
+                    art.removeClass('d-limit')
+                    btn.html('收 &nbsp; 起')
+                } else {
+                    art.addClass('d-limit')
+                    btn.html('查看更多')
+                }
+            })
+        })
+    </script>
     <!--文章内容-end-->
 </body>
 
