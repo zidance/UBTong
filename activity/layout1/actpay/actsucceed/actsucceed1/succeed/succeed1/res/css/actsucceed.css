@@ -4,9 +4,10 @@
 .stn-subsucceed .subsucceed { border: solid #eae8e8; border-width: 1px 1px 0 1px; border-radius: 8px 8px 0 0; text-align: center; }
 .stn-subsucceed .subsucceed .s-img { display: inline-block; width: 3.63rem; height: 3.63rem; padding-top: 1.45rem; }
 .stn-subsucceed .subsucceed .s-img img { max-width: 100%; height: auto; }
-.stn-subsucceed .subsucceed p { color: #3e9ef9; padding: .72rem 0 .36rem; margin: 0; }
-.stn-subsucceed .subsucceed-seal { width: 100%; position: absolute; left: 0; }
-.stn-subsucceed .subsucceed-seal img { width: 100%; height: 100%; }
+.stn-subsucceed .subsucceed .p-main { color: #3e9ef9; padding: .72rem 0 .36rem; margin: 0; }
+.stn-subsucceed .subsucceed .p-plus{width:80%;margin:0 auto;text-align: center;color:#979797;}
+.stn-subsucceed .subsucceed-seal { width: 100%; position: relative; left: 0; height:2rem;}
+.stn-subsucceed .subsucceed-seal img {position:absolute; width: 100%; height: 100%;left: 0;top: 0; }
 
 /*二维码*/
 .stn-subsucceed .qr-code { width: 100%; padding: 0 3.185%; border: solid #eae8e8; border-width: 0 1px; box-sizing: border-box; }

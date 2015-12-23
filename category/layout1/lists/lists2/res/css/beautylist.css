@@ -1,0 +1,4 @@
+/*美容列表页*/
+.stn-beautylist li{ background:#fff; }
+.stn-beautylist li a{ display:block; border-bottom:1px solid #eae8e8; padding:0 5%; }
+.stn-beautylist li a .p-name{ color:#161616; line-height:3.23rem; }

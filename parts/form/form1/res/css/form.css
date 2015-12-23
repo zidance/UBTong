@@ -1,0 +1,5 @@
+/*自定义表单*/
+.t-form{width: 100%;margin-top:3%;border-top: 1px solid #dcdcdc;background-color: #fff;color: #000;}
+.t-form tr{width: 100%;}
+.t-form td{line-height: 1.7;vertical-align: top;padding:2% 4%;border-bottom: 1px solid  #dcdcdc;}
+.t-form td:first-child{width:30%;}

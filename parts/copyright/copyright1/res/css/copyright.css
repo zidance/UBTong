@@ -1,7 +1,8 @@
 /*版权*/
-.parts-copyright{height:auto;}
-.parts-copyright a{float:left;width:33%;border-right:1px solid #c6c6c6;text-align: center;box-sizing: border-box;margin-top:1.34rem;color:#464646;}
-.parts-copyright a:last-child{border-right:none;}
-.parts-copyright p{ width:9.3rem; height:2.36rem;margin:0 auto; margin-top:1.34rem; }
-.parts-copyright p img{ width:100%; height:100%;}
+.parts-copyright{background-color: #f4f4f4;padding-top: 5.4%;text-align: center;}
+.parts-copyright ul{width: 100%;text-align: center;}
+.parts-copyright li{display: inline-block;width:28.6%;box-sizing: border-box;border-left:1px solid #c6c6c6;text-align: center;}
+.parts-copyright li:first-child{border-left:none;}
+.parts-copyright li a{color:#464646;}
+.parts-copyright .logo-foot{display: inline-block;margin:4.2% auto 5.6%;height:1.5rem;}
 

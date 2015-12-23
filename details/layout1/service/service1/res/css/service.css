@@ -1,5 +1,5 @@
 /*服务详情*/
-.stn-detailsservice{ border:solid #d9d9d9; border-width:1px 0; background:#fff; padding:0 3.205%; }
+.stn-detailsservice{ border:solid #d9d9d9; border-width:1px 0; background:#fff; padding:0 3.205%; margin-top:.72rem;}
 .stn-detailsservice h1{ color:#000; border-bottom:1px solid #d9d9d9; padding:.54rem 0; margin-bottom:.36rem; }
 .stn-detailsservice p{ color:#000; }
 .stn-detailsservice .p2{ margin-top:.72rem; }

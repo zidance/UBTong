@@ -10,41 +10,20 @@
 <link href="res/css/header.css" rel="stylesheet" type="text/css" />
 <script src="../../../../common/js/zepto-1.16.min.js"></script>
 <script src="../../../../common/js/default.js"></script>
-<script>
-	$(function(){
-		var _type= $('#StnType');
-		var _list = _type.find('.lists');
-                          var _strong=$('.stn-sorting');
-		
-		_type.find('.a-down').click(function(){
-			if($(this).hasClass('open')){
-				_list.hide();
-                                                    _strong.show();
-				$(this).css('background-image','url(res/img/bigdown.png)');
-				$(this).removeClass('open');
-			}else{
-				_list.show();
-                                                    _strong.hide();
-				$(this).css('background-image','url(res/img/bigup.png)');
-				$(this).addClass('open');
-			}
-		})
-		_list.find('a').click(function(){
-			_list.hide();
-			_type.find('.a-down').css('background-image','url(res/img/bigdown.png)');
-			_type.find('.a-down').removeClass('open');
-		})
-	})
-</script>
+
 </head>
 
 <body>
-	<!--头部高度：5.37rem-->
+	<!--头部 -->
+	<!--用来撑文档流高度-->
+	<section class="stn-type-relative"></section>
+	<section class="stn-sorting-relative"></section>
+
 	<header class="list-head">
+        <!--如果这行,可以将整个stn-type注释掉,并注释上方的stn-type-relative-->
     	<section class="stn-type" id="StnType">
         	<div class="breadcrumb"><span class="fz30">美妆护肤</span>&gt;<span class="fz30">…</span>&gt;<span class="fz30">男士护理</span></div>
             <a class="a-down" href="#">下拉</a>
-            <div class="clr"></div>
             
             <div class="lists">
             	<ul>
@@ -59,7 +38,8 @@
                 <span class="s-icon"></span>
             </div>
         </section>
-        <div class="clr"></div>
+
+
         <section class="stn-sorting">
             <ul>  <!--从高到底： s-down  --><!--从底到高： s-up  -->
                 <li><a class="fz24" href="#"><span class="s-name s-down">综合</span></a></li>
@@ -67,8 +47,36 @@
                 <li><a class="a-money fz24" href="#"><span class="s-name">价格</span></a></li>
                 <li><a href="#"><span class="s-icon"><img src="res/img/iconbig.png" /></span></a></li>  <!--大图图标：iconbig.png--><!--中图图标：iconthe.png--><!--小图图标：iconsmall.png-->
             </ul>
+            <div class="clr"></div>
         </section>
 	</header>
+	<script>
+        $(function() {
+
+            var _type = $('#StnType');
+            if (_type.length) {
+                var _list = _type.find('.lists');
+                var _strong = $('.stn-sorting');
+
+                _type.find('.a-down').click(function() {
+                    if ($(this).hasClass('open')) {
+                        _list.hide();
+                        _strong.show();
+                        $(this).css('background-image', 'url(res/img/bigdown.png)');
+                        $(this).removeClass('open');
+                    } else {
+                        _list.show();
+                        _strong.hide();
+                        $(this).css('background-image', 'url(res/img/bigup.png)');
+                        $(this).addClass('open');
+                    }
+                })
+                _list.find('a').click(function() {
+                    _type.find('.a-down').trigger('click');
+                })
+            }
+        })
+    </script>
 	<!--头部-end-->
 </body>
 </html>
