@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-.instructions{ width:100%; margin:.72rem 0; border:solid #ddd; border-width:1px 0;}
+.instructions{ width:100%; margin:.72rem 0; border:solid #ddd; border-width:1px 0; background: #fff; }
 .instructions .instru-box{ margin:0 5.6%; border-bottom:1px solid #ddd;}
 .instructions .instru-box .box-left,.instructions .instru-box .box-right{ float:left; margin-top:4.9%; margin-bottom:3.8%;}
 .instructions .instru-box .box-left{ width:25%; margin:4.9% 4% 3.8% 1.7%;}
