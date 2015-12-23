@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>批发市场</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/wholesale.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../common/js/default.js"></script>
+</head>
+
+<body style="background-color:#f4f4f4;">
+    <!-- 批发市场 -->
+    <section class="stn-wholesale">
+        <ul>
+            <li>
+                <div class="d-img"><img src="../../../../common/img/400200.png" /></div>
+                <div class="d-info fz28">
+                    <p class="p-title fz30">北朝鲜 帝王蟹 野生大规格每 北朝鲜 帝王蟹 野生大规格每</p>
+                    <p class="p-second"><span class="s-money">￥<em>399.00</em></span><span>两斤起售</span></p>
+                    <a href="###" class="a-buy bg-color">查看购买</a>
+                </div>
+            </li>
+            <li>
+                <div class="d-img"><img src="../../../../common/img/200400.png" /></div>
+                <div class="d-info fz28">
+                    <p class="p-title fz30">北朝鲜 帝王蟹 野生大规格每 北朝鲜 帝王蟹 野生大规格每</p>
+                    <p class="p-second"><span class="s-money">￥<em>399.00</em></span><span>两斤起售</span></p>
+                    <a href="###" class="a-buy bg-color">查看购买</a>
+                </div>
+            </li>
+            <li>
+                <div class="d-img"><img src="../../../../common/img/7070.png" /></div>
+                <div class="d-info fz28">
+                    <p class="p-title fz30">北朝鲜 帝王蟹 野生大规格每 北朝鲜 帝王蟹 野生大规格每</p>
+                    <p class="p-second"><span class="s-money">￥<em>399.00</em></span><span>两斤起售</span></p>
+                    <a href="###" class="a-buy bg-color">查看购买</a>
+                </div>
+            </li>
+            <li>
+                <div class="d-img"><img src="../../../../common/img/200400.png" /></div>
+                <div class="d-info fz28">
+                    <p class="p-title fz30">北朝鲜 帝王蟹 野生大规格每 北朝鲜 帝王蟹 野生大规格每</p>
+                    <p class="p-second"><span class="s-money">￥<em>399.00</em></span><span>两斤起售</span></p>
+                    <a href="###" class="a-buy bg-color">查看购买</a>
+                </div>
+            </li>
+        </ul>
+
+        <!--价格走势-弹出-->
+        <div class="d-popup">
+            <div class="fixed-bg"></div>
+            <div class="d-container">
+                <p class="p-title fz32">价格走势
+                    <a class="a-close"><img src="../../../../common/img/close.png" /></a>
+                </p>
+
+                <div class="d-content">
+                    <img src="res/img/exam.png" />
+                    <a class="a-confirm">购买</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(function() {
+            var oArea = $('.stn-wholesale'),
+                oPopup = oArea.find('.d-popup');
+
+            //显示隐藏
+            oArea.find('.a-buy').click(function() {
+                oPopup.show()
+            })
+            oPopup.find('.a-confirm').click(function() {
+                oPopup.find('form').submit()
+                oPopup.hide()
+            })
+            oPopup.find('.a-close').click(function() {
+                oPopup.hide()
+            })
+            oPopup.find('.fixed-bg').click(function() {
+                oPopup.hide()
+            })
+
+        })
+    </script>
+
+    <!--价格走势-弹出-end-->
+    <!-- 批发市场 --end -->
+</body>
+
+</html>
