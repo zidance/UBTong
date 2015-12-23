@@ -1,9 +1,9 @@
 /*优惠券信息*/
 .stn-CouponsInfo li {position: relative;margin: .72rem auto 0;width: 93.59%;border-top: 1px solid #d4d4d4;
-    background-image:  url(../img/bottom-left.png), url(../img/bottom-right.png), url(../img/icon4.jpg),url(../img/icon3.jpg);
-    background-repeat: no-repeat,no-repeat,repeat-y,repeat-y;
-    background-position: left bottom,right bottom,right,left;
-    background-size: .12rem, .12rem, .12rem .47rem,.12rem .47rem ;
+    background-image:   url(../img/bottom-right.png), url(../img/icon4.jpg),url(../img/icon3.jpg);
+    background-repeat: no-repeat,repeat-y,repeat-y;
+    background-position: right bottom,right,left;
+    background-size: .12rem, .12rem .47rem,.12rem .47rem ;
     background-color: #fff;
 }
 .stn-CouponsInfo li>a{display: block;margin:0 .12rem;border-bottom:.12rem solid #f77a02;}
