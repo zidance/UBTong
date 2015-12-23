@@ -11,16 +11,14 @@
     display:-webkit-flex;
     display:flex;
     /*子元素在单行排列溢出时,允许换行,在国产手机浏览器无法达到换行效果*/
-/*
     -webkit-box-lines:multiple;
     box-lines:multiple;
     -webkit-flex-wrap:wrap;
     flex-wrap:wrap;
-*/
     /*规定子元素对父容器,在水平向上的排列方式,这里居中*/
-    /*-webkit-box-pack:center;
+    -webkit-box-pack:center;
     -webkit-justify-content:center;
-    justify-content:center;*/
+    justify-content:center;
 
 
 }
