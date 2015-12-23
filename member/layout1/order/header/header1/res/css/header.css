@@ -1,4 +1,4 @@
-body{ background:#f7f5f5; position:relative; padding-top:4.11rem; }
+body{ background:#f7f5f5; position:relative;}
 /*导航*/
 nav{ width:100%; height:4.11rem; background:#fff; border-bottom:1px solid #d4d4d4; position:fixed; top:0; left:0; }
 nav li{ box-sizing:border-box; float:left; width:16.6666%; text-align:center; }
@@ -13,6 +13,7 @@ nav li a.a7{ background-image:url(../img/orderstate7.png); background-position:0
 nav li a.a8{ background-image:url(../img/orderstate8.png); background-position:0 .76rem;  }
 nav li a.a9{ background-image:url(../img/orderstate9.png); background-position:0 .76rem;  }
 
+/*橙色方案*/
 nav li .a1.act{ background-image:url(../img/orderstateh1.png); }
 nav li .a2.act{ background-image:url(../img/orderstateh2.png); }
 nav li .a3.act{ background-image:url(../img/orderstateh3.png); }
@@ -22,5 +23,17 @@ nav li .a6.act{ background-image:url(../img/orderstateh6.png); }
 nav li .a7.act{ background-image:url(../img/orderstateh7.png); }
 nav li .a8.act{ background-image:url(../img/orderstateh8.png); }
 nav li .a9.act{ background-image:url(../img/orderstateh9.png); }
+
+/*绿色方案*/
+nav .ul-green li .a1.act{ background-image:url(../img/orderstate1-green.png);}
+nav .ul-green li .a2.act{ background-image:url(../img/orderstate2-green.png);}
+nav .ul-green li .a3.act{ background-image:url(../img/orderstate3-green.png);}
+nav .ul-green li .a4.act{ background-image:url(../img/orderstate4-green.png);}
+nav .ul-green li .a5.act{ background-image:url(../img/orderstate5-green.png);}
+nav .ul-green li .a6.act{ background-image:url(../img/orderstate6-green.png);}
+nav .ul-green li .a7.act{ background-image:url(../img/orderstate7-green.png);}
+nav .ul-green li .a8.act{ background-image:url(../img/orderstate8-green.png);}
+nav .ul-green li .a9.act{ background-image:url(../img/orderstate9-green.png);}
+
 
 .nav-five li{ width:20%; }

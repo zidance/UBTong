@@ -1,0 +1,8 @@
+/*VIP特权*/
+body{background-color: #f4f4f4;}
+.stn-VIPprivilege{background-color: #fff;padding:3% 4.5% ;margin-top:3%;  border:solid #c5c5c5;border-width:1px 0;}
+
+.stn-VIPprivilege .p-title{color: #454545;}
+.stn-VIPprivilege div{display: inline-block;width:4rem;text-align: center;margin:0 2%;}
+.stn-VIPprivilege div img{width:3.3rem;height:3.3rem;border-radius:50%;margin:.5rem auto .3rem;}
+.stn-VIPprivilege div p{color: #939292;line-height:1.2;}

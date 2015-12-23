@@ -1,0 +1,8 @@
+/*交易方式*/
+.stn-method{border-bottom: 1px solid #ddd;}
+.stn-method .p-title{background-color: #f7f5f5;color: #939292;padding:2.8% 4.5% 1.5%;border-bottom: 1px solid #ddd;}
+.stn-method .method{background-color: #fff;}
+.stn-method label{display: block; position: relative; line-height: 3.2;margin:0 2.2%;padding:0 2.2%;color: #000;border-bottom:1px solid #ddd;}
+.stn-method label:last-child{border-bottom:none;}
+.stn-method label input{position: absolute;right:2.2%;top:0;bottom:0;margin:auto 0; width:1.1rem;height: 1.1rem;box-sizing:border-box;border:1px solid #ddd;border-radius:50%;-webkit-appearance:none;background-color:inherit;cursor:pointer;}
+.stn-method label input:checked{border:none;background:url(../img/checked.png) no-repeat center center/56%;/*23/41*/ }

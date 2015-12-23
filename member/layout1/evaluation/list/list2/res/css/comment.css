@@ -1,0 +1,12 @@
+
+/*评论部分*/
+/*用户评论*/
+.stn-comment{ margin:.72rem 0 1.09rem; padding:0 3.205%; }
+.stn-comment li{ padding:.72rem 3% 1.1rem; border-bottom:1px solid #d9d9d9;background-color: #fff;margin-top:3%; }
+.stn-comment li .p-name{ color:#72c7c7; margin-bottom:.35rem; }
+.stn-comment li .p-name span{ display:block; float:right; margin-top:.2rem; color:#9b9b9b; }
+.stn-comment li .p-gbook{ color:#000;}
+.stn-comment .a-more{ display:block; text-align:center; color:#686868; padding:.72rem 0; }
+
+
+

@@ -1,0 +1,71 @@
+.news-list {
+	width: 100%;
+}
+.news-list .list-ul {
+	padding: 0 1.01rem;
+	width: 89.4%;
+}
+.news-list .list-ul a {
+	display: block;
+	width: 100%;
+}
+.news-list .list-ul li {
+	padding: 1.01rem 0;
+	width: 100%;
+	position: relative;
+	border-bottom: 1px solid #e7e7e7;
+}
+.news-list .list-ul .li-a {
+	display: block;
+	height: 5.08rem;
+	width: 5.08rem;
+	float: left;
+}
+.news-list .list-ul .li-a img {
+	width: 100%;
+	height: 100%;
+}
+.news-list .list-ul .list-div {
+	float: left;
+	width: 50%;
+	text-align: left;
+	margin-left: 0.72rem;
+	position: relative;
+	height: 5.08rem;
+}
+.news-list .list-ul .list-div .p-title {
+	color: #000;
+}
+.news-list .list-ul .list-div .p-cont {
+	color: #b0b0b0;
+	position: absolute;
+	bottom: 0;
+	height1.6rem;
+	overflow: hidden;
+	width: 100%;
+}
+.news-list .list-ul .u-dot {
+	height: 5.08rem;
+	text-align: center;
+	line-height: 5.08rem;
+	width: 0.94rem;
+	float: right;
+}
+.news-list .list-ul .u-dot span {
+	display: block;
+	width: 0.58rem;
+	height: 1.09rem;
+	padding-right: 0.36rem;
+}
+.news-list .list-ul .u-dot span img {
+	width: 100%;
+	height: 100%;
+}
+.news-list .list-ul li:last-child {
+	border-bottom: none;
+}
+@media screen and (max-width:320px) {
+	.news-list .list-ul .list-div .p-cont {
+		height: 2.8rem;
+	}
+}

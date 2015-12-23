@@ -1,0 +1,11 @@
+/*文章页*/
+.stn-artlist{}
+.stn-artlist li{position:relative;margin:1.5% 0.5% 0 1.6%;width:47.5%;box-sizing: border-box;padding:1.5% 1.5% 0 1.5%;box-shadow:0 1px 2px #e8e8e8;/*a39b79;border:1px solid #e8e8e8;*/background-color: #fff; }
+.stn-artlist li .a-main{display: block;}
+.stn-artlist li .a-main .s-img{display: block;}
+.stn-artlist li .a-main .s-img img{width: 100%;}
+.stn-artlist li .a-main .p-name{color:#000;margin:6.2% 3% 22%;}
+
+.stn-artlist li .more{font-size: 0;position: absolute;bottom:.6rem;left:.6rem;}
+.stn-artlist li .more .a-look{color:#c5c5c5;background: url(../img/look.png) no-repeat left center/1rem; padding-left: 1.33rem; }
+.stn-artlist li .more .a-comment{color:#c5c5c5;background: url(../img/comment.png) no-repeat left center/.9rem;padding-left: 1.2rem;margin-left:1.7rem;}

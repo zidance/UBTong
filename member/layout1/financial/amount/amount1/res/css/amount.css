@@ -1,4 +1,4 @@
 /*总计收益*/
-.stn-amount{ background:#fff; padding:.9rem 0 1.33rem; }
-.stn-amount .p-name{ margin:0 0 .2rem 5%; color:#b5b5be; }
-.stn-amount .p-money{ margin-left:5%; color:#ff3333; }
+.stn-amount{ padding:.9rem 0 1.33rem;background-image: url(../img/general-bottom-bg.png);background-repeat: repeat-x;background-position: left bottom;background-size:.88rem .22rem; }
+.stn-amount .p-name{ margin:0 0 .2rem 5%; color:#fff; }
+.stn-amount .p-money{ margin-left:5%; color:#fff; }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>文章</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/article.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../../other/demo/res/jquery-2.1.4.min.js"></script>
+    <script src="../../../../../common/js/default.js"></script>
+</head>
+
+<body style="background-color:#f4f4f4;">
+    <!--文章内容-->
+    <article class="art-main">
+        <h1 class="fz32">辣炒帝王蟹</h1>
+        <h3 class="fz28">2015-10-20  20:12:51 作者：菓小红</h3>
+        <div class="d-art d-limit fz26">
+            <!--允许有多个p,只会显示第一个,截取其前三行-->
+            <p>无论是夏天，还是初秋的季节，人们都会选择吃些海鲜。新鲜，人都喜欢新鲜的，帝王蟹是不错的选择，可比螃 蟹肉多多了，用红绿小米椒提味，加大量无论是夏天，还是初秋的季节，人们都会选择吃些海鲜。新鲜，人都喜欢新鲜的，帝王蟹是不错的选择，可比螃 蟹肉多多了，用红绿小米椒提味，加大量...</p>
+            <p>第二段</p>
+        </div>
+        <a class="a-more" href="###">查看更多</a>
+
+    </article>
+
+    </section>
+    <script>
+        $(function() {
+            var art = $('.art-main').find('.d-art')
+            var btn = $('.art-main').find('.a-more')
+            console.log(art)
+            btn.on('tap click', function() {
+                if (art.hasClass('d-limit')) {
+                    art.removeClass('d-limit')
+                    btn.html('收 &nbsp; 起')
+                } else {
+                    art.addClass('d-limit')
+                    btn.html('查看更多')
+                }
+            })
+        })
+    </script>
+    <!--文章内容-end-->
+</body>
+
+</html>

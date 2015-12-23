@@ -1,0 +1,39 @@
+/*按钮-一行两列*/
+.stn-btns-relative{padding-top:20%;}
+.stn-btns{position:fixed;left: 0;bottom: 0;right: 0;margin:0 auto;max-width: 640px;width:100%;box-sizing: border-box; background-color: #f4f4f4;text-align: center;}
+.stn-btns a{line-height: 2.4;border-radius:.3rem;background-color: #a6a6a6;color: #fff;margin:4.3% .15rem 4.4%;overflow: hidden;white-space: nowrap;}
+
+/*以下是flex相关属性*/
+/*父容器*/
+.stn-btns{
+    /*flex模型*/
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+    /*子元素在单行排列溢出时,允许换行,在国产手机浏览器无法达到换行效果*/
+    -webkit-box-lines:multiple;
+    box-lines:multiple;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
+    /*规定子元素对父容器,在水平向上的排列方式,这里居中*/
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+    justify-content:center;
+
+
+}
+/*子元素*/
+.stn-btns a{
+    /*在不考虑换行的情况下,block在宽度上的表现更好.inline-block会使flex模型无效化.*/
+    display:block;
+    /*子元素间比例*/
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+    /*当子元素之间字数不同时,国产浏览器不严格按比例(这里是1:1)来放置,通过下面width:1px 强制按比例渲染.flex模型下,该设定不会使子元素变为1px宽.*/
+    width:1px;
+}
+
+
+
+

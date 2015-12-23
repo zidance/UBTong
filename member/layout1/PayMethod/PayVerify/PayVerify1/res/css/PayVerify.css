@@ -1,0 +1,7 @@
+/*订单详情*/
+.stn-pay-verify {}
+.stn-pay-verify .p-title{color:#939292;padding:3% 5.5% 1.5%;/*20 36 10 /640*/border-bottom:1px solid #d9d9d9;}
+.stn-pay-verify .d-order{border-bottom:1px solid #d9d9d9;padding:0 2%;background-color: #fff;}
+.stn-pay-verify .d-order p{color: #000;border-bottom:1px solid #d9d9d9;line-height: 2.8;padding:0 3.4%;}
+.stn-pay-verify .d-order p:last-child{border-bottom: none;}
+.stn-pay-verify .d-order .s-color{color:#ff3430;}
