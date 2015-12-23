@@ -1,0 +1,14 @@
+
+/*搜索*/
+.stn-search{font-size: 0;padding: 2.3% 3.6%; background:#f7f5f5;height:2.18rem;}
+.stn-search .search{ width:100%;height:100%; border-radius:2.18rem; background:#fff; border:1px solid #dddddd; box-sizing:border-box;}
+.stn-search .search .s-logo{ display:block; width:5%; height:5%; float:left; margin:.54rem 3% 0 3%;}
+.stn-search .search .s-logo img{ width:100%; height:auto;}
+.stn-search .search input{ float:left; width:85%; height:2rem; margin-top:0.09rem; border:none; color:#c5c5c5; }
+
+.stn-search .search input::placeholder{color: #c5c5c5;}
+.stn-search .search .input::-webkit-input-placeholder{color: #c5c5c5;}
+
+@media screen and (max-width:320px){
+	.stn-search .d-search input{padding: 0.83rem 0 .83rem 2.5%;}
+}

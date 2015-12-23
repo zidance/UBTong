@@ -1,0 +1,11 @@
+/*产品列表*/
+.lists{ width:100%; margin-top:0.72rem; background:#fff;}
+.lists .title{ height:3.27rem; border:solid #ddd; border-width:1px 0; position:relative; text-align:center; position:relative; padding:0 1.7%;}
+.lists .title .line{ width:96.6%; height:0rem; border-bottom:1px solid #ddd; position:absolute; top:50%;}
+.lists .title .p-title{ color:#2f2f2f; padding:0 0.72rem; display:inline-block; background:#fff; line-height:3.27rem; position:relative;}
+
+.lists .l-table,.lists .l-table table{ width:100%;}
+.lists .l-table,.lists .l-table table td{ width:33.33%; box-sizing:border-box; border:solid #ddd; border-width:0px 1px 1px 0px;}
+.lists .l-table,.lists .l-table table td.last{ border-width:0px 0px 1px 0px;  }
+.lists .l-table,.lists .l-table table td a{ display:block;}
+.lists .l-table,.lists .l-table table td a img{ width:100%; height:auto;}
