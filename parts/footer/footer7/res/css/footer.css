@@ -1,11 +1,11 @@
 footer {
 	width: 100%;
-	height: 3.59rem;
+	height: 2.4rem;
 	box-sizing: border-box;
-	border-top: 1px solid #c6c6c6;
+	/*border-top: 1px solid #c6c6c6;*/
 	position: fixed;
 	bottom: 0;
-	background: #f8f8f8;
+	background: #ededed;
     max-width: 640px;
     left: 0;
     right: 0;
@@ -19,35 +19,42 @@ footer li {
 }
 footer li a {
 	display: block;
-	height: 3.59rem;
+	height: 2.4rem;
 	text-align: center;
 }
 footer li a .s-icon {
 	display: inline-block;
-	width: 1.63rem;
-	height: 1.63rem;
-	margin-top: .5rem;
-	margin-bottom:.1rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-top:0.1rem;
+	margin-bottom:0.3rem
 }
 footer li a .s-icon img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 footer li a p{
 	color:#999999;
+	font-size:.53rem !important;
 }
 footer li a p.p-footact{
 	color:#f77a02;
 }
 
 footer .li-logo{
-    width:22.3%;height: 3.59rem;position: relative;
+    width:22.3%;height: 2.4rem;position: relative;
 }
-footer .li-logo a{width:100%;height:auto;position: absolute; top:-.6rem;z-index: 801;}
+footer .li-logo a{width:100%;height:100%;position: absolute; top:-.6rem;z-index: 801;}
+footer .li-logo a.logo{ width:80%; margin:0 10%;}
 
 footer .li-logo a img{width:100%;border-radius:50%;overflow: hidden;}
-
-@media screen and (min-width:321px) and (max-width:640px){
+@media screen and (min-width:321px) and (max-width:360px){
+	footer li a .s-icon{ margin:0.2rem 0;}
 	footer .li-logo a{ top:-.38rem; }
-    footer li a .s-icon{margin-top:.6rem;}
+}
+@media screen and (max-width:320px){
+	footer li a .s-icon {width: 1.63rem; height: 1.63rem; margin-top: .5rem;margin-bottom:.1rem;}
+	footer{ height:3.59rem}
+	footer li a{ height:3.59rem}
+	footer .li-logo a.logo{ width:100%; margin:0;}
 }

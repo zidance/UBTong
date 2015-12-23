@@ -22,7 +22,16 @@
     <script type="text/javascript" src="notice/notice3/res/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
     <script type="text/javascript" src="../../common/js/default.js"></script>
+	<script type="text/javascript">
+	$(function(){
+    	$('#phone').bind('focus',function(){
+            $('#footer').css('position','static');
+        }).bind('blur',function(){
+            $('#footer').css({'position':'fixed','bottom':'0'});
+        });
 
+	})
+    </script>
 </head>
 
 <body style="background:#dcdcdc;">
@@ -109,11 +118,14 @@
     <!-- 轮播公告 -end -->
 
     <!--搜索-->
-    <section class="stn-search" style="background-color:#dcdcdc;">
-        <img class="i-logo" src="search/search1/res/img/logo.png" />
-        <input class="fz24" type="text" placeholder="商品搜索：请输入商品关键字" />
-    </section>
-    <!--搜索-end-->
+	<section class="stn-search">
+		<img class="i-logo" src="search/search1/res/img/logo.png" />
+        <div class="d-search">
+        	<a href="###"><img src="search/search1/res/img/search.png"></a>
+            <input class="fz24" type="text"  id="phone" placeholder="商品搜索：请输入商品关键字"/>
+        </div>
+	</section>
+	<!--搜索-end-->
 
 
     <!-- 天天捡钱 -->
@@ -135,14 +147,15 @@
             <!--type0-type5,只会弹出其中一个-->
             <!--type0,开始-->
             <div class="pick-money type0">
-                <img class="i-pic" src="daily/daily1/res/img/money0.png">
+                <img class="i-pic" src="daily/daily1/res/img/money0.jpg">
                 <a class="a-begin" href="###">开始捡钱<img src="daily/daily1/res/img/begin.png" /></a>
             </div>
 
             <div class="pick-money type1">
-                <img class="i-pic" src="daily/daily1/res/img/money1.png">
+                <img class="i-pic" src="daily/daily1/res/img/money1.jpg">
                 <div class="income-wrap">
                     <div class="income">
+                    	<span class="img"><img src="daily/daily1/res/img/logo-income.png"/></span>
                         <p class="p-type fz32">哇塞最少吗</p>
                         <p class="p-money fz34"><span class="fz48">0.28</span>+<span class="fz48">0.05</span>元</p>
                         <p class="p-bottom fz18">已存入您的收益账户</p>
@@ -151,9 +164,10 @@
             </div>
             <!--type2-->
             <div class="pick-money type2">
-                <img class="i-pic" src="daily/daily1/res/img/money2.png">
+                <img class="i-pic" src="daily/daily1/res/img/money2.jpg">
                 <div class="income-wrap">
                     <div class="income">
+                    	<span class="img"><img src="daily/daily1/res/img/logo-income.png"/></span>
                         <p class="p-type fz32">快安慰下我</p>
                         <p class="p-money fz34"><span class="fz48">0.38</span>+<span class="fz48">0.05</span>元</p>
                         <p class="p-bottom fz18">已存入您的收益账户</p>
@@ -162,9 +176,10 @@
             </div>
             <!--type3-->
             <div class="pick-money type3">
-                <img class="i-pic" src="daily/daily1/res/img/money3.png">
+                <img class="i-pic" src="daily/daily1/res/img/money3.jpg">
                 <div class="income-wrap">
                     <div class="income">
+                    	<span class="img"><img src="daily/daily1/res/img/logo-income.png"/></span>
                         <p class="p-type fz32">貌似不错噢</p>
                         <p class="p-money fz34"><span class="fz48">0.48</span>+<span class="fz48">0.05</span>元</p>
                         <p class="p-bottom fz18">已存入您的收益账户</p>
@@ -173,9 +188,10 @@
             </div>
             <!--type4-->
             <div class="pick-money type4">
-                <img class="i-pic" src="daily/daily1/res/img/money4.png">
+                <img class="i-pic" src="daily/daily1/res/img/money4.jpg">
                 <div class="income-wrap">
                     <div class="income">
+                    	<span class="img"><img src="daily/daily1/res/img/logo-income.png"/></span>
                         <p class="p-type fz32">女神么么哒</p>
                         <p class="p-money fz34"><span class="fz48">0.58</span>+<span class="fz48">0.05</span>元</p>
                         <p class="p-bottom fz18">已存入您的收益账户</p>
@@ -184,16 +200,26 @@
             </div>
             <!--type5-->
             <div class="pick-money type5">
-                <img class="i-pic" src="daily/daily1/res/img/money5.png">
+                <img class="i-pic" src="daily/daily1/res/img/money5.jpg">
                 <div class="income-wrap">
                     <div class="income">
+                    	<span class="img"><img src="res/img/logo-income.png"/></span>
                         <p class="p-type fz32">恭喜您抢到</p>
                         <p class="p-money fz34"><span class="fz48">0.66</span>+<span class="fz48">0.05</span>元</p>
                         <p class="p-bottom fz18">已存入您的收益账户</p>
                     </div>
                 </div>
             </div>
-
+			<!--type5-->
+            <div class="pick-money type6">
+                <img class="i-pic" src="daily/daily1/res/img/money5.png">
+                <div class="income-wrap">
+                    <div class="income">
+                    	<span class="img"><img src="daily/daily1/res/img/logo-income.png"/></span>
+                        <p class="p-type yellow fz28">今日捡钱次数已用完;每推荐他人开店，多一次捡钱次数</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </section>
     <script type="text/javascript">
@@ -236,7 +262,7 @@
     <!--广告-大图式-->
     <section class="stn-advertis-pic">
         <p class="p-title fz28">【重磅】加盟六六特卖，五十万现金抱回家</p>
-        <img class="img-big" src="advertising/advertising4/res/img/pic.png" />
+        <img class="img-big" src="advertising/advertising4/res/img/pic.jpg" />
         <div class="btn">
             <a href="###"><img src="advertising/advertising4/res/img/btn1.png" /></a>
             <a href="###"><img src="advertising/advertising4/res/img/btn2.png" /></a>
@@ -312,7 +338,7 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合
                         </p>
                         <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
                         <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
@@ -327,7 +353,7 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
                         <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
                         <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
@@ -342,7 +368,7 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
                         <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
                         <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
@@ -357,7 +383,7 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
                         <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
                         <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
@@ -372,7 +398,7 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
                         <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
                         <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
@@ -387,7 +413,7 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz26">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
                         <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
                         <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
@@ -435,7 +461,7 @@
     <!--空白BOTTOM部件 -end-->
 
     <!--底部高度：3.59rem-->
-    <footer>
+    <footer id="footer">
         <ul>
             <!--当前目录状态:p class="p-footact"-->
             <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/homeh.png" /></span><p class="fz22 p-footact">首页</p></a></li>
@@ -445,7 +471,7 @@
             <!--当前目录状态：goods.png-->
             <!--未在当前目录状态：goods1.png-->
             <li class="li-logo">
-                <a href="###"><img src="../../parts/footer/footer7/res/img/logo.png" /></a>
+                <a href="###" class="logo"><img src="../../parts/footer/footer7/res/img/logo.png" /></a>
             </li>
             <!--当前目录状态：goods.png-->
             <!--未在当前目录状态：goods1.png-->
