@@ -118,3 +118,18 @@ $(function () {
 
 })
 
+
+
+//切换
+function switchObj(_id){
+	var _obj = $('#'+_id);
+	var _a = _obj.find('li a');
+	$.each(_a,function(i,e){
+		var _this = $(e);
+		_this.click(function(){
+			_a.removeClass('act');
+			$(this).addClass('act');	 
+		})	
+	})
+}
+
