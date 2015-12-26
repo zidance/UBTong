@@ -1,13 +1,17 @@
 /*项目分类*/
-.stn-category{ width:100%; margin:0 auto;border-top:1px solid #bfbfbf;padding-top:0.72rem;}
+.stn-category{ width:100%; margin:0 auto;padding-top:0.72rem;}
 .stn-category h1{ color:#343434; text-align:center; margin:1.27rem 0; }
 .stn-category ul{width:93.6%;margin:0 auto;}
 .stn-category li{ width:33.33%; float:left; text-align:center; margin-bottom:.8rem; }
 .stn-category li a{ display:block; width:3.7rem; margin:0 auto; }
 .stn-category li a .s-img{ display:block; width:3.7rem; height:3.7rem;  border-radius:10px; }
 .stn-category li a .s-img img{ width:100%; height:auto; }
-.stn-category li a p{ margin:.36rem 0; color:#343434; max-height:2.4rem;line-height:1.35; overflow: hidden;}
+.stn-category li a p{ margin:.36rem 0; color:#343434; max-height:2.4rem; height:2.4rem; line-height:1.35; overflow: hidden;}
 
 .stn-category ul{margin-top:3%;}
 .stn-category .ad .ad-img{ width:96.59%; margin:0 auto; height:6.72rem;}
 .stn-category .ad .ad-img img{ width:100%; height:100%;}
+
+@media screen and (min-width:321px) and (max-width:640px){
+.stn-category li a p{  max-height:1.8rem; height:1.8rem;}
+}

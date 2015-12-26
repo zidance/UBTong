@@ -1,10 +1,10 @@
-.editcar{ bordertop:1px solid #dcdcdc; margin:.72rem 0 4rem; position:relative; width:100%; }
+.editcar{ bordertop:1px solid #dcdcdc; margin:.72rem 0 3rem; position:relative; width:100%; }
 .editcar .table{ width:100%; background:#fff; margin-top:.9rem; border:solid #dcdcdc; border-width:1px 0; }
 .editcar .table table{ width:90%; margin:0 5%; }
 .editcar tr{ border-bottom:1px solid #dcdcdc; }
 .editcar .tr-bottom{ border-bottom:none; }
-.editcar td.td-grey{ padding:.8rem 2.5% .8rem 4%; width:30%; color:#242424; }
-.editcar td.td-black{ padding:.8rem 4% .8rem 0; text-align:left; color:#242424; }
+.editcar td.td-grey{ padding:.6rem 2.5% .6rem 4%; width:30%; color:#242424; }
+.editcar td.td-black{ padding:.6rem 4% .6rem 0; text-align:left; color:#242424; }
 .editcar td.td-black input{ border:none; }
 .editcar .table-num td.td-grey{ width:38%; }
 .editcar p{ margin:.5rem 0 0 8%; }
@@ -15,3 +15,8 @@
 .editcar-btn a{ display:block; float:left; width:48%; height:2.4rem; line-height:2.4rem; text-align:center; color:#fff; background:#ff6766; border-radius:4px; margin-top:.5rem; }
 .editcar-btn a:last-child{ background:#a6a6a6; float:right; }
 .editcar-btn .a-red{ background:#ff6766; }
+
+@media screen and (max-width:320px){
+	.editcar td.td-grey{ padding:.8rem 2.5% .8rem 4%;}
+	.editcar td.td-black{ padding:.8rem 4% .8rem 0; }
+}

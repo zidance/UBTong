@@ -16,7 +16,7 @@
 
 
 /*无图*/
-.art-order li .longwidth{ max-width: 100%;}
+.art-order li .longwidth{ max-width: 100%; width:94%;}
 .art-order .longwidth+div+.p-money{height:1.6rem;}
 
 @media screen and (max-width:320px){
