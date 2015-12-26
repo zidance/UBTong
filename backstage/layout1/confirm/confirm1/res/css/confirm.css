@@ -5,14 +5,14 @@ body{ background:#f7f5f5; }
 .show-confirm .stn-lists{ width:100%; background:#fff; border-radius:4px 4px 0 0; }
 .show-confirm .stn-lists ul{ border:solid #eae8e8; border-width:1px 1px 0 1px; padding:0 2%; }
 .show-confirm .stn-lists li{ border-bottom:1px solid #eae8e8; padding:.7rem .43rem; }
-.show-confirm .stn-lists li:last-child{ border-bottom:none; }
+.show-confirm .stn-lists li:last-child{ border-bottom:none}
 .show-confirm .stn-lists li .s-img{ display:block; float:left; width:5.01rem; height:5.01rem; border:1px solid #f3f3f3; }
 .show-confirm .stn-lists li .s-img img{ width:100%; height:100%; }
 .show-confirm .stn-lists li .details{ width:6.25rem; float:left; margin-left:0.72rem; }
 .show-confirm .stn-lists li .details .p-name{ height:2.54rem; color:#000; font-size:.71rem; line-height:1rem; /*text-overflow:ellipsis; overflow:hidden; white-space:nowrap; */}
 .show-confirm .stn-lists li .details .p-money{ color:#e52c02; font-size:.85rem; margin-top:1.3rem; }
 .show-confirm .stn-lists li .s-num{ display:block; float:right; color:#939292; font-size:0.74rem; margin-top:2.11rem; }
-.show-confirm .confirm-seal{ width:100%; position:absolute; left:0; }
+.show-confirm .confirm-seal{ width:100%; position:absolute; left:0;  z-index: 99;}
 .show-confirm .confirm-seal img{ width:100%; height:100%; }
 
 .show-confirm .stn-num{ border:solid #eae8e8; border-width:0 1px 1px; padding:0 2% 2.9rem; background:#fff; padding-top:1.09rem; border-radius:0 0 4px 4px; }
@@ -27,6 +27,15 @@ body{ background:#f7f5f5; }
 /*等待验证*/
 .waiting-validation{ width:7.63rem; height:8.17rem; margin:2.97rem auto 0; }
 .waiting-validation img{ width:100%; height:100%; }
+
+
+
+.show-confirm .stn-num,.show-confirm .stn-lists ul{
+    position: relative;
+    border-width: 1px 1px 0 1px;
+    border-color:#eae8e8;
+}
+.show-confirm .stn-num{border-width: 0 1px 1px 1px;}
 
 
 @media screen and (min-width:640px){

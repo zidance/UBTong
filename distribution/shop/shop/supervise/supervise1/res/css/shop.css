@@ -21,6 +21,7 @@
 .stn-info .btn i{ padding-left:4%; }
 .stn-info .btn a{ display:inline-block; width:72%; background:url(../img/left.png) no-repeat right center; background-size:.58rem 1.09rem; margin-left:4%; color:#000; }
 
+
 @media screen and (min-width:640px){
 	.stn-info .synopsis textarea{ margin-top:.1rem; }
 }

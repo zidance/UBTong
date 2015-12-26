@@ -33,7 +33,6 @@
 .stn-lists li a .content .line3 .s-num{ display:block; color:#b2b4af; text-decoration:line-through; text-align:right; margin-top:.2rem; }
 
 
-
 @media screen and (min-width:320px){
 	.stn-lists li a .content .name{ margin-top:.3rem; }
 	.stn-lists li a .content .p-address{ padding:.2rem 0 .6rem; }

@@ -1,6 +1,6 @@
 /*养护套餐*/
-.stn-maintenance{ width:100%; padding:0 .9375%; box-sizing:border-box; }
-.stn-maintenance .maintenance-lists{ border:solid #d9d9d9; border-width:1px 0; margin-bottom:.72rem; background:#fff; }
+.stn-maintenance{ width:100%; padding:0 .9375%; box-sizing:border-box; margin-top:.72rem; }
+.stn-maintenance .maintenance-lists{ border:solid #d9d9d9; border-width:1px 0; background:#fff; }
 .stn-maintenance h1{border-bottom:1px solid #d9d9d9; height:2.5rem; line-height:2.5rem; color:#000; padding-left:2%; }
 .stn-maintenance .a-title{ display:block; border-bottom:1px solid #d9d9d9; background:url(../img/left.png) no-repeat 97% center; background-size:.58rem 1.09rem; height:2.5rem; line-height:2.5rem; color:#000; padding-left:2%; }
 .stn-maintenance .a-title span{ display:block; float:right; margin-right:7%; color:#676767; }
@@ -23,7 +23,6 @@
 .stn-maintenance .package-btn .btn{ position:absolute; top:.6rem; right:0; width:50%; }
 .stn-maintenance .package-btn .btn a{ display:block; width:47%; height:1.88rem; line-height:1.88rem; text-align:center; background:#ff4949; color:#fff; border-radius:6px; float:left; }
 .stn-maintenance .package-btn .btn a:last-child{ background:#17c7c9; float:right; }
-
 
 @media screen and (min-width:321px) and (max-width:360px){
 .stn-maintenance .package td .s-img{ height:5.3rem;}

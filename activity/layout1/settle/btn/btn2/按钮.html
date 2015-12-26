@@ -1,50 +1,50 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>按钮</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="res/css/pricesbtn.css" rel="stylesheet" type="text/css" />
-<link href="../../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script src="../../../../../common/js/zepto-1.16.min.js"></script>
-<script src="../../../../../common/js/hover.js"></script>
-<script>
-	$(function(){
-		var _btn = $('#BtnOther');
-		var _box= $('#SetPayment')
-		var _bg = $('#SetBackground');
-		_h = $(document).height();
-		_bg.css({'height':_h});
-		
-		_btn.click(function(){
-			_box.show();
-			_bg.show();
+	<title>按钮</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="res/css/pricesbtn.css" rel="stylesheet" type="text/css" />
+	<link href="../../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+	<script src="../../../../../common/js/zepto-1.16.min.js"></script>
+	<script src="../../../../../common/js/default.js"></script>
+	<script>
+		$(function(){
+			var _btn = $('#BtnOther');
+			var _box= $('#SetPayment')
+			var _bg = $('#SetBackground');
+			_h = $(document).height();
+			_bg.css({'height':_h});
+
+			_btn.click(function(){
+				_box.show();
+				_bg.show();
+			})
+			_bg.click(function(){
+				_box.hide();
+				_bg.hide();
+			})
 		})
-		_bg.click(function(){
-			_box.hide();
-			_bg.hide();
-		})
-	})
-</script>
+	</script>
 </head>
 
 <body>
 	<!--按钮 高度：7.1rem--> 
-    <div class="btn-settlement">
+	<div class="btn-settlement">
 		<a class="fz32" id="BtnOther" href="#">线上支付</a>
 		<a class="fz32" href="#">线下支付</a>
 	</div>
-    
-    <div class="btn-settlement btn-setpayment" id="SetPayment">
-    	<a class="fz32" href="#">微信支付</a>
-    	<a class="fz32" href="#">支付宝支付</a>
+
+	<div class="btn-settlement btn-setpayment" id="SetPayment">
+		<a class="fz32" href="#">微信支付</a>
+		<a class="fz32" href="#">支付宝支付</a>
 		<a class="fz32" href="#">财付通支付</a>
 		<a class="fz32" href="#">银联支付</a>
-    </div>
-    <div id="SetBackground"></div>
-    <!--按钮-end-->
+	</div>
+	<div id="SetBackground"></div>
+	<!--按钮-end-->
 </body>
 </html>

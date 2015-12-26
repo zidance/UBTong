@@ -32,27 +32,47 @@ if (childFolder) {
     childName = childDir[i].match(/.*[\/\\](.*)/)
     childName = RegExp.$1
 
+<<<<<<< HEAD
+    var tempHtml = require(workDir + '/' + childName + '/BuildArray.js') //返回该文件夹下html文件数组
+    var tempBuildArray = tempHtml.file
+=======
     var tempHtml = require(workDir + '/' + childName + '/HTMLArray.js') //返回该文件夹下html文件数组
     var tempHtmlArray = tempHtml.file
+>>>>>>> origin/Develop
 
     //为UBTong项目专门做的优化
 
     if(UBTong){
+<<<<<<< HEAD
+      for(var k in tempBuildArray){
+      tempBuildArray[k] = tempBuildArray[k].replace(/\\/g,'\/')
+      tempBuildArray[k] = tempBuildArray[k].replace(workDir,'../../')
+=======
       for(var k in tempHtmlArray){
       tempHtmlArray[k] = tempHtmlArray[k].replace(/\\/g,'\/')
       tempHtmlArray[k] = tempHtmlArray[k].replace(workDir,'../../')
+>>>>>>> origin/Develop
       }
     }
 
 //    console.log(tempHtml)
+<<<<<<< HEAD
+    var scanResult = JSON.stringify(tempBuildArray) //数组json化
+=======
     var scanResult = JSON.stringify(tempHtmlArray) //数组json化
+>>>>>>> origin/Develop
 
     //生成json 目前取消
 //    jsonPath = workDir + '/other/demo/各目录html集合/' + childName + '.json'
 //    fs.writeFileSync(jsonPath, scanResult)
 
+<<<<<<< HEAD
+    //  //删除各子文件夹下的BuildArray.js
+    fs.unlink(childDir[i] + '/BuildArray.js')
+=======
     //  //删除各子文件夹下的HTMLArray.js
     fs.unlink(childDir[i] + '/HTMLArray.js')
+>>>>>>> origin/Develop
 
       //  //生成组合html
     if(UBTong){
@@ -70,9 +90,15 @@ if (childFolder) {
 else {
   dirName = __dirname.match(/.*[\/\\](.*)/)
     dirName = RegExp.$1
+<<<<<<< HEAD
+    var tempHtml = require('./BuildArray.js') //返回该文件夹下html文件数组
+    var tempBuildArray = tempHtml.file
+    var scanResult = JSON.stringify(tempBuildArray) //数组json化
+=======
     var tempHtml = require('./HTMLArray.js') //返回该文件夹下html文件数组
     var tempHtmlArray = tempHtml.file
     var scanResult = JSON.stringify(tempHtmlArray) //数组json化
+>>>>>>> origin/Develop
 
     fs.writeFileSync(__dirname+'/组合页面.html', str1 + scanResult + str2)
 

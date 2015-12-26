@@ -1,6 +1,6 @@
 /*分佣制度*/
 .stn-CommissionRule{margin: 0 7.8% 7.2%;}
-.stn-CommissionRule .title{margin:10% 0 7.8%;border-top:1px solid #cdcdcd;}
+.stn-CommissionRule .title{margin:10% 0 0;border-top:1px solid #cdcdcd; padding-bottom:7.8%;}
 .stn-CommissionRule .title p{position: relative;left:50%;float:left;margin-top:-4%;}
-.stn-CommissionRule .title span{position: relative;left:-50%;background-color: #f4f4f4;padding:0 .5rem;}
+.stn-CommissionRule .title span{position: relative;left:-50%;background-color: #f4f4f4;padding:0 .5rem; z-index:1;}
 .stn-CommissionRule .detail p{line-height: 1.7;}

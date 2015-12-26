@@ -1,4 +1,4 @@
 /*搜索*/
-.stn-search{ width:95.93%; margin:.54rem 0; background:#fff; position:fixed; top:0; left:2.035%; border-radius:6px; }
+.stn-search{ width:95.93%; margin:.54rem auto; background:#fff; position:fixed; top:0; left:2.035%; border-radius:6px; max-width: 640px;right:2%;}
 .stn-search input{ border:none; width:90%; height:2.18rem; line-height:2.18rem; background:url(../img/search.png) no-repeat 3% center; background-size:1.09rem 1.09rem; padding-left:10%; border-radius:6px; }
 .stn-search input::-webkit-input-placeholder{ color:#c5c5c5; }

@@ -15,8 +15,8 @@ body{ background:#f7f5f5; }
 
 .address-edit{ bordertop:1px solid #dcdcdc; margin-top:.72rem; position:relative; width:100%; }
 .address-edit table{ width:100%; background:#fff; }
-.address-edit tr{ border-bottom:1px solid #dcdcdc; }
-.address-edit td{ text-align:center; }
+.address-edit tr{  }
+.address-edit td{ text-align:center; border-bottom:1px solid #dcdcdc;}
 .address-edit td.td-grey{ padding:.8rem 2.5% .8rem 4%; width:30%; color:#bcbcbc; }
 .address-edit td.td-black{ padding:.8rem 4% .8rem 0; text-align:left; color:#242424; }
 .address-edit td.td-black input{ border:none; }

@@ -1,0 +1,37 @@
+/*天天捡钱*/
+.stn-daily-goods{ width:100%;margin-top:0.2rem;}
+.stn-daily-goods a{ display:block;position: relative; overflow:hidden;width:100%; height:auto; cursor:pointer;}
+.stn-daily-goods a img{ width:100%; height:100%;}
+.stn-daily-goods a .p-num{position:absolute;top:.5rem;left:.74rem;width:1.5rem;height:1.5rem;border-radius: 50%;border:2px solid #fff;box-sizing: border-box;color: #fff;background-color: #df0f1a;text-align: center;line-height:1.5rem; text-indent: -.05rem;}
+
+.stn-daily-wrap{display:none;position: fixed;z-index:9999;width: 100%;height: 100%;top: 0;left: 0;right:0;bottom:0;margin:auto;max-width: 640px;}
+.stn-daily-wrap .daily-bg{position: absolute;width: 100%;height: 100%;background-color: #000;opacity: 0.6;}
+.stn-daily-wrap .stn-daily-pick{position: absolute;width: 87%;/*559/640*/opacity: 1;background-color: #fc2c39;left: 0;right: 0;margin:22% auto 0;border-radius: .4rem;box-sizing: border-box;}
+.stn-daily-pick .daily-head{position:relative;padding-top: 33%;box-sizing: border-box;}
+.stn-daily-pick .daily-head img{position:absolute;top:0;left: 0; height:100%;width:100%;}
+
+.stn-daily-pick .daily-head .a-btn{position: absolute;right:-2%;top: 0;width:7%;/*40/559*/ padding:6%;background: url(../img/btn-close.png) no-repeat center center;background-size: 40%;}
+.stn-daily-pick .pick-money{display: none;position:relative;/*background-repeat: no-repeat;background-size: 97%;background-position: center center;*/ padding:1.4% 0 1.6%; width: 100%;overflow: hidden;text-align: center;}
+.stn-daily-pick .pick-money.type0 .a-begin{display: block;position:absolute;font-size: 0; width:31%;height:100%;top:31%;left:34%;}
+.stn-daily-pick .pick-money.type0 .a-begin img{width:100%;}
+
+.stn-daily-pick .pick-money .i-pic{width:97%;margin:0 auto;}
+.stn-daily-pick .pick-money .income-wrap{position:absolute; left:50%;top:7%;/*min-width: 70%;max-width: 80%;*/ width:50%;}
+.stn-daily-pick .pick-money .income{position:relative;left:-50%;border:.3rem solid #fff;padding:0 .8rem .5rem;/*107/559*/ text-align: center;background:#ff0000;/*14/269*/ background-size: 30%; /*95/313*/ display: inline-block; width:100%; margin-left:-0.8rem;}
+.stn-daily-pick .pick-money .income .img{ display:block; width:3.45rem; height:3.45rem; margin:0.36rem auto 0.36rem;}
+.stn-daily-pick .pick-money .income .img img{ width:100%; height:100%}
+.stn-daily-pick .pick-money .income .p-type{color: #ffffff;}
+.stn-daily-pick .pick-money .income .p-money{margin-top:.1rem;color: #ffffff; text-shadow: .1rem .1rem .1rem #bf0000;}
+.stn-daily-pick .pick-money .income .p-money span{color: #fff600;}
+.stn-daily-pick .pick-money .income .p-bottom{color: #000000;margin-top: .2rem;}
+
+.stn-daily-pick .pick-money.type0{display: block;}
+
+.stn-daily-pick .pick-money .income .yellow{ color:#fff100;}
+
+/*以下为快速开关测试区*/
+/*
+.stn-daily-wrap{display:block;}
+.stn-daily-pick .pick-money{display:none;}
+.stn-daily-pick .pick-money.type1{display: block;}
+*/

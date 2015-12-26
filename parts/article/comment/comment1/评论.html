@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>顾客评价</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="res/css/comment.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../other/demo/res/jquery-2.1.4.min.js"></script>
+    <script src="../../../../common/js/default.js"></script>
+</head>
+
+<body style="background-color:#f4f4f4;">
+    <!--顾客评价-->
+    <section class="stn-comment">
+        <h1 class="fz32">评论（281）
+           <a class="a-write" href="###"><img src="res/img/a-write.png" /></a>
+       </h1>
+        <!--弹出框-->
+        <div class="d-popup">
+            <div class="fixed-bg"></div>
+            <form class="f-popup-comment">
+                <p class="p-title fz32">发表评论<a class="a-close"><img src="res/img/close.png" /></a></p>
+
+                <div class="d-text">
+                    <div class="d-border">
+                        <textarea class="fz28" placeholder="发表你的评论"></textarea>
+                        <p class="p-num fz28"><span>0</span>/100</p>
+                    </div>
+                    <a class="a-confirm">确定</a>
+                </div>
+            </form>
+        </div>
+
+        <ul>
+            <li>
+                <p class="p-name fz28">菓小红<span class="fz24">2015-07-14</span></p>
+                <div class="clr"></div>
+                <p class="p-gbook fz28">在帝王蟹所在水域的上方，生活着大量的植物和动物在帝王蟹所在水域的上方</p>
+            </li>
+            <li>
+                <p class="p-name fz28">希丹2012<span class="fz24">2015-07-14</span></p>
+                <div class="clr"></div>
+                <p class="p-gbook fz28">在帝王蟹所在水域的上方，生活着大量的植物和动物在帝王蟹所在水域的上方</p>
+            </li>
+        </ul>
+        <a class="a-more fz28" href="#">查看更多评论</a>
+    </section>
+    <script>
+        $(function() {
+            var oComment = $('.stn-comment'),
+                oPopup = oComment.find('.d-popup'),
+                oText = oPopup.find('textarea');
+
+            /*查看更多评论*/
+            oComment.find('.a-more').click(function() {
+                oComment.find('ul').append(oComment.find('li').eq(0).clone())
+                oComment.find('ul').append(oComment.find('li').eq(1).clone())
+            })
+
+            //显示隐藏
+            oComment.find('.a-write').click(function() {
+                oPopup.show()
+            })
+            oPopup.find('.a-confirm').click(function() {
+                oPopup.find('form').submit()
+                oPopup.hide()
+            })
+            oPopup.find('.a-close').click(function() {
+                oPopup.hide()
+            })
+            oPopup.find('.fixed-bg').click(function() {
+                    oPopup.hide()
+                })
+            //字数统计
+            oText.keydown(function() {
+                clearTimeout(wordCount)
+                var wordCount = setTimeout(function() {
+                    var iNum = oText.val().length
+                    if (iNum > 100) {
+                        oText.val(oText.val().substring(0, 100))
+                        iNum = 100
+                    }
+                    oPopup.find('.p-num').find('span').html(iNum)
+                }, 100)
+            })
+        })
+    </script>
+    <!--顾客评价-end-->
+</body>
+
+</html>

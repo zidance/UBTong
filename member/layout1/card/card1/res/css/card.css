@@ -1,0 +1,41 @@
+/*会员卡*/
+.stn-member-card{padding-top:1%;}
+.stn-member-card .d-card{position:relative;margin:2% 4% 0;color:#fff;border-radius:.4rem .4rem 0 0 ; /*box-shadow:0px 2px 0px 2px #d1d1d1;*/ height:4.2rem;overflow: hidden;}/*宽600px*/
+.stn-member-card .d-card-in{border-radius: .4rem;padding:0 4% 6.5% 4.5%;}
+.stn-member-card .type1 .d-card-in{background-color: #67d9d7;}
+.stn-member-card .type2 .d-card-in{background-color: #6173de;}
+.stn-member-card .d-card.act{height:auto;}
+.stn-member-card .d-card.act::before{position: absolute;  }
+.stn-member-card .d-card h6{line-height: 4.2rem;padding-left:21%;/*128/600*/ position:relative;}
+
+.stn-member-card .d-card h6 span{position: absolute; height:100%;line-height: inherit;right:0;top: 0;}
+.stn-member-card .d-card h6 span em{position:relative;top: 0;right: 0;bottom: 0;margin:auto;padding:.3rem;border-radius: .2rem;border:1px solid #b0b9ef;background-color: #7181e2;}
+
+.stn-member-card .d-card .d-info{border-radius:0 0 .4rem .4rem;}
+.stn-member-card .d-card .p-info{margin:1.2% 0 .2rem;}
+.stn-member-card .d-card p{
+    line-height: 1.8;
+        /*flex模型*/
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+}
+.stn-member-card .d-card p span{
+    display:block;
+    /*子元素间比例*/
+    -webkit-box-flex:4;
+    -webkit-flex:1;
+    flex:1;
+    /*440/108*/
+    width:1px;
+    -webkit-flex-grow:4;
+	flex-grow:4;
+
+}
+.stn-member-card .d-card p span:nth-child(1){
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+    -webkit-flex-grow:1.2;
+	flex-grow:1.2;
+}

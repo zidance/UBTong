@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>用户资料</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/information.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../common/css/hover.css" rel="stylesheet" type="text/css">
+<script src="../../../../../common/js/zepto-1.16.min.js"></script>
+<script src="../../../../../common/js/default.js"></script>
+</head>
+
+<body style="background:#f4f4f4;">
+	<!--用户资料-->
+    <section class="stn-information">
+    	<table>
+        	<tr>
+            	<td align="center" class="fz28">用户头像</td>
+                <td class="fz28"><a class="a-img" href="#"><img src="res/img/img1.jpg" /></a></td>
+            </tr>
+            <tr>
+            	<td align="center" class="fz28">用户昵称</td>
+                <td class="fz28"><input class="fz28" type="text" value="希丹ZIDANCE" /></td>
+            </tr>
+            <tr>
+            	<td align="center" class="fz28">我的性别</td>
+               <td class="fz28"><a href="#">男</a></td>
+
+            </tr>
+            <tr>
+            	<td align="center" class="fz28">我的生日</td>
+                <td class="fz28"><input type="text" value="1988-09-12" class="phone-num"></td>
+            </tr>
+            <tr>
+            	<td align="center" class="fz28">我的邮箱</td>
+                <td class="fz28"><input type="text" value="12654@126.com" class="phone-num"></td>
+            </tr>
+            <tr>
+            	<td align="center" class="fz28">手机号码</td>
+                <td class="fz28"><input type="text" value="15880040159" class="phone-num"></td>
+            </tr>
+
+            <tr>
+            	<td align="center" class="fz28">推送优惠</td>
+                <td class="fz28">
+                   <a class="a-btn" href="###">
+                        <!--开头关闭btn-close.png 开启btn-open.png-->
+                        <img src="res/img/btn-close.png" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+            	<td align="center" class="fz28">QQ号码</td>
+                <td class="fz28"><input class="fz28" type="text" value="156416441564646" /></td>
+            </tr>
+            <tr>
+            	<td align="center" class="fz28">月收入</td>
+                <td class="fz28"><a href="#">3000-6000</a></td>
+            </tr>
+            <tr>
+            	<td align="center" class="fz28">我的职业</td>
+                <td class="fz28"><a href="#">学生</a></td>
+            </tr>
+            <tr>
+            	<td align="center" class="fz28">我的学历</td>
+                <td class="fz28"><a href="#">研究生</a></td>
+            </tr>
+        </table>
+        <p class="p-moreinfo fz24">信息填写完整即可获得100优惠券！优惠券由系统直接
+发放到您的【积分管理】</p>
+    </section>
+    <script>
+    //开关脚本
+    $(function(){
+        $(".stn-information").find(".a-btn").click(function(e){
+            var oImg = $(this).find("img"),
+                sImgSrc=oImg.attr("src")
+            if(/close/.test(sImgSrc)){//如果关
+                oImg.attr("src",sImgSrc.replace(/close/,"open"))
+            }else if(/open/.test(sImgSrc)){//如果开
+                oImg.attr("src",sImgSrc.replace(/open/,"close"))
+            }
+        })
+    })
+    </script>
+    <!--用户资料-end-->
+
+
+</body>
+</html>

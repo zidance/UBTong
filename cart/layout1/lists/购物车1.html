@@ -1,165 +1,34 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>购物车</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
-<link href="choose/choose1/res/css/choose.css" rel="stylesheet" type="text/css" />
-<link href="preferential/preferential1/res/css/preferential.css" rel="stylesheet" type="text/css" />
-<link href="btncart/btncart1/res/css/btncart.css" rel="stylesheet" type="text/css" />
-<link href="../../../common/css/hover.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
-<script src="../../../common/js/hover.js"></script>
+  <meta charset="UTF-8">
+  <link href="../../../common/css/common.css"  rel="stylesheet"  type="text/css" />
+  <script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
+
+  <script type="text/javascript" src="../../../other/demo/res/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="../../../common/js/default.js"></script>
+
+  <script>
+    //HtmlArray,子页面集合,数组格式,接受相对路径和绝对路径(不包括跨域),接受斜杠和双反斜杠
+    HtmlArray = [
+      "../../../parts/top/top4/头部-APP通用.html",
+  "choose/choose1/已选购商品.html",
+  "btncart/btncart1/购物车按钮.html",
+    ];
+    HtmlArray.config = {
+//      title: 'MyPages',//组合页面的标题
+//      debug: true, //调试模式，默认false,设为true时提供分页的控制模块，帮助快速定位问题页面
+      fixed: true, //允许fixed定位,默认true,当元素重叠严重时可以用false尝试
+      nullHref: '###', //改变href="#"路径,使空链接不跳转到头部,默认不改变,只有设'###'时会改变
+      src: [], //自定义的资源路径属性,将加入到原有数组['src', 'href']中,接受格式为数组(多个字符串)或单个字符串
+      disable: ['zepto-1.16.min.js','common.css','default.js'], //禁用文件集,接受格式为数组或单个字符串,推荐只写文件名不带路径.用来禁用引发错误的文件,可用来禁用多次引入会引起问题的脚本,如zepto(这一类需要在本组合页头部去引入一次).
+    }
+  </script>
+  <script type="text/javascript" src="../../../other/demo/res/HtmlArray.js"></script>
 </head>
 
-<body style="background:#f7f5f5;">
-	<!--已选购商品-->
-    <script>
-		$(function(){
-			var _li = $('#ChooseLists li');
-			
-			$.each(_li,function(i,e){
-				var _inp = $(this).find('.number-input input');
-				$(this).find('.add').click(function(){
-					$(_inp).val(function(){
-						return Number($(this).val())+1;
-					})
-				});
-				$(this).find('.reduct').click(function(){
-					if($(_inp).val()!=1){
-						$(_inp).val(function(){
-							return Number($(this).val())-1;
-						});
-					}
-				});	
-			});
-		})
-	</script>
-	<div class="cart-choose">
-		<h1 class="fz28">当前已选购商品</h1>
-		
-		<div class="choose-lists" id="ChooseLists" style="margin-bottom:4.01rem;">
-			<ul>
-				<li>
-					<input type="checkbox" />
-					<a class="choose-product" href="#">
-						<span class="s-img"><img src="choose/choose1/res/img/img1.jpg" /></span>
-						<p class="p-name fz28">美国原装进口精选优质开心...</p>
-						<p class="p-money fz32">￥19.90</p>
-                        <!--<p class="p-num fz24">库存：10件</p>-->
-					</a>
-					<div class="clr"></div>
-					<div class="number-input">
-						<a href="#" class="fz28 reduct">-</a>
-						<input class="fz28" type="text" value="1" />
-						<a href="#" class="fz28 add">+</a>
-					</div>
-				</li>
-				<!--<li>
-					<input type="checkbox" />
-					<a class="choose-product" href="#">
-						<span class="s-img"><img src="choose/choose1/res/img/img2.jpg" /></span>
-						<p class="p-name fz28">美国原装进口精选优质开心...</p>
-                        <p class="p-time fz24">付款后预计5月21日送达</p>
-						<p class="p-money fz32">￥19.90</p>
-                        <p class="p-num fz24">库存：10件</p>
-					</a>
-					<div class="clr"></div>
-					<div class="number-input">
-						<a href="#" class="fz28 reduct">-</a>
-						<input class="fz28" type="text" value="1" />
-						<a href="#" class="fz28 add">+</a>
-					</div>
-				</li>-->
-				<li>
-					<input type="checkbox" />
-					<a class="choose-product" href="#">
-						<span class="s-img"><img src="choose/choose1/res/img/img1.jpg" /></span>
-						<p class="p-name fz28">美国原装进口精选优质开心...</p>
-						<p class="p-money fz32">￥19.90</p>
-                        <!--<p class="p-num fz24">库存：10件</p>-->
-					</a>
-					<div class="clr"></div>
-					<div class="number-input">
-						<a href="#" class="fz28 reduct">-</a>
-						<input class="fz28" type="text" value="1" />
-						<a href="#" class="fz28 add">+</a>
-					</div>
-				</li>
-				<li>
-					<input type="checkbox" />
-					<a class="choose-product" href="#">
-						<span class="s-img"><img src="choose/choose1/res/img/img1.jpg" /></span>
-						<p class="p-name fz28">美国原装进口精选优质开心...</p>
-						<p class="p-money fz32">￥19.90</p>
-                        <!--<p class="p-num fz24">库存：10件</p>-->
-					</a>
-					<div class="clr"></div>
-					<div class="number-input">
-						<a href="#" class="fz28 reduct">-</a>
-						<input class="fz28" type="text" value="1" />
-						<a href="#" class="fz28 add">+</a>
-					</div>
-				</li>
-			</ul>
-			<div class="choose-all">
-                <input class="checkbox-all" type="checkbox" /><span class="fz28">全选</span>
-                
-                <p class="p-combin fz32">合计：<em>￥39.00</em></p>
-                <div class="clr"></div>
-            </div>
-		</div>
-	</div>
-    <!--已选购商品-end-->
-    
-    <!--优惠商品-->
-    <!--<div class="cart-preferential">
-		<h1 class="fz32">优惠商品</h1>
-		
-		<ul>
-			<li>
-				<input type="checkbox" />
-				<a class="choose-product" href="#">
-					<span class="s-img"><img src="preferential/preferential1/res/img/img1.jpg" /></span>
-					<p class="p-name fz28">美国原装进口精选优质开心...</p>
-					<p class="p-money fz32"><span class="fz28">29.90</span>￥19.90<em class="fz26">数量：1</em></p>
-				</a>
-				<div class="clr"></div>
-			</li>
-			<li>
-				<input type="checkbox" />
-				<a class="choose-product" href="#">
-					<span class="s-img"><img src="preferential/preferential1/res/img/img2.jpg" /></span>
-					<p class="p-name fz28">美国原装进口精选优质开心...</p>
-					<p class="p-money fz32"><span class="fz28">29.90</span>￥19.90<em class="fz26">数量：1</em></p>
-				</a>
-				<div class="clr"></div>
-			</li>
-			<li>
-				<input type="checkbox" />
-				<a class="choose-product" href="#">
-					<span class="s-img"><img src="preferential/preferential1/res/img/img1.jpg" /></span>
-					<p class="p-name fz28">美国原装进口精选优质开心...</p>
-					<p class="p-money fz32"><span class="fz28">29.90</span>￥19.90<em class="fz26">数量：1</em></p>
-				</a>
-				<div class="clr"></div>
-			</li>
-		</ul>
-		<div class="choose-all"><input class="checkbox-all" type="checkbox" /><span class="fz28">全选</span><div class="clr"></div></div>
-	</div>
-	
-	<p class="p-preferential fz32">共计:￥138.90</p>-->
-    <!--优惠商品-end-->
-    
-    
-    <!--底部高度：2.2rem-->
-	<div class="cart-btn">
-		<a class="fz32" href="#">结算（3）</a>
-		<a href="#">删除</a>
-	</div>
-	<!--底部-end-->
+<body style="background-color:#f5f5f5;">
+
+
 </body>
 </html>

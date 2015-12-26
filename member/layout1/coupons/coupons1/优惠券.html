@@ -9,19 +9,21 @@
 <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="info/res/css/info.css" rel="stylesheet" type="text/css" />
 <link href="switch/res/css/switch.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script src="../../../../common/js/default.js"></script>
 </head>
 
 <body style="background:#f4f4f4;">
     <!--切换-->
-    <section class="stn-switch">
+    <section class="stn-switch" id="switch">
     	<ul>
-        	<li><a class="act fz28" href="#">未使用</a></li>
-            <li><a class="fz28" href="#">已使用</a></li>
+        	<li><a class="act fz28" href="###">未使用</a></li>
+            <li><a class="fz28" href="###">已使用</a></li>
         </ul>
         <div class="clr"></div>
     </section>
     <!--切换-end-->
-    
+    <script type="text/javascript">switchObj('switch')</script>
 	<!--优惠券信息-->
     <section class="stn-CouponsInfo">
     	<ul>

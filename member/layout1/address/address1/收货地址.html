@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>收货地址</title>
@@ -10,28 +10,14 @@
 <link href="res/css/address.css" rel="stylesheet" type="text/css" />
 <link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
 <script src="../../../../common/js/zepto-1.16.min.js"></script>
-<script src="../../../../common/js/hover.js"></script>
-<script>
-	$(function(){
-		var _li = $('#AddressLists').find('li');
-		$.each(_li,function(i,e){
-			var _a = $(this).find('a');
-			var _w = $(this).width()-$(this).find('input').width()-$(this).width()*0.1;
-			_a.width(_w);
-		})
-	})
-	function tradeCheckboxClick(node){
-		$('.trade_checkbox').prop('checked','');
-		$(node).prop('checked','checked');
-	}
-</script>
+<script src="../../../../common/js/default.js"></script>
 </head>
 
 <body>
 	<div class="address-lists" id="AddressLists">
 		<ul>
 			<li>
-            	<input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" />
+            	<input class="chk-bg-color" type="radio" name="address" class="trade_checkbox" />
 				<a class="a-address" href="#">
 					<p class="fz28">李四<span class="fz28">18050088080</span></p>
 					<p class="p-address fz24">福建省福州市台江区万达广场A座303</p>
@@ -39,7 +25,7 @@
 				<div class="clr"></div>
 			</li>
 			<li>
-            	<input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" />
+            	<input class="chk-bg-color" type="radio" name="address" class="trade_checkbox" />
 				<a class="a-address" href="#">
 					<p class="fz28">张三<span class="fz28">18050088080</span></p>
 					<p class="p-address fz24">福建省福州市台江区万达广场A座303</p>
@@ -47,7 +33,7 @@
 				<div class="clr"></div>
 			</li>
 			<li>
-            	<input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" />
+            	<input class="chk-bg-color" type="radio" name="address" class="trade_checkbox" />
 				<a class="a-address" href="#">
 					<p class="fz28">张三<span class="fz28">18050088080</span></p>
 					<p class="p-address fz24">福建省福州市台江区万达广场A座303</p>
@@ -58,7 +44,7 @@
 	</div>
 		
 	<div class="btn-address">
-		<a class="a-red" href="#">添加新地址</a>  <!-- 橘色：a-orange  红色：a-red -->
+		<a class="a-red bg-color" href="#">添加新地址</a>  <!-- 橘色：a-orange  红色：a-red -->
 	</div>
 </body>
 </html>

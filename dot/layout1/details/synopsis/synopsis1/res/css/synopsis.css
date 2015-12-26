@@ -6,5 +6,11 @@
 .stn-synopsis .synopsis .p-name{ color:#000; }
 .stn-synopsis .synopsis .p-evaluation{ margin-top:2.5rem; }
 .stn-synopsis .synopsis .p-evaluation .s-good, .stn-synopsis .synopsis .p-evaluation .s-bad{ display:inline-block; line-height:1.52rem; background:url(../img/good.png) no-repeat; background-size:1.23rem 1.52rem; padding-left:1.59rem; }
-.stn-synopsis .synopsis .p-evaluation .s-bad{ background-image:url(../img/bad.png); margin-left:1.63rem; }
-.stn-synopsis .a-gbook{ display:block; position:absolute; right:1.05rem; bottom:.72rem; width:4.45rem; height:1.88rem; line-height:1.88rem; text-align:center; background:#f15a0c; color:#fff; border-radius:6px; }
+.stn-synopsis .synopsis .p-evaluation .s-bad{ background-image:url(../img/bad.png); margin-left:0.53rem; }
+.stn-synopsis .a-gbook{ display:block; position:absolute; right:1.05rem; bottom:.72rem; width:3.45rem; height:1.88rem; line-height:1.88rem; text-align:center; background:#f15a0c; color:#fff; border-radius:6px; }
+
+@media screen and (max-width:320px){
+	.stn-synopsis .synopsis .p-evaluation .s-bad{ margin-left:1.63rem; }
+	.stn-synopsis .a-gbook{ width:4.45rem; }
+	
+}

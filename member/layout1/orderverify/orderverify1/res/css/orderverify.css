@@ -1,6 +1,6 @@
 body{ background:#f7f5f5; }
 
-/*订单详情*/
+/*璁㈠崟璇︽儏*/
 .stn-order{ width:93.28%; padding:0 3.36%; }
 .stn-order article{ width:94%; padding:0 3%; border:1px solid #eae8e8; background:#fff; border-radius:4px; margin-top:1.09rem; }
 .art-order .state{ border-bottom:1px solid #eae8e8; font-size:.73rem; padding:.54rem 0; color:#161616; }
@@ -13,7 +13,7 @@ body{ background:#f7f5f5; }
 .art-order li .details .p-money{ color:#e52c02; font-size:.85rem; margin-top:1.30rem; }
 .art-order li .s-num{ display:block; float:right; color:#939292; font-size:0.74rem; margin-top:2.11rem; }
 
-/*订单验证*/
+/*璁㈠崟楠岃瘉*/
 .stn-order .art-verify{ width:100%; padding:0; }
 .art-verify .verify-btn{ border-bottom:1px solid #eae8e8; }
 .art-verify .verify-btn a{ display:block; width:50%; float:left; box-sizing:border-box; text-align:center; color:#939292; padding:.65rem 0; }

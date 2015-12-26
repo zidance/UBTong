@@ -1,0 +1,9 @@
+/*文章部分*/
+.art-main{background-color: #fff;padding-top:3%;border-bottom:1px solid #d9d9d9;}
+.art-main h1{text-align: center;color: #000;}
+.art-main h3{text-align: center;color: #939292;margin:1% 0 3.5%;}
+.art-main .d-art{border-bottom: 1px solid #d9d9d9;margin:0 3%;padding-bottom:2%;}
+.art-main .d-art p{line-height: 1.5;color: #000;}
+.art-main .d-art.d-limit p{display:none;-webkit-box-orient: vertical;-webkit-line-clamp: 3;line-clamp:3 ;overflow: hidden;}
+.art-main .d-art.d-limit p:first-child{display:-webkit-box;}
+.art-main .a-more{display: block;color: #686868;text-align: center;line-height: 2.3;}

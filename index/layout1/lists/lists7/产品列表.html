@@ -1,112 +1,39 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>产品列表</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
-    <link href="res/css/lists.css" rel="stylesheet" type="text/css" />
-    <script src="../../../../common/js/zepto-1.16.min.js"></script>
-    <script src="../../../../common/js/default.js"></script>
+<title>产品列表</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="res/css/lists.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script src="../../../../common/js/default.js"></script>
 
 </head>
 
-<body style="background-color:#f7f5f5;">
-    <!--产品列表 间距：.65rem-->
-    <section class="index-lists" id="thelist">
-        <ul>
-            <li>
-                <a class="a-product" href="#">
-                    <span class="s-img"><img src="res/img/img2.png" /></span>
-                    <div class="product fz26">
-                        <p class="p-name fz26">华为 麦芒4 金属机身2.5D高清屏</p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>2499.00<span class="s-integral"><em class="fz22">+</em>500<b class="fz20">积分</b></span>
-                        </p>
-
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="a-product" href="#">
-                    <span class="s-img"><img src="res/img/img2.png" /></span>
-                    <div class="product fz26">
-                        <p class="p-name fz26">华为 麦芒4 金属机身2.5D高清屏</p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>2499.00<span class="s-integral"><em class="fz22">+</em>500<b class="fz20">积分</b></span></p>
-
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="a-product" href="#">
-                    <span class="s-img"><img src="res/img/img2.png" /></span>
-                    <div class="product fz26">
-                        <p class="p-name fz26">华为 麦芒4 金属机身2.5D高清屏</p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>2499.00<span class="s-integral"><em class="fz22">+</em>500<b class="fz20">积分</b></span></p>
-
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="a-product" href="#">
-                    <span class="s-img"><img src="res/img/img2.png" /></span>
-                    <div class="product fz26">
-                        <p class="p-name fz26">华为 麦芒4 金属机身2.5D高清屏</p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>2499.00<span class="s-integral"><em class="fz22">+</em>500<b class="fz20">积分</b></span>
-                        </p>
-
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="a-product" href="#">
-                    <span class="s-img"><img src="res/img/img2.png" /></span>
-                    <div class="product fz26">
-                        <p class="p-name fz26">华为 麦芒4 金属机身2.5D高清屏</p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>2499.00<span class="s-integral"><em class="fz22">+</em>500<b class="fz20">积分</b></span>
-                        </p>
-
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="a-product" href="#">
-                    <span class="s-img"><img src="res/img/img2.png" /></span>
-                    <div class="product fz26">
-                        <p class="p-name fz26">华为 麦芒4 金属机身2.5D高清屏</p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>2499.00<span class="s-integral"><em class="fz22">+</em>500<b class="fz20">积分</b></span></p>
-
-                    </div>
-                </a>
-            </li>
-
-        </ul>
-        <div class="clr"></div>
-    </section>
-    <script>
-        function imgZoomControl() {
-            var _li = $('#thelist li');
-            $.each(_li, function(i, e) {
-                var _this = $(this);
-                var _img = $(this).find('.s-img img');
-                $(this).find('.s-img').width(_this.width());
-                $(this).find('.s-img').height(_this.width());
-                if (_img.width() > $(this).width() && _img.width() > _img.height()) {
-                    _img.css('width', _this.width()-2);
-                } else if (_img.height() > $(this).height()) {
-                    _img.css('height', _this.width()-2);
-                }
-                _img.css({
-                    'max-width': _this.width()-2,
-                    'max-height': _this.width()-2
-                })
-            })
-        }
-        imgZoomControl();
-    </script>
-    <!--产品列表-end-->
+<body style="background:#f5f5f5">
+	<!--列表-->
+	<div class="lists">
+    	<div class="title">
+        	<p class="line"></p>
+            <p class="p-title fz32">新品推荐</p>
+        </div>
+        <div class="l-table">
+        	<table cellpadding="0" cellspacing="0">
+            	<tr>
+                	<td rowspan="2"><a href="###"><img src="res/img/list1.jpg"></a></td>
+                    <td><a href="###"><img src="res/img/list2.jpg"></a></td>
+                    <td class="last"><a href="###"><img src="res/img/list3.jpg"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="###"><img src="res/img/list4.jpg"></a></td>
+                    <td class="last"><a href="###"><img src="res/img/list5.jpg"></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--列表 end-->
 </body>
-
 </html>
