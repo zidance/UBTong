@@ -7,7 +7,7 @@
 .stn-subsucceed .subsucceed .s-img img{ max-width:100%; height:auto; }
 .stn-subsucceed .subsucceed p{ color:#3e9ef9; padding:.72rem 0 .36rem; margin:0; }
 .stn-subsucceed .subsucceed-seal{ width:100%; position:absolute; left:0; }
-.stn-subsucceed .subsucceed-seal img{ width:100%; height:100%; }
+.stn-subsucceed .subsucceed-seal img{ width:100%; height:auto; }
 
 /*二维码*/
 .stn-subsucceed .qr-code{ width:100%; padding:0 3.185%; border:solid #eae8e8; border-width:0 1px; box-sizing:border-box; }

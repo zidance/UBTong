@@ -15,12 +15,12 @@ body{ background:#f7f5f5; }
 .show-confirm .stn-lists li .details .p-money{ color:#e52c02; font-size:.85rem; margin-top:1.30rem; }
 .show-confirm .stn-lists li .s-num{ display:block; float:right; color:#939292; font-size:0.74rem; margin-top:2.11rem; }
 .show-confirm .confirm-seal{ width:100%; position:absolute; left:0; z-index: 99;}
-.show-confirm .confirm-seal img{ width:100%; height:100%; }
+.show-confirm .confirm-seal img{ width:100%; height:auto; }
 
 .show-confirm .stn-num{ border:solid #eae8e8; border-width:0 1px 1px; padding:0 2% 2.9rem; background:#fff; padding-top:1.09rem; border-radius:0 0 4px 4px; z-index: 98; }
 .show-confirm .stn-num p{ padding:0 .43rem; color:#000; }
 .show-confirm .stn-num .s-img{ display:block; margin:1.45rem auto 0; width:10.1rem; border:1px solid #d4d1cd; }
-.show-confirm .stn-num .s-img img{ width:100%; height:100%; }
+.show-confirm .stn-num .s-img img{ width:100%; height:auto; }
 
 /*已完成*/
 .show-confirm .stn-numgrey p{ color:#939292; }

@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------婚宴桌位--------------------------------------------------------------*/
 .stn-img{ width:100%; }
-.stn-img img{ width:100%; height:100%; }
+.stn-img img{ width:100%; height:auto; }
 .tab-desk .tab-item{ width:100%; height:2.6rem; border-bottom:1px solid #d4d4d4; background:#fff; }
 .tab-desk .tab-item li{ width:50%; float:left; text-align:center; }
 .tab-desk .tab-item li a{ display:inline-block; color:#939393; line-height:2.5rem; padding:0 .72rem; }

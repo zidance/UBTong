@@ -1,0 +1,18 @@
+/*列表*/
+.d-nav-relative{padding-top:12.6%;}
+.n-shops{position:fixed;z-index: 800; left:0;top: 2.8rem;font-size: 0;width:100%;height:2.05rem;vertical-align: top;background-color: inherit;padding-bottom:.5rem;padding-top:.4rem;}
+.n-shops .a-left,.n-shops .a-right{display: inline-block;width:10%;height:100%;box-sizing: border-box;background-repeat: no-repeat;background-position: center center;-webkit-background-size: 30%;background-size:30%; ;}
+.n-shops .d-swiper{height:2rem;display: inline-block;position: relative;width:80%;overflow: hidden;border:solid #f47823;border-width:1px;box-sizing: border-box;border-radius: .2rem;overflow: hidden;vertical-align: top;background-color: #fff;}
+.n-shops ul{width:10000px; position: absolute;top: 0;left: 0;}
+.n-shops li{float:left;width:4rem;height:2rem;line-height:2rem;text-align: center;border-left:1px solid #f47823;box-sizing: border-box;}
+.n-shops li a{display: block;color: #000;}
+.n-shops li.act{background-color:#f47823;}
+.n-shops li.act a{color: #fff;}
+
+.n-shops .a-left{background-image: url(../../../../../../../common/img/left.png);}
+.n-shops .a-right{background-image: url(../../../../../../../common/img/right.png);}
+
+@media screen and (max-width:320px){
+    .n-shops{top: 3.1rem;}
+}
+
