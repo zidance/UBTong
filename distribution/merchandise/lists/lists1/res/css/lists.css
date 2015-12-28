@@ -6,7 +6,7 @@
 .stn-lists li .content .s-img{ display:block; width:5.01rem; height:5.01rem; float:left; margin-right:2.34%; border:1px solid #f3f3f3; }
 .stn-lists li .content .s-img img{ width:100%; height:100%; }
 .stn-lists li .content .con{ float:left; width:45%; }
-.stn-lists li .content .con .p-name{ color:#282828; height:3rem; overflow:hidden; margin-bottom:.8rem; }
+.stn-lists li .content .con .p-name{ color:#282828; height:3rem; overflow:hidden; margin-bottom:.8rem; line-height:1rem; }
 .stn-lists li .content .con .p-money{ color:#ff3430; }
 .stn-lists li .content .con .p-money span{ color:#616161; text-decoration:line-through; margin-left:2%; }
 .stn-lists li .p-type{ color:#939292; position:absolute; top:1.09rem; right:4.51%; text-align:right; }

@@ -68,7 +68,7 @@
 .stn-subsucceed .subsucceed .s-img img{ max-width:100%; height:auto; }
 .stn-subsucceed .subsucceed p{ color:#f2484c; padding:.72rem 0 .36rem; margin:0; }
 .stn-subsucceed .subsucceed-seal{ width:100%; position:absolute; left:0; }
-.stn-subsucceed .subsucceed-seal img{ width:100%; height:100%; }
+.stn-subsucceed .subsucceed-seal img{ width:100%; height:auto; }
 
 /*授信金额日期*/
 .stn-subsucceed .qr-code{ width:100%; padding:0 3.185% 1.23rem 1.5rem; border:solid #eae8e8; border-width:0 1px; box-sizing:border-box; }
@@ -94,7 +94,7 @@
 .ascension span{ display:block; float:left; color:#000;}
 .ascension .s-left{line-height:2rem; }
 .ascension input{ border:none; line-height:2rem; width:70%; float:left; padding-left:0.72rem}
-.ascension input::-webkit-input-placeholder{ color:#a7a7a7; }
+.ascension input::-webkit-input-placeholder{ color:#a7a7a7;}
 /*申请提升额度按钮*/
 .btn{ padding:1.23rem .72rem 1.81rem .72rem; margin-bottom:3.7rem;}
 .btn p{ height:2.9rem; width:100%; }
