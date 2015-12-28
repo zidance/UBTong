@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>列表切换</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="header/header3/res/css/switch.css" rel="stylesheet" type="text/css" />
+    <link href="../../common/css/hover.css" rel="stylesheet" type="text/css" />
+    <link href="lists/lists2/res/css/lists.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
+    <script type="text/javascript" src="../../common/js/default.js"></script>
+</head>
+
+<body>
+	<!--列表切换-->
+    <section class="stn-switch">
+    	<ul>
+           <li><a class="act fz32 border" href="#">健康蛋套餐</a></li>
+           <li><a class="fz32 border" href="#">走地鸡套餐</a></li>
+       </ul>
+       <div class="clr"></div>
+   </section>
+   <!--列表切换-end-->
+   
+   <!--产品列表-仅大图-->
+    <section class="stn-lists-onlypic">
+        <div class="pic-col-1">
+            <a href="###"><img src="lists/lists2/res/img/img1.jpg" /></a>
+            <a href="###"><img src="lists/lists2/res/img/img1.jpg" /></a>
+            <a href="###"><img src="lists/lists2/res/img/img1.jpg" /></a>
+        </div>
+    </section>
+    <!--产品列表-仅大图-end-->
+    
+    <script>
+	window.onload=function(){
+		var _a = $('.stn-lists-onlypic a');
+		var _h = parseInt(_a.css('min-height'));
+		
+		var _img = _a.find('img');
+		
+		for(var i = 0; i<_img.length;i++){
+			var _this = _img.eq(i);
+			if(_this.width()<614){
+				_this.width('auto')	
+			}else{
+				_this.width('100%');		
+			}
+			
+			if(_this.height()<_h){
+				var _thisH = ((_h-_this.height())/2)+'px';
+				_this.css('margin-top',_thisH);
+			}
+			
+		}	
+		
+	}
+
+    </script>
+    <!--产品列表-end-->
+</body>
+</html>

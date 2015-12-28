@@ -9,6 +9,7 @@
 <link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
 <link href="search/search1/res/css/search.css" rel="stylesheet" type="text/css" />
 <link href="lists/lists1/res/css/lists.css" rel="stylesheet" type="text/css" />
+<link href="nav/nav1/res/css/nav.css" rel="stylesheet" type="text/css" />
 <script src="../../../common/js/zepto-1.16.min.js"></script>
 <script src="../../../common/js/default.js"></script>
 </head>
@@ -18,13 +19,43 @@
     <section class="stn-search">
     	<input class="fz28" type="text" placeholder="店铺名称/手机/姓名" />
     </section>
+    <div style="height:3.26rem;"></div>
     <!--搜索-end-->
     
+    <!--分级导航-->
+    <div class="d-nav-relative"></div>
+    <nav class="n-shops" style="margin-top:3rem;">
+        <a class="a-left"></a>
+        <div class="d-swiper">
+        <ul class="fz28">
+            <li><a class="a-act" href="#layer">一级分店</a></li>
+            <li><a href="#laye">二级分店</a></li>
+            <li><a href="###">三级分店</a></li>
+            <li><a href="###">四级分店</a></li>
+            <li><a href="###">五级分店</a></li>
+            <li><a href="###">六级分店</a></li>
+            <li><a href="###">七级分店</a></li>
+            <li><a href="###">八级分店</a></li>
+            <li><a href="###">九级分店</a></li>
+            <li><a href="###">十级分店</a></li>
+            <li><a href="###">十一级分店</a></li>
+            <li><a href="###">十二级分店</a></li>
+
+        </ul>
+        <div class="clr"></div>
+        </div>
+        <a class="a-right"></a>
+
+    </nav>
+    <script src="nav/nav1/res/js/jquery-2.1.4.min.js"></script>
+    <script src="nav/nav1/res/js/nav.js"></script>
+    <!--分级导航--end-->
+
     <!--列表-->
-    <section class="stn-lists" style="margin-top:3.26rem;">
+    <section class="stn-lists">
     	<ul>
         	<li>
-            	<a href="#">
+            	<a name="layer">
                 	<div class="name">
                     	<span class="s-img"><img src="lists/lists1/res/img/img.jpg" /></span>
                         <span class="s-name fz32">柒月微店柒月微店柒月微店柒月微店柒月微店柒月微店</span>
@@ -36,7 +67,7 @@
                 </a>
             </li>
             <li>
-            	<a href="#">
+            	<a id="laye">
                 	<div class="name">
                     	<span class="s-img"><img src="lists/lists1/res/img/img.jpg" /></span>
                         <span class="s-name fz32">柒月微店</span>

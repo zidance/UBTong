@@ -2,6 +2,8 @@
 nav {
 	box-shadow: 0 0 5px #efefef;margin-top:3.6%;background-color:#fff;
 }
+
+nav.cjnav{ margin-top:0rem; background:#fff; border:solid #dddddd; border-width:1px 0;}
 nav li {
 	float: left;
 	width: 25%;
@@ -22,6 +24,11 @@ nav li a span {
 /*	border-radius: 100%;*/
 	text-align: center;
 }
+nav li a span.big{
+	width: 2.83rem;
+	height: 2.83rem;
+}
+
 nav li a span img {
 	width: 100%;
 	height: 100%;

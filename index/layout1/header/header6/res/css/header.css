@@ -1,0 +1,23 @@
+/*轮播图片*/
+.banner{ position:relative;width:100%;}
+.banner .slider { z-index:1; display:block;  overflow:hidden; position:relative;left:0;top: 0;width:100% }
+.banner .slider .sliderlist{ position:absolute; left:0; top:0px; width:100%; }
+.banner .slider .sliderlist::after{clear:both;}
+.banner .slider .sliderlist li{ float:left; width:100%; display:block; text-align:center; height:100%; vertical-align: middle;}
+.banner .slider .sliderlist li a{display: block;height:100%;vertical-align: middle;}
+.banner .slider .sliderlist li span{ margin:0 auto; display:table-cell; vertical-align: middle;}
+.banner .slider .sliderlist li img{ width:100%; vertical-align: middle;}
+.banner .slider #pagenavi{ position:absolute; left:0; bottom:.4rem; text-align:center; width:100%;}
+.banner .slider #pagenavi a{display:inline-block; width:7.1%; height:0.2rem; margin:0 .13rem;  background:#fff;}
+.banner .slider #pagenavi a.active{ background:#f77a02; }
+
+/*广告图片*/
+.ad-header{ width:100%;}
+.ad-header img{ width:100%; height:auto;}
+
+
+@media screen and (max-width:320px){
+    .banner .slider #pagenavi{bottom:.6rem;}
+}
+
+
