@@ -24,22 +24,23 @@
     
     <!--分级导航-->
     <div class="d-nav-relative"></div>
-    <nav class="n-shops" style="margin-top:3rem;">
+    <nav class="n-shops">
         <a class="a-left"></a>
         <div class="d-swiper">
         <ul class="fz28">
-            <li><a class="a-act" href="#layer">一级分店</a></li>
-            <li><a href="#laye">二级分店</a></li>
-            <li><a href="###">三级分店</a></li>
-            <li><a href="###">四级分店</a></li>
-            <li><a href="###">五级分店</a></li>
-            <li><a href="###">六级分店</a></li>
-            <li><a href="###">七级分店</a></li>
-            <li><a href="###">八级分店</a></li>
-            <li><a href="###">九级分店</a></li>
-            <li><a href="###">十级分店</a></li>
-            <li><a href="###">十一级分店</a></li>
-            <li><a href="###">十二级分店</a></li>
+           <!--li.act 当前激活的分级,对应列表.stn-lists中ul类名为ul-num(与li的索引数目相同)-->
+            <li class="act"><a href="#layer">一级</a></li>
+            <li><a href="###">二级</a></li>
+            <li><a href="###">三级</a></li>
+            <li><a href="###">四级</a></li>
+            <li><a href="###">五级</a></li>
+            <li><a href="###">六级</a></li>
+            <li><a href="###">七级</a></li>
+            <li><a href="###">八级</a></li>
+            <li><a href="###">九级</a></li>
+            <li><a href="###">十级</a></li>
+            <li><a href="###">十一级</a></li>
+            <li><a href="###">十二级</a></li>
 
         </ul>
         <div class="clr"></div>
@@ -53,28 +54,29 @@
 
     <!--列表-->
     <section class="stn-lists">
-    	<ul>
+    <!--.ul-num对应分级导航中li的索引,非激活状态的可以通过ajax加载 二者对应交互脚本,写在分级导航nav模块中,.ul-none用于分店数据为空的情况-->
+    	<ul class="ul-1">
         	<li>
-            	<a name="layer">
+            	<a href="###">
                 	<div class="name">
                     	<span class="s-img"><img src="lists/lists1/res/img/img.jpg" /></span>
                         <span class="s-name fz32">柒月微店柒月微店柒月微店柒月微店柒月微店柒月微店</span>
                         <div class="clr"></div>
                     </div>
-                    <p class="fz28"><span>申&nbsp;&nbsp;请&nbsp;人：</span>林功义</p>
-                    <p class="fz28"><span>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：</span>18650490262</p>
+                    <p class="fz28"><span>申请人：</span>林功义</p>
+                    <p class="fz28"><span>手机：</span>18650490262</p>
                     <p class="fz28"><span>申请时间：</span>2015-06-23 14:55:06</p>
                 </a>
             </li>
             <li>
-            	<a id="laye">
+            	<a href="###">
                 	<div class="name">
                     	<span class="s-img"><img src="lists/lists1/res/img/img.jpg" /></span>
                         <span class="s-name fz32">柒月微店</span>
                         <div class="clr"></div>
                     </div>
-                    <p class="fz28"><span>申&nbsp;&nbsp;请&nbsp;人：</span>林功义</p>
-                    <p class="fz28"><span>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：</span>18650490262</p>
+                    <p class="fz28"><span>申请人：</span>林功义</p>
+                    <p class="fz28"><span>手机：</span>18650490262</p>
                     <p class="fz28"><span>申请时间：</span>2015-06-23 14:55:06</p>
                 </a>
             </li>
@@ -85,8 +87,8 @@
                         <span class="s-name fz32">柒月微店柒月微店柒月微店柒月微店柒月微店柒月微店</span>
                         <div class="clr"></div>
                     </div>
-                    <p class="fz28"><span>申&nbsp;&nbsp;请&nbsp;人：</span>林功义</p>
-                    <p class="fz28"><span>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：</span>18650490262</p>
+                    <p class="fz28"><span>申请人：</span>林功义</p>
+                    <p class="fz28"><span>手机：</span>18650490262</p>
                     <p class="fz28"><span>申请时间：</span>2015-06-23 14:55:06</p>
                 </a>
             </li>
@@ -97,11 +99,41 @@
                         <span class="s-name fz32">柒月微店</span>
                         <div class="clr"></div>
                     </div>
-                    <p class="fz28"><span>申&nbsp;&nbsp;请&nbsp;人：</span>林功义</p>
-                    <p class="fz28"><span>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：</span>18650490262</p>
+                    <p class="fz28"><span>申请人：</span>林功义</p>
+                    <p class="fz28"><span>手机：</span>18650490262</p>
                     <p class="fz28"><span>申请时间：</span>2015-06-23 14:55:06</p>
                 </a>
             </li>
+        </ul>
+
+        <ul class="ul-2">
+        	<li>
+            	<a href="###">
+                	<div class="name">
+                    	<span class="s-img"><img src="lists/lists1/res/img/img.jpg" /></span>
+                        <span class="s-name fz32">第二级柒月微店柒月微店柒月微店柒月微店柒月微店柒月微店</span>
+                        <div class="clr"></div>
+                    </div>
+                    <p class="fz28"><span>申请人：</span>林功义</p>
+                    <p class="fz28"><span>手机：</span>18650490262</p>
+                    <p class="fz28"><span>申请时间：</span>2015-06-23 14:55:06</p>
+                </a>
+            </li>
+            <li>
+            	<a href="###">
+                	<div class="name">
+                    	<span class="s-img"><img src="lists/lists1/res/img/img.jpg" /></span>
+                        <span class="s-name fz32">柒月微店</span>
+                        <div class="clr"></div>
+                    </div>
+                    <p class="fz28"><span>申请人：</span>林功义</p>
+                    <p class="fz28"><span>手机：</span>18650490262</p>
+                    <p class="fz28"><span>申请时间：</span>2015-06-23 14:55:06</p>
+                </a>
+            </li>
+        </ul>
+        <ul class="ul-3 ul-none">
+        	<li>分店数据为空</li>
         </ul>
     </section>
     <!--列表-end-->
