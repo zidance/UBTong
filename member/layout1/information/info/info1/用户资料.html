@@ -27,7 +27,7 @@
             </tr>
             <tr>
             	<td align="center" class="fz28">我的性别</td>
-               <td class="fz28"><a href="#">男</a></td>
+               <td class="fz28"><a class="btn-male" href="#">男</a></td>
 
             </tr>
             <tr>
@@ -58,15 +58,15 @@
             </tr>
             <tr>
             	<td align="center" class="fz28">月收入</td>
-                <td class="fz28"><a href="#">3000-6000</a></td>
+                <td class="fz28"><a class="btn-income" href="#">3000-6000</a></td>
             </tr>
             <tr>
             	<td align="center" class="fz28">我的职业</td>
-                <td class="fz28"><a href="#">学生</a></td>
+                <td class="fz28"><a class="btn-job" href="#">学生</a></td>
             </tr>
             <tr>
             	<td align="center" class="fz28">我的学历</td>
-                <td class="fz28"><a href="#">研究生</a></td>
+                <td class="fz28"><a class="btn-edu" href="#">研究生</a></td>
             </tr>
         </table>
         <p class="p-moreinfo fz24">信息填写完整即可获得100优惠券！优惠券由系统直接
@@ -87,6 +87,174 @@
     })
     </script>
     <!--用户资料-end-->
+
+
+  <link href="../../../../../parts/form/form2/res/css/select.css" rel="stylesheet" type="text/css" />
+  <!--表单选项-滚动-->
+
+    <!--弹出框-->
+    <div class="d-popup-wrap d-male-popup">
+      <div class="fixed-bg"></div>
+      <div class="d-popup">
+        <p class="p-title fz32">性别
+          <a class="a-close"><img src="../../../../../common/img/close.png" /></a>
+        </p>
+        <div class="d-in d-slide">
+          <ul class="ul-slidelist fz40">
+            <li>
+              <input type="radio" name="" value="0" checked="checked" />
+              <label>男</label>
+            </li>
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>女</label>
+            </li>
+
+          </ul>
+        </div>
+        <!--<a class="a-confirm">确定</a>-->
+      </div>
+    </div>
+  </div>
+  <!--表单选项-滚动--end(不带脚本)-->
+   <!--弹出框-->
+    <div class="d-popup-wrap d-income-popup">
+      <div class="fixed-bg"></div>
+      <div class="d-popup">
+        <p class="p-title fz32">月收入
+          <a class="a-close"><img src="../../../../../common/img/close.png" /></a>
+        </p>
+        <div class="d-in d-slide">
+          <ul class="ul-slidelist fz40">
+            <li>
+              <input type="radio" name="" value="0" checked="checked" />
+              <label>0-3000</label>
+            </li>
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>3000-6000</label>
+            </li>
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>6000-10000</label>
+            </li>
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>10000-20000</label>
+            </li>
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>20000-50000</label>
+            </li>
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>50000以上</label>
+            </li>
+
+          </ul>
+        </div>
+        <!--<a class="a-confirm">确定</a>-->
+      </div>
+    </div>
+  </div>
+  <!--表单选项-滚动--end(不带脚本)-->
+   <!--弹出框-->
+    <div class="d-popup-wrap d-job-popup">
+      <div class="fixed-bg"></div>
+      <div class="d-popup">
+        <p class="p-title fz32">学历
+          <a class="a-close"><img src="../../../../../common/img/close.png" /></a>
+        </p>
+        <div class="d-in d-slide">
+          <ul class="ul-slidelist fz40">
+            <li>
+              <input type="radio" name="" value="0" checked="checked" />
+              <label>学生</label>
+            </li>
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>教师</label>
+            </li>
+
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>其它</label>
+            </li>
+
+          </ul>
+        </div>
+        <!--<a class="a-confirm">确定</a>-->
+      </div>
+    </div>
+  </div>
+  <!--表单选项-滚动--end(不带脚本)-->
+
+   <!--弹出框-->
+    <div class="d-popup-wrap d-edu-popup">
+      <div class="fixed-bg"></div>
+      <div class="d-popup">
+        <p class="p-title fz32">学历
+          <a class="a-close"><img src="../../../../../common/img/close.png" /></a>
+        </p>
+        <div class="d-in d-slide">
+          <ul class="ul-slidelist fz40">
+            <li>
+              <input type="radio" name="" value="0" checked="checked" />
+              <label>研究生</label>
+            </li>
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>大学生</label>
+            </li>
+
+            <li>
+              <input type="radio" name="" value="1" />
+              <label>中学生</label>
+            </li>
+
+          </ul>
+        </div>
+        <!--<a class="a-confirm">确定</a>-->
+      </div>
+    </div>
+  </div>
+  <!--表单选项-滚动--end(不带脚本)-->
+
+    <!--表单选项-滚动--脚本-->
+  <script src="../../../../../parts/form/form2/res/js/jquery-2.1.4.min.js"></script>
+  <script src="../../../../../parts/form/form2/res/js/slide.js"></script>
+  <script src="../../../../../parts/form/form2/res/js/popup.js"></script>
+  <script>
+    var $$=jQuery;
+    $$(function() {
+      popup('.d-male-popup', '.btn-male')
+      popup('.d-income-popup', '.btn-income')
+      popup('.d-job-popup', '.btn-job')
+      popup('.d-edu-popup', '.btn-edu')
+
+      slide('.d-male-popup .d-slide', '.ul-slidelist')
+      slide('.d-income-popup .d-slide', '.ul-slidelist')
+      slide('.d-job-popup .d-slide', '.ul-slidelist')
+      slide('.d-edu-popup .d-slide', '.ul-slidelist')
+
+
+      //补充脚本:数据对接
+      var dataTo = function(popup,btn){
+        var obj = $(popup)
+        var btn = $(btn)
+        obj.find('li').find('label').on('tap click',function(){
+            obj.hide()
+            btn.text($$(this).html())
+        })
+      }
+      dataTo('.d-male-popup', '.btn-male')
+      dataTo('.d-income-popup', '.btn-income')
+      dataTo('.d-job-popup', '.btn-job')
+      dataTo('.d-edu-popup', '.btn-edu')
+
+    })
+  </script>
+  <!--表单选项-滚动--end-->
 
 
 </body>

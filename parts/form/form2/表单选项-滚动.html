@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>表单选项-滚动</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+  <link href="res/css/select.css" rel="stylesheet" type="text/css" />
+  <link href="../../../common/css/hover.css" rel="stylesheet" type="text/css" />
+  <script src="../../../common/js/zepto-1.16.min.js"></script>
+  <script src="../../../common/js/default.js"></script>
+  <script>
+  </script>
+</head>
+
+<body>
+ <!--表单选项-滚动-->
+  <!--.d-wrap层没有定义样式,仅用于脚本,当页面多次引用时,修改wrap名形成隔离,推荐的方法是在里层.d-popup-wrap加个类名-->
+  <div class="d-wrap">
+    <input type="button" class="btn" value="弹出" />
+    <!--弹出框-->
+    <div class="d-popup-wrap">
+      <div class="fixed-bg"></div>
+      <div class="d-popup">
+        <p class="p-title fz32">弹出框标题
+          <a class="a-close"><img src="../../../common/img/close.png" /></a>
+        </p>
+        <div class="d-in d-slide">
+          <ul class="ul-slidelist fz40">
+            <li>
+              <input type="radio" name="example" value="0" checked="checked" />
+              <label>0</label>
+            </li>
+
+            <li>
+              <input type="radio" name="example" value="1" />
+              <label>1</label>
+            </li>
+
+            <li>
+              <input type="radio" name="example" value="2" />
+              <label>2</label>
+            </li>
+            <li>
+              <input type="radio" name="example" value="3" />
+              <label>3</label>
+            </li>
+            <li>
+              <input type="radio" name="example" value="4" />
+              <label>4</label>
+            </li>
+            <li>
+              <input type="radio" name="example" value="5" />
+              <label>5</label>
+            </li>
+            <li>
+              <input type="radio" name="example" value="6" />
+              <label>6</label>
+            </li>
+            <li>
+              <input type="radio" name="example" value="7" />
+              <label>7</label>
+            </li>
+            <li>
+              <input type="radio" name="example" value="8" />
+              <label>8</label>
+            </li>
+          </ul>
+        </div>
+        <!--<a class="a-confirm">确定</a>-->
+      </div>
+    </div>
+  </div>
+  <!--表单选项-滚动--end(不带脚本)-->
+
+  <!--表单选项-滚动--脚本-->
+  <script src="res/js/jquery-2.1.4.min.js"></script>
+  <script src="res/js/slide.js"></script>
+  <script src="res/js/popup.js"></script>
+  <script>
+    var $$=jQuery;
+    $$(function() {
+      popup('.d-popup-wrap', '.btn','.d-wrap')
+      slide('.d-slide', '.ul-slidelist')
+    })
+  </script>
+  <!--表单选项-滚动--end-->
+
+
+
+</body>
+
+</html>
