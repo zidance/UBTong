@@ -12,10 +12,15 @@
 
 .box-popup .type{ padding:.79rem 0 .43rem .79rem; border-bottom:1px solid #e5e5e5; }
 .box-popup .type p{ color:#828282; margin-bottom:.3rem; }
-.box-popup .type li{float:left; margin:0 3% .72rem 0; }
-.box-popup .type li a{ display:block; border:1px solid #999999; border-radius:4px; text-align:center; color:#999999; box-sizing: border-box;line-height:2;/*56/28*/ padding:0 1rem;min-width:4rem;}
+.box-popup .type li{display: inline-block; margin:0 3% .72rem 0;}
+.box-popup .type li a{ display:block; border:1px solid #999999; border-radius:4px; text-align:center; color:#999999; box-sizing: border-box;line-height:2;/*56/28*/ padding:0 1rem;min-width:4rem;overflow: hidden; }
+.box-popup .type li a::after{width:99.8%;}
 .box-popup .type li a.color{ border-color:#ff6600; color:#ff6600;  }
 .box-popup .type li a.noAct{ border: 1px dotted; border-color:#cecece; color:#cecece; background-size:.79rem .79rem; }
+
+@media (-moz-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx), (-ms-high-contrast:active), (-ms-high-contrast:none) {
+    .box-popup .type li a::after{width:198%;height:198%;}/*IOS下,边框显示不全修复*/
+}
 
 /*手机端,存在border的缩放*/
 .box-popup .type li a.color em{position:absolute;  width:.9rem;height:.9rem;box-sizing:border-box;right:0rem;bottom: 0rem; border:.9rem solid #69c2c0;border-left-color:transparent !important;border-top-color:transparent !important;}

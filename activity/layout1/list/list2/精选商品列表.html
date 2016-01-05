@@ -19,7 +19,7 @@
             <li>
                 <a href="###">
                     <img src="res/img/img%20(2).jpg" />
-                    <p class="p-name fz28">北朝鲜 帝王蟹</p>
+                    <p class="p-name fz28">北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹</p>
                 </a>
             </li>
             <li>
@@ -34,9 +34,44 @@
                     <p class="p-name fz28">俄罗斯 毛蟹</p>
                 </a>
             </li>
-
+            <li>
+                <a href="###">
+                    <img src="../../../../common/img/100200.png" />
+                    <p class="p-name fz28">北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹</p>
+                </a>
+            </li>
+             <li>
+                <a href="###">
+                    <img src="../../../../common/img/200100.png" />
+                    <p class="p-name fz28">北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹</p>
+                </a>
+            </li>
+             <li>
+                <a href="###">
+                    <img src="../../../../common/img/800400.png" />
+                    <p class="p-name fz28">北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹</p>
+                </a>
+            </li>
+             <li>
+                <a href="###">
+                    <img src="../../../../common/img/400800.png" />
+                    <p class="p-name fz28">北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹北朝鲜 帝王蟹</p>
+                </a>
+            </li>
         </ul>
     </section>
+    <script>
+  window.onload = function(){
+    var oWrap = $('.stn-activitylists').find('li').find('a')
+    oWrap.each(function(){
+      var nThisHei = $(this).height()
+      var nImgHei = $(this).find('img').height()
+      if(nImgHei>nThisHei){
+        $(this).height(nImgHei)
+      }
+    })
+  }
+  </script>
     <!--精选商品列表-end-->
 </body>
 </html>

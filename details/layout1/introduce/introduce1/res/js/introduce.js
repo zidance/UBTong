@@ -22,7 +22,7 @@ $(function () {
         //第一次点评价时,执行图片尺寸脚本
     var oBtnAppraise = _obj.find('.btn-appraise')
     oBtnAppraise.one('click', function (e) {
-      //图片尺寸
+      //图片尺寸,依赖于parts/img的脚本
       img('.appraise-img','span')
         e.preventDefault();
     })

@@ -2,27 +2,37 @@
 /*
 其它说明:1/ajax后的图片不自动调整,需要在ajax后再次调用img(...)
 2/scale,未引入该参,规定缩放形式*/
+
 function img(container, imgwrap, scale) {
-  var container = $(container)
-  var imgwrap = container.find(imgwrap)
 
-  container.find(imgwrap).each(function () {
-    var nWidth = $(this).width()
-      //遗憾的是load参数无法做成代理,所以对ajax无力
-    $(this).find('img').on('load', function () {
-      var nThisW = $(this).width(),
-        nThisH = $(this).height()
-        //是否只针对大图处理,当前为否
-        //        if(nThisW > nWidth || nThisH > nWidth){
-      if (nThisW > nThisH) {
-        $(this).css('height', nWidth)
-      } else {
-        $(this).css('width', nWidth)
+  //原来的方法没有对图片是否已加载的判断,不论调整函数放在$(function(){})内外都有问题,升级成图片加载后执行,用img.complete或者判断图片高来达成.
+  function imgLoad(img, callback) {
+    var timer = setInterval(function () {
+      if (img.complete) {
+        clearInterval(timer)
+        callback()
       }
-      //        }
-
-      $(this).css('transform', 'translate(-50%,-50%)')
-
+    }, 200)
+  }
+  $(container).find(imgwrap).each(function (i) {
+    var _wrap = $(this),_this=$(this).find('img')
+    //避免未找到图引起的js循环
+    if(_this.length){
+    //转原生传进去
+    imgLoad(_this[0], function () {
+      var nWidth = _wrap.width()
+        var nThisW = _this.width(),
+          nThisH = _this.height()
+        //是否只针对大图处理,当前为否(如果只针对大图,纯css即可)
+        //if(nThisW > nWidth || nThisH > nWidth){
+        if (nThisW > nThisH) {
+          _this.css('height', nWidth)
+        } else {
+          _this.css('width', nWidth)
+        }
+    //}
     })
+    }
   })
+
 }
