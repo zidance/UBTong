@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+  <script src="../../../common/js/zepto-1.16.min.js"></script>
+  <link href="img-撑满.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<!--
+总体效果:撑满+等比例缩放
+核心:
+padding写外块正方形
+大图缩小,小图放大,都等比例
+尺寸小的边等于外框,超出部分剪裁
+-->
+  <p><img src="../../../common/img/22100200.png" /></p>
+  <p><img src="../../../common/img/10050.png" /></p>
+  <p><img src="../../../common/img/200100.png" /></p>
+  <p><img src="../../../common/img/400200.png" /></p>
+  <p><img src="../../../common/img/400800.png" /></p>
+  <p><img src="../../../common/img/7070.png" /></p>
+  <p><img src="../../../common/img/50100.png" /></p>
+
+<script src="img.js" type="text/javascript"></script>
+  <script>
+    $(function() {
+      img('body', 'p')
+    })
+  </script>
+</body>
+
+</html>

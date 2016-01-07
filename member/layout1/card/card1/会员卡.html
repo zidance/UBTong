@@ -11,22 +11,25 @@
     <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
     <link href="res/css/card.css" rel="stylesheet" type="text/css" />
     <script src="../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../other/demo/res/jquery-2.1.4.min.js"></script>
     <script src="../../../../common/js/default.js"></script>
 </head>
 
 <body style="background:#f4f4f4;">
     <!--会员卡-->
     <section class="stn-member-card">
-       <!--d-card为一张卡的区域;type为卡类型,其中type1为充值卡,type2为套餐卡,影响卡背景;act为当前正常浏览的卡片-->
+        <!--d-card为一张卡的区域;type为卡类型,其中type1为充值卡,type2为套餐卡,影响卡背景;act为当前正在浏览的卡片-->
         <div class="d-card type1 fz24">
-            <p class="p-title fz36">1000元充值卡<span class="fz24">未使用</span></p>
-            <p class="p-info fz28">会员卡信息</p>
-            <p>使用规则：购买对应商品在支付时输入会员卡号进行支付</p>
-            <p>购买时间：2015-08-30 11：43</p>
-            <p>会员卡号：5416871316742544</p>
+            <div class="d-card-in">
+                <h6 class="fz36">1000元充值卡1000元充值卡1000元充值卡1000元充值卡1000元充值卡1000元充值卡<span class="fz24"><em>未使用</em></span></h6>
+                <p class="p-info fz28">会员卡信息</p>
+                <p><span>使用规则：</span><span>购买对应商品在支付时输入会员卡号进行支付</span></p>
+                <p><span>购买时间：</span><span>2015-08-30 11：43</span></p>
+                <p><span>会员卡号：</span><span>5416871316742544</span></p>
+            </div>
         </div>
-        <div class="act d-card type2 fz24">
-           <div class="d-card-in">
+        <div class="d-card type2 fz24">
+            <div class="d-card-in">
                 <h6 class="fz36">9号套餐卡<span class="fz24"><em>未使用</em></span></h6>
                 <p class="p-info fz28">会员卡信息</p>
                 <p><span>使用规则：</span><span>购买对应商品在支付时输入会员卡号进行支付</span></p>
@@ -34,8 +37,55 @@
                 <p><span>会员卡号：</span><span>5416871316742544</span></p>
             </div>
         </div>
+        <div class="d-card type1 fz24">
+            <div class="d-card-in">
+                <h6 class="fz36">1000元充值卡<span class="fz24"><em>未使用</em></span></h6>
+                <p class="p-info fz28">会员卡信息</p>
+                <p><span>使用规则：</span><span>购买对应商品在支付时输入会员卡号进行支付</span></p>
+                <p><span>购买时间：</span><span>2015-08-30 11：43</span></p>
+                <p><span>会员卡号：</span><span>5416871316742544</span></p>
+            </div>
+        </div>
+        <div class="d-card type2 fz24">
+            <div class="d-card-in">
+                <h6 class="fz36">9号套餐卡<span class="fz24"><em>未使用</em></span></h6>
+                <p class="p-info fz28">会员卡信息</p>
+                <p><span>使用规则：</span><span>购买对应商品在支付时输入会员卡号进行支付购买对应商品在支付时输入会员卡号进行支付购买对应商品在支付时输入会员卡号进行支付购买对应商品在支付时输入会员卡号进行支付购买对应商品在支付时输入会员卡号进行支付购买对应商品在支付时输入会员卡号进行支付购买对应商品在支付时输入会员卡号进行支付</span></p>
+                <p><span>购买时间：</span><span>2015-08-30 11：43</span></p>
+                <p><span>会员卡号：</span><span>5416871316742544</span></p>
+            </div>
+        </div>
 
     </section>
+<script>
+  //点击切换卡片脚本,
+  var $$ = jQuery
+  $$(function() {
+    //按css中的4.2rem算
+    var card = $$('.stn-member-card').find('.d-card'),
+        nHei = Math.round(4.2 * parseFloat($$('html').css('font-size'))),
+        temp = 0;
+
+    card.on('tap click', function() {
+      var nInHei = $$(this).find('.d-card-in').outerHeight(true)
+
+      if ($$(this).hasClass('act')) {
+
+        $$(this).animate({'height':nHei}).removeClass('act')
+      }
+      else{
+        card.eq(temp).css({'height':nHei}).removeClass('act')
+        $$(this).animate({'height':nInHei}).addClass('act')
+      }
+      temp = $$(this).index('.d-card')
+    })
+
+    //默认打开第一个
+    setTimeout(function(){
+      card.first().trigger('click')
+    },100)
+  })
+</script>
     <!--会员卡--end-->
 </body>
 
