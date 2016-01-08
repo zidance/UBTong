@@ -16,7 +16,7 @@ body{ background:#f7f5f5; }
 .details-introduce .introduce-con img{ width:100%;}
 .introduce-con .introduce-item .introduce-gbook{}
 .introduce-con .introduce-item .introduce-gbook li{ padding:4.2%;/*27/640*/ border-bottom:1px solid #dbdbdb; }
-.introduce-con .introduce-item .introduce-gbook .p-tel{ color:#282828; }
+.introduce-con .introduce-item .introduce-gbook .p-tel{ color:#282828; font-weight: bold;}
 .introduce-con .introduce-item .introduce-gbook .p-gbook{ color:#000; margin-top:.2rem; }
 .introduce-con .introduce-item .introduce-gbook .p-time{ color:#bebebe; margin-top:.6rem; }
 .introduce-con .a-intgbook{ display:block; color:#9b9b9b; text-align:center; padding:.89rem 0; }
