@@ -42,11 +42,13 @@
 .banner .slider #pagenavi {
 	position: absolute;
 	left: 0;
-	bottom: 5px;
+	bottom: .45rem;
 	text-align: center;
 	width: 100%;
 }
 .banner .slider #pagenavi a {
+    display:inline-block; width:7.1%; height:0.25rem; margin:0 .13rem;  background:#fff;vertical-align: bottom;
+/*
 	width: 10px;
 	height: 10px;
 	border-radius: 100%;
@@ -58,12 +60,13 @@
 	display: inline-block;
 	*display: inline;
 	zoom: 1;
+*/
 }
 .banner .slider #pagenavi.dotColor a{
 	background:#a4a4a4;
 }
 .banner .slider #pagenavi a.active {
-	background: #e60012;
+	/*background: #e60012;*/background:#f77a02;
 }
 
 

@@ -22,7 +22,7 @@
             <div class="d-head">
                 <span class="s-img"><img src="res/img/img11.jpg" /></span>
                 <span class="s-des">
-                    <p class="p-title fz24">北朝鲜 帝王蟹 野生大规格 两斤起售 支持货到付款</p>
+                    <p class="p-title fz28">北朝鲜 帝王蟹 野生大规格 两斤起售 支持货到付款</p>
                     <p class="fz24">
                         <span>2014-07-14 </span>
                         <span>规格：1-1.3公斤 塑料 黄椒</span>
@@ -34,18 +34,21 @@
                 <p class="p-num fz20"><span>0</span>/100</p>
             </div>
             <div class="d-imgs">
-                <p class="p-upload"><input name="UploadImgs" type="file" multiple="multiple" accept="image/*" /></p>
+            <!--最后一个为上传按钮-->
 				<p><img src="res/img/img11.jpg" /></p>
 				<p><img src="../../../../../common/img/400200.png" /></p>
+				<p><img src="../../../../../common/img/400200.png" /></p>
+				<p><img src="../../../../../common/img/400200.png" /></p>
+               <p class="p-upload"><input name="UploadImgs" type="file" multiple="multiple" accept="image/*" /></p>
             </div>
 
         </div>
 
          <div class="d-product">
             <div class="d-head">
-                <span class="s-img"><img src="../../../../../common/img/200400.png" /></span>
+                <span class="s-img"><img src="res/img/img11.jpg" /></span>
                 <span class="s-des">
-                    <p class="p-title fz24">北朝鲜 帝王蟹 野生大规格 两斤起售 支持货到付款</p>
+                    <p class="p-title fz28">北朝鲜 帝王蟹 野生大规格 两斤起售 支持货到付款</p>
                     <p class="fz24">
                         <span>2014-07-14 </span>
                         <span>规格：1-1.3公斤 塑料 黄椒</span>
@@ -57,21 +60,25 @@
                 <p class="p-num fz20"><span>0</span>/100</p>
             </div>
             <div class="d-imgs">
-                <p class="p-upload"><input name="UploadImgs" type="file" multiple="multiple" accept="image/*" /></p>
 				<p><img src="res/img/img11.jpg" /></p>
 				<p><img src="../../../../../common/img/200400.png" /></p>
+               <p class="p-upload"><input name="UploadImgs" type="file" multiple="multiple" accept="image/*" /></p>
             </div>
 
         </div>
 
     </section>
 
-
+  <script src="../../../../../parts/img/img1/img.js"></script>
     <script>
         $(function() {
+          //图片调整
+          img('.stn-appraise','.d-imgs p')
+
         //数字限制500字脚本
         //oText输入区,iMax最大字数,oCount记录当前字数的节点
         var oText = $('.stn-appraise').find('.d-text').find('textarea'),
+            iMax = 100,
             iMax = 100,
             oCount = $('.stn-appraise').find('.d-text').find('.p-num').find('span');
 

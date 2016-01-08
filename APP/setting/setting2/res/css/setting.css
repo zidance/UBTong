@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+/*设置*/
+.stn-setting{margin-top:3%;border-top:1px solid #c5c5c5;background-color: #fff;}
+.stn-setting ul{border-bottom:1px solid #c5c5c5;}
+.stn-setting li{position: relative;margin:0 2.6%;padding:0 2.3%;border-top:1px solid #c5c5c5;}
+.stn-setting li:first-child{border-top:none;}
+.stn-setting li a{display: block;color: #242424;line-height: 2.8;}
+
+.stn-setting li .a-rightLink{background: url(../../../../../common/img/right.png) no-repeat right center/.6rem;}
+.stn-setting li .a-btn{position:absolute;height:100%;right:0;top:0;width:17%;}
+.stn-setting li .a-btn img{width:95%;position: absolute;top: 0;bottom: 0;margin:auto;}
+
+
+/*价格走势-弹出*/
+.stn-setting .d-popup{display: none;}
+.stn-setting .fixed-bg{content: '';position:fixed;z-index: 998; left: 0;top: 0;width: 100%;height: 100%;background:rgba(0,0,0,0.3);}
+.stn-setting .d-container{position: fixed;z-index: 999;left: 0;bottom: 0;width: 100%;background-color: #fff;}
+.stn-setting .d-container .p-title{line-height: 4.3;/*border-bottom:1px solid #e7e7e7;*/padding:0 5.5%;}
+.stn-setting .d-container .a-close{float:right;width:1.8rem;margin-right:5%;}
+.stn-setting .d-container .a-close img{width:100%;}
+
+.stn-setting .d-container .d-content{padding:7% 0 19%;font-size: 0;}
+.stn-setting .d-container .d-content a{display: inline-block;width:25%;text-align: center;color: #585858;}
+.stn-setting .d-container .d-content a img{display: block;width:54%;margin:0 auto;}
+
+@media screen and (min-width:321px){
+    .stn-setting li .a-btn{max-width:3rem;}
+}

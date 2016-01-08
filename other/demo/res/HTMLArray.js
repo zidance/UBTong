@@ -6,8 +6,6 @@ if (!window.Zepto) {
   Zepto = {}
 }
 var $$ = jQuery || Zepto; //测试中zepto的ajax页面不加载js
-jQuery.noConflict();
-$ = Zepto;
 
 ;$$(function () {
 
@@ -60,7 +58,7 @@ $ = Zepto;
         var argsToArray = function (initarg, user) {
           if (user instanceof Array)
             Array.prototype.push.apply(initarg, user)
-          else if ('string' == user)
+          else if ('string' == typeof user)
             initarg.push(user)
           else if (user instanceof RegExp)
             initarg.push(user)
@@ -272,7 +270,7 @@ $ = Zepto;
             if(init.lazyload.length>0){
               setTimeout(function(){
                 for (var i = init.lazyload.length - 1; i >= 0; i--) {
-                  $$('head').append('<script src="'+init.lazyload[i]+'">')
+                  $$('body').append('<script src="'+init.lazyload[i]+'">')
                 }
               },700)
             }
@@ -287,5 +285,3 @@ $ = Zepto;
   }) //$$(function(){})的结束
 
 
-/*h1.pgTitle{position:relative;z-index = 999999;font-size:.8rem;line-height: 1.5;text-align: center;}
-    h1.pgTitle>*{display:inline-block;line-height: 1.5;margin:0 1em;word-break: break-all;}*/

@@ -119,3 +119,8 @@ html{font-size:85%;}
 /*配套颜色,当前深蓝*/
 .color2{}
 .bg-color2{background-color: #5c6ed6 !important;}
+
+/*文字,限制仅一行,超出部分显示"..."*/
+.l-1{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+

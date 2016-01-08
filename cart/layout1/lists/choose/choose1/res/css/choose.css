@@ -2,6 +2,7 @@
 .cart-choose h1{ color:#939292; margin:.8rem 0 .8rem .36rem; }
 .cart-choose .choose-lists input[type=checkbox]{position: relative; -webkit-appearance:none; appearance:none; width:20px; height:20px; margin:1.88rem .72rem 0 .72rem; cursor:pointer; vertical-align:bottom; background:none; border:1px solid #dbdada;  border-radius:50%; box-sizing:border-box; position:relative; outline:none; float:left; }
 .cart-choose .choose-lists input[type=checkbox]:checked::before{ content:''; display:block; position:absolute; top:0px; left:0px;width: 100%;height: 100%; background: url(../img/select.png) no-repeat center center/56% ;;}
+.cart-choose .choose-lists input[type=checkbox]:checked::after{border:none !important;}
 
 .cart-choose .choose-lists .choose-all{ margin:.72rem 0 1.09rem .72rem; }
 .cart-choose .choose-lists .choose-all .checkbox-all{ margin:0 .54rem 0 0;border-radius:7px; }

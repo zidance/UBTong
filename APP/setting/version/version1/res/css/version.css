@@ -1,0 +1,30 @@
+/*版本*/
+.stn-copyright{text-align: center;padding:13.5% 0;}
+.stn-copyright img{display: block;margin:0 auto;height:2.4rem;}
+
+.stn-version{margin:1% 0;color:#000;background-color: #fff;}
+.stn-version p{
+    padding:2.3% 5%;
+    border-top:1px solid #dcdcdc;
+    line-height: 1.8;
+
+    /*flex模型*/
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+}
+.stn-version p:last-child{border-bottom:1px solid #dcdcdc;}
+.stn-version p span{
+    display:block;
+    /*子元素间比例*/
+    -webkit-box-flex:5;
+    -webkit-flex:5;
+    flex:5;
+    width:1px;
+
+}
+.stn-version p span:nth-child(1){
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+}

@@ -1,0 +1,44 @@
+
+/*选择样式*/
+.d-popup-wrap{position:fixed;z-index: 999;width: 100%;bottom:0;left: 0;right:0;margin:auto;padding-top:2rem;background-color:aquamarine;max-width: 640px;}
+.d-popup-wrap .d-in{overflow-y: scroll;}
+.d-popup-wrap ul{height:6rem;background-color: #fff;}
+.d-popup-wrap ul li{position:relative;height:2.6rem;line-height:2.6rem;;background-color: #fff;box-sizing: border-box; }
+
+.d-popup-wrap li input[type="radio"]{-webkit-appearance:none; appearance:none; position: absolute;width:100%;height: 100%;left: 0;top: 0;box-sizing: border-box;border:solid transparent;border-width:1px 0;}
+.d-popup-wrap li input[type="radio"]:checked::after{border-color:#d1d1d1 !important;background-color: #f4f4f4;}
+.d-popup-wrap li label{position: absolute;left: 0;top: 0;width: 100%;height: inherit;padding:0 10%;box-sizing: border-box;white-space: nowrap;overflow: hidden;cursor: pointer;}
+
+
+/*滚动条的理想状态应该是隐藏,touch时显示,由于微信在touch上兼容,改为当前的方案:大屏下(pc)hover显示,小屏(手机端)用浏览器默认方案*/
+@media screen and (min-width:640px){
+::-webkit-scrollbar {
+  background-color: transparent;
+  width:0px;
+}
+.d-popup-wrap .d-in:hover::-webkit-scrollbar{
+  width:9px;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background-color:#bebcbe;
+}
+}
+
+
+/*弹出样式*/
+.d-popup-wrap{display: none;}
+.fixed-bg{content: '';position:fixed;z-index: 998; left: 0;top: 0;width: 100%;height: 100%;right:0;margin:auto;max-width:640px;background:rgba(0,0,0,0.3);}
+.d-popup{position: fixed;z-index: 999;left: 0;bottom: 0;width: 100%;right:0;margin:auto;max-width:640px;background-color: #fff;}
+.d-popup .p-title{line-height: 3.5;/*border-bottom:1px solid #e7e7e7;*/padding:0 5%;}
+.d-popup .a-close{float:right;width:1.5rem;margin-right:5%;}
+.d-popup .a-close img{width:100%;}
+
+.d-popup .d-in{margin:5% 0;}
+
+.d-popup .a-confirm{display: block;width:88%;margin:4.5% auto 3.1%;line-height: 2.6;background-color: #69c2c0;color: #fff;text-align: center;border-radius:.2rem;}
+
+
+

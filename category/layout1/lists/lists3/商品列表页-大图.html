@@ -12,7 +12,7 @@
 <script src="../../../../common/js/default.js"></script>
 </head>
 
-<body>
+<body style="background-color:#f4f4f4;">
 	<!--产品列表-仅大图-->
     <section class="stn-lists-onlypic">
         <div class="pic-col-1">
@@ -20,8 +20,48 @@
             <a href="###"><img src="res/img/big2.jpg" /></a>
             <a href="###"><img src="res/img/big3.jpg" /></a>
             <a href="###"><img src="res/img/big4.jpg" /></a>
+            <a href="###"><img src="../../../../common/img/100200.png" /></a>
+            <a href="###"><img src="../../../../common/img/200100.png" /></a>
+            <a href="###"><img src="../../../../common/img/400800.png" /></a>
+            <a href="###"><img src="../../../../common/img/800400.png" /></a>
         </div>
     </section>
+
+    <script>
+      c = console.log.bind(console)
+    //图片自适应,容器也自适应高,小图不放大居中
+    $(function() {
+      //用img.complete或者判断图片高来达成.
+      function imgLoad(img, callback) {
+        var timer = setInterval(function() {
+          if (img.complete) {
+            clearInterval(timer)
+            callback()
+          }
+        }, 200)
+      }
+      $('.stn-lists-onlypic').find('.pic-col-1').find('a').each(function(i) {
+
+        var _wrap = $(this),
+          _this = $(this).find('img')
+        var nWrapHei = _wrap.height()
+
+
+          //避免未找到图引起的js循环
+        if (_this.length) {
+          //转原生传进去
+          imgLoad(_this[0], function() {
+            //加载后的回调,才去获取图高
+            var nImgHei = _this.height()
+            if (nImgHei > nWrapHei) {
+              _wrap.height(nImgHei)
+            }
+          })
+        }
+      })
+
+    })
+  </script>
     <!--产品列表-仅大图-end-->
 </body>
 </html>

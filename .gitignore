@@ -3,3 +3,6 @@ bs-server.bat
 UBTong.esproj
 /web.config
 ##IIS服务器配置
+
+/index.html
+##链接页面
