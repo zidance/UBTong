@@ -7,3 +7,6 @@
 .stn-information td .a-img img{ width:100%; height:100%; border-radius:50%; }
 .stn-information td input{ width:90%; border:none; }
 .stn-information .tr-bottom td{ border-bottom:none; }
+
+.warning{ margin-top:0.36rem; color:#666; margin:0.36rem 3.7% 0;}
+.warning p{ line-height:1rem;}
