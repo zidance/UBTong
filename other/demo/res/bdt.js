@@ -59,14 +59,14 @@ $$(function () {
         }
         HtmlArray.config = set(HtmlArray.config, {})
         HtmlArray.config.nullHref = set(HtmlArray.config.nullHref, '###')
-        HtmlArray.config.disable = set(HtmlArray.config.disable, ['zepto-1.16.min.js', 'common.css', 'default.js'], true)
-        HtmlArray.config.lazyload = set(HtmlArray.config.lazyload, [tempRootDir + 'common/js/default.js'], true)
+        HtmlArray.config.disable = set(HtmlArray.config.disable, ['zepto-1.16.min.js', 'common.css', 'default.js','main.css','main.js'], true)
+        HtmlArray.config.lazyload = set(HtmlArray.config.lazyload, [tempRootDir + 'common/js/main.js'], true)
 
         setTimeout(function () {
             //公用文件及HtmlArray.js的引入
             $$('head').append('<link href="' + tempRootDir + 'common/css/common.css"  rel="stylesheet"  type="text/css" />')
             $$('head').append('<script type="text/javascript" src="' + tempRootDir + 'common/js/zepto-1.16.min.js"></script>')
-            $$('head').append('<script type="text/javascript" src="' + tempRootDir + 'common/js/default.js"></script>')
+//            $$('head').append('<script type="text/javascript" src="' + tempRootDir + 'common/js/default.js"></script>')
 
             $$('head').append('<script type="text/javascript" src="' + tempRootDir + 'other/demo/res/HtmlArray.js"></script>')
         }, 200)
