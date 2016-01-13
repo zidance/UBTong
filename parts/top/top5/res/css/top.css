@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header{ height:2rem; width:100%; position:fixed; top:0; left:0; z-index:9999;}
+.header .top-bg{ width:100%; height:2rem; background:url(../img/top-bg.png) repeat-x; position:absolute; left:0 ;top:0; background-size:100% 2rem;}
+
+.header .top-detail{ width:100%; height:1rem; position:absolute; left:0; top:0; line-height:1rem; padding:.5rem 0;}
+.header .top-detail a{ display:inline-block;}
+.header .top-detail .a-bill{ margin-left:.825rem; padding-left:1.4rem; background:url(../img/dot1.png) no-repeat left center; background-size:.9rem .95rem; color:#fff;}
+.header .top-detail .d-right{ float:right;}
+.header .top-detail .d-right .a-money{ width:.975rem; height:1rem; text-indent:-9999rem; margin-right:.9rem; background:url(../img/dot2.png) no-repeat left center; background-size:.975rem 1rem;}
+.header .top-detail .d-right .a-search{ width:1rem; height:.975rem; text-indent:-9999rem; margin-right:.7rem; background:url(../img/dot3.png) no-repeat left center;background-size:1rem .975rem;}

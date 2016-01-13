@@ -7,13 +7,13 @@
 .banner .slider .sliderlist li a{display: block;height:100%;vertical-align: middle;}
 .banner .slider .sliderlist li span{ margin:0 auto; display:table-cell; vertical-align: middle;}
 .banner .slider .sliderlist li img{ width:100%; vertical-align: middle;}
-.banner .slider #pagenavi{ position:absolute; left:0; bottom:.4rem; text-align:center; width:100%;}
-.banner .slider #pagenavi a{display:inline-block; width:7.1%; height:0.2rem; margin:0 .13rem;  background:#fff;}
+.banner .slider #pagenavi{ position:absolute; left:0; bottom:.275rem; text-align:center; width:100%;}
+.banner .slider #pagenavi a{display:inline-block; width:7.1%; height:0.175rem; margin:0 .075rem;  background:#fff;}
 .banner .slider #pagenavi a.active{ /*五度的background:#f77a02;*//*顶悦的#838588*/ background:#838588; }
 
-
+/*
 @media screen and (max-width:320px){
     .banner .slider #pagenavi{bottom:.6rem;}
 }
-
+*/
 

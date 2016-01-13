@@ -3,6 +3,7 @@
 .stn-category h1{ color:#343434; text-align:center; margin:1.27rem 0; }
 .stn-category ul{width:93.6%;margin:0 auto;}
 .stn-category li{ width:33.33%; float:left; text-align:center; margin-bottom:.8rem; }
+.stn-category ul.forth li{ width:25%;}
 .stn-category li a{ display:block; width:3.7rem; margin:0 auto; }
 .stn-category li a .s-img{ display:block; width:3.7rem; height:3.7rem;  border-radius:10px; }
 .stn-category li a .s-img img{ width:100%; height:auto; }
