@@ -1,0 +1,46 @@
+/*导航*/
+nav {
+	box-shadow: 0 0 0.125rem #efefef;background-color:#fff;
+}
+
+nav.cjnav{ margin-top:0rem; background:#fff; border:solid #dddddd; border-width:.025rem 0;}
+nav li {
+	float: left;
+	width: 25%;
+	text-align: center;
+    padding-top: .5rem;
+    border-bottom:1px solid #f1f1f1;
+}
+nav li a {
+	display: block;
+
+}
+nav li.li-last-line a{border-bottom: none;}
+nav li a span {
+	display: block;
+	width: 1.575rem;
+	height: 1.575rem;
+	margin: 0 auto;
+/*	border-radius: 100%;*/
+	text-align: center;
+}
+nav li a span.big{
+	width: 1.95rem;
+	height: 1.95rem;
+}
+
+nav li a span img {
+	width: 100%;
+	height: 100%;
+}
+nav li a p {
+	font-size: .8rem;
+	color: #464646;
+    padding:0.1rem 0 0.4rem;
+	line-height:0.7rem;
+}
+/*
+@media screen and (max-width:320px){
+	nav li p{ font-size:0.55rem;}
+}
+*/
