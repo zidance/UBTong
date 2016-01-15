@@ -9,12 +9,323 @@
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="format-detection" content="telephone=no,email=no" />
     <link href="../../../common/css/main.css" rel="stylesheet" type="text/css" />
-    <script src="../../../common/js/zepto-1.16.min.js"></script>
+    <link href="synopsis/synopsis2/res/css/synopsis.css" rel="stylesheet" type="text/css"/>
+    <link href="notice/notice1/res/css/notice.css" rel="stylesheet" type="text/css"/>
+    <link href="project/project3/res/css/service.css" rel="stylesheet" type="text/css"/>
+    <script src="notice/notice1/res/js/jquery-1.7.2.min.js"></script>
     <script src="../../../common/js/main.js"></script>
+    <script src="project/project3/res/js/service.js"></script>
 </head>
 
-<body style="background:#f7f5f5;">
+<body style="background:#f5f5f9;">
+	<!--服务网点简介-->
+    <section class="stn-synopsis">
+        <span class="s-img"><img src="synopsis/synopsis2/res/img/img1.png" /></span>
+        <div class="synopsis">
+            <p class="p-name fz32">服务网xxxxxxx名称</p>
+            <p class="addr fz28">晋安区福光南路世纪金辉二期50座3-8店</p>
+
+            <div class="btn">
+                <a class="fz28" href="#">电话咨询</a>
+                <a class="fz28" href="#">路线导航</a>
+            </div>
+        </div>
+		<div class="clr"></div>
+    </section>
+    <!--服务网点简介-end-->
+    
+    <!-- 轮播公告 -->
+    <section class="stn-notice-horizontal">
+        <em class="em-notice"><img src="notice/notice1/res/img/dot.png" /></em>
+        <div class="wrap">
+            <ul class="ul-slide" id="UlSlide">
+                <li><a class="a-name fz24" href="#">今日上新，全场满69元包邮！1</a></li>
+                <li><a class="a-name fz24" href="#">今日上新，全场满69元包邮！2</a></li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        jQuery.noConflict;
+        var $$=jQuery;
+        $$(function() {
+            /*初始化*/
+            var _speed = 10, //几秒过一屏
+                _obj = $$('#UlSlide'),
+                _wrap = _obj.parent('.wrap'),
+                _item = _obj.find('li'),
+                _wid = _wrap.width();
 
 
+                _item.css('min-width', _wid)
+            var _objWid = _obj.width()
+
+            //尾部加入头一个li
+            $$(_obj).append(_item.eq(0).clone())
+
+
+            var _delay = _objWid / _wid * _speed * 1000,
+                _initleft = _item.eq(0).width()
+
+            function _scroll() {
+                _obj.animate({
+                    left: -_objWid,
+                }, _delay, 'linear', function() {
+                    _obj.css('left', 0)
+                    _scroll()
+                })
+
+            }
+            _scroll()
+
+
+            _obj.on('mouseenter', function() {
+                _obj.stop(true)
+            })
+            _obj.on('mouseleave', function() {
+                _scroll()
+            })
+        })
+    </script>
+ 	<!-- 轮播公告 -end -->
+    
+    
+    <section class="p-service">
+    	<div class="left-service">
+        	<ul>
+            	<li class="hot act" id="a11"><a href="#a1" class="fz28">热销排行</a></li>
+                <li id="a22"><a href="#a2" class="fz28">底盘装甲底盘装甲底盘装甲底盘装甲</a></li>
+                <li id="a33"><a href="#a3" class="fz28">抛光封釉</a></li>
+                <li id="a44"><a href="#a4" class="fz28">机油套餐</a></li>
+                <li id="a55"><a href="#a5" class="fz28">室内桑拿</a></li>
+                <li id="a33"><a href="#a3" class="fz28">抛光封釉</a></li>
+                <li id="a44"><a href="#a4" class="fz28">机油套餐</a></li>
+                <li id="a55"><a href="#a5" class="fz28">室内桑拿</a></li>
+                <li id="a33"><a href="#a3" class="fz28">抛光封釉</a></li>
+                <li id="a44"><a href="#a4" class="fz28">机油套餐</a></li>
+                <li id="a55"><a href="#a5" class="fz28">室内桑拿</a></li>
+                <li id="a33"><a href="#a3" class="fz28">抛光封釉</a></li>
+                <li id="a44"><a href="#a4" class="fz28">机油套餐</a></li>
+                <li id="a55"><a href="#a5" class="fz28">室内桑拿</a></li>
+            </ul>
+        </div>
+        
+        <div class="right-service">
+        	<div class="pro" id="a1">
+            	<div class="r-title fz20">热销排行（10）</div>
+                <ul>
+                    <li>
+                    	<a href="###" class="a-img"><img src="project/project3/res/img/img.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥111.00</p>
+                            <div class="edit">
+                            	<a class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                    <li class="last">
+                    	<a href="###" class="a-img"><img src="project/project3/res/img/img.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥120.00</p>
+                            <div class="edit">
+                            	<a class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                </ul>
+            </div>
+        	
+            <div class="pro" id="a2">
+            	<div class="r-title fz20">底盘装甲（10）</div>
+                <ul>
+                    <li>
+                    	<a href="###" class="a-img"><img src="project/project3/res/img/img.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥120.00</p>
+                            <div class="edit">
+                            	<a class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                    <li class="last">
+                    	<a href="###" class="a-img"><img src="project/project3/res/img/img.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥120.00</p>
+                            <div class="edit">
+                            	<a href="###" class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a href="###" class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                </ul>
+            </div>
+            
+            
+            <div class="pro" id="a3">
+            	<div class="r-title fz20">抛光封釉（10）</div>
+                <ul>
+                    <li>
+                    	<a href="###" class="a-img"><img src="project/project3/res/img/img.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥120.00</p>
+                            <div class="edit">
+                            	<a href="###" class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a href="###" class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                    <li class="last">
+                    	<a href="###" class="a-img"><img src="project/project3/res/img/img.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥120.00</p>
+                            <div class="edit">
+                            	<a href="###" class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a href="###" class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="pro" id="a4">
+            	<div class="r-title fz20">机油套餐（10）</div>
+                <ul>
+                    <li>
+                    	<a href="###" class="a-img"><img src="project/project3/res/img/img.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥120.00</p>
+                            <div class="edit">
+                            	<a href="###" class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a href="###" class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                    <li class="last">
+                    	<a href="###" class="a-img"><img src="project/project3/res/img/img.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥120.00</p>
+                            <div class="edit">
+                            	<a href="###" class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a href="###" class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                </ul>
+            </div>
+            
+            
+            <div class="pro" id="a5">
+            	<div class="r-title fz20">室内桑拿（10）</div>
+                <ul>
+                    <li>
+                    	<a href="###" class="a-img"><img src="../../../details/layout1/introduce/introduce1/res/img/img11.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥120.00</p>
+                            <div class="edit">
+                            	<a href="###" class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a href="###" class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                    <li class="last">
+                    	<a href="###" class="a-img"><img src="../../../details/layout1/introduce/introduce1/res/img/img1.jpg"/></a>
+                        <div class="r-detail">
+                        	<p class="p-name fz28">国光SJ/CD 15W/40机国光SJ/CD 15W/40机国光SJ/CD 15W/40机</p>
+                            <p class="p-num fz24">销量 0</p>
+                            <p class="p-price fz24">￥120.00</p>
+                            <div class="edit">
+                            	<a href="###" class="red"></a>
+                                <span class="num fz24">0</span>
+                                <a href="###" class="add"></a>
+                            </div>
+                        </div>
+                    	<div class="clr"></div>
+                    </li>
+                </ul>
+            </div>
+            <div style="height:3.5rem; width:100%;">&nbsp;</div>
+        </div>
+    	<div class="clr"></div>
+   		
+    </section>
+    
+    
+    <section class="fixed-bottom" id="fix-bottom">
+    	<div class="bot-bg"></div>
+        <div class="bot-content">
+        	<div class="cart-info">
+            	<span class="cart">&nbsp;</span>
+                <span class="info fz24">1</span>
+            </div>
+        	<p class="sum fz36">￥120.00</p>
+            <a href="###" class="go-buy fz32">购 买</a>
+        </div>
+    </section>
+    <script type="text/javascript">Settlement();setScrollLeft();</script>
+    
+    
+    <script>
+	window.onload=function(){
+		var _a = $('.pro a');
+		var _h = parseInt(_a.css('min-height'));
+		
+		var _img = _a.find('img');
+		
+		for(var i = 0; i<_img.length;i++){
+			var _this = _img.eq(i);
+			if(_this.width()<120){
+				_this.width('auto')	
+			}else{
+				_this.width('100%');		
+			}
+			
+			if(_this.height()<_h){
+				var _thisH = ((_h-_this.height())/2)+'px';
+				_this.css('margin-top',_thisH);
+			}
+			
+		}	
+		
+	}
+
+    </script>
 </body>
 </html>

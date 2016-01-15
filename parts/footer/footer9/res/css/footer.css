@@ -1,6 +1,6 @@
 footer {
 	width: 100%;
-	height: 3.59rem;
+	height: 2.475rem;
 	box-sizing: border-box;
 	border-top: 1px solid #c6c6c6;
 	position: fixed;
@@ -8,7 +8,7 @@ footer {
 	bottom: 0;
 	left: 0;
 	background: #f8f8f8;
-    max-width: 640px;
+    max-width: 16rem;
     right:0;
     margin:0 auto;
 }
@@ -18,20 +18,20 @@ footer li {
 }
 footer li a {
 	display: block;
-	height: 3.59rem;
+	height: 2.475rem;
 	text-align: center;
 }
 footer li a .s-icon {
 	display: inline-block;
-	width: 1.63rem;
-	height: 1.63rem;
-	margin-top: .5rem;
-	margin-bottom:.1rem;
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-top: .35rem;
 }
 
 footer li a .s-icon img {
+	display:block;
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 footer li a .s-icon img.big{
 	width: 88%;
