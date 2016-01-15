@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <link href="../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../common/css/main.css" rel="stylesheet" type="text/css" />
     <link href="pic/pic1/res/css/pic.css" rel="stylesheet" type="text/css" />
     <link href="information/information1/res/css/information.css" rel="stylesheet" type="text/css" />
     <link href="evaluate/evaluate1/res/css/evaluate.css" rel="stylesheet" type="text/css" />
     <link href="../../../parts/boxcart/boxcart1/res/css/boxcart.css" rel="stylesheet" type="text/css" />
     <link href="../../../common/css/hover.css" rel="stylesheet" type="text/css" />
     <script src="../../../common/js/zepto-1.16.min.js"></script>
-    <script src="../../../common/js/default.js"></script>
+    <script src="../../../common/js/main.js"></script>
 </head>
 
 <body style="background:#f4f4f4;">
@@ -102,24 +102,27 @@
    <!--快捷购物车栏-->
    <script>
       $(function(){
-         var _boxcart = $('#BoxCart');
-         var _btn = $('#BtnBoxCart');
-         var _content = _boxcart.find('.boxcart-nav');
+		var _boxcart = $('#BoxCart');
+		var _btn = $('#BtnBoxCart');
+		var _content = _boxcart.find('.boxcart-nav');
+		var _num = 3.5 + 2*_content.find('a').size() + 'rem';
 
-         _btn.click(function(){
-            if(_btn.hasClass('act')){
-               _content.find('a').css('display','none');
-               _content.css({'width':'3.24rem','transition':'width 1s'});
-               _btn.removeClass('act');
-           }else{
-               _content.css({'width':'16.24rem','transition':'width 0.8s'});
-               setTimeout(function(){
-                  _content.find('a').css('display','inline-block');
-              },400);
-               _btn.addClass('act');
-           }
-       })
-     })
+		_btn.click(function(){
+			if(_btn.hasClass('act')){
+				_content.find('a').css('display','none');
+				_content.css({'width':'2.25rem','transition':'width 1s'});
+				_btn.removeClass('act');
+			}else{
+				
+				_content.css({'width':_num,'transition':'width 0.8s'}); 
+				/* 4枚图标width为16.84rem  3枚图标width为13.84rem  2枚图标width为10.24rem */
+				setTimeout(function(){
+					_content.find('a').css('display','inline-block');
+				},400);
+				_btn.addClass('act');
+			}
+		})
+	})
  </script>
 
  <div class="box-cart" id="BoxCart">
