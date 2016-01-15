@@ -42,12 +42,12 @@
 .banner .slider #pagenavi {
 	position: absolute;
 	left: 0;
-	bottom: .3rem;
+	bottom: .4rem;
 	text-align: center;
 	width: 100%;
 }
 .banner .slider #pagenavi a {
-    display:inline-block; width:7.1%; height:0.175rem; margin:0 .1rem;  background:#fff;vertical-align: bottom;
+    display:inline-block; width:0.25rem; height:0.25rem; margin:0 .125rem;  background:#a4a4a4;vertical-align: bottom; border-radius:50%;
 /*
 	width: 10px;
 	height: 10px;
@@ -63,7 +63,7 @@
 */
 }
 .banner .slider #pagenavi.dotColor a{
-	background:#a4a4a4;
+	background:#e84327;
 }
 .banner .slider #pagenavi a.active {
 	/*background: #e60012;*/background:#f77a02;
@@ -124,3 +124,7 @@
 
 .banner .erweima{ display:block; width:1.5rem; height:1.5rem; background:url(../img/erweima.png); position:absolute; bottom:0; right:0; z-index:10000; text-indent:-9999px; background-size:100% 100%;}
 
+
+
+#close{ display:block; width:1.45rem; height:1.45rem; border-radius:50%; text-align:center; background:#000; opacity:0.5; filter:alpha(opacity:50); position:absolute;  top:0.4rem; left:0.4rem; z-index:10000;}
+#close img{ width:.575rem; height:.575rem;}

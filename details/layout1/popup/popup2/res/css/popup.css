@@ -2,13 +2,12 @@
 
 .box-nopopup{ width:100%; background:#fff;display:block;border-top:1px solid #d9d9d9;}
 
-.button-nopopup{ width:100%; height:3.27rem; line-height: 3.27rem; border:solid #d9d9d9; border-width:0 0 1px 0; background-color:#fff; background-size:.58rem 1.09rem; padding-left:5%; text-align:left;
-box-sizing: border-box;margin-top:.72rem;}
+.button-nopopup{ width:100%; height:2.25rem; line-height: 2.25rem; border:solid #d9d9d9; border-width:0 0 1px 0; background-color:#fff; background-size:.4rem .75rem; padding-left:5%; text-align:left;box-sizing: border-box;margin-top:.5rem;}
 
-.box-nopopup .type{ padding:.79rem 0 .43rem .79rem; border-bottom:1px solid #e5e5e5; }
-.box-nopopup .type p{ color:#585858; margin-bottom:.3rem; }
-.box-nopopup .type li{display: inline-block; margin:0 3% .72rem 0; }
-.box-nopopup .type li a{ display:block;position:relative; border:1px solid #999999;box-sizing: border-box;border-radius:4px; text-align:center; color:#999999;width:100%;height:100%;box-sizing:border-box;padding:0 1rem; min-width:4rem; line-height:2; overflow: hidden;}
+.box-nopopup .type{ padding:.55rem 0 .3rem .55rem; border-bottom:1px solid #e5e5e5; }
+.box-nopopup .type p{ color:#585858; margin-bottom:.2rem; }
+.box-nopopup .type li{display: inline-block; margin:0 3% .5rem 0; }
+.box-nopopup .type li a{ display:block;position:relative; border:1px solid #999999;box-sizing: border-box;border-radius:4px; text-align:center; color:#999999;width:100%;height:100%;box-sizing:border-box;padding:0 .7rem; min-width:2.75rem; line-height:2; overflow: hidden;}
 
 .box-nopopup .type li a::after{width:199%;}
 /*IOS下,边框显示不全修复*/
@@ -16,26 +15,26 @@ box-sizing: border-box;margin-top:.72rem;}
 .box-nopopup .type li a.noAct{ border: 1px dotted; border-color:#cecece; color:#cecece;  }
 
 /*手机端,存在border的缩放*/
-.box-nopopup .type li a.color em{position:absolute;  width:.9rem;height:.9rem;box-sizing:border-box;right:0rem;bottom: 0rem; border:.9rem solid #69c2c0;border-left-color:transparent !important;border-top-color:transparent !important;}
-.box-nopopup .type li a.color em::before{content:''; position:absolute;z-index:1;right: 0;bottom: 0;width:.5rem;height:.6rem;background: url(../img/select.png) no-repeat right bottom /100%;}
+.box-nopopup .type li a.color em{position:absolute;  width:.625rem;height:.625rem;box-sizing:border-box;right:0rem;bottom: 0rem; border:.625rem solid #69c2c0;border-left-color:transparent !important;border-top-color:transparent !important;}
+.box-nopopup .type li a.color em::before{content:''; position:absolute;z-index:1;right: 0;bottom: 0;width:.35rem;height:.425rem;background: url(../img/select.png) no-repeat right bottom /100%;}
 .box-nopopup .type li a.color em::after{right:0;bottom: 0;}
 
 /*pc端,因border不缩放,块宽高为两块border大小(right+bottom)*/
 @media (-moz-device-pixel-ratio: 1), (-webkit-device-pixel-ratio: 1), (device-pixel-ratio: 1){
-    .box-nopopup .type li a.color em{border-width:.3rem;width:.6rem;height:.6rem;}
-    .box-nopopup .type li a.color em::before{width:.35rem;height:.4rem;}
+    .box-nopopup .type li a.color em{border-width:.2rem;width:.425rem;height:.425rem;}
+    .box-nopopup .type li a.color em::before{width:.25rem;height:.275rem;}
     .box-nopopup .type li a::after{width:100%;}
 }
 
 
 
-.box-nopopup .type-pic{padding-bottom:.55rem;}
-.box-nopopup .type-pic li{width:6.3rem;height:8.14rem;margin:.2rem 2% .6rem 0;}
+.box-nopopup .type-pic{padding-bottom:.375rem;}
+.box-nopopup .type-pic li{width:4.325rem;height:5.6rem;margin:.15rem 2% .425rem 0;}
 .box-nopopup .type-pic li a{position:relative;z-index: 2;height:100%;width:100%;overflow:hidden;box-sizing: border-box;}
-.box-nopopup .type-pic li a img{position:absolute;left:0px;top:0px;width:99%;height:6.3rem;}
-.box-nopopup .type-pic li a p{position: absolute;bottom:0;left:0;width:100%;text-align: center;height:1.84rem;line-height:1.84rem;margin-bottom:0;}
+.box-nopopup .type-pic li a img{position:absolute;left:0px;top:0px;width:99%;height:4.325rem;}
+.box-nopopup .type-pic li a p{position: absolute;bottom:0;left:0;width:100%;text-align: center;height:1.275rem;line-height:1.275rem;margin-bottom:0;}
 
-
+/*
 @media screen and (min-width:320px) and (max-width:640px){
     .box-nopopup .type-pic li{width:4.5rem;height:6rem;margin:.2rem 1.1rem .6rem 0;}
     .box-nopopup .type-pic li a img{height:4.5rem;}
@@ -47,3 +46,4 @@ box-sizing: border-box;margin-top:.72rem;}
     .box-nopopup .type-pic li a p{height:1.84rem;line-height:1.84rem;}
     
 }
+*/

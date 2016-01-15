@@ -1,25 +1,28 @@
 body{ background:#f7f5f5; }
 
-.details-introduce{ position:relative; z-index:10;margin-top:.72rem; width:100%;overflow: hidden;}
-.details-introduce nav{ border:solid #e6e6e6; border-width:1px 0; width:100%; line-height:3.16rem; background:#fff; left:0; }
+.details-introduce{ position:relative; z-index:10;margin-top:.5rem; width:100%;overflow: hidden;}
+.details-introduce nav{ border:solid #e6e6e6; border-width:1px 0; width:100%; line-height:2rem; background:#fff; left:0; }
 .details-introduce nav li{ width:33.33%;/*默认*/ float:left; box-sizing:border-box; text-align:center; }
 .details-introduce nav .ul-col-2 li{width:50%;}
 .details-introduce nav .ul-col-3 li{width:33.33%;}
 .details-introduce nav .ul-col-4 li{width:25%;}
 
 .details-introduce nav li a{ display:block; color:#000; border-right:1px solid #e6e6e6; }
+.details-introduce nav li a.color{  color:#ff3430 !important;}
 .details-introduce nav li a.act{ color:#ff4949; }
 .details-introduce nav li:last-child a{ border-right:none; }
 .details-introduce .introduce-con{  margin:0 auto; }
-.details-introduce .introduce-con .introduce-item{ margin-top:.54rem; display:none; width:98%;}
+.details-introduce .introduce-con .introduce-item{ margin-top:.375rem; display:none; width:98%;}
+.details-introduce .introduce-con .introduce-item.font{ line-height:1.05rem; padding:0.9rem 1rem; width:auto !important; background:#fff; margin-top:0; }
+.details-introduce .introduce-con .introduce-item.font h5{ text-indent:1.35rem;}
 .details-introduce .introduce-con .introduce-item.appraise{width:100%;margin-top:0;}/*评价类满宽,好做分隔border*/
 .details-introduce .introduce-con img{ width:100%;}
 .introduce-con .introduce-item .introduce-gbook{}
 .introduce-con .introduce-item .introduce-gbook li{ padding:4.2%;/*27/640*/ border-bottom:1px solid #dbdbdb; }
 .introduce-con .introduce-item .introduce-gbook .p-tel{ color:#282828; font-weight: bold;}
-.introduce-con .introduce-item .introduce-gbook .p-gbook{ color:#000; margin-top:.2rem; }
-.introduce-con .introduce-item .introduce-gbook .p-time{ color:#bebebe; margin-top:.6rem; }
-.introduce-con .a-intgbook{ display:block; color:#9b9b9b; text-align:center; padding:.89rem 0; }
+.introduce-con .introduce-item .introduce-gbook .p-gbook{ color:#000; margin-top:.15rem; }
+.introduce-con .introduce-item .introduce-gbook .p-time{ color:#bebebe; margin-top:.4rem; }
+.introduce-con .a-intgbook{ display:block; color:#9b9b9b; text-align:center; padding:.625rem 0; }
 
 
 /*评论图片*/
