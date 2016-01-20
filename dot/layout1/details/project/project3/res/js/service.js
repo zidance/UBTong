@@ -90,9 +90,6 @@ function setScrollLeft(){
 		$('.left-service').css({'height':_h-_t,'overflow-y':'hidden'});	
 		$('.left-service ul').css({'height':_h-_t,'overflow-y':'hidden'});	
 	};
-	
-	
-
 };
 
 $(function(){
@@ -110,15 +107,14 @@ var c= console.log.bind(console)
 
 	var scrollEnd = function() {
 		// 判断此刻到顶部的距离是否和之前的距离相等
-
 			for(var i = 1;i < _length+1; i++){
 				var _top = $('#a'+i).offset().top-$('.right-service').offset().top;
 				if(_top <= 0){
-					
 					$('.left-service li').removeClass('act');
-					$('#a'+i+i).addClass('act');	
+					$('#a'+i+i).addClass('act');
 				}
 			}
+			
 			//此处停止
 			clearInterval(interval);
 			interval = null;

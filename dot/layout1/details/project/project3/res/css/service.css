@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+.p-head{ height:1.7rem; width:100%; background:#fff;}
+.p-head li{ float:left; width:50%; height:1.7rem; line-height:1.7rem; text-align:center; box-sizing:border-box;}
+.p-head li:nth-child(2n+1){ border-right:1px solid #d9d9d9;}
+.p-head li a{ display:block; color:#979797;}
+.p-head li a.act{ color:#f2484c;}
+
+
 .p-service{ border-top:1px solid #d9d9d9; background:#fff; position:relative; background:#fff; height:auto;}
 .p-service .left-service{ width:4.4rem;padding-right:.5rem;  background:#fff; position:fixed; left:0; top:0;}
 .p-service .left-service::-webkit-scrollbar{width:0px}
@@ -16,8 +23,8 @@
 
 .p-service .right-service li{ padding:.5rem 0; border-bottom:1px solid #d9d9d9;}
 .p-service .right-service li.last{ border-bottom:none;}
-.p-service .right-service li a.a-img{ display:block; float:left; width:3rem; height:3rem; margin-right:.425rem; overflow:hidden;}
-.p-service .right-service li a.a-img img{ max-width:100%; width:auto;}
+.p-service .right-service li span.a-img{ display:block; float:left; width:3rem; height:3rem; margin-right:.425rem; overflow:hidden;}
+.p-service .right-service li span.a-img img{ max-width:100%; width:auto;}
 .p-service .right-service li .r-detail{ width:7.3rem; float:left; height:3rem; position:relative;}
 .p-service .right-service li .r-detail .p-name{ color:#070707; line-height:0.9rem; height:.9rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-bottom:.3rem;}
 .p-service .right-service li .r-detail .p-num{ color:#999; height:.725rem; height:.725rem; margin-bottom:.275rem;}
