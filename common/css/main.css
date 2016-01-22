@@ -14,7 +14,7 @@ table{border-collapse:collapse;}
 .clr{clear:both;display:block;font-size:0;height:0;line-height:0;overflow:hidden;}
 
 
-
+/*
 .fz60{ font-size:1.5rem;}
 .fz58{ font-size:1.45rem;}
 .fz56{ font-size:1.4rem;}
@@ -41,8 +41,33 @@ table{border-collapse:collapse;}
 .fz14{ font-size:.35rem;}
 .fz12{ font-size:.3rem;}
 
+*/
 
-
+.fz60{ font-size:30px;}
+.fz58{ font-size:29px;}
+.fz56{ font-size:28px;}
+.fz54{ font-size:27px;}
+.fz52{ font-size:26px;}
+.fz50{ font-size:25px;}
+.fz48{ font-size:24px;}
+.fz46{ font-size:23px;}
+.fz44{ font-size:22px;}
+.fz42{ font-size:21px;}
+.fz40{ font-size:20px;}
+.fz38{ font-size:19px;}
+.fz36{ font-size:18px;}
+.fz34{ font-size:17px;}
+.fz32{ font-size:16px;}
+.fz30{ font-size:15px;}
+.fz28{ font-size:14px;}
+.fz26{ font-size:13px;}
+.fz24{ font-size:12px;}
+.fz22{ font-size:11px;}
+.fz20{ font-size:10px;}
+.fz18{ font-size:9px;}
+.fz16{ font-size:8px;}
+.fz14{ font-size:7px;}
+.fz12{ font-size:6px;}
 
 /*边框细化*/
 .bd::after{
