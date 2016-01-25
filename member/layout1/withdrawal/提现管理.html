@@ -91,7 +91,7 @@
         
         </div>
 
-        <a class="a-btn fz32" href="#" id="btn">确认提现</a>
+        <a class="a-btn fz32" href="#" id="btn" data-index='0'>确认提现</a>
     </div>
     <div id="Background"></div>
     <!--银行卡提现-end-->
@@ -107,7 +107,7 @@
     </script>
     <section class="stn-withdrawallists" id="Lists">
     	<ul>
-        	<li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><p class="fz32">支付宝</p></li>
+        	<li><input type="checkbox" class="trade_checkbox" checked="checked" onclick="tradeCheckboxClick(this)" /><p class="fz32">支付宝</p></li>
             <li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><p class="fz32">财付通</p></li>
             <li><input type="checkbox" class="trade_checkbox" onclick="tradeCheckboxClick(this)" /><p class="fz32">储蓄卡</p></li>
         </ul>
@@ -147,6 +147,7 @@
 			_bg.hide();
 			_boxpop.show();
 			_bg.show();
+
 		})
 		_delpop.click(function(){
 			_boxpop.hide();
@@ -174,6 +175,8 @@
 				{
 					$("#BoxWithdraw").find(".table-popup").hide();
                     $("#Table"+i).show();
+                  //后端行为判断的依据,i为选中的提现方式(按顺序排列的数字形式)
+                  $('#btn').attr('data-index',i)
 				}
 			})
 		}
