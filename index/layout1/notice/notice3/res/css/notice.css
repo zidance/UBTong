@@ -8,4 +8,5 @@
 .stn-notice-horizontal .wrap .ul-slide{position:absolute;left:0px;top:0;}
 
 .stn-notice-horizontal .wrap li{display: inline-block;text-align: left;}
-.stn-notice-horizontal .wrap li a{color: inherit;}
+/*-webkit-text-size-adjust: none; 用于兼容IOS下公告内容长时,字体变大的bug*/
+.stn-notice-horizontal .wrap li a{color: inherit;-webkit-text-size-adjust: none;}
