@@ -81,31 +81,32 @@ h6{ font-size:.3rem}
 ```
 - 字体并设置行高
 ```
-.fz60{ font-size:1.5rem;}
-.fz58{ font-size:1.45rem;}
-.fz56{ font-size:1.4rem;}
-.fz54{ font-size:1.35rem;}
-.fz52{ font-size:1.3rem;}
-.fz50{ font-size:1.25rem;}
-.fz48{ font-size:1.2rem;}
-.fz46{ font-size:1.15rem;}
-.fz44{ font-size:1.1rem;}
-.fz42{ font-size:1.05rem;}
-.fz40{ font-size:1.0rem;}
-.fz38{ font-size:.95rem;}
-.fz36{ font-size:.9rem;}
-.fz34{ font-size:.85rem;}
-.fz32{ font-size:.8rem;}
-.fz30{ font-size:.75rem;}
-.fz28{ font-size:.7rem;}
-.fz26{ font-size:.65rem;}
-.fz24{ font-size:.6rem;}
-.fz22{ font-size:.55rem;}
-.fz20{ font-size:.5rem;}
-.fz18{ font-size:.45rem;}
-.fz16{ font-size:.4rem;}
-.fz14{ font-size:.35rem;}
-.fz12{ font-size:.3rem;}
+.fz60{ font-size:30px;}
+.fz58{ font-size:29px;}
+.fz56{ font-size:28px;}
+.fz54{ font-size:27px;}
+.fz52{ font-size:26px;}
+.fz50{ font-size:25px;}
+.fz48{ font-size:24px;}
+.fz46{ font-size:23px;}
+.fz44{ font-size:22px;}
+.fz42{ font-size:21px;}
+.fz40{ font-size:20px;}
+.fz38{ font-size:19px;}
+.fz36{ font-size:18px;}
+.fz34{ font-size:17px;}
+.fz32{ font-size:16px;}
+.fz30{ font-size:15px;}
+.fz28{ font-size:14px;}
+.fz26{ font-size:13px;}
+.fz24{ font-size:12px;}
+.fz22{ font-size:11px;}
+.fz20{ font-size:10px;}
+.fz18{ font-size:9px;}
+.fz16{ font-size:8px;}
+.fz14{ font-size:7px;}
+.fz12{ font-size:6px;}
+
 ```
 - 下划线/删除线/上划线
 ```
