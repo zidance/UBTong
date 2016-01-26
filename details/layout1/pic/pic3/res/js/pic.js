@@ -85,7 +85,7 @@ function imgSize(wrap, isFullScreen) {
     //                    thisImg.height(wrapHei)
     //                }
 
-    
+
     //目前采用大小图都缩放,按宽=容器宽处理,设宽后高度不写(auto)即可
     //这种情况下 nWidHei是遍历所有图片后的最小值,thisWidHei 必大于等于 nWidHei,不作比例判断
     thisImg.width(wrapWid);
@@ -105,7 +105,7 @@ function imgSize(wrap, isFullScreen) {
 //      thisImg.css('margin-top', (wrapHei - thisHei) / 2);
       thisImg.css('margin-top', '-'+thisImg[0].offsetHeight / 2+'px');
     }
-    
+
   })
 
 }

@@ -4,16 +4,16 @@ function setScrollLeft(){
 	var _t= $('.right-service').offset().top;
 	//$('.left-service').css('top',_t);
 	if( $('.right-service').height()>(_h-_t)){
-		$('.right-service').css({'height':_h-_t,'overflow-y':'auto'});	
+		$('.right-service').css({'height':_h-_t,'overflow-y':'auto'});
 	}else{
-		$('.right-service').css({'height':_h-_t,'overflow-y':'auto'});	
+		$('.right-service').css({'height':_h-_t,'overflow-y':'auto'});
 	};
-	
+
 	if( $('.left-service').height()>(_h-_t)){
-		$('.left-service').css({'height':_h-_t,'overflow-y':'auto'});	
+		$('.left-service').css({'height':_h-_t,'overflow-y':'auto'});
 	}else{
-		$('.left-service').css({'height':_h-_t,'overflow-y':'hidden'});	
-		$('.left-service ul').css({'height':_h-_t,'overflow-y':'hidden'});	
+		$('.left-service').css({'height':_h-_t,'overflow-y':'hidden'});
+		$('.left-service ul').css({'height':_h-_t,'overflow-y':'hidden'});
 	};
 };
 
@@ -30,16 +30,16 @@ function setChange(_id){
 			_li.removeClass('act');
 			$(this).addClass('act');
 			_item.hide();
-			_item.eq(i).show();	
+			_item.eq(i).show();
 		})
 	})
-		
-	
+
+
 }
 
 
-	
-	
-	
-	
+
+
+
+
 

@@ -7,7 +7,7 @@
 .index-lists li .s-img .s-mark{position: absolute;padding:.075rem .175rem;background-color: #ff6633;border-radius: 0.125rem;top:.45rem;left:.45rem;color:#fff;}
 
 .index-lists li .product{padding:.15rem 3% .45rem;}
-.index-lists li .product .p-name{height:1.4rem;overflow: hidden;color: #282828; line-height:0.7rem; margin-bottom:0.25rem;display:-webkit-box !important;text-overflow:ellipsis;word-break:break-all;-webkit-box-orient:vertical;-webkit-line-clamp:2;} 
+.index-lists li .product .p-name{height:1.4rem;overflow: hidden;color: #282828; line-height:0.7rem; margin-bottom:0.25rem;display:-webkit-box !important;text-overflow:ellipsis;word-break:break-all;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
 .index-lists li .product .p-money{color:#ff3430;white-space: nowrap;}
 .index-lists li .product .p-money .s-price{color: #c8c8c8;;text-decoration: line-through;padding-left:.35rem;}
 .index-lists li .product .p-money .s-integral{color:#6633ff;}

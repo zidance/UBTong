@@ -16,7 +16,7 @@ function changeLeftNav(){
 			$('.info-ul a').removeClass('act');
 			$(this).find('a').addClass('act');
 		})
-	})	
+	})
 }
 
 
@@ -128,8 +128,8 @@ function switchObj(_id){
 		var _this = $(e);
 		_this.click(function(){
 			_a.removeClass('act');
-			$(this).addClass('act');	 
-		})	
+			$(this).addClass('act');
+		})
 	})
 }
 
