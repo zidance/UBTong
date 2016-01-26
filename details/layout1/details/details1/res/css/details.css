@@ -1,33 +1,34 @@
 body{ background:#f7f5f5; }
-.product-details{ width:90.625%; margin:0 auto; padding:.9rem 0; position:relative; }
+.product-details{ width:90.625%; margin:0 auto; padding:.625rem 0; position:relative; }
 .product-details .p-name{ color:#000; width:70%; }
-.product-details .p-money{ color:#939292; margin-top:.2rem; }
+.product-details .p-money{ color:#939292; margin-top:.15rem; }
 .product-details .p-money span{ color:#e52c02; }
-.product-details .p-money em{ color:#e52c02; margin-left:.5rem; }
-.product-details .p-money i{ color:#939292; text-decoration:line-through; margin-left:.5rem; }
-.product-details .p-num{ color:#939292; margin-top:.3rem; }
-.product-details .p-num span{ color:#e52c02; margin:0 .1rem; }
-.product-details .p-market{ color:#939292; text-decoration:line-through; margin-top:.4rem; }
-.product-details .p-prompt{ background:url(../img/prompt.png) no-repeat .3rem .6rem; background-size:1.01rem .98rem; padding:.5rem 0 .3rem 1.96rem; border-top:1px solid #e6e6e6; margin-top:.72rem; color:#585858; }
-.product-details .p-prompt2{ background:url(../img/prompt2.png) no-repeat .3rem .4rem; background-size:1.01rem .98rem; padding:.3rem 0 .3rem 1.96rem;color:#585858;margin-top:.1rem; }
-.product-details .details-num{ margin-top:.4rem; }
-.product-details .details-num .number-name{ color:#939292; float:left; margin:.3rem .8rem 0 0; }
-.product-details .number-input{ width:7.8125rem; height:1.63rem; float:left; }
-.product-details .number-input a{ float:left; width:2.54rem; height:1.63rem; line-height:1.43rem; text-align:center; border:1px solid #dbdbdb; color:#686868; box-sizing:border-box; }
+.product-details .p-money em{ color:#e52c02; margin-left:.35rem; }
+.product-details .p-money i{ color:#939292; text-decoration:line-through; margin-left:.35rem; }
+.product-details .p-num{ color:#939292; margin-top:.2rem; }
+.product-details .p-num span{ color:#e52c02; margin:0 .075rem; }
+.product-details .p-market{ color:#939292; text-decoration:line-through; margin-top:.275rem; }
+.product-details .p-prompt{ background:url(../img/prompt.png) no-repeat .2rem .425rem; background-size:0.675rem .7rem; padding:.35rem 0 .2rem 1.35rem; border-top:1px solid #e6e6e6; margin-top:.5rem; color:#585858; }
+.product-details .p-prompt2{ background:url(../img/prompt2.png) no-repeat .2rem .275rem; background-size:0.7rem .675rem; padding:.2rem 0 .2rem 1.35rem;color:#585858;margin-top:.1rem; }
+.product-details .details-num{ margin-top:.275rem; }
+.product-details .details-num .number-name{ color:#939292; float:left; margin:0 .55rem 0 0; }
+.product-details .number-input{ height:1.125rem; float:left; }
+.product-details .number-input a{ float:left; width:1.75rem; height:1.125rem; line-height:1.125rem; text-align:center; border:1px solid #dbdbdb; color:#686868; box-sizing:border-box; }
 .product-details .number-input .s-input{
 	float:left;
-	width:2.54rem;
-	height:1.63rem;
+	width:1.75rem;
+	height:1.125rem;
 	box-sizing:border-box;
 	border-top: 1px solid #dbdbdb;
 	border-bottom: 1px solid #dbdbdb;
 	background: #fff;
 }
-.product-details .number-input .s-input input{width:100%;height:100%;text-align: center;vertical-align: top;line-height: 1.63rem;}
+.product-details .number-input .s-input input{width:100%;height:100%;text-align: center;vertical-align: top;line-height: 1.125rem;}
 
-.product-details .a-collect{ display:block; background:url(../img/collect.png) no-repeat; background-size:3.23rem 3.77rem; width:3.23rem; height:3.77rem; position:absolute; top:0; right:3%; text-indent:-9999px; }
+.product-details .a-collect{ display:block; background:url(../img/collect.png) no-repeat; background-size:2.225rem 2.6rem; width:2.225rem; height:2.6rem; position:absolute; top:0; right:3%; text-indent:-9999px; }
 
-
+/*
 @media screen and (max-width:320px){
 	.product-details .details-num .number-name{ margin-top:.1rem; }
 }
+*/

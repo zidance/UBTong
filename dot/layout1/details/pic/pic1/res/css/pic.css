@@ -1,17 +1,17 @@
 /*ÂÖ²¥Í¼Æ¬*/
 .banner{ position:relative; border-bottom:1px solid #dddddd; }
 .banner .slider { z-index:1; display:block; margin:0 auto; overflow:hidden; position:relative; }
-.banner .slider .sliderlist{ position:absolute; width:2000px; left:0; top:0px; }
+.banner .slider .sliderlist{ position:absolute; width:50rem; left:0; top:0; }
 .banner .slider .sliderlist li{ float:left; width:100%; display:block; text-align:center; }
 .banner .slider .sliderlist li span{ margin:0 auto; display:inline-block; }
-.banner .slider .sliderlist li img{ width:100%; max-height:300px; }
-.banner .slider #pagenavi{ position:absolute; left:0; bottom:5px; text-align:center; width:100%;}
-.banner .slider #pagenavi a{ width:10px; height:10px; border-radius:100%; line-height:99em; background:#ffffff; margin:0 2px 0 2px; overflow:hidden; cursor:pointer; display:inline-block; *display:inline; zoom:1; }
+.banner .slider .sliderlist li img{ width:100%; max-height:7.5rem; }
+.banner .slider #pagenavi{ position:absolute; left:0; bottom:0.2rem; text-align:center; width:100%;}
+.banner .slider #pagenavi a{ width:.25rem; height:.25rem; border-radius:100%; line-height:99em; background:#ffffff; margin:0 .05rem 0 .05rem; overflow:hidden; cursor:pointer; display:inline-block; *display:inline; zoom:1; }
 .banner .slider #pagenavi a.active{ background:#e60012; }
 
-.banner .message{ background:#fff; padding:.72rem 2.8%; }
+.banner .message{ background:#fff; padding:.5rem 2.8%; }
 .banner .message .content{ float:left; width:75%; }
-.banner .message .content .p-name{ color:#000; line-height:1.2rem; }
+.banner .message .content .p-name{ color:#000; line-height:.825rem; }
 .banner .message .content .p-num{ color:#a7a7a7; }
 .banner .message .content .p-num span{ color:#ee2c6b; }
-.banner .message a{ display:block; float:right; width:20%; height:2.18rem; line-height:2.18rem; text-align:center; border-radius:4px; background:#ff6766; color:#fff; }
+.banner .message a{ display:block; float:right; width:20%; height:1.5rem; line-height:1.5rem; text-align:center; border-radius:4px; background:#ff6766; color:#fff; }

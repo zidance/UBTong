@@ -1,13 +1,13 @@
 /*赠送积分*/
-.stn-integral{ margin-top:.72rem; }
+.stn-integral{ margin-top:.5rem; }
 .pro-integral{  border:solid #dddddd; border-width:1px 0; background:#fff; padding-top: 3.75%;  }
-.stn-integral .integral{ position:relative; margin: 0 auto; font-size:0;height:3.59rem;text-align:center;white-space: nowrap;}
-.stn-integral .integral .integral-left{ width:1.09rem; height:100%; display: inline-block;position:relative;}
-.stn-integral .integral .integral-main{ display: inline-block; height:100%;line-height:3.8rem; color:#fff; font-weight:bold;vertical-align: top; }
+.stn-integral .integral{ position:relative; margin: 0 auto; font-size:0;height:2.475rem;text-align:center;white-space: nowrap;}
+.stn-integral .integral .integral-left{ width:0.75rem; height:100%; display: inline-block;position:relative;}
+.stn-integral .integral .integral-main{ display: inline-block; height:100%;line-height:2.625rem; color:#fff; font-weight:bold;vertical-align: top; }
 .stn-integral .integral .integral-main span{display: inline-block; position:relative; z-index:9; /*text-shadow:2px 2px 1px #e86735;*/height:100%;}
-.stn-integral .integral .integral-right{ width:2.18rem; height:100%; display: inline-block; }
-.stn-integral .integral .s-send{ width:2.32rem; height:2.43rem; position:absolute; top:.35rem; left:.46rem; }
-.stn-integral p{ color:#000;  line-height:1.5; max-width:87.5%;padding:.5rem 0 .8rem;margin:0 auto;}
+.stn-integral .integral .integral-right{ width:1.5rem; height:100%; display: inline-block; }
+.stn-integral .integral .s-send{ width:1.6rem; height:1.675rem; position:absolute; top:.25rem; left:.325rem; }
+.stn-integral p{ color:#000;  line-height:1.025; max-width:87.5%;padding:.35rem 0 .55rem;margin:0 auto;}
 
 .stn-integral .integral div{position:relative;top:0;}
 .stn-integral .integral div img{position:absolute;z-index: 1;height:100%;width:100%;}

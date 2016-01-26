@@ -1,16 +1,18 @@
 /*服务网点简介*/
-.stn-synopsis{ padding:.72rem 0; background:#fff; border-bottom:1px solid #dddddd; position:relative; }
-.stn-synopsis .s-img{ display:block; float:left; width:5.37rem; height:5.37rem; border:1px solid #d9d9d9; margin:0 1.05rem; }
+.stn-synopsis{ padding:.5rem 0; background:#fff; border-bottom:1px solid #dddddd; position:relative; }
+.stn-synopsis .s-img{ display:block; float:left; width:3.7rem; height:3.7rem; border:1px solid #d9d9d9; margin:0 .725rem; }
 .stn-synopsis .s-img img{ max-width:100%; height:auto; }
-.stn-synopsis .synopsis{ position:absolute; margin-left:7.47rem; }
+.stn-synopsis .synopsis{ position:absolute; margin-left:5rem; }
 .stn-synopsis .synopsis .p-name{ color:#000; }
-.stn-synopsis .synopsis .p-evaluation{ margin-top:2.5rem; }
-.stn-synopsis .synopsis .p-evaluation .s-good, .stn-synopsis .synopsis .p-evaluation .s-bad{ display:inline-block; line-height:1.52rem; background:url(../img/good.png) no-repeat; background-size:1.23rem 1.52rem; padding-left:1.59rem; }
-.stn-synopsis .synopsis .p-evaluation .s-bad{ background-image:url(../img/bad.png); margin-left:0.53rem; }
-.stn-synopsis .a-gbook{ display:block; position:absolute; right:1.05rem; bottom:.72rem; width:3.45rem; height:1.88rem; line-height:1.88rem; text-align:center; background:#f15a0c; color:#fff; border-radius:6px; }
+.stn-synopsis .synopsis .p-evaluation{ margin-top:1rem; }
+.stn-synopsis .synopsis .p-evaluation .s-good, .stn-synopsis .synopsis .p-evaluation .s-bad{ display:inline-block; line-height:1.05rem; background:url(../img/good.png) no-repeat; background-size:.85rem 1.05rem; padding-left:1.1rem; }
+.stn-synopsis .synopsis .p-evaluation .s-bad{ background-image:url(../img/bad.png); margin-left:0.375rem; }
 
+.stn-synopsis .a-gbook{ display:block; position:absolute; right:.775rem; bottom:.625rem; width:3.75rem; height:1.5rem; line-height:1.5rem; text-align:center; background:#f15a0c; color:#fff; border-radius:6px; }
+/*
 @media screen and (max-width:320px){
 	.stn-synopsis .synopsis .p-evaluation .s-bad{ margin-left:1.63rem; }
 	.stn-synopsis .a-gbook{ width:4.45rem; }
 	
 }
+*/

@@ -5,23 +5,28 @@
     <title>首页</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta content="telephone=no" name="format-detection" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+
+    <link href="../../common/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../parts/top/top5/res/css/top.css" rel="stylesheet" type="text/css"/>
     <link href="header/header5/res/css/header.css" rel="stylesheet" type="text/css" />
     <link href="advertising/advertising4/res/css/advertising.css" rel="stylesheet" type="text/css" />
     <link href="classification/classification3/res/css/classification.css" rel="stylesheet" type="text/css" />
     <link href="notice/notice3/res/css/notice.css" rel="stylesheet" type="text/css" />
     <link href="lists/lists6/res/css/lists.css" rel="stylesheet" type="text/css" />
+
     <link href="../../parts/footer/footer7/res/css/footer.css" rel="stylesheet" type="text/css" />
     <link href="../../parts/blank/blank1/res/css/blank.css" rel="stylesheet" type="text/css" />
+
     <link href="search/search1/res/css/search.css" rel="stylesheet" type="text/css" />
     <link href="nav/nav5/res/css/nav.css" rel="stylesheet" type="text/css" />
     <link href="daily/daily1/res/css/daily.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="notice/notice3/res/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
-    <script type="text/javascript" src="../../common/js/default.js"></script>
+    <script type="text/javascript" src="../../common/js/main.js"></script>
 	<script type="text/javascript">
 	$(function(){
     	$('#phone').bind('focus',function(){
@@ -34,7 +39,21 @@
     </script>
 </head>
 
-<body style="background:#dcdcdc;">
+<body style="background:#f5f5f9;">
+	<!--头部悬浮-->
+    <header class="header">
+    	<div class="top-bg"></div>
+    	<div class="top-detail">
+        	<a href="###" class="a-bill fz30">账单</a>
+            <div class="d-right">
+            	<a href="###" class="a-money">我的钱</a>
+                <a href="###" class="a-search">搜索</a>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </header>
+    <!--头部悬浮 end-->
+
     <!--轮播图片-->
     <script type="text/javascript" src="header/header5/res/js/touchslider.js"></script>
     <div class="banner">
@@ -44,10 +63,10 @@
                     <a href="###"><img src="header/header5/res/img/header2.jpg"></a>
                 </li>
                 <li>
-                    <a href="###"><img src="header/header5/res/img/header2.png"></a>
+                    <a href="###"><img src="header/header5/res/img/header1.jpg"></a>
                 </li>
                 <li>
-                    <a href="###"><img src="header/header5/res/img/header2.png"></a>
+                    <a href="###"><img src="header/header5/res/img/header2.jpg"></a>
                 </li>
             </ul>
             <div id="pagenavi">
@@ -132,7 +151,7 @@
     <section class="stn-daily-goods">
         <a class="dailyPopup" href="#">
             <img src="daily/daily1/res/img/goods-img1.png">
-            <p class="p-num">20</p>
+            <p class="p-num fz30">20</p>
         </a>
     </section>
     <section class="stn-daily-wrap">
@@ -156,9 +175,9 @@
                 <div class="income-wrap">
                     <div class="income">
                     	<span class="img"><img src="daily/daily1/res/img/logo-income.png"/></span>
-                        <p class="p-type fz32">哇塞最少吗</p>
-                        <p class="p-money fz34"><span class="fz48">0.28</span>+<span class="fz48">0.05</span>元</p>
-                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                        <p class="p-type fz34">哇塞最少吗</p>
+                        <p class="p-money fz34"><span class="fz54">0.28</span>+<span class="fz54">0.05</span>元</p>
+                        <p class="p-bottom fz20">已存入您的收益账户</p>
                     </div>
                 </div>
             </div>
@@ -168,9 +187,9 @@
                 <div class="income-wrap">
                     <div class="income">
                     	<span class="img"><img src="daily/daily1/res/img/logo-income.png"/></span>
-                        <p class="p-type fz32">快安慰下我</p>
-                        <p class="p-money fz34"><span class="fz48">0.38</span>+<span class="fz48">0.05</span>元</p>
-                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                        <p class="p-type fz34">快安慰下我</p>
+                        <p class="p-money fz34"><span class="fz54">0.38</span>+<span class="fz54">0.05</span>元</p>
+                        <p class="p-bottom fz20">已存入您的收益账户</p>
                     </div>
                 </div>
             </div>
@@ -180,9 +199,9 @@
                 <div class="income-wrap">
                     <div class="income">
                     	<span class="img"><img src="daily/daily1/res/img/logo-income.png"/></span>
-                        <p class="p-type fz32">貌似不错噢</p>
-                        <p class="p-money fz34"><span class="fz48">0.48</span>+<span class="fz48">0.05</span>元</p>
-                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                        <p class="p-type fz34">貌似不错噢</p>
+                        <p class="p-money fz34"><span class="fz54">0.48</span>+<span class="fz54">0.05</span>元</p>
+                        <p class="p-bottom fz20">已存入您的收益账户</p>
                     </div>
                 </div>
             </div>
@@ -192,9 +211,9 @@
                 <div class="income-wrap">
                     <div class="income">
                     	<span class="img"><img src="daily/daily1/res/img/logo-income.png"/></span>
-                        <p class="p-type fz32">女神么么哒</p>
-                        <p class="p-money fz34"><span class="fz48">0.58</span>+<span class="fz48">0.05</span>元</p>
-                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                        <p class="p-type fz34">女神么么哒</p>
+                        <p class="p-money fz34"><span class="fz54">0.58</span>+<span class="fz54">0.05</span>元</p>
+                        <p class="p-bottom fz20">已存入您的收益账户</p>
                     </div>
                 </div>
             </div>
@@ -204,9 +223,9 @@
                 <div class="income-wrap">
                     <div class="income">
                     	<span class="img"><img src="res/img/logo-income.png"/></span>
-                        <p class="p-type fz32">恭喜您抢到</p>
-                        <p class="p-money fz34"><span class="fz48">0.66</span>+<span class="fz48">0.05</span>元</p>
-                        <p class="p-bottom fz18">已存入您的收益账户</p>
+                        <p class="p-type fz34">恭喜您抢到</p>
+                        <p class="p-money fz34"><span class="fz54">0.66</span>+<span class="fz54">0.05</span>元</p>
+                        <p class="p-bottom fz20">已存入您的收益账户</p>
                     </div>
                 </div>
             </div>
@@ -250,10 +269,10 @@
     <!--导航-->
     <nav>
         <ul>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav20.png" /></span><p>加盟赚钱</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav21.png" /></span><p>品牌入驻</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav22.png" /></span><p>六六新闻</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav23.png" /></span><p>联系客服</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav20.png" /></span><p class="fz20">加盟赚钱</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav21.png" /></span><p class="fz20">品牌入驻</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav22.png" /></span><p class="fz20">六六新闻</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav23.png" /></span><p class="fz20">联系客服</p></a></li>
         </ul>
         <div class="clr"></div>
     </nav>
@@ -275,14 +294,14 @@
     <!--导航-->
     <nav>
         <ul>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav1.png" /></span><p>女装女鞋</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav2.png" /></span><p>男装男鞋</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav3.png" /></span><p>男女内衣</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav4.png" /></span><p>母婴童用</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav5.png" /></span><p>休闲食品</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav6.png" /></span><p>百货日化</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav7.png" /></span><p>护肤彩妆</p></a></li>
-            <li><a href="#"><span><img src="nav/nav5/res/img/nav8.png" /></span><p>青春推荐</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav1.png" /></span><p class="fz20">女装女鞋</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav2.png" /></span><p class="fz20">男装男鞋</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav3.png" /></span><p class="fz20">男女内衣</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav4.png" /></span><p class="fz20">母婴童用</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav5.png" /></span><p class="fz20">休闲食品</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav6.png" /></span><p class="fz20">百货日化</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav7.png" /></span><p class="fz20">护肤彩妆</p></a></li>
+            <li><a href="#"><span><img src="nav/nav5/res/img/nav8.png" /></span><p class="fz20">青春推荐</p></a></li>
         </ul>
         <div class="clr"></div>
     </nav>
@@ -331,20 +350,19 @@
     <section class="index-lists" id="thelist">
         <ul>
             <li>
-                <a class="a-product" href="###">
-                    <span class="s-img">
-                        <img src="lists/lists6/res/img/img1.jpg" />
+				<a class="a-product" href="#">
+					<span class="s-img">
+                        <img src="lists/lists6/res/img/img2.jpg" />
                         <!--新品标志-->
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz22">坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合坚果组合
-                        </p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
-                        <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果碧根果炭烧坚果组合3袋580g 夏威夷果碧根果炭烧坚果组合3袋580g 夏威夷果碧根果炭烧坚果组合3袋580g 夏威夷果碧根果炭烧...</p>
+                        <p class="p-money fz28"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
                     </div>
-                </a>
-            </li>
+				</a>
+			</li>
             <li>
                 <a class="a-product" href="###">
                     <span class="s-img">
@@ -353,10 +371,10 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz22">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
-                        <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
+                        <p class="p-money fz28"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
                     </div>
                 </a>
             </li>
@@ -368,10 +386,10 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz22">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
-                        <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
+                        <p class="p-money fz28"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
                     </div>
                 </a>
             </li>
@@ -383,10 +401,10 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz22">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
-                        <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
+                        <p class="p-money fz28"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
                     </div>
                 </a>
             </li>
@@ -398,10 +416,10 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz22">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
-                        <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
+                        <p class="p-money fz28"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
                     </div>
                 </a>
             </li>
@@ -413,10 +431,10 @@
                         <!--<span class="s-mark fz20">新品</span>-->
                     </span>
                     <div class="product fz26">
-                        <p class="p-name fz22">坚果组合3袋580g 夏威夷果 碧根果炭烧...
+                        <p class="p-name fz24">坚果组合3袋580g 夏威夷果 碧根果炭烧...
                         </p>
-                        <p class="p-money fz32"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
-                        <p class="p-count fz20">立赚10元<span>售6666笔</span></p>
+                        <p class="p-money fz28"><span class="fz24">￥</span>45.80<span class="s-price fz20">102.70</span></p>
+                        <p class="p-count fz18">立赚10元<span>售6666笔</span></p>
                     </div>
                 </a>
             </li>
@@ -457,17 +475,17 @@
 
 
     <!--空白BOTTOM部件 -3.27rem-->
-    <div class="blank-bottom" style="margin-top:9%;"></div>
+    <div class="blank-bottom" style="margin-top:9%; height:2.475rem"></div>
     <!--空白BOTTOM部件 -end-->
 
     <!--底部高度：3.59rem-->
     <footer id="footer">
         <ul>
             <!--当前目录状态:p class="p-footact"-->
-            <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/homeh.png" /></span><p class="fz22 p-footact">首页</p></a></li>
+            <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/homeh.png" /></span><p class="fz20 p-footact">首页</p></a></li>
             <!--当前目录状态：homeh.png-->
             <!--未在当前目录状态：homeh1.png-->
-            <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/goods.png" /></span><p class="fz22">商品分类</p></a></li>
+            <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/goods.png" /></span><p class="fz20">商品分类</p></a></li>
             <!--当前目录状态：goods.png-->
             <!--未在当前目录状态：goods1.png-->
             <li class="li-logo">
@@ -475,10 +493,10 @@
             </li>
             <!--当前目录状态：goods.png-->
             <!--未在当前目录状态：goods1.png-->
-            <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/member.png" /></span><p class="fz22">会员中心</p></a></li>
+            <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/member.png" /></span><p class="fz20">会员中心</p></a></li>
             <!--当前目录状态：member.png-->
             <!--未在当前目录状态：menber1.png-->
-            <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/income.png" /></span><p class="fz22">店收入</p></a></li>
+            <li><a href="###"><span class="s-icon"><img src="../../parts/footer/footer7/res/img/income.png" /></span><p class="fz20">店收入</p></a></li>
             <!--当前目录状态：cart.png-->
             <!--未在当前目录状态：cart1.png-->
         </ul>

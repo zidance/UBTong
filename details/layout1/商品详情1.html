@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../common/css/main.css" rel="stylesheet" type="text/css" />
     <link href="pic/pic2/res/css/pic.css" rel="stylesheet" type="text/css" />
     <link href="details/details2/res/css/details.css" rel="stylesheet" type="text/css" />
     <link href="popup/popup1/res/css/popup.css" rel="stylesheet" type="text/css" />
@@ -22,7 +22,7 @@
 
     <script src="../../common/js/zepto-1.16.min.js"></script>
     <script src="../../other/demo/res/jquery-2.1.4.min.js"></script>
-    <script src="../../common/js/default.js"></script>
+    <script src="../../common/js/main.js"></script>
 	<script>
 	$(function(){
 		var _boxcart = $('#BoxCart');
@@ -111,10 +111,12 @@
 
     <!--商品详细-->
     <div class="product-details" id="ProductDetails">
-        <p class="p-name fz28">凯胜KASON汤仙虎碳素羽毛球拍109TI 复刻版支持货到付款</p>
+    	<p class="p-name fz28">凯胜KASON汤仙虎碳素羽毛球拍109TI 复刻版支持货到付款</p>
+        <!--<span class="dot">&nbsp;</span>-->
+        <div class="clr"></div>
         <div class="price price-member">
             <!--未选状态a-btn,选中状态a-checked-->
-            <a class="a-checked" href="###">
+            <a class="a-btn-def" href="###">
                 <p class="p-title fz22">会员价</p>
                 <p class="p-money fz40"><span>￥</span>129.90</p>
                 <p class="p-money-old fz28">￥140.00</p>
@@ -543,6 +545,21 @@
 		<a class="a-yellow fz32" href="###">加入购物车</a>
 	</div>
 	<!--详情按钮-end-->
+
+
+    <!--图片弹出放大独立层-->
+    <section class="stn-mask-layer">
+        <img src="introduce/introduce1/res/img/MaskLayerBg.png"/>
+    </section>
+    <section class="imgzoom_pack">
+        <div class="imgzoom_x">X</div>
+        <div class="imgzoom_img"><img src="" /></div>
+    </section>
+    <!--图片弹出放大独立层--end-->
+  	<script src="../../parts/img/img1/img.js"></script>
+	<script src="introduce/introduce1/res/js/touchzoom.min.js"></script>
+
+	<!--商品介绍-end-->
 
 </body>
 

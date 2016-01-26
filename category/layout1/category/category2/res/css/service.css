@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+
+.p-service{ border-top:1px solid #e5e5e5; background:#fff; position:relative; height:auto;}
+.p-service .left-service{ width:4rem;padding-right:.25rem; position:absolute; left:0; top:0; background:#fff;}
+.p-service .left-service::-webkit-scrollbar{width:0px}
+.p-service .left-service ul{ background:#f3f4f6; border-right:1px solid #e5e5e5;}
+.p-service .left-service li:first-child{ border-top:1px solid #e5e5e5;}
+.p-service .left-service li{ border-bottom:1px solid #d9d9d9; padding:.7rem; height:1.075rem; line-height:1.075rem;}
+.p-service .left-service li a{ display:block; color:#303030; height:1.075rem; overflow:hidden;}
+.p-service .left-service li:hover,.p-service .left-service li.act{ background-color:#fff; color:#f15353; z-index:99;}
+.p-service .left-service li:hover a,.p-service .left-service li.act a{color:#f15353;}
+
+.p-service .right-service{ width:11.75rem; position:absolute; left:4.25rem; top:0; background:#fff;}
+.p-service .right-service::-webkit-scrollbar{width:0px}
+.p-service .right-service .service-items{}
+.p-service .right-service .service-items .item{ width:11.625rem; display:none;}
+.p-service .right-service .service-items .item li{ float:left; width:3.75rem; margin-right:.125rem;}
+.p-service .right-service .service-items .item li a{ display:block; padding:.375rem .375rem .2rem; width:3rem;}
+.p-service .right-service .service-items .item li a .pro-img{ display:block; padding-top:100%;  position:relative;}
+.p-service .right-service .service-items .item li a .pro-img img{ position:absolute; left:0; right:0; top:0; bottom:0; margin:auto;max-height: 100%;max-width: 100%;}
+.p-service .right-service .service-items .item li a p{ padding:.2rem .2rem 0; height:.725rem; line-height:.725rem; text-align:center; overflow:hidden; color:#303030;}
