@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>红包</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="format-detection" content="telephone=no,email=no" />
+  <link href="../../../../common/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="res/css/redpaper.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
+  <script type="text/javascript" src="../../common/js/main.js"></script>
+
+</head>
+
+<body>
+  <!-- 红包 -->
+  <!--初始页面-->
+  <section class="stn-getRed">
+    <div class="d-height-1"></div>
+    <div class="d-center">
+      <img class="img-paper" src="res/img/redpaper.png" />
+      <div class="d-content">
+        <p class="fz30">关注公众号，领取限量优惠券
+          <br />分享朋友圈</p>
+        <a class="a-btn-popup" href="###"><img src="res/img/btn.png" /></a>
+      </div>
+    </div>
+  </section>
+
+  <!--弹出页面-->
+  <section class="stn-popup">
+    <div class="d-bg"></div>
+    <a class="a-btn-close" href="###"></a>
+    <div class="d-redPaper">
+<!--      <img class="popup-redpaper" src="res/img/popup-redpaper.png" />-->
+      <div class="d-money">
+<!--        <img class="img-money" src="res/img/money.png" />-->
+       <!--容得下3位数-->
+        <p class="p-money fz30"><span>150</span><i>元</i></p>
+        <p class="p-type fz36"><span>商城抵用券</span></p>
+        <img src="res/img/decoration.png" />
+      </div>
+      <div class="d-text fz36">
+          <p>恭喜你</p>
+          <p>获得顶悦商城优惠券</p>
+          <p>面值50元抵用券</p>
+      </div>
+      <div class="d-btn">
+        <a href="###"><img src="res/img/link1.png" /></a>
+        <a href="###"><img src="res/img/link2.png" /></a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    $(function(){
+      $('.stn-getRed').find('.a-btn-popup').click(function(){
+        $('.stn-popup').show()
+      })
+
+      $('.stn-popup').find('.a-btn-close').click(function(){
+        $('.stn-popup').hide()
+      })
+      $('.stn-popup').find('.d-bg').click(function(){
+        $('.stn-popup').hide()
+      })
+
+    })
+
+  </script>
+
+  <!-- 红包 -end -->
+</body>
+
+</html>

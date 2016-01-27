@@ -1,0 +1,46 @@
+/*红包插件*/
+/*设计稿640*1000 ,依托于整体定位的100%高,可以按高度百分比分分割各部件  影响:图片会变形,部件占整体比例与设计稿有出入.垂直方向的写法(如margin-top),基本不能用rem调整 好处:高度比例低的设备(pc高还不及宽),部件不会重叠*/
+
+html{width: 100%;height: 100%;}
+body{max-width:640px;width: 100%;height: 100%;}
+.stn-getRed{position: absolute;left: 0;top: 0;right: 0;bottom: 0;max-width:640px;width: 100%;height: 100%;margin:auto;
+  background: url(../img/text.png) no-repeat 0 0,url(../img/bg.png) no-repeat 0 0;
+  background-size:100% 61.6%,100% 100%;
+  text-align: center;
+}
+.stn-getRed .d-height-1{height:31%;}
+
+
+/*.d-center的css目标:父级,以子级的宽(因为图片有高度时,会等比例算出宽)为宽. 原因:按钮的宽需要按红包图处的某个百分比来计算(因为在这个只保证高度百分比的体系中,红包宽与父级宽比例会因设备不同而不同,pc上红包宽比手机小很多) 方案:用inline-block或absolute可达到以子宽为宽的目的,而absolute无法居中(还是因为宽不确定),上方补个块,解决无法使用bottom:4%的问题.*/
+.stn-getRed .d-center{display: inline-block;position:relative;margin:0 auto;height:65.8%;  }/*540*658*/
+.stn-getRed .d-center .img-paper{height:100%;}
+/*这里加入d-content,主要为了bottom属性,同理,如果对p写margin-top,由于红包图宽在某些屏下比例很小,差距太大*/
+.stn-getRed .d-center .d-content{position:absolute;  left: 0;right: 0;margin:0 auto;bottom:9.6%; /*93/648*/}
+.stn-getRed .d-center p{color: #ffff00;line-height:28px; height:56px;}
+.stn-getRed .d-center .a-btn-popup{display: block;margin:0 auto;width: 64.4%; margin-top:32px; /*60*/ }/*348*75*/
+.stn-getRed .d-center .a-btn-popup img{width:100%;}
+
+
+/* 弹出层 更复杂,直接经入vh来处理pc端 */
+.stn-popup{display: none;position: absolute;left: 0;top: 0;right: 0;bottom: 0;max-width:640px;width: 100%;height: 100%;margin:auto;}
+.stn-popup .d-bg{position: absolute;width: 100%;height: 100%;background: rgba(0,0,0,0.7);}
+.stn-popup .a-btn-close{position: absolute;top: .825rem;right: 1.1rem;  width: 1.6rem;height: 1.6rem;background: url(../img/btn-close.png) no-repeat 0 0 /100% 100%;}
+.stn-popup .d-redPaper{position: absolute;bottom:1.875rem;/*height:80%;*/ height:20.775rem; max-height: 80%; width:84.3%;left: 0;right: 0;margin:0 auto;background: url(../img/popup-redpaper.png) no-repeat 0 0 / 100% 100%;}/*540*831*/
+/*.stn-popup .d-redPaper>*{}*/
+.stn-popup .d-redPaper .popup-redpaper{position: absolute;z-index: 991;width: 100%;height: 100%;}
+
+
+
+
+/*.stn-popup .d-redPaper .img-money{display: block;margin:11% auto 0;}*/
+.stn-popup .d-redPaper .d-money{position: relative;z-index: 992;display: block;padding-top:11%; font-size:0; /*height:26.3vh;*/ height:6.575rem;/*height:31.6%;*//*263/831*/;color: #ef0a3c;margin-top:1rem;}
+.stn-popup .d-redPaper .d-money .p-money{display: inline-block;width:70%;height:100%;text-align: right;vertical-align: middle; line-height:6.575rem;; background: url(../img/popup-money.png) no-repeat right center / 86% 100%;box-sizing: border-box;}
+.stn-popup .d-redPaper .d-money .p-money span{font-size: 75px;}
+.stn-popup .d-redPaper .d-money .p-money i{display: inline-block;margin-right:.25rem;}
+
+.stn-popup .d-redPaper .d-money .p-type{position: relative;display: inline-block;width:3rem;/*121/540*/;text-align: left;text-align: center;height:100%;vertical-align: middle;background: url(../img/popup-type.png) no-repeat left center / 3rem 100%;}
+.stn-popup .d-redPaper .d-money .p-type span{position: absolute; width: 1em;height:5em;left: .8rem;top: 0;bottom: 0;margin: auto;line-height:1.1;overflow: visible;}
+.stn-popup .d-redPaper .d-money img{width: 100%;height: 90%;position:absolute;left: 2%;top: 0;bottom: 0;margin:auto;}
+.stn-popup .d-redPaper .d-text{color: #ffff00;text-align: center;line-height: 1.4;padding:3vh 0;/*margin-top:-2vh;*/}
+.stn-popup .d-redPaper .d-btn a{display: block;margin:0 auto .3rem;text-align: center;width:100%;}/*350*81*/
+.stn-popup .d-redPaper .d-btn a img{height: 2rem;width:auto;}
