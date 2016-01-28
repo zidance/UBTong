@@ -1,0 +1,27 @@
+/*海报插件*/
+
+html{height: 100%;}/*640*1138*/
+body{height: 100%;max-width:640px;margin:0 auto;}
+
+.stn-post-wrap {position: relative;height:100%;background-color: #e2e2e2;}
+.stn-post-wrap .d-height-1{padding-top:6.7%;/*117/1138 --改为与*/}
+.stn-post{position: relative;height:76.45%;width: 82%; margin:0 auto;; padding:.4rem 2.3%; background-color: #fff;border:1px solid #e5e5e5; box-shadow: .1rem .1rem .45rem rgba(0, 0, 0, 0.352) ;}
+
+.stn-post .d-relative{position: relative;width: 100%;height: 100%;background-color: #e2e2e2; box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.352) inset;}/*内525*870 */
+.stn-post .d-relative .img-big{width: 100%;height: 100%;}
+.stn-post .d-relative .d-bg-bottom{
+  position: absolute;bottom: 0;left: 0; width: 100%;height: 76%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.956) 0%, rgba(0, 0, 0, 0.917) 50%,rgba(0, 0, 0, 0.705) 70%,rgba(0, 0, 0, 0.16) 100%);
+  background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(0, 0, 0, 0.956)), color-stop(50%,rgba(0, 0, 0, 0.917)), color-stop(70%,rgba(0, 0, 0, 0.705)), to(rgba(0, 0, 0, 0.16)));
+
+}/*高665,  自底向上 350档 470档 100%档 */
+.stn-post .d-relative .img-logo{position: absolute; top: .5rem; left: .6rem; width: 4.9rem;height: 2rem; }
+.stn-post .d-relative .img-qrcode{position: absolute; right: .6rem; bottom: 2.25rem; width: 3.2rem;height: 3.2rem;}
+.stn-post .d-relative .d-text{position: absolute;left: .5rem;bottom: .65rem;
+color: #db4a12;
+}
+.stn-post-wrap .a-btn{position: absolute;width: 88%; left: 0;right: 0;bottom: 1rem;margin:0 auto;  line-height:3 ;text-align: center;color: #fff; border-radius: .2rem; font-size: .65rem;
+  background: linear-gradient(to top, rgba(216, 60, 0, 0.929) 0%, rgba(232, 86, 0, 0.898) 68.9%,rgba(243, 105, 0, 0.843) 100%);
+  background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(216, 60, 0, 0.929)), color-stop(68.9%,rgba(232, 86, 0, 0.898)), to(rgba(243, 105, 0, 0.843)));
+} /*603*61*/
+
