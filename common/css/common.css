@@ -1,126 +1,101 @@
 /* CSS重置 */
-body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,img,table,th,td,form,fieldset,legend,input,textarea,button,select,header,section,aside,footer{margin:0;padding:0;}
-header,section,aside,footer{display:block;}
-body{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;font-size-webkit-text:none;max-width:640px;min-width:320px;margin:0 auto;}
-input{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;}
-img{border:0;vertical-align:middle;}
-a{text-decoration:none;-webkit-appearance:none;}
-a,button,input,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0);}
-a:focus,input:focus{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
-ul,ol,li{list-style-type:none;}
-em,i,address{font-style:normal;}
-h1,h2,h3,h4,h5,h6{font-weight:normal;}
-table{border-collapse:collapse;}
-.clr{clear:both;display:block;font-size:0;height:0;line-height:0;overflow:hidden;}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, img, table, th, td, form, fieldset, legend, input, textarea, button, select, header, section, aside, footer { margin: 0; padding: 0; }
+header, section, aside, footer { display: block; }
+body { font-family: 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif; font-size-webkit-text: none; max-width: 640px; min-width: 320px; margin: 0 auto; }
+input { font-family: 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif; }
+img { border: 0; vertical-align: middle; }
+a { text-decoration: none; -webkit-appearance: none; }
+a, button, input, textarea { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+a:focus, input:focus { outline: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+ul, ol, li { list-style-type: none; }
+em, i, address { font-style: normal; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+table { border-collapse: collapse; }
+.clr { clear: both; display: block; font-size: 0; height: 0; line-height: 0; overflow: hidden; }
 
 /*字体*/
-html{font-size:172%;}
-.fz18{font-size:.5rem;}
-.fz19{font-size:.53rem;}
-.fz20{font-size:.59rem;}
-.fz22{font-size:.62rem;}
-.fz24{font-size:.65rem;}
-.fz26{font-size:.68rem;}
-.fz28{font-size:.71rem;}
-.fz30{font-size:.78rem;}
-.fz32{font-size:.85rem;}
-.fz35{font-size:.92rem;}
-.fz34{font-size:.9rem;}
-.fz36{font-size:.94rem;}
-.fz40{font-size:1.45rem;}
-.fz42{font-size:1.52rem;}
-.fz48{font-size:1.74rem;}
-.fz55{font-size:1.99rem;}
-.fz58{font-size:2.1rem;}
-.fz60{font-size:2.18rem;}
-.fz80{font-size:2.9rem;}
-.fz103{font-size:3.74rem;}
-.fz120{font-size:4.36rem;}
-.mt20{margin-top:.72rem;}
-
-@media screen and (min-width:320px) and (max-width:640px){
-html{font-size:125%;}
+html { font-size: 172%; }
+.fz18 { font-size: .5rem; }
+.fz19 { font-size: .53rem; }
+.fz20 { font-size: .59rem; }
+.fz22 { font-size: .62rem; }
+.fz24 { font-size: .65rem; }
+.fz26 { font-size: .68rem; }
+.fz28 { font-size: .71rem; }
+.fz30 { font-size: .78rem; }
+.fz32 { font-size: .85rem; }
+.fz35 { font-size: .92rem; }
+.fz34 { font-size: .9rem; }
+.fz36 { font-size: .94rem; }
+.fz40 { font-size: 1.45rem; }
+.fz42 { font-size: 1.52rem; }
+.fz48 { font-size: 1.74rem; }
+.fz55 { font-size: 1.99rem; }
+.fz58 { font-size: 2.1rem; }
+.fz60 { font-size: 2.18rem; }
+.fz80 { font-size: 2.9rem; }
+.fz103 { font-size: 3.74rem; }
+.fz120 { font-size: 4.36rem; }
+.mt20 { margin-top: .72rem; }
+@media screen and (min-width:320px) and (max-width:640px) {
+    html { font-size: 125%; }
 }
-@media screen and (max-width:320px){
-html{font-size:85%;}
-.fz19{font-size:.69rem;}
-.fz18{font-size:.65rem;}
-.fz20{font-size:.72rem;}
-.fz22{font-size:.79rem;}
-.fz24{font-size:.87rem;}
-.fz26{font-size:.94rem;}
-.fz28{font-size:1.01rem;}
-.fz30{font-size:1.09rem;}
-.fz32{font-size:1.11rem;}
-.fz35{font-size:1.26rem;}
-.fz34{font-size:1.23rem;}
-.fz36{font-size:1.3rem;}
-.fz40{font-size:1.45rem;}
-.fz42{font-size:1.52rem;}
-.fz48{font-size:1.74rem;}
-.fz55{font-size:1.99rem;}
-.fz58{font-size:2.1rem;}
-.fz60{font-size:2.18rem;}
-.fz80{font-size:2.9rem;}
-.fz103{font-size:3.74rem;}
-.fz120{font-size:4.36rem;}
+@media screen and (max-width:320px) {
+html { font-size: 85%; }
+.fz19 { font-size: .69rem; }
+.fz18 { font-size: .65rem; }
+.fz20 { font-size: .72rem; }
+.fz22 { font-size: .79rem; }
+.fz24 { font-size: .87rem; }
+.fz26 { font-size: .94rem; }
+.fz28 { font-size: 1.01rem; }
+.fz30 { font-size: 1.09rem; }
+.fz32 { font-size: 1.11rem; }
+.fz35 { font-size: 1.26rem; }
+.fz34 { font-size: 1.23rem; }
+.fz36 { font-size: 1.3rem; }
+.fz40 { font-size: 1.45rem; }
+.fz42 { font-size: 1.52rem; }
+.fz48 { font-size: 1.74rem; }
+.fz55 { font-size: 1.99rem; }
+.fz58 { font-size: 2.1rem; }
+.fz60 { font-size: 2.18rem; }
+.fz80 { font-size: 2.9rem; }
+.fz103 { font-size: 3.74rem; }
+.fz120 { font-size: 4.36rem; }
 }
-
 
 /*边框细化*/
-.bd::after{
-    position:absolute;
-    content:"";
-    top:0;
-    left:0;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    width:100%;
-    height:100%;
-    pointer-events:none;
-    -webkit-transform-origin:0 0;
-    -moz-transform-origin:0 0;
-    -ms-transform-origin:0 0;
-    -o-transform-origin:0 0;
-    transform-origin:0 0;
-}
+.bd::after { position: absolute; content: ""; top: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 100%; pointer-events: none; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
 
 /*table中的各元素通过按需定义以下类,实现边框细化,必须与default.js共用*/
-.bd-left{border-left:1px solid #c6c6c6;}
-.bd-right{border-right:1px solid #c6c6c6;}
-.bd-top{border-top:1px solid #c6c6c6;}
-.bd-bottom{border-bottom:1px solid #c6c6c6;}
+.bd-left { border-left: 1px solid #c6c6c6; }
+.bd-right { border-right: 1px solid #c6c6c6; }
+.bd-top { border-top: 1px solid #c6c6c6; }
+.bd-bottom { border-bottom: 1px solid #c6c6c6; }
 
 /* 最后两个是为了检测Mobile ie9*/
-@media (-moz-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx), (-ms-high-contrast:active), (-ms-high-contrast:none) {
-    .bd::after{
-        width:200%;
-        height:200%;
-        -webkit-transform:scale(.5);
-        -ms-transform:scale(.5);
-        -o-transform:scale(.5);
-        transform:scale(.5);
-    }
+@media (-moz-min-device-pixel-ratio:1.5), (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio:1.5), (min-resolution:144dpi), (min-resolution:1.5dppx), (-ms-high-contrast:active), (-ms-high-contrast:none) {
+    .bd::after { width: 200%; height: 200%; -webkit-transform: scale(.5); -ms-transform: scale(.5); -o-transform: scale(.5); transform: scale(.5); }
 }
 
 /*风格颜色类*/
+
 /*主要风格,当前绿色*/
-.color{color:#69c2c0 !important;}
-.bg-color{background-color: #67bebc !important;}
-.bd-color{border-color:#69c2c0 !important;}
+.color { color: #69c2c0 !important; }
+.bg-color { background-color: #67bebc !important; }
+.bd-color { border-color: #69c2c0 !important; }
+
 /*主要风格,以下为input-radio/checkbox选择后变色为主色调的*/
-.chk-color{color:#69c2c0 !important;}
-.chk-bg-color:checked{background-color: #67bebc !important;}
-.chk-bd-color:checked{border-color:#69c2c0 !important;}
+.chk-color { color: #69c2c0 !important; }
+.chk-bg-color:checked { background-color: #67bebc !important; }
+.chk-bd-color:checked { border-color: #69c2c0 !important; }
+
 /*交互后后变色的,可以在脚本中赋予.color等类*/
 
-
 /*配套颜色,当前深蓝*/
-.color2{}
-.bg-color2{background-color: #5c6ed6 !important;}
+.color2 { }
+.bg-color2 { background-color: #5c6ed6 !important; }
 
 /*文字,限制仅一行,超出部分显示"..."*/
-.l-1{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-
-
+.l-1 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
