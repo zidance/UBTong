@@ -42,11 +42,13 @@
 .banner .slider #pagenavi {
 	position: absolute;
 	left: 0;
-	bottom: 5px;
+	bottom: .3rem;
 	text-align: center;
 	width: 100%;
 }
 .banner .slider #pagenavi a {
+    display:inline-block; width:7.1%; height:0.175rem; margin:0 .1rem;  background:#fff;vertical-align: bottom;
+/*
 	width: 10px;
 	height: 10px;
 	border-radius: 100%;
@@ -58,12 +60,13 @@
 	display: inline-block;
 	*display: inline;
 	zoom: 1;
+*/
 }
 .banner .slider #pagenavi.dotColor a{
 	background:#a4a4a4;
 }
 .banner .slider #pagenavi a.active {
-	background: #e60012;
+	/*background: #e60012;*/background:#f77a02;
 }
 
 
@@ -119,5 +122,5 @@
 }
 
 
-.banner .erweima{ display:block; width:1.81rem; height:1.81rem; background:url(../img/erweima.png); position:absolute; bottom:0; right:0; z-index:10000; text-indent:-9999px; background-size:100% 100%;}
+.banner .erweima{ display:block; width:1.5rem; height:1.5rem; background:url(../img/erweima.png); position:absolute; bottom:0; right:0; z-index:10000; text-indent:-9999px; background-size:100% 100%;}
 

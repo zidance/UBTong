@@ -1,14 +1,14 @@
 /*导航*/
 nav {
-	box-shadow: 0 0 5px #efefef;margin-top:3.6%;background-color:#fff;
+	box-shadow: 0 0 0.125rem #efefef;background-color:#fff;
 }
 
-nav.cjnav{ margin-top:0rem; background:#fff; border:solid #dddddd; border-width:1px 0;}
+nav.cjnav{ margin-top:0rem; background:#fff; border:solid #dddddd; border-width:.025rem 0;}
 nav li {
 	float: left;
 	width: 25%;
 	text-align: center;
-    padding-top: 3.125%;
+    padding-top: .5rem;
     border-bottom:1px solid #f1f1f1;
 }
 nav li a {
@@ -18,15 +18,15 @@ nav li a {
 nav li.li-last-line a{border-bottom: none;}
 nav li a span {
 	display: block;
-	width: 2.29rem;
-	height: 2.29rem;
+	width: 1.575rem;
+	height: 1.575rem;
 	margin: 0 auto;
 /*	border-radius: 100%;*/
 	text-align: center;
 }
 nav li a span.big{
-	width: 2.83rem;
-	height: 2.83rem;
+	width: 1.95rem;
+	height: 1.95rem;
 }
 
 nav li a span img {
@@ -36,5 +36,11 @@ nav li a span img {
 nav li a p {
 	font-size: .8rem;
 	color: #464646;
-    padding:10% 0 12.5%;
+    padding:0.1rem 0 0.4rem;
+	line-height:0.7rem;
 }
+/*
+@media screen and (max-width:320px){
+	nav li p{ font-size:0.55rem;}
+}
+*/

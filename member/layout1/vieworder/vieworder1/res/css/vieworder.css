@@ -9,7 +9,7 @@ body{ background:#f7f5f5; }
 .stn-informat td{min-width:5.2rem; color:#939292; /*width:3.58rem;*/ padding:0.1rem 0; vertical-align:top; font-size:.71rem; line-height: 1.6;}
 .stn-informat .td-red{ color:#ff4949; width:auto; }
 .stn-informat .td-black, .stn-message .td-black{ color:#161616; width:auto;}
-.stn-informat a p{ background:url(../img/left.png) no-repeat right center; background-size:.47rem .76rem; }
+.stn-informat a p{ background:url(../../../../../../common/img/right.png) no-repeat right center; background-size:.47rem .76rem; }
 .stn-informat a td{ width:auto; }
 /*拨打电话*/
 .stn-tel{ height:2.5rem; line-height:2.5rem; }
@@ -43,7 +43,7 @@ body{ background:#f7f5f5; }
 .stn-code .s-code{ display:block; width:46%; margin:3.23rem auto; border:1px solid #d4d1cd; }
 .stn-code .s-code img{ width:100%; height:auto; }
 .qr-code .s-seal{ display:block; width:100%; height:auto; position:absolute; top:.87rem; left:0; }
-.qr-code .s-seal img{ width:100%; height:100%; }
+.qr-code .s-seal img{ width:100%; height:auto; }
 /*预约时间*/
 .stn-time{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.72rem; padding:0 3.205%; }
 .stn-time a{ display:block; padding:.72rem 0; color:#000; }

@@ -6,7 +6,7 @@ input{font-family:'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;}
 img{border:0;vertical-align:middle;}
 a{text-decoration:none;-webkit-appearance:none;}
 a,button,input,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0);}
-a:focus,input:focus{-webkit-user-modify:read-write-plaintext-only;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+a:focus,input:focus{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 ul,ol,li{list-style-type:none;}
 em,i,address{font-style:normal;}
 h1,h2,h3,h4,h5,h6{font-weight:normal;}
@@ -119,3 +119,8 @@ html{font-size:85%;}
 /*配套颜色,当前深蓝*/
 .color2{}
 .bg-color2{background-color: #5c6ed6 !important;}
+
+/*文字,限制仅一行,超出部分显示"..."*/
+.l-1{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+

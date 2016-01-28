@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../common/css/main.css" rel="stylesheet" type="text/css" />
     <link href="res/css/details.css" rel="stylesheet" type="text/css" />
     <link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../../../../common/js/zepto-1.16.min.js"></script>
-    <script src="../../../../common/js/default.js"></script>
+    <script src="../../../../common/js/main.js"></script>
     <script>
         $(function() {
             var _obj = $('#ProductDetails');
@@ -37,25 +37,29 @@
 
 <body>
     <!--商品详细-->
-    <div class="product-details" id="ProductDetails">
-        <p class="p-name fz28">凯胜KASON汤仙虎碳素羽毛球拍109TI 复刻版支持货到付款</p>
+    <div class="product-details" id="ProductDetails" style="margin-top:.5rem;">
+        <p class="p-name fz28">洗车服务-迈卡福州 员服务</p>
+        <span class="dot">&nbsp;</span><div class="clr"></div>
         <div class="price price-member">
             <!--未选状态a-btn,选中状态a-checked-->
-            <a class="a-checked" href="###">
+            <a class="a-btn-def" href="###">
                 <p class="p-title fz22">会员价</p>
                 <p class="p-money fz40"><span>￥</span>129.90</p>
                 <p class="p-money-old fz28">￥140.00</p>
+                 <p class="p-num fz28">销量0</p>
             </a>
         </div>
+
         <div class="price price-integral">
             <!--未选状态a-btn,选中状态a-checked-->
-            <a class="a-btn" href="###">
+         <a class="a-btn" href="###">
                 <p class="p-title fz22">积分价</p>
                 <p class="p-money fz40"><span>￥</span>109.90</p>
                 <p class="p-plus fz28">+</p>
                 <p class="p-money-integral fz40">500<span>积分</span></p>
             </a>
         </div>
+
 
         <div class="details-num">
             <div class="number-name fz28">数　量</div>
@@ -66,7 +70,8 @@
             </div>
             <div class="clr"></div>
         </div>
-        <!--<p class="p-prompt fz28">付款后预计5月21日送达</p>-->
+
+        <p class="p-prompt fz28">付款后预计5月21日送达</p>
         <p class="p-prompt2 fz28">定制产品不享有七天无理由退换货</p>
         <!--<a class="a-collect" href="#">收藏</a>-->
     </div>

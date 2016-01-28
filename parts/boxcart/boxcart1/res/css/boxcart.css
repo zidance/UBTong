@@ -6,11 +6,11 @@
 }
 .box-cart .boxcart-btn {
 	display: block;
-	width: 2.48rem;
-	height: 2.48rem;
+	width: 1.7rem;
+	height: 1.7rem;
 	position: absolute;
-	top: .42rem;
-	right: .4rem;
+	top: .3rem;
+	right: .275rem;
     z-index: 901;
 }
 .box-cart .boxcart-btn img {
@@ -18,37 +18,39 @@
 	height: 100%;
 }
 .box-cart .boxcart-nav {
-	width: 3.24rem; /*width:16.24rem;*/
+	width: 2.25rem; /*width:16.24rem;*/
 
-	/*width:10.24rem;*/ height: 3.24rem;
+	/*width:10.24rem;*/ height: 2.25rem;
 	border: 1px solid #e1e1e1;
 	background: #fff;
-	border-radius: 2.8rem; /*border-radius:100%;*/
+	border-radius: 2.25rem; /*border-radius:100%;*/
 }
 
 
 .box-cart .boxcart-nav a {
 	display: none;
-	width: 2.89rem;
-	height: 2.76rem;
+	width: 2rem;
+	height: 1.9rem;
 	text-align: center;
 }
 .box-cart .boxcart-nav .btn {
-	margin: .43rem 0 0 .92rem;
+	margin: .2rem 0 0 .625rem;
 }
 .box-cart .boxcart-nav a .s-img {
 	display: inline-block;
-	width: 1.92rem;
-	height: 1.59rem;
+	width: 1.325rem;
+	height: 1.1rem;
 }
 .box-cart .boxcart-nav a .s-img img {
 	width: 100%;
 	height: 100%;
+	display:block;
 }
 .box-cart .boxcart-nav a p {
 	color: #979797;
+	line-height:0.5rem;
 }
-
+/*
 @media screen and (min-width:321px) and (max-width:360px){
 	.box-cart .boxcart-btn{top: .39rem;	right: .38rem;}
 }
@@ -62,3 +64,4 @@
 		margin: .28rem 0 0 .82rem;
 	}
 }
+*/

@@ -62,12 +62,13 @@
                     if ($(this).hasClass('open')) {
                         _list.hide();
                         _strong.show();
-                        $(this).css('background-image', 'url(res/img/bigdown.png)');
+
+                        $(this).css('background-image', $(this).css('background-image').replace(/up\.png/,'down.png'))
                         $(this).removeClass('open');
                     } else {
                         _list.show();
                         _strong.hide();
-                        $(this).css('background-image', 'url(res/img/bigup.png)');
+                        $(this).css('background-image', $(this).css('background-image').replace(/down\.png/,'up.png'));
                         $(this).addClass('open');
                     }
                 })

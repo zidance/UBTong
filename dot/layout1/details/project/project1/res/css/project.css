@@ -1,16 +1,16 @@
 /*服务项目*/
-.stn-project{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.72rem; padding:0 3.205% 1.81rem; }
-.stn-project h1{ color:#000; border-bottom:1px solid #d9d9d9; padding:.54rem 0; }
-.stn-project li{ padding-top:.72rem; position:relative; border-bottom:1px solid #d9d9d9; padding-bottom:0.45rem; }
-.stn-project li .s-img{ display:block; float:left; width:5.37rem; height:5.37rem; margin:0 .72rem 0 .36rem; border:1px solid #d9d9d9; }
+.stn-project{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.5rem; padding:0 3.205% 1.25rem; }
+.stn-project h1{ color:#000; border-bottom:1px solid #d9d9d9; padding:.375rem 0; }
+.stn-project li{ padding-top:.5rem; position:relative; border-bottom:1px solid #d9d9d9; padding-bottom:0.3rem; }
+.stn-project li .s-img{ display:block; float:left; width:3.7rem; height:3.7rem; margin:0 .5rem 0 .25rem; border:1px solid #d9d9d9; }
 .stn-project li .s-img img{ max-width:100%; height:auto; }
-.stn-project li .content{ width:8.13rem; float:left; }
-.stn-project li .p-name{ height:2.72rem; line-height:1.3rem; overflow:hidden; }
-.stn-project li .p-num{ margin-top:0.92rem; color:#999999; padding-bottom:0.45rem; }
-.stn-project li .p-money{ position:absolute; top:.8rem; right:.36rem; color:#f2484c; }
-.stn-project li a{ display:block; width:4.65rem; height:1.88rem; line-height:1.88rem; text-align:center; color:#fff; background:#3e9ef9; border-radius:6px; position:absolute; bottom:0.91rem; right:.36rem; }
+.stn-project li .content{ width:6rem; float:left; }
+.stn-project li .p-name{ height:1.875rem; line-height:.95rem; overflow:hidden; }
+.stn-project li .p-num{ margin-top:0.625rem; color:#999999; padding-bottom:0.3rem; }
+.stn-project li .p-money{ position:absolute; top:.55rem; right:.25rem; color:#f2484c; }
+.stn-project li a{ display:block; width:3.75rem; height:1.5rem; line-height:1.5rem; text-align:center; color:#fff; background:#3e9ef9; border-radius:6px; position:absolute; bottom:0.4rem; right:.25rem; }
 .stn-project li .longwidth{ width:14.22rem; margin-left:0.36rem;}
-
+/*
 @media screen and (max-width:390px) and (min-width:321px){
 	.stn-project li .content{ width:5.53rem; }
 	.stn-project li .longwidth{ width:9.67rem; margin-left:0.36rem;}
@@ -20,4 +20,4 @@
 	.stn-project li .p-name{ line-height:1.4rem; }
 	.stn-project li .p-num{ margin-top:1.27rem; }
 	.stn-project li a{ bottom:.7rem; width:5.14rem; height:2.18rem; line-height:2.18rem; }
-}
+}*/

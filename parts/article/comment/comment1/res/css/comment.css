@@ -12,16 +12,16 @@
 /*弹出层*/
 .stn-comment .d-popup{display: none;}
 .stn-comment .fixed-bg{content: '';position:fixed;z-index: 998; left: 0;top: 0;width: 100%;height: 100%;background:rgba(0,0,0,0.3);}
-.stn-comment .f-popup-comment{position: fixed;z-index: 999;left: 0;bottom: 0;width: 100%;background-color: #fff;}
-.stn-comment .f-popup-comment .p-title{line-height: 4.3;border-bottom:1px solid #e7e7e7;padding:0 5.5%;}
-.stn-comment .f-popup-comment .a-close{float:right;width:1.8rem;margin-right:5%;}
-.stn-comment .f-popup-comment .a-close img{width:100%;}
+.stn-comment .d-container{position: fixed;z-index: 999;left: 0;bottom: 0;width: 100%;background-color: #fff;}
+.stn-comment .d-container .p-title{line-height: 3.5;border-bottom:1px solid #e7e7e7;padding:0 5.5%;}
+.stn-comment .d-container .a-close{float:right;width:1.5rem;margin-right:5%;}
+.stn-comment .d-container .a-close img{width:100%;}
 
-.stn-comment .f-popup-comment .d-text{padding:6% 0 0;}
-.stn-comment .f-popup-comment .d-text .d-border{position:relative;border:1px solid #d2d2d2;width: 88%;margin-left:6%;height:8rem;}
-.stn-comment .f-popup-comment .d-text textarea{display: block;background-color: #f7f7f7;color:#000;width: 100%;height: 100%;resize:none;line-height: 1.6;padding:0 .2rem;box-sizing: border-box;}
+.stn-comment .d-container .d-text{padding:5% 0 0;}
+.stn-comment .d-container .d-text .d-border{position:relative;border:1px solid #d2d2d2;width: 88%;margin-left:6%;height:8rem;}
+.stn-comment .d-container .d-text textarea{display: block;background-color: #f7f7f7;color:#000;width: 100%;height: 100%;resize:none;line-height: 1.6;padding:0 .2rem;box-sizing: border-box;border:none;outline: none;}
 
-.stn-comment .f-popup-comment .d-text textarea::-webkit-input-placeholder {color:#d2d2d2;}
-.stn-comment .f-popup-comment .d-text .p-num{position:absolute;bottom:0;right:.2rem;color:#d2d2d2;}
-.stn-comment .f-popup-comment .a-confirm{display: block;width:88%;margin:4.7% auto 3.1%;line-height: 2.8;background-color: #69c2c0;color: #fff;text-align: center;border-radius:.2rem;}
+.stn-comment .d-container .d-text textarea::-webkit-input-placeholder {color:#d2d2d2;}
+.stn-comment .d-container .d-text .p-num{position:absolute;bottom:0;right:.2rem;color:#d2d2d2;}
+.stn-comment .d-container .a-confirm{display: block;width:88%;margin:4.5% auto 3.1%;line-height: 2.6;background-color: #69c2c0;color: #fff;text-align: center;border-radius:.2rem;}
 

@@ -2,7 +2,7 @@
 .stn-search{ width:100%; border-bottom:1px solid #d4d4d4; background:#f7f5f5; padding:.94rem 0; }
 .stn-search .search{ width:95.93%; height:2.18rem; background:#fff; margin:0 auto; }
 .stn-search .search span{ line-height:2.18rem; background:url(../img/down.png) no-repeat right center; background-size:.43rem .21rem; padding:0 3.9% 0 3.4%; margin-right:3.1%; }
-.stn-search .search input{ width:63%; height:2.18rem; line-height:2.18rem; border:none; background:url(../img/search.png) no-repeat 0 center; background-size:1.09rem 1.09rem; padding-left:6.8%; }
+.stn-search .search input{ width:63%; height:0.68rem; line-height:0.78rem; border:none; background:url(../img/search.png) no-repeat 0 center; background-size:1.09rem 1.09rem; padding-left:6.8%; padding:0.75rem 0 0.75rem 6.8% }
 .stn-search .search input::-webkit-input-placeholder{ color:#c5c5c5; }
 
 /*选择框*/

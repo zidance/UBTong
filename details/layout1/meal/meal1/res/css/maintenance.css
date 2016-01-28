@@ -1,29 +1,29 @@
 /*养护套餐*/
-.stn-maintenance{ width:100%; padding:0 .9375%; box-sizing:border-box; margin-top:.72rem; }
+.stn-maintenance{ width:100%; padding:0 .9375%; box-sizing:border-box; margin-top:.5rem; }
 .stn-maintenance .maintenance-lists{ border:solid #d9d9d9; border-width:1px 0; background:#fff; }
-.stn-maintenance h1{border-bottom:1px solid #d9d9d9; height:2.5rem; line-height:2.5rem; color:#000; padding-left:2%; }
-.stn-maintenance .a-title{ display:block; border-bottom:1px solid #d9d9d9; background:url(../img/left.png) no-repeat 97% center; background-size:.58rem 1.09rem; height:2.5rem; line-height:2.5rem; color:#000; padding-left:2%; }
+.stn-maintenance h1{border-bottom:1px solid #d9d9d9; height:1.725rem; line-height:1.725rem; color:#000; padding-left:2%; }
+.stn-maintenance .a-title{ display:block; border-bottom:1px solid #d9d9d9; background:url(../../../../../../common/img/right.png) no-repeat 97% center; background-size:.325rem; height:1.725rem; line-height:1.725rem; color:#000; padding-left:2%; }
 .stn-maintenance .a-title span{ display:block; float:right; margin-right:7%; color:#676767; }
 
-.stn-maintenance .package{ padding:.72rem 0; border-bottom:1px solid #d9d9d9; }
+.stn-maintenance .package{ padding:.5rem 0; border-bottom:1px solid #d9d9d9; }
 .stn-maintenance .package table{ width:100%; }
 .stn-maintenance .package td{ text-align:center; }
 .stn-maintenance .package td .s-img{ display:inline-block; border:1px solid #dddddd; position:relative; }
 .stn-maintenance .package td .s-img img{ width:100%; height:100%; }
-.stn-maintenance .package td .s-money{ width:100%; height:1.09rem; line-height:1.09rem; position:absolute; left:0; bottom:0; }
+.stn-maintenance .package td .s-money{ width:100%; height:.75rem; line-height:.75rem; position:absolute; left:0; bottom:0; }
 .stn-maintenance .package td .s-money i{ position:relative; z-index:10; color:#fff; }
 .stn-maintenance .package td .s-money .e-bg{ width:100%; height:100%; display:block; background:#000; opacity:0.5; position:absolute; left:0; bottom:0; }
-.stn-maintenance .package td .s-symbol{ display:inline-block; width:.65rem; height:.65rem; }
+.stn-maintenance .package td .s-symbol{ display:inline-block; width:.45rem; height:.45rem; }
 .stn-maintenance .package td .s-symbol img{ width:100%; height:auto; }
 
-.stn-maintenance .package-btn{ padding:.54rem 0; position:relative; }
-.stn-maintenance .package-btn .p-money{ color:#939292; text-decoration:line-through; padding-left:.5rem; }
-.stn-maintenance .package-btn .p-price{ color:#000; padding-left:.5rem; }
+.stn-maintenance .package-btn{ padding:.375rem 0; position:relative; }
+.stn-maintenance .package-btn .p-money{ color:#939292; text-decoration:line-through; padding-left:.35rem; }
+.stn-maintenance .package-btn .p-price{ color:#000; padding-left:.35rem; }
 .stn-maintenance .package-btn .p-price span{ color:#ff4949; }
-.stn-maintenance .package-btn .btn{ position:absolute; top:.6rem; right:0; width:50%; }
-.stn-maintenance .package-btn .btn a{ display:block; width:47%; height:1.88rem; line-height:1.88rem; text-align:center; background:#ff4949; color:#fff; border-radius:6px; float:left; }
+.stn-maintenance .package-btn .btn{ position:absolute; top:.425rem; right:0; width:50%; }
+.stn-maintenance .package-btn .btn a{ display:block; width:47%; height:1.3rem; line-height:1.3rem; text-align:center; background:#ff4949; color:#fff; border-radius:6px; float:left; }
 .stn-maintenance .package-btn .btn a:last-child{ background:#17c7c9; float:right; }
-
+/*
 @media screen and (min-width:321px) and (max-width:360px){
 .stn-maintenance .package td .s-img{ height:5.3rem;}
 .stn-maintenance .package-btn .btn{  width:50%; top:.35rem;}
@@ -34,3 +34,4 @@
 	.stn-maintenance .package-btn .btn{ top:.65rem; }
 	.stn-maintenance .package-btn .btn a{ height:2.58rem; line-height:2.58rem; }
 }
+*/

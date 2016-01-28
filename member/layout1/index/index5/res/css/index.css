@@ -8,16 +8,19 @@ body {
 }
 .header-member .headbg {
     width: 100%;
+    padding-bottom:46%;
+    background:url(../img/img3.jpg) no-repeat center center /100% 100%;
 }
 .header-member .headbg img {
     width: 100%;
+    height:100%;
 }
 .header-member .head-pic {
     position: absolute;
     width: 100%;
     text-align: center;
     z-index: 10;
-    top: 1.2rem;
+    top: 1.1rem;
 }
 .header-member .head-pic .a-pic {
     display: block;
@@ -27,7 +30,7 @@ body {
     border-radius: 50%;
     background: #fff;
     box-shadow: 0 0 10px #f66663;
-    margin: 0 auto .7rem;
+    margin: 0 auto .65rem;
 }
 .header-member .head-pic .a-pic img {
     width: 100%;
@@ -54,10 +57,11 @@ body {
 /*前往相应状态的订单*/
 .stn-toOrder ul{font-size:0/*去除inline-block的间距*/;background: #fff;border-bottom:1px solid #c5c5c5;}
 .stn-toOrder li{width:33.3%;display:inline-block ;position:relative;}
-.stn-toOrder li .a-order{display: block;color:#454545;text-align: center;padding-bottom:.4rem;}
-.stn-toOrder li .a-order .imgbox{margin-top:.6rem;position: relative;}
-.stn-toOrder li .a-order .imgbox img{width:23.9%;display:block;margin:0 auto .35rem;}
-.stn-toOrder li .a-order .imgbox span{position: absolute;width:.9rem;height:.9rem;line-height:1rem;background-color: #f77a02;color: #fff;border-radius:50%;top:-.4rem;left:54%;}
+.stn-toOrder li .a-order{display: block;color:#454545;text-align: center;padding-bottom:.3rem;}
+.stn-toOrder li .a-order .imgbox{margin-top:.5rem;position: relative;}
+.stn-toOrder li .a-order .imgbox img{width:23.9%;display:block;margin:0 auto .25rem;}
+.stn-toOrder li .a-order .imgbox span{position: absolute;/*width:.9rem;height:.9rem;line-height:1rem;*/background-color: #f77a02;color: #fff;border-radius:50%;top:-.4rem;left:54%;
+min-width:.8rem;padding:0 .1rem;}
 /*前往相应状态的订单--end*/
 
 
@@ -88,9 +92,9 @@ body {
 	display: none;
 	position: absolute;
 	z-index: 101;
-	left: 6.2%;
-	top: 8rem;
-	width: 87.6%;
+	left: 7%;
+	top: 9rem;
+	width: 86%;
 	background-color: #fff;
 	border-radius: 12px;
 	text-align: center;
@@ -106,10 +110,10 @@ body {
 .stn-sign .i-sign {
 	width: 8.6rem;
 	height: 8.6rem;
-	margin: 1.6rem auto 1.1rem;
+	margin: 1.4rem auto .9rem;
 }
 .stn-sign p {
-	line-height: 2rem;
+	line-height: 1.6;
 	color: #555555;
 }
 .stn-sign p span {
@@ -122,7 +126,7 @@ body {
 	line-height: 2.8rem;
 	color: #fff;
 	border-radius: 6px;
-	margin: 1.8rem auto 1.09rem;
+	margin: 1.4rem auto 1.1rem;
 	background-color: #fd7d09;
 }
 /*签到--end*/
@@ -131,14 +135,13 @@ body {
 nav{padding-bottom:3%;}
 nav ul{margin-top:3%;border: solid #dcdcdc;border-width: 1px 0 1px;    background-color: #fff;}
 nav li {
-	height: 3.19rem;
+/*	height: 3.19rem;*/
 }
 nav li a {
 	display: block;
-	height: 3.19rem;
-	line-height: 3.19rem;
+    padding:2.7% 0 3%;
 	background: url(../img/left.png) no-repeat 95% center;
-	background-size: .58rem 1.09rem;
+	background-size: .5rem;
     margin:0 2%;
     border-top:1px solid #dcdcdc;
 }
@@ -147,21 +150,20 @@ nav li:first-child a{border-top:none;}
 
 nav li .s-img {
 	display: inline-block;
-	width: 1.74rem;
-	height: 1.74rem;
+	width: 5.6%;
+
 	margin-left: 4.375%;
     text-align: center;
 }
 nav li .s-img img{
     display: inline-block;
-	max-width: 1.74rem;
-	max-height: 1.74rem;
     vertical-align: middle;
+    width:100%;
 }
 nav li .s-name {
 	display: inline-block;
 	color: #242424;
-	margin-left: .94rem;
+	margin-left: .5rem;
     vertical-align: middle;
 }
 @media screen and (min-width:321px) and (max-width:639px) {
@@ -180,4 +182,7 @@ nav li .s-name {
 		line-height: 2.16rem;
 		margin-top: 1rem;
 	}
+}
+@media screen and (min-width:321px) and (max-width:639px){
+    .stn-toOrder li .a-order .imgbox span{padding:0;}
 }

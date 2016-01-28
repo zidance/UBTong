@@ -1,15 +1,14 @@
 /*美容列表页*/
-.stn-beautylist{padding-bottom:.72rem;}
-.stn-beautylist li{ background:#fff; margin-top:.72rem; }
-.stn-beautylist li a{ display:block; border:solid #d9d9d9; border-width:1px 0; background:url(../img/left.png) no-repeat 95% center; background-size:.58rem 1.09rem; padding:.72rem 0 .72rem 5%; }
-.stn-beautylist li a .s-img{ display:block; width:3.7rem; height:3.7rem; float:left; margin-right:.72rem; }
-.stn-beautylist li a .s-img img{ width:100%; height:100%; }
-.stn-beautylist li a .p-name{ color:#000; margin-top:.5rem; }
-.stn-beautylist li a .p-single{ margin-top:1.3rem; }
-.stn-beautylist li a .p-hint{ color:#737373; margin-top:.3rem; }
+.stn-beautylist{padding-bottom:.6rem;}
+.stn-beautylist li{ background:#fff; margin-top:.6rem; }
+.stn-beautylist li a{ display:block; border:solid #d9d9d9; border-width:1px 0; background:url(../img/left.png) no-repeat 95% center; background-size:.58rem 1.09rem; padding:.5rem 7.5% .5rem 5%; }
+.stn-beautylist li a .s-img{ display:block;   width:3.7rem;  float:left; margin-right:.6rem; width:16%; }
+.stn-beautylist li a .s-img img{ width:100%;}
+.stn-beautylist li a .p-name{ color:#000; margin-top:0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.stn-beautylist li a .p-single{ margin-top:.9rem; }
+.stn-beautylist li a .p-hint{ color:#737373; margin-top:.3rem;}
 
 @media screen and (max-width:320px){
 	.stn-beautylist li a .p-name{ margin-top:.2rem; }
-	.stn-beautylist li a .p-single{ margin-top:1rem; }
 	.stn-beautylist li a .p-hint{ margin-bottom:0; }
 }

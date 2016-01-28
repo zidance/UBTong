@@ -1,13 +1,13 @@
 /*商家简介*/
-.stn-information{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.72rem; padding:0 3.205%; }
-.stn-information h1{ color:#000; border-bottom:1px solid #d9d9d9; padding:.54rem 0; }
-.stn-information p{ color:#737373; line-height:1.2rem; padding-left:.39rem; }
+.stn-information{ border:solid #d9d9d9; border-width:1px 0; background:#fff; margin-top:.5rem; padding:0 3.205%; }
+.stn-information h1{ color:#000; border-bottom:1px solid #d9d9d9; padding:.375rem 0; }
+.stn-information p{ color:#737373; line-height:.825rem; padding-left:.275rem; }
 .stn-information img{width:100%;}
-.stn-information .p-first{ color:#3e9ef9; margin-top:.5rem; }
-.stn-information .p-infor{ margin-top:1.45rem; color:#737373;overflow: hidden;text-overflow:ellipsis;word-break:break-all;word-wrap:break-word;white-space:nowrap;}
+.stn-information .p-first{ color:#3e9ef9; margin-top:.35rem; }
+.stn-information .p-infor{ margin-top:1rem; color:#737373;overflow: hidden;text-overflow:ellipsis;word-break:break-all;word-wrap:break-word;white-space:nowrap;}
 .stn-information .a-console{display:block;text-align: center;}
-.stn-information .a-console img{width:.9rem;}
+.stn-information .a-console img{width:.625rem;}
 
-.stn-information .btn{ text-align:center; margin:1rem 0 0; padding-bottom: 1.2rem; }
-.stn-information .btn a{ display:inline-block; width:45%; height:2.34rem; line-height:2.34rem; text-align:center; background:#3e9ef9; border-radius:6px; color:#fff; }
+.stn-information .btn{ text-align:center; margin:.75rem 0 0; padding-bottom: .75rem; }
+.stn-information .btn a{ display:inline-block; width:45%; height:1.625rem; line-height:1.625rem; text-align:center; background:#3e9ef9; border-radius:6px; color:#fff; }
 .stn-information .btn a:first-child{ margin-right:5%; background:#f2484c; }

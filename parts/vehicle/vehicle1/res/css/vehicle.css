@@ -1,7 +1,7 @@
 /*车型管理*/
 .stn-vehicle {
 	width: 93.59%;
-	margin: .9rem auto 0;
+	margin: .625rem auto 0;
 	background: #fff;
 	border: 1px dashed #d5d5d5;
 	box-sizing: border-box;
@@ -11,14 +11,15 @@
 .stn-vehicle a {
 	display: block;
 	background: url(../img/left.png) no-repeat 95% center;
-	background-size: .58rem 1.09rem;
+	background-size: .4rem .75rem;
+	padding-bottom:.2rem;
 }
 .stn-vehicle a .s-img {
 	display: block;
 	float: left;
-	width: 4.21rem;
-	height: 4.21rem;
-	margin: 0 .29rem;
+	width: 2.1rem;
+	height: 2.1rem;
+	margin: .3rem .2rem 0;
 }
 .stn-vehicle a .s-img img {
 	max-width: 100%;
@@ -26,7 +27,7 @@
 }
 .stn-vehicle a .p-car {
 	color: #000;
-	padding: .88rem 0 .2rem;
+	padding: .3rem 0 .125rem;
 }
 .stn-vehicle a .p-num {
 	color: #888888;
@@ -40,8 +41,10 @@
 	height: 4.21rem;
 	margin: 0 auto;
 }
+/*
 @media screen and (max-width:320px) {
 	.stn-vehicle a .p-car {
 		padding-top: .6rem;
 	}
 }
+*/
