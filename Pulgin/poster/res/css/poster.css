@@ -18,7 +18,6 @@ body{height: 100%;max-width:640px;margin:0 auto;}
 .stn-post .d-relative .img-logo{position: absolute; top: .5rem; left: .6rem; width: 4.9rem;height: 2rem; }
 .stn-post .d-relative .img-qrcode{position: absolute; right: .6rem; bottom: 2.25rem; width: 3.2rem;height: 3.2rem;}
 .stn-post .d-relative .d-text{position: absolute;left: .5rem;bottom: .65rem;
-color: #db4a12;
 }
 .stn-post-wrap .a-btn{position: absolute;width: 88%; left: 0;right: 0;bottom: 1rem;margin:0 auto;  line-height:3 ;text-align: center;color: #fff; border-radius: .2rem; font-size: .65rem;
   background: linear-gradient(to top, rgba(216, 60, 0, 0.929) 0%, rgba(232, 86, 0, 0.898) 68.9%,rgba(243, 105, 0, 0.843) 100%);
