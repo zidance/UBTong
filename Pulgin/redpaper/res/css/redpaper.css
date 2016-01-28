@@ -16,31 +16,29 @@ body{max-width:640px;width: 100%;height: 100%;}
 .stn-getRed .d-center .img-paper{height:100%;}
 /*这里加入d-content,主要为了bottom属性,同理,如果对p写margin-top,由于红包图宽在某些屏下比例很小,差距太大*/
 .stn-getRed .d-center .d-content{position:absolute;  left: 0;right: 0;margin:0 auto;bottom:9.6%; /*93/648*/}
-.stn-getRed .d-center p{color: #ffff00;line-height:28px; height:56px;}
-.stn-getRed .d-center .a-btn-popup{display: block;margin:0 auto;width: 64.4%; margin-top:32px; /*60*/ }/*348*75*/
+.stn-getRed .d-center p{color: #ffff00;line-height:1.25rem; height:2.5rem; font-size: .75rem;}
+.stn-getRed .d-center .a-btn-popup{display: block;margin:0 auto;width: 64.4%; margin-top:32px; /*margin-top:1.6rem;*/ /*60*/ }/*348*75*/
 .stn-getRed .d-center .a-btn-popup img{width:100%;}
 
 
-/* 弹出层 更复杂,直接经入vh来处理pc端 */
+
+/* 弹出层 更复杂,直接引入vh来处理pc端 */
 .stn-popup{display: none;position: absolute;left: 0;top: 0;right: 0;bottom: 0;max-width:640px;width: 100%;height: 100%;margin:auto;}
 .stn-popup .d-bg{position: absolute;width: 100%;height: 100%;background: rgba(0,0,0,0.7);}
 .stn-popup .a-btn-close{position: absolute;top: .825rem;right: 1.1rem;  width: 1.6rem;height: 1.6rem;background: url(../img/btn-close.png) no-repeat 0 0 /100% 100%;}
-.stn-popup .d-redPaper{position: absolute;bottom:1.875rem;/*height:80%;*/ height:20.775rem; max-height: 80%; width:84.3%;left: 0;right: 0;margin:0 auto;background: url(../img/popup-redpaper.png) no-repeat 0 0 / 100% 100%;}/*540*831*/
-/*.stn-popup .d-redPaper>*{}*/
-.stn-popup .d-redPaper .popup-redpaper{position: absolute;z-index: 991;width: 100%;height: 100%;}
+.stn-popup .d-redPaper{position: absolute;bottom:5%;/*height:80%;*/ height:20.775rem; max-height: 95%; width:84.3%;left: 0;right: 0;margin:0 auto;background: url(../img/popup-redpaper.png) no-repeat 0 0 / 100% 100%;}/*540*831*/
 
-
-
-
-/*.stn-popup .d-redPaper .img-money{display: block;margin:11% auto 0;}*/
 .stn-popup .d-redPaper .d-money{position: relative;z-index: 992;display: block;padding-top:11%; font-size:0; /*height:26.3vh;*/ height:6.575rem;/*height:31.6%;*//*263/831*/;color: #ef0a3c;margin-top:1rem;}
-.stn-popup .d-redPaper .d-money .p-money{display: inline-block;width:70%;height:100%;text-align: right;vertical-align: middle; line-height:6.575rem;; background: url(../img/popup-money.png) no-repeat right center / 86% 100%;box-sizing: border-box;}
-.stn-popup .d-redPaper .d-money .p-money span{font-size: 75px;}
-.stn-popup .d-redPaper .d-money .p-money i{display: inline-block;margin-right:.25rem;}
+.stn-popup .d-redPaper .d-money .p-width-1{display: inline-block;width:10%;}
+.stn-popup .d-redPaper .d-money .p-money{display: inline-block;width:60%;height:100%;vertical-align: middle; line-height:6.575rem;; background: url(../img/popup-money.png) no-repeat right center / 100% 100%;box-sizing: border-box;font-size: 0;}
+.stn-popup .d-redPaper .d-money .p-money span{display: inline-block;font-size: 3.75rem;letter-spacing: -.25rem; width:90%;text-align: center;text-indent:1rem; }
+.stn-popup .d-redPaper .d-money .p-money i{display: inline-block;width:10%;text-align: left;}
 
 .stn-popup .d-redPaper .d-money .p-type{position: relative;display: inline-block;width:3rem;/*121/540*/;text-align: left;text-align: center;height:100%;vertical-align: middle;background: url(../img/popup-type.png) no-repeat left center / 3rem 100%;}
 .stn-popup .d-redPaper .d-money .p-type span{position: absolute; width: 1em;height:5em;left: .8rem;top: 0;bottom: 0;margin: auto;line-height:1.1;overflow: visible;}
 .stn-popup .d-redPaper .d-money img{width: 100%;height: 90%;position:absolute;left: 2%;top: 0;bottom: 0;margin:auto;}
-.stn-popup .d-redPaper .d-text{color: #ffff00;text-align: center;line-height: 1.4;padding:3vh 0;/*margin-top:-2vh;*/}
-.stn-popup .d-redPaper .d-btn a{display: block;margin:0 auto .3rem;text-align: center;width:100%;}/*350*81*/
-.stn-popup .d-redPaper .d-btn a img{height: 2rem;width:auto;}
+.stn-popup .d-redPaper .d-text{color: #ffff00;text-align: center;line-height: 1.25rem; font-size: .9rem;position:absolute;width:100%;text-align: center;font-size: 0;bottom:1.2rem;left: 0;}
+.stn-popup .d-redPaper .d-text p{font-size: .9rem;}
+.stn-popup .d-redPaper .d-text a{display: inline-block;margin:.3rem auto 0;text-align: center;/*width:100%;*/}/*350*81*/
+.stn-popup .d-redPaper .d-text a img{height: 2rem;width:auto;}
+.stn-popup .d-redPaper .d-text .a-btn-first{margin-top:1.25rem}
