@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+.carlist{ width:100%; background:#f7f5f5;}
+.carlist h1{ height:1.35rem; line-height:1.35rem; color:#000; padding-left:.55rem; background:#f7f5f6;}
+.carlist li{ padding:0 .7rem 0 .55rem; height:3.35rem; background:#fff; border:solid #dddddd; border-width:1px 0; margin-bottom:.25rem;}
+.carlist li a{ display:block; background:url(../img/nav.png) no-repeat right center; background-size:.4rem .75rem;height:3.35rem; }
+.carlist li .fl{ width:33.3%; float:left;}
+.carlist li .fl{ padding:.675rem 0;}
+.carlist li .fl p{ line-height:1rem; color:#000; height:1rem; overflow:hidden; }
+.carlist li .c-left p.time{ color:#4889db;}
+.carlist li .c-center{ width:34.8%; padding-left:.3rem;}
+.carlist li .c-center p{ color:#242424;}
+.carlist li .c-center span{ display:block; float:left; margin:.175rem 0; width:.65rem; height:.65rem; border-radius:50%; color:#fff; line-height:.7rem; text-align:center; margin:.175rem .3rem 0 0;}
+.carlist li .c-center span.star{ background:#52b786}
+.carlist li .c-center span.end{ background:#f83c1d;}
+
+.carlist li .c-right{ width:29.5%;}
+.carlist li .c-right span{ margin-top:.65rem; display:block; float:left; width:2.1rem; text-align:center; padding:0 .25rem; height:1rem; background:#4889db; line-height:1rem; color:#fff; border-radius:20px;}
+.carlist li .c-right span.over{ background:#888888;}
+
+.carlist li .c-right .edit{ display:block; float:right; width:1.075rem; height:1.05rem; background:url(../img/edit.png) no-repeat; background-size:1.075rem 1.05rem; margin-top:.475rem; }
+
+@media screen and (max-width:320px){
+	.carlist li .c-center span{line-height:.65rem;}
+	.carlist li .c-right span{ line-height:.95rem;}
+}
+
+
