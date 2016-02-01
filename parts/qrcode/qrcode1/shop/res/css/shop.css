@@ -7,8 +7,9 @@
 .c-head .c-title{ color:#fff; position:absolute; left:7.63rem; top:2.1rem;}
 .c-head .c-cont{ color:#fff; position:absolute; left:7.63rem; top:3.8rem}
 
-.c-img{ width:100%; height:9.59rem;}
-.c-img img{ width:100%; height:100%;}
+.c-img{ width:100%; }
+.c-img span{display: block;}
+.c-img img{ width:100%; }
 
 @media screen and (min-width:321px) and (max-width:639px){
 	.c-head{ height:6.26rem;}
