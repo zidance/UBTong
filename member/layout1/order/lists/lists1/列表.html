@@ -23,9 +23,35 @@
     .a-green 预设绿色--目前仅提醒发货用的该色
     .bg-color common.css定义的公用背景色
     -->
+    <!--弹出框-->
+	<div class="pop-box" id="pop-box" style="display:none">
+        <div class="bg"></div>
+        <div class="box">
+            <p class="b-title fz28">订单编号：160126113908660</p>
+        	<div class="d-way">
+            	<p class="fz28 p-title">退款类型：</p>
+            	<div class="goback-way">
+                	<p><input class="chk-bg-color" name="pay-inline" type="radio" /><span class="fz28">在线退款</span></p>
+                   <!-- <p><input class="chk-bg-color" name="pay-inline" type="radio" /><span class="fz28">线下退款</span></p>-->
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div class="d-why">
+            	<p class="fz28 p-title">退款理由：</p>
+                <textarea></textarea>
+            </div>
+            <div class="a-cbtn">
+           		<a href="###" class="a-check fz32">确定</a>
+            </div>
+            <a href="###" class="a-close">关闭</a>
+        </div>
+    </div>
 
     <!--订单列表-->
 	<section class="stn-order">
+   		
+    
+    
          <!--我的订单-待评价-->
         <article class="art-order">
 			<a href="#">
@@ -107,6 +133,7 @@
 				</div>
 			</a>
             <div class="product-btn">
+            	<a class="a-null refund" href="#">退款</a>
                 <a class="a-green" href="#">提醒发货</a>
             </div>
 		</article>
@@ -142,7 +169,7 @@
 				</div>
 			</a>
             <div class="product-btn">
-				<a class="a-null" href="#">取消订单</a>
+				<a class="a-null refund" href="#">取消订单</a>
                 <a class="a-orange" href="#">付款</a>
             </div>
 		</article>
@@ -180,6 +207,7 @@
 				</div>
 			</a>
             <div class="product-btn">
+            	<a class="a-null refund" href="#">退款</a>
                 <a class="a-null" href="#">查看物流</a>
                 <a class="a-orange" href="#">确认收货</a>
             </div>
@@ -258,10 +286,43 @@
 			<div class="product-num">
                 共 <span>2</span> 件商品&nbsp;&nbsp;&nbsp;&nbsp;订单金额：<em>￥999.00</em>
             </div>
+            <div class="product-btn">
+                <a class="a-null" href="#">已退款</a>
+            </div>
 		</article>
         <!--我的订单-已取消-end-->
         
 		<!--订单列表-end-->
 	</section>
+    <script type="text/javascript">
+    	$(function(){
+			var _refund = $('.refund');
+			var _box = $('#pop-box');
+			var _ok = _box.find('.a-cbtn .a-check');
+			var _cancle = _box.find('.a-close');
+			$.each(_refund,function(i,e){
+				var _this = $(e);
+				_this.click(function(){
+					_this.parents('.art-order').addClass('gotorefund');
+					_box.show();
+				})
+			})	
+			_cancle.click(function(){
+				$('.art-order').removeClass('gotorefund')
+				_box.hide();	
+			})
+			
+			_ok.click(function(){
+				$('.gotorefund').find('.refund').html("退款审核中");
+				_box.hide();	
+					
+			})
+		})
+    	
+    
+    </script>
+    
+    
+    
 </body>
 </html>
