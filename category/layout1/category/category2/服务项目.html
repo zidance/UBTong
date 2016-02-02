@@ -500,7 +500,12 @@
     
     </section>
     
-    <script type="text/javascript">setScrollLeft();setChange('p-service');</script>
+    <script type="text/javascript">
+      //为兼容组合页中未讲到footer高度的情况,需要在DOM加载后执行
+	$(function(){
+		setScrollLeft();setChange('p-service');
+	})
+    </script>
     
 </body>
 </html>

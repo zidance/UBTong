@@ -1,20 +1,11 @@
 // JavaScript Document
 function setScrollLeft(){
 	var _h = $(window).height();
-	var _t= $('.right-service').offset().top;
+	var _t= $('.p-service').offset().top;
+  //没有footer的页面-null,自动转-0,也不会产生错误
+	var _hei = _h-_t-$('footer').height();
 	//$('.left-service').css('top',_t);
-	if( $('.right-service').height()>(_h-_t)){
-		$('.right-service').css({'height':_h-_t,'overflow-y':'auto'});	
-	}else{
-		$('.right-service').css({'height':_h-_t,'overflow-y':'auto'});	
-	};
-	
-	if( $('.left-service').height()>(_h-_t)){
-		$('.left-service').css({'height':_h-_t,'overflow-y':'auto'});	
-	}else{
-		$('.left-service').css({'height':_h-_t,'overflow-y':'hidden'});	
-		$('.left-service ul').css({'height':_h-_t,'overflow-y':'hidden'});	
-	};
+		$('.p-service').height(_hei);
 };
 
 function setChange(_id){
@@ -37,6 +28,8 @@ function setChange(_id){
 	
 }
 
+
+//$('.p-service').height() $(window).height()-$('.p-service').offset().top-$('footer').height()
 
 	
 	

@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 
-.p-service{ border-top:1px solid #e5e5e5; background:#fff; position:relative; height:auto;}
-.p-service .left-service{ width:4rem;padding-right:.25rem; position:absolute; left:0; top:0; background:#fff;}
+.p-service{ border-top:1px solid #e5e5e5; background:#fff; position:relative; height:auto;overflow:hidden;min-height:3rem;}
+.p-service .left-service{ width:4rem;padding-right:.25rem; position:absolute; left:0; top:0; background:#fff;overflow:auto;height:inherit;}
 .p-service .left-service::-webkit-scrollbar{width:0px}
 .p-service .left-service ul{ background:#f3f4f6; border-right:1px solid #e5e5e5;}
 .p-service .left-service li:first-child{ border-top:1px solid #e5e5e5;}
@@ -11,7 +11,7 @@
 .p-service .left-service li:hover,.p-service .left-service li.act{ background-color:#fff; color:#f15353; z-index:99;}
 .p-service .left-service li:hover a,.p-service .left-service li.act a{color:#f15353;}
 
-.p-service .right-service{ width:11.75rem; position:absolute; left:4.25rem; top:0; background:#fff;}
+.p-service .right-service{ width:11.75rem; position:absolute; left:4.25rem; top:0; background:#fff;overflow:auto;height:inherit;}
 .p-service .right-service::-webkit-scrollbar{width:0px}
 .p-service .right-service .service-items{}
 .p-service .right-service .service-items .item{ width:11.625rem; display:none;}
