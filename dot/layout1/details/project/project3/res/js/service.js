@@ -104,20 +104,22 @@ var c= console.log.bind(console)
 			interval = setInterval(scrollEnd, 300); //判定间隔时
 	}
 	var _length = $('.left-service li').length;
-
+	
 	var scrollEnd = function() {
 		// 判断此刻到顶部的距离是否和之前的距离相等
 			for(var i = 1;i < _length+1; i++){
-				var _top = $('#a'+i).offset().top-$('.right-service').offset().top;
+				var _atop = $('#a'+i).offset();
+				var _top = _atop.top-$('.right-service').offset().top;
 				if(_top <= 0){
 					$('.left-service li').removeClass('act');
 					$('#a'+i+i).addClass('act');
+					//此处停止
+					clearInterval(interval);
+					interval = null;
 				}
 			}
 			
-			//此处停止
-			clearInterval(interval);
-			interval = null;
+			
 
 
 	}
