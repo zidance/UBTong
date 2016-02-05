@@ -77,7 +77,6 @@ function Settlement(){
 function setScrollLeft(){
 	var _h = $(window).height();
 	var _t= $('.right-service').offset().top;
-	$('.left-service').css('top',_t-3);
 	if( $('.right-service').height()>(_h-_t)){
 		$('.right-service').css({'height':_h-_t,'overflow-y':'auto'});
 	}else{

@@ -42,6 +42,7 @@
                 <li><a class="a-name fz24" href="#">今日上新，全场满69元包邮！1</a></li>
                 <li><a class="a-name fz24" href="#">今日上新，全场满69元包邮！2</a></li>
             </ul>
+            <div class="clr"></div>
         </div>
     </section>
     <script>
@@ -54,18 +55,12 @@
                 _wrap = _obj.parent('.wrap'),
                 _item = _obj.find('li'),
                 _wid = _wrap.width();
-
-
                 _item.css('min-width', _wid)
             var _objWid = _obj.width()
-
             //尾部加入头一个li
             $$(_obj).append(_item.eq(0).clone())
-
-
             var _delay = _objWid / _wid * _speed * 1000,
                 _initleft = _item.eq(0).width()
-
             function _scroll() {
                 _obj.animate({
                     left: -_objWid,
@@ -73,11 +68,8 @@
                     _obj.css('left', 0)
                     _scroll()
                 })
-
             }
             _scroll()
-
-
             _obj.on('mouseenter', function() {
                 _obj.stop(true)
             })
@@ -347,8 +339,6 @@
     </section>
     -->
     <script type="text/javascript">Settlement();setScrollLeft();</script>
-
-
     <script>
 	window.onload=function(){
 		var _a = $('.pro a');
