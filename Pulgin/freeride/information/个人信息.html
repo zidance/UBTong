@@ -26,22 +26,22 @@
             <tr>
             	<td class="td-left">身份证</td>
                 <td class="input" style="padding:.75rem 0">
-                	<p><input name="UploadImgs" type="file" multiple accept="image/*" /></p>
-                    <p><input name="UploadImgs" type="file" multiple accept="image/*" /></p>
+                	<p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
+                    <p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
                 </td>
             </tr>
             <tr>
             	<td class="td-left">驾驶证 </td>
                 <td class="input"style="padding:.75rem 0">
-                	<p><input name="UploadImgs" type="file" multiple accept="image/*" /></p>
-                    <p><input name="UploadImgs" type="file" multiple accept="image/*" /></p>
+                	<p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
+                    <p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
                 </td>
             </tr>
             <tr>
             	<td class="td-left">行驶证</td>
                 <td class="input"style="padding:.75rem 0">
-                	<p><input name="UploadImgs" type="file" multiple accept="image/*" /></p>
-                    <p><input name="UploadImgs" type="file" multiple accept="image/*" /></p>
+                	<p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
+                    <p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
                 </td>
             </tr>
             
@@ -51,6 +51,56 @@
         <a href="###" class="push">确定</a>
     
     </section>
+
+
+<script src="res/js/jquery.min.js" type="text/javascript"></script>
+
+<script src="../../../common/js/default.js"></script>
+<script src="../../../parts/img/img1/img.js"></script>
+
+<script src="res/js/mobileBUGFix.mini.js" type="text/javascript"></script>
+<script src="res/js/localResizeIMG.js" type="text/javascript"></script>
+
+<script>
+  $(function(){
+
+  var current = $(null)
+      $('input:file').on('click',function(e){
+        e.stopPropagation()
+        current = $(this).parent('p')
+      })
+
+      $('.information').on('click','.lazyUpload',function(){
+        current = $(this)
+//        console.log(current)
+        $(this).find('input').trigger('click')
+      })
+
+
+      $('input:file').localResizeIMG({
+        //不处理width时,保留原图尺寸
+//             width: 400,
+
+             quality: 0.5,
+
+             success: function (result) {
+
+             var image = new Image();
+
+             image.src = result.base64;
+
+               //$('.lazyUpload img') 是用户确认时需要上传到服务器的图片
+
+                 current.addClass('lazyUpload').find('img').replaceWith(image)
+                 //图片尺寸重调
+               img('.information',current)
+             }
+         })
+        //直接上传该字符串格式的图片,在后台如需转回图片格式,参http://www.cnblogs.com/coco1s/p/4375774.html  --解码部分
+
+  })
+
+  </script>
 
 </body>
 </html>
