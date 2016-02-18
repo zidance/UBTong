@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>修改信息</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/main.css" rel="stylesheet" type="text/css" />
+<link href="res/css/information.css" rel="stylesheet" type="text/css"/>
+
+<link href="../../../parts/time/time1/res/css/time/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/time/time1/res/css/time/mobiscroll.widget.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/time/time1/res/css/time/mobiscroll.widget.ios.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/time/time1/res/css/time/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/time/time1/res/css/time/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+
+<script src="../../../parts/time/time1/res/js/jquery-1.11.1.min.js"></script>
+<script src="../../../parts/time/time1/res/js/mobiscroll.core.js"></script>
+<script src="../../../parts/time/time1/res/js/mobiscroll.widget.js"></script>
+<script src="../../../parts/time/time1/res/js/mobiscroll.scroller.js"></script>
+<script src="../../../parts/time/time1/res/js/mobiscroll.util.datetime.js"></script>
+<script src="../../../parts/time/time1/res/js/mobiscroll.datetimebase.js"></script>
+<script src="../../../parts/time/time1/res/js/mobiscroll.widget.ios.js"></script>
+<script src="../../../parts/time/time1/res/js/mobiscroll.i18n.zh.js"></script>
+<script src="../../../common/js/main.js"></script>
+<script type="text/javascript">
+$(function () {
+	var nowData=new Date();
+	var opt= { 
+        preset : 'datetime', //设置日期和时间:年 月 日 时 分;仅显示日期为'date',仅显示时间'time'
+		theme:'ios', //设置显示主题 
+		mode:'scroller', //设置日期选择方式，这里用滚动
+		display:'bottom', //设置控件出现方式及样式
+		//minDate: new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate(),nowData.getHours(),00),    //nowData
+		//maxDate:new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate()+7,22,00),
+             dateFormat: 'dd-yy-mm', // 日期格式
+//              dateOrder: 'yymmdd', //面板中日期排列格式
+		stepMinute: 1, //设置分钟步长
+		yearText:'年', 
+		monthText:'月',
+		dayText:'日',
+		hourText:'时',
+		minuteText:'分',
+		lang:'zh' //设置控件语言};
+	};
+	$('#dateinput').mobiscroll(opt);
+	
+	$('#dateinput')
+});
+
+</script>
+
+
+
+</head>
+
+<body style="background-color:#f7f5f5;">
+	<section class="information">
+    	<table cellpadding="0" cellspacing="0" class="edit">
+        	<tr>
+            	<td class="td-left">车主</td>
+                <td><input type="text" value="林先生"/></td>
+            </tr>
+            <tr>
+            	<td class="td-left">电话</td>
+                <td><input type="text" value="13834458235"/></td>
+            </tr>
+            <tr>
+            	<td class="td-left">车型</td>
+                <td><input type="text" value="宝马"/></td>
+            </tr>
+            <tr>
+            	<td class="td-left">起点</td>
+                <td><input type="text" value="福州"/></td>
+            </tr>
+      		<tr>
+            	<td class="td-left">终点</td>
+                <td><input type="text" value="泉州"/></td>
+            </tr>
+            <tr>
+            	<td class="td-left">途径地点</td>
+                <td><input type="text" value="福清、莆田、漳州"/></td>
+            </tr>
+            <tr>
+            	<td class="td-left">可乘人数</td>
+                <td><input type="text" value="3"/></td>
+            </tr>
+            <tr>
+            	<td class="td-left">出发时间</td>
+                <td class="time"><input type="text" value="2016-1-31 17:00" id="dateinput" readonly/></td>
+            </tr>
+            <tr>
+            	<td class="td-left">可托运物品</td>
+                <td><input type="text" value="行李箱1件"/></td>
+            </tr>
+            <tr>
+            	<td class="td-left">拼车费</td>
+                <td class="right-dot"><input type="text" value="100"/><span>元/人</span></td>
+            </tr>
+            <tr>
+            	<td class="td-left">备注</td>
+                <td style="padding:.75rem 0"><textarea style="width:100%; height:auto">车内没有备婴幼儿安全座椅，有带小孩的恐怕不方便！车内没有备婴幼儿安全座椅，有带小孩的恐怕不方便！车内没有备婴幼儿安全座椅，有带小孩的恐怕不方便！车内没有备婴幼儿安全座椅，有带小孩的恐怕不方便！</textarea></td>
+            </tr>
+        </table>
+        
+        <a href="###" class="a-update fz32">修 改</a>
+        <a href="###" class="a-delete fz32">删 除</a>
+    
+    </section>
+
+</body>
+</html>

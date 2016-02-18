@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+.search ul{ border:solid #dddddd; border-width:1px 0;}
+.search li{ height:2.3rem; background:#fff;}
+.search li .dot{ display:block; height:2.3rem; width:12.6%; float:left;}
+
+.search li .dot.s1{ background:url(../img/dot1.jpg) no-repeat center bottom; background-size:.45rem auto;}
+.search li .dot.s2{ background:url(../img/dot2.jpg) no-repeat center top; background-size:.45rem auto;}
+.search li .dot.s3{ background:url(../img/dot3.jpg) no-repeat center top; background-size:.45rem auto;}
+.search li p{ width:87.4%; float:left; height:2.3rem; border-bottom:1px solid #dddddd;}
+.search li p.last{ border-bottom:none;}
+.search li p.inp input{ color:#dddddd;}
+.search li input{ width:100%;  padding:.6rem 0; height:1.1rem; line-height:1.1rem;}
+.search .btn{ display:block; width:90%; height:2rem; line-height:2rem; color:#fff; text-align:center; background:#4889db; margin:.5rem auto .25rem; border-radius:5px; }

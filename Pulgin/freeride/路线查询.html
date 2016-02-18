@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>路线查询</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../common/css/main.css" rel="stylesheet" type="text/css" />
+<link href="searchroot/res/css/search.css" rel="stylesheet" type="text/css"/>
+<link href="cartlist/res/css/cartlist.css" rel="stylesheet" type="text/css"/>
+<link href="footer/res/css/footer.css" rel="stylesheet" type="text/css"/>
+
+<link href="../../parts/time/time1/res/css/time/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/time/time1/res/css/time/mobiscroll.widget.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/time/time1/res/css/time/mobiscroll.widget.ios.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/time/time1/res/css/time/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+<link href="../../parts/time/time1/res/css/time/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+
+<script src="searchroot/res/js/jquery-1.7.2.min.js"></script>
+<script src="../../parts/time/time1/res/js/mobiscroll.core.js"></script>
+<script src="../../parts/time/time1/res/js/mobiscroll.widget.js"></script>
+<script src="../../parts/time/time1/res/js/mobiscroll.scroller.js"></script>
+<script src="../../parts/time/time1/res/js/mobiscroll.util.datetime.js"></script>
+<script src="../../parts/time/time1/res/js/mobiscroll.datetimebase.js"></script>
+<script src="../../parts/time/time1/res/js/mobiscroll.widget.ios.js"></script>
+<script src="../../parts/time/time1/res/js/mobiscroll.i18n.zh.js"></script>
+<script src="searchroot/res/js/searchroot.js"></script>
+<script src="../../common/js/main.js"></script>
+<script type="text/javascript">
+$(function () {
+	var nowData=new Date();
+	var opt= { 
+        preset : 'datetime', //设置日期和时间:年 月 日 时 分;仅显示日期为'date',仅显示时间'time'
+		theme:'ios', //设置显示主题 
+		mode:'scroller', //设置日期选择方式，这里用滚动
+		display:'bottom', //设置控件出现方式及样式
+		//minDate: new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate(),nowData.getHours(),00),    //nowData
+		//maxDate:new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate()+7,22,00),
+             dateFormat: 'dd-yy-mm', // 日期格式
+//              dateOrder: 'yymmdd', //面板中日期排列格式
+		stepMinute: 1, //设置分钟步长
+		yearText:'年', 
+		monthText:'月',
+		dayText:'日',
+		hourText:'时',
+		minuteText:'分',
+		lang:'zh' //设置控件语言};
+	};
+	$('#dateinput').mobiscroll(opt);
+	
+	$('#dateinput')
+});
+
+</script>
+
+
+
+
+
+</head>
+
+<body style="background-color:#f7f5f5;">
+	<section class="search">
+    	<ul>
+        	<li>
+                <span class="dot s1"></span>
+                <p><input type="text" class="fz32" prompt="福州"  /></p>
+            </li>
+        	<li>
+                <span class="dot s2"></span>
+                <p><input type="text" class="fz32" prompt="目的地"  /></p>
+            </li>
+            <li>
+                <span class="dot s3"></span>
+                <p class="last"><input type="text" class="fz32" prompt="出发时间" id="dateinput" readonly /></p>
+            </li>
+        </ul>
+    	<a href="###" class="btn fz32">查 询</a>
+    </section>
+    
+    <script type="text/javascript">setInputFocus('.search input');</script>
+    
+    
+    <section class="carlist">
+    	<h1 class="fz24">车辆列表</h1>
+    	<ul>
+        	<li>
+            	<a href="###">
+                	<div class="fl c-left">
+                    	<p class="date fz28">2016-02-06</p>
+                        <p class="time fz28">10:00 出发</p>
+                    </div>
+                    <div class="fl c-center">
+                    	<p class="fz28"><span class="star fz20">始</span>福州福州福州</p>
+                        <p class="fz28"><span class="end fz20">终</span>泉州</p>
+                    </div>
+                    <div class="fl c-right">
+                    	<span class="fz20">座位 24</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+            	<a href="###">
+                	<div class="fl c-left">
+                    	<p class="date fz28">2016-02-06</p>
+                        <p class="time fz28">10:00 出发</p>
+                    </div>
+                    <div class="fl c-center">
+                    	<p class="fz28"><span class="star fz20">始</span>福州福州福州</p>
+                        <p class="fz28"><span class="end fz20">终</span>泉州</p>
+                    </div>
+                    <div class="fl c-right">
+                    	<span class="fz20">座位 24</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+            	<a href="###">
+                	<div class="fl c-left">
+                    	<p class="date fz28">2016-02-06</p>
+                        <p class="time fz28">10:00 出发</p>
+                    </div>
+                    <div class="fl c-center">
+                    	<p class="fz28"><span class="star fz20">始</span>福州福州福州</p>
+                        <p class="fz28"><span class="end fz20">终</span>泉州</p>
+                    </div>
+                    <div class="fl c-right">
+                    	<span class="fz20">座位 24</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+            	<a href="###">
+                	<div class="fl c-left">
+                    	<p class="date fz28">2016-02-06</p>
+                        <p class="time fz28">10:00 出发</p>
+                    </div>
+                    <div class="fl c-center">
+                    	<p class="fz28"><span class="star fz20">始</span>福州福州福州</p>
+                        <p class="fz28"><span class="end fz20">终</span>泉州</p>
+                    </div>
+                    <div class="fl c-right">
+                    	<span class="fz20">座位 24</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="clr"></div>
+    </section>
+    
+    
+    
+    
+    <div style="height:3.59rem;"></div>
+    <footer>
+        <ul>
+            <!--当前目录状态:p class="p-footact"-->
+            <li><a href="#"><span class="s-icon"><img src="footer/res/img/menber.png" /></span><p class="fz20 p-footact">首页</p></a></li>
+            <!--当前目录状态menber.png-->
+            <!--未在当前目录状态：menberh.png-->
+            <li><a href="#"><span class="s-icon"><img src="footer/res/img/dot2.png" class="big" /></span><p class="fz20">会员套餐</p></a></li>
+            <!--当前目录状态dot2.png->
+            <!--未在当前目录状态：doth2.png-->
+            <li><a href="#"><span class="s-icon"><img src="footer/res/img/dot3.png"/></span><p class="fz20">热门活动</p></a></li>
+            <!--当前目录状态：dot3.png-->
+            <!--未在当前目录状态：doth3.png-->
+            <li><a href="#"><span class="s-icon"><img src="footer/res/img/dot4.png" /></span><p class="fz20">会员中心</p></a></li>
+            <!--当前目录状态：dot4.png-->
+            <!--未在当前目录状态：doth4.png-->
+        </ul>
+    </footer>
+    <!--底部-end-->
+    
+   
+</body>
+</html>
