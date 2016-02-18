@@ -59,3 +59,35 @@
 	.art-order .product-num em{ font-size:1rem; }
 	.art-order .product-btn a{ font-size:0.96rem; width:4.74rem; height:1.91rem; line-height:1.91rem; }
 }
+
+
+
+
+/* 弹出框 */
+.pop-box{ width:100%; height:100%; position:fixed; z-index:999; left:0; top:0}
+.pop-box .bg{ position:absolute; left:0; top:0; background:#000; opacity:.5; filter:alpha(opacity:50); width:100%; height:100%;}
+.pop-box .box{ width:87.5%; position:absolute; left:6.25%; top:2.81rem; background:#f7f5f5; border-radius:20px;}
+.pop-box .box .b-title{ color:#000; margin-top:1.45rem; line-height:2.9rem; height:2.9rem; padding:0 1.45rem; border-bottom:1px solid #e4e4e4;}
+.pop-box .box .d-way{ padding:0 1.45rem .29rem; border-bottom:1px solid #e4e4e4;}
+.pop-box .box .d-way .p-title{ float:left; padding:.39rem 0; line-height:1.49rem;}
+.pop-box .box .d-way .goback-way{ float:left; width:61%;}
+.pop-box .box .d-way .goback-way p span{vertical-align: middle;color:#000;}
+.pop-box .box .d-way .goback-way p{ line-height:1.49rem; height:1.49rem; margin-bottom:.072rem; padding:.39rem 0; }
+
+.pop-box .box .d-way .goback-way input[type="radio"]{display: inline-block; -webkit-appearance:none; appearance:none; width:6.5%; padding-bottom:6.5%;height:0; margin-right:5%; cursor:pointer; background:none; border:1px solid #dddcdc;  border-radius:50%; box-sizing:border-box; outline:none;vertical-align:middle; }
+.pop-box .box .d-way .goback-way input[type="radio"]:checked{ position:relative;border:none;}
+.pop-box .box .d-way .goback-way input[type="radio"]:checked::before{content: ''; position:absolute;top: 0;left: 0; background:url(../img/check.png) no-repeat center center /100%;width:100%;height:100%;}
+.pop-box .box .d-way .goback-way input[type="radio"]:checked::after{border:none !important;}/*覆盖default.js*/
+
+.pop-box .box .d-why{ padding:0 1.45rem; line-height:2.25rem;}
+.pop-box .box .d-why .p-title{ color:#000;}
+.pop-box .box .d-why textarea{ width:93%; padding:.3rem 3.5%; height:5.21rem; border:1px solid #eae8e8 !important; border-radius:5px; background:#fff;}
+.pop-box .box .a-cbtn{ padding:0 1.45rem 1.09rem;}
+.pop-box .box .a-check{display:block; width:100%; height:2.9rem; background:#f15a0c; color:#fff; line-height:2.9rem; text-align:center; border-radius:5px;}
+.pop-box .box .a-close{ display:block; width:1.23rem; height:1.23rem; background:url(../img/close.png) no-repeat; background-size:1.23rem 1.23rem; text-indent:-9999px; position:absolute; right:.72rem; top:0.72rem;}
+
+
+
+
+
+

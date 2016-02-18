@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+.information{ width:100%; border-top:1px solid #dddddd; margin-top:.5rem;}
+.information table{ width:100%;}
+.information table .td-left{ width:33.6%; padding:.75rem 0 .75rem 1rem;}
+.information table td{ font-size:14px;color:#000; line-height:.875rem; background:#fff; border-bottom:1px solid #dddddd;}
+.information table td input{ width:100%; padding:.75rem 0; font-size:14px;}
+.information table td.right-dot input{ width:72%;}
+.information table td.right-dot span{ width:10%;  margin-right:10%;}
+.information table td.time{ padding-right:6%;}
+.information table td.time input{ margin-right:10%; background:url(../img/narr.png) no-repeat right center; background-size:.4rem .75rem; }
+.information table td textarea{ width:100%; line-height:.875rem; font-size:14px;}
+.push{ display:block; width:90%; height:2rem; line-height:2rem; color:#fff; text-align:center; background:#4889db; margin:.75rem auto; border-radius:5px; }
+
+.information table.edit td input,.information table.edit td textarea{ color:#868686; }
+.information table.edit td.td-left{ color:#000 !important;}
+.information .alert{ color:#868686; margin-top:.2rem; line-height:1.2rem; text-align:center;}
+
+
+.information.upload table td.input p{ display:inline-block; width:2.9rem; padding-top:2.9rem; border:2px solid #d9d9d9; position:relative; overflow:hidden; margin-right:.5rem;}
+.information.upload table td.input input{-webkit-appearance:none; appearance:none;position:absolute;top: 0;left: 0;width:100%;padding-top:100%;background:url(../img/add.png) no-repeat center; background-size:1.7rem 1.7rem; overflow: hidden;height:0; padding-bottom:0;}
+
+
+.information.upload table td.input p img{
+    width:auto;
+    position: absolute;
+    top:50%;left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.a-update{ display:inline-block; width:43.5%; height:2rem; line-height:2rem; color:#fff; text-align:center; background:#4889db; margin:.75rem 1.5% .75rem 4%; border-radius:5px;}
+ .a-delete{ display:inline-block; width:43.5%; height:2rem; line-height:2rem; color:#fff; text-align:center; background:#f83c1d; margin:.75rem 4% .75rem 1.5%;border-radius:5px;}

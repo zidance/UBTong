@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>海报</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="format-detection" content="telephone=no,email=no" />
+  <link href="../../common/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="res/css/poster.css" rel="stylesheet" type="text/css" />
+  <!--本页无须引入zepto和main.js-->
+
+
+</head>
+<body>
+  <!-- 海报 -->
+  <section class="stn-post-wrap">
+    <div class="d-height-1"></div>
+    <section class="stn-post">
+      <div class="d-relative">
+        <img class="img-big" src="res/img/big.png" />
+        <div class="d-bg-bottom"></div>
+        <img class="img-logo" src="res/img/logo.png" />
+        <img class="img-qrcode" src="res/img/qrcode.png" />
+
+      <div class="d-text">
+       <!--默认字体为微软雅黑-->
+        <p style="font-family:'microsoft yahei'; font-size:1.6rem;line-height:1;margin-bottom:.3rem; color: #db4a12;">生一个女儿</p>
+        <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">一直被叫岳父</p>
+        <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">一直被叫岳父</p>
+        <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">一直被叫岳父</p>
+        <p style="font-family:'microsoft yahei'; font-size:1.6rem;line-height:1;margin-top:.575rem;margin-bottom:.1rem; color: #db4a12;">那又怎样</p>
+        <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">我就是我</p>
+        <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">CRC职业赛车手</p>
+      </div>
+
+      </div>
+    </section>
+    <a class="a-btn" href="###">制作我的“敢唱真自我”海报</a>
+  </section>
+
+  <!-- 海报 -end -->
+
+<script>
+var rootRem = function() {
+  var wWidth = document.documentElement.clientWidth || document.body.clientWidth;
+  var dpr = window.devicePixelRatio;
+  var size = (wWidth < 640 ? wWidth : 640) /  640 * 40;
+  document.getElementsByTagName("html")[0].style.fontSize = size + "px";
+}
+window.addEventListener('DOMContentLoaded', rootRem);
+window.addEventListener('resize', rootRem);
+</script>
+
+</body>
+</html>

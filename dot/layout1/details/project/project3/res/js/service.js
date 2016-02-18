@@ -23,13 +23,13 @@ function Settlement(){
 				_parent.find('.red').show();
 				_parent.find('.num').show();
 				_parent.find('.num').html(1);
-				_parent.addClass('show');	
+				_parent.addClass('show');
 			}
 			setSumMoney();
 		})
-		
+
 	})
-	
+
 	$.each(_reduct,function(i,e){
 		var _this = $(e);
 		_this.click(function(){
@@ -43,10 +43,10 @@ function Settlement(){
 				_parent.find('.red').hide();
 				_parent.find('.num').hide();
 				_parent.find('.num').html(0);
-				_parent.removeClass('show');	
+				_parent.removeClass('show');
 			}
 			setSumMoney();
-		})	
+		})
 	})
 
 	function setSumMoney(){
@@ -60,15 +60,15 @@ function Settlement(){
 			var _total = _price * _n;
 			_sum = _total + _sum;
 			_num = _num + _n;
-			
-		})	
+
+		})
 		if(_num >= 1){
-			_fixb.show();	
+			_fixb.show();
 			_fixb.find('.info').html(_num);
 			_fixb.find('.sum').html('￥'+_sum);
-			
+
 		}else{
-			_fixb.hide();		
+			_fixb.hide();
 		}
 	}
 
@@ -79,16 +79,16 @@ function setScrollLeft(){
 	var _t= $('.right-service').offset().top;
 	$('.left-service').css('top',_t-3);
 	if( $('.right-service').height()>(_h-_t)){
-		$('.right-service').css({'height':_h-_t,'overflow-y':'auto'});	
+		$('.right-service').css({'height':_h-_t,'overflow-y':'auto'});
 	}else{
-		$('.right-service').css({'height':_h-_t+100,'overflow-y':'hidden'});	
+		$('.right-service').css({'height':_h-_t+100,'overflow-y':'hidden'});
 	};
-	
+
 	if( $('.left-service').height()>(_h-_t)){
-		$('.left-service').css({'height':_h-_t,'overflow-y':'auto'});	
+		$('.left-service').css({'height':_h-_t,'overflow-y':'auto'});
 	}else{
-		$('.left-service').css({'height':_h-_t,'overflow-y':'hidden'});	
-		$('.left-service ul').css({'height':_h-_t,'overflow-y':'hidden'});	
+		$('.left-service').css({'height':_h-_t,'overflow-y':'hidden'});
+		$('.left-service ul').css({'height':_h-_t,'overflow-y':'hidden'});
 	};
 };
 
@@ -97,7 +97,7 @@ $(function(){
 	var topValue = 0, // 上次滚动条到顶部的距离
 		interval = null; // 定时器
 var c= console.log.bind(console)
-   
+
 	/*判断滚动停止*/
 	var listenScroll = function(){
 		if (interval == null)
@@ -118,18 +118,18 @@ var c= console.log.bind(console)
 					interval = null;
 				}
 			}
-			
-			
 
-
+			//此处停止
+			clearInterval(interval);
+			interval = null;
 	}
 
 	$('.right-service').on('scroll',listenScroll).trigger('scroll');
-	
+
 	$('.left-service li').click(function(){
 		$('.left-service li').removeClass('act');
 		$(this).addClass('act');
 	})
-	
-	
+
+
 })

@@ -48,7 +48,7 @@
 .stn-lists li .p-num{ display:block; float:right; background:url(../img/distance.png) no-repeat 0 center; background-size:.325rem .5rem; padding-left:.5rem; color:#a6a6a6; position:absolute; top:0; right:.36rem; }
 
 /*红色图标*/
-.stn-lists li .p-num-red{ display:block; float:right; background:url(../img/distance_r.png) no-repeat 0 center; background-size:.325rem .5rem; padding-left:.5rem; color:#a6a6a6; position:absolute; top:0; right:.36rem; }  
+.stn-lists li .p-num-red{ display:block; float:right; background:url(../img/distance_r.png) no-repeat 0 center; background-size:.325rem .5rem; padding-left:.5rem; color:#a6a6a6; position:absolute; top:0; right:.36rem; }
 
 
 .stn-lists li .a-btn{ display:block; width:20%; height:1.5rem; line-height:1.5rem; text-align:center; color:#fff; background:#3e9ef9; border-radius:6px; position:absolute; bottom:0; right:1%; }

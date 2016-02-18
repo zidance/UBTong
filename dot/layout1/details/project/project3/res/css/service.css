@@ -40,7 +40,7 @@
 .fixed-bottom .bot-bg{ position:absolute; height:2.5rem; width:100%; left:0; top:0; background:#000; opacity:0.7; filter:alpha(opacity:70);}
 .fixed-bottom .bot-content{ position:absolute; height:1.675rem; width:100%; left:0; top:0; padding:0.425rem 0 .4rem; }
 .fixed-bottom .bot-content .cart-info{ margin:0.15rem .55rem .175rem .8rem; border-right:1px solid #999999; height:1.35rem; width:1.75rem; float:left; position:relative;}
-.fixed-bottom .bot-content .cart-info .cart{ display:block; text-indent:-9999px; width:.8rem; height:.825rem; background:url(../img/cart.png) no-repeat left bottom; background-size:.8rem .825rem; padding-top:.4rem;} 
+.fixed-bottom .bot-content .cart-info .cart{ display:block; text-indent:-9999px; width:.8rem; height:.825rem; background:url(../img/cart.png) no-repeat left bottom; background-size:.8rem .825rem; padding-top:.4rem;}
 .fixed-bottom .bot-content .cart-info .info{ width:.8rem; height:.8rem; position:absolute; top:.15rem; left:.575rem; background:#f2484c; text-align:center; line-height:.8rem; color:#fff; border-radius:50%;}
 .fixed-bottom .bot-content .sum{ line-height:1.675rem; color:#fff; float:left;}
 .fixed-bottom .bot-content .go-buy{ display:block; float:right; margin-right:.7rem; width:4.65rem; height:1.675rem; background:#3e9ef9; color:#fff; text-align:center; line-height:1.675rem; border-radius:.125rem;}

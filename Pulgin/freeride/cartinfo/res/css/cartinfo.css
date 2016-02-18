@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cartinfo{ margin-top:.5rem;border:solid #dddddd; border-width:1px 0;background:#fff; padding:0 4.3%; background:#fff; width:91.4%;}
+.cartinfo .cart{ position:relative; width:98%; border-bottom:1px solid #dddddd; padding:.525rem 1% .6rem 1%;}
+.cartinfo .cart p{ line-height:1rem; color:#000;}
+.cartinfo .cart p span.set{ background:#4889db; border-radius:20px; padding:0 .25rem; line-height:.8rem; height:.8rem; width:2rem; text-align:center; color:#fff;}
+.cartinfo .cart a.phone{ display:block; position:absolute; width:1.95rem; height:1.95rem; border-radius:50%; text-indent:-9999px; border:1px solid #4889db; background:url(../img/phone.png) no-repeat center; background-size:.925rem .9rem; top:1.05rem; right:1%;}
+
+.cartinfo .cartgo{ width:98%; border-bottom:1px solid #dddddd; padding:.525rem 1% .6rem 1%;}
+.cartinfo .cartgo p{ line-height:1.125rem; color:#000; font-size:14px;}
+.cartinfo .cartgo p span{ display:inline-block; width:.7rem; height:.7rem; text-align:center; line-height:.7rem; color:#fff; font-size:10px; border-radius:50%; margin-right:.3rem;}
+.cartinfo .cartgo p span.star{ background:#52b786;}
+.cartinfo .cartgo p span.end{ background:#f83c1d; margin-bottom:.25rem;}
+
+.cartinfo .erweima{ width:98%; padding:.75rem 1% .625rem 1%; text-align:center;}
+.cartinfo .erweima span{ display:inline-block; width:6.025rem; height:6.025rem; margin-bottom:.3rem;}
+.cartinfo .erweima span img{ width:100%; height:100%;}
+.cartinfo p{ color:#000; line-height:.8rem;}
+
+@media screen and (max-width:320px){
+	.cartinfo .cartgo p span{ line-height:.65rem; }
+}
