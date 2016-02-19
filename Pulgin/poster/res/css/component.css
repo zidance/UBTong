@@ -25,6 +25,13 @@
 	box-sizing:border-box;
 	pointer-events: none;
 }
+.overlay-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  }
+  
+.d-text{position: absolute;left: .5rem;bottom: .65rem;}
 /*
 .overlay:after,
 .overlay:before {

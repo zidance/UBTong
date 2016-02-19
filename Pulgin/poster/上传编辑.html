@@ -12,7 +12,7 @@
   <meta name="format-detection" content="telephone=no,email=no" />
   <link href="../../common/css/main.css" rel="stylesheet" type="text/css" />
   <link href="res/css/poster.css" rel="stylesheet" type="text/css" />
-
+  <script type="text/javascript" src="res/js/jquery-2.1.1.min.js"></script>	
 
 </head>
 <body>
@@ -39,5 +39,26 @@
   </section>
   <!-- 上传编辑 -end -->
   <script type="text/javascript" src="res/js/main.js"></script>
+  <script type="text/javascript">
+  	$(function(){
+		var maxsize = 10;
+		var _inp = $('input:text');
+		$.each(_inp,function(i,e){
+			var _this = $(e);
+			_this.blur(function(){
+				var _str = $(this).val();	
+				if(_str.length>maxsize){
+					alert("请输入"+maxsize+"字以内");
+					$(this).focus();	
+				}else{
+					return;
+				}
+			})
+		})	
+	})
+  
+  
+  </script>
+  
 </body>
 </html>
