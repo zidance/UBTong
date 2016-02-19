@@ -35,7 +35,8 @@ body{height: 100%;max-width:640px;margin:0 auto;}
 .post-edit{ position:relative; padding-bottom:4.5%;}
 .post-edit-container{ width:91%; margin:4.5% auto 0; background:#555555; border-radius:10px; box-shadow:.1rem .1rem 2.45rem rgba(0, 0, 0, 0.352)}
 .post-edit-wrap{ width:90%; height:100%; margin:0 auto;}
-.post-up-photo{width:3.85rem; padding-top:3.85rem; position:relative; overflow:hidden;background-color:transparent; margin-left:1.35rem; margin-bottom:1rem;}
+.post-up-photo{ display:inline-block;width:3.85rem; padding-top:3.85rem; position:relative; overflow:hidden;background-color:transparent; margin-left:1.35rem; margin-bottom:1rem;  overflow: hidden;}
+.post-up-photo img{position: absolute; left: 0;right: 0;top: 0;bottom: 0;margin: auto;max-height: 100%; max-width: 100%;}
 .post-up-photo input{-webkit-appearance:none; appearance:none;position:absolute;top: 0;left: 0;width:100%;padding-top:100%;overflow: hidden;height:0; padding-bottom:0;background:url(../img/add.png) no-repeat center; background-size:100% 100%;}
 .post-up-font{ width:100%;}
 .post-up-font span{ display:inline-block; color:#8b8a85; width:15.4%;}
