@@ -21,11 +21,7 @@ var resizeableImage = function(image_target) {
     orig_src.src=image_target.src;
 
     // Wrap the image with the container and add resize handles
-    $(image_target).wrap('<div class="resize-container" id="resize-container"></div>')
-    .before('<span class="resize-handle resize-handle-nw"></span>')
-    .before('<span class="resize-handle resize-handle-ne"></span>')
-    .after('<span class="resize-handle resize-handle-se"></span>')
-    .after('<span class="resize-handle resize-handle-sw"></span>');
+    $(image_target).wrap('<div class="resize-container" id="resize-container"></div>');
 
     // Assign the container to a variable
     $container =  $(image_target).parent('.resize-container');
@@ -191,7 +187,7 @@ var resizeableImage = function(image_target) {
     crop_canvas.height = height;
     
     crop_canvas.getContext('2d').drawImage(image_target, left, top, width, height, 0, 0, width, height);
-    //window.open(crop_canvas.toDataURL("image/png"));
+    window.open(crop_canvas.toDataURL("image/png"));
 	alert(crop_canvas.toDataURL("image/png"));
   }
 

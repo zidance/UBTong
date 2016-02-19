@@ -48,24 +48,73 @@
 <div class="clear"></div>
 </div>
 <script type="text/javascript">
-        //创建一个新的hammer对象并且在初始化时指定要处理的dom元素
-         var hammertime = new Hammer(document.getElementById("resize-container"));
-		 var _container;
-		 var _container = document.querySelector('#resize-container');
-		 
-		 
-        //为该dom元素指定触屏移动事件
-		 hammertime.get('pinch').set({ enable: true ,direction: Hammer.DIRECTION_ALL});
-         hammertime.add(new Hammer.Pinch());
-         //添加事件
-         hammertime.on("pinchin", function (e) {
-             alert("捏合初触发");
-             //控制台输出
-         });
-		 hammertime.on("pinchout", function (e) {
-             alert("张开初触发");
-             //控制台输出
-         });
+ var reqAnimationFrame = (function () {
+        return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+    })();
+
+    
+    var el = document.querySelector("#resize-container");
+
+    var START_X = Math.round( el.offsetLeft);
+    var START_Y = Math.round(el.offsetTop);
+
+    var ticking = false;
+    var transform;
+    var timer;
+
+    var mc = new Hammer.Manager(el);
+    mc.add(new Hammer.Pinch({ threshold: 0 }));
+    mc.on("pinchstart pinchmove", onPinch);
+    function resetElement() {
+        el.className = 'animate';
+        transform = {
+            translate: { x: START_X, y: START_Y },
+            scale: 1,
+            angle: 0,
+            rx: 0,
+            ry: 0,
+            rz: 0
+        };
+
+        requestElementUpdate();
+    }
+
+    function updateElementTransform() {
+        var value = [
+                    'translate3d(' + transform.translate.x + 'px, ' + transform.translate.y + 'px, 0)',
+                    'scale(' + transform.scale + ', ' + transform.scale + ')',
+                    'rotate3d('+ transform.rx +','+ transform.ry +','+ transform.rz +','+  transform.angle + 'deg)'
+        ];
+
+        value = value.join(" ");
+        //el.textContent = value;
+        el.style.webkitTransform = value;
+        el.style.mozTransform = value;
+        el.style.transform = value;
+        ticking = false;
+    }
+
+    function requestElementUpdate() {
+        if(!ticking) {
+            reqAnimationFrame(updateElementTransform);
+            ticking = true;
+        }
+    }
+
+    var initScale = 1;
+    function onPinch(ev) {
+        if(ev.type == 'pinchstart') {
+            initScale = transform.scale || 1;
+        }
+
+        el.className = '';
+        transform.scale = initScale * ev.scale;
+
+        requestElementUpdate();
+    }
+    resetElement();
 
 </script>
 </body>

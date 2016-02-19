@@ -24,6 +24,14 @@ body{height: 100%;max-width:640px;margin:0 auto;}
   background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(216, 60, 0, 0.929)), color-stop(68.9%,rgba(232, 86, 0, 0.898)), to(rgba(243, 105, 0, 0.843)));
 } /*603*61*/
 
+.post-btn{ display:inline-block; width:100%;line-height:3 ;text-align: center;color: #fff;border-radius: .2rem; font-size: .65rem;
+  background: linear-gradient(to top, rgba(216, 60, 0, 0.929) 0%, rgba(232, 86, 0, 0.898) 68.9%,rgba(243, 105, 0, 0.843) 100%);
+  background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(216, 60, 0, 0.929)), color-stop(68.9%,rgba(232, 86, 0, 0.898)), to(rgba(243, 105, 0, 0.843)));}
+.btn-position{position: absolute;left: 0;right: 0;bottom: 1rem;margin:0 auto; width:100%;}
+.stn-post-wrap .post-btn-two{ width:41%; display:inline-block;}
+.stn-post-wrap .left{ margin:0 2% 0 6%;}
+.stn-post-wrap .right{ margin:0 6% 0 2%;}
+
 .post-edit{ position:relative; padding-bottom:4.5%;}
 .post-edit-container{ width:91%; margin:4.5% auto 0; background:#555555; border-radius:10px; box-shadow:.1rem .1rem 2.45rem rgba(0, 0, 0, 0.352)}
 .post-edit-wrap{ width:90%; height:100%; margin:0 auto;}
