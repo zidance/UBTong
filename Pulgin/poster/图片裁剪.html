@@ -17,6 +17,8 @@
   <!--必要样式-->
   <link rel="stylesheet" type="text/css" href="res/css/component.css" />
   <script src="res/js/main.js" type="text/javascript"></script>
+  <script src="res/js/hammer.js" type="text/javascript"></script>
+  
   <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -45,5 +47,26 @@
 <!--效果html结束-->
 <div class="clear"></div>
 </div>
+<script type="text/javascript">
+        //创建一个新的hammer对象并且在初始化时指定要处理的dom元素
+         var hammertime = new Hammer(document.getElementById("resize-container"));
+		 var _container;
+		 var _container = document.querySelector('#resize-container');
+		 
+		 
+        //为该dom元素指定触屏移动事件
+		 hammertime.get('pinch').set({ enable: true ,direction: Hammer.DIRECTION_ALL});
+         hammertime.add(new Hammer.Pinch());
+         //添加事件
+         hammertime.on("pinchin", function (e) {
+             alert("捏合初触发");
+             //控制台输出
+         });
+		 hammertime.on("pinchout", function (e) {
+             alert("张开初触发");
+             //控制台输出
+         });
+
+</script>
 </body>
 </html>
