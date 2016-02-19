@@ -7,7 +7,7 @@
 .stn-classification .type .type-th{ display:inline-block; text-align:center; line-height:1.01rem; width:1.27rem; height:1.01rem; /*border-radius:6px;*/ background-color:#ff6633; color:#fff; margin-right:.36rem;}
 .none-border{ border-top:0;}
 .stn-classification .type-goods{ width:100%; height:auto; border-bottom:1px solid #ddd;}
-.stn-classification .type-goods table{border-collapse: collapse;border-top:none;}
+.stn-classification .type-goods table{border-collapse: collapse;border-top:none;width: 100%;}
 .stn-classification .type-goods tr{width:100%;}
 .stn-classification .type-goods td{ /*border:1px solid #dddddd;*/ position:relative;width:33.3%;border:solid #ddd;border-width:1px 1px 0 0; }
 /*.stn-classification .type-goods td.img1{width:33.2%;}*/

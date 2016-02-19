@@ -1,7 +1,7 @@
 
 .product-details{  position:relative; background-color:#fff;border-top:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;}
 .product-details .p-name{ color:#000; line-height: .9rem; padding:0.5rem 0 0.5rem 0.625rem; width:12.7rem; float:left;}
-.product-details .dot{ display:inline-block; width:.9rem; height:.9rem; background:url(../img/collect1.png) no-repeat; background-size:.9rem .9rem; float:right; margin-right:.45rem; margin-top:.6rem;}
+
 .product-details .price{border-top: 1px solid #d9d9d9;}
 .product-details .price a{display: block;padding:0 4% 0 2.3%;line-height: 2.4;}
 .product-details .price .a-btn{background: url(../img/btn-right.png) no-repeat 96% center;background-size:2%;}
