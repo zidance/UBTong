@@ -1,6 +1,7 @@
 /*if(window.location.protocol == 'file:'){
   alert('To test this demo properly please use a local server such as XAMPP or WAMP. See README.md for more details.');
 }*/
+window.c = console.log.bind(console)
 
 var resizeableImage = function(image_target) {
   // Some variable and settings
@@ -24,7 +25,10 @@ var resizeableImage = function(image_target) {
     $(image_target).wrap('<div class="resize-container" id="resize-container"></div>');
 
     // Assign the container to a variable
-    $container =  $(image_target).parent('.resize-container');
+    $container =  $(image_target).parent('#resize-container');
+
+//    $(image_target).css('max-width',$('.content').width())
+//    $(image_target).css('max-height',$('.content').height())
 
     // Add events
     //$container.on('mousedown touchstart', 'img', startResize);
@@ -116,12 +120,12 @@ var resizeableImage = function(image_target) {
 //    }
 //  }
 
-  //resizeImage = function(width, height){
+  resizeImage = function(width, height){
 //    resize_canvas.width = width;
 //    resize_canvas.height = height;
 //    resize_canvas.getContext('2d').drawImage(orig_src, 0, 0, width, height);   
 //    $(image_target).attr('src', resize_canvas.toDataURL("image/png"));  
-//  };
+  };
 
   startMoving = function(e){
     e.preventDefault();
@@ -175,6 +179,8 @@ var resizeableImage = function(image_target) {
   };
 
   crop = function(){
+
+
     //Find the part of the image that is inside the crop box
     var crop_canvas,
         left = $('.overlay').offset().left - $container.offset().left,
@@ -186,9 +192,13 @@ var resizeableImage = function(image_target) {
     crop_canvas.width = width;
     crop_canvas.height = height;
     
-    crop_canvas.getContext('2d').drawImage(image_target, left, top, width, height, 0, 0, width, height);
-    window.open(crop_canvas.toDataURL("image/png"));
-	alert(crop_canvas.toDataURL("image/png"));
+    $('#resize-container').css('transform').match(/matrix\((.*?),/)
+    scale = RegExp.$1
+    //alert(scale)
+
+    crop_canvas.getContext('2d').drawImage(image_target, left/scale,top/scale, width/scale,height/scale, 0, 0,width,height);
+//    window.open(crop_canvas.toDataURL("image/png"));
+    $(image_target).attr('data-clip',crop_canvas.toDataURL("image/png"))
   }
 
   init();
