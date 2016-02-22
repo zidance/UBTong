@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<meta name="msapplication-tap-highlight" content="no"/>
+<link rel="stylesheet" href="res/css/style.css?v=2">
+<title>图片编辑(双指旋转和双指缩放)</title>
+</head>
+<body>
+<!--加载资源-->
+<div class="lazy_tip" id="lazy_tip">
+	<span>1%</span><br>
+	加载是很重要的......
+</div>
+<div class="lazy_cover"></div>
+<div class="resource_lazy hide"></div>
+
+<div class="pic_edit">
+	<div id="clipArea"></div>
+	<button id="upload2">取消</button>
+    <button id="clipBtn">确认</button>
+	
+	<input type="file" id="file" style="opacity: 0;position: fixed;bottom: -100px">
+</div>
+
+<div class="d-text" id="d-text" style="position:absolute; z-index:999; text-align:left; bottom:0">
+   <!--默认字体为微软雅黑-->
+    <p style="font-family:'microsoft yahei'; font-size:1.6rem;line-height:1;margin-bottom:.3rem; color: #db4a12;">生一个女儿</p>
+    <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">一直被叫岳父</p>
+    <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">一直被叫岳父</p>
+    <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">一直被叫岳父</p>
+    <p style="font-family:'microsoft yahei'; font-size:1.6rem;line-height:1;margin-top:.575rem;margin-bottom:.1rem; color: #db4a12;">那又怎样</p>
+    <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">我就是我</p>
+    <p style="font-family:'microsoft yahei'; font-size:1.1rem;line-height:1.3rem; color: #db4a12;">CRC职业赛车手</p>
+</div>
+
+<img src="" title="upload.jpg" fileName="" id="hit" style="display:none;z-index: 9">
+
+<script src="res/css/jquery-2.1.0.min.js"></script>
+<script src="res/css/sonic.js"></script>
+<script src="res/css/commer.js"></script>
+<script src="res/css/hammer.js"></script>
+<script src="res/css/iscroll-zoom.js"></script>
+<script src="res/css/jquery.photoClip.js?v=1"></script>
+<script>
+var hammer = '';
+var currentIndex = 0;
+var body_width = $('body').width();
+var body_height = $('body').height();
+$('#d-text').css({'left':(body_width - body_width*0.8125)/2,'bottom':(body_height*0.9 - body_height*0.9*0.9)*0.5+body_height*0.1})
+//console.log(body_height);
+$("#clipArea").photoClip({
+	width: body_width * 0.8125,
+	height: body_height * 0.8,
+	file: "#file",
+	view: "#hit",
+	ok: "#clipBtn",
+	loadStart: function () {
+		//console.log("照片读取中");
+		$('.lazy_tip span').text('');
+		$('.lazy_cover,.lazy_tip').show();
+	},
+	loadComplete: function () {
+		//console.log("照片读取完成");
+		$('.lazy_cover,.lazy_tip').hide();
+	},
+	clipFinish: function (dataURL) {
+		$('#hit').attr('src', dataURL);
+		//console.log(dataURL);
+		//alert(dataURL);
+		saveImageInfo();
+	}
+});
+
+//图片上传
+function saveImageInfo() {
+	var filename = $('#hit').attr('fileName');
+	var img_data = $('#hit').attr('src');
+	
+	$.post("这里填写图片获取的网址", {image: img_data}, function (data) {
+		if (data != '') {
+			console.info(data);
+			//data 为返回文件名；
+			alert('提交成功');
+		}
+	});
+}
+
+/*获取文件拓展名*/
+function getFileExt(str) {
+	var d = /\.[^\.]+$/.exec(str);
+	return d;
+}
+
+//图片上传结束
+$(function () {
+	$('#upload2').on('touchstart', function () {
+		//图片上传按钮
+		$('#file').click();
+	})
+})
+
+
+
+
+</script>
+<div id="cover"></div>
+</body>
+</html>

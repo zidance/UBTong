@@ -17,11 +17,12 @@
 
 .overlay {
 	position: absolute;
-	left: 10%;
+	left: 11.3%;
+	top:6.7%;
 	z-index: 999;
-	width: 80%;
-	height: 100%;
-    border: solid 2px rgba(222,60,80,.9);
+	width: 77.4%;
+	height: 89.3%;
+    border: solid 2px #CCC;
 	box-sizing:border-box;
 	pointer-events: none;
 }
@@ -30,7 +31,17 @@
   width: 100%;
   height: 100%;
   }
-  
+.bgshow{ position:absolute; background:#000; opacity:0.8; z-index:999;}
+.bgleft{ left:0; top:0; width:11.3%; height:100%;} 
+.bgright{ top:0; right:0; width:11.3%; height:100%;}
+.bgtop{ top:0; left:11.3%; width:77.4%; height:6.7%;}
+.bgbottom{ bottom:0; left:11.3%; width:77.4%; height:4%;}
+ 
+.d-bg-bottom{
+  position: absolute;bottom: 0;left: 0; width: 100%;height: 76%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.956) 0%, rgba(0, 0, 0, 0.917) 50%,rgba(0, 0, 0, 0.705) 70%,rgba(0, 0, 0, ) 100%);
+  background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(0, 0, 0, 0.956)), color-stop(50%,rgba(0, 0, 0, 0.917)), color-stop(70%,rgba(0, 0, 0, 0.705)), to(rgba(0, 0, 0, 0)));}
+ 
 .d-text{position: absolute;left: .5rem;bottom: .65rem;}
 /*
 .overlay:after,
@@ -89,6 +100,10 @@
 	border: none;
 	border-radius: 5px;
 	color: #FFF;
+	font-size:.65rem;
+	line-height:3;
+	background: linear-gradient(to top, rgba(216, 60, 0, 0.929) 0%, rgba(232, 86, 0, 0.898) 68.9%,rgba(243, 105, 0, 0.843) 100%);
+    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(216, 60, 0, 0.929)), color-stop(68.9%,rgba(232, 86, 0, 0.898)), to(rgba(243, 105, 0, 0.843)));
 }
 
 .left{ margin:0 2% 0 3%}
@@ -99,4 +114,4 @@
 	margin-left: 8px;
 }
 
-.btn{ height:10%; margin-top:3%; width:100%;}
+.btn{ width:100%; position:absolute; bottom:1rem;}

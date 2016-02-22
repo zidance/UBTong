@@ -197,8 +197,9 @@ var resizeableImage = function(image_target) {
     //alert(scale)
 
     crop_canvas.getContext('2d').drawImage(image_target, left/scale,top/scale, width/scale,height/scale, 0, 0,width,height);
-//    window.open(crop_canvas.toDataURL("image/png"));
+    //window.open(crop_canvas.toDataURL("image/png"));
     $(image_target).attr('data-clip',crop_canvas.toDataURL("image/png"))
+	//console.log(crop_canvas.toDataURL("image/png"));
   }
 
   init();
