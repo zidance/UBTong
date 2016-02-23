@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>上传编辑</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="format-detection" content="telephone=no,email=no" />
+  <link href="../../common/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="res/css/poster.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="res/js/jquery-2.1.1.min.js"></script>	
+
+</head>
+<body>
+  <!-- 上传编辑 -->
+  <section class="post-edit">
+  	  <div class="post-edit-container">
+      	<div class="post-edit-wrap">
+            <p class="post-title fz30"><span class="dot">1</span>请上传人物照片</p>
+            <p class="post-up-photo"><input name="UploadImgs" type="file" multiple accept="image/*" onchange="change(this.value)" id="photoUrl" /></p>
+            <p class="post-up-photo"><img src="res/img/avatar.jpg"></p>
+            <p class="post-title fz30"><span class="dot">2</span>请输入人物描述</p>
+             <div class="post-up-font">
+                <input type="text" value=""/>
+                <span class="fz30">一直</span><input type="text" value="" class="short" style="width:79%"/>
+                <span class="fz30">一直</span><input type="text" value="" class="short" style="width:79%"/>
+                <span class="fz30">一直</span><input type="text" value="" class="short" style="width:79%"/>
+                <p class="fz30">那又怎样</p>
+                <p class="fz30">我就是我</p>
+                <input type="text" value=""/>
+             </div>  
+             <a href="###" class="post-a-up fz36">生成海报</a>
+         </div>
+      </div>
+	  
+  </section>
+  <!-- 上传编辑 -end -->
+  <script type="text/javascript" src="res/js/main.js"></script>
+  <script type="text/javascript">
+  	$(function(){
+		var maxsize = 10;
+		var _inp = $('input:text');
+		$.each(_inp,function(i,e){
+			var _this = $(e);
+			_this.blur(function(){
+				var _str = $(this).val();	
+				if(_str.length>maxsize){
+					alert("请输入"+maxsize+"字以内");
+					$(this).focus();	
+				}else{
+					return;
+				}
+			})
+		})	
+	})
+  </script>
+  
+</body>
+</html>
