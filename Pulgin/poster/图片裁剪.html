@@ -56,6 +56,9 @@
 	<button class="left">取消</button>
 	<button class="btn-crop js-crop right">确认</button>
 </div>
+<div style="width:77.4%; height:77.82%; background:#f00; margin-top:50%;">
+<img src="" id="srcimg">
+</div>
 
 <!-- /content --> 
 <script type="text/javascript" src="res/js/jquery-2.1.1.min.js"></script> 
@@ -127,7 +130,7 @@
 
         el.className = '';
         transform.scale = initScale * ev.scale;
-
+		//console.log(transform.scale);
         requestElementUpdate();
     }
     resetElement();
