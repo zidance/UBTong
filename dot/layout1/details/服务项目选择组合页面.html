@@ -9,15 +9,121 @@
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="format-detection" content="telephone=no,email=no" />
     <link href="../../../common/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../../details/layout1/pic/pic3/res/css/pic.css" rel="stylesheet" type="text/css" />
+    <link href="../../../details/layout1/details/details2/res/css/details.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../details/layout1/introduce/introduce1/res/css/introduce.css" rel="stylesheet" type="text/css"/>
     <link href="synopsis/synopsis2/res/css/synopsis.css" rel="stylesheet" type="text/css"/>
     <link href="notice/notice1/res/css/notice.css" rel="stylesheet" type="text/css"/>
     <link href="project/project3/res/css/service.css" rel="stylesheet" type="text/css"/>
     <script src="notice/notice1/res/js/jquery-1.7.2.min.js"></script>
     <script src="../../../common/js/main.js"></script>
     <script src="project/project3/res/js/service1.js"></script>
+    <script type="text/javascript">
+    	$(window).load(function(){
+			var _close = $('#close');
+			var _page = $('.all-page');
+			_close.hide();
+			_page.css('top',$(window).height()+20)
+			$('.a-img').click(function(){
+				$(this).hide();
+				_page.animate({top:0});
+				_close.show();
+				$('body').css({'height':'auto','overflow':'scroll'});
+				$('html').css({'height':'auto','overflow':'scroll'});
+			})
+
+			_close.click(function(){
+				$(this).hide();
+				_page.animate({top:$(window).height()+20})
+				$('#btn').show();
+				$('body').css({'height':'100%','overflow':'hidden'});
+				$('html').css({'height':'100%','overflow':'hidden'});
+			})
+		})
+    </script>
+    <style>
+    	html,body{ height:100%; overflow:hidden;}
+    </style>
 </head>
 
-<body style="background:#f5f5f9;">
+<body  onload="loaded()" style="background:#f5f5f9;">
+	<div class="all-page" style="z-index:9999; background:#fff; position:fixed; height:100%; width:100%; top:2000px; overflow:scroll;">
+
+
+    <!--轮播图片-->
+    <div class="banner">
+    	<!--关闭的按钮-->
+		<a href="###" class="close" id="close"><img src="pic/pic3/res/img/close.png"/></a>
+        <div id="slider" class="slider">
+            <ul id="sliderlist" class="sliderlist">
+                <li>
+                    <a href="###"><img src="../../../details/layout1/pic/pic3/res/img/img3.jpg"></a>
+                </li>
+
+                <li>
+                    <a href="###"><img src="../../../details/layout1/pic/pic3/res/img/img3.jpg"></a>
+                </li>
+                <li>
+                    <a href="###"><img src="../../../details/layout1/pic/pic3/res/img/img3.jpg"></a>
+                </li>
+                <!--<li><a href="###"><img src="res/img/50100.png"></a></li>-->
+                <li>
+                    <a href="###"><img src="../../../details/layout1/pic/pic3/res/img/img3.jpg"></a>
+                </li>
+            </ul>
+            <div class="clr"></div>
+            <!--切换轮播图按钮-->
+            <div id="pagenavi">
+            </div>
+			<!--二维码-->
+
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="../../../details/layout1/pic/pic3/res/js/touchslider.min.js"></script>
+    <script type="text/javascript" src="../../../details/layout1/pic/pic3/res/js/pic.js"></script>
+
+    <!--轮播图片--end-->
+     <!--商品详细-->
+    <div class="product-details" id="ProductDetails">
+        <p class="p-name fz28">洗车服务-迈卡福州 员服务</p>
+        <div class="clr"></div>
+        <div class="price price-member">
+            <!--未选状态a-btn,选中状态a-checked-->
+            <a class="a-btn-def" href="###">
+                <p class="p-title fz22">会员价</p>
+                <p class="p-money fz40"><span>￥</span>129.90</p>
+                <p class="p-money-old fz28">￥140.00</p>
+                 <p class="p-num fz28">销量0</p>
+            </a>
+        </div>
+    </div>
+    <!--商品详细-end-->
+
+    <!--商品介绍-->
+	<div class="details-introduce" id="DetailsIntroduce">
+		<nav>
+			<ul class="ul-col-1">
+				<li><a class="fz28 color" href="###">商品介绍</a></li>
+			</ul>
+			<div class="clr"></div>
+		</nav>
+
+		<div class="introduce-con">
+        	<div class="introduce-item fz28 font">
+				<h5 class="fz28">精心冲洗：冲车是一道专业要求高责任心要求高责任心要求强的工作，它关系到工作安全、工作效果、工作质量。该程序要要求从上</h5>
+                <p class="fz28">1、用清水喷洗车顶、前挡风玻璃及通风口，前保。</p>
+                <p class="fz28">2、用清水喷洗左前叶</p>
+                <p class="fz28">3、用清水喷洗左侧反观镜、玻璃车门，后叶</p>
+                <p class="fz28">4、用清水喷洗左侧车轮、轮胎、挡泥板内侧及凹缘处，要求彻底清除凹缘内的积泥。</p>
+                <p class="fz28">5、用水柱子清洗喷洗减振器上的积泥。</p>
+                <p class="fz28">6、用清水喷洗后档玻璃，后盖，后保。到下，从左到右依次进行：</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 	<!--服务网点简介-->
     <section class="stn-synopsis">
         <span class="s-img"><img src="synopsis/synopsis2/res/img/img1.png" /></span>
