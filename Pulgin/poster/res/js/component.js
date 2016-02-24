@@ -20,6 +20,15 @@ var resizeableImage = function(image_target) {
 
     // When resizing, we will always use this copy of the original as the base
     orig_src.src=image_target.src;
+	//if(image_target.width > image_target.height){
+//		c = image_target.height / $(window).height()*0.8715;
+//		image_target.height = $(window).height()*0.8715;
+//			
+//	}else{
+//		c = image_target.width / $(window).width();
+//		image_target.width = $(window).width();	
+//		
+//	}
 
     // Wrap the image with the container and add resize handles
     $(image_target).wrap('<div class="resize-container" id="resize-container"></div>');
@@ -139,7 +148,43 @@ var resizeableImage = function(image_target) {
     e.preventDefault();
     $(document).off('mouseup touchend', endMoving);
     $(document).off('mousemove touchmove', moving);
+	//imgPosition();
   };
+
+	//imgPosition = function(){
+//		$('#resize-container').css('transform').match(/matrix\((.*?),/)
+//    	scale = RegExp.$1
+//		console.log(scale);
+//		_left = parseInt($('.overlay').offset().left);
+//		_top = parseInt($('.overlay').offset().top);
+//		_right = $('.overlay').width()+_left;
+//		_bottom = $('.overlay').height()+_top;
+//		
+//		_imgwidth = $('.resize-image').width();
+//		_imgheight = $('.resize-image').height();
+//		
+//		_imgleft = parseInt($container.css('left'));
+//		_imgtop = parseInt($container.css('top'));
+//		_imgbottom = _imgheight+_imgtop;
+//		_imgright = _imgwidth+_imgleft;
+//		console.log(_top,_right,_bottom,_left);
+//		console.log(_imgtop,_imgright,_imgbottom,_imgleft);
+//		if(_imgleft > _left){
+//			$container.css('left',_left);
+//		}
+//		if(_imgtop > _top){
+//			$container.css('top',_top);
+//		}
+//		
+//		if(_imgbottom < _bottom){
+//			$container.css('top',_bottom-_imgheight+2);
+//		}
+//		if(_imgright < _right){
+//			$container.css('left',_right-_imgwidth+2);	
+//		}	
+//			
+//		}
+
 
   moving = function(e){
     var  mouse={}, touches;
@@ -179,7 +224,7 @@ var resizeableImage = function(image_target) {
   };
 
   crop = function(){
-
+	//imgPosition();
 
     //Find the part of the image that is inside the crop box
     var crop_canvas,
@@ -197,7 +242,7 @@ var resizeableImage = function(image_target) {
     //alert(scale)
 
     crop_canvas.getContext('2d').drawImage(image_target, left/scale,top/scale, width/scale,height/scale, 0, 0,width,height);
-    //window.open(crop_canvas.toDataURL("image/png"));
+    window.open(crop_canvas.toDataURL("image/png"));
     $(image_target).attr('data-clip',crop_canvas.toDataURL("image/png"))
 	//console.log(crop_canvas.toDataURL("image/png"));
   }
