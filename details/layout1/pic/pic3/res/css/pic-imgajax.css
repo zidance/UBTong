@@ -1,0 +1,130 @@
+/*轮播图片*/
+.banner {
+	position: relative;
+    background-color: #f7f5f5;
+}
+.banner .slider {
+	z-index: 1;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+    width: 100%;
+}
+.banner .slider .sliderlist {
+	position: relative;
+	left: 0;
+	top: 0px;
+    width: 100%;
+    height:100%;
+}
+.banner .slider .sliderlist li {
+	float: left;
+	width: 100%;
+	display: block;
+	text-align: center;
+    height:100%;
+    position:relative;
+    top: 0;
+    left: 0;
+}
+.banner .slider .sliderlist li a{display: block;width: 100%;height:100%;}
+.banner .slider .sliderlist li span {
+	margin: 0 auto;
+	display: inline-block;
+}
+.banner .slider .sliderlist li img {
+	width: 100%;
+    position:relative;
+    top: 0;
+    left: 0;
+}
+.banner .slider #pagenavi {
+	position: absolute;
+	left: 0;
+	bottom: .4rem;
+	text-align: center;
+	width: 100%;
+}
+.banner .slider #pagenavi a {
+    display:inline-block; width:0.25rem; height:0.25rem; margin:0 .125rem;  background:#a4a4a4;vertical-align: bottom; border-radius:50%;
+/*
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	line-height: 99em;
+	background: #ffffff;
+	margin: 0 2px 0 2px;
+	overflow: hidden;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+*/
+}
+.banner .slider #pagenavi.dotColor a{
+	background:#e84327;
+}
+.banner .slider #pagenavi a.active {
+	/*background: #e60012;*/background:#f77a02;
+}
+
+
+/*图片弹出放大  touchzoom插件增加*/
+.imgzoom_pack{
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+/*	background:rgba(0,0,0,.7);*/
+	display:none;
+    z-index: 9998;
+}
+.stn-mask-layer{
+    display: none;
+    position:fixed;
+    z-index: 9997;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.stn-mask-layer img{
+    width:100%;
+    height:100%;
+}
+.imgzoom_pack .imgzoom_x{
+	color:#fff;
+	height:30px;
+	width:30px;
+	line-height:30px;
+	background:#000;
+	text-align:center;
+	position:absolute;
+	right:5px;
+	top:5px;
+	z-index:9999;
+	cursor:pointer;
+}
+.imgzoom_pack .imgzoom_img{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	overflow:hidden;
+}
+.imgzoom_pack .imgzoom_img img{
+	width:100%;
+	position:absolute;
+	top:50%;
+}
+
+
+.banner .erweima{ display:block; width:1.5rem; height:1.5rem; background:url(../img/erweima.png); position:absolute; bottom:0; right:0; z-index:10000; text-indent:-9999px; background-size:100% 100%;}
+
+
+
+#close{ display:block; width:1.45rem; height:1.45rem; border-radius:50%; text-align:center; background:#000; opacity:0.5; filter:alpha(opacity:50); position:absolute;  top:0.4rem; left:0.4rem; z-index:10000;}
+#close img{ width:.575rem; height:.575rem;padding-top: 0.5rem;}
