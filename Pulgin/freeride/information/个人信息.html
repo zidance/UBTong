@@ -26,22 +26,22 @@
             <tr>
             	<td class="td-left">身份证</td>
                 <td class="input" style="padding:.75rem 0">
-                	<p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
-                    <p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
+                	<p><input name="idcard1" type="file" multiple accept="image/*" /><img /></p>
+                    <p><input name="idcard2" type="file" multiple accept="image/*" /><img /></p>
                 </td>
             </tr>
             <tr>
             	<td class="td-left">驾驶证 </td>
                 <td class="input"style="padding:.75rem 0">
-                	<p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
-                    <p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
+                	<p><input name="driver1" type="file" multiple accept="image/*" /><img /></p>
+                    <p><input name="driver2" type="file" multiple accept="image/*" /><img /></p>
                 </td>
             </tr>
             <tr>
             	<td class="td-left">行驶证</td>
                 <td class="input"style="padding:.75rem 0">
-                	<p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
-                    <p><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></p>
+                	<p><input name="driving1" type="file" multiple accept="image/*" /><img /></p>
+                    <p><input name="driving2" type="file" multiple accept="image/*" /><img /></p>
                 </td>
             </tr>
             
@@ -89,7 +89,7 @@
 
              image.src = result.base64;
 
-               //$('.lazyUpload img') 是用户确认时需要上传到服务器的图片
+
 
                  current.addClass('lazyUpload').find('img').replaceWith(image)
                  //图片尺寸重调
@@ -97,6 +97,17 @@
              }
          })
         //直接上传该字符串格式的图片,在后台如需转回图片格式,参http://www.cnblogs.com/coco1s/p/4375774.html  --解码部分
+
+
+      //该段注释,将需要上传的图片数据封装成imgData,用于程序ajax ,需要注意的是:不同的input应该有不同name,用于区分用户上传的图片对应什么内容
+//      $('.push').click(function(){
+//        var imgData = {}
+//        for(var n = $('.lazyUpload img').length-1;n>=0;n--){
+//          imgData[$('.lazyUpload').eq(n).find('input').attr('name')] = $('.lazyUpload img').eq(n).attr('src')
+//        }
+//        console.log(imgData)
+//      })
+
 
   })
 
