@@ -85,7 +85,8 @@ header, footer, article, section, nav, menu, hgroup {display: block;clear:all;}
 .subscribe-envelope .integral p span span {display:inline;float:none;}
 
 /*为红包页优化,不再配合时间控件中的脚本*/
-.d-popup{bottom:0;}
+.d-popup-bg{display: none;}
+.d-popup{bottom:0;display: none;}
 .choose{height:8rem;overflow-y: auto;padding:0;margin:1rem 0;}
 
 .choose li{box-sizing: border-box;border:solid transparent !important;border-width:1px 0 !important;color: #888;}

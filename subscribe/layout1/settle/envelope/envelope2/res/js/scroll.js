@@ -13,9 +13,9 @@
 
   var oUl = $(".d-popup").find('.choose')
   var oLi = oUl.find('li')
-  var nLiHei = oLi.height()
+  var nLiHei = parseInt(oLi.css('height'))
   var nLiLen = oLi.length
-  var nLiView = Math.max(Math.floor(oUl.height() / nLiHei), 3) //可见li个数,最小三2个
+  var nLiView = Math.max(Math.floor(parseInt(oUl.css('height')) / nLiHei), 3) //可见li个数,最小三2个
 
   //切换红包
   oLi.click(function () {
@@ -33,7 +33,7 @@
 
   //自动选择
   var scrollSetT
-  var nUlHei = oUl.height() - nLiHei / 2
+  var nUlHei = parseInt(oUl.css('height')) - nLiHei / 2
   var fnScroll = function () {
     scrollSetT = setTimeout(function () {
       //激活的红包不在当前屏中,提前半个li的位置判断
