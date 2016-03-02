@@ -98,16 +98,18 @@
         </section>
     </section>
     <script type="text/javascript">
-        $(function() {
+        ;(function($) {
+          //stn-daily-wrap内的交互无法代理在'body'上(IOS出bug),或因弹出层整个盖住body,body不被触发click的缘故
+          //后端用ajax方式子模块形式来处理该页时,因$与php关键字冲突,'$'符号要改为jQuery或Zepto(视使用环境)
             $('body').on('click', '.dailyPopup', function() {
                 $('.stn-daily-wrap').show()
                 $('.pick-money').hide()
                 $('.stn-daily-wrap').find('.type0').show()
             })
-            $('body').on('click', '.stn-daily-pick .daily-head .a-btn', function() {
+            $('.stn-daily-wrap').on('click', '.stn-daily-pick .daily-head .a-btn', function() {
                 $('.stn-daily-wrap').hide()
             })
-            $('body').on('click', '.daily-bg', function() {
+            $('.stn-daily-wrap').on('click', '.daily-bg', function() {
                 $('.stn-daily-wrap').hide()
             })
 
@@ -115,7 +117,7 @@
                 $('.pick-money').hide()
                 $('.stn-daily-wrap').find('.type1').show()
             })
-        })
+        })(window.jQuery||window.Zepto)
     </script>
     <!-- 天天捡钱 -end -->
 
