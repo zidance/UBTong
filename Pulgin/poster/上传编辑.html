@@ -15,10 +15,10 @@
   <link href="res/css/loading.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="res/js/jquery-2.1.1.min.js"></script>	
 </head>
-<body>
+<body style="padding-top:4.5%;height:auto;position: relative;">
   <!-- 上传编辑 -->
   <section class="post-edit">
-  	  <div class="post-edit-container">
+  	  <div class="post-edit-container" style="margin-top:0">
       	<div class="post-edit-wrap">
             <p class="post-title fz30"><span class="dot">1</span>请上传人物照片</p>
             <p class="post-up-photo"><input name="UploadImgs" type="file" multiple accept="image/*" onchange="change(this.value)" id="photoUrl" style="background-image:url(res/img/add.png)" /></p>
@@ -32,13 +32,16 @@
                 <p class="fz30">我就是我</p>
                 <input type="text" value=""/>
              </div>  
-             <a href="###" class="post-a-up fz36">生成海报</a>
+             <div class="btn">
+             	<a href="###" class="post-a-up fz36">生成海报</a>
+             </div>
          </div>
       </div>
   </section>
+  <div style="height:50px; margin-top:0.2rem; width:100%;"></div>
   <!--loading 加载图标-->
   
-  <div class="upbg">
+  <div class="upbg" style="display:none;">
   	<div class="bg"></div>
   	<div class="sk-fading-circle">
         <div class="sk-circle1 sk-circle"></div>
@@ -60,18 +63,35 @@
   <script type="text/javascript" src="res/js/main.js"></script>
   <script type="text/javascript">
   	$(function(){
-		var maxsize = 10;
+		var maxsize = 7;
 		var _inp = $('input:text');
 		$.each(_inp,function(i,e){
 			var _this = $(e);
 			_this.blur(function(){
 				var _str = $(this).val();	
-				if(_str.length>maxsize){
-					alert("请输入"+maxsize+"字以内");
-					$(this).focus();	
+				if(i == 0){
+					if(_str.length > maxsize){
+						alert("请输入"+maxsize+"字以内");
+						$(this).focus();	
+					}else{
+						return;
+					}	
+				}else if(i == _inp.length-1){
+					if(_str.length > maxsize+3){
+						alert("请输入"+(maxsize+3)+"字以内");
+						$(this).focus();	
+					}else{
+						return;
+					}	
 				}else{
-					return;
+					if(_str.length > maxsize-2){
+						alert("请输入"+(maxsize-2)+"字以内");
+						$(this).focus();	
+					}else{
+						return;
+					}		
 				}
+				
 			})
 		})	
 	})

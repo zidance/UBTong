@@ -5,10 +5,10 @@ html, body {
 	height: 100%;
 	width: 100%;
 	background: #FFFFFF;
-	font: 13px/1.5em 'Open Sans', Helvetica, Arial, sans-serif;
+	font: 20px 'Open Sans', Helvetica, Arial, sans-serif;
 	text-align: center;
 }
-
+p{ margin:0;}
 .hide {
 	display: none;
 }
@@ -72,6 +72,8 @@ html, body {
 	width: 46%;
 	left: 27%;
 }
+
+.img-logo{position: absolute;  width: 98px;height: 40px; z-index:999; }
 
 /*閫傚簲灏忓睆*/
 @media screen and (max-height: 450px) {

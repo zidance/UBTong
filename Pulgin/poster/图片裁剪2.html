@@ -25,6 +25,7 @@
 	<input type="file" id="file" style="opacity: 0;position: fixed;bottom: -100px">
 </div>
 <div class="d-bg-bottom" id="d-bg-bottom"></div>	
+<img class="img-logo" src="res/img/logo.png" id="logo" />	
 <div class="d-text" id="d-text" style="position:absolute; z-index:999; text-align:left; bottom:0">
    <!--默认字体为微软雅黑-->
     <p style="font-family:'microsoft yahei'; font-size:1.6rem;line-height:1;margin-bottom:.3rem; color: #db4a12;">生一个女儿</p>
@@ -49,8 +50,9 @@ var hammer = '';
 var currentIndex = 0;
 var body_width = $('body').width();
 var body_height = $('body').height();
-$('#d-text').css({'left':(body_width - body_width*0.774)/2,'bottom':(body_height*0.8715 - body_height*0.8715 * 0.893)*0.5+body_height*0.1285})
+$('#d-text').css({'left':(body_width - body_width*0.774)/2+8,'bottom':(body_height*0.8715 - body_height*0.8715 * 0.893)*0.5+body_height*0.1285+12})
 $('#d-bg-bottom').css({'left':(body_width - body_width*0.774)/2,'bottom':(body_height*0.8715 - body_height*0.8715 * 0.893)*0.5+body_height*0.1285})
+$('#logo').css({'left':(body_width - body_width*0.774)/2+8,'top':(body_height*0.8715 - body_height*0.8715 * 0.893)*0.5+6})
 //console.log(body_height);
 $("#clipArea").photoClip({
 	width: body_width * 0.774,
@@ -95,13 +97,13 @@ function getFileExt(str) {
 	return d;
 }
 
-//图片上传结束
-$(function () {
-	$('#upload2').on('touchstart', function () {
-		//图片上传按钮
-		$('#file').click();
-	})
-})
+////图片上传结束
+//$(function () {
+//	$('#upload2').on('touchstart', function () {
+//		//图片上传按钮
+//		$('#file').click();
+//	})
+//})
 
 
 
