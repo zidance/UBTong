@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn{ width:100%; position:fixed; left:0; bottom:0; height:2.6rem; background:#fff; box-shadow: 0 0 3px #cac8c9; border-top:1px solid #cac8c9}
+.btn a{ display:block;
+ width:87.5%; height:2rem; margin:.3rem auto 0; background:#f67a0a; border-radius:10px; text-align:center; line-height:2rem; color:#fff;}

@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+.stn-balance{ margin-top:.55rem; border-top:1px solid #d4d4d4; background:#fff;}
+.balance-top{ height:2.175rem; border-bottom:1px solid #d4d4d4;}
+.balance-top li{ float:left; width:50%;}
+.balance-top a{ display:block; height:2.15rem; margin-top:-2px; line-height:2.15rem; text-align:center; color:#000;}
+.balance-top a.act{ color:#f67a0a; border-bottom:2px solid #f67a0a; z-index:1;}
+
+.balance-item{ display:none;}
+.balance-item li{ height:2.7rem; line-height:2.7rem; padding:0 1.15rem; border-bottom:1px solid #d4d4d4;}
+.balance-item p{ width:50%;}
+.balance-item .money{ float:left;}
+.balance-item .date{ float:right; text-align:right;}
+.balance-item .income{ color:#28b1e5;}
+.balance-item .inout{ color:#ff4844;}
+
+.stn-success{}

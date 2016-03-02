@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>账户充值</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../../common/css/main.css" rel="stylesheet" type="text/css" />
+<link href="res/css/account.css" rel="stylesheet" type="text/css" />
+<script src="../../../../common/js/zepto-1.16.min.js"></script>
+<script src="../../../../common/js/main.js"></script>
+</head>
+
+<body style="background:#f3f4f6;">
+	<section class="account">
+    	<p class="fz24 p-name">现有余额(元)</p>
+        <p class="fz70 p-money">888.00</p>
+    </section>
+    <section class="a-block" id="block">
+    	<ul>
+        	<li><a href="###" class="act"><p class="fz36 p-money">300元</p><p class="fz24 p-cut">只需支付: 295元</p></a></li>
+            <li><a href="###"><p class="fz36 p-money">500元</p><p class="fz24 p-cut">只需支付: 490元</p></a></li>
+            <li><a href="###"><p class="fz36 p-money">1000元</p><p class="fz24 p-cut">只需支付: 965元</p></a></li>
+            <li><a href="###"><p class="fz36 p-money">2000元</p><p class="fz24 p-cut">只需支付: 1900元</p></a></li>
+        </ul>
+    </section>
+    <a href="###" class="fz34 filling">充 值</a>
+    <script type="text/javascript">
+    	$(function(){
+			var _obj = $('#block');
+			var _a = _obj.find('a');
+			$.each(_a,function(i,e){
+				var _this = $(e);
+				_this.click(function(){
+					_a.removeClass('act');
+					$(this).addClass('act');	
+				})	
+			})	
+		})
+    </script>
+</body>
+</html>

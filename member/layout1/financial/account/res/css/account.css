@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.account{ height:3.875rem; background:#fff; border-bottom:1px solid #d4d4d4;}
+.account p{ text-align:center;}
+.account .p-name{ color:#7e7e7e; line-height:1.075rem; padding-top:.5rem;}
+.account .p-money{ color:#010101; line-height:1.825rem;}
+
+.a-block{background:#f3f4f6; padding:.75rem .5rem 0;}
+.a-block li{ width:50%; float:left; height:3.2rem; margin-bottom:.5rem;}
+.a-block a{ display:block; margin:0 .25rem; height:3.2rem; background:#fff; border:1px solid #f67a0a; border-radius:10px; color:#f67a0a;}
+.a-block a.act{ color:#fff; background:#f67a0a;}
+.a-block p{ text-align:center;}
+.a-block .p-money{ line-height:1.175rem; padding-top:.525rem;}
+.a-block .p-cut{ line-height:.925rem;}
+
+.filling{ display:block; position:fixed; bottom:1rem; left:6.25%; color:#fff; text-align:center; width:87.5%; height:2rem; line-height:2rem; background:#f67a0a; border-radius:10px;}
+
+.stn-success{ text-align:center;}
+.stn-success img{ width:3.4rem; height:3.4rem; margin:4.75rem auto .75rem;}
+.stn-success .p-chong{ line-height:1.325rem; color:#010101;}
+.stn-success .p-show{ line-height:1.05rem; color:#7e7e7e;}
+.stn-success .btn{ margin-top:1.55rem;}
+.stn-success a{ display:block; height:2rem; border-radius:10px; width:87.5%; line-height:2rem; text-align:center; color:#fff; margin:0 auto .5rem;}
+.stn-success a.orange{ background:#f67a09;}
+.stn-success a.red{ background:#fb5c5c;}
