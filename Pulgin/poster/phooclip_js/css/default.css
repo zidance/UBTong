@@ -280,5 +280,5 @@ a:hover,a:focus{color:#74777b;}
 
 .transform{ display:block; z-index:999; position:absolute; right:4px; top:4px; background:url(../../res/img/transform.png) no-repeat; width:42px; height:40px; background-size:42px 40px;}
 
-.d-text p{ transform:scale(1,2); -ms-transform:scale(1,1.2); -webkit-transform:scale(1,1.2); -moz-transform:scale(1,1.2);-o-transform:scale(1,1.2); text-align:left;}
+.d-text p{ transform:scale(1,3); -ms-transform:scale(1,1.3); -webkit-transform:scale(1,1.3); -moz-transform:scale(1,1.3);-o-transform:scale(1,1.3); text-align:left;}
 

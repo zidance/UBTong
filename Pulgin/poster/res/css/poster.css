@@ -28,7 +28,7 @@ body{height: 100%;max-width:640px;margin:0 auto;}
 
 }/*高665,  自底向上 350档 470档 100%档 */
 .stn-post .d-relative .img-logo{position: absolute; top: .5rem; left: .6rem; width: 4.9rem;height: 2rem; }
-.stn-post .d-relative .img-qrcode{position: absolute; right: .6rem; bottom: 2.25rem; width: 3.2rem;height: 3.2rem;}
+.stn-post .d-relative .img-qrcode{position: absolute; right: .6rem; bottom: 2.75rem; width: 3.2rem;height: 3.2rem;}
 .stn-post .d-relative .d-text{position: absolute;left: .5rem;bottom: .65rem;
 }
 /*2016.2.26 .stn-post-wrap .a-btn有修改*/
@@ -66,4 +66,4 @@ body{height: 100%;max-width:640px;margin:0 auto;}
 .blank-bg .share{ position:absolute; right:.9rem; top:.4rem; width:6.25rem;}
 .blank-bg .share img{ width:100%; height:auto;}
 
-.d-text p{ transform:scale(1,2); -ms-transform:scale(1,1.2); -webkit-transform:scale(1,1.2); -moz-transform:scale(1,1.2);-o-transform:scale(1,1.2); text-align:left;}
+.d-text p{ transform:scale(1,3); -ms-transform:scale(1,1.3); -webkit-transform:scale(1,1.3); -moz-transform:scale(1,1.3);-o-transform:scale(1,1.3); text-align:left;}

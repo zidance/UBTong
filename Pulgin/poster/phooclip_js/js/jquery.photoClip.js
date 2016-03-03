@@ -166,7 +166,7 @@
 				clipImg();
 			});
 		}
-
+ 
 		var $win = $(window);
 		resize();
 		$win.resize(resize);
