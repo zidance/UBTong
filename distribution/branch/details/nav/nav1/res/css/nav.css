@@ -1,18 +1,28 @@
 /*列表*/
 .d-nav-relative{padding-top:12.6%;}
 .n-shops{position:fixed;z-index: 800; left:0;top: 2.8rem;font-size: 0;width:100%;height:2.05rem;vertical-align: top;background-color: inherit;padding-bottom:.5rem;padding-top:.4rem;}
-.n-shops .a-left,.n-shops .a-right{display: inline-block;width:10%;height:100%;box-sizing: border-box;background-repeat: no-repeat;background-position: center center;-webkit-background-size: 30%;background-size:30%; ;}
-.n-shops .d-swiper{height:2rem;display: inline-block;position: relative;width:80%;overflow: hidden;border:solid #f47823;border-width:1px;box-sizing: border-box;border-radius: .2rem;overflow: hidden;vertical-align: top;background-color: #fff;}
-.n-shops ul{width:10000px; position: absolute;top: 0;left: 0;}
-.n-shops li{float:left;width:4rem;height:2rem;line-height:2rem;text-align: center;border-left:1px solid #f47823;box-sizing: border-box;}
-.n-shops li a{display: block;color: #000;}
+.n-shops .a-left,.n-shops .a-right{display: inline-block;width:10%;height:100%;box-sizing: border-box;background-repeat: no-repeat;background-position: center center;-webkit-background-size: 30%;background-size:30%; position: relative;z-index: 1;/*层级是兼容微信中右按钮点不到的问题*/}
+.n-shops .d-swiper{height:2rem;display: inline-block;width:80%;box-sizing: border-box;vertical-align: top;background-color: #fff;height:2rem;box-sizing: border-box;overflow: hidden;overflow-x:auto;line-height: 2rem;}
+.n-shops ul{width:10000px; position: absolute;top: 0;left: 0;position: relative;font-size: 0;white-space: nowrap;height:2rem;}
+.n-shops li{display: inline-block;width:4rem;height:2rem;line-height:2rem;text-align: center;height:2rem;}
+.n-shops li a{display: block;color: #000;border-left:1px solid #f47823;box-sizing: border-box;line-height: 2rem;}
 .n-shops li.act{background-color:#f47823;}
 .n-shops li.act a{color: #fff;}
 
 .n-shops .a-left{background-image: url(../../../../../../../common/img/left.png);}
 .n-shops .a-right{background-image: url(../../../../../../../common/img/right.png);}
 
+/*滚动条也占位,如果透明处理,会使.d-swiper和其下的ul高度不一致*/
+.n-shops .d-swiper::-webkit-scrollbar {
+  display: none;
+}
+
+/*由于边框细化的脚本,边框在::after元素中,会随着滚动,所以这里的边边框提取了出来*/
+.d-border{position: absolute;left: 10%;top: .4rem;width: 80%;height:2.05rem;box-sizing: border-box;border:solid #f47823;border-width:1px;box-sizing: border-box;/*border-radius: .2rem;*/z-index: 1;pointer-events: none;}
+
+
 @media screen and (max-width:320px){
     .n-shops{top: 3.1rem;}
 }
+
 

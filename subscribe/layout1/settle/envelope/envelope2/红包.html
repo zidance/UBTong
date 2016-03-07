@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>红包</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <link href="../../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+
+  <link href="res/css/styleV2.css" rel="stylesheet" type="text/css" />
+  <link href="res/css/envelope.css" rel="stylesheet" type="text/css" />
+  <script src="../../../../../common/js/zepto-1.16.min.js"></script>
+  <script src="../../../../../common/js/default.js"></script>
+</head>
+
+<body style="background:#f7f5f5;">
+  <!--红包-->
+  <div class="wrap">
+    <input type="checkbox" />
+    <div class="subscribe-envelope" id="selectShow">
+      <a class="integral" href="#">
+        <p class="fz28">红包抵扣<span>&nbsp;10元红包</span></p>
+      </a>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <!--红包-end-->
+
+  <!--弹出框-->
+  <div class="d-popup-bg"></div>
+  <div class="d-popup">
+
+    <h3>
+       <p class="p-title fz32">我的红包</p>
+        <a href="javascript:void(0);" class="fr" href="###">确定</a>
+        </h3>
+    <div class="clr"></div>
+
+    <ul class="choose">
+      <!--active类,当前选中-->
+      <li>美容券<span>&nbsp;5元</span></li>
+      <li>美容券<span>&nbsp;10元</span></li>
+      <li class="active">美体券<span>&nbsp;20元</span></li>
+      <li>整形券<span>&nbsp;30元</span></li>
+      <li>美容券<span>&nbsp;50元</span></li>
+      <li>美容券<span>&nbsp;50元</span></li>
+      <li>美容券<span>&nbsp;50元</span></li>
+      <li>美容券<span>&nbsp;50元</span></li>
+      <li>美容券<span>&nbsp;50元</span></li>
+      <li>美容券<span>&nbsp;50元</span></li>
+    </ul>
+  </div>
+  <script src="res/js/scroll.js"></script>
+  <script>
+    $(function () {
+      //确定
+      $(".d-popup").find(".fr").click(function () {
+        var temp = $(".choose").find(".active").html();
+        $("#selectShow").find(".integral").find("span").html(temp);
+      });
+    })
+  </script>
+</body>
+
+</html>

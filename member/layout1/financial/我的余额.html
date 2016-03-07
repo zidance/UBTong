@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>我的余额</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no,email=no" />
+<link href="../../../common/css/main.css" rel="stylesheet" type="text/css" />
+<link href="amount/amount1/res/css/amount.css" rel="stylesheet" type="text/css" />
+<link href="list/res/css/balance.css" rel="stylesheet" type="text/css"/>
+<link href="btn/res/css/btn.css" rel="stylesheet" type="text/css" />
+<script src="../../../common/js/zepto-1.16.min.js"></script>
+<script src="../../../common/js/main.js"></script>
+</head>
+
+<body style="background:#f4f4f4;">
+	<!--总计收益-->
+    <section class="stn-amount bg-color" style="background-color:#f67a0a !important">
+    	<p class="p-name fz22">现有余额(元)</p>
+    	<p class="p-money fz120">6000</p>
+    </section>
+    <!--总计收益-end-->
+    <section class="stn-balance" id="balance">
+    	<div class="balance-top">
+        	<ul>
+            	<li><a href="###" class="fz28">余额收入</a></li>
+                <li><a href="###" class="fz28">账户支出</a></li>
+            </ul>
+        </div>
+        <div class="balance-items">
+        	<div class="balance-item">
+            	<ul>
+                	<li><p class="money income fz40">+300</p><p class="date fz28">2016-01-01 16:27</p></li>
+                    <li><p class="money income fz40">+300</p><p class="date fz28">2016-01-01 16:27</p></li>
+                    <li><p class="money income fz40">+300</p><p class="date fz28">2016-01-01 16:27</p></li>
+                    <li><p class="money income fz40">+300</p><p class="date fz28">2016-01-01 16:27</p></li>
+                    <li><p class="money income fz40">+300</p><p class="date fz28">2016-01-01 16:27</p></li>
+                </ul>
+            </div>
+            <div class="balance-item">
+            	<ul>
+                	<li><p class="money inout fz40">-300</p><p class="date fz28">2016-01-01 16:27</p></li>
+                    <li><p class="money inout fz40">-300</p><p class="date fz28">2016-01-01 16:27</p></li>
+                    <li><p class="money inout fz40">-300</p><p class="date fz28">2016-01-01 16:27</p></li>
+                    <li><p class="money inout fz40">-300</p><p class="date fz28">2016-01-01 16:27</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div style="height:2.6rem;"></div>
+    <section class="btn">
+    	<a href="###" class="fz34">充 值</a>
+    </section>
+    <script type="text/javascript">
+    	$(function(){
+			var _obj = $('#balance');
+			var _a = _obj.find('.balance-top a');	
+			var _item = _obj.find('.balance-items .balance-item');
+			_a.eq(0).addClass('act');
+			_item.eq(0).show();
+			$.each(_a,function(i,e){
+				var _this = $(e);
+				_this.click(function(){
+					_a.removeClass('act');
+					$(this).addClass('act');
+					_item.hide();
+					_item.eq(i).show();	
+				})	
+			})
+		})
+    
+    </script>
+</body>
+</html>
