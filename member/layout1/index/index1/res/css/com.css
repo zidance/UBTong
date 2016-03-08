@@ -4,29 +4,44 @@ body {
 .stn-topmember {
 	position: relative;
 	height: 7.56rem;
-}
-.stn-topmember a {
-	display: block;
-	background: url(../img/img1.jpg) no-repeat;
+  background: url(../img/img1.jpg) no-repeat;
 	background-size: 100% 7.56rem;
+}
+.stn-topmember p {
+	display: block;
+
 	width: 93%;
 	height: 7.56rem;
 	padding-left: 7%;
 }
-.stn-topmember p {
+
+
+
+.stn-topmember .a-general {
 	position: absolute;
 	z-index: 10;
 	color: #fff;
 	font-size: 1.3rem;
-	margin-top: 2rem;
+	margin-top: 1.5rem;
 	width: 85%;
 	background: url(../img/leftw.png) no-repeat right center;
 	background-size: .58rem 1.09rem;
 }
-.stn-topmember p span {
+.stn-topmember .a-general span {
 	display: block;
 	font-size: 1.16rem;
 	margin: .1rem 0 0 2px;
+}
+
+.stn-topmember .a-recharge{
+  position: absolute;
+  bottom: .7rem;
+  left: 7%;
+  color: #fff;
+  font-size: 1.16rem;
+/*  text-decoration: underline;*/
+/*  padding-bottom:.1rem;*/
+/*  border-bottom:1px solid #fff;*/
 }
 nav li {
 	height: 2.83rem;
