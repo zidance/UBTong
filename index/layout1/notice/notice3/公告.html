@@ -13,10 +13,29 @@
     <link href="res/css/notice.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="res/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="../../../../common/js/main.js"></script>
+
+</head>
+
+<body>
+    <!-- 轮播公告 -->
+    <section class="stn-notice-horizontal">
+        <em class="em-notice"><span class="fz22">公告：</span></em>
+        <div class="wrap">
+            <ul class="ul-slide" id="UlSlide">
+                <li><a class="a-name fz22" href="#">今日上新，全场满69元包邮今日上新，全场
+
+                满69元包邮今日上新，全场满69元包邮今日上新，全场满69元包邮今日上新，全场满69元包邮今日上新，全场满69元包邮！1</a></li>
+                <li><a class="a-name fz22" href="#">今日上新，全场满69元包邮！2</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- 轮播公告 -end -->
+
     <script>
         jQuery.noConflict;
         var $$=jQuery;
-        $$(function() {
+      //延迟目的是,ajax方式引入该子模块时,动画异常
+        setTimeout(function(){
             /*初始化*/
             var _speed = 10, //几秒过一屏
                 _obj = $$('#UlSlide'),
@@ -53,22 +72,8 @@
             _obj.on('mouseleave', function() {
                 _scroll()
             })
-        })
+        },5000)
     </script>
-</head>
-
-<body>
-    <!-- 轮播公告 -->
-    <section class="stn-notice-horizontal">
-        <em class="em-notice"><span class="fz22">公告：</span></em>
-        <div class="wrap">
-            <ul class="ul-slide" id="UlSlide">
-                <li><a class="a-name fz22" href="#">今日上新，全场满69元包邮今日上新，全场满69元包邮今日上新，全场满69元包邮今日上新，全场满69元包邮今日上新，全场满69元包邮今日上新，全场满69元包邮！1</a></li>
-                <li><a class="a-name fz22" href="#">今日上新，全场满69元包邮！2</a></li>
-            </ul>
-        </div>
-    </section>
-    <!-- 轮播公告 -end -->
 </body>
 
 </html>
