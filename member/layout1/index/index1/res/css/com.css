@@ -3,46 +3,17 @@ body {
 }
 .stn-topmember {
 	position: relative;
-	height: 7.56rem;
+	height:20vh;/*200/1000*/
+  max-height:9rem;
   background: url(../img/img1.jpg) no-repeat;
-	background-size: 100% 7.56rem;
+	background-size: 100% 100%;
+  color:#fff;
+  padding-left:7%;/*45*/
 }
-.stn-topmember p {
-	display: block;
+.stn-topmember p:first-child{padding:7% 0 2.8%;/*44 0 18 /640*/}
+.stn-topmember a{display: inline-block;color:inherit;}
+.stn-topmember .a-recharge{margin-left:4% /*27*/;margin-top:2%; padding:0 2% /*13*/;line-height: 1.44; border:2px solid #fff;border-radius:.2rem;}
 
-	width: 93%;
-	height: 7.56rem;
-	padding-left: 7%;
-}
-
-
-
-.stn-topmember .a-general {
-	position: absolute;
-	z-index: 10;
-	color: #fff;
-	font-size: 1.3rem;
-	margin-top: 1.5rem;
-	width: 85%;
-	background: url(../img/leftw.png) no-repeat right center;
-	background-size: .58rem 1.09rem;
-}
-.stn-topmember .a-general span {
-	display: block;
-	font-size: 1.16rem;
-	margin: .1rem 0 0 2px;
-}
-
-.stn-topmember .a-recharge{
-  position: absolute;
-  bottom: .7rem;
-  left: 7%;
-  color: #fff;
-  font-size: 1.16rem;
-/*  text-decoration: underline;*/
-/*  padding-bottom:.1rem;*/
-/*  border-bottom:1px solid #fff;*/
-}
 nav li {
 	height: 2.83rem;
 	border: solid #dcdcdc;
