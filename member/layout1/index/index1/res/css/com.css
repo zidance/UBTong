@@ -3,16 +3,15 @@ body {
 }
 .stn-topmember {
 	position: relative;
-	height:20vh;/*200/1000*/
-  max-height:9rem;
   background: url(../img/img1.jpg) no-repeat;
 	background-size: 100% 100%;
   color:#fff;
   padding-left:7%;/*45*/
+  padding-bottom:4.7%; /*30/640*/
 }
 .stn-topmember p:first-child{padding:7% 0 2.8%;/*44 0 18 /640*/}
-.stn-topmember a{display: inline-block;color:inherit;}
-.stn-topmember .a-recharge{margin-left:4% /*27*/;margin-top:2%; padding:0 2% /*13*/;line-height: 1.44; border:2px solid #fff;border-radius:.2rem;}
+.stn-topmember a{display: inline-block;color:inherit;vertical-align:middle;}
+.stn-topmember .a-recharge{margin-left:4% /*27*/;margin-top:2%; padding:0 2% /*13*/;line-height: 1.5; border:1px solid #fff;border-radius:.2rem;vertical-align:bottom;}
 
 nav li {
 	height: 2.83rem;
