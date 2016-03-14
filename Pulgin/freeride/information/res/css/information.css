@@ -32,3 +32,6 @@
 
 .a-update{ display:inline-block; width:43.5%; height:2rem; line-height:2rem; color:#fff; text-align:center; background:#4889db; margin:.75rem 1.5% .75rem 4%; border-radius:5px;}
  .a-delete{ display:inline-block; width:43.5%; height:2rem; line-height:2rem; color:#fff; text-align:center; background:#f83c1d; margin:.75rem 4% .75rem 1.5%;border-radius:5px;}
+ 
+.select{width:50%; float:left; margin-top:.75rem; overflow:hidden;}
+.select option{ border:1px solid #000;}
