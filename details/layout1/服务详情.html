@@ -22,10 +22,10 @@
 			var _close = $('#close');
 			var _page = $('.all-page');
 			_close.hide();
-			_page.css('margin-top',$(window).height()+20)
+			_page.css('top',$(window).height()+20)
 			$('#btn').click(function(){
 				$(this).hide();
-				_page.animate({marginTop:0});
+				_page.animate({top:0});
 				_close.show();
 				$('body').css({'height':'auto','overflow':'scroll'});
 				$('html').css({'height':'auto','overflow':'scroll'});
@@ -33,7 +33,7 @@
 
 			_close.click(function(){
 				$(this).hide();
-				_page.animate({marginTop:$(window).height()+20})
+				_page.animate({top:$(window).height()+20})
 				$('#btn').show();
 				$('body').css({'height':'100%','overflow':'hidden'});
 				$('html').css({'height':'100%','overflow':'hidden'});
@@ -51,7 +51,7 @@
 <button id="btn">点击此处动画</button>
 
 
-<div class="all-page" style="margin-top:2000px;">
+<div class="all-page" style="z-index:9999; background:#fff; position:fixed; height:100%; width:100%; top:2000px; overflow:scroll;">
 
 
     <!--轮播图片-->
