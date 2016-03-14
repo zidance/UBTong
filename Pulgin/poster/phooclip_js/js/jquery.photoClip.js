@@ -278,7 +278,7 @@
 			}
 		}
 		$('#transform').click(function(e){
-			rotateCW(0);
+			rotateCCW(0);
 		})
 		function rotateCW(point) {
 			rotateBy(90, point);
