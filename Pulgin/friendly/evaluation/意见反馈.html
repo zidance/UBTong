@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>意见反馈</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/main.css" rel="stylesheet" type="text/css" />
+<link href="res/css/evaluation.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
+<script type="text/javascript" src="../../../common/js/main.js"></script>
+</head>
+
+<body style="background:#f7f5f5;">
+	<section class="evaluation">
+    	<div class="e-top" id="evaluation">
+        	<h1 class="fz28">您对我们平台的满意程度</h1>
+            <ul>
+            	<li><a href="###" class="icon1 fz24">非常好</a></li>
+                <li><a href="###" class="icon2 fz24">很好</a></li>
+                <li><a href="###" class="icon3 fz24">一般</a></li>
+                <li><a href="###" class="icon4 fz24">差</a></li>
+            </ul>
+            <div class="clr"></div>
+        </div>
+        <textarea class="shuoming fz28">感谢您对e修的支持与关注，您的宝贵意见将帮助我们不断改进</textarea>
+    </section>
+	<a href="###" class="comfirm fz34">提交问题</a>
+    <script type="text/javascript">
+    	$(function(){
+			var	_obj = $('#evaluation');
+			var _a = _obj.find('li a');
+			$.each(_a,function(i,e){
+				var _this = $(e);
+				_this.click(function(){
+					_a.removeClass('act');
+					$(this).addClass('act');	
+				})	
+			})
+		})
+    </script>
+</body>
+</html>

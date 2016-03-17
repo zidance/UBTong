@@ -10,6 +10,7 @@
 .banner .slider #pagenavi{ position:absolute; left:0; bottom:.275rem; text-align:center; width:100%;}
 .banner .slider #pagenavi a{display:inline-block; width:7.1%; height:0.175rem; margin:0 .075rem;  background:#fff;}
 .banner .slider #pagenavi a.active{ /*五度的background:#f77a02;*//*顶悦的#838588*/ background:#838588; }
+.banner .slider #pagenavi.blue a.active{ background:#0c6eb9;}
 
 /*
 @media screen and (max-width:320px){

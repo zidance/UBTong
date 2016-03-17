@@ -1,0 +1,16 @@
+.investment{ padding:1.25rem 1.75rem 2.9rem; background:#0c6eb9; position:relative;}
+.investment li{ margin-bottom:.75rem; padding:.5rem .75rem; height:1.05rem; line-height:1.05rem; background:#fff; border-radius:20px;}
+.investment input{ width:80%; float:left;}
+.investment li span{ float:right; color:#242424;}
+.investment .calculate{ display:block; width:5.75rem; height:5.75rem; position:absolute; left:50%; bottom:-2.875rem; background:url(../img/sul.png) no-repeat; background-size:5.75rem 5.75rem; margin-left:-2.875rem;}
+.i-list{ margin-top:2.875rem; padding:1.5rem 0;}
+.i-list li{ width:50%; float:left;}
+.i-list a{ display:block;}
+.i-list .i-scon{ display:block; width:3.05rem; height:3.05rem; border:1px solid #b2c7ce; box-sizing:border-box; margin:0 auto; border-radius:50%;}
+.i-list .scon1{ background:url(../img/img1.png) no-repeat center #fff; background-size:1.35rem 1.225rem;}
+.i-list .scon2{ background:url(../img/img2.png) no-repeat center #fff; background-size:1.75rem 1.55rem;}
+.i-list li p{ line-height:1rem; margin-top:.25rem; color:#b2c7ce; text-align:center;}
+.i-list a.act .scon1{ background:url(../img/img1-h.png) no-repeat center #0c6eb9; border-color:#0c6eb9;background-size:1.35rem 1.225rem;}
+.i-list a.act .scon2{ background:url(../img/img2-h.png) no-repeat center #0c6eb9; border-color:#0c6eb9; background-size:1.75rem 1.55rem;}
+.i-list a.act p{ color:#0c6eb9;}
+.i-list .note{ color:#454545; line-height:1.15rem; padding:.65rem 1.5rem 0; text-align:center;}

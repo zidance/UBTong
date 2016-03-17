@@ -1,0 +1,16 @@
+.evaluation{ border:solid #d9d9d9; border-width:1px 0; padding:0 .5rem; margin-top:.5rem; background:#fff;}
+.evaluation .e-top{ border-bottom:1px solid #d9d9d9; padding-bottom:.75rem;}
+.e-top h1{ color:#242424; padding:.5rem 0; line-height:1.4rem; height:1.4rem;}
+.e-top li{ float:left; width:25%; height:1.25rem; line-height:1.25rem;}
+.e-top a{ display:block; padding-left:1.5rem; color:#242424;background-size:1rem 1rem; background-repeat:no-repeat; background-position:.25rem  center;}
+.e-top .icon1{ background-image:url(../img/icon1-.jpg);}
+.e-top .icon2{ background-image:url(../img/icon2-.jpg);}
+.e-top .icon3{ background-image:url(../img/icon3-.jpg);}
+.e-top .icon4{ background-image:url(../img/icon4-.jpg);}
+.e-top .icon1.act{  background-image:url(../img/icon1-h.jpg); color:#ff2a00;}
+.e-top .icon2.act{  background-image:url(../img/icon2-h.jpg); color:#ff7800}
+.e-top .icon3.act{  background-image:url(../img/icon3-h.jpg); color:#ff9c00;}
+.e-top .icon4.act{  background-image:url(../img/icon4-h.jpg); color:#787878;}
+
+.shuoming{ width:96.6%; color:#aaaaaa; line-height:1rem; padding:1.7%; outline:none; height:4rem; margin:.55rem 0 .25rem; }
+.comfirm{ display:block; border-radius:5px; background:#0c6eb9; color:#fff; margin:.75rem auto; height:2rem; line-height:2rem; text-align:center; width:87.5%;}

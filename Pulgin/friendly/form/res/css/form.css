@@ -1,0 +1,22 @@
+.household{ width:100%; margin-top:.45rem; border-top:1px solid #d9d9d9; background:#fff;}
+.household table{table-layout:fixed;word-break: break-all; word-wrap: break-word; width:100%;}
+.household table td{ border-bottom:1px solid #d9d9d9;}
+.household .t-left{ width:35.3%; color:#242424; padding:.5rem 0 .5rem .575rem; line-height:1.25rem;}
+.household .t-left a{ display:block; color:#242424; background:url(../img/nav.jpg) no-repeat right center; background-size:.4rem .75rem;margin-right:4%; padding-right:.9rem;}
+.household .t-left .import{ color:#ff0000; margin-right:.25rem;}
+.household .t-left .p-name{ text-align:right; float:right; line-height:1.25rem; height:1.25rem; width:50%; overflow:hidden;}
+.household .t-inp input{ width:93%; text-align:right; }
+.household .t-left textarea{ width:92.8%; color:#aaaaaa !important; padding:0 3.6%; outline:none; line-height:1rem; min-height:2rem;}
+.info{ color:#aaaaaa; line-height:.75rem; padding:.4rem 1rem;}
+.comfirm{ display:block; border-radius:5px; background:#0c6eb9; color:#fff; margin:.75rem auto; height:2rem; line-height:2rem; text-align:center; width:87.5%;}
+.add-img{ width:3.15rem; padding-top:3.15rem; border:1px solid #d9d9d9;position:relative; overflow:hidden; margin-left:.5rem; float:left;}
+.add-img input{-webkit-appearance:none; appearance:none;position:absolute;top: 0;left: 0;width:100%;padding-top:100%;background:url(../img/add.jpg) no-repeat center; background-size:1.7rem 1.7rem; overflow: hidden;height:0; padding-bottom:0;}
+.add-img img{ width:auto;position: absolute; top:50%;left:50%; -webkit-transform: translate(-50%,-50%); transform: translate(-50%,-50%);}
+.h-left .t-left{ width:48%;}
+
+.p-text{ background:#ffffff; padding:.3rem .85rem;}
+.p-text p{ line-height:1.375rem; color:#454545;}
+
+.title{ width:84.7%; margin:0 auto;}
+.title .p-title{ padding:1rem 0 .95rem;}
+.title .p-title img{ width:100%; height:auto;}
