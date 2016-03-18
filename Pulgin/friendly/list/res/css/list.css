@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+.y-list{ width:100%; border-bottom:1px solid #dddddd; margin-top:.45rem;}
+.y-list li{ width:50%; box-sizing:border-box; height:4.375rem; background:#fff; float:left; border:solid #dddddd; border-width:1px 1px 0 0;}
+.y-list li:nth-child(2n){ border-width:1px 0 0 0;}
+.y-list a{ display:block; text-align:center;}
+.y-list .y-icon{ display:block; margin-top:.6rem; height:2.25rem;}
+.y-list .y-icon img{ height:2.25rem; width:auto;}
+.y-list p{ color:#242424; line-height:1.225rem;}
