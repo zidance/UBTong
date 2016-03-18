@@ -10,3 +10,23 @@
 .s-list li{ padding:.45rem .275rem; height:1.25rem; line-height:1.25rem; border-bottom:1px solid #d9d9d9;}
 .s-list a{ display:block; color:#070707; line-height:1.25rem; }
 .s-list a.grey{ color:#b5b5bb;}
+
+
+/*搜索结果页*/
+.s-result{}
+.s-result h1{ color:#585858; line-height:.85rem; padding:.325rem .25rem .25rem;}
+.s-result li{ width:47.35%; float:left; border:1px solid #dddddd; margin:0 0 .25rem .25rem;}
+.s-result .detail{ background:#fff;}
+.s-result a{ display:block;}
+.s-result .detail .icon{ width:100%; height:7.575rem;}
+.s-result .detail .icon img{ width:100%; height:auto;}
+.s-result .detail .text{ padding:.1rem .25rem 0;}
+.s-result .detail .text h2{ color:#000; line-height:.875rem; height:1.75rem; overflow:hidden;}
+.s-result .detail .text p{ color:#ff3430; line-height:1.325rem;}
+.s-result .detail .text em{ color:#c8c8c8; float:right;}
+.s-result .detail .text i{ color:#c8c8c8; text-decoration:line-through;}
+
+
+.s-result .store{ background:#f8f8f8; height:1.175rem; line-height:1.175rem;} 
+.s-result .store a{ padding:0 .25rem; color:#848484;}
+
