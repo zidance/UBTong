@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我要安装(家用)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<link href="../../../common/css/main.css" rel="stylesheet" type="text/css" />
+<link href="res/css/form.css" rel="stylesheet" type="text/css" />
+<link href="res/css/styleV2.css" rel="stylesheet" type="text/css" />
+<script src="../../../common/js/zepto-1.16.min.js" type="text/javascript"></script>
+<script src="../../../common/js/main.js" type="text/javascript"></script>
+<script src="res/js/promt.js" type="text/javascript"></script>
+</head>
+<body style="background:#f7f5f5;">
+<section class="household">
+	<table>
+    	<tr>
+        	<td class="t-left fz28"><span class="import">*</span>面积(㎡)</td>
+            <td class="t-inp"><input type="text" prompt="0"/></td>
+        </tr>
+        <tr>
+            <td class="t-left fz28" colspan="2"><a href="###" id="selectShow"><span class="import">*</span>安装形式<p class="p-name">屋顶</p></a></td>
+        </tr>
+    </table>
+</section>
+<a href="###" class="comfirm fz34">确定</a>
+<script type="text/javascript">setInputFocus('input');setInputFocus('textarea')</script>
+
+
+ <!--弹出框-->
+  <div class="d-popup-bg"></div>
+  <div class="d-popup">
+    <h3>
+       <p class="p-title fz32">安装形式</p>
+        <a href="javascript:void(0);" class="fr" href="###">确定</a>
+        </h3>
+    <div class="clr"></div>
+
+    <ul class="choose">
+      <!--active类,当前选中-->
+      <li>地面</li>
+      <li class="active">屋顶</li>
+      <li>光伏农业</li>
+    </ul>
+  </div>
+  <script src="res/js/scroll.js"></script>
+  <script>
+    $(function () {
+      //确定
+      $(".d-popup").find(".fr").click(function () {
+        var temp = $(".choose").find(".active").html();
+        $("#selectShow").find(".p-name").html(temp);
+      });
+    })
+  </script>
+
+
+</body>
+</html>
