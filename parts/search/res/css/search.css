@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+.search{ width:96.875%; margin:.375rem auto;}
+.search .s-box{ height:1.75rem; background:#fff; border-radius:6px;}
+.search .s-icon{ display:block; float:left; width:13%; height:1.75rem; background:url(../img/search.jpg) no-repeat center; background-size:1rem .975rem; text-indent:-9999px;}
+.search .s-inp{ padding:.375rem; height:1rem; line-height:1rem; width:76%;}
+
+.s-list{ border:solid #d9d9d9; border-width:1px 0; background:#fff; padding:0 .5rem;}
+.s-list li{ padding:.45rem .275rem; height:1.25rem; line-height:1.25rem; border-bottom:1px solid #d9d9d9;}
+.s-list a{ display:block; color:#070707; line-height:1.25rem; }
+.s-list a.grey{ color:#b5b5bb;}

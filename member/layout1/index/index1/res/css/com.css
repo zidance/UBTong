@@ -3,31 +3,16 @@ body {
 }
 .stn-topmember {
 	position: relative;
-	height: 7.56rem;
+  background: url(../img/img1.jpg) no-repeat;
+	background-size: 100% 100%;
+  color:#fff;
+  padding-left:7%;/*45*/
+  padding-bottom:4.7%; /*30/640*/
 }
-.stn-topmember a {
-	display: block;
-	background: url(../img/img1.jpg) no-repeat;
-	background-size: 100% 7.56rem;
-	width: 93%;
-	height: 7.56rem;
-	padding-left: 7%;
-}
-.stn-topmember p {
-	position: absolute;
-	z-index: 10;
-	color: #fff;
-	font-size: 1.3rem;
-	margin-top: 2rem;
-	width: 85%;
-	background: url(../img/leftw.png) no-repeat right center;
-	background-size: .58rem 1.09rem;
-}
-.stn-topmember p span {
-	display: block;
-	font-size: 1.16rem;
-	margin: .1rem 0 0 2px;
-}
+.stn-topmember p:first-child{padding:7% 0 2.8%;/*44 0 18 /640*/}
+.stn-topmember a{display: inline-block;color:inherit;}
+.stn-topmember .a-recharge{margin-left:5% /*32*/;margin-top:2%; padding:0 2.3%  .1rem/*13*/;line-height: 1.5; border:1px solid transparent;border-radius:.2rem;vertical-align:bottom;background-color: #f67a0a;}
+
 nav li {
 	height: 2.83rem;
 	border: solid #dcdcdc;
