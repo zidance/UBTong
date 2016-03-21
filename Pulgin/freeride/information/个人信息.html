@@ -8,6 +8,7 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../../common/css/main.css" rel="stylesheet" type="text/css" />
 <link href="res/css/information.css" rel="stylesheet" type="text/css"/>
+<link href="res/css/loading.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
 <script type="text/javascript" src="../../../common/js/main.js"></script>
 </head>
@@ -51,7 +52,31 @@
         <a href="###" class="push">确定</a>
     
     </section>
-
+    
+    <!--loading 加载图标-->
+  <div class="upbg" style="display:-none;">
+  	<div class="bg"></div>
+  	<div class="sk-fading-circle">
+        <div class="sk-circle1 sk-circle"></div>
+        <div class="sk-circle2 sk-circle"></div>
+        <div class="sk-circle3 sk-circle"></div>
+        <div class="sk-circle4 sk-circle"></div>
+        <div class="sk-circle5 sk-circle"></div>
+        <div class="sk-circle6 sk-circle"></div>
+        <div class="sk-circle7 sk-circle"></div>
+        <div class="sk-circle8 sk-circle"></div>
+        <div class="sk-circle9 sk-circle"></div>
+        <div class="sk-circle10 sk-circle"></div>
+        <div class="sk-circle11 sk-circle"></div>
+        <div class="sk-circle12 sk-circle"></div>
+      </div>
+      <p class="fz32" style="text-align:center; color:#fff; position:relative;">上传中...</p>
+  </div>
+<script type="text/javascript">
+	$(function(){
+		$('.upbg').height($('information').height())	
+	})
+</script>
 
 <script src="res/js/jquery.min.js" type="text/javascript"></script>
 
