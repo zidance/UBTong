@@ -31,6 +31,10 @@
 					});
 				}
 			});
+
+          _obj.find('.a-collect').click(function(){
+            $(this).toggleClass('a-collected')
+          })
 		})
 	</script>
 </head>
@@ -53,6 +57,7 @@
 		</div>
 		<p class="p-prompt fz28">付款后预计5月21日送达</p>
 		<p class="p-prompt2 fz28">定制产品不享有七天无理由退换货</p>
+		<!--未收藏状态.a-collect ,已收藏 .a-collected -->
 		<a class="a-collect" href="#">收藏</a>
 	</div>
 	<!--商品详细-end-->
