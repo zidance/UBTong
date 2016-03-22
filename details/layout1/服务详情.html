@@ -41,8 +41,48 @@
 		})
     </script>
     <style>
-    	html,body{ height:100%; overflow:hidden;}
-    </style>
+    /*安卓端+微信客户端 采用transform后,再配合height:100%;overflow-y:auto; 当内容多产生滚动时,产生bug:右和下留下大白边 换回常规写法*/
+
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .all-page {
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 2000px;
+    }
+
+    .d-scale {
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 85%;
+      height: 85%;
+      padding: .3rem;
+      border-radius: .26rem;
+      background-color: #fff;
+    }
+
+    .d-scale-in {
+      height: 100%;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .d-scale-in::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
 
 </head>
 
@@ -51,13 +91,14 @@
 <button id="btn">点击此处动画</button>
 
 
-<div class="all-page" style="z-index:9999; background:#fff; position:fixed; height:100%; width:100%; top:2000px; overflow:scroll;">
+<div class="all-page">
 
-
+<div class="d-scale">
+     <a href="###" class="close" id="close"><img src="../../../common/img/close.png" /></a>
+      <div class="d-scale-in">
     <!--轮播图片-->
     <div class="banner">
     	<!--关闭的按钮-->
-		<a href="###" class="close" id="close"><img src="pic/pic3/res/img/close.png"/></a>
         <div id="slider" class="slider">
             <ul id="sliderlist" class="sliderlist">
                 <li>
@@ -164,6 +205,8 @@
 			
 		</div>
 	</div>
+</div>
+</div>
 </div>
 
 
