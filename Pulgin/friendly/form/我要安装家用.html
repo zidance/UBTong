@@ -29,7 +29,7 @@
             <td class="t-inp"><input type="text" prompt="业主真实即回访认证您为创客"/></td>
         </tr>
         <tr>
-            <td class="t-left fz28" colspan="2"><a href="###" id="selectShow"><span class="import">*</span>与业主的关系<p class="p-name">亲戚</p></a></td>
+            <td class="t-left fz28" colspan="2"><a href="###" class="selectShow"><span class="import">*</span>与业主的关系<p class="p-name">亲戚</p></a></td>
         </tr>
         <tr>
         	<td class="t-left fz28"><span class="import">&nbsp; </span>业主姓名</td>
@@ -63,13 +63,13 @@
 <section class="household">
 	<table>
     	<tr>
-        	<td class="t-left fz28" colspan="2"><a href="###"><span class="import">*</span>屋顶形状</a></td>
+        	<td class="t-left fz28" colspan="2"><a href="###" class="selectShow"><span class="import">*</span>屋顶形状<p class="p-name">222</p></a></td>
         </tr>
         <tr>
-        	<td class="t-left fz28" colspan="2"><a href="###"><span class="import">*</span>建筑形式</a></td>
+        	<td class="t-left fz28" colspan="2"><a href="###" class="selectShow"><span class="import">*</span>建筑形式<p class="p-name">333</p></a></td>
         </tr>
         <tr>
-        	<td class="t-left fz28" colspan="2"><a href="###"><span class="import">*</span>产品归属</a></td>
+        	<td class="t-left fz28" colspan="2"><a href="###" class="selectShow"><span class="import">*</span>产品归属<p class="p-name">444</p></a></td>
         </tr>
         <tr>
         	<td class="t-left fz28" colspan="2"><span class="import">&nbsp; </span>其他说明<textarea class="fz28">请输入你的其他说明</textarea></td>
@@ -95,16 +95,34 @@
   <div class="d-popup-bg"></div>
   <div class="d-popup">
     <h3>
-       <p class="p-title fz32">与业主的关系</p>
+       <p class="p-title fz32" id="p-name">与业主的关系</p>
         <a href="javascript:void(0);" class="fr" href="###">确定</a>
         </h3>
     <div class="clr"></div>
 
     <ul class="choose">
-      <!--active类,当前选中-->
+    <!--  active类,当前选中-->
       <li class="fz32">业主</li>
       <li class="active fz32">亲戚</li>
       <li  class="fz32">好友</li>
+    </ul>
+    <ul class="choose">
+      <!--  active类,当前选中-->
+      <li class="fz32">111</li>
+      <li class="active fz32">222</li>
+      <li  class="fz32">333</li>
+    </ul>
+    <ul class="choose">
+       <!--  active类,当前选中-->
+      <li class="fz32">4444</li>
+      <li class="active fz32">5555</li>
+      <li  class="fz32">6666</li>
+    </ul>
+    <ul class="choose">
+       <!--  active类,当前选中-->
+      <li class="fz32">777</li>
+      <li class="active fz32">888</li>
+      <li  class="fz32">999</li>
     </ul>
   </div>
   <script src="res/js/scroll.js"></script>
@@ -113,7 +131,14 @@
       //确定
       $(".d-popup").find(".fr").click(function () {
         var temp = $(".choose").find(".active").html();
-        $("#selectShow").find(".p-name").html(temp);
+		console.log(temp)
+       $("#selectShow").find(".p-name").html(temp);
+	   $.each($('.selectShow'),function(i,e){
+	  		var _this = $(e);
+			if(_this.hasClass('show')){
+				_this.find(".p-name").html(temp);
+			}
+		})
       });
     })
   </script>
@@ -177,7 +202,6 @@
 			})	
 	  })	
     </script>
-
 
 </body>
 </html>
