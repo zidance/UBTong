@@ -101,48 +101,32 @@
     .d-scale-in::-webkit-scrollbar {
       display: none;
     }
+
+    .banner{position: relative;background-color: #fff;}
+      .banner img{display: block;margin:0 auto;max-width:100%;}
   </style>
 </head>
 
-<body onload="loaded()" style="background:#f5f5f9;">
+<body style="background:#f5f5f9;">
   <div class="all-page">
 
     <!--安卓端虽然可缩放,但边可能是padding之类的出了问题-->
     <div class="d-scale">
      <a href="###" class="close" id="close"><img src="../../../common/img/close.png" /></a>
       <div class="d-scale-in">
-        <!--轮播图片-->
-        <div class="banner">
-          <!--关闭的按钮-->
-          <div id="slider" class="slider">
-            <ul id="sliderlist" class="sliderlist">
-              <li>
-                <a href="###"><img src="../../../details/layout1/pic/pic3/res/img/img3.jpg"></a>
-              </li>
 
-              <li>
-                <a href="###"><img src="../../../details/layout1/pic/pic3/res/img/img3.jpg"></a>
-              </li>
-              <li>
-                <a href="###"><img src="../../../details/layout1/pic/pic3/res/img/img3.jpg"></a>
-              </li>
-              <li>
-                <a href="###"><img src="../../../details/layout1/pic/pic3/res/img/img3.jpg"></a>
-              </li>
-            </ul>
-            <div class="clr"></div>
-            <!--切换轮播图按钮-->
-            <div id="pagenavi">
-            </div>
-            <!--二维码-->
+        <!--图片-单张非轮播-->
+     <div class="banner">
+        <img src="../../../common/img/400200.png">
+<!--测试图-->
+<!--
+        <img src="../../common/img/100200.png">
+        <img src="../../common/img/7070.png">
+-->
 
-          </div>
+     </div>
+    <!--图片-单张非轮播--end-->
 
-        </div>
-        <script type="text/javascript" src="../../../details/layout1/pic/pic3/res/js/touchslider.min.js"></script>
-        <script type="text/javascript" src="../../../details/layout1/pic/pic3/res/js/pic.js"></script>
-
-        <!--轮播图片--end-->
         <!--商品详细-->
         <div class="product-details" id="ProductDetails">
           <p class="p-name fz28">洗车服务-迈卡福州 员服务</p>
