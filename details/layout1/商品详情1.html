@@ -202,10 +202,10 @@
                 <ul>
                     <!--原act类改为color和bd-color(common中定义的公用类名),且内含em.原来的非选中状态和禁选状态(noAct类)保持原样-->
                     <li><a class="fz28 bd-color color" href="#">奶油味<em></em></a></li>
-                    <li><a class="fz28" href="#">原味</a></li>
-                    <li><a class="fz28" href="#">奶油味</a></li>
-                    <li><a class="fz28" href="#">原味</a></li>
-                    <li><a class="fz28" href="#">奶油味</a></li>
+                    <li><a class="fz28" href="#">原味<em></em></a></li>
+                    <li><a class="fz28" href="#">奶油味<em></em></a></li>
+                    <li><a class="fz28" href="#">原味<em></em></a></li>
+                    <li><a class="fz28" href="#">奶油味<em></em></a></li>
                 </ul>
                 <div class="clr"></div>
             </div>
@@ -213,9 +213,9 @@
                 <p class="fz28">规格</p>
                 <ul>
                     <li><a class="fz28 bd-color color" href="#">200g<em></em></a></li>
-                    <li><a class="fz28" href="#">300g</a></li>
-                    <li><a class="fz28" href="#">400g</a></li>
-                    <li><a class="fz28 noAct" href="#">500g</a></li>
+                    <li><a class="fz28" href="#">300g<em></em></a></li>
+                    <li><a class="fz28" href="#">400g<em></em></a></li>
+                    <li><a class="fz28 noAct" href="#">500g<em></em></a></li>
                 </ul>
                 <div class="clr"></div>
             </div>
@@ -223,7 +223,7 @@
                 <p class="fz28">颜色</p>
                 <ul>
                     <li><a class="fz28 bd-color color" href="#">白色<em></em></a></li>
-                    <li><a class="fz28" href="#">黑色</a></li>
+                    <li><a class="fz28" href="#">黑色<em></em></a></li>
                 </ul>
                 <div class="clr"></div>
             </div>
@@ -284,6 +284,18 @@
                });
             }
         });
+
+          $('#BoxPopup').find('li a').click(function(){
+          if(!($(this).hasClass('noAct'))){
+            par = $(this).parents('ul')
+            par.find('a').removeClass('bd-color color')
+            par.find('em').removeClass('bd-color')
+            $(this).addClass('bd-color color')
+            $(this).find('em').addClass('bd-color')
+            fixBorder(par)  //重置border
+          }
+        })
+
       })
   </script>
     <!--列表购物车弹出框-end-->
@@ -296,17 +308,17 @@
             <p class="fz28">限时</p>
             <ul>
                 <!--原act类改为color和bd-color(common中定义的公用类名),且内含em.原来的非选中状态和禁选状态(noAct类)保持原样-->
-                <li><a class="fz28 bd-color color" href="###">3天<em class="bd-color"></em></a></li>
-                <li><a class="fz28" href="###">6天</a></li>
+                <li><a class="fz28 bd-color color" href="###">3天<em></em></a></li>
+                <li><a class="fz28" href="###">6天<em></em></a></li>
             </ul>
             <div class="clr"></div>
         </div>
         <div class="type two">
             <p class="fz28">规格</p>
             <ul>
-                <li><a class="fz28 bd-color color" href="###">200g<em class="bd-color"></em></a></li>
-                <li><a class="fz28" href="###">300g</a></li>
-                <li><a class="fz28 noAct" href="###">400g</a></li>
+                <li><a class="fz28 bd-color color" href="###">200g<em></em></a></li>
+                <li><a class="fz28" href="###">300g<em></em></a></li>
+                <li><a class="fz28 noAct" href="###">400g<em></em></a></li>
             </ul>
             <div class="clr"></div>
         </div>
@@ -315,21 +327,21 @@
             <ul>
                 <li>
                     <a class="fz28 bd-color color" href="###"><img src="popup/popup2/res/img/exam.png" />
-                        <p>酷炫迷彩</p><em class="bd-color"></em></a>
+                        <p>酷炫迷彩</p><em></em></a>
                 </li>
                 <li>
                     <a class="fz28" href="###"><img src="popup/popup2/res/img/exam.png" />
-                        <p>酷炫迷彩</p>
+                        <p>酷炫迷彩</p><em></em>
                     </a>
                 </li>
                 <li>
                     <a class="fz28" href="###"><img src="popup/popup2/res/img/exam.png" />
-                        <p>酷炫迷彩</p>
+                        <p>酷炫迷彩</p><em></em>
                     </a>
                 </li>
                 <li>
                     <a class="fz28" href="###"><img src="popup/popup2/res/img/exam.png" />
-                        <p>酷炫迷彩</p>
+                        <p>酷炫迷彩</p><em></em>
                     </a>
                 </li>
             </ul>
@@ -337,7 +349,21 @@
         </div>
 
     </div>
+    <script>
+  $(function(){
+    $('#BoxNoPopup').find('li a').click(function(){
+      if(!($(this).hasClass('noAct'))){
+        par = $(this).parents('ul')
+        par.find('a').removeClass('bd-color color')
+        par.find('em').removeClass('bd-color')
+        $(this).addClass('bd-color color')
+        $(this).find('em').addClass('bd-color')
+        fixBorder(par)  //重置border
+      }
+    })
 
+  })
+  </script>
     <!--列表购物车-非弹出式-end-->
 
 

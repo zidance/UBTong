@@ -8,7 +8,7 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../common/css/common.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../common/js/zepto-1.16.min.js"></script>
-<script type="text/javascript" src="../../common/js/default.js"></script>
+<script type="text/javascript" src="../../common/js/main.js"></script>
 
 
 <style>
@@ -65,7 +65,7 @@
     <div class="div111 border">四周</div>
     <div class="div1">四周</div>
     <div class="div2">上下</div>
-    <div class="div3">左右</div>
+    <div class="div3 noFixBorder">左右</div> <!--noFixBorder类及其内部子元素,不受边框细化脚本的影响-->
     <div class="div4">上</div>
     <div class="div5">下</div>
     <div class="div6">左</div>
@@ -80,6 +80,17 @@
     <div class="div13">左</div>
     <div class="div14">右</div>
 </div>
+
+<script>
+  $('.border-000').find('div').click(function(){
+    $('.border-000').find('div').removeClass('div2 div8  bd-color color')
+//    $(this).removeClass('di')
+    $(this).addClass('div2 div8  bd-color color')
+//    console.log($(this)[0])
+    fixBorder($(this))
+  })
+
+  </script>
 
 
 
