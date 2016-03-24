@@ -71,6 +71,8 @@ table{border-collapse:collapse;}
 .fz12{ font-size:6px;}
 
 /*边框细化*/
+.bd{position: relative;border:none !important;}/*position不覆盖*/
+.noFixBorder{} /*为元素赋予,其范围内的节点可避免边框细化的脚本*/
 .bd::after{
     position:absolute;
     content:"";
