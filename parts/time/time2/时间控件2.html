@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>时间控件</title>
@@ -10,15 +10,12 @@
 <!--时间控件样式-->
 <link rel="stylesheet" type="text/css" href="res/css/styleV2.css" />
 
-<script src="../../../common/js/zepto-1.16.min.js"></script>
-<!--时间API-->
-<script src="res/js/moment.min.js"></script>
-<!-- 选择区域js 需精简-->
-<script src="res/js/scroll_areaV3.js"></script>
+<script src="../../../other/demo/res/jquery-2.1.4.min.js"></script>
 
 </head>
 <body style="background-color:#f5f5f5;">
-	<input class="fz28" type="text" name="test" id="selectShow" value="请选择预约时间" readonly />
+	<input class="fz28" type="text" name="test" id="selectShow" value="请选择预约时间" readonly  data-value="" />
+   <!--程序可取data-value中的值,其形式如201602280930,表2月28日9时30分-->
     <!--页面中
     <div class="order_bd">
         <dl class="order_bd_dl">
@@ -39,30 +36,37 @@
             <div class="dateWrap" id="dateSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 0px, 0px);">
                 <ul style="height: 210px;">
                    <!--active当前选中-->
+<!--脚本加入的节点,大致如<li data-value="20160328">03月28日&nbsp;<span>周六</span></li>-->
                 </ul>
             </div>
             
             <div class="timeWrap" id="timeSelect" style="transition-duration: 0ms; -webkit-transition-duration: 0ms; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translate3d(0px, 1.9990234375px, 0px);">
                 <ul style="height: 360px;">
                     <!--active当前选中 timeout已预约-->
-                    <li class="active">09:00</li>
-                    <li class="timeout">10:00</li>
-                    <li class="timeout">11:00</li>
-                    <li class="timeout">12:00</li>
-                    <li class="">13:00</li>
-                    <li class="">14:00</li>
-                    <li class="">15:00</li>
-                    <li class="">16:00</li>
-                    <li class="">17:00</li>
-                    <li class="">18:00</li>
-                    <li class="">19:00</li>
-                    <li class="">20:00</li>
+                    <li class="active" data-value="0900">09:00</li>
+                    <li class="" data-value="1000">10:00</li>
+                    <li class="" data-value="1100">11:00</li>
+                    <li class="" data-value="1200">12:00</li>
+                    <li class="" data-value="1300">13:00</li>
+                    <li class="" data-value="1400">14:00</li>
+                    <li class="" data-value="1500">15:00</li>
+                    <li class="" data-value="1600">16:00</li>
+                    <li class="" data-value="1700">17:00</li>
+                    <li class="" data-value="1800">18:00</li>
+                    <li class="" data-value="1900">19:00</li>
+                    <li class="" data-value="2000">20:00</li>
                 </ul>
             </div>
         </div>
     </div>
+
     
+<!--时间API-->
+<script src="res/js/moment.min.js"></script>
+<!-- 选择区域js 需精简-->
+<script src="res/js/scroll_areaV3.js"></script>
 <script>
+$(function(){
 //moment.min.js是一个提供时间API的脚本,不涉及样式.常用调用方法如下
    	//moment() //获取当前时间(本机的)
     //.add('days',7)    //几天后,还可以是'months'/'hours'等
@@ -70,13 +74,16 @@
         //"DD"当前是几日,
         //"d" 当前星期几,返回的是0-6的数字
         //"YYYYMMDD" 具体时间,中间可以加横杠,但不可加"年/月/日"这样的中文
-    
+
+
+//   io = {};io.c = console.log.bind(console)
+
     var _obj = $("#dateSelect").find("ul");
     var t1 = 7;  //几天后,也可以是几个月/小时的计数
     var t2 = 0;
     var _day,_weekday,_wd;
     while(t2<t1){
-         _day = moment().add("days",t2);
+         _day = moment().add("days",t2); //自带年/月的过渡
          _weekday= _day.format('d');
          switch(_weekday){
              case "0":
@@ -103,8 +110,7 @@
              default:
                  _wd="";
          };
-         
-        _obj.append('<li data-value="'+_day.format('YYYYMMDD')+'">'+_day.format('MM')+'月'+_day.format('DD')+'日'+'&nbsp;<span>周'+_wd+'</span></li>');
+        _obj.append('<li data-value="'+_day.format('YYYYMMDD')+'">'+_day.format('YYYY')+'/'+_day.format('MM')+'/'+_day.format('DD')+'&nbsp;<span>周'+_wd+'</span></li>');
         t2++;
         
     }
@@ -112,19 +118,27 @@
     //头一天的"星期几"改为"今天"
     _obj.find("li").first().find("span").html("今天");
     
-    
+
+  var result = $('#selectShow').attr('data-time')
+//  io.c(result)
     //确定按钮,返回所选时间
     $("#selectTime").find(".fr").click(function(){
-       //var _dateSelect = $("#dateSelect").find(".active").html();
-       var _dateSelect = _day.format('YYYY')+'.'+_day.format('MM')+'.'+_day.format('DD')+' '+$("#dateSelect").find(".active").find("span").text();
+      var choose = moment($("#dateSelect").find(".active").attr('data-value')+$("#timeSelect").find('.active').attr('data-value'),'YYYYMMDDHHmm')
+//      io.c(choose)
+
+      var showTime = choose.format('YYYY-MM-DD')
+//       var _dateSelect = choose.format('YYYY')+'.'+choose.format('MM')+'.'+choose.format('DD')+' '+$("#dateSelect").find(".active").find("span").text();
        
-       var _timeSelect = $("#timeSelect").find(".active").html();
+//       var _timeSelect = $("#timeSelect").find(".active").html();
        if($("#timeSelect").find(".active").hasClass("timeout")){
           //当前已预约时不返回
           }else{
-      $("#selectShow").val(_dateSelect+" "+_timeSelect)
+      $("#selectShow").val(showTime +' '+$("#dateSelect").find(".active").find("span").text()+' '+choose.format('HH:mm'))
+      $("#selectShow").attr('data-value',choose.format('YYYYMMDDHHmm'))
            };
     });
+
+})
 </script>
 
 
