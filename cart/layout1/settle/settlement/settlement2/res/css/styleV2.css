@@ -1,0 +1,69 @@
+/****************
+ * @description : 美丽帮
+ * @author   : 磊子  <121195713@qq.com>
+ * @date     : 2014-12-09
+ ****************/
+
+/*css reset*/
+.fl{float:left;}.fr{float:right;}
+.hide{display:none;}
+.show{display: block;}
+.ellipsis { white-space:nowrap; text-overflow:ellipsis; overflow:hidden}
+.break { word-break:break-all; word-wrap:break-word}
+header, footer, article, section, nav, menu, hgroup {display: block;clear:all;}
+.clearfix:after{content:'\0020';display:block;height:0;clear:both}.clearfix{*zoom:1}
+
+/*【noScript提示】*/
+.noScript{margin:10px 10px; text-align:center;}
+
+
+/*下单*/
+.order_ico,.order_other_dt,.order_area_dt{ background:url(../img/order_ico.png) no-repeat; background-size:20px auto}
+.order_card{ clear:both; padding:4px 0; background:#fff; margin-bottom:12px}
+.order_card>div, .order_card>p, .order_card>dl{ padding-left: 12px; padding-right: 12px;}
+.order_card_tips{ clear:both; overflow:hidden; border-bottom:1px solid #ececec; line-height:50px}
+.order_card_tips strong{ float: left; font-weight:normal; font-size:18px}
+.order_card_tips span{ float:right; color:#fe6771; font-size:15px}
+.order_choose{ clear:both; overflow:hidden;}
+.order_time_tips{ clear:both; overflow:hidden; height:32px; line-height:32px}
+.order_l{ float:left}
+.order_r{ float:right}
+.order_ico.o_ico1{ background-position:0 13px; padding-left:24px; display: inline-block;}
+.order_ico.o_ico_down{ display:inline-block; height:32px; width:32px; line-height:32px; text-indent:999em; overflow:hidden; cursor:pointer; background-position:center -229px}
+.order_infomate{ font-size:12px; color:#3db7b4}
+
+.order_bd{ clear:both; overflow:hidden; font-size:12px; height:54px; border-bottom:1px solid #ececec}
+.order_bd_dl{ clear:both; overflow:hidden;}
+.order_bd_dl_dt{ float:left; width:70px; line-height:54px;}
+.order_bd_dl_dd{ overflow:hidden; *zoom:1; padding:0 8px; height: 54px; line-height:54px; position: relative;}
+.bd_input{ border:none; background:none; color:#c9c9c9; width:100%; font-size:12px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.bd_ico_1{ display:inline-block; padding-left:26px; background-position:0 -46px}
+.bd_ico_2{ display:inline-block; padding-left:26px; background-position:0 -111px}
+.bd_ico_3{ display:inline-block; padding-left:26px; background-position:0 -229px}
+
+/*模拟select
+#selectShow{ display: block; color: #a9a9a9; width: calc(100% - 16px); height: 54px; line-height: 54px; position: absolute; left: 8px; top: 0; z-index: 10;}
+#selectShow.selected{ color: #000;}*/
+
+/*时间选择弹出*/
+#timeMb{ position: fixed; left: 0; top: 0; z-index: 100; width: 100%; height: 100%; background: rgba(0,0,0,.4);}
+#selectTime{ position: fixed; bottom: -190px; left: 0; height: 190px; width: 100%; z-index: 500; background: #fff; font-size: 16px; color: #999; -webkit-transition: -webkit-transform 0.3s ease-in-out;}
+#selectTime h3{ height: 40px; line-height: 40px; text-align: center; padding: 0 10px;}
+#selectTime h3 a{ font-weight: normal; margin-top: 6px; display: block; font-size: 13px; text-align: center; width: 40px; height: 28px; line-height: 28px; -webkit-border-radius: 3px; border-radius: 3px; -moz-border-radius: 3px;}
+#selectTime h3 .fl{ float: left; color: #1a1a1a; background: #ececec;}
+#selectTime h3 .fr{ float: right; color: #fff; background: #ff6766;}
+#selectTime h3 .not{ color: #a1a1a1; background: #ececec;}
+.timeFloat{ overflow: hidden; height: 150px; width: 100%; position: relative;}
+.timeFloat::before{ content: ""; position: absolute; left: 0; top: 58px; width: 100%; height: 30px; border-top: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf;}
+.timeFloat::after{ content: ""; position: absolute; left: 50%; top: 0; height: 100%; width: 1px;
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,0), rgba(254,103,113,1), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(254,103,113,1), rgba(255,255,255,0));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(254,103,113,1), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,0), rgba(254,103,113,1), rgba(255,255,255,0));
+    background-image: linear-gradient(top, rgba(255,255,255,0), rgba(254,103,113,1), rgba(255,255,255,0));}
+.timeFloat>div{ float: left; width: 50%; height: 100%; position: relative;}
+.timeFloat>div ul{ position: absolute; left: 0; top: 0; width: 100%; padding: 60px 0;}
+.timeFloat>div li{ position: relative; height: 30px; line-height: 30px; text-align: center; font-weight: normal; color: transparent; text-shadow: 0 0 1px #b1b1b1;}
+.timeFloat>div li.active{ color: #ff6766; font-weight: 600; text-shadow: none;}
+.timeFloat>div li.booked, .timeFloat>div li.timeout{ color: #b1b1b1;}
+.timeFloat>div li.booked::after, .timeFloat>div li.timeout::after{ content: "(已预约)"; position: absolute; right: 12px; top: 0; font-size: 12px; height: 30px; line-height: 30px;}
