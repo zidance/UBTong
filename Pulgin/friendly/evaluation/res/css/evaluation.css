@@ -12,5 +12,6 @@
 .e-top .icon3.act{  background-image:url(../img/icon3-h.jpg); color:#ff9c00;}
 .e-top .icon4.act{  background-image:url(../img/icon4-h.jpg); color:#787878;}
 
-.shuoming{ width:96.6%; color:#aaaaaa; line-height:1rem; padding:1.7%; outline:none; height:4rem; margin:.55rem 0 .25rem; }
+.shuoming{ width:96.6%; line-height:1rem; padding:1.7%; outline:none; height:4rem; margin:.55rem 0 .25rem; }
+.shuoming::-webkit-input-placeholder{ color:#aaaaaa;}
 .comfirm{ display:block; border-radius:5px; background:#0c6eb9; color:#fff; margin:.75rem auto; height:2rem; line-height:2rem; text-align:center; width:87.5%;}
