@@ -7,17 +7,20 @@ body {
     position: relative;
 }
 .header-member .headbg {
+  position: absolute;
     width: 100%;
+  height:100%;
 }
 .header-member .headbg img {
+  height:100%;
     width: 100%;
 }
 .header-member .head-pic {
-    position: absolute;
+    position: relative;
     width: 100%;
     text-align: center;
     z-index: 10;
-    top: 1.2rem;
+    padding: 1.2rem 0;
 }
 .header-member .head-pic .a-pic {
     display: block;
