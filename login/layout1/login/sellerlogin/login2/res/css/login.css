@@ -1,5 +1,5 @@
 html{  height:100%; overflow:hidden;width:100%; }
-body{height:100%; overflow:hidden; width: 100%;}
+body{/*height:100%; overflow:hidden;*/ width: 100%;}
 
 .login .s-bg{ width:100%;min-width:320px; height:100%; position:absolute; top:0; left:0; }
 .login .s-bg img{ width:100%; height:100%; overflow:hidden; }
