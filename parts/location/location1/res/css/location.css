@@ -1,4 +1,5 @@
 /*城市定位*/
+.stn-location{background-color: #fff;}
 .stn-location .location-bg {
 	background: url(../img/location.png) no-repeat 5% center #262f44;
 	background-size: 1.88rem 2.36rem;
@@ -38,7 +39,7 @@
 }
 .letter {
 	position: fixed;
-	top: 5.5rem;
+	top: 5rem;
 	right: 2.8%;
 }
 .letter li {
@@ -48,4 +49,10 @@
 .letter li a {
 	display: block;
 	color: #555555;
+  width:.6rem;
+  height:3vh;
+  max-height:.8rem;
+  text-align: center;
+  padding-left:.5rem;
+  font-size: 14px;
 }
