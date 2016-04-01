@@ -1,6 +1,6 @@
 .investment{ padding:1.25rem 1.75rem 2.9rem; background:#0c6eb9; position:relative;}
 .investment li{ margin-bottom:.75rem; padding:.5rem .75rem; height:1.05rem; line-height:1.05rem; background:#fff; border-radius:20px;}
-.investment input{ width:80%; float:left;}
+.investment input{ width:80%; float:left;height:100%;line-height: 1.05rem;}
 .investment li span{ float:right; color:#242424;}
 .investment .calculate{ display:block; width:5.75rem; height:5.75rem; position:absolute; left:50%; bottom:-2.875rem; background:url(../img/sul.png) no-repeat; background-size:5.75rem 5.75rem; margin-left:-2.875rem;}
 .i-list{ margin-top:2.875rem; padding:1.5rem 0;}
