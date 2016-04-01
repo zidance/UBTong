@@ -4,9 +4,9 @@
 .household .t-left{ width:35.3%; color:#242424; padding:.5rem 0 .5rem .575rem; line-height:1.25rem;}
 .household .t-left a{ display:block; color:#242424; background:url(../img/nav.jpg) no-repeat right center; background-size:.4rem .75rem;margin-right:4%; padding-right:.9rem;}
 .household .t-left .import{ color:#ff0000; margin-right:.25rem;}
-.household .t-left .p-name{ text-align:right; float:right; line-height:1.25rem; height:1.25rem; width:50%; overflow:hidden;}
+.household .t-left .p-name{ text-align:right; float:right; line-height:1.25rem; height:1.25rem; width:50%; overflow:hidden;color: #242424;font-size: 14px;}
 .household .t-inp input{ width:93%; text-align:right; }
-.household input,.household input{color: #242424;}
+.household input,.household textarea{color: #242424;font-size: 14px;}
 .household ::-webkit-input-placeholder{color: #aaa;}
 .household input::-webkit-inner-spin-button{display: none;}
 .household .t-left textarea{ width:92.8%; /*color:#aaaaaa !important; */padding:0 3.6%; outline:none; line-height:1rem; min-height:2rem;}
@@ -23,3 +23,7 @@
 .title{ width:84.7%; margin:0 auto;}
 .title .p-title{ padding:1rem 0 .95rem;}
 .title .p-title img{ width:100%; height:auto;}
+
+input[name="UploadFiles"]{display: none;}
+.household .p-file{padding-left: 1.2rem;color: #aaa;}
+.household .p-file a{background: none;}

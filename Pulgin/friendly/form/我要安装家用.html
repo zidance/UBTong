@@ -78,10 +78,10 @@
 <section class="household">
 	<table>
     	<tr>
-        	<td class="t-left fz28" colspan="2"><span class="import">*</span>拍照<br /><div class="add-img"><input name="UploadImgs" type="file" multiple accept="image/*" /><img /></div></td>
+        	<td class="t-left fz28" colspan="2"><span class="import">*</span>拍照<br /><div class="add-img"><input name="UploadImgs" type="file" multiple accept="image/*" /></div></td>
         </tr>
         <tr>
-        	<td class="t-left fz28" colspan="2"><a href="###"><span class="import">&nbsp; </span>上传附件</a></td>
+        	<td class="t-left fz28" colspan="2"><a class="a-file" href="###"><span class="import">&nbsp; </span>上传附件</a><input class="i-file" name="UploadFiles" type="file" multiple accept="*/*" /><p class="p-file"></p></td>
         </tr>
     </table>
 </section>
@@ -165,41 +165,59 @@
             </div>
         </div>
     </div>
-    <script>
-        //确定按钮,返回所选时间
-        $("#selectTime").find(".fr").click(function(){
-       //var _dateSelect = $("#dateSelect").find(".active").html();
-       var _dateSelect = $("#dateSelect").find(".active").text();
-           
-           var _timeSelect = $("#timeSelect").find(".active").html();
-           if($("#timeSelect").find(".active").hasClass("timeout")){
-              //当前已预约时不返回
-              }else{
-      		$("#selectShowCity").find('.p-name').html(_dateSelect+" "+_timeSelect)
-               };
-        });
-		
-	  var city =[['福州市','泉州市','莆田市','三明市'],['111','222','3333'],['444','555']];
-	  $(function(){
-		    var _li = $('#dateSelect li');
-			var _ul = $('#timeSelect ul');
-			$.each(_li,function(i,e){
-				var _this = $(e);
-				if($(this).hasClass('active')){
-					$('#timeSelect ul').html('');
-					for(var j=0;j<city[i].length;j++){
-						if(j==0){
-							$('#timeSelect ul').append('<li class="active">'+city[i][j]+'</li>');
-						}else{
-							$('#timeSelect ul').append('<li class="">'+city[i][j]+'</li>');
-						}
-					}
-				}else{
-					return;	
-				}
-			})	
-	  })	
-    </script>
+  <script>
+  //确定按钮,返回所选时间
+  $("#selectTime").find(".fr").click(function () {
+    //var _dateSelect = $("#dateSelect").find(".active").html();
+    var _dateSelect = $("#dateSelect").find(".active").text();
+
+    var _timeSelect = $("#timeSelect").find(".active").html();
+    if ($("#timeSelect").find(".active").hasClass("timeout")) {
+      //当前已预约时不返回
+    } else {
+      $("#selectShowCity").find('.p-name').html(_dateSelect + " " + _timeSelect)
+    };
+  });
+
+  var city = [['福州市', '泉州市', '莆田市', '三明市'], ['111', '222', '3333'], ['444', '555']];
+  $(function () {
+    var _li = $('#dateSelect li');
+    var _ul = $('#timeSelect ul');
+    $.each(_li, function (i, e) {
+      var _this = $(e);
+      if ($(this).hasClass('active')) {
+        $('#timeSelect ul').html('');
+        for (var j = 0; j < city[i].length; j++) {
+          if (j == 0) {
+            $('#timeSelect ul').append('<li class="active">' + city[i][j] + '</li>');
+          } else {
+            $('#timeSelect ul').append('<li class="">' + city[i][j] + '</li>');
+          }
+        }
+      } else {
+        return;
+      }
+    })
+
+
+$('.a-file').click(function(){
+  $('.i-file').trigger('click')
+})
+$('.p-file').on('click tap','a',function(e){
+  e.preventDefault(); //关闭该句,点击资源可看内容
+})
+ $('.i-file').on('change',function(e){
+   var file = $(e).get(0).target.files[0]
+      src = URL.createObjectURL(e.target.files[0])
+      if(file){
+        $('.p-file').prepend('<a href="'+src+'">'+file.name+'</a>')
+        //程序最后取这些文件
+      }
+  })
+
+
+  })
+</script>
 
 
 </body>
