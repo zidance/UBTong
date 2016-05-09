@@ -9,21 +9,20 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <link href="../../../common/css/main.css" rel="stylesheet" type="text/css" />
 <link href="res/css/investment.css" rel="stylesheet" type="text/css" />
+<link href="../../../parts/location/location1/res/css/location.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../../common/js/zepto-1.16.min.js"></script>
 <script type="text/javascript" src="../../../common/js/main.js"></script>
-<script type="text/javascript" src="../form/res/js/promt.js"></script>
 </head>
 
 <body style="background:#f7f5f5;">
 	<section class="investment">
     	<ul>
-        	<li><input type="text" prompt="请选择电站所属城市" /></li>
-            <li><input type="text" prompt="请输入可安装的面积" /><span class="fz28">㎡</span><div class="clr"></div></li>
-            <li><input type="text" prompt="请输入当地电价" /><span class="fz28">元/度</span><div class="clr"></div></li>
+        	<li><input class="i-location" type="text" placeholder="请选择电站所属城市" onfocus="javascript:this.blur();"/></li>
+            <li><input type="number" placeholder="请输入可安装的面积" /><span class="fz28">㎡</span><div class="clr"></div></li>
+            <li><input type="number" placeholder="请输入当地电价" /><span class="fz28">元/度</span><div class="clr"></div></li>
         </ul>
         <a href="###" class="calculate"></a>
     </section>
-    <script type="text/javascript">setInputFocus('input')</script>
     <section class="i-list" id="list">
     	<ul>
         	<li>
@@ -43,6 +42,82 @@
         <p class="note fz26">备注：光伏车棚可参照斜屋顶进行测算</p>
     </section>
     
+
+    <!--城市定位-->
+    <section class="stn-location-wrap" style="display:none;position:fixed;top:0;left:0;width:100%;z-index:800;overflow-y:auto;height:100%;">
+    <section class="stn-location">
+    	<div class="location-bg">
+        	<p class="p-name fz36">福州市</p>
+            <p class="fz24">当前定位城市</p>
+        </div>
+        <a class="a-btn fz26" name="1L" href="#">A</a>
+        <ul>
+        	<li><a class="fz36" href="#">安徽</a></li>
+            <li><a class="fz36" href="#">阿联酋</a></li>
+            <li><a class="fz36" href="#">阿富汗</a></li>
+            <li><a class="fz36" href="#">安庆</a></li>
+        </ul>
+        <a class="a-btn fz26" name="2L" href="#">B</a>
+        <ul>
+        	<li><a class="fz36" href="#">北京</a></li>
+            <li><a class="fz36" href="#">北海</a></li>
+            <li><a class="fz36" href="#">北海道</a></li>
+        </ul>
+        <a class="a-btn fz26" name="3L" href="#">C</a>
+        <ul>
+        	<li><a class="fz36" href="#">安徽</a></li>
+            <li><a class="fz36" href="#">阿联酋</a></li>
+            <li><a class="fz36" href="#">阿富汗</a></li>
+            <li><a class="fz36" href="#">安庆</a></li>
+        </ul>
+        <a class="a-btn fz26" name="4L" href="#">D</a>
+        <ul>
+        	<li><a class="fz36" href="#">北京</a></li>
+            <li><a class="fz36" href="#">北海</a></li>
+            <li><a class="fz36" href="#">北海道</a></li>
+        </ul>
+        <a class="a-btn fz26" name="5L" href="#">E</a>
+        <ul>
+        	<li><a class="fz36" href="#">北京</a></li>
+            <li><a class="fz36" href="#">北海</a></li>
+            <li><a class="fz36" href="#">北海道</a></li>
+        </ul>
+    </section>
+    <div class="letter">
+    	<ul>
+        	<li><a href="#1L">A</a></li>
+            <li><a href="#2L">B</a></li>
+            <li><a href="#3L">C</a></li>
+            <li><a href="#4L">D</a></li>
+            <li><a href="#5L">E</a></li>
+            <li><a href="#6L">F</a></li>
+            <li><a href="#7L">G</a></li>
+            <li><a href="#8L">H</a></li>
+            <li><a href="#9L">I</a></li>
+            <li><a href="#10L">J</a></li>
+            <li><a href="#11L">K</a></li>
+            <li><a href="#12L">L</a></li>
+            <li><a href="#13L">M</a></li>
+            <li><a href="#14L">N</a></li>
+            <li><a href="#15L">O</a></li>
+            <li><a href="#16L">P</a></li>
+            <li><a href="#17L">Q</a></li>
+            <li><a href="#18L">R</a></li>
+            <li><a href="#19L">S</a></li>
+            <li><a href="#20L">T</a></li>
+            <li><a href="#21L">U</a></li>
+            <li><a href="#22L">V</a></li>
+            <li><a href="#23L">W</a></li>
+            <li><a href="#24L">S</a></li>
+            <li><a href="#25L">Y</a></li>
+            <li><a href="#26L">Z</a></li>
+            <li><a href="#27L">#</a></li>
+        </ul>
+    </div>
+    </section>
+    <!--城市定位-end-->
+
+
     <script type="text/javascript">
     	$(function(){
 			var _list = $('#list');
@@ -54,6 +129,18 @@
 					$(this).addClass('act');	
 				})
 			})
+
+            $('.investment .i-location').on('click tap',function(){
+              $('.stn-location-wrap').show()
+            })
+            $('.stn-location li a').on('click',function(){
+              $('.investment .i-location').val($(this).text())
+              $('.stn-location-wrap').hide()
+            })
+            $('.letter').on('click tap',function(e){
+              e.stopPropagation()
+            })
+
 		})
     </script>
 </body>

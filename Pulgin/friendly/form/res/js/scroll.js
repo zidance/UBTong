@@ -1,26 +1,47 @@
 ;$(function () {
-
+  var oUl = $(".d-popup").find('.choose')
+  var oLi = oUl.find('li')
+  var nLiHei = parseInt(oLi.css('height'))
+  var nLiLen = oLi.length
+  var nLiView = Math.max(Math.floor(parseInt(oUl.css('height')) / nLiHei), 3) //可见li个数,最小三2个
+  var temp;
   //显示
-  $('#selectShow').click(function () {
-      $(".d-popup").show()
-      $('.d-popup-bg').show()
-    })
+//  $('.selectShow').click(function () {
+//      $(".d-popup").show()
+//      $('.d-popup-bg').show()
+//  })
+var arr = ["与业主的关系","1111","2222"];
+  $.each($('.selectShow'),function(i,e){
+	   var _this = $(e);
+	   _this.click(function(){
+			 $(".d-popup").show()
+         	$('.d-popup-bg').show(); 
+			$('#p-name').html(arr[i]);
+			$('.choose').hide();
+			$('.choose').eq(i).show();
+			oUl = $('.choose').eq(i);
+			$('.choose').eq(i).find('li').eq(1).addClass('active');
+			$('.selectShow').removeClass('show');
+			$(this).addClass('show');
+		})
+  })
+  
+
+	
+	
+	
     //隐藏
   $('.d-popup-bg,.d-popup .fr').click(function () {
     $(".d-popup").hide()
     $('.d-popup-bg').hide()
   })
 
-  var oUl = $(".d-popup").find('.choose')
-  var oLi = oUl.find('li')
-  var nLiHei = parseInt(oLi.css('height'))
-  var nLiLen = oLi.length
-  var nLiView = Math.max(Math.floor(parseInt(oUl.css('height')) / nLiHei), 3) //可见li个数,最小三2个
+  
 
   //切换红包
   oLi.click(function () {
-    oLi.removeClass('active')
-    $(this).addClass('active')
+    oLi.removeClass('active');
+    $(this).addClass('active');
   })
 
 
