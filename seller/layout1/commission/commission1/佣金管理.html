@@ -1,81 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>佣金管理</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
+    <title>佣金管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <link href="../../../../common/css/common.css" rel="stylesheet" type="text/css" />
 
-<link href="res/css/commission.css" rel="stylesheet" type="text/css" />
-<link href="../../../../parts/time/time1/res/css/subdetailswrite.css" rel="stylesheet" type="text/css" />
-<link href="../../../../parts/time/time1/res/css/time/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
-<link href="../../../../parts/time/time1/res/css/time/mobiscroll.widget.css" rel="stylesheet" type="text/css" />
-<link href="../../../../parts/time/time1/res/css/time/mobiscroll.widget.ios.css" rel="stylesheet" type="text/css" />
-<link href="../../../../parts/time/time1/res/css/time/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
-<link href="../../../../parts/time/time1/res/css/time/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
-<link href="../../../../parts/btn/btn2/res/css/btn.css" rel="stylesheet" type="text/css">
-<link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css">
-<script src="../../../../common/js/zepto-1.16.min.js"></script>
-<script src="../../../../common/js/default.js"></script>
-<script src="../../../../parts/time/time1/res/js/jquery-1.11.1.min.js"></script>
-<script src="../../../../parts/time/time1/res/js/mobiscroll.core.js"></script>
-<script src="../../../../parts/time/time1/res/js/mobiscroll.widget.js"></script>
-<script src="../../../../parts/time/time1/res/js/mobiscroll.scroller.js"></script>
-<script src="../../../../parts/time/time1/res/js/mobiscroll.util.datetime.js"></script>
-<script src="../../../../parts/time/time1/res/js/mobiscroll.datetimebase.js"></script>
-<script src="../../../../parts/time/time1/res/js/mobiscroll.widget.ios.js"></script>
-<script src="../../../../parts/time/time1/res/js/mobiscroll.i18n.zh.js"></script>
-<script src="../../../../common/js/default.js"></script>
+    <link href="res/css/commission.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../parts/time/time1/res/css/subdetailswrite.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../parts/time/time1/res/css/time/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../parts/time/time1/res/css/time/mobiscroll.widget.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../parts/time/time1/res/css/time/mobiscroll.widget.ios.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../parts/time/time1/res/css/time/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../parts/time/time1/res/css/time/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../parts/btn/btn2/res/css/btn.css" rel="stylesheet" type="text/css">
+    <link href="../../../../common/css/hover.css" rel="stylesheet" type="text/css">
+    <script src="../../../../common/js/zepto-1.16.min.js"></script>
+    <script src="../../../../common/js/default.js"></script>
+    <script src="../../../../parts/time/time1/res/js/jquery-1.11.1.min.js"></script>
+    <script src="../../../../parts/time/time1/res/js/mobiscroll.core.js"></script>
+    <script src="../../../../parts/time/time1/res/js/mobiscroll.widget.js"></script>
+    <script src="../../../../parts/time/time1/res/js/mobiscroll.scroller.js"></script>
+    <script src="../../../../parts/time/time1/res/js/mobiscroll.util.datetime.js"></script>
+    <script src="../../../../parts/time/time1/res/js/mobiscroll.datetimebase.js"></script>
+    <script src="../../../../parts/time/time1/res/js/mobiscroll.widget.ios.js"></script>
+    <script src="../../../../parts/time/time1/res/js/mobiscroll.i18n.zh.js"></script>
+    <script src="../../../../common/js/default.js"></script>
 
-<script type="text/javascript">
-$(function () {
-    var nowData=new Date();
-    var opt= { 
-        theme:'ios', //设置显示主题 
-        mode:'scroller', //设置日期选择方式，这里用滚动
-        display:'bottom', //设置控件出现方式及样式
-        preset : 'datetime', //日期:年 月 日 时 分
-        //minDate: new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate(),nowData.getHours(),00),    //nowData
-        //maxDate:new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate()+7,22,00),
-//              dateFormat: 'yy-mm-dd', // 日期格式
-//              dateOrder: 'yymmdd', //面板中日期排列格式
-        stepMinute: 1, //设置分钟步长
-        yearText:'年', 
-        monthText:'月',
-        dayText:'日',
-        hourText:'时',
-        minuteText:'分',
-        lang:'zh' //设置控件语言};
-    };
-    $('#dateinput').mobiscroll(opt);
-});
-</script>
+    <script type="text/javascript">
+    $(function () {
+        var nowData=new Date();
+        var opt= { 
+            theme:'ios', //设置显示主题 
+            mode:'scroller', //设置日期选择方式，这里用滚动
+            display:'bottom', //设置控件出现方式及样式
+            preset : 'datetime', //日期:年 月 日 时 分
+            //minDate: new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate(),nowData.getHours(),00),    //nowData
+            //maxDate:new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate()+7,22,00),
+    //              dateFormat: 'yy-mm-dd', // 日期格式
+    //              dateOrder: 'yymmdd', //面板中日期排列格式
+            stepMinute: 1, //设置分钟步长
+            yearText:'年', 
+            monthText:'月',
+            dayText:'日',
+            hourText:'时',
+            minuteText:'分',
+            lang:'zh' //设置控件语言};
+        };
+        $('#dateinput').mobiscroll(opt);
+    });
+    </script>
 
-<script type="text/javascript">
-$(function () {
-    var nowData=new Date();
-    var opt= { 
-        theme:'ios', //设置显示主题 
-        mode:'scroller', //设置日期选择方式，这里用滚动
-        display:'bottom', //设置控件出现方式及样式
-        preset : 'datetime', //日期:年 月 日 时 分
-        //minDate: new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate(),nowData.getHours(),00),    //nowData
-        //maxDate:new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate()+7,22,00),
-//              dateFormat: 'yy-mm-dd', // 日期格式
-//              dateOrder: 'yymmdd', //面板中日期排列格式
-        stepMinute: 1, //设置分钟步长
-        yearText:'年', 
-        monthText:'月',
-        dayText:'日',
-        hourText:'时',
-        minuteText:'分',
-        lang:'zh' //设置控件语言};
-    };
-    $('#dateinput1').mobiscroll(opt);
-});
-</script>
+    <script type="text/javascript">
+    $(function () {
+        var nowData=new Date();
+        var opt= { 
+            theme:'ios', //设置显示主题 
+            mode:'scroller', //设置日期选择方式，这里用滚动
+            display:'bottom', //设置控件出现方式及样式
+            preset : 'datetime', //日期:年 月 日 时 分
+            //minDate: new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate(),nowData.getHours(),00),    //nowData
+            //maxDate:new Date(nowData.getFullYear(),nowData.getMonth(),nowData.getDate()+7,22,00),
+    //              dateFormat: 'yy-mm-dd', // 日期格式
+    //              dateOrder: 'yymmdd', //面板中日期排列格式
+            stepMinute: 1, //设置分钟步长
+            yearText:'年', 
+            monthText:'月',
+            dayText:'日',
+            hourText:'时',
+            minuteText:'分',
+            lang:'zh' //设置控件语言};
+        };
+        $('#dateinput1').mobiscroll(opt);
+    });
+    </script>
 </head>
 
 <body>
